@@ -1,0 +1,119 @@
+﻿╔════════════════════════════════════════════════════════════════╗
+║                    TU APP ESTÁ LISTA                           ║
+║          DEPLOYMENT AUTOMATIZADO EN 30 MINUTOS                 ║
+╚════════════════════════════════════════════════════════════════╝
+
+TODO LO QUE NECESITAS HACER:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 1: INSTALAR (5 minutos)
+
+Instala estos 4 programas:
+
+1. Docker Desktop
+   Descarga: https://www.docker.com/products/docker-desktop
+
+2. AWS CLI
+   Descarga: https://aws.amazon.com/cli/
+
+3. Terraform
+   Descarga: https://www.terraform.io/downloads
+
+Luego verifica en PowerShell:
+   docker --version
+   aws --version
+   terraform --version
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 2: CREDENCIALES AWS (5 minutos)
+
+1. Ve a https://aws.amazon.com/
+2. Crea cuenta FREE TIER
+3. Inicia sesión
+4. IAM → Users → Crea usuario "viral-video-deployer"
+5. Dale permiso: AdministratorAccess
+6. Security Credentials → Crea Access Key
+7. Guarda:
+   - Access Key ID
+   - Secret Access Key
+
+⚠️  NO COMPARTAS ESTOS VALORES CON NADIE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 3: EJECUTAR DEPLOYMENT (30 minutos)
+
+Abre PowerShell y ejecuta:
+
+   cd C:\Users\mario\viral-video-saas
+   .\DEPLOY.ps1
+
+Responde 3 preguntas:
+   1. Access Key ID (pégalo)
+   2. Secret Access Key (pégalo)
+   3. Region (presiona Enter para us-east-1)
+
+El script hace TODO automáticamente:
+✓ Configura AWS
+✓ Builds Docker images
+✓ Pushes a AWS ECR
+✓ Corre Terraform
+✓ Crea RDS (base de datos)
+✓ Crea Redis (cache)
+✓ Crea S3 (almacenamiento)
+✓ Crea CloudFront (CDN)
+✓ Crea ECS (orquestador)
+✓ Despliega tu app
+
+ESPERA 10-15 MINUTOS (AWS crea recursos)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 4: AGREGAR API KEYS (5 minutos)
+
+Después que DEPLOY.ps1 termine:
+
+1. AWS Console → Secrets Manager
+2. Busca: viral-video/prod/secrets
+3. Edita y agrega:
+   STRIPE_SECRET_KEY = (de https://dashboard.stripe.com/)
+   KLING_API_KEY = (de https://kling.kuaishou.com/api)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PASO 5: VALIDAR (5 minutos)
+
+Ejecuta:
+
+   .\post-deployment-validation.ps1
+
+Cuando veas todo ✓ (verde) = ¡TU APP ESTÁ VIVA!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+LISTO
+
+Tu app está corriendo en AWS:
+✓ Landing page
+✓ Signup/Login
+✓ Crear videos
+✓ Pagos con Stripe
+✓ Descargar videos
+✓ Escalable
+
+Costo mensual: $140-170 USD
+AWS FREE TIER: $300 de crédito (2-3 meses gratis)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TL;DR
+
+1. Instala: Docker, AWS CLI, Terraform
+2. Obtén: AWS credentials
+3. Ejecuta: .\DEPLOY.ps1
+4. Espera: 30 minutos
+5. DONE: Tu app está viva
+
+🚀

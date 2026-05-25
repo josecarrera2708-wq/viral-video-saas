@@ -1,0 +1,104 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+*.iml
+.gradle
+
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+.next/
+out/
+.nuxt
+dist/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+.hypothesis/
+.tox/
+
+# Misc
+*.log
+.env.local
+.env.*.local
+.cache/
+.DS_Store
+thumbs.db
+*.tmp
+*.bak
+
+# AWS
+.aws/
+credentials
+~/.aws
+
+# Docker
+.docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+.env.production.local
+.env.development.local
+.env.test.local
+
+# Generated
+*.pyc
+*.pyo
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Temporary files
+.tmp/
+tmp/
+temp/
+*.temp
