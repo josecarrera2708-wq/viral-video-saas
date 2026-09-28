@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Restaurante Casa Emilia - Bienvenidos a nuestra pagina web</title>
+<style>
+  body { background: #f4efe3; color: #333; font-family: "Times New Roman", Times, serif; font-size: 13px; margin: 0; }
+  .contenedor { width: 780px; margin: 0 auto; background: #fffdf7; border: 1px solid #c9bfa8; }
+  .cabecera { background: #7a1f1f; color: #f2e6c9; text-align: center; padding: 18px 10px; }
+  .cabecera img { width: 90px; }
+  h1 { font-size: 26px; margin: 8px 0 2px 0; letter-spacing: 1px; }
+  .lema { font-style: italic; font-size: 12px; color: #e0cfa5; }
+  .menu-nav { background: #5c1616; text-align: center; padding: 6px; }
+  .menu-nav a { color: #f2e6c9; margin: 0 12px; font-size: 12px; }
+  .seccion { padding: 16px 28px; }
+  h2 { color: #7a1f1f; font-size: 18px; border-bottom: 1px dotted #c9bfa8; padding-bottom: 4px; }
+  .foto { width: 100%; border: 3px double #c9bfa8; }
+  table.carta { width: 100%; border-collapse: collapse; }
+  table.carta td { padding: 3px 4px; border-bottom: 1px dotted #ddd2b8; }
+  .precio { text-align: right; white-space: nowrap; }
+  .pie { background: #2e2417; color: #cbbfa4; font-size: 11px; text-align: center; padding: 14px; }
+  .aviso { text-align: center; font-size: 11px; color: #8a7d5f; padding: 6px; }
+</style>
+</head>
+<body>
+<div class="contenedor">
+
+  <div class="cabecera">
+    <img src="logo.svg" alt="Casa Emilia">
+    <h1>RESTAURANTE CASA EMILIA</h1>
+    <div class="lema">Cocina castellana de toda la vida — Desde 1962</div>
+  </div>
+
+  <div class="menu-nav">
+    <a href="#quienes">Quiénes somos</a>
+    <a href="#carta">Nuestra carta</a>
+    <a href="#eventos">Celebraciones</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <div class="seccion">
+    <h2>Bienvenido a nuestra página web</h2>
+    <p>En Casa Emilia nos complace darle la bienvenida a nuestro sitio web. Somos
+    un restaurante de cocina tradicional situado en Torrelunar. Esperamos que
+    disfrute de su visita a esta página y que pronto podamos atenderle en
+    nuestro establecimiento.</p>
+    <img class="foto" src="fotos/fachada.svg" alt="Fachada del restaurante">
+  </div>
+
+  <div class="seccion" id="quienes">
+    <h2>Quiénes somos</h2>
+    <p>Casa Emilia abrió sus puertas en <b>1962</b>, cuando Emilio Herranz y su
+    mujer, Carmen, convirtieron la antigua taberna familiar de la Calle de la
+    Fuente en un asador de barrio. Su hijo <b>Andrés</b> tomó los fogones en
+    1989 sin cambiar ni el horno de leña ni la receta del cochinillo, y hoy es
+    la tercera generación, su nieta <b>Marta</b>, quien dirige la casa con el
+    mismo cariño de siempre.</p>
+    <p>Más de <b>60 años</b> después seguimos asando en el mismo horno de leña
+    con el que empezó todo, y la ensaladilla se sigue haciendo cada mañana con
+    la receta de Carmen.</p>
+    <img class="foto" src="fotos/comedor.svg" alt="Nuestro comedor">
+  </div>
+
+  <div class="seccion" id="carta">
+    <h2>Nuestra carta</h2>
+    <p><b>Para empezar</b></p>
+    <table class="carta">
+      <tr><td>Croquetas caseras de jamón (8 uds.)</td><td class="precio">7,50 €</td></tr>
+      <tr><td>Ensaladilla de Carmen</td><td class="precio">6,00 €</td></tr>
+      <tr><td>Torreznos de Soria</td><td class="precio">5,50 €</td></tr>
+      <tr><td>Sopa castellana</td><td class="precio">6,50 €</td></tr>
+    </table>
+    <p><b>Nuestros asados y platos principales</b></p>
+    <table class="carta">
+      <tr><td>Cochinillo asado en horno de leña (ración)</td><td class="precio">21,00 €</td></tr>
+      <tr><td>Paletilla de lechazo (por encargo)</td><td class="precio">24,00 €</td></tr>
+      <tr><td>Merluza a la romana</td><td class="precio">16,50 €</td></tr>
+      <tr><td>Paella de encargo (mín. 2 pers., precio por persona)</td><td class="precio">18,00 €</td></tr>
+    </table>
+    <p><b>Postres caseros</b></p>
+    <table class="carta">
+      <tr><td>Flan de la abuela</td><td class="precio">4,50 €</td></tr>
+      <tr><td>Tarta de queso al horno</td><td class="precio">5,00 €</td></tr>
+      <tr><td>Torrijas (temporada)</td><td class="precio">4,50 €</td></tr>
+    </table>
+    <p>De lunes a viernes al mediodía ofrecemos nuestro <b>menú del día por
+    14,50 €</b>: primero, segundo, pan, bebida y postre o café.</p>
+    <img class="foto" src="fotos/cochinillo.svg" alt="Nuestro cochinillo asado">
+  </div>
+
+  <div class="seccion" id="eventos">
+    <h2>Celebraciones y grupos</h2>
+    <p>Disponemos de un salón privado para <b>comuniones, bautizos, comidas de
+    empresa y celebraciones familiares de hasta 60 comensales</b>, con menús
+    cerrados a medida. Consúltenos sin compromiso por teléfono.</p>
+  </div>
+
+  <div class="seccion" id="opiniones">
+    <h2>Opiniones de nuestros clientes</h2>
+    <p><i>"El mejor cochinillo que he probado fuera de Segovia. El trato de
+    Marta, de diez."</i> — Rosa M.</p>
+    <p><i>"Llevo comiendo aquí desde los años 80 y sigue igual de bueno. Las
+    croquetas son obligatorias."</i> — Paco G.</p>
+    <p><i>"Sitio de toda la vida, comida honesta y abundante. Se llena, id
+    pronto."</i> — Lucía T.</p>
+  </div>
+
+  <div class="seccion" id="contacto">
+    <h2>Contacto y horario</h2>
+    <p>Calle de la Fuente, 12 — 28590 Torrelunar (Madrid)</p>
+    <p>Teléfono: 912 000 111</p>
+    <p>Horario: martes a domingo de 13:00 a 16:30. Viernes y sábados también
+    noches, de 20:30 a 23:30. Lunes cerrado por descanso.</p>
+    <p>También puede escribirnos a casaemilia@ejemplo.es</p>
+    <p>Síganos en Facebook: Restaurante Casa Emilia Torrelunar</p>
+  </div>
+
+  <div class="aviso">Página web optimizada para Internet Explorer a resolución 1024x768. Visitante nº 48.213</div>
+
+  <div class="pie">
+    RESTAURANTE CASA EMILIA — Calle de la Fuente 12, Torrelunar (Madrid) —
+    Tel. 912 000 111<br>
+    © Casa Emilia. Todos los derechos reservados. Diseño web: Informática Torrelunar S.L. (2011)
+  </div>
+
+</div>
+</body>
+</html>

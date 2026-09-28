@@ -1,0 +1,20 @@
+# Config personal de cada ordenador — no se comparte ni se sube a git
+.claude/settings.local.json
+
+# Marcador que crea /setup en cada ordenador
+.claude/setup-completado.json
+
+# La herramienta de lectura de YouTube, si se instaló dentro del kit
+bin/
+
+# Las capturas de Studio del usuario: son suyas y llevan datos privados del canal
+entrada/*
+!entrada/LEEME.md
+
+# Análisis: informes de canales reales, miniaturas y datos crudos descargados —
+# no se distribuyen con el kit
+workspace/*
+!workspace/.gitkeep
+
+# Basura del sistema
+.DS_Store

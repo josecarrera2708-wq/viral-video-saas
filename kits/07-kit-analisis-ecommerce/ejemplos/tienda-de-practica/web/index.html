@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maré | Tienda online</title>
+<meta name="description" content="Maré">
+<meta name="generator" content="WordPress 6.4.2">
+<link rel="stylesheet" href="/wp-content/plugins/woocommerce/assets/css/woocommerce.css">
+<link rel="stylesheet" href="/wp-content/themes/mare/style.css">
+<script src="/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4KX8N2QP1M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4KX8N2QP1M');
+</script>
+<style>
+  body{font-family:Georgia,serif;margin:0;color:#3a3a35;background:#faf8f4}
+  .aviso{background:#2f4f4a;color:#fff;text-align:center;padding:10px;font-size:15px;letter-spacing:1px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:22px 40px}
+  .logo{font-size:28px;letter-spacing:6px}
+  nav a{margin-left:22px;color:#3a3a35;text-decoration:none;font-size:15px}
+  .hero{position:relative}
+  .hero img{width:100%;display:block}
+  .hero-txt{position:absolute;bottom:60px;left:60px;color:#fff}
+  .hero-txt h1{font-size:44px;margin:0 0 12px}
+  .btn{display:inline-block;background:#2f4f4a;color:#fff;padding:14px 30px;text-decoration:none}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:60px 40px}
+  .card{text-align:center}
+  .card img{width:100%}
+  .card h3{font-size:18px;margin:14px 0 4px;font-weight:normal}
+  .precio{color:#6b6b60}
+  .historia{padding:60px 40px;max-width:760px;margin:0 auto;line-height:1.7}
+  footer{background:#efeae1;padding:40px;font-size:14px;line-height:1.9}
+  footer a{color:#3a3a35}
+  .popup{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center}
+  .popup.on{display:flex}
+  .popup-box{background:#fff;padding:44px;max-width:420px;text-align:center}
+  .cerrar{position:absolute;top:14px;right:18px;font-size:22px;cursor:pointer;color:#fff}
+</style>
+</head>
+<body class="woocommerce-page home">
+
+<div class="aviso">ENVÍO GRATIS · NUEVA COLECCIÓN DE LINO LAVADO</div>
+
+<header>
+  <div class="logo">MARÉ</div>
+  <nav>
+    <a href="/coleccion-lino.html">Colección</a>
+    <a href="/sobre-mare.html">Sobre Maré</a>
+    <a href="/envios-y-devoluciones.html">Envíos</a>
+    <a href="/contacto.html">Contacto</a>
+    <a href="/carrito.html">Carrito (0)</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="/wp-content/uploads/2025/03/hero-lino-portada.jpg" alt="">
+  <div class="hero-txt">
+    <h1>Lino que dura veranos</h1>
+    <p>Prendas cosidas en Pontevedra, en tiradas pequeñas.</p>
+    <a class="btn" href="/coleccion-lino.html">Ver la colección</a>
+  </div>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <a href="/producto-camisa-lino.html"><img src="/wp-content/uploads/2025/03/camisa-lino-arena.jpg" alt=""></a>
+    <h3>Camisa Ría</h3>
+    <p class="precio">49,00 €</p>
+  </div>
+  <div class="card">
+    <a href="/producto-pantalon-lino.html"><img src="/wp-content/uploads/2025/03/pantalon-lino-crudo.jpg" alt=""></a>
+    <h3>Pantalón Sal</h3>
+    <p class="precio">59,00 €</p>
+  </div>
+  <div class="card">
+    <a href="/producto-vestido-lino.html"><img src="/wp-content/uploads/2025/03/vestido-lino-verde.jpg" alt=""></a>
+    <h3>Vestido Marea</h3>
+    <p class="precio">72,00 €</p>
+  </div>
+</section>
+
+<section class="historia">
+  <h2>Somos un taller, no una fábrica</h2>
+  <p>Maré nació en 2021 en un bajo de la calle Sarmiento, en Pontevedra. Cosemos
+  con lino europeo lavado, en tiradas de 30 o 40 prendas por modelo, y cuando se
+  acaba una talla tardamos semanas en volver a tenerla. Nos parece bien: preferimos
+  que la prenda dure ocho veranos a vender el triple.</p>
+  <p>Icía cose, corta y contesta los correos. Si nos escribes un martes por la
+  tarde, probablemente te conteste ella con las manos llenas de hilo.</p>
+</section>
+
+<footer>
+  <p><strong>Maré</strong> · Calle Sarmiento 14, bajo · 36002 Pontevedra<br>
+  hola@mare.example · 986 00 11 22</p>
+  <p>Devoluciones en 30 días · Pago seguro con tarjeta<br>
+  <a href="/aviso-legal.html">Aviso legal</a> ·
+  <a href="/privacidad.html">Privacidad</a> ·
+  <a href="/condiciones.html">Condiciones de compra</a> ·
+  <a href="/envios-y-devoluciones.html">Envíos y devoluciones</a></p>
+  <p>Síguenos en <a href="https://instagram.com/mare.lino">Instagram</a> ·
+  <a href="https://tiktok.com/@mare.lino">TikTok</a></p>
+</footer>
+
+<div class="popup" id="pop">
+  <span class="cerrar" onclick="document.getElementById('pop').classList.remove('on')">&times;</span>
+  <div class="popup-box">
+    <h2>10 % en tu primera compra</h2>
+    <p>Déjanos tu correo y te enviamos el código.</p>
+    <form onsubmit="alert('¡Gracias!');return false">
+      <input type="email" placeholder="tu@correo.com" required style="padding:12px;width:90%">
+      <br><br>
+      <button class="btn" type="submit">Quiero mi 10 %</button>
+    </form>
+  </div>
+</div>
+<script>
+  setTimeout(function(){ document.getElementById('pop').classList.add('on'); }, 2000);
+</script>
+
+</body>
+</html>

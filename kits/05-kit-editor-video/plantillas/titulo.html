@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Titular</title>
+<link rel="stylesheet" href="tema.css">
+<style>
+  #lienzo { padding: 0 60px; }
+  #caja { display: flex; flex-direction: column; gap: 14px; width: 100%; }
+  .linea { position: relative; display: block; width: 100%;
+           font-family: "Mega", sans-serif; font-weight: 900;
+           line-height: 0.98; letter-spacing: -0.04em;
+           text-shadow: var(--contorno); }
+  .linea.centrado { text-align: center; }
+  .caja-linea { display: inline-block; position: relative; }
+  #antetitulo { align-self: flex-start; margin-bottom: 10px; }
+  #antetitulo.centrado { align-self: center; }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="caja">
+    <div id="antetitulo" class="pastilla"></div>
+    <div id="lineas"></div>
+  </div>
+</div>
+<script src="motor.js"></script>
+<script>
+/* Titular a pantalla grande, para abrir el vídeo o marcar un cambio de tema.
+   Datos:
+     {"lineas": ["Esto no es", "*un editor* normal"],
+      "ante": "Kit de vídeo",     // opcional, la pastilla de arriba
+      "visible": 2.2,
+      "centrado": false}
+   Lo que va entre *asteriscos* sale en naranja. */
+const M = Motor;
+let d = {}, dur = 0, lineas = [];
+
+const PASO = 0.13;      // retraso entre líneas
+const ENTRADA = 0.52;
+
+M.registrar({
+  lienzo: { ancho: 1080, alto: 760 },
+
+  cargar(datos) {
+    d = {
+      lineas: (datos.lineas && datos.lineas.length ? datos.lineas
+               : ["Titular"]).slice(0, 4),
+      ante: datos.ante || "",
+      visible: Math.max(Number(datos.visible) || 2.2, 0.6),
+      centrado: !!datos.centrado,
+      tamano: Number(datos.tamano) || 0,
+    };
+    const cont = M.uno("#lineas");
+    cont.innerHTML = "";
+    d.lineas.forEach(txt => {
+      const fila = M.crear("div", "linea" + (d.centrado ? " centrado" : ""));
+      fila.appendChild(M.crear("span", "caja-linea", M.marcado(txt)));
+      cont.appendChild(fila);
+    });
+    lineas = M.todos(".linea");
+
+    const ante = M.uno("#antetitulo");
+    ante.innerHTML = M.marcado(d.ante);
+    ante.style.display = d.ante ? "inline-flex" : "none";
+    ante.className = "pastilla" + (d.centrado ? " centrado" : "");
+
+    // El cuerpo se ajusta al texto más largo: un titular de tres palabras
+    // debe verse enorme, y uno de doce tiene que caber.
+    let cuerpo = d.tamano || 132;
+    const mas_largo = Math.max.apply(null, d.lineas.map(s =>
+      s.replace(/\*/g, "").length));
+    if (!d.tamano) {
+      if (mas_largo > 14) cuerpo = 112;
+      if (mas_largo > 20) cuerpo = 92;
+      if (mas_largo > 28) cuerpo = 74;
+      if (d.lineas.length >= 4) cuerpo = Math.min(cuerpo, 92);
+    }
+    lineas.forEach(l => { l.style.fontSize = cuerpo + "px"; });
+    // Y si aun así se sale del lienzo, se baja hasta que entre.
+    let guardia = 0;
+    while (M.uno("#caja").offsetHeight > 700 && cuerpo > 54 && guardia++ < 40) {
+      cuerpo -= 4;
+      lineas.forEach(l => { l.style.fontSize = cuerpo + "px"; });
+    }
+    dur = ENTRADA + PASO * d.lineas.length + d.visible + 0.4;
+  },
+
+  duracion() { return dur; },
+
+  fotograma(t) {
+    const fin = dur - 0.4;
+    const salida = M.tramo(t, fin, 0.4, "suave");
+    M.poner(M.uno("#antetitulo"), {
+      y: M.numero(M.tramo(t, 0, 0.4, "rebote"), 30, 0),
+      escala: M.numero(M.tramo(t, 0, 0.4, "rebote"), 0.86, 1),
+      opacidad: M.tramo(t, 0, 0.22, "frena") * (1 - salida),
+    });
+    lineas.forEach((el, i) => {
+      const cuando = (d.ante ? 0.16 : 0.04) + M.cascada(i, PASO);
+      const u = M.tramo(t, cuando, ENTRADA, "resorte");
+      const uo = M.tramo(t, cuando, 0.24, "frena");
+      M.poner(el, {
+        y: M.numero(u, 64, 0) + M.numero(salida, 0, -40),
+        escala: M.numero(u, 0.94, 1),
+        opacidad: uo * (1 - salida),
+        difuminado: M.numero(1 - uo, 0, 10),
+      });
+    });
+  },
+});
+</script>
+</body>
+</html>

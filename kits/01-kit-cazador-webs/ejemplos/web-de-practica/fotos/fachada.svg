@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d8e0"/><stop offset="1" stop-color="#e8e2d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#cielo)"/>
+  <rect x="80" y="120" width="640" height="330" fill="#b09268"/>
+  <rect x="80" y="120" width="640" height="24" fill="#8a6f4a"/>
+  <rect x="120" y="300" width="120" height="150" fill="#4a2e1a"/>
+  <rect x="300" y="310" width="180" height="90" fill="#d8ecf2" stroke="#4a2e1a" stroke-width="8"/>
+  <rect x="540" y="310" width="140" height="90" fill="#d8ecf2" stroke="#4a2e1a" stroke-width="8"/>
+  <rect x="110" y="220" width="580" height="56" fill="#7a1f1f"/>
+  <text x="400" y="257" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#f2e6c9" letter-spacing="4">CASA EMILIA</text>
+  <text x="400" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#7c7462">[Foto de práctica: fachada del restaurante]</text>
+</svg>

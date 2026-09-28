@@ -1,0 +1,136 @@
+{
+  "_leeme": "Catálogo de efectos de sonido. 'ganancia' es el volumen recomendado (1.0 = original). 'alinear' dice si el efecto cuadra por donde empieza o por donde acaba: los que suben y revientan al final se colocan por el final. Licencia Pixabay Content License: uso comercial permitido, sin atribución obligatoria.",
+  "chime": {
+    "archivo": "chime.mp3",
+    "duracion": 2.5,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Campanilla suave y agradable. Algo sale bien, una confirmación o un cambio de tema ligero."
+  },
+  "click-soft": {
+    "archivo": "click-soft.mp3",
+    "duracion": 0.37,
+    "ganancia": 0.3,
+    "alinear": "inicio",
+    "cuando": "Clic discreto. Un toque en la pantalla, una opción que se marca. Va en el fotograma exacto de la acción."
+  },
+  "click": {
+    "archivo": "click.mp3",
+    "duracion": 0.37,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Clic nítido. Se pulsa un botón o se activa un interruptor. Va en el fotograma exacto de la acción."
+  },
+  "error": {
+    "archivo": "error.mp3",
+    "duracion": 1.62,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Tono de fallo. Algo ha ido mal, un «no», una interrupción brusca."
+  },
+  "glitch-1": {
+    "archivo": "glitch-1.mp3",
+    "duracion": 2.64,
+    "ganancia": 0.4,
+    "alinear": "inicio",
+    "cuando": "Interferencia digital con pegada. Acentúa un corte seco o una aparición repentina; la cola se cuela en el plano siguiente y eso queda bien."
+  },
+  "glitch-2": {
+    "archivo": "glitch-2.mp3",
+    "duracion": 3.5,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Interferencia larga y agresiva. Transición caótica o revelado distorsionado. Con cuentagotas: cansa enseguida."
+  },
+  "glitch-3": {
+    "archivo": "glitch-3.mp3",
+    "duracion": 3.1,
+    "ganancia": 0.3,
+    "alinear": "inicio",
+    "cuando": "Textura digital discreta. Un cambio sutil que se queda por debajo de la voz."
+  },
+  "impact-bass-1": {
+    "archivo": "impact-bass-1.mp3",
+    "duracion": 2.12,
+    "ganancia": 0.45,
+    "alinear": "inicio",
+    "cuando": "Golpe de graves. Un titular que entra de golpe, un logotipo que aparece. Cae en el fotograma del impacto."
+  },
+  "impact-bass-2": {
+    "archivo": "impact-bass-2.mp3",
+    "duracion": 2.59,
+    "ganancia": 0.45,
+    "alinear": "final",
+    "cuando": "Golpe de graves con carrerilla. Hay un pequeño crescendo antes, así que se coloca por el final para que el golpe caiga en el revelado."
+  },
+  "key-press": {
+    "archivo": "key-press.mp3",
+    "duracion": 0.4,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Una sola tecla. Un carácter que se escribe, un intro en la terminal."
+  },
+  "notification": {
+    "archivo": "notification.mp3",
+    "duracion": 2.46,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Aviso de notificación. Entra un mensaje, aparece un cartelito o un contador."
+  },
+  "ping": {
+    "archivo": "ping.mp3",
+    "duracion": 1.32,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Pitido corto y limpio. Subraya un dato o una cifra que aparece en pantalla."
+  },
+  "pop": {
+    "archivo": "pop.mp3",
+    "duracion": 0.72,
+    "ganancia": 0.3,
+    "alinear": "inicio",
+    "cuando": "Pequeño «pop». Un elemento que aparece, una etiqueta que entra."
+  },
+  "riser": {
+    "archivo": "riser.mp3",
+    "duracion": 10.03,
+    "ganancia": 0.3,
+    "alinear": "final",
+    "cuando": "Subida de diez segundos que revienta al final. Se coloca por el final para que el pico caiga en el momento fuerte. Solo si el vídeo dura bastante."
+  },
+  "sparkle": {
+    "archivo": "sparkle.mp3",
+    "duracion": 1.8,
+    "ganancia": 0.3,
+    "alinear": "inicio",
+    "cuando": "Brillo o destello. Algo que reluce, un elemento que se resalta."
+  },
+  "typing": {
+    "archivo": "typing.mp3",
+    "duracion": 1.5,
+    "ganancia": 0.3,
+    "alinear": "inicio",
+    "cuando": "Ráfaga de teclado de segundo y medio. Texto o código escribiéndose: empieza cuando empieza a escribirse."
+  },
+  "whoosh-cinematic": {
+    "archivo": "whoosh-cinematic.mp3",
+    "duracion": 5.54,
+    "ganancia": 0.3,
+    "alinear": "final",
+    "cuando": "Barrido amplio de cinco segundos y medio para una transición de escena. Se coloca por el final para que reviente justo en el corte."
+  },
+  "whoosh-short": {
+    "archivo": "whoosh-short.mp3",
+    "duracion": 0.57,
+    "ganancia": 0.28,
+    "alinear": "inicio",
+    "cuando": "Barrido corto. Un movimiento rápido, una transición ágil. Es el efecto por defecto de los cortes."
+  },
+  "whoosh": {
+    "archivo": "whoosh.mp3",
+    "duracion": 0.57,
+    "ganancia": 0.35,
+    "alinear": "inicio",
+    "cuando": "Barrido con pegada. Un revelado rápido o un corte duro que se quiere marcar."
+  }
+}

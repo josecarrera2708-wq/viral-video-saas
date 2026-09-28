@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo trabajáis por dentro · cuestionario</title>
+<style>
+  :root {
+    --texto: #1f2933;
+    --suave: #5b6875;
+    --linea: #dde3e9;
+    --acento: #2f6fb2;
+    --aviso: #b26a00;
+    --fondo-aviso: #fdf3e3;
+    --fondo-caja: #f7f9fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--texto);
+    background: #fff;
+    margin: 0;
+    padding: 32px 20px 80px;
+    line-height: 1.55;
+  }
+  main { max-width: 780px; margin: 0 auto; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  .subtitulo { color: var(--suave); margin: 0 0 24px; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 40px 0 4px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--linea);
+  }
+  h2 .num { color: var(--acento); }
+  .intro p { margin: 0 0 12px; }
+  .avisos {
+    background: var(--fondo-aviso);
+    border-left: 4px solid var(--aviso);
+    padding: 14px 18px;
+    margin: 20px 0 8px;
+    border-radius: 0 4px 4px 0;
+  }
+  .avisos ul { margin: 8px 0 0; padding-left: 20px; }
+  .avisos li { margin-bottom: 8px; }
+  .avisos li:last-child { margin-bottom: 0; }
+  .nota-bloque {
+    color: var(--suave);
+    font-style: italic;
+    margin: 10px 0 0;
+    font-size: 0.94rem;
+  }
+  .pregunta { margin: 22px 0 0; }
+  .pregunta label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .pregunta .cod { color: var(--acento); }
+  .pregunta .pista {
+    display: block;
+    font-weight: 400;
+    color: var(--suave);
+    font-size: 0.92rem;
+    margin-top: 3px;
+  }
+  textarea {
+    width: 100%;
+    min-height: 62px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--texto);
+    background: var(--fondo-caja);
+    border: 1px solid var(--linea);
+    border-radius: 5px;
+    resize: vertical;
+    overflow: hidden;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: var(--acento);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(47, 111, 178, 0.12);
+  }
+  .barra {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--linea);
+    padding: 10px 0;
+    margin: 0 0 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    z-index: 5;
+  }
+  button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: 1px solid var(--acento);
+    background: var(--acento);
+    color: #fff;
+    cursor: pointer;
+  }
+  button.secundario { background: #fff; color: var(--acento); }
+  button:hover { filter: brightness(0.94); }
+  .estado { color: var(--suave); font-size: 0.9rem; }
+  .cierre {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 2px solid var(--linea);
+  }
+  @media print {
+    body { padding: 0; font-size: 11pt; }
+    .barra, .no-imprimir { display: none !important; }
+    textarea {
+      background: #fff;
+      border: 1px solid #999;
+      min-height: 54px;
+      overflow: visible;
+    }
+    h2 { page-break-after: avoid; }
+    .pregunta { page-break-inside: avoid; }
+    .avisos { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="barra no-imprimir">
+    <button type="button" id="btn-copiar">Copiar mis respuestas</button>
+    <button type="button" class="secundario" id="btn-imprimir">Imprimir o guardar en PDF</button>
+    <span class="estado" id="estado">Se guarda solo en este navegador mientras escribes.</span>
+  </div>
+
+  <h1>Cómo trabajáis por dentro</h1>
+  <p class="subtitulo">Cuestionario previo a la auditoría · 36 preguntas · unos 10 minutos</p>
+
+  <div class="intro">
+    <p>Este cuestionario sirve para entender cómo funciona vuestro negocio en el
+    día a día: por dónde entran los clientes, quién hace cada cosa y con qué
+    herramientas. Con vuestras respuestas preparo un informe con <strong>dónde se
+    está yendo el tiempo</strong> y <strong>qué se puede automatizar</strong>, en
+    orden de lo que más compensa.</p>
+
+    <p><strong>Se contesta en unos 10 minutos.</strong> Contesta con tus palabras,
+    como si me lo estuvieras contando por teléfono. No hace falta que sepas nada
+    de tecnología.</p>
+
+    <div class="avisos">
+      <strong>Tres cosas antes de empezar</strong>
+      <ul>
+        <li><strong>No contestes lo que no sepas.</strong> Escribe "no lo sé" y ya
+        está. Es mejor un hueco sincero que un dato inventado: el informe marca lo
+        que falta.</li>
+        <li><strong>Los números aproximados valen.</strong> "Unas 30 llamadas a la
+        semana" es suficiente. No busques nada en ningún sitio.</li>
+        <li><strong>No me mandes datos de tus clientes.</strong> Ni listados, ni
+        fichas, ni facturas, ni contraseñas, ni accesos a tus programas. Aquí solo
+        hablamos de <strong>herramientas y procesos</strong>. Si me llega algo de
+        eso, te lo devuelvo sin abrirlo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <form id="formulario">
+
+    <h2><span class="num">Bloque 1</span> · El negocio</h2>
+
+    <div class="pregunta">
+      <label for="p1"><span class="cod">P1.</span> Nombre del negocio</label>
+      <textarea id="p1" name="P1"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p2"><span class="cod">P2.</span> A qué os dedicáis, en una frase</label>
+      <textarea id="p2" name="P2"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p3"><span class="cod">P3.</span> Ciudad</label>
+      <textarea id="p3" name="P3"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p4"><span class="cod">P4.</span> ¿Cuántas personas trabajáis y qué hace cada una?
+        <span class="pista">Por ejemplo: "3: yo atiendo y hago presupuestos, mi socio produce, y una persona a media jornada en recepción".</span>
+      </label>
+      <textarea id="p4" name="P4"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p5"><span class="cod">P5.</span> Horario de atención al público</label>
+      <textarea id="p5" name="P5"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p6"><span class="cod">P6.</span> ¿A cuántos clientes atendéis a la semana, más o menos?</label>
+      <textarea id="p6" name="P6"></textarea>
+    </div>
+
+    <h2><span class="num">Bloque 2</span> · Cómo os llegan los clientes</h2>
+
+    <div class="pregunta">
+      <label for="p7"><span class="cod">P7.</span> ¿Por dónde os contactan? Ordénalo de más a menos
+        <span class="pista">Teléfono, WhatsApp, Instagram, formulario de la web, email, gente que entra por la puerta, otros.</span>
+      </label>
+      <textarea id="p7" name="P7"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p8"><span class="cod">P8.</span> ¿Quién responde a esas llamadas y mensajes, y desde qué dispositivo?
+        <span class="pista">Por ejemplo: "la recepcionista, desde su móvil personal" o "un móvil de empresa que está en el mostrador".</span>
+      </label>
+      <textarea id="p8" name="P8"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p9"><span class="cod">P9.</span> ¿Cuánto se tarda normalmente en contestar un mensaje?</label>
+      <textarea id="p9" name="P9"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p10"><span class="cod">P10.</span> ¿Qué pasa con las llamadas y mensajes que llegan <strong>fuera de horario</strong> o cuando estáis ocupados atendiendo? ¿Sabéis cuántos se quedan sin contestar?</label>
+      <textarea id="p10" name="P10"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p11"><span class="cod">P11.</span> ¿Cuántas consultas de clientes nuevos entran a la semana, más o menos?</label>
+      <textarea id="p11" name="P11"></textarea>
+    </div>
+
+    <h2><span class="num">Bloque 3</span> · Agenda y citas</h2>
+    <p class="nota-bloque">Si en tu negocio no se trabaja con cita previa, salta
+    este bloque entero y escribe "no trabajamos con cita".</p>
+
+    <div class="pregunta">
+      <label for="p12"><span class="cod">P12.</span> ¿Dónde apuntáis las citas?
+        <span class="pista">Agenda de papel, Excel, Google Calendar, un programa concreto: dime cuál.</span>
+      </label>
+      <textarea id="p12" name="P12"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p13"><span class="cod">P13.</span> ¿Quién las apunta, y desde dónde se puede consultar la agenda?</label>
+      <textarea id="p13" name="P13"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p14"><span class="cod">P14.</span> ¿Puede el cliente reservar él solo por internet, sin llamar?</label>
+      <textarea id="p14" name="P14"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p15"><span class="cod">P15.</span> ¿Cómo le recordáis la cita al cliente? ¿Quién lo hace, y cuánto tiempo se le va a la semana en eso?</label>
+      <textarea id="p15" name="P15"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p16"><span class="cod">P16.</span> ¿Cuántas citas se pierden porque el cliente no aparece o cancela a última hora? ¿Cuánto factura de media una cita?</label>
+      <textarea id="p16" name="P16"></textarea>
+    </div>
+
+    <h2><span class="num">Bloque 4</span> · Presupuestos, cobro y facturación</h2>
+
+    <div class="pregunta">
+      <label for="p17"><span class="cod">P17.</span> ¿Cómo preparáis un presupuesto y cómo se lo hacéis llegar al cliente?</label>
+      <textarea id="p17" name="P17"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p18"><span class="cod">P18.</span> ¿Cuántos presupuestos mandáis al mes, y cuántos acaban en trabajo?</label>
+      <textarea id="p18" name="P18"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p19"><span class="cod">P19.</span> ¿Cómo cobráis?
+        <span class="pista">Efectivo, tarjeta, transferencia, pago por internet, financiación…</span>
+      </label>
+      <textarea id="p19" name="P19"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p20"><span class="cod">P20.</span> ¿Quién hace las facturas y con qué programa? ¿Cuánto tiempo al mes os lleva?</label>
+      <textarea id="p20" name="P20"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p21"><span class="cod">P21.</span> ¿Tenéis impagos, o pagos pendientes que se os olvida reclamar?</label>
+      <textarea id="p21" name="P21"></textarea>
+    </div>
+
+    <h2><span class="num">Bloque 5</span> · Después de la venta</h2>
+
+    <div class="pregunta">
+      <label for="p22"><span class="cod">P22.</span> Cuando un cliente termina, ¿qué pasa? ¿Volvéis a hablar con él?</label>
+      <textarea id="p22" name="P22"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p23"><span class="cod">P23.</span> ¿Pedís reseñas? Si sí, ¿cómo? ¿Cuántas tenéis ahora mismo y con qué nota?</label>
+      <textarea id="p23" name="P23"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p24"><span class="cod">P24.</span> ¿Vuestros clientes deberían volver cada cierto tiempo (revisión, mantenimiento, retoque, renovación)? ¿Cómo les avisáis de que les toca?</label>
+      <textarea id="p24" name="P24"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p25"><span class="cod">P25.</span> ¿Mandáis alguna comunicación cada cierto tiempo (novedades, ofertas, recordatorios)? ¿Con qué herramienta?</label>
+      <textarea id="p25" name="P25"></textarea>
+    </div>
+
+    <h2><span class="num">Bloque 6</span> · Herramientas y datos</h2>
+
+    <div class="pregunta">
+      <label for="p26"><span class="cod">P26.</span> Lista de programas y aplicaciones que pagáis
+        <span class="pista">De cada uno: nombre, para qué lo usáis y cuánto cuesta al mes, si lo sabes.</span>
+      </label>
+      <textarea id="p26" name="P26"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p27"><span class="cod">P27.</span> ¿Dónde está la información de vuestros clientes?
+        <span class="pista">Un programa, un Excel, la agenda de papel, el móvil de alguien, varias cosas a la vez.</span>
+      </label>
+      <textarea id="p27" name="P27"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p28"><span class="cod">P28.</span> ¿Hay copia de seguridad de eso? ¿Quién la hace y cada cuánto?</label>
+      <textarea id="p28" name="P28"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p29"><span class="cod">P29.</span> ¿Quién tiene acceso a esa información? Y una pregunta incómoda: si mañana esa persona no viene, ¿el negocio puede seguir funcionando?</label>
+      <textarea id="p29" name="P29"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p30"><span class="cod">P30.</span> ¿Qué números miráis cada mes para saber si el negocio va bien?</label>
+      <textarea id="p30" name="P30"></textarea>
+    </div>
+
+    <h2><span class="num">Bloque 7</span> · Tiempo, IA y objetivos</h2>
+
+    <div class="pregunta">
+      <label for="p31"><span class="cod">P31.</span> Las <strong>3 tareas repetitivas</strong> que más tiempo os comen
+        <span class="pista">De cada una, dime cuánto tiempo a la semana, aunque sea a ojo.</span>
+      </label>
+      <textarea id="p31" name="P31"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p32"><span class="cod">P32.</span> ¿Cuánto cuesta más o menos una hora de trabajo de la persona que hace esas tareas?
+        <span class="pista">Con lo que cuesta a la empresa, aproximado. Si prefieres no decirlo, no pasa nada.</span>
+      </label>
+      <textarea id="p32" name="P32"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p33"><span class="cod">P33.</span> ¿Habéis probado alguna herramienta de inteligencia artificial o de automatización? ¿Qué pasó?</label>
+      <textarea id="p33" name="P33"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p34"><span class="cod">P34.</span> ¿Qué os preocuparía de usar inteligencia artificial con vuestros clientes?</label>
+      <textarea id="p34" name="P34"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p35"><span class="cod">P35.</span> Si pudieras arreglar <strong>una sola cosa</strong> del día a día, ¿cuál sería?</label>
+      <textarea id="p35" name="P35"></textarea>
+    </div>
+    <div class="pregunta">
+      <label for="p36"><span class="cod">P36.</span> ¿Qué presupuesto tienes en mente para montarlo? ¿Y para el mantenimiento mensual?</label>
+      <textarea id="p36" name="P36"></textarea>
+    </div>
+
+  </form>
+
+  <div class="cierre">
+    <p>Gracias. Con esto tengo suficiente para preparar el informe.</p>
+    <p>Si algo se ha quedado a medias, mándalo igualmente: se trabaja con lo que
+    haya y lo que falte quedará señalado como pendiente en el informe.</p>
+    <p class="no-imprimir"><strong>Para devolverlo</strong>: pulsa "Copiar mis
+    respuestas" y pégalas en el email o el WhatsApp, o usa "Imprimir o guardar en
+    PDF" y manda el archivo.</p>
+  </div>
+
+</main>
+
+<script>
+(function () {
+  var CLAVE = "formulario-como-trabajais-por-dentro";
+  var areas = Array.prototype.slice.call(document.querySelectorAll("textarea"));
+  var estado = document.getElementById("estado");
+
+  function crecer(area) {
+    area.style.height = "auto";
+    area.style.height = Math.max(area.scrollHeight, 62) + "px";
+  }
+
+  // Recupera lo que hubiera escrito antes en este mismo navegador.
+  try {
+    var guardado = JSON.parse(localStorage.getItem(CLAVE) || "{}");
+    areas.forEach(function (area) {
+      if (guardado[area.name]) { area.value = guardado[area.name]; }
+    });
+  } catch (e) { /* si el navegador no deja, se rellena y se copia a mano */ }
+
+  areas.forEach(function (area) {
+    crecer(area);
+    area.addEventListener("input", function () {
+      crecer(area);
+      guardar();
+    });
+  });
+
+  var temporizador = null;
+  function guardar() {
+    if (temporizador) { clearTimeout(temporizador); }
+    temporizador = setTimeout(function () {
+      var datos = {};
+      areas.forEach(function (area) { datos[area.name] = area.value; });
+      try {
+        localStorage.setItem(CLAVE, JSON.stringify(datos));
+        estado.textContent = "Guardado en este navegador.";
+      } catch (e) {
+        estado.textContent = "No se puede guardar solo: copia las respuestas antes de cerrar.";
+      }
+    }, 400);
+  }
+
+  function textoPlano() {
+    var lineas = ["Cómo trabajáis por dentro — respuestas", ""];
+    areas.forEach(function (area) {
+      var etiqueta = area.parentNode.querySelector("label");
+      var pregunta = etiqueta ? etiqueta.textContent.replace(/\s+/g, " ").trim() : area.name;
+      lineas.push("**" + pregunta + "**");
+      lineas.push(area.value.trim() ? area.value.trim() : "(sin contestar)");
+      lineas.push("");
+    });
+    return lineas.join("\n");
+  }
+
+  document.getElementById("btn-copiar").addEventListener("click", function () {
+    var texto = textoPlano();
+    function aviso(ok) {
+      estado.textContent = ok
+        ? "Copiado. Pégalo en el email o el WhatsApp."
+        : "No se ha podido copiar: selecciona el texto a mano.";
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(function () { aviso(true); }, function () { aviso(false); });
+    } else {
+      var tmp = document.createElement("textarea");
+      tmp.value = texto;
+      document.body.appendChild(tmp);
+      tmp.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      document.body.removeChild(tmp);
+      aviso(ok);
+    }
+  });
+
+  document.getElementById("btn-imprimir").addEventListener("click", function () {
+    window.print();
+  });
+})();
+</script>
+</body>
+</html>

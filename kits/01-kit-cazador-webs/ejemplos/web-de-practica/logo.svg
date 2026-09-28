@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <circle cx="90" cy="90" r="86" fill="#f2e6c9" stroke="#7a1f1f" stroke-width="6"/>
+  <circle cx="90" cy="90" r="70" fill="none" stroke="#7a1f1f" stroke-width="2"/>
+  <text x="90" y="82" text-anchor="middle" font-family="Georgia, serif" font-size="40" font-weight="bold" fill="#7a1f1f">CE</text>
+  <text x="90" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#7a1f1f">CASA EMILIA</text>
+  <text x="90" y="126" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#5c1616">DESDE 1962</text>
+</svg>

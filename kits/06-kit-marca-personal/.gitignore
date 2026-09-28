@@ -1,0 +1,16 @@
+# Config personal de cada ordenador — no se comparte ni se sube a git
+.claude/settings.local.json
+
+# Marcador que crea /setup en cada ordenador
+.claude/setup-completado.json
+
+# Las capturas del usuario: son suyas y pueden llevar datos de terceros
+entrada/*
+!entrada/LEEME.md
+
+# Análisis: informes de personas reales — no se distribuyen con el kit
+workspace/*
+!workspace/.gitkeep
+
+# Basura del sistema
+.DS_Store

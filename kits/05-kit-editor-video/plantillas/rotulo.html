@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Rótulo</title>
+<link rel="stylesheet" href="tema.css">
+<style>
+  #lienzo { justify-content: flex-start; padding-left: 56px; }
+  #caja { position: relative; display: flex; flex-direction: column; gap: 18px;
+          align-items: flex-start; }
+  #titulo { position: relative; display: inline-block;
+            font-size: 68px; font-weight: 800; letter-spacing: -0.025em;
+            text-shadow: var(--contorno); padding-bottom: 8px; }
+  #sub { font-size: 40px; font-weight: 600; color: var(--hueso);
+         letter-spacing: -0.015em; text-shadow: var(--contorno); }
+  #marca { position: absolute; left: -30px; top: 6px; width: 12px;
+           background: var(--naranja); border-radius: 6px;
+           transform-origin: top center; }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="caja">
+    <div id="marca"></div>
+    <div id="titulo"><span id="titulo-texto"></span><span class="subrayado" id="raya"></span></div>
+    <div id="sub"></div>
+  </div>
+</div>
+<script src="motor.js"></script>
+<script>
+/* Rótulo de esquina: el nombre de lo que se está explicando.
+   Datos:  {"texto": "Paso 1", "sub": "Instalar el kit", "visible": 2.4}
+   Se coloca abajo a la izquierda, por encima de los subtítulos. */
+const M = Motor;
+let d = {}, dur = 0;
+
+M.registrar({
+  lienzo: { ancho: 1080, alto: 300 },
+
+  cargar(datos) {
+    d = {
+      texto: datos.texto || "Rótulo",
+      sub: datos.sub || "",
+      visible: Math.max(Number(datos.visible) || 2.4, 0.6),
+    };
+    M.uno("#titulo-texto").innerHTML = M.marcado(d.texto);
+    M.uno("#sub").innerHTML = M.marcado(d.sub);
+    M.uno("#sub").style.display = d.sub ? "block" : "none";
+    dur = 0.5 + d.visible + 0.42;
+    // La raya y la marca miden lo que mide el texto, así que se leen después
+    // de escribirlo.
+    const t = M.uno("#titulo");
+    M.uno("#raya").style.width = t.offsetWidth + "px";
+    M.uno("#marca").style.height =
+      (M.uno("#caja").offsetHeight - 12) + "px";
+  },
+
+  duracion() { return dur; },
+
+  fotograma(t) {
+    const salida = 1 - M.tramo(t, 0.5 + d.visible, 0.42, "suave");
+    // Todo el bloque entra deslizándose desde la izquierda.
+    M.entrada(M.uno("#caja"), t, 0, 0.48, { desdeX: -70, desdeY: 0,
+                                            desdeEscala: 1 });
+    if (salida < 1) {
+      M.poner(M.uno("#caja"), { x: M.numero(1 - salida, 0, -70),
+                                opacidad: salida });
+    }
+    // La marca vertical crece de arriba abajo.
+    M.uno("#marca").style.transform =
+      "scaleY(" + M.tramo(t, 0.06, 0.34, "frena") + ")";
+    // La raya del subrayado se pinta de izquierda a derecha, un pelo después.
+    M.uno("#raya").style.transform =
+      "scaleX(" + M.tramo(t, 0.26, 0.40, "frena") + ")";
+    M.poner(M.uno("#sub"), {
+      y: M.numero(M.tramo(t, 0.30, 0.36, "frena"), 18, 0),
+      opacidad: M.tramo(t, 0.30, 0.30, "frena"),
+    });
+  },
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Ajustes y marcas locales de cada ordenador
+.claude/settings.local.json
+.claude/setup-completado.json
+
+# ffmpeg y ffprobe: los descarga el wizard en cada ordenador (unos 90 MB).
+# Nunca viajan dentro del kit.
+bin/
+
+# Los vídeos en bruto que suelta el usuario
+entrada/*
+!entrada/LEEME.md
+
+# Todo lo que se genera al editar
+workspace/*
+!workspace/.gitkeep
+
+# Claves de AssemblyAI, si alguien usa el motor opcional
+.env.local
+
+# Basura del sistema
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

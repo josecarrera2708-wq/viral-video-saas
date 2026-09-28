@@ -1,0 +1,18 @@
+# Config personal de cada ordenador — no se comparte ni se sube a git
+.claude/settings.local.json
+
+# Marcador que crea /setup en cada ordenador
+.claude/setup-completado.json
+
+# Los kits que construye el usuario — son suyos, no se distribuyen con este kit
+mis-kits/*
+!mis-kits/.gitkeep
+
+# Resultados de las pruebas de fuego del propio kit 08 — material interno
+pruebas-de-fuego/
+
+# ZIPs de entrega
+*.zip
+
+# Basura del sistema
+.DS_Store

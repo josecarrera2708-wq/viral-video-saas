@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#241a10"/>
+  <ellipse cx="400" cy="260" rx="290" ry="120" fill="#e8dcc4"/>
+  <ellipse cx="400" cy="250" rx="210" ry="80" fill="#c47a3a"/>
+  <ellipse cx="400" cy="240" rx="170" ry="60" fill="#a85f28"/>
+  <ellipse cx="330" cy="225" rx="40" ry="16" fill="#e0954e" opacity="0.7"/>
+  <path d="M 250 150 q 10 -40 0 -70 M 400 140 q 12 -45 0 -80 M 550 150 q 10 -40 0 -70" stroke="#8d8574" stroke-width="6" fill="none" opacity="0.5"/>
+  <text x="400" y="415" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#cbbfa4">[Foto de práctica: cochinillo recién salido del horno de leña]</text>
+</svg>

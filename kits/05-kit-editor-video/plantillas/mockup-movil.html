@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Móvil</title>
+<link rel="stylesheet" href="tema.css">
+<style>
+  #marco { position: relative; width: 620px; height: 1290px;
+           border-radius: 62px; padding: 16px;
+           background: linear-gradient(150deg, #35353c, #14141a);
+           box-shadow: var(--sombra), 0 0 0 2px rgba(255,255,255,0.10) inset; }
+  #pantalla { position: relative; width: 100%; height: 100%;
+              border-radius: 48px; overflow: hidden;
+              background: var(--negro); display: flex;
+              flex-direction: column; }
+  #isla { position: absolute; top: 26px; left: 50%; width: 150px; height: 34px;
+          margin-left: -75px; border-radius: 20px; background: #000; z-index: 3; }
+  #cabecera { padding: 78px 26px 20px; display: flex; align-items: center;
+              gap: 16px; border-bottom: 2px solid var(--borde);
+              background: rgba(255,255,255,0.04); }
+  #avatar { width: 54px; height: 54px; border-radius: 50%; flex: none;
+            background: var(--naranja); color: var(--negro);
+            font-weight: 900; font-size: 28px;
+            display: flex; align-items: center; justify-content: center; }
+  #quien { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+  #estado { font-size: 22px; color: var(--gris); }
+  /* Los mensajes se apoyan abajo, como en un chat de verdad: colgando de
+     arriba se ve enseguida que es un montaje. */
+  #hilo { flex: 1; padding: 24px 22px; display: flex; flex-direction: column;
+          justify-content: flex-end; gap: 18px; overflow: hidden; }
+  .burbuja { max-width: 82%; padding: 20px 24px; border-radius: 26px;
+             font-size: 29px; line-height: 1.34; font-weight: 500;
+             letter-spacing: -0.005em; }
+  .otro { align-self: flex-start; background: var(--carbon);
+          border: 2px solid var(--borde); border-bottom-left-radius: 8px; }
+  .yo { align-self: flex-end; background: var(--naranja); color: var(--negro);
+        font-weight: 600; border-bottom-right-radius: 8px; }
+  .escribiendo { display: flex; gap: 8px; align-items: center; }
+  .escribiendo i { width: 12px; height: 12px; border-radius: 50%;
+                   background: var(--gris); display: block; }
+  #barra-abajo { height: 74px; display: flex; align-items: center;
+                 padding: 0 24px; gap: 14px;
+                 border-top: 2px solid var(--borde); }
+  #campo { flex: 1; height: 46px; border-radius: 23px;
+           background: var(--carbon); border: 2px solid var(--borde); }
+  #enviar { width: 46px; height: 46px; border-radius: 50%;
+            background: var(--naranja); flex: none; }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="marco">
+    <div id="pantalla">
+      <div id="isla"></div>
+      <div id="cabecera">
+        <div id="avatar"></div>
+        <div>
+          <div id="quien"></div>
+          <div id="estado">en línea</div>
+        </div>
+      </div>
+      <div id="hilo"></div>
+      <div id="barra-abajo"><div id="campo"></div><div id="enviar"></div></div>
+    </div>
+  </div>
+</div>
+<script src="motor.js"></script>
+<script>
+/* Móvil con una conversación. Sirve para enseñar un chat con Claude, un
+   mensaje que llega o una pantalla de app.
+   Datos:
+     {"quien": "Claude",
+      "mensajes": [
+        {"de": "yo",   "texto": "Hazme el vídeo vertical"},
+        {"de": "otro", "texto": "Hecho: 1080x1920 con subtítulos"}
+      ],
+      "visible": 1.8}
+   'de' puede ser "yo" (derecha, naranja) u "otro" (izquierda, gris).
+   Poner {"de": "otro", "escribiendo": true} pinta los tres puntitos. */
+const M = Motor;
+let d = {}, dur = 0, plan = [];
+
+const PASO = 0.46;   // lo que tarda en llegar el mensaje siguiente
+
+M.registrar({
+  lienzo: { ancho: 1080, alto: 1500 },
+
+  cargar(datos) {
+    d = {
+      quien: datos.quien || "Claude",
+      mensajes: (datos.mensajes || []).slice(0, 8),
+      visible: Math.max(Number(datos.visible) || 1.8, 0.4),
+    };
+    if (!d.mensajes.length) {
+      d.mensajes = [{ de: "yo", texto: "Hola" }];
+    }
+    M.uno("#quien").textContent = d.quien;
+    M.uno("#avatar").textContent = (d.quien.trim()[0] || "C").toUpperCase();
+
+    const hilo = M.uno("#hilo");
+    hilo.innerHTML = "";
+    plan = [];
+    let reloj = 0.4;
+    d.mensajes.forEach(msg => {
+      const mio = String(msg.de || "otro").toLowerCase() === "yo";
+      const burbuja = M.crear("div", "burbuja " + (mio ? "yo" : "otro"));
+      if (msg.escribiendo) {
+        burbuja.className += " escribiendo";
+        burbuja.innerHTML = "<i></i><i></i><i></i>";
+      } else {
+        burbuja.innerHTML = M.marcado(msg.texto);
+      }
+      hilo.appendChild(burbuja);
+      plan.push({ nodo: burbuja, desde: reloj, mio: mio,
+                  puntos: !!msg.escribiendo });
+      reloj += PASO;
+    });
+    dur = reloj + d.visible + 0.4;
+  },
+
+  duracion() { return dur; },
+
+  fotograma(t) {
+    const fin = dur - 0.4;
+    const salida = M.tramo(t, fin, 0.4, "suave");
+    const u = M.tramo(t, 0, 0.5, "resorte");
+    const uo = M.tramo(t, 0, 0.24, "frena");
+    M.poner(M.uno("#marco"), {
+      y: M.numero(u, 90, 0) + M.numero(salida, 0, -40),
+      escala: M.numero(u, 0.92, 1),
+      opacidad: uo * (1 - salida),
+    });
+    plan.forEach(p => {
+      const up = M.tramo(t, p.desde, 0.34, "resorte");
+      const uop = M.tramo(t, p.desde, 0.18, "frena");
+      M.poner(p.nodo, {
+        // Cada burbuja entra desde su lado, como en un chat de verdad.
+        x: M.numero(up, p.mio ? 40 : -40, 0),
+        y: M.numero(up, 16, 0),
+        escala: M.numero(up, 0.9, 1),
+        opacidad: uop,
+      });
+      if (p.puntos) {
+        // Los puntitos suben y bajan por turnos, calculados desde t.
+        Array.from(p.nodo.children).forEach((punto, k) => {
+          const fase = (t * 3 + k * 0.33) % 1;
+          punto.style.transform =
+            "translateY(" + (-7 * Math.sin(fase * Math.PI)).toFixed(2) + "px)";
+        });
+      }
+    });
+  },
+});
+</script>
+</body>
+</html>
