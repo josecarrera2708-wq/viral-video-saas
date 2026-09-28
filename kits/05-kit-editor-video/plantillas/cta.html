@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Llamada a la acción</title>
+<link rel="stylesheet" href="tema.css">
+<style>
+  #caja { display: flex; flex-direction: column; align-items: center;
+          gap: 26px; width: 100%; padding: 0 50px; }
+  #frase { font-family: "Mega", sans-serif; font-weight: 900; font-size: 78px;
+           letter-spacing: -0.04em; text-align: center; line-height: 1.02;
+           text-shadow: var(--contorno); }
+  #boton { position: relative; display: flex; align-items: center; gap: 20px;
+           padding: 26px 52px; border-radius: 999px;
+           background: var(--naranja); color: var(--negro);
+           font-weight: 900; font-size: 50px; letter-spacing: -0.02em;
+           box-shadow: 0 18px 46px rgba(255, 122, 0, 0.36); }
+  #aro { position: absolute; inset: -6px; border-radius: 999px;
+         border: 5px solid var(--naranja); }
+  #flecha { font-size: 46px; }
+  #nota { font-size: 34px; color: var(--hueso); font-weight: 600;
+          text-align: center; text-shadow: var(--contorno); }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="caja">
+    <div id="frase"></div>
+    <div id="boton"><div id="aro"></div><span id="boton-texto"></span><span id="flecha">→</span></div>
+    <div id="nota"></div>
+  </div>
+</div>
+<script src="motor.js"></script>
+<script>
+/* Cierre del vídeo: la frase, el botón y el aro que late.
+   Datos:
+     {"frase": "El kit es *gratis*",
+      "boton": "Link en la bio",
+      "nota": "Funciona en Mac y en Windows",
+      "visible": 2.4} */
+const M = Motor;
+let d = {}, dur = 0;
+
+M.registrar({
+  lienzo: { ancho: 1080, alto: 700 },
+
+  cargar(datos) {
+    d = {
+      frase: datos.frase || "",
+      boton: datos.boton || "Link en la bio",
+      nota: datos.nota || "",
+      visible: Math.max(Number(datos.visible) || 2.4, 0.6),
+    };
+    M.uno("#frase").innerHTML = M.marcado(d.frase);
+    M.uno("#frase").style.display = d.frase ? "block" : "none";
+    M.uno("#boton-texto").innerHTML = M.marcado(d.boton);
+    M.uno("#nota").innerHTML = M.marcado(d.nota);
+    M.uno("#nota").style.display = d.nota ? "block" : "none";
+    let cuerpo = 78;
+    let guardia = 0;
+    while (M.uno("#frase").offsetHeight > 260 && cuerpo > 46
+           && guardia++ < 40) {
+      cuerpo -= 4;
+      M.uno("#frase").style.fontSize = cuerpo + "px";
+    }
+    dur = 0.6 + d.visible + 0.4;
+  },
+
+  duracion() { return dur; },
+
+  fotograma(t) {
+    const fin = dur - 0.4;
+    const salida = M.tramo(t, fin, 0.4, "suave");
+    M.poner(M.uno("#frase"), {
+      y: M.numero(M.tramo(t, 0, 0.46, "resorte"), 40, 0)
+         + M.numero(salida, 0, -30),
+      escala: M.numero(M.tramo(t, 0, 0.46, "resorte"), 0.93, 1),
+      opacidad: M.tramo(t, 0, 0.22, "frena") * (1 - salida),
+    });
+    const ub = M.tramo(t, 0.22, 0.5, "resorte");
+    // Después de entrar, el botón late despacio: llama la atención sin marear.
+    const late = t > 0.9 ? 1 + 0.022 * Math.sin((t - 0.9) * 4.2) : 1;
+    M.poner(M.uno("#boton"), {
+      y: M.numero(ub, 46, 0) + M.numero(salida, 0, -20),
+      escala: M.numero(ub, 0.8, 1) * late,
+      opacidad: M.tramo(t, 0.22, 0.2, "frena") * (1 - salida),
+    });
+    // El aro sale disparado hacia fuera y se desvanece, cada 1,5 s.
+    const ciclo = t > 1.0 ? ((t - 1.0) % 1.5) / 0.85 : 1;
+    const uaro = M.tope(ciclo, 0, 1);
+    M.poner(M.uno("#aro"), {
+      escala: M.numero(uaro, 1, 1.22),
+      opacidad: (1 - uaro) * 0.55 * (1 - salida),
+    });
+    // La flecha empuja a la derecha con el mismo pulso.
+    M.poner(M.uno("#flecha"), { x: t > 0.9 ? 5 * Math.sin((t - 0.9) * 4.2) : 0 });
+    M.poner(M.uno("#nota"), {
+      y: M.numero(M.tramo(t, 0.5, 0.4, "frena"), 22, 0),
+      opacidad: M.tramo(t, 0.5, 0.3, "frena") * (1 - salida),
+    });
+  },
+});
+</script>
+</body>
+</html>

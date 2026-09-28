@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Estudio Lúa</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Georgia, serif; margin: 0; color: #333; line-height: 1.6; }
+  .aviso { background: #b81f2d; color: #fff; text-align: center; padding: 10px; font-size: 15px; }
+  header { text-align: center; padding: 70px 20px; background: #f2ede6; }
+  header h1 { font-size: 44px; margin: 0 0 12px; letter-spacing: 2px; }
+  header p { font-size: 19px; color: #6b6b6b; margin: 0; }
+  nav { text-align: center; padding: 14px; border-bottom: 1px solid #e3ddd4; font-size: 14px; }
+  nav a { margin: 0 12px; color: #7a6a55; text-decoration: none; }
+  section { max-width: 860px; margin: 0 auto; padding: 46px 20px; }
+  h2 { font-size: 28px; margin-top: 0; }
+  .servicios { display: flex; flex-wrap: wrap; gap: 18px; }
+  .servicio { flex: 1 1 240px; border: 1px solid #e3ddd4; padding: 18px; }
+  .servicio h3 { margin: 0 0 8px; font-size: 18px; }
+  form { background: #f7f4ef; padding: 22px; }
+  form label { display: block; margin: 12px 0 4px; font-size: 14px; }
+  form input, form textarea { width: 100%; padding: 9px; border: 1px solid #ccc; font-family: inherit; }
+  form button { margin-top: 16px; padding: 11px 26px; background: #7a6a55; color: #fff; border: 0; font-size: 15px; cursor: pointer; }
+  footer { background: #2b2b2b; color: #cfcfcf; padding: 30px 20px; text-align: center; font-size: 14px; }
+  footer a { color: #cfcfcf; }
+</style>
+</head>
+<body>
+
+<div class="aviso">¡Feliz Navidad 2023! Estaremos cerrados del 24 al 26 de diciembre</div>
+
+<header>
+  <h1>ESTUDIO LÚA</h1>
+  <p>Calidad y buen servicio desde 2015</p>
+</header>
+
+<nav>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#blog">Blog</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="nosotros">
+  <h2>Bienvenidos a Estudio Lúa</h2>
+  <p>
+    Somos un equipo de profesionales del sector de la peluquería y la estética con
+    una amplia experiencia de más de 10 años. Nuestro salón, situado en el centro
+    de Vigo, cuenta con las últimas tecnologías y con un equipo altamente
+    cualificado y en formación continua.
+  </p>
+  <p>
+    Trabajamos con las mejores marcas del mercado y apostamos por la excelencia en
+    el trato al cliente. Nuestra filosofía se basa en el compromiso, la
+    profesionalidad y la satisfacción de nuestros clientes, que son lo más
+    importante para nosotros.
+  </p>
+  <p>
+    En Estudio Lúa ofrecemos todo tipo de servicios de peluquería y estética, tanto
+    para señora como para caballero y niños, adaptándonos siempre a las necesidades
+    de cada persona.
+  </p>
+</section>
+
+<section id="servicios">
+  <h2>Nuestros servicios</h2>
+  <div class="servicios">
+    <div class="servicio">
+      <h3>Peluquería</h3>
+      <p>Corte, lavado, peinado, recogidos y tratamientos capilares.</p>
+    </div>
+    <div class="servicio">
+      <h3>Color</h3>
+      <p>Tinte, mechas, balayage y todo tipo de técnicas de coloración.</p>
+    </div>
+    <div class="servicio">
+      <h3>Barbería</h3>
+      <p>Corte de caballero, arreglo y perfilado de barba.</p>
+    </div>
+    <div class="servicio">
+      <h3>Estética</h3>
+      <p>Manicura, pedicura, depilación y tratamientos faciales.</p>
+    </div>
+    <div class="servicio">
+      <h3>Novias</h3>
+      <p>Peinado y maquillaje para el día de tu boda.</p>
+    </div>
+    <div class="servicio">
+      <h3>Niños</h3>
+      <p>Corte infantil en un ambiente tranquilo.</p>
+    </div>
+  </div>
+  <p style="margin-top:26px"><em>Consulta precios sin compromiso.</em></p>
+</section>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <ul>
+    <li>5 consejos para cuidar tu pelo en verano — <em>14 de julio de 2023</em></li>
+    <li>Tendencias de color para esta temporada — <em>2 de marzo de 2023</em></li>
+    <li>Abrimos nuestro nuevo local — <em>9 de enero de 2023</em></li>
+  </ul>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>
+    Rúa do Príncipe, 00 · 36202 Vigo<br>
+    Teléfono: 986 00 00 11<br>
+    <a href="mailto:info@estudiolua.example">info@estudiolua.example</a>
+  </p>
+  <p><strong>Horario:</strong> Lunes a viernes de 10:00 a 20:00 · Sábados de 10:00 a 14:00</p>
+
+  <form action="#" method="post">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>Estudio Lúa · Vigo · Todos los derechos reservados 2023</p>
+  <p><a href="#">Aviso legal</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Terminal</title>
+<link rel="stylesheet" href="tema.css">
+<style>
+  #lienzo { padding: 0 40px; }
+  #ventana { width: 100%; overflow: hidden; }
+  #barra { display: flex; align-items: center; gap: 14px;
+           padding: 22px 28px; border-bottom: 2px solid var(--borde);
+           background: rgba(255, 255, 255, 0.04); }
+  #barra .punto { width: 18px; height: 18px; }
+  #nombre { margin-left: 14px; font-family: "Mono", monospace;
+            font-size: 28px; color: var(--gris); letter-spacing: -0.01em; }
+  #cuerpo { padding: 30px 34px 36px; font-family: "Mono", monospace;
+            font-size: 34px; line-height: 1.5; }
+  .fila { display: flex; gap: 14px; white-space: pre-wrap;
+          word-break: break-word; }
+  .aviso { flex: none; font-weight: 700; }
+  .comando .aviso { color: var(--naranja); }
+  .salida { color: var(--gris); }
+  .ok { color: var(--verde); }
+  .error { color: var(--rojo); }
+  #cursor { display: inline-block; width: 18px; height: 34px;
+            background: var(--naranja); vertical-align: -5px;
+            margin-left: 4px; }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="ventana" class="tarjeta">
+    <div id="barra">
+      <span class="punto" style="background:#ff5f57"></span>
+      <span class="punto" style="background:#febc2e"></span>
+      <span class="punto" style="background:#28c840"></span>
+      <span id="nombre"></span>
+    </div>
+    <div id="cuerpo"></div>
+  </div>
+</div>
+<script src="motor.js"></script>
+<script>
+/* Ventana de terminal con el texto escribiéndose.
+   Datos:
+     {"nombre": "Terminal",
+      "lineas": [
+        {"tipo": "comando", "texto": "claude"},
+        {"tipo": "salida",  "texto": "Cargando el kit…"},
+        {"tipo": "ok",      "texto": "Listo"}
+      ],
+      "visible": 1.8}
+   Tipos: comando (se escribe letra a letra), salida, ok, error. */
+const M = Motor;
+let d = {}, dur = 0, filas = [], plan = [];
+
+const POR_SEGUNDO = 26;   // letras por segundo al escribir
+const PAUSA_SALIDA = 0.30;
+const AVISOS = { comando: "$", salida: " ", ok: "✓", error: "✗" };
+
+M.registrar({
+  lienzo: { ancho: 1080, alto: 1000 },
+
+  cargar(datos) {
+    d = {
+      nombre: datos.nombre || "Terminal",
+      visible: Math.max(Number(datos.visible) || 1.8, 0.4),
+      lineas: (datos.lineas || []).slice(0, 12),
+    };
+    if (!d.lineas.length) {
+      d.lineas = [{ tipo: "comando", texto: "claude" }];
+    }
+    M.uno("#nombre").textContent = d.nombre;
+
+    const cuerpo = M.uno("#cuerpo");
+    cuerpo.innerHTML = "";
+    plan = [];
+    let reloj = 0.34;   // la ventana entra primero
+    d.lineas.forEach((linea, i) => {
+      const tipo = AVISOS[linea.tipo] ? linea.tipo : "salida";
+      const txt = String(linea.texto || "");
+      const fila = M.crear("div", "fila " + tipo);
+      fila.appendChild(M.crear("span", "aviso", M.texto(AVISOS[tipo])));
+      const cuerpo_texto = M.crear("span", "texto");
+      fila.appendChild(cuerpo_texto);
+      if (tipo === "comando") fila.appendChild(M.crear("span", "cursor-hueco"));
+      cuerpo.appendChild(fila);
+      const escribe = tipo === "comando";
+      const tarda = escribe ? Math.max(txt.length / POR_SEGUNDO, 0.18) : 0.14;
+      plan.push({ desde: reloj, tarda: tarda, escribe: escribe, texto: txt,
+                  nodo: cuerpo_texto, fila: fila, tipo: tipo });
+      reloj += tarda + (linea.espera !== undefined
+                        ? Math.max(Number(linea.espera), 0)
+                        : (escribe ? PAUSA_SALIDA : 0.1));
+    });
+    filas = plan;
+    dur = reloj + d.visible + 0.4;
+    // El alto de la ventana se fija ahora, con todo el texto puesto: si
+    // creciera mientras se escribe, el vídeo daría saltos.
+    d.lineas.forEach((l, i) => { plan[i].nodo.textContent = l.texto || ""; });
+    M.uno("#ventana").style.height = M.uno("#ventana").offsetHeight + "px";
+    plan.forEach(p => { p.nodo.textContent = ""; });
+  },
+
+  duracion() { return dur; },
+
+  fotograma(t) {
+    const fin = dur - 0.4;
+    const salida = M.tramo(t, fin, 0.4, "suave");
+    const u = M.tramo(t, 0, 0.42, "resorte");
+    const uo = M.tramo(t, 0, 0.2, "frena");
+    M.poner(M.uno("#ventana"), {
+      y: M.numero(u, 52, 0) + M.numero(salida, 0, -30),
+      escala: M.numero(u, 0.95, 1),
+      opacidad: uo * (1 - salida),
+    });
+
+    // La última línea que ya ha empezado lleva el cursor.
+    let activa = -1;
+    plan.forEach((p, i) => {
+      const visible = t >= p.desde;
+      p.fila.style.opacity = visible ? 1 : 0;
+      if (!visible) { p.nodo.textContent = ""; return; }
+      if (p.escribe) {
+        const up = M.tramo(t, p.desde, p.tarda, "lineal");
+        p.nodo.textContent = M.escrito(p.texto, up);
+        activa = i;
+      } else {
+        p.nodo.textContent = p.texto;
+      }
+    });
+    plan.forEach(p => {
+      const hueco = p.fila.querySelector(".cursor-hueco");
+      if (hueco) hueco.innerHTML = "";
+    });
+    if (activa >= 0) {
+      const hueco = plan[activa].fila.querySelector(".cursor-hueco");
+      // El cursor parpadea a 2 Hz calculados desde t: nada de temporizadores.
+      if (hueco && Math.floor(t * 2) % 2 === 0) {
+        hueco.innerHTML = '<span id="cursor"></span>';
+      }
+    }
+  },
+});
+</script>
+</body>
+</html>

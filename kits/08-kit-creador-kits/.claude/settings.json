@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(diff:*)",
+      "Bash(du:*)",
+      "Bash(which:*)",
+      "Bash(where:*)",
+      "Bash(uname:*)",
+      "Bash(curl:*)",
+      "Bash(zip:*)",
+      "Bash(unzip:*)",
+      "Bash(open:*)",
+      "Bash(start:*)",
+      "Bash(powershell:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(py:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}

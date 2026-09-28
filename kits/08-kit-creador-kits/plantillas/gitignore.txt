@@ -1,0 +1,24 @@
+# Config personal de cada ordenador — no se comparte ni se sube a git
+.claude/settings.local.json
+
+# Marcador que crea /setup en cada ordenador
+.claude/setup-completado.json
+
+# Claves y secretos — nunca viajan
+.env.local
+.env
+
+# Resultados de trabajos reales — no se distribuyen con el kit
+workspace/*
+!workspace/.gitkeep
+
+# [[Archivos que el usuario deja para procesar — si el kit tiene carpeta entrada/]]
+entrada/*
+!entrada/.gitkeep
+!entrada/LEEME.md
+
+# [[Si el kit usa node]]
+node_modules/
+
+# Basura del sistema
+.DS_Store

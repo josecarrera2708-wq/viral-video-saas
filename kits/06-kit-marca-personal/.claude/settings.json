@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(open:*)",
+      "Bash(start:*)",
+      "Bash(sips:*)",
+      "Bash(powershell:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}

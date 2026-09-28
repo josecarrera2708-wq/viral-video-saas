@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yt-dlp:*)",
+      "Bash(./bin/yt-dlp:*)",
+      "Bash(bin/yt-dlp:*)",
+      "Bash(./bin/yt-dlp.exe:*)",
+      "Bash(curl:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(head:*)",
+      "Bash(wc:*)",
+      "Bash(open:*)",
+      "Bash(start:*)",
+      "Bash(which:*)",
+      "Bash(where:*)",
+      "Bash(brew install yt-dlp)",
+      "Bash(brew upgrade yt-dlp)",
+      "Bash(winget install:*)",
+      "Bash(winget upgrade:*)",
+      "Bash(powershell:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}

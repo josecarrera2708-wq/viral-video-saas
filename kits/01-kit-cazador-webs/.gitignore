@@ -1,0 +1,9 @@
+# Config personal de cada ordenador — no se comparte ni se sube a git
+.claude/settings.local.json
+
+# Marcador que crea /setup en cada ordenador
+.claude/setup-completado.json
+
+# Cazas: trabajo con webs de negocios reales — no se distribuyen con el kit
+cazas/*
+!cazas/.gitkeep

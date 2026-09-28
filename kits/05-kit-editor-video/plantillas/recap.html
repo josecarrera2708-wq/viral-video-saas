@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Repaso</title>
+<link rel="stylesheet" href="tema.css">
+<style>
+  #lienzo { padding: 0 50px; }
+  #caja { width: 100%; display: flex; flex-direction: column; gap: 22px; }
+  #titulo { font-family: "Mega", sans-serif; font-weight: 900;
+            font-size: 66px; letter-spacing: -0.035em; margin-bottom: 10px;
+            text-shadow: var(--contorno); }
+  .punto-lista { display: flex; align-items: center; gap: 24px;
+                 padding: 26px 30px; }
+  .numero { flex: none; width: 62px; height: 62px; border-radius: 18px;
+            background: var(--naranja); color: var(--negro);
+            font-weight: 900; font-size: 34px;
+            display: flex; align-items: center; justify-content: center; }
+  .marca { flex: none; width: 62px; height: 62px; border-radius: 50%;
+           background: rgba(61, 220, 132, 0.16);
+           border: 3px solid var(--verde); color: var(--verde);
+           font-weight: 900; font-size: 34px;
+           display: flex; align-items: center; justify-content: center; }
+  .texto-punto { font-size: 44px; font-weight: 600; line-height: 1.18;
+                 letter-spacing: -0.018em; }
+</style>
+</head>
+<body>
+<div id="lienzo">
+  <div id="caja">
+    <div id="titulo"></div>
+    <div id="lista"></div>
+  </div>
+</div>
+<script src="motor.js"></script>
+<script>
+/* Lista de puntos que van apareciendo. Para resumir pasos o resultados.
+   Datos:
+     {"titulo": "Lo que hace el kit",
+      "puntos": ["Corta los silencios", "Pone *subtítulos*", "Lo deja vertical"],
+      "marca": "numero",   // "numero" (1,2,3) o "check" (✓)
+      "visible": 1.6} */
+const M = Motor;
+let d = {}, dur = 0, filas = [];
+
+const PASO = 0.30;
+
+M.registrar({
+  lienzo: { ancho: 1080, alto: 1100 },
+
+  cargar(datos) {
+    d = {
+      titulo: datos.titulo || "",
+      puntos: (datos.puntos || []).slice(0, 6),
+      marca: datos.marca === "check" ? "check" : "numero",
+      visible: Math.max(Number(datos.visible) || 1.6, 0.4),
+    };
+    if (!d.puntos.length) d.puntos = ["Primer punto"];
+
+    const tit = M.uno("#titulo");
+    tit.innerHTML = M.marcado(d.titulo);
+    tit.style.display = d.titulo ? "block" : "none";
+
+    const lista = M.uno("#lista");
+    lista.innerHTML = "";
+    d.puntos.forEach((texto, i) => {
+      const fila = M.crear("div", "punto-lista tarjeta");
+      const marca = M.crear("div", d.marca === "check" ? "marca" : "numero",
+                            d.marca === "check" ? "✓" : String(i + 1));
+      fila.appendChild(marca);
+      fila.appendChild(M.crear("div", "texto-punto", M.marcado(texto)));
+      lista.appendChild(fila);
+    });
+    filas = M.todos(".punto-lista");
+    lista.style.display = "flex";
+    lista.style.flexDirection = "column";
+    lista.style.gap = "20px";
+
+    // Si son muchos puntos, se aprieta el cuerpo hasta que la lista cabe.
+    let cuerpo = 44;
+    let guardia = 0;
+    while (M.uno("#caja").offsetHeight > 1040 && cuerpo > 28 && guardia++ < 40) {
+      cuerpo -= 2;
+      M.todos(".texto-punto").forEach(e => { e.style.fontSize = cuerpo + "px"; });
+      filas.forEach(f => { f.style.padding = (cuerpo / 2) + "px 26px"; });
+    }
+    dur = 0.3 + PASO * d.puntos.length + d.visible + 0.4;
+  },
+
+  duracion() { return dur; },
+
+  fotograma(t) {
+    const fin = dur - 0.4;
+    const salida = M.tramo(t, fin, 0.4, "suave");
+    M.poner(M.uno("#titulo"), {
+      y: M.numero(M.tramo(t, 0, 0.42, "resorte"), 34, 0)
+         + M.numero(salida, 0, -26),
+      opacidad: M.tramo(t, 0, 0.2, "frena") * (1 - salida),
+    });
+    filas.forEach((el, i) => {
+      const cuando = (d.titulo ? 0.24 : 0.06) + M.cascada(i, PASO);
+      const u = M.tramo(t, cuando, 0.44, "resorte");
+      const uo = M.tramo(t, cuando, 0.2, "frena");
+      M.poner(el, {
+        x: M.numero(u, -46, 0),
+        escala: M.numero(u, 0.96, 1),
+        opacidad: uo * (1 - salida),
+      });
+      // La marca hace un pequeño saltito justo al aterrizar la fila.
+      const marca = el.firstElementChild;
+      const salto = M.tramo(t, cuando + 0.12, 0.3, "resorte");
+      M.poner(marca, { escala: M.numero(salto, 0.4, 1), opacidad: salto });
+    });
+  },
+});
+</script>
+</body>
+</html>

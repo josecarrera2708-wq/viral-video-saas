@@ -1,0 +1,120 @@
+/* Estilo común de todas las plantillas visuales del kit.
+   Cambiando los valores de :root cambia el aspecto de todo a la vez. */
+
+@font-face {
+  font-family: "Titulo";
+  src: url("../assets/fuentes/SpaceGrotesk-variable.ttf") format("truetype");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Mega";
+  src: url("../assets/fuentes/Inter-variable.ttf") format("truetype");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Mono";
+  src: url("../assets/fuentes/JetBrainsMono-variable.ttf") format("truetype");
+  font-weight: 100 800;
+}
+
+:root {
+  --naranja: #ff7a00;
+  --naranja-suave: #ffa04d;
+  --blanco: #ffffff;
+  --hueso: #f3f0ec;
+  --gris: #a8a29b;
+  --negro: #0c0c0e;
+  --carbon: #17171b;
+  --verde: #3ddc84;
+  --rojo: #ff4d4d;
+  --azul: #4d9dff;
+
+  --radio: 28px;
+  --radio-chico: 14px;
+  --borde: rgba(255, 255, 255, 0.12);
+  --sombra: 0 24px 70px rgba(0, 0, 0, 0.55);
+  /* Contorno de texto: sobre vídeo real, sin él no se lee nada. */
+  --contorno: 0 0 14px rgba(0, 0, 0, 0.85), 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  /* Fondo transparente: la captura sale con alfa y se superpone al vídeo. */
+  background: transparent;
+  font-family: "Titulo", sans-serif;
+  color: var(--blanco);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* El lienzo es el marco exacto que se captura. */
+#lienzo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── piezas que reutilizan varias plantillas ─────────────────────────── */
+
+.tarjeta {
+  background: linear-gradient(160deg, rgba(28, 28, 34, 0.96),
+                                      rgba(12, 12, 14, 0.96));
+  border: 2px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.pastilla {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: var(--naranja);
+  color: var(--negro);
+  font-weight: 800;
+  font-size: 38px;
+  letter-spacing: -0.01em;
+}
+
+.punto {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.texto-grande {
+  font-family: "Mega", sans-serif;
+  font-weight: 900;
+  font-size: 110px;
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  text-shadow: var(--contorno);
+}
+
+.texto-medio {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: var(--contorno);
+}
+
+.mono { font-family: "Mono", monospace; font-variant-ligatures: none; }
+
+.resalte { color: var(--naranja); }
+
+/* Subrayado pintado a mano, se revela de izquierda a derecha. */
+.subrayado {
+  position: absolute;
+  left: 0; bottom: -6px;
+  height: 16px;
+  background: var(--naranja);
+  border-radius: 8px;
+  transform-origin: left center;
+  opacity: 0.9;
+}

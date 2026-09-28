@@ -1,0 +1,19 @@
+{
+  "_comentario": "Deja SOLO los permisos que este kit use de verdad. Un kit que no lee webs no necesita WebFetch. Borra esta línea al copiar.",
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(open:*)",
+      "Bash(start:*)",
+      "Bash(curl:*)",
+      "Bash(which:*)",
+      "Bash(where:*)",
+      "Bash(powershell:*)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}
