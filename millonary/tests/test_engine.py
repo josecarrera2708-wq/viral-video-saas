@@ -2,9 +2,12 @@ import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import numpy as np
 import pytest
+import warnings
+warnings.filterwarnings('ignore', message='run\\(\\) sin funding')
 from src.backtest.engine import run, Params, STOP, TP, SIGNAL, TIME, LIQ, END
 
-ZERO = dict(taker_fee=0.0, maker_fee=0.0, slippage=0.0, lot_step=1e-6, min_qty=1e-6)
+ZERO = dict(taker_fee=0.0, maker_fee=0.0, slippage=0.0, lot_step=1e-6, min_qty=1e-6,
+            min_notional=0.0, tp_pen=0.0)
 
 
 def bars(opens, highs=None, lows=None, closes=None):
@@ -72,7 +75,7 @@ def test_fees_and_slippage_reduce_pnl():
     o, h, l, c = bars([100, 100, 100, 100, 100], highs=[101] * 5, lows=[99, 99, 99, 99, 99])
     free = run(o, h, l, c, sig(5, 0), np.full(5, 10.0), Params(**ZERO))
     cost = run(o, h, l, c, sig(5, 0), np.full(5, 10.0),
-               Params(lot_step=1e-6, min_qty=1e-6))
+               Params(lot_step=1e-6, min_qty=1e-6, min_notional=0.0))
     assert cost["pnl"][0] < free["pnl"][0]
     assert cost["fees"][0] > 0
 
@@ -87,7 +90,7 @@ def test_leverage_cap_limits_notional():
 def test_min_lot_skipped_when_too_risky():
     # capital 100, stop 2 % de 83.000 = 1.660 -> lote mínimo arriesga 1,66 (1,66 %) => se opera
     o, h, l, c = bars([83000] * 4, highs=[83100] * 4, lows=[82900] * 4)
-    p = Params(capital=100, risk_frac=0.01, taker_fee=0, maker_fee=0, slippage=0)
+    p = Params(capital=100, risk_frac=0.01, taker_fee=0, maker_fee=0, slippage=0, min_notional=0.0)
     r = run(o, h, l, c, sig(4, 0), np.full(4, 1660.0), p)
     assert r["n_trades"] == 1 and r["qty"][0] == pytest.approx(0.001)
     # con stop del 5 % el lote mínimo arriesga 4,15 % > 2 % => se omite
@@ -146,7 +149,7 @@ def test_accounting_identity():
     s = np.where(rng.random(n) < 0.03, np.where(rng.random(n) < 0.5, 1, -1), 0)
     sd = c * 0.01
     f = rng.normal(0, 0.0001, n)
-    p = Params(capital=1000, risk_frac=0.01, lot_step=1e-6, min_qty=1e-6)
+    p = Params(capital=1000, risk_frac=0.01, lot_step=1e-6, min_qty=1e-6, min_notional=0.0)
     r = run(o, h, l, c, s, sd, p, funding=f)
     assert r["n_trades"] >= 5
     assert r["equity"][-1] == pytest.approx(1000 + r["pnl"].sum(), rel=1e-9, abs=1e-6)
@@ -197,7 +200,7 @@ def test_matches_independent_reference():
         s = np.where(rng.random(n) < 0.04, np.where(rng.random(n) < 0.5, 1, -1), 0).astype(np.int8)
         sd = c * 0.012
         f = rng.normal(0, 0.0001, n)
-        p = Params(capital=5000, risk_frac=0.01, lot_step=1e-4, min_qty=1e-4, max_leverage=5)
+        p = Params(capital=5000, risk_frac=0.01, lot_step=1e-4, min_qty=1e-4, max_leverage=5, min_notional=0.0, tp_pen=0.0)
         r = run(o, h, l, c, s, sd, p, funding=f)
         eq_ref, tr_ref = _ref(o, h, l, c, s, sd, p, f)
         assert r["n_trades"] == len(tr_ref)
@@ -214,10 +217,68 @@ def test_no_lookahead_prefix_invariance():
     h = np.maximum(o, c) * 1.002; l = np.minimum(o, c) * 0.998
     s = np.where(rng.random(n) < 0.05, np.where(rng.random(n) < 0.5, 1, -1), 0).astype(np.int8)
     sd = c * 0.01
-    p = Params(capital=1000, risk_frac=0.01, lot_step=1e-6, min_qty=1e-6)
-    full = run(o, h, l, c, s, sd, p)
+    p = Params(capital=1000, risk_frac=0.01, lot_step=1e-6, min_qty=1e-6, min_notional=0.0)
+    full = run(o, h, l, c, s, sd, p, funding=np.zeros(n))
     k = 900
     o2, h2, l2, c2 = o.copy(), h.copy(), l.copy(), c.copy()
     o2[k:] *= 3; h2[k:] *= 3; l2[k:] *= 3; c2[k:] *= 3            # futuro alterado
-    alt = run(o2, h2, l2, c2, s, sd, p)
+    alt = run(o2, h2, l2, c2, s, sd, p, funding=np.zeros(n))
     assert np.array_equal(full["equity"][:k - 1], alt["equity"][:k - 1])
+
+
+def test_min_notional_forces_larger_lot_and_skips_if_too_risky():
+    # BTC 83.000, capital 100, mínimo nocional 100 => lote mínimo válido 0,002 BTC
+    o, h, l, c = bars([83000] * 4, highs=[83100] * 4, lows=[82900] * 4)
+    p = Params(capital=100, risk_frac=0.005, taker_fee=0, maker_fee=0, slippage=0, min_notional=100.0)
+    r = run(o, h, l, c, sig(4, 0), np.full(4, 830.0), p, funding=np.zeros(4))   # stop 1 %
+    assert r["n_trades"] == 1 and r["qty"][0] == pytest.approx(0.002)
+    assert r["risk_frac_real"][0] == pytest.approx(0.002 * 830 / 100)          # 1,66 %, no 0,5 %
+    r2 = run(o, h, l, c, sig(4, 0), np.full(4, 1660.0), p, funding=np.zeros(4))  # 3,3 % > 2 %
+    assert r2["n_trades"] == 0 and r2["skipped_minlot"] == 1
+
+
+def test_bad_stop_is_counted_not_silent():
+    o, h, l, c = bars([100] * 4)
+    r = run(o, h, l, c, sig(4, 0), np.array([np.nan, 1, 1, 1.0]), Params(**ZERO), funding=np.zeros(4))
+    assert r["n_trades"] == 0 and r["skipped_badstop"] == 1
+
+
+def test_liquidation_recomputed_after_funding():
+    # 5x largo (riesgo pedido > 1 para forzar el tope de apalancamiento) con stop MÁS LEJOS que la
+    # liquidación. Sin funding la liquidación está en ~80,4; el funding erosiona el margen y la sube a ~84,4.
+    n = 8
+    lows = [99, 99, 99, 99, 99, 99, 82, 99]
+    o, h, l, c = bars([100] * n, highs=[101] * n, lows=lows)
+    f = np.zeros(n); f[2:6] = 0.01
+    p = Params(capital=1000, risk_frac=2.5, max_leverage=5, **ZERO)
+    with_f = run(o, h, l, c, sig(n, 0), np.full(n, 50.0), p, funding=f)
+    without = run(o, h, l, c, sig(n, 0), np.full(n, 50.0), p, funding=np.zeros(n))
+    assert with_f["reason"][0] == LIQ            # con funding acumulado, 82 ya liquida
+    assert without["reason"][0] != LIQ           # sin funding, 82 no llega a 80,4
+
+
+def test_liquidated_trade_pnl_matches_equity_loss():
+    n = 8
+    o, h, l, c = bars([100] * n, highs=[101] * n, lows=[99, 99, 99, 99, 99, 99, 60, 99])
+    f = np.zeros(n); f[3] = 0.01
+    p = Params(capital=1000, risk_frac=2.5, max_leverage=5, taker_fee=0.0005, maker_fee=0.0002,
+               slippage=0.0, lot_step=1e-6, min_qty=1e-6, min_notional=0.0)
+    r = run(o, h, l, c, sig(n, 0), np.full(n, 50.0), p, funding=f)
+    assert r["reason"][0] == LIQ
+    assert r["pnl"].sum() == pytest.approx(r["equity"][-1] - 1000, abs=1e-6)  # cuadra al céntimo
+
+
+def test_tp_needs_penetration_and_worst_case_curve():
+    o, h, l, c = bars([100, 100, 100, 100], highs=[101, 101, 120, 101])       # el máximo TOCA el TP (120)
+    p = Params(capital=1000, risk_frac=0.01, tp_mult=2.0, **{**ZERO, "tp_pen": 0.001})
+    r = run(o, h, l, c, sig(4, 0), np.full(4, 10.0), p, funding=np.zeros(4))
+    assert r["n_trades"] == 1 and r["reason"][0] == END                       # no se llena por solo tocar
+    assert (r["equity_low"] <= r["equity"] + 1e-9).all()
+
+
+def test_stress_slippage_worsens_stop_fill():
+    o, h, l, c = bars([100, 100, 100, 100], lows=[99, 99, 80, 99])
+    base = run(o, h, l, c, sig(4, 0), np.full(4, 10.0), Params(capital=1000, risk_frac=0.01, **ZERO), funding=np.zeros(4))
+    stress = run(o, h, l, c, sig(4, 0), np.full(4, 10.0),
+                 Params(capital=1000, risk_frac=0.01, **{**ZERO}, stress_range_frac=0.1), funding=np.zeros(4))
+    assert stress["pnl"][0] < base["pnl"][0]
