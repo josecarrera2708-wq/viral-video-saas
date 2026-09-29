@@ -10,7 +10,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 import numpy as np
 import pandas as pd
-from numba import njit
+try:
+    from numba import njit
+except ImportError:                       # el ejecutor en vivo puede correr sin numba (más lento, mismo resultado)
+    def njit(*a, **k):
+        return (lambda f: f)
 
 BPY4H = 6 * 365.25
 
@@ -100,9 +104,8 @@ def _simulate(r, target, sig_changed, funding, cost, band):
     return eq, expo, turn, fcost
 
 
-def run_core(df: pd.DataFrame, funding: np.ndarray, p: CoreParams = CoreParams(),
-             fund_flag: np.ndarray | None = None) -> dict:
-    """df: velas 4h (open,high,low,close). funding: tasa por vela (suma de pagos dentro de la vela)."""
+def compute_targets(df: pd.DataFrame, p: CoreParams = CoreParams(), fund_flag: np.ndarray | None = None) -> dict:
+    """Señal y exposición objetivo decididas AL CIERRE de cada vela (código compartido por backtest y vivo)."""
     n = len(df)
     A = signal_a(df, p.horizons); B = signal_b(df, p.donchian)
     sig = p.w_a * A + p.w_b * B                       # decidido al cierre de la vela i
@@ -114,6 +117,15 @@ def run_core(df: pd.DataFrame, funding: np.ndarray, p: CoreParams = CoreParams()
     tgt = sig * scale
     if p.fund_filter and fund_flag is not None:
         tgt = np.where(fund_flag, tgt * p.fund_filter_scale, tgt)
+    return {"A": A, "B": B, "sig": sig, "vol": vol, "scale": scale, "tgt": tgt}
+
+
+def run_core(df: pd.DataFrame, funding: np.ndarray, p: CoreParams = CoreParams(),
+             fund_flag: np.ndarray | None = None) -> dict:
+    """df: velas 4h (open,high,low,close). funding: tasa por vela (suma de pagos dentro de la vela)."""
+    n = len(df)
+    ct = compute_targets(df, p, fund_flag)
+    sig, vol, tgt = ct["sig"], ct["vol"], ct["tgt"]
     # lo decidido al cierre de i aplica a la vela i+1
     target = np.r_[0.0, tgt[:-1]]
     raw_change = np.r_[False, sig[1:] != sig[:-1]]        # la señal cambió al cierre de i

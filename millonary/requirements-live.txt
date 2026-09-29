@@ -1,0 +1,4 @@
+# Dependencias mínimas del ejecutor en vivo (paper). Sin numba: no hace falta y ahorra RAM en un VPS pequeño.
+pandas==3.0.6
+numpy>=2.0
+requests==2.33.1
