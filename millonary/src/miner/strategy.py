@@ -36,8 +36,22 @@ def genome_key(g: dict) -> str:
     return hashlib.md5(json.dumps(active(g), sort_keys=True, default=str).encode()).hexdigest()[:12]
 
 
+def _norm(g: dict):
+    """Régimen y lado EFECTIVOS: colapsa genes que no cambian el comportamiento."""
+    r, side, e = g["regime"], g["side"], g["entry"]
+    if r == "ma_pair" and e == "ma_cross":
+        r = "none"                       # el filtro fast>slow coincide con el propio cruce
+    if r == "volpct" and g["vp_lo"] <= 0.0 and g["vp_hi"] >= 1.0:
+        r = "none"                       # rango completo = sin filtro
+    if e == "candle" and side == "both":
+        if g["candle"] in ("hammer", "inv_hammer"): side = "long"       # solo emiten +1
+        if g["candle"] in ("hanging_man", "shooting_star"): side = "short"   # solo emiten -1
+    return r, side
+
+
 def active(g: dict) -> dict:
-    a = {"tf": g["tf"], "side": g["side"], "entry": g["entry"], "regime": g["regime"],
+    reg, side_eff = _norm(g)
+    a = {"tf": g["tf"], "side": side_eff, "entry": g["entry"], "regime": reg,
          "stop_kind": g["stop_kind"], "atr_n": g["atr_n"], "tp": g["tp"], "max_bars": g["max_bars"],
          "exit_opp": g["exit_opp"]}
     if g["stop_kind"] == "atr": a["atr_k"] = g["atr_k"]
@@ -50,7 +64,7 @@ def active(g: dict) -> dict:
     elif e in ("boll_rev", "boll_break"): a.update(bb_n=g["bb_n"], bb_k=g["bb_k"])
     elif e == "candle": a["candle"] = g["candle"]
     elif e == "struct_break": a["sw_k"] = g["sw_k"]
-    r = g["regime"]
+    r = reg
     if r == "price_sma": a["reg_n"] = g["reg_n"]
     elif r == "ma_pair": a.update(ma_kind=g["ma_kind"], fast=g["fast"], slow=g["slow"])
     elif r == "volpct": a.update(vp_lo=g["vp_lo"], vp_hi=g["vp_hi"])
@@ -85,6 +99,7 @@ def build_signals(g: dict, m: Market):
         p = m.candles()[g["candle"]]; L, S = p == 1, p == -1
     else:  # struct_break
         sb = m.sbreak(g["sw_k"]); L, S = sb.break_up == 1, sb.break_dn == 1
+    L0, S0 = L.to_numpy(), S.to_numpy()                 # señales brutas (para la salida por señal contraria)
     # filtro de régimen
     r = g["regime"]
     if r == "price_sma":
@@ -101,7 +116,8 @@ def build_signals(g: dict, m: Market):
     if side == "long": S = np.zeros_like(S)
     if side == "short": L = np.zeros_like(L)
     entry = np.where(L, 1, np.where(S, -1, 0)).astype(np.int8)
-    exit_sig = np.where(L, 1, np.where(S, -1, 0)).astype(np.int8) if g["exit_opp"] else np.zeros(len(c), np.int8)
+    exit_sig = (np.where(L0, 1, np.where(S0, -1, 0)).astype(np.int8) if g["exit_opp"]
+                else np.zeros(len(c), np.int8))
     sd = stop_distance(g, m, entry)
     return entry, exit_sig, sd
 

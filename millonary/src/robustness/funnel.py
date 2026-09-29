@@ -50,10 +50,12 @@ def trade_frac(res):
 
 
 def blocks_test(res, m, a):
+    """Rentabilidad por trimestre con log(1+retorno por operación): sin sesgo hacia lo reciente."""
     if res["n_trades"] == 0: return 0.0, 1.0
     t = m.df.index[a + res["exit_idx"]]
-    s = pd.Series(res["pnl"], index=t)
-    q = s.groupby([t.year, (t.month - 1) // 6]).sum()
+    fr = trade_frac(res)
+    s = pd.Series(np.log1p(np.where(np.isfinite(fr), fr, 0.0)), index=t)
+    q = s.groupby([t.year, (t.month - 1) // 3]).sum()
     share = float((q > 0).mean())
     tot = q.sum()
     top = float(q.max() / tot) if tot > 0 else 1.0
@@ -98,44 +100,44 @@ def analyze(args):
     out.update({f"train_{k}": v for k, v in tr.items() if k != "_res"})
     out.update({f"val_{k}": v for k, v in va.items() if k != "_res"})
     out.update({f"pre_{k}": v for k, v in pb.items() if k != "_res"})
-    rp = pb["_res"]
-    # T2 validación
+    rv = va["_res"]
+    # T2 validación (fuera de muestra)
     G = GATES["validation"]
     out["p_val"] = bool(va["trades"] >= G["min_trades_" + tf] and va["sharpe"] >= G["min_sharpe"] and
                         va["maxdd"] <= G["max_dd"] and va["pf"] >= G["min_pf"] and va["exp_r"] > 0)
-    # T3 bloques semestrales
-    share, top = blocks_test(rp, m, ap)
+    # T3 bloques trimestrales (solo validación)
+    share, top = blocks_test(rv, m, av)
     out.update(blocks_pos=share, blocks_top=top)
     out["p_blocks"] = bool(share >= GATES["blocks"]["min_profitable_share"] and top <= GATES["blocks"]["max_top_share"])
-    # T4 Monte Carlo
-    fr = trade_frac(rp); fr = fr[np.isfinite(fr)]
-    if len(fr) >= 30:
+    # T4 Monte Carlo sobre operaciones de validación
+    fr = trade_frac(rv); fr = fr[np.isfinite(fr)]
+    if len(fr) >= 20:
         p5, dd95, ploss = monte_carlo(fr, GATES["mc"]["sims"])
         p5s, _, _ = monte_carlo(fr, GATES["mc"]["sims"], seed=1, skip=0.10)
     else:
         p5, dd95, ploss, p5s = -1.0, 1.0, 1.0, -1.0
     out.update(mc_p5=p5, mc_dd95=dd95, mc_ploss=ploss, mc_p5_skip=p5s)
     out["p_mc"] = bool(p5 > 0 and dd95 <= GATES["mc"]["max_dd95"] and p5s > 0)
-    # T5 sensibilidad de parámetros
+    # T5 sensibilidad de parámetros (validación)
     nb = neighbors(g); pos = []; shs = []
     for n in nb:
-        r = evaluate(n, m, ap, bp); pos.append(r["exp_r"] > 0 and r["ret"] > 0); shs.append(r["sharpe"])
+        r = evaluate(n, m, av, bv); pos.append(r["exp_r"] > 0 and r["ret"] > 0); shs.append(r["sharpe"])
     out["sens_n"] = len(nb)
     out["sens_pos"] = float(np.mean(pos)) if nb else 1.0
-    out["sens_med_ratio"] = float(np.median(shs) / pb["sharpe"]) if nb and pb["sharpe"] > 0 else 0.0
+    out["sens_med_ratio"] = float(np.median(shs) / va["sharpe"]) if nb and va["sharpe"] > 0 else 0.0
     out["p_sens"] = bool(out["sens_pos"] >= GATES["sens"]["min_pos_share"] and
                          out["sens_med_ratio"] >= GATES["sens"]["min_median_ratio"])
-    # T6 estrés de costes
-    stress = evaluate(g, m, ap, bp, Params(capital=1000.0, risk_frac=0.01, **STRESS))
+    # T6 estrés de costes (validación)
+    stress = evaluate(g, m, av, bv, Params(capital=1000.0, risk_frac=0.01, **STRESS))
     out.update(stress_ret=stress["ret"], stress_sharpe=stress["sharpe"])
     out["p_cost"] = bool(stress["ret"] > 0 and stress["exp_r"] > 0)
     # T7 frente a entradas aleatorias
-    null = random_null(g, m, ap, bp, GATES["random"]["sims"])
+    null = random_null(g, m, av, bv, GATES["random"]["sims"])
     out["null_p95"] = float(np.percentile(null, 95)); out["null_med"] = float(np.median(null))
-    out["p_random"] = bool(pb["sharpe"] > out["null_p95"])
+    out["p_random"] = bool(va["sharpe"] > out["null_p95"])
     # retornos diarios para DSR y PBO (guardar como listas)
     out["_daily_val"] = daily(va["_res"], m, av, bv)
-    out["_daily_pre"] = daily(rp, m, ap, bp)
+    out["_daily_pre"] = daily(pb["_res"], m, ap, bp)
     return out
 
 
@@ -143,7 +145,7 @@ def _init(markets):
     global MK; MK = markets
 
 
-def select_candidates(k_max=150, corr_max=0.8):
+def select_candidates():
     files = sorted((ROOT / "data" / "mining").glob("trials_seed*.parquet"))
     df = pd.concat([pd.read_parquet(f) for f in files]).sort_values("fitness", ascending=False)
     n_total = df["key"].nunique()
@@ -180,8 +182,12 @@ def run_funnel(k_max=150, corr_max=0.8, procs=4):
     # PBO global sobre retornos diarios pre-ciego
     idx = sorted(set().union(*[set(r["_daily_pre"].index) for r in rows]))
     M = np.column_stack([r["_daily_pre"].reindex(idx).fillna(0.0).to_numpy() for r in rows])
-    pbo = pbo_cscv(M, s=16)
+    pbo_pre = pbo_cscv(M, s=16)                      # informativo: sesgado por la preselección
+    iv = sorted(set().union(*[set(r["_daily_val"].index) for r in rows]))
+    Mv = np.column_stack([r["_daily_val"].reindex(iv).fillna(0.0).to_numpy() for r in rows])
+    pbo = pbo_cscv(Mv, s=8)                          # el que se usa: solo fuera de muestra
     for r in rows:
+        r["p_pbo"] = bool(pbo <= GATES["pbo"]["max"])
         r.pop("_daily_val"); r.pop("_daily_pre")
     res = pd.DataFrame(rows)
     flags = [c for c in res.columns if c.startswith("p_")]
@@ -189,7 +195,7 @@ def run_funnel(k_max=150, corr_max=0.8, procs=4):
     out = ROOT / "reports" / "funnel_results.parquet"
     res.to_parquet(out, index=False)
     summary = {"pruebas_unicas_totales": int(n_total), "candidatas_analizadas": int(K),
-               "pbo_global": pbo, "var_sr_val": var_sr,
+               "pbo_validacion": pbo, "pbo_pre_ciego_informativo": pbo_pre, "var_sr_val": var_sr,
                "pasan_por_prueba": {c: int(res[c].sum()) for c in flags},
                "supervivientes": int(res.survivor.sum())}
     (ROOT / "reports" / "funnel_summary.json").write_text(json.dumps(summary, indent=1))

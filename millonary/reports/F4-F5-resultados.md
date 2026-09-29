@@ -14,7 +14,7 @@
 - **Embudo** (umbrales en `config/gates.json`, fijados antes de ver resultados) sobre 150
   candidatas descorrelacionadas (|corr| < 0,8): validación fuera de muestra, estabilidad por
   semestres, Monte Carlo (5.000 remuestreos), sensibilidad de parámetros ±1 paso, estrés de costes
-  (comisiones ×2, deslizamiento 5 pb, +15 % del rango en stops), comparación con entradas aleatorias,
+  (comisiones ×2, deslizamiento 5 pb, +10 % del rango de la vela en stops), comparación con entradas aleatorias,
   Deflated Sharpe Ratio y PBO (CSCV).
 
 ## Resultado

@@ -22,9 +22,14 @@ def fitness(m: dict, g: dict, min_trades: int) -> float:
 
 
 class Miner:
-    def __init__(self, markets: dict[str, Market], out_dir: Path, seed: int = 0):
-        self.mk, self.rng, self.seed = markets, random.Random(seed), seed
-        self.rng_range = {tf: mk.index_range(*TRAIN) for tf, mk in markets.items()}
+    def __init__(self, markets: dict[str, Market], out_dir: Path, seed: int = 0,
+                 train: tuple = None):
+        """train=(inicio, fin). Los mercados se TRUNCAN físicamente en `fin`: el minero no puede
+        ver ningún dato posterior (barrera real, no una comparación de sí mismo)."""
+        self.train = tuple(train) if train else TRAIN
+        self.rng, self.seed = random.Random(seed), seed
+        self.mk = {tf: mk.truncate(self.train[1]) for tf, mk in markets.items()}
+        self.rng_range = {tf: mk.index_range(self.train[0], None) for tf, mk in self.mk.items()}
         self.trials: dict[str, dict] = {}            # clave -> registro (cuenta de pruebas únicas)
         self.out = Path(out_dir); self.out.mkdir(parents=True, exist_ok=True)
 
@@ -35,7 +40,6 @@ class Miner:
         if k in self.trials:
             return self.trials[k]["fitness"]
         a, b = self.rng_range[g["tf"]]
-        assert b <= self.mk[g["tf"]].index_range(TRAIN[0], TRAIN[1])[1], "barrera anti-fuga"
         r = evaluate(g, self.mk[g["tf"]], a, b); r.pop("_res")
         f = fitness(r, g, self._min_trades(g["tf"]))
         self.trials[k] = {"key": k, "genome": json.dumps(active(g), default=str), "fitness": f,
@@ -49,8 +53,11 @@ class Miner:
             if self.rng.random() < rate: n[key] = self.rng.choice(opts)
         if self.rng.random() < rate: n["entry"] = self.rng.choice(ENTRY_TYPES)
         if self.rng.random() < rate: n["regime"] = self.rng.choice(REGIMES)
-        if n["fast"] >= n["slow"]: n["fast"], n["slow"] = min(n["fast"], n["slow"] - 1), max(n["slow"], n["fast"] + 1)
-        if n["fast"] >= n["slow"]: n["fast"] = 5
+        n["fast"] = min(CHOICES["fast"], key=lambda x: abs(x - n["fast"]))       # siempre en la rejilla
+        n["slow"] = min(CHOICES["slow"], key=lambda x: abs(x - n["slow"]))
+        if n["fast"] >= n["slow"]:
+            smaller = [x for x in CHOICES["fast"] if x < n["slow"]]
+            n["fast"] = max(smaller) if smaller else min(CHOICES["fast"])
         return n
 
     def _cross(self, a: dict, b: dict) -> dict:

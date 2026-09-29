@@ -20,6 +20,14 @@ class Market:
         self.n = len(df)
         self._cache: dict = {}
 
+    def truncate(self, end: str | None) -> "Market":
+        """Copia del mercado cortada en `end` (exclusivo). Los indicadores son causales, así que
+        los valores previos son idénticos; pero es físicamente imposible ver el futuro."""
+        if end is None:
+            return self
+        b = int(self.df.index.searchsorted(pd.Timestamp(end, tz="UTC")))
+        return Market(self.tf, df=self.df.iloc[:b], funding=self.funding[:b])
+
     def _get(self, key, fn):
         if key not in self._cache:
             self._cache[key] = fn()
