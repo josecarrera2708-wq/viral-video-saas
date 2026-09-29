@@ -1,4 +1,4 @@
-# Proyecto BTC: réplica del modelo "fondo gestionado por IA" de Conesa
+# Millonary · Réplica BTC del modelo "fondo gestionado por IA" de Conesa
 
 Estado: **PLAN, sin código todavía.** Fecha: 2026-09-29.
 Alcance: **solo Bitcoin.** Técnico + fundamental. Paper trading antes de dinero real.
