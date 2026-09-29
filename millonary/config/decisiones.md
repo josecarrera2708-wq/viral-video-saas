@@ -36,3 +36,11 @@ backtest.
 A 5× una caída adversa de ~20 % liquida la posición (menos margen de mantenimiento). Como BTC hizo
 velas de 1h de −18 % (mar-2020, oct-2025), el motor **modela la liquidación** y un stop siempre debe
 estar mucho más cerca que ese nivel. El apalancamiento es un tope, no un objetivo.
+
+## 2026-09-29 · Construcción tras la fase de evidencia (el dueño dio el «adelante»)
+- Incubadora de traders (15 setups del estilo Conesa) con prerregistro previo, atribución α/β/tendencia, Holm/BH, DSR, PBO y examen sellado: **0/15 certificadas**. El reparto de capital simulado queda 100 % en el núcleo v1 (resultado válido).
+- Meta-etiquetado logístico con examen sellado: 0 ganan. No se retoca el umbral (sería una prueba nueva).
+- Mesa de opciones (Deribit público) añadida como departamento informativo; sin operar opciones ni activar protección de cola.
+- Chat de agentes determinista (`src/desk/chat.py`): mensajes derivados de los informes reales; `ask` responde con cifras del informe, sin LLM ni decisiones.
+- Bienestar de Conesa = cosmético (según su propia UI: «el ánimo no cambia ninguna operación»); aquí equivale a la salud de Infraestructura. No se construye.
+- Pendiente: noticias en vivo (sin fuente fiable/gratuita), multi-activo (fuera de alcance: solo BTC), Hyperliquid/arbitraje real (requiere dos plataformas).

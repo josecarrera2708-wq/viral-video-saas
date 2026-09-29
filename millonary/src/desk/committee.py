@@ -11,9 +11,12 @@ from .base import Context, Report, OK, AVISO, ALERTA
 from .departments import riesgos, macro, analisis, cartera, mesa, derivados, infra
 from .lab import laboratorio
 from .school import escuela
+from .incubadora import incubadora
+from .opciones import opciones
 
 DEPTS = [("Riesgos", riesgos), ("Macroeconomía", macro), ("Análisis de mercados", analisis), ("Gestión de cartera", cartera),
          ("Mesa de trading", mesa), ("Derivados y arbitraje", derivados), ("Laboratorio (cuantitativo / ML)", laboratorio),
+         ("Incubadora de traders", incubadora), ("Mesa de opciones", opciones),
          ("Escuela", escuela), ("Infraestructura", infra)]
 
 ROSTER = [  # el organigrama de Conesa, con el estado REAL de cada departamento
@@ -26,7 +29,8 @@ ROSTER = [  # el organigrama de Conesa, con el estado REAL de cada departamento
     ("Gestión de cartera", "ACTIVO", "Volatility targeting, banda de rebalanceo, coste de funding."),
     ("Derivados y arbitraje", "INVESTIGACIÓN", "Carry teórico cash-and-carry. No se opera."),
     ("Coberturas", "NO APLICA por ahora", "El sistema se 'cubre' saliendo a efectivo; las estrategias con cortos no mejoraron fuera de muestra."),
-    ("Opciones", "FUTURO", "Requiere otro mercado (p. ej. Deribit) y otro marco de riesgo."),
+    ("Opciones", "ACTIVO (solo informa)", "Deribit público: IV vs RV, sesgo 25Δ y coste de un put 10 % OTM. No se opera con opciones; protección de cola desactivada (sin histórico)."),
+    ("Incubadora de traders / Estrategias minadas", "ACTIVO en sombra", "15 traders-estrategia con atribución alfa/beta, corrección por comparaciones múltiples y examen sellado; capital simulado solo por mérito. 0/15 certificadas en el examen."),
     ("Cuantitativo / Machine learning", "ACTIVO en sombra (Laboratorio)", "Minero + embudo de robustez; 7 variantes hacia delante. Sin ventaja probada del ranking del minero."),
     ("Escuela / Academia", "ACTIVO", "Post-mortem de cada lote y marcador por contexto; no cambia parámetros."),
     ("Laboratorio de mejoras", "ACTIVO en sombra", "Regla de promoción: ≥ 90 días, Sharpe ≥ núcleo+0,3, caída ≤ 1,2×, embudo superado."),

@@ -12,6 +12,8 @@ Cada variante de PROCESO o regla evaluada cuenta, se apruebe o no. Última actua
 | 16 | Variante F (filtro de funding p95) | Rechazada: no reduce la caída |
 | 17 | Recorte ×0,5 alrededor del FOMC (2021-2025.06) | **Rechazada**: Sharpe 0,78 → 0,74; −0,85 %/año (IC90 −1,8 % a +0,1 %) |
 | 18–23 | 6 variantes de sombra del Laboratorio (exploratorio, 2017-2025.06) | Sharpe 1,00–1,13; ninguna mejora al núcleo por ≥ 0,3 |
+| 24–38 | Incubadora: 15 traders (SAR+EMA200, Ichimoku, Bollinger+RSI, Keltner, RSI(2), SMA 7-25 ×2, canal por tercios, Donchian, MACD, Supertrend, expansión de vol., retroceso EMA20, momentum 90 d, RSI14+EMA200); examen 2024-01→2025-06, ejecución única | **0/15 certificadas**; mejor Sharpe exam 1,19 (S07) vs buy&hold 1,47; α no significativo (Holm); PBO 0,31 |
+| 39–53 | Meta-etiquetado logístico por trader, examen sellado (una ejecución) | **0 ganan**; el umbral 0,5 fijo veta casi todo (win rate < 50 %); artefacto anotado: la operación abierta antes del examen no se filtra |
 
 Estrategias únicas minadas (no usadas para elegir el núcleo): ≈ 66.000 (v1 32.304 + 8 ventanas WFO v1 ≈ 113.000 evaluaciones + v2 ≈ 119.000).
 El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
