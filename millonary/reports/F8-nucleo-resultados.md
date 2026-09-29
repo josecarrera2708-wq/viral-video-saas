@@ -66,3 +66,32 @@ caída 44,0 %.
 
 ## Registro de pruebas
 Este núcleo: 1 prueba (+1 la variante F, rechazada). Total de variantes de proceso contabilizadas: 16.
+
+---
+
+# Periodo ciego (2025-07-01 → 2026-08-31, 426 días) · abierto UNA vez el 2026-09-29
+Perpetuo 4h con funding real. Criterios fijados antes en `config/blind_criteria.json` (commit `e3b936e`).
+
+| | Sharpe | Retorno | Caída máx. | Peor día |
+|---|---|---|---|---|
+| **Núcleo** | 0,18 | **+0,9 %** | **17,5 %** | −4,9 % |
+| Comprar y mantener | −0,39 | −26,7 % | 53,4 % | −14,0 % |
+| Comprar y mantener con vol. target | −0,53 | −19,0 % | 40,3 % | −7,9 % |
+
+| Criterio del ciego | Umbral | Resultado | |
+|---|---|---|---|
+| Caída máx. ≤ p95 del bootstrap | ≤ 24,2 % | 17,5 % | ✔ |
+| Exposición media en banda | 0,13 – 0,38 | 0,28 | ✔ |
+| Rotación anual en banda | 4,2 – 12,5 | 10,7 | ✔ |
+| **Aceptable** | | | **sí** |
+
+## Lectura honesta
+- **Comportó como se esperaba de un sistema de control de riesgo:** en un mercado donde BTC cayó
+  un 27 % (con una caída del 53 % desde máximos), el núcleo terminó en +0,9 % con una caída del 17,5 %.
+- **No generó rentabilidad:** Sharpe 0,18 y +0,9 % en 14 meses. El error estándar del Sharpe en 14
+  meses es ≈ 0,9, así que este tramo solo detecta fallos graves; **no confirma ni desmiente** una
+  ventaja. Su valor: no falló de forma grosera (caída, exposición y rotación dentro de banda).
+- La rotación (10,7) está en la parte alta de la banda: un mercado sin tendencia produce más
+  señales falsas, como en 2022.
+- **El periodo ciego queda consumido.** No se vuelve a usar para decidir nada. Cualquier cambio en
+  el núcleo obliga a contarlo como prueba nueva y a validarlo con datos nuevos (paper trading).
