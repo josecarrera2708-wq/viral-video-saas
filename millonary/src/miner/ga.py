@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from .features import Market
-from .strategy import CHOICES, ENTRY_TYPES, REGIMES, random_genome, genome_key, evaluate, active, n_params
+from .strategy import CHOICES, ENTRY_TYPES, REGIMES, random_genome, genome_key, evaluate, active, n_params, fix_grid
 
 ROOT = Path(__file__).resolve().parents[2]
 SPLITS = json.loads((ROOT / "config" / "splits.json").read_text())
@@ -13,12 +13,15 @@ TRAIN = tuple(SPLITS["train"])
 
 
 def fitness(m: dict, g: dict, min_trades: int) -> float:
+    """Fitness de consistencia: media de Sharpe por bloques de train menos penalización por
+    dispersión, encogida si hay pocas operaciones y penalizada por complejidad y drawdown."""
     if m["ruined"] or m["trades"] < min_trades:
         return -10.0 + min(1.0, m["trades"] / max(1, min_trades)) - (5.0 if m["ruined"] else 0.0)
     if m["exp_r"] <= 0:
         return -1.0 + min(m["sharpe"], 0.0)
     shrink = min(1.0, math.sqrt(m["trades"] / (2 * min_trades)))
-    return m["sharpe"] * shrink - 2.0 * max(0.0, m["maxdd"] - 0.25) - 0.02 * n_params(g)
+    base = m["bsh_mean"] - 0.75 * m["bsh_std"]              # premia rendimiento estable en TODOS los bloques
+    return base * shrink - 2.0 * max(0.0, m["maxdd"] - 0.25) - 0.05 * n_params(g)
 
 
 class Miner:
@@ -33,7 +36,7 @@ class Miner:
         self.trials: dict[str, dict] = {}            # clave -> registro (cuenta de pruebas únicas)
         self.out = Path(out_dir); self.out.mkdir(parents=True, exist_ok=True)
 
-    def _min_trades(self, tf): return 150 if tf == "1h" else 100
+    def _min_trades(self, tf): return {"1h": 150, "4h": 60, "1d": 25}[tf]
 
     def eval(self, g: dict) -> float:
         k = genome_key(g)
@@ -53,15 +56,11 @@ class Miner:
             if self.rng.random() < rate: n[key] = self.rng.choice(opts)
         if self.rng.random() < rate: n["entry"] = self.rng.choice(ENTRY_TYPES)
         if self.rng.random() < rate: n["regime"] = self.rng.choice(REGIMES)
-        n["fast"] = min(CHOICES["fast"], key=lambda x: abs(x - n["fast"]))       # siempre en la rejilla
-        n["slow"] = min(CHOICES["slow"], key=lambda x: abs(x - n["slow"]))
-        if n["fast"] >= n["slow"]:
-            smaller = [x for x in CHOICES["fast"] if x < n["slow"]]
-            n["fast"] = max(smaller) if smaller else min(CHOICES["fast"])
-        return n
+        if self.rng.random() < rate: n["regime2"] = self.rng.choice(REGIMES)
+        return fix_grid(n)
 
     def _cross(self, a: dict, b: dict) -> dict:
-        return {k: (a[k] if self.rng.random() < 0.5 else b[k]) for k in a}
+        return fix_grid({k: (a[k] if self.rng.random() < 0.5 else b[k]) for k in a})
 
     def run(self, pop=200, gens=12, elite=0.05, log=True):
         popl = [random_genome(self.rng) for _ in range(pop)]

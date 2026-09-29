@@ -3,17 +3,24 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 from ..backtest.data import load_perp
+from ..data.extra_features import build_extra
 from ..signals import indicators as I, candles as C
+
+BARS_PER_DAY = {"1h": 24, "4h": 6, "1d": 1}
 
 CANDLE_COLS = ["marubozu", "hammer", "hanging_man", "inv_hammer", "shooting_star", "engulfing",
                "harami", "tweezers", "stars", "soldiers_crows", "pin_bar"]
 
 
 class Market:
-    def __init__(self, tf: str = "1h", df: pd.DataFrame | None = None, funding: np.ndarray | None = None):
+    def __init__(self, tf: str = "1h", df: pd.DataFrame | None = None, funding: np.ndarray | None = None,
+                 extra: pd.DataFrame | None = None, load_extra: bool = False):
         if df is None:
             df, funding = load_perp(tf)
-        self.tf, self.df = tf, df
+            if load_extra:
+                extra = build_extra(df.index)
+        self.tf, self.df, self.extra = tf, df, extra
+        self.bpd = BARS_PER_DAY[tf]
         self.funding = funding if funding is not None else np.zeros(len(df))
         self.o = df["open"].to_numpy(); self.h = df["high"].to_numpy()
         self.l = df["low"].to_numpy(); self.c = df["close"].to_numpy()
@@ -26,7 +33,8 @@ class Market:
         if end is None:
             return self
         b = int(self.df.index.searchsorted(pd.Timestamp(end, tz="UTC")))
-        return Market(self.tf, df=self.df.iloc[:b], funding=self.funding[:b])
+        return Market(self.tf, df=self.df.iloc[:b], funding=self.funding[:b],
+                      extra=None if self.extra is None else self.extra.iloc[:b])
 
     def _get(self, key, fn):
         if key not in self._cache:
@@ -52,3 +60,41 @@ class Market:
         a = 0 if start is None else int(idx.searchsorted(pd.Timestamp(start, tz="UTC")))
         b = self.n if end is None else int(idx.searchsorted(pd.Timestamp(end, tz="UTC")))
         return a, b
+
+    # ---------------- series exógenas (causales; ya alineadas en extra_features) ----------------
+    def ex(self, col: str) -> pd.Series:
+        if self.extra is None:
+            return pd.Series(np.nan, index=self.df.index)
+        return self.extra[col]
+
+    def ex_rank(self, col: str, days: int) -> pd.Series:
+        w = max(20, days * self.bpd)
+        return self._get(("exr", col, days), lambda: self.ex(col).rolling(w, min_periods=w // 2).rank(pct=True))
+
+    def ex_chg(self, col: str, days: int) -> pd.Series:
+        n = max(1, days * self.bpd)
+        return self._get(("exc", col, days), lambda: self.ex(col) / self.ex(col).shift(n) - 1)
+
+    # ---------------- marco temporal superior ----------------
+    def htf_sma(self, n: int) -> pd.Series:
+        """SMA de n cierres DIARIOS (días completos ya cerrados) mapeada a cada vela."""
+        def f():
+            daily = self.df["close"].resample("1D").last()
+            sm = daily.rolling(n, min_periods=n).mean().shift(1)          # solo días ya cerrados
+            return sm.reindex(self.df.index, method="ffill")
+        return self._get(("htf", n), f)
+
+    def structure(self, k: int) -> pd.DataFrame:
+        """Estado de estructura: +1 (HH y HL), -1 (LH y LL), 0 (mixto). Pivotes confirmados (causal)."""
+        def f():
+            sw = self.swings(k)
+            def prev(series):
+                ch = series != series.shift(1)
+                vals = series[ch]
+                pv = vals.shift(1).reindex(series.index).ffill()
+                return pv
+            ph, pl = prev(sw.last_high), prev(sw.last_low)
+            up = (sw.last_high > ph) & (sw.last_low > pl)
+            dn = (sw.last_high < ph) & (sw.last_low < pl)
+            return pd.DataFrame({"up": up, "dn": dn})
+        return self._get(("struct", k), f)

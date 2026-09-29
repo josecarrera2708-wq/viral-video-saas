@@ -2,7 +2,7 @@
 from __future__ import annotations
 import numpy as np
 
-BARS_PER_YEAR = {"1h": 24 * 365.25, "4h": 6 * 365.25}
+BARS_PER_YEAR = {"1h": 24 * 365.25, "4h": 6 * 365.25, "1d": 365.25}
 
 
 def max_drawdown(eq: np.ndarray) -> float:
