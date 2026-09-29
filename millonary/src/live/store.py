@@ -25,7 +25,7 @@ class Store:
     def set(self, k, v):
         self.db.execute("INSERT INTO kv(k,v) VALUES(?,?) ON CONFLICT(k) DO UPDATE SET v=excluded.v", (k, json.dumps(v)))
 
-    def begin(self): self.db.execute("BEGIN")
+    def begin(self): self.db.execute("BEGIN IMMEDIATE")            # bloquea a otros escritores (dos procesos)
     def commit(self): self.db.execute("COMMIT")
     def rollback(self): self.db.execute("ROLLBACK")
 

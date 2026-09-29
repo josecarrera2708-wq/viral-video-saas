@@ -35,7 +35,7 @@ o `git clone` con SSH.)
 docker logs -f millonary-paper                 # registro en vivo
 docker exec millonary-paper python -m src.live.runner --status
 ```
-El ejecutor evalúa **en cada cierre de vela de 4h** (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC),
+Al arrancar evalúa enseguida (y recupera las velas que se hubiera perdido) y luego **en cada cierre de vela de 4h** (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC),
 unos 45 segundos después. La primera evaluación llega en el próximo cierre. Es normal ver "ya
 procesada" o esperas largas entre velas.
 
@@ -49,14 +49,18 @@ procesada" o esperas largas entre velas.
 ## 6. Freno de emergencia
 ```
 docker exec millonary-paper touch /data/KILL       # en el siguiente cierre aplana todo y se para
-docker exec millonary-paper rm /data/KILL          # quitarlo (además hay que borrar el estado 'parado')
+# Para reanudar (solo cuando tú lo decidas):
+docker exec millonary-paper rm /data/KILL
+docker exec millonary-paper python -m src.live.runner --reset-halt
 ```
-Se para solo, y avisa, si la caída desde máximos llega al 30 %, si el día pierde un 7 %, o si los datos
-no son fiables (en ese caso mantiene la posición y no opera).
+Se para solo, y avisa, si la caída desde máximos llega al 30 % o si el día pierde un 7 % (reinicio manual con
+`--reset-halt`). Si los datos no son fiables, mantiene la posición y no opera; si además está parado o hay
+KILL, aplana igualmente con el último precio.
 
 ## 7. Copia de seguridad y exportación de resultados
 ```
-docker cp millonary-paper:/data/state.db ./state-$(date +%F).db
+docker cp millonary-paper:/data/state.db ./state-$(date +%F).db     # la base con todas las operaciones
+docker cp millonary-paper:/data/ ./datos-millonary/                   # incluye los CSV legibles
 ```
 Pásame ese archivo y comparo los resultados con el backtest.
 

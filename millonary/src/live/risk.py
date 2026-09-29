@@ -19,34 +19,39 @@ class RiskDecision:
     flags: list = field(default_factory=list)
 
 
-def validate_bars(bars: pd.DataFrame, now: pd.Timestamp, lim: RiskLimits, interval: pd.Timedelta):
-    """Comprueba que los datos son fiables. Devuelve lista de problemas (vacía = ok)."""
-    problems = []
-    if len(bars) < 300:
-        problems.append(f"historia insuficiente ({len(bars)} velas)")
-        return problems
+def validate_bars(bars: pd.DataFrame, now: pd.Timestamp, lim: RiskLimits, interval: pd.Timedelta,
+                  min_bars: int = 1800):
+    """Devuelve (problemas, avisos). Los PROBLEMAS bloquean la operativa normal; los avisos no.
+    Solo bloquea lo que cambia la señal: historia truncada, precios inválidos, huecos en las últimas
+    12 velas o datos atrasados. Un hueco antiguo o un salto grande de precio (un desplome real) no bloquean."""
+    problems, warns = [], []
+    if len(bars) < min_bars:
+        problems.append(f"historia insuficiente ({len(bars)} < {min_bars} velas): la señal cambiaría")
+        return problems, warns
     idx = bars.index
     if not idx.is_monotonic_increasing or idx.has_duplicates:
         problems.append("índice no monótono o con duplicados")
     gaps = idx.to_series().diff().dropna()
-    tail = gaps.iloc[-600:]
-    if (tail != interval).any():
-        problems.append(f"huecos/irregularidades en las últimas 600 velas (p. ej. {tail[tail != interval].iloc[0]})")
-    o, h, l, c = (bars[k].to_numpy() for k in ("open", "high", "low", "close"))
-    if (~np.isfinite(bars[["open", "high", "low", "close"]].to_numpy())).any() or (bars[["open", "high", "low", "close"]] <= 0).any().any():
+    if (gaps.iloc[-12:] != interval).any():
+        problems.append("huecos o irregularidades en las últimas 12 velas")
+    elif (gaps != interval).any():
+        warns.append(f"hay {int((gaps != interval).sum())} huecos antiguos en la historia (no afectan a la señal reciente)")
+    px = bars[["open", "high", "low", "close"]]
+    if (~np.isfinite(px.to_numpy())).any() or (px <= 0).any().any():
         problems.append("precios no finitos o <= 0")
+    o, h, l, c = (bars[k].to_numpy() for k in ("open", "high", "low", "close"))
     if ((h < np.maximum(o, c) - 1e-9) | (l > np.minimum(o, c) + 1e-9)).any():
         problems.append("OHLC incoherente")
-    last_close_expected = now.floor(interval) - interval           # apertura de la última vela ya cerrada
-    lag = (last_close_expected - idx[-1]) / interval
+    last_expected = now.floor(interval) - interval                     # apertura de la última vela ya cerrada
+    lag = (last_expected - idx[-1]) / interval
     if lag > lim.stale_bars:
-        problems.append(f"datos atrasados: última vela {idx[-1]} (esperada {last_close_expected})")
+        problems.append(f"datos atrasados: última vela {idx[-1]} (esperada {last_expected})")
     if lag < 0:
         problems.append("la última vela está aún abierta")
     jump = np.abs(bars["close"].pct_change().iloc[-3:]).max()
     if jump > lim.max_bar_jump:
-        problems.append(f"movimiento sospechoso de {jump:.1%} en las últimas velas")
-    return problems
+        warns.append(f"SALTO_GRANDE de {jump:.1%} en las últimas velas (se sigue operando: puede ser un desplome real)")
+    return problems, warns
 
 
 class RiskLayer:

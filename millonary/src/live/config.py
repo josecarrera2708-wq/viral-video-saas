@@ -8,8 +8,9 @@ from ..core.nucleo import CoreParams
 
 @dataclass(frozen=True)
 class RiskLimits:
-    """Frenos de catástrofe FUERA de la envolvente histórica del núcleo (mayor caída 25 %, peor día -4,7 %),
-    para que no alteren el comportamiento validado. Los avisos no cambian nada."""
+    """Frenos de catástrofe FUERA de la envolvente histórica del núcleo (mayor caída 25 %; mayor pérdida
+    intradía medida desde la marca de las 00:00 UTC: 5,8 %), para que no alteren el comportamiento
+    validado. Los avisos no cambian nada."""
     max_expo: float = 2.0            # tope efectivo de exposición (x capital). El 5x del exchange NO se usa
     hard_expo: float = 5.0           # tope técnico absoluto
     daily_loss_warn: float = 0.03
@@ -26,9 +27,11 @@ class LiveConfig:
     interval: str = "4h"
     capital: float = 1000.0
     history_bars: int = 4000         # ~667 días: cubre el horizonte de 250 días y el calentamiento del EWMA
+    min_history_bars: int = 1800     # por debajo la señal CAMBIA (la pata A necesita >251 días): no se opera
     lot_step: float = 0.001          # BTC
     min_qty: float = 0.001
     min_notional: float = 100.0      # VERIFICAR en el exchange real antes de operar con dinero
+    reduce_below_min: bool = True    # SUPUESTO (verificar): las órdenes reduce-only no tienen nocional mínimo
     taker_fee: float = 0.0005
     slippage: float = 0.0002
     core: CoreParams = field(default_factory=CoreParams)

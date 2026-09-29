@@ -46,6 +46,9 @@ def _to_frame(rows) -> pd.DataFrame:
     return df.drop(columns="t").set_index("time").sort_index()
 
 
+MAX_SKEW_MS = 30_000
+
+
 class BinanceFeed:
     name = "binance"
 
@@ -55,18 +58,21 @@ class BinanceFeed:
     def bars(self, n: int, now: pd.Timestamp) -> pd.DataFrame:
         step = INTERVAL_MS[self.interval]
         now_ms = int(now.timestamp() * 1000)
-        end = now_ms; frames = []; got = 0
-        while got < n:
+        server_ms = int(self.get(f"{BINANCE}/fapi/v1/time")["serverTime"])
+        if abs(server_ms - now_ms) > MAX_SKEW_MS:
+            raise RuntimeError(f"reloj local desincronizado {abs(server_ms - now_ms) / 1000:.0f}s respecto al exchange")
+        end = server_ms; frames = []; have = 0; pages = 0
+        while have < n + 2 and pages < 8:
             rows = self.get(f"{BINANCE}/fapi/v1/klines", {"symbol": self.symbol, "interval": self.interval,
-                                                          "limit": min(1500, n - got + 5), "endTime": end})
+                                                          "limit": min(1500, n - have + 5), "endTime": end})
             if not rows: break
-            f = _to_frame([[r[0], r[1], r[2], r[3], r[4], r[5]] for r in rows])
-            frames.append(f); got += len(f)
+            frames.append(_to_frame([[r[0], r[1], r[2], r[3], r[4], r[5]] for r in rows]))
+            have = len(pd.concat(frames).index.unique()); pages += 1
             end = int(rows[0][0]) - 1
             if len(rows) < 2: break
         df = pd.concat(frames).sort_index()
         df = df[~df.index.duplicated()]
-        df = df[(_ms(df.index) + step) <= now_ms]                          # solo velas ya cerradas
+        df = df[(_ms(df.index) + step) <= server_ms]                       # cerradas según el reloj del EXCHANGE
         return df.iloc[-n:]
 
     def funding(self, since: pd.Timestamp, now: pd.Timestamp) -> pd.DataFrame:
@@ -86,27 +92,37 @@ class BybitFeed:
     def __init__(self, symbol="BTCUSDT", interval="4h", http_get: Callable = default_get):
         self.symbol, self.interval, self.get = symbol, interval, http_get
 
+    @staticmethod
+    def _check(j):
+        if j.get("retCode", 0) != 0:
+            raise RuntimeError(f"Bybit retCode={j.get('retCode')} {j.get('retMsg')}")
+        return j
+
     def bars(self, n: int, now: pd.Timestamp) -> pd.DataFrame:
         step = INTERVAL_MS[self.interval]; now_ms = int(now.timestamp() * 1000)
-        end = now_ms; frames = []; got = 0
-        while got < n:
-            j = self.get(f"{BYBIT}/v5/market/kline", {"category": "linear", "symbol": self.symbol,
-                                                      "interval": BYBIT_INTERVAL[self.interval],
-                                                      "limit": min(1000, n - got + 5), "end": end})
+        t = self._check(self.get(f"{BYBIT}/v5/market/time"))
+        server_ms = int(t["result"]["timeSecond"]) * 1000
+        if abs(server_ms - now_ms) > MAX_SKEW_MS + 1000:
+            raise RuntimeError(f"reloj local desincronizado {abs(server_ms - now_ms) / 1000:.0f}s respecto al exchange")
+        end = server_ms; frames = []; have = 0; pages = 0
+        while have < n + 2 and pages < 8:
+            j = self._check(self.get(f"{BYBIT}/v5/market/kline", {"category": "linear", "symbol": self.symbol,
+                                                                  "interval": BYBIT_INTERVAL[self.interval],
+                                                                  "limit": min(1000, n - have + 5), "end": end}))
             rows = j.get("result", {}).get("list", [])
             if not rows: break
-            f = _to_frame([[r[0], r[1], r[2], r[3], r[4], r[5]] for r in rows])
-            frames.append(f); got += len(f)
+            frames.append(_to_frame([[r[0], r[1], r[2], r[3], r[4], r[5]] for r in rows]))
+            have = len(pd.concat(frames).index.unique()); pages += 1
             end = int(min(int(r[0]) for r in rows)) - 1
         df = pd.concat(frames).sort_index()
         df = df[~df.index.duplicated()]
-        df = df[(_ms(df.index) + step) <= now_ms]                          # solo velas ya cerradas
+        df = df[(_ms(df.index) + step) <= server_ms]
         return df.iloc[-n:]
 
     def funding(self, since: pd.Timestamp, now: pd.Timestamp) -> pd.DataFrame:
-        j = self.get(f"{BYBIT}/v5/market/funding/history", {"category": "linear", "symbol": self.symbol,
-                                                            "startTime": int(since.timestamp() * 1000),
-                                                            "endTime": int(now.timestamp() * 1000), "limit": 200})
+        j = self._check(self.get(f"{BYBIT}/v5/market/funding/history", {"category": "linear", "symbol": self.symbol,
+                                                                        "startTime": int(since.timestamp() * 1000),
+                                                                        "endTime": int(now.timestamp() * 1000), "limit": 200}))
         rows = j.get("result", {}).get("list", [])
         if not rows:
             return pd.DataFrame(columns=["time", "funding_rate"])
