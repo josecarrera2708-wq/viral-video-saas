@@ -47,3 +47,15 @@ def test_fetch_uses_only_closed_bars_and_forward_is_flat_before_start():
 def test_cost_stress_and_mc_band():
     b = Params(); s = stress(2.0); assert s.taker_fee == 2 * b.taker_fee and s.slippage == 2 * b.slippage
     R = np.r_[np.full(60, 1.5), np.full(140, -1.0)]; m = mc_band(R, n=500); assert m["dd_p95"] >= m["dd_p50"] > 0 and m["ret_p5"] <= m["ret_p95"]
+
+
+def test_improvement_operators_only_restrict_or_scale_and_stay_causal():
+    from src.intraday.mejora import OPERADORES
+    df = bars1h(); base = all_specs(df); cut = 1800; d2 = df.copy(); d2.iloc[cut + 1:, d2.columns.get_indexer(["open", "high", "low", "close"])] *= 1.4
+    b2 = all_specs(d2)
+    for k in ("I02 Ruptura Donchian 24 h", "I05 Cruce EMA 9/21 + EMA200", "I10 Ráfaga de momentum"):
+        for on, fn in OPERADORES.items():
+            v, v2 = fn(df, base[k]), fn(d2, b2[k])
+            assert np.array_equal(v.entry[:cut + 1], v2.entry[:cut + 1]), (k, on)                      # causal
+            if on in ("M1 a favor de la tendencia", "M3 sesión 07-21 UTC", "M4 stop mínimo 0,8 %"):
+                assert ((v.entry != 0) <= (base[k].entry != 0)).all(), (k, on)                        # solo elimina entradas, nunca añade

@@ -50,8 +50,8 @@ def fetch_funding(idx: pd.DatetimeIndex, now: pd.Timestamp, get=None) -> np.ndar
         return np.zeros(len(idx))
 
 
-def run_all(bars: pd.DataFrame, funding: np.ndarray, start: pd.Timestamp, params: Params = Params()) -> dict:
-    specs = all_specs(bars); closes = bars.index + H1; live = np.asarray(closes >= pd.Timestamp(start)); out = {}
+def run_all(bars: pd.DataFrame, funding: np.ndarray, start: pd.Timestamp, params: Params = Params(), specs: dict | None = None) -> dict:
+    specs = specs if specs is not None else all_specs(bars); closes = bars.index + H1; live = np.asarray(closes >= pd.Timestamp(start)); out = {}
     for k, sp in specs.items():
         ent = np.where(live, sp.entry, 0).astype(np.int8); ex = None if sp.exit is None else np.where(live, sp.exit, 0).astype(np.int8)
         p = replace(params, tp_mult=sp.tp_mult, max_bars=sp.max_bars)
@@ -100,14 +100,26 @@ def main(now: pd.Timestamp | None = None) -> dict:
         allt.to_csv(d / "trades.csv", index=False)
     else:
         (d / "trades.csv").write_text("")
+    mej = {}
+    lp = ROOT / "reports" / "intradia_mejoras.json"
+    if lp.exists():
+        from src.intraday.mejora import OPERADORES
+        led = json.loads(lp.read_text()); base = all_specs(bars); vs = {k: OPERADORES[led["candidatas"][k]["operador"]](bars, base[led["candidatas"][k]["trader"]]) for k in led["en_sombra"]}
+        if vs:
+            rv = run_all(bars, f, start, specs=vs); sv, tv = summarize_all(bars, rv, start, now)
+            for k, v in sv.items():
+                v["R_media_base"] = summ[led["candidatas"][k]["trader"]]["R_media"]; v["cerradas_base"] = summ[led["candidatas"][k]["trader"]]["cerradas"]
+                v["etapa"] = "E3 sombra (faltan operaciones)" if v["cerradas"] < 150 else ("E3 candidata" if (v["R_media"] > v["R_media_base"] and (v["p_R_positiva"] or 0) >= 0.90) else "E4 retirada" if v["R_media"] <= 0 else "E3 sombra (sin cumplir)")
+            mej = sv
+            if len(tv): tv.to_csv(d / "trades_mejoras.csv", index=False)
     out = {"generado": str(now), "ultima_vela_cerrada": str(bars.index[-1] + H1), "inicio": str(start), "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas)",
            "funding_disponible": bool(np.any(f != 0)), "traders": summ, "trades_totales": int(sum(v["cerradas"] for v in summ.values())),
-           "por_dia_total": float(sum(v["por_dia"] for v in summ.values()))}
+           "por_dia_total": float(sum(v["por_dia"] for v in summ.values())), "mejoras": mej}
     (d / "resumen.json").write_text(json.dumps(out, indent=1, default=str)); return out
 
 
 if __name__ == "__main__":
     o = main()
-    print({k: v for k, v in o.items() if k != "traders"})
+    print({k: v for k, v in o.items() if k not in ("traders", "mejoras")})
     for k, v in o.get("traders", {}).items():
         print(f"{k:38s} ops {v['cerradas']:2d} ({v['por_dia']:.1f}/día) R {v['R_total']:+.2f} ret {v['retorno']:+.2%} abierta {'sí' if v['abierta'] else 'no'}")
