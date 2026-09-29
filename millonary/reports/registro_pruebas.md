@@ -15,6 +15,7 @@ Cada variante de PROCESO o regla evaluada cuenta, se apruebe o no. Última actua
 | 24–38 | Incubadora: 15 traders (SAR+EMA200, Ichimoku, Bollinger+RSI, Keltner, RSI(2), SMA 7-25 ×2, canal por tercios, Donchian, MACD, Supertrend, expansión de vol., retroceso EMA20, momentum 90 d, RSI14+EMA200); examen 2024-01→2025-06, ejecución única | **0/15 certificadas**; mejor Sharpe exam 1,19 (S07) vs buy&hold 1,47; α no significativo (Holm); PBO 0,31 |
 | 39–53 | Meta-etiquetado logístico por trader, examen sellado (una ejecución) | **0 ganan**; el umbral 0,5 fijo veta casi todo (win rate < 50 %); artefacto anotado: la operación abierta antes del examen no se filtra |
 | 54–128 | Ciclo de mejora: 5 operadores (filtro EMA200, solo largos, tamaño por volatilidad, stop 3×ATR, parte fuerte del canal) × 15 traders; construcción 2020-23 y validación 2024-25.06 (segunda mirada al examen, anotada) | 21 pasan a sombra hacia delante (sobre todo «solo largos» y «tamaño por volatilidad»); **0 significativas tras Holm** (mejor p_Holm 0,63). «Solo largos» refleja la deriva alcista de BTC 2020-25: exige confirmación hacia delante |
+| 129–142 | Mesa intradía: 14 traders de 1 h con stop/TP/tiempo; construcción 2020-23, validación 2024-25.06, examen sellado 2025-07→2026-08 (ejecución única) | **0/14 certificadas**; expectativa en R negativa en el examen en los 14 (−0,05 a −0,23 R por operación); con costes ×2 empeora en todos. Frecuencia 0,3-1,6 ops/día. Causa: el coste de ida y vuelta (≈12 pb) es ≈0,2 R con stops de 1-2 ATR de 1 h |
 
 Estrategias únicas minadas (no usadas para elegir el núcleo): ≈ 66.000 (v1 32.304 + 8 ventanas WFO v1 ≈ 113.000 evaluaciones + v2 ≈ 119.000).
 El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
@@ -23,3 +24,5 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - La Pata A se decide al cierre diario (00:00 UTC) y se aplica desde la vela de las 04:00 del día siguiente (4 h de retraso extra
   frente a "desde la vela siguiente"). Es igual en backtest y en vivo (revisión Opus, hallazgo 8).
 - El freno de pérdida diaria mide la caída intradía desde las 00:00 UTC (máx. histórica 5,8 %), no cierre a cierre (4,7 %).
+
+- Mesa intradía: el test de causalidad detectó que el stop de I01 usaba el rango asiático completo en velas anteriores al cierre de esa sesión (sin efecto en entradas: comprobado que entradas y stops de entrada son idénticos antes y después de la corrección).

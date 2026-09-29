@@ -21,7 +21,10 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
     if not eq.empty:
         t = pd.to_datetime(eq["bar"], utc=True); pts = [[int(a.timestamp() * 1000), float(b)] for a, b in zip(t, eq["equity"])]
     inc = next((d for d in (brief or {}).get("departamentos", []) if d["dept"] == "Incubadora de traders"), {}).get("metrics", {})
-    return {"generado": now.isoformat(), "summary": s, "brief": brief, "chat": feed(brief) if brief else [], "equity": pts, "forward": inc.get("forward", {}),
+    idr = _json(data / "intradia" / "resumen.json"); itr = _csv(data / "intradia" / "trades.csv"); itrades = []
+    if not itr.empty:
+        itrades = itr[~itr["abierta"].astype(bool)].sort_values("cierra", ascending=False).head(30).to_dict("records")
+    return {"intradia": idr, "intradia_trades": itrades, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": feed(brief) if brief else [], "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 

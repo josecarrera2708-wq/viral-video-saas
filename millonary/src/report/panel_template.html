@@ -63,6 +63,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
   <div class="banner" id="banner"></div>
   <nav role="tablist" aria-label="Secciones">
     <button role="tab" aria-selected="true" data-tab="sala">Sala</button>
+    <button role="tab" aria-selected="false" data-tab="intradia">Intradía</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
     <button role="tab" aria-selected="false" data-tab="informe">Informe</button>
@@ -78,6 +79,15 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
       <div class="answer" id="answer" hidden></div>
       <p class="foot">Los mensajes salen de los informes reales del comité; no hay IA que invente cifras ni decida operaciones.</p>
     </div>
+  </section>
+
+  <section class="panel sec" id="tab-intradia" hidden>
+    <h2>Mesa intradía en papel</h2>
+    <div class="card"><div class="funnel" id="idKpis"></div><p class="foot" id="idNote"></p></div>
+    <div class="card"><div class="tw"><table id="idTable"></table></div></div>
+    <h2>Últimas operaciones</h2>
+    <div class="card"><div class="tw"><table id="idTrades"></table></div>
+      <p class="foot">Cada trader opera con 1.000 USDT virtuales, riesgo 0,5 % por operación y stop/TP fijos. El histórico (2020-2026) muestra expectativa negativa tras costes en los 14: esta prueba hacia delante mide si eso se confirma. Sin dinero real.</p></div>
   </section>
 
   <section class="panel sec" id="tab-ranking" hidden>
@@ -135,7 +145,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','ranking','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','ranking','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -182,6 +192,20 @@ if (M) {
 } else $('#funnel').innerHTML = '<p class="dim">Sin registro de mejoras.</p>';
 $('#depts').innerHTML = (D.brief ? D.brief.departamentos : []).map(d => `<div class="card dept"><h3><span>${esc(d.dept)}</span>${pill(d.status)}</h3><p>${esc(d.headline)}</p><ul>${d.notes.filter(n=>n.trim()).slice(0,5).map(n=>`<li>${esc(n.trim())}</li>`).join('')}</ul></div>`).join('') || '<p class="dim">Aún sin sesión del comité.</p>';
 $('#org').innerHTML = '<tr><th>Departamento</th><th>Estado</th><th>Qué hace realmente</th></tr>' + (D.brief ? D.brief.organigrama : []).map(([n,e,w]) => `<tr><td>${esc(n)}</td><td><span class="pill">${esc(e)}</span></td><td style="white-space:normal;min-width:260px">${esc(w)}</td></tr>`).join('');
+
+// intradía
+const I = D.intradia;
+if (I) {
+  const T = Object.entries(I.traders), ab = T.filter(([k,v]) => v.abierta).length;
+  $('#idKpis').innerHTML = [[I.trades_totales,'operaciones cerradas'],[I.por_dia_total.toFixed(1),'ops/día (14 traders)'],[ab,'posiciones abiertas'],[T.filter(([k,v]) => v.retorno > 0).length + ' / 14','traders en positivo']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+  $('#idNote').textContent = `Fuente: ${I.fuente}. Última vela cerrada ${String(I.ultima_vela_cerrada).slice(0,16)} UTC. Inicio de la prueba ${String(I.inicio).slice(0,16)} UTC.`;
+  $('#idTable').innerHTML = '<tr><th>Trader</th><th class="n">Ops</th><th class="n">Ganan/pierden</th><th class="n">TP / Stop / Tiempo</th><th class="n">R total</th><th class="n">Retorno</th><th class="n">Caída</th><th>Abierta ahora</th></tr>' +
+    T.sort((a,b) => b[1].retorno - a[1].retorno).map(([k,v]) => { const s = v.salidas || {}; const a = v.abierta;
+      return `<tr><td>${esc(k)}</td><td class="n num">${v.cerradas}</td><td class="n num">${v.ganan} / ${v.pierden}</td><td class="n num">${s.tp||0} / ${s.stop||0} / ${s.time||0}</td><td class="n num ${cls(v.R_total)}">${v.R_total.toFixed(2)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td>${a ? `<span class="pill gold">${esc(a.lado)} @ ${Number(a.px_entrada).toFixed(0)}</span>` : '<span class="dim">plana</span>'}</td></tr>`; }).join('');
+  const tr = D.intradia_trades || [];
+  $('#idTrades').innerHTML = '<tr><th>Cierre</th><th>Trader</th><th>Lado</th><th class="n">Entrada</th><th class="n">Salida</th><th>Motivo</th><th class="n">R</th><th class="n">P&L USDT</th></tr>' +
+    (tr.length ? tr.map(t => `<tr><td class="mono">${esc(String(t.cierra).slice(5,16))}</td><td>${esc(t.trader)}</td><td>${esc(t.lado)}</td><td class="n num">${Number(t.px_entrada).toFixed(0)}</td><td class="n num">${Number(t.px_salida).toFixed(0)}</td><td>${esc(t.salida)}</td><td class="n num ${cls(t.R)}">${Number(t.R).toFixed(2)}</td><td class="n num ${cls(t.pnl_usdt)}">${Number(t.pnl_usdt).toFixed(2)}</td></tr>`).join('') : '<tr><td colspan="8" class="dim">Aún no hay operaciones cerradas.</td></tr>');
+} else $('#idTable').innerHTML = '<tr><td class="dim">Sin datos intradía todavía.</td></tr>';
 
 // informe
 function chart(pts){

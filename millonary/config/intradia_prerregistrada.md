@@ -35,3 +35,6 @@ Dinero real (Fase 2) solo para traders certificados en histórico con ≥ 150 op
 probabilidad posterior ≥ 0,90, dentro de la banda de deriva, y aprobación EXPRESA del dueño; tamaño mínimo.
 Aviso honesto: las diferencias entre precio de Deribit y Binance y la latencia real no están en la simulación; un trader intradía real
 sufre más deslizamiento que el modelo.
+
+## Adenda (fijada antes de ejecutar): fin del examen sellado
+El fichero de funding termina el 2026-08-31 (integridad exigida por el motor). El examen sellado es 2025-07-01 → 2026-08-31 (23:00 UTC), no hasta el 09-28.

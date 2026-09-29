@@ -37,7 +37,7 @@ def _stop(df, k, a=None):
 
 def i01_rango_asiatico(df):
     h, l, c = df["high"], df["low"], df["close"]; hr = df.index.hour; day = df.index.floor("1D")
-    asia = (hr < 8); ah = h.where(asia).groupby(day).transform("max"); al = l.where(asia).groupby(day).transform("min")
+    asia = (hr < 8); ah = h.where(asia).groupby(day).cummax().groupby(day).ffill(); al = l.where(asia).groupby(day).cummin().groupby(day).ffill()   # causal: solo velas ya cerradas de la sesión
     win = (hr >= 8) & (hr < 17)
     sig = pd.Series(np.where(win & (c > ah), 1, np.where(win & (c < al), -1, 0)), index=df.index)
     a = atr(df, 14); width = (ah - al).clip(lower=0.8 * a, upper=3 * a)
