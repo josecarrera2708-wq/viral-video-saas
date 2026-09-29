@@ -53,7 +53,29 @@
 - Probar la misma familia de estrategias en ETH/SOL solo como **contraste de robustez**, no para
   operar (el proyecto es solo BTC).
 
-## Pendiente de ejecutar (terminal no disponible en el momento de escribir esto)
-- `src/robustness/mining_value_check.py`: mide si el minero aporta algo frente a estrategias
-  aleatorias con los mismos mínimos (degradación train→validación, correlación de rangos).
+## ¿Aporta algo el minero frente al azar? (ejecutado)
+| | Minadas (150 mejores en train) | Aleatorias sin minar (1.500, mismos mínimos) |
+|---|---|---|
+| Sharpe train medio | 1,51 | −0,46 |
+| Sharpe validación medio | 0,58 | −0,34 |
+| % con Sharpe de validación > 0 | 85 % | 42 % |
+| % con Sharpe de validación > 1 | 26 % | 6,9 % |
+| Correlación de rangos train↔validación | 0,06 | 0,57 |
+
+Lectura:
+1. **Sí hay algo, pero modesto:** las minadas superan al azar en validación (0,58 frente a −0,34), y
+   también a las 150 mejores en train de estrategias aleatorias (0,36).
+2. **Degradación fuerte:** el Sharpe cae de 1,51 (train) a 0,58 (validación), un ~62 % menos. El
+   Sharpe de entrenamiento NO es la expectativa real; la expectativa es la de validación o menos.
+3. **Dentro de las 150 elegidas, el orden de train no predice el de validación (0,06):** por eso
+   el PBO sale tan alto. Elegir "la mejor" es casi una lotería entre buenas.
+4. **Cuidado con el beta alcista:** la validación (2024-01 → 2025-06) fue en su mayoría alcista para
+   BTC. Que el 85 % salga positivo puede deberse a que las estrategias de tendencia se benefician de
+   ese tramo, no solo a habilidad. El periodo ciego (2025-07 → 2026-08), con caída desde máximos,
+   será una prueba más dura. **Sigue sin abrirse.**
+5. Las estrategias aleatorias pierden en promedio: los costes reales (comisiones, funding,
+   deslizamiento) se comen el edge de cualquier regla sin fundamento.
+
+## Pendiente
 - Revisión adversarial del embudo (F5) con un modelo más fuerte.
+- Walk-forward real con re-minado en ventanas móviles y datos nuevos (F7).
