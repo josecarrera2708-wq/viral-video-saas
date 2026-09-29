@@ -1,0 +1,6 @@
+{
+  "nota": "El minero SOLO puede ver 'train'. 'validation' se usa en el embudo (F5). 'blind' se abre UNA vez al final.",
+  "train":      ["2020-01-01", "2024-01-01"],
+  "validation": ["2024-01-01", "2025-07-01"],
+  "blind":      ["2025-07-01", null]
+}
