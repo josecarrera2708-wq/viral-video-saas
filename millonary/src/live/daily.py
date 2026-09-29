@@ -43,6 +43,19 @@ def main(now: pd.Timestamp | None = None) -> dict:
         (d / "informe_prueba.md").write_text(informe_texto(rep)); (d / "informe_prueba.json").write_text(json.dumps(rep, indent=1, default=str))
         out["puertas"] = rep.get("puertas"); out["equity"] = store.rows("equity")[-1]["equity"]
     out["estado_comite"] = s["estado"]
+    # perfeccionamiento continuo, informe semanal y panel: nunca deben tumbar la rutina de la cuenta
+    try:
+        from src.lab.mejora import update as mejora_update
+        led = mejora_update(bars, fund_year, start, now); out["mejoras_en_sombra"] = len(led.get("en_sombra", []))
+        out["adoptables"] = [k for k, v in led["candidatas"].items() if v["etapa"].startswith("E4")]
+    except Exception as e:                                           # noqa: BLE001
+        out["mejoras_error"] = f"{type(e).__name__}: {e}"
+    try:
+        from src.report.weekly import write_all
+        from src.report.panel import build_panel
+        write_all(d, now); build_panel(d, now); out["panel"] = str(d / "panel.html")
+    except Exception as e:                                           # noqa: BLE001
+        out["panel_error"] = f"{type(e).__name__}: {e}"
     return out
 
 

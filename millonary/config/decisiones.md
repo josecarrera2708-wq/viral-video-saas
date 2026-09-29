@@ -44,3 +44,8 @@ estar mucho más cerca que ese nivel. El apalancamiento es un tope, no un objeti
 - Chat de agentes determinista (`src/desk/chat.py`): mensajes derivados de los informes reales; `ask` responde con cifras del informe, sin LLM ni decisiones.
 - Bienestar de Conesa = cosmético (según su propia UI: «el ánimo no cambia ninguna operación»); aquí equivale a la salud de Infraestructura. No se construye.
 - Pendiente: noticias en vivo (sin fuente fiable/gratuita), multi-activo (fuera de alcance: solo BTC), Hyperliquid/arbitraje real (requiere dos plataformas).
+
+## 2026-09-29 · Panel, informe semanal y ciclo de mejora continua
+- Ciclo de mejora prerregistrado (`config/mejoras_prerregistrada.md`): las estrategias solo «se perfeccionan» pasando etapas (construcción → validación → sombra hacia delante → adopción con ≥ 90 días, ΔSharpe ≥ +0,3, caída ≤ 1,2×, p < 0,10 con Holm). Nada toca capital sin aprobación del dueño.
+- Hallazgo: «tamaño por volatilidad» mejora casi todos los traders (caída del examen 46-58 % → 17-32 %), coherente con el diseño del núcleo; «solo largos» mejora mucho pero se explica por la deriva alcista 2020-25 (los cortos no aportaron). Ambos siguen en sombra hasta tener datos hacia delante.
+- La rutina diaria genera `paper_state/panel.html` (pestañas Sala/Ranking/Equipos/Informe) y `paper_state/semanal/` (informe .md, operaciones .csv, diario .xlsx) y actualiza `reports/mejoras_registro.json`; ninguno de esos pasos puede detener la actualización de la cuenta.

@@ -1,4 +1,4 @@
-# Sesión del comité · 2026-09-29 16:47 UTC
+# Sesión del comité · 2026-09-29 17:40 UTC
 
 **Estado general:** 🟡 AVISO
 **Decisión:** Mantener el objetivo del núcleo: 0.62× de exposición.
@@ -15,7 +15,7 @@
 - Curva 10a-2a: +0.36 pp; 10a 5.17%.
 - Dólar (índice amplio) -0.2% en 50 días.
 - Funding actual 0.0100% por 8h (percentil 92% del último año); media 30d anualizada 10.9%.
-- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 697 h.
+- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 696 h.
 - Regla histórica probada: recortar la exposición alrededor del FOMC EMPEORÓ el núcleo (Sharpe 0,78 → 0,74; rechazada). Solo se informa, no se actúa.
 
 ## 🟢 Análisis de mercados — Tendencia alcista (3/4 horizontes)
@@ -51,13 +51,30 @@
 - Contexto histórico de cada variante (2017-2025-06, solo exploratorio) en reports/lab_historia.json; cada una cuenta como prueba en el registro.
 - Regla de promoción: ≥ 90 días hacia delante, Sharpe ≥ núcleo + 0,3, caída ≤ 1,2× la del núcleo, embudo de robustez superado.
 
+## 🟢 Incubadora de traders — 15 traders en sombra · 0 certificadas · 0 días
+- Histórico (examen 2024-01→2025-06, 15 traders): certificadas 0/15 · PBO del conjunto 0.31. Mejor Sharpe en examen ≈ 1.19 (buy&hold 1.47); menor p (Holm) del α = 1.00.
+- Reparto de capital simulado por mérito: núcleo v1 100%.
+- Mesa de estrategias minadas: vacía (ninguna certificada; el capital sigue 100 % en el núcleo).
+- Ranking hacia delante (0 días, sombra; sin capital, sin valor estadístico hasta ≥ 90 días):
+  S01 Parabolic SAR + EMA200: +0.00% · caída 0.0% · 0 ops · posición +0
+  S02 Ichimoku: +0.00% · caída 0.0% · 0 ops · posición +0
+  S03 Bollinger + RSI (reversión): +0.00% · caída 0.0% · 0 ops · posición +0
+  S04 Keltner ruptura: +0.00% · caída 0.0% · 0 ops · posición +0
+  S05 RSI(2) retroceso (largo): +0.00% · caída 0.0% · 0 ops · posición +0
+
+## 🟢 Mesa de opciones — IV 34% vs RV 34% · put 10 % OTM 0.78%
+- Vencimiento a 30.6 días: volatilidad implícita ATM 34.0% · realizada 30 d 34.4% · prima -0.5 pts.
+- Sesgo 25Δ (puts − calls): -0.2 pts. Put 10 % por debajo (K≈75,000): cuesta 0.78% del nocional.
+- Prima de volatilidad normal.
+- ESTADO: solo informa. La protección de cola no se activa: no se puede validar con histórico (sin datos históricos de opciones).
+
 ## 🟢 Escuela — Sin operaciones que analizar todavía
 - La Escuela empieza a aprender cuando haya lotes cerrados: clasifica cada uno por contexto y mide dónde falla el sistema.
 
-## 🟢 Infraestructura — Sano · datos hace 16.8 h
-- Última vela cerrada a las 2026-09-29 00:00 UTC (hace 16.8 h) · fuente: Binance Vision.
+## 🟢 Infraestructura — Sano · datos hace 17.7 h
+- Última vela cerrada a las 2026-09-29 00:00 UTC (hace 17.7 h) · fuente: Binance Vision.
 - Base de datos: ok.
-- Disco libre 29.5 GB.
+- Disco libre 29.3 GB.
 
 ## Organigrama (estado real frente a la idea original)
 
@@ -72,7 +89,8 @@
 | Gestión de cartera | ACTIVO | Volatility targeting, banda de rebalanceo, coste de funding. |
 | Derivados y arbitraje | INVESTIGACIÓN | Carry teórico cash-and-carry. No se opera. |
 | Coberturas | NO APLICA por ahora | El sistema se 'cubre' saliendo a efectivo; las estrategias con cortos no mejoraron fuera de muestra. |
-| Opciones | FUTURO | Requiere otro mercado (p. ej. Deribit) y otro marco de riesgo. |
+| Opciones | ACTIVO (solo informa) | Deribit público: IV vs RV, sesgo 25Δ y coste de un put 10 % OTM. No se opera con opciones; protección de cola desactivada (sin histórico). |
+| Incubadora de traders / Estrategias minadas | ACTIVO en sombra | 15 traders-estrategia con atribución alfa/beta, corrección por comparaciones múltiples y examen sellado; capital simulado solo por mérito. 0/15 certificadas en el examen. |
 | Cuantitativo / Machine learning | ACTIVO en sombra (Laboratorio) | Minero + embudo de robustez; 7 variantes hacia delante. Sin ventaja probada del ranking del minero. |
 | Escuela / Academia | ACTIVO | Post-mortem de cada lote y marcador por contexto; no cambia parámetros. |
 | Laboratorio de mejoras | ACTIVO en sombra | Regla de promoción: ≥ 90 días, Sharpe ≥ núcleo+0,3, caída ≤ 1,2×, embudo superado. |

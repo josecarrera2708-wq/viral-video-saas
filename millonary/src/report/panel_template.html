@@ -1,0 +1,209 @@
+<title>Millonary Sala de Trading</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Concepto: mesa de operaciones de un fondo: barra de estado fija arriba, cuatro pestañas (Sala, Ranking, Equipos, Informe), cifras en mono alineadas. */
+:root{
+  --bg:#EEF1F5; --surface:#FFFFFF; --surface2:#F5F7FA; --line:#D9DFE7; --fg:#0F1B2D; --muted:#5B6878;
+  --gold:#A66A00; --gold-bg:#FBF0D9; --good:#137A52; --good-bg:#DDF3E9; --warn:#9A6200; --warn-bg:#FCEFD0; --crit:#B3261E; --crit-bg:#FBE3E1;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1220; --surface:#121B2C; --surface2:#182338; --line:#26334A; --fg:#E7ECF4; --muted:#93A1B5;
+  --gold:#E8B84A; --gold-bg:#2E2610; --good:#4CD39A; --good-bg:#0F2B22; --warn:#F0B54A; --warn-bg:#33270D; --crit:#FF7B72; --crit-bg:#341614; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1220; --surface:#121B2C; --surface2:#182338; --line:#26334A; --fg:#E7ECF4; --muted:#93A1B5;
+  --gold:#E8B84A; --gold-bg:#2E2610; --good:#4CD39A; --good-bg:#0F2B22; --warn:#F0B54A; --warn-bg:#33270D; --crit:#FF7B72; --crit-bg:#341614; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;line-height:1.5;padding-inline:16px;padding-block:16px 40px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1,h2,h3{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+.mono,.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.brand h1{font-size:26px;font-weight:800}.brand small{display:block;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.kpis{display:flex;flex-wrap:wrap;gap:8px 28px}.kpi{min-width:0}.kpi span{display:block;color:var(--muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.kpi b{font-family:var(--f-mono);font-size:18px;font-weight:500}
+.pill{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12px;font-weight:600;background:var(--surface2);color:var(--muted);white-space:nowrap}
+.pill.ok{background:var(--good-bg);color:var(--good)}.pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.crit{background:var(--crit-bg);color:var(--crit)}.pill.gold{background:var(--gold-bg);color:var(--gold)}
+.banner{background:var(--gold-bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:13px}
+nav{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{font:inherit;font-weight:600;background:none;border:0;color:var(--muted);padding:10px 16px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--gold)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.panel[hidden]{display:none}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;min-width:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:99px;padding:3px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.msg{display:grid;grid-template-columns:52px 1fr;gap:2px 10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.msg:last-child{border-bottom:0}.msg .t{color:var(--muted);font-size:12px}.msg .who{font-weight:600}.msg .to{color:var(--muted);font-weight:400}
+.msg .txt{grid-column:2;overflow-wrap:anywhere}
+.ask{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.ask input{flex:1 1 220px;min-width:0;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface2);color:var(--fg)}
+.ask button{font:inherit;font-weight:600;padding:8px 16px;border:0;border-radius:6px;background:var(--fg);color:var(--bg);cursor:pointer}
+.answer{margin-top:10px;white-space:pre-wrap;background:var(--surface2);border-radius:6px;padding:10px 12px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}td.n,th.n{text-align:right}
+.pos{color:var(--good)}.neg{color:var(--crit)}.dim{color:var(--muted)}
+.dept h3{font-size:16px;display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.dept p{margin:6px 0 0;color:var(--muted);font-size:13px}
+.dept ul{margin:8px 0 0;padding-left:18px;font-size:13px}.dept li{margin:2px 0;overflow-wrap:anywhere}
+.funnel{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}.funnel div{flex:1 1 120px;background:var(--surface2);border-radius:6px;padding:10px 12px}
+.funnel b{display:block;font-family:var(--f-mono);font-size:22px;font-weight:500}.funnel span{font-size:12px;color:var(--muted)}
+svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.gates{display:flex;flex-direction:column;gap:6px;margin:0;padding:0;list-style:none}.gates li{display:flex;gap:10px;align-items:center}
+.sec{display:flex;flex-direction:column;gap:12px}.sec>h2{font-size:18px}
+.foot{color:var(--muted);font-size:12px}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}.card:hover{border-color:var(--gold)}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><small>Fondo en papel · solo BTC</small><h1>Millonary · Sala de Trading</h1></div>
+    <div class="kpis" id="kpis"></div>
+  </header>
+  <div class="banner" id="banner"></div>
+  <nav role="tablist" aria-label="Secciones">
+    <button role="tab" aria-selected="true" data-tab="sala">Sala</button>
+    <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
+    <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
+    <button role="tab" aria-selected="false" data-tab="informe">Informe</button>
+  </nav>
+
+  <section class="panel sec" id="tab-sala">
+    <div class="card">
+      <div class="chips" id="chips"></div>
+      <div id="feed"></div>
+      <form class="ask" id="askForm"><label class="dim" for="askDept" style="align-self:center">Preguntar a</label>
+        <select id="askDept" style="font:inherit;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--surface2);color:var(--fg)"></select>
+        <input id="askQ" type="text" placeholder="¿Cuál es la caída máxima?" autocomplete="off"><button type="submit">Preguntar</button></form>
+      <div class="answer" id="answer" hidden></div>
+      <p class="foot">Los mensajes salen de los informes reales del comité; no hay IA que invente cifras ni decida operaciones.</p>
+    </div>
+  </section>
+
+  <section class="panel sec" id="tab-ranking" hidden>
+    <h2>Traders de la incubadora</h2>
+    <div class="card"><div class="tw"><table id="rankFwd"></table></div>
+      <p class="foot" id="rankNote"></p></div>
+    <h2>Examen histórico (2024-01 → 2025-06)</h2>
+    <div class="card"><div class="tw"><table id="rankHist"></table></div>
+      <p class="foot">α y β frente a BTC y a la tendencia; p con corrección de Holm sobre los 15 traders. Una estrategia se certifica solo si supera las 7 puertas del prerregistro.</p></div>
+  </section>
+
+  <section class="panel sec" id="tab-equipos" hidden>
+    <h2>Perfeccionamiento continuo</h2>
+    <div class="card"><div class="funnel" id="funnel"></div><div class="tw" style="margin-top:12px"><table id="mejTable"></table></div>
+      <p class="foot">Cada mejora avanza por etapas (construcción, validación, sombra hacia delante, adopción) y nunca toca capital. Adoptar exige ≥ 90 días hacia delante y corrección por comparaciones múltiples.</p></div>
+    <h2>Departamentos</h2>
+    <div class="grid" id="depts"></div>
+    <h2>Organigrama</h2>
+    <div class="card"><div class="tw"><table id="org"></table></div></div>
+  </section>
+
+  <section class="panel sec" id="tab-informe" hidden>
+    <h2>Curva de capital</h2>
+    <div class="card"><div id="chart"></div><p class="foot" id="chartNote"></p></div>
+    <div class="grid">
+      <div class="card"><h3>Registro de entradas</h3><div id="entries" style="margin-top:8px"></div></div>
+      <div class="card"><h3>Puertas del protocolo</h3><ul class="gates" id="gates" style="margin-top:8px"></ul></div>
+      <div class="card"><h3>Resumen semanal</h3><div id="weekly" style="margin-top:8px"></div></div>
+    </div>
+    <p class="foot">Archivos completos en la carpeta de la cuenta: semanal/informe_semanal.md, semanal/operaciones.csv y semanal/diario.xlsx.</p>
+  </section>
+  <p class="foot" id="stamp"></p>
+</div>
+
+<script>
+const D = __DATA__;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pct = (x, d=2) => x == null || isNaN(x) ? 'n/d' : (x>=0?'+':'') + (x*100).toFixed(d) + '%';
+const cls = x => x > 0 ? 'pos' : x < 0 ? 'neg' : 'dim';
+const pill = st => `<span class="pill ${st==='OK'?'ok':st==='AVISO'?'warn':st==='ALERTA'?'crit':''}">${esc(st)}</span>`;
+
+// cabecera
+const S = D.summary || {};
+const kp = [['Patrimonio', S.equity_actual!=null ? S.equity_actual.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' USDT' : '—'],
+  ['Prueba', S.retorno_total!=null ? `<span class="${cls(S.retorno_total)}">${pct(S.retorno_total)}</span>` : '—'],
+  ['Semana', S.retorno_semana!=null ? `<span class="${cls(S.retorno_semana)}">${pct(S.retorno_semana)}</span>` : '—'],
+  ['Caída máx.', S.caida_max!=null ? (S.caida_max*100).toFixed(2)+'%' : '—'],
+  ['Exposición', S.exposicion_actual!=null ? S.exposicion_actual.toFixed(2)+'×' : '—'],
+  ['Comité', D.brief ? pill(D.brief.estado) : '—']];
+$('#kpis').innerHTML = kp.map(([a,b]) => `<div class="kpi"><span>${a}</span><b>${b}</b></div>`).join('');
+$('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.decision : 'Aún sin sesión del comité.')} Un mes no demuestra rentabilidad: hacen falta años de datos nuevos para una conclusión estadística.`;
+
+// pestañas
+const tabs = [...document.querySelectorAll('nav button')];
+function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
+tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','ranking','equipos','informe'].includes(h)) show(h); };
+fromHash(); window.addEventListener('hashchange', fromHash);
+
+// sala
+const canales = ['Todo','Operaciones','Riesgos','Macro','Análisis','Comité','Charla']; let canal = 'Todo', todos = false; const LIM = 24;
+function renderFeed(){
+  $('#chips').innerHTML = canales.map(c => `<button class="chip" aria-pressed="${c===canal}" data-c="${c}">${c}</button>`).join('');
+  document.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => { canal = b.dataset.c; renderFeed(); }));
+  const all = D.chat.filter(m => canal==='Todo' || m.canal===canal), ms = todos ? all : all.slice(0, LIM);
+  $('#feed').innerHTML = (ms.length ? ms.map(m => `<div class="msg"><span class="t mono">${esc(m.hora)}</span><span><span class="who">${esc(m.de)}</span> <span class="to">→ ${esc(m.a)}</span></span><span class="txt">${esc(m.texto)}</span></div>`).join('') : '<p class="dim">Sin mensajes en este canal.</p>') + (all.length > LIM ? `<p><button class="chip" id="more">${todos ? 'Mostrar menos' : 'Mostrar los ' + all.length + ' mensajes'}</button></p>` : '');
+  const mb = $('#more'); if (mb) mb.addEventListener('click', () => { todos = !todos; renderFeed(); });
+}
+renderFeed();
+const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+$('#askDept').innerHTML = (D.brief ? D.brief.departamentos : []).map(d => `<option>${esc(d.dept)}</option>`).join('');
+$('#askForm').addEventListener('submit', e => { e.preventDefault();
+  const d = (D.brief ? D.brief.departamentos : []).find(x => x.dept === $('#askDept').value); const a = $('#answer'); a.hidden = false;
+  if (!d) { a.textContent = 'Sin datos del comité todavía.'; return; }
+  const w = new Set(norm($('#askQ').value).replace(/[?¿]/g,' ').split(/\s+/).filter(x => x.length > 3));
+  const sc = d.notes.filter(n => n.trim()).map(n => [n, norm(n).split(/\s+/).filter(x => w.has(x)).length]).filter(x => x[1] > 0).sort((a,b) => b[1]-a[1]).slice(0,2).map(x => x[0].trim());
+  a.textContent = `${d.dept} (${d.status}): ${d.headline}` + (sc.length ? '\n' + sc.join('\n') : '');
+});
+
+// ranking
+const fw = D.forward || {}; const rows = Object.entries(fw).sort((a,b) => b[1].retorno - a[1].retorno);
+$('#rankFwd').innerHTML = '<tr><th>Trader</th><th class="n">Retorno</th><th class="n">Caída</th><th class="n">Ops</th><th class="n">Posición</th></tr>' +
+  (rows.length ? rows.map(([k,v]) => `<tr><td>${esc(k)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td class="n num">${v.ops}</td><td class="n num">${v.posicion_actual>0?'largo':v.posicion_actual<0?'corto':'plano'}</td></tr>`).join('') : '<tr><td colspan="5" class="dim">Aún sin datos hacia delante.</td></tr>');
+const dias = rows.length ? Math.max(...rows.map(r => r[1].dias)) : 0;
+$('#rankNote').textContent = `Sombra desde el inicio de la prueba: ${dias} días. Sin valor estadístico hasta al menos 90 días; ningún trader tiene capital asignado.`;
+const H = D.hist; 
+$('#rankHist').innerHTML = H ? '<tr><th>Trader</th><th class="n">Sharpe train</th><th class="n">Sharpe exam</th><th class="n">α anual</th><th class="n">t</th><th class="n">β BTC</th><th class="n">p Holm</th><th class="n">Puertas</th><th>Cert.</th></tr>' +
+  Object.entries(H.setups).sort((a,b)=>b[1].sharpe_exam-a[1].sharpe_exam).map(([k,r]) => `<tr><td>${esc(k)}</td><td class="n num">${r.sharpe_train.toFixed(2)}</td><td class="n num ${cls(r.sharpe_exam)}">${r.sharpe_exam.toFixed(2)}</td><td class="n num ${cls(r.exam.alpha_anual)}">${(r.exam.alpha_anual*100).toFixed(0)}%</td><td class="n num">${r.exam.t_alpha.toFixed(2)}</td><td class="n num">${r.exam.beta_btc.toFixed(2)}</td><td class="n num">${r.p_holm.toFixed(2)}</td><td class="n num">${Object.values(r.puertas).filter(Boolean).length}/7</td><td>${r.certificada?'<span class="pill ok">sí</span>':'<span class="pill">no</span>'}</td></tr>`).join('')
+  : '<tr><td class="dim">Sin resultados del examen.</td></tr>';
+
+// equipos
+const M = D.mejoras;
+if (M) {
+  const et = {}; Object.values(M.candidatas).forEach(c => et[c.etapa] = (et[c.etapa]||0)+1);
+  const adopt = Object.values(M.candidatas).filter(c => c.etapa.startsWith('E4')).length;
+  const sh = Object.values(M.candidatas).filter(c => c.etapa.startsWith('E3')).length;
+  $('#funnel').innerHTML = [[M.n_pruebas,'candidatas probadas'],[sh,'en sombra hacia delante'],[adopt,'adoptables (E4)'],[Object.values(M.candidatas).filter(c=>c.etapa.startsWith('E5')).length,'retiradas (E5)']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+  const top = Object.entries(M.candidatas).filter(([k,c]) => c.etapa.startsWith('E3') || c.etapa.startsWith('E4')).sort((a,b) => b[1].delta_exam - a[1].delta_exam).slice(0,8);
+  $('#mejTable').innerHTML = '<tr><th>Candidata</th><th class="n">Δ Sharpe train</th><th class="n">Δ Sharpe exam</th><th class="n">Caída exam</th><th class="n">Días fwd</th><th class="n">Δ fwd</th><th>Etapa</th></tr>' +
+    top.map(([k,c]) => `<tr><td>${esc(k.replace('|',' · '))}</td><td class="n num pos">+${c.delta_train.toFixed(2)}</td><td class="n num pos">+${c.delta_exam.toFixed(2)}</td><td class="n num">${(c.caida_exam_base*100).toFixed(0)}% → ${(c.caida_exam_var*100).toFixed(0)}%</td><td class="n num">${c.forward?c.forward.dias:0}</td><td class="n num">${c.forward&&c.forward.delta_sharpe!=null?c.forward.delta_sharpe.toFixed(2):'—'}</td><td><span class="pill gold">${esc(c.etapa)}</span></td></tr>`).join('');
+} else $('#funnel').innerHTML = '<p class="dim">Sin registro de mejoras.</p>';
+$('#depts').innerHTML = (D.brief ? D.brief.departamentos : []).map(d => `<div class="card dept"><h3><span>${esc(d.dept)}</span>${pill(d.status)}</h3><p>${esc(d.headline)}</p><ul>${d.notes.filter(n=>n.trim()).slice(0,5).map(n=>`<li>${esc(n.trim())}</li>`).join('')}</ul></div>`).join('') || '<p class="dim">Aún sin sesión del comité.</p>';
+$('#org').innerHTML = '<tr><th>Departamento</th><th>Estado</th><th>Qué hace realmente</th></tr>' + (D.brief ? D.brief.organigrama : []).map(([n,e,w]) => `<tr><td>${esc(n)}</td><td><span class="pill">${esc(e)}</span></td><td style="white-space:normal;min-width:260px">${esc(w)}</td></tr>`).join('');
+
+// informe
+function chart(pts){
+  if (!pts.length) { $('#chart').innerHTML = '<p class="dim">La cuenta aún no ha procesado velas. El primer cierre oficial es el 2026-09-29 20:00 UTC.</p>'; return; }
+  const W = 900, Hh = 260, m = {l:56, r:16, t:12, b:26}; const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), lo = Math.min(...ys, ys[0]), hi = Math.max(...ys, ys[0]); const pad = (hi-lo||1)*.08;
+  const X = t => m.l + (x1===x0 ? 0 : (t-x0)/(x1-x0))*(W-m.l-m.r), Y = v => Hh-m.b - (v-(lo-pad))/((hi+pad)-(lo-pad))*(Hh-m.t-m.b);
+  let peak = -1e18; const dd = ys.map(v => { peak = Math.max(peak, v); return 1 - v/peak; }); const maxdd = Math.max(...dd);
+  const d = pts.map((p,i) => (i?'L':'M') + X(p[0]).toFixed(1) + ' ' + Y(p[1]).toFixed(1)).join(' ');
+  const area = d + ` L ${X(x1).toFixed(1)} ${Y(lo-pad).toFixed(1)} L ${X(x0).toFixed(1)} ${Y(lo-pad).toFixed(1)} Z`;
+  const ticks = 4, grid = [...Array(ticks+1)].map((_,i) => { const v = lo-pad + (hi-lo+2*pad)*i/ticks; return `<line x1="${m.l}" x2="${W-m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)" stroke-dasharray="2 4"/><text x="${m.l-8}" y="${Y(v)+4}" text-anchor="end">${v.toFixed(0)}</text>`; }).join('');
+  const base = Y(ys[0]);
+  const dl = t => new Date(t).toISOString().slice(5,10);
+  const last = pts[pts.length-1];
+  $('#chart').innerHTML = `<svg viewBox="0 0 ${W} ${Hh}" width="100%" role="img" aria-label="Curva de capital"><path d="${area}" fill="var(--gold)" opacity=".10"/>${grid}<line x1="${m.l}" x2="${W-m.r}" y1="${base}" y2="${base}" stroke="var(--muted)" stroke-width="1"/><path d="${d}" fill="none" stroke="var(--gold)" stroke-width="2"/><circle cx="${X(last[0])}" cy="${Y(last[1])}" r="4" fill="var(--gold)"/><text x="${m.l}" y="${Hh-6}">${dl(x0)}</text><text x="${W-m.r}" y="${Hh-6}" text-anchor="end">${dl(x1)}</text></svg>`;
+  $('#chartNote').textContent = `Capital inicial ${ys[0].toFixed(2)} USDT (línea gris) · actual ${last[1].toFixed(2)} USDT · caída máxima ${(maxdd*100).toFixed(2)}%.`;
+}
+chart(D.equity || []);
+const P = S.posiciones, L = S.lotes;
+$('#entries').innerHTML = P || L ? `<table>${P?`<tr><td>Posiciones cerradas</td><td class="n num">${P.cerradas}</td></tr><tr><td>Ganan</td><td class="n num pos">${P.ganan}</td></tr><tr><td>Pierden</td><td class="n num neg">${P.pierden}</td></tr><tr><td>Abiertas</td><td class="n num">${P.abiertas}</td></tr>`:''}${L?`<tr><td>Lotes ganan / pierden</td><td class="n num">${L.ganan} / ${L.pierden}</td></tr>`:''}</table>` : '<p class="dim">Aún no hay entradas registradas.</p>';
+const names = {G1_replica:'Réplica del backtest', G2_integridad:'Integridad (sin velas perdidas)', G3_envolvente:'Dentro de la envolvente histórica', G4_no_anomalo:'Retorno no anómalo', G5_registro_cuadra:'Registro cuadra con la equity'};
+$('#gates').innerHTML = S.puertas ? Object.entries(S.puertas).map(([k,v]) => `<li>${v?'<span class="pill ok">OK</span>':'<span class="pill crit">NO</span>'} ${names[k]||k}</li>`).join('') : '<li class="dim">Las puertas se calculan cuando hay velas procesadas.</li>';
+$('#weekly').innerHTML = D.weekly_md ? D.weekly_md.split('\n').filter(l => l.startsWith('- ')).slice(0,6).map(l => `<p style="margin:4px 0">${esc(l.slice(2)).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}</p>`).join('') || '<p class="dim">Sin datos.</p>' : '<p class="dim">Sin informe semanal.</p>';
+$('#stamp').textContent = 'Generado ' + (D.generado||'').slice(0,16).replace('T',' ') + ' UTC · datos de la cuenta de papel y de reports/.';
+</script>
