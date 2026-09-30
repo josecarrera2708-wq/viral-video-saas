@@ -121,7 +121,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I14 Apertura de Nueva York": {
-  "cerradas": 0,
+  "cerradas": 1,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
