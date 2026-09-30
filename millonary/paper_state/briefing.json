@@ -1,5 +1,5 @@
 {
- "ts": "2026-09-29 17:40:34.148932+00:00",
+ "ts": "2026-09-30 04:18:19.127437+00:00",
  "decision": "Mantener el objetivo del n\u00facleo: 0.62\u00d7 de exposici\u00f3n.",
  "objetivo_nucleo": 0.6170209599628009,
  "objetivo_final": 0.6170209599628009,
@@ -21,6 +21,10 @@
   [
    "Incubadora de traders",
    "S03 Bollinger + RSI (reversi\u00f3n): +0.00% hacia delante (0 ops)"
+  ],
+  [
+   "Mesa intrad\u00eda",
+   "I12 Ichimoku 1 h abierta: CORTO @ 83584"
   ]
  ],
  "departamentos": [
@@ -40,23 +44,23 @@
    "headline": "Entorno NORMAL",
    "status": "OK",
    "metrics": {
-    "fng": 73.0,
-    "vix": 14.21,
-    "vix_percentil_1a": 0.024,
-    "curva_10y_2y": 0.3600000000000003,
+    "fng": 71.0,
+    "vix": 16.07,
+    "vix_percentil_1a": 0.284,
+    "curva_10y_2y": 0.3200000000000003,
     "dolar_50d": -0.0016717621534618754,
-    "funding_anualizado_30d": 0.10916797166666668,
-    "funding_percentil_1a": 0.9228310502283106,
-    "horas_al_proximo_evento": 696.3238475188889,
+    "funding_anualizado_30d": 0.10950000000000001,
+    "funding_percentil_1a": 0.9223744292237444,
+    "horas_al_proximo_evento": 685.6946868230555,
     "banderas": []
    },
    "notes": [
-    "Fear & Greed 73 (codicia).",
-    "VIX 14.2 (percentil 2% del \u00faltimo a\u00f1o).",
-    "Curva 10a-2a: +0.36 pp; 10a 5.17%.",
+    "Fear & Greed 71 (codicia).",
+    "VIX 16.1 (percentil 28% del \u00faltimo a\u00f1o).",
+    "Curva 10a-2a: +0.32 pp; 10a 5.24%.",
     "D\u00f3lar (\u00edndice amplio) -0.2% en 50 d\u00edas.",
-    "Funding actual 0.0100% por 8h (percentil 92% del \u00faltimo a\u00f1o); media 30d anualizada 10.9%.",
-    "Pr\u00f3ximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 696 h.",
+    "Funding actual 0.0100% por 8h (percentil 92% del \u00faltimo a\u00f1o); media 30d anualizada 11.0%.",
+    "Pr\u00f3ximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 686 h.",
     "Regla hist\u00f3rica probada: recortar la exposici\u00f3n alrededor del FOMC EMPEOR\u00d3 el n\u00facleo (Sharpe 0,78 \u2192 0,74; rechazada). Solo se informa, no se act\u00faa."
    ],
    "shadow": [],
@@ -128,15 +132,15 @@
   },
   {
    "dept": "Derivados y arbitraje",
-   "headline": "Carry te\u00f3rico +10.9% anual (investigaci\u00f3n)",
+   "headline": "Carry te\u00f3rico +11.0% anual (investigaci\u00f3n)",
    "status": "OK",
    "metrics": {
-    "funding_30d_anual": 0.10916797166666668,
-    "funding_1a_anual": 0.03802264000000001
+    "funding_30d_anual": 0.10950000000000001,
+    "funding_1a_anual": 0.038099110000000005
    },
    "notes": [
-    "Funding anualizado: 30d +10.9%, 1 a\u00f1o +3.8%.",
-    "Carry te\u00f3rico 'cash-and-carry' (largo spot + corto perpetuo): \u2248 10.9% anual bruto a 30d; el coste de montar y desmontar es \u2248 4 \u00d7 5 pb = 0,20 % y exige capital en spot y margen en el perpetuo.",
+    "Funding anualizado: 30d +11.0%, 1 a\u00f1o +3.8%.",
+    "Carry te\u00f3rico 'cash-and-carry' (largo spot + corto perpetuo): \u2248 11.0% anual bruto a 30d; el coste de montar y desmontar es \u2248 4 \u00d7 5 pb = 0,20 % y exige capital en spot y margen en el perpetuo.",
     "ESTADO: INVESTIGACI\u00d3N. No se opera: requiere ejecuci\u00f3n en dos mercados y gesti\u00f3n del riesgo de contraparte; se evaluar\u00e1 como pata aparte con su propio protocolo."
    ],
    "shadow": [],
@@ -355,24 +359,44 @@
   },
   {
    "dept": "Mesa de opciones",
-   "headline": "IV 34% vs RV 34% \u00b7 put 10 % OTM 0.78%",
+   "headline": "IV 34% vs RV 34% \u00b7 put 10 % OTM 0.76%",
    "status": "OK",
    "metrics": {
-    "dias_vencimiento": 30.5968269799537,
-    "iv_atm": 0.3395,
-    "sesgo_25d": -0.0018999999999999573,
-    "put10_coste_pct": 0.00776409,
+    "dias_vencimiento": 30.15394528429398,
+    "iv_atm": 0.3396,
+    "sesgo_25d": 0.0015000000000000013,
+    "put10_coste_pct": 0.00756266,
     "put10_strike": 75000.0,
     "rv30": 0.3444989199212521,
-    "prima": -0.004998919921252065
+    "prima": -0.004898919921252076
    },
    "notes": [
-    "Vencimiento a 30.6 d\u00edas: volatilidad impl\u00edcita ATM 34.0% \u00b7 realizada 30 d 34.4% \u00b7 prima -0.5 pts.",
-    "Sesgo 25\u0394 (puts \u2212 calls): -0.2 pts. Put 10 % por debajo (K\u224875,000): cuesta 0.78% del nocional.",
+    "Vencimiento a 30.2 d\u00edas: volatilidad impl\u00edcita ATM 34.0% \u00b7 realizada 30 d 34.4% \u00b7 prima -0.5 pts.",
+    "Sesgo 25\u0394 (puts \u2212 calls): +0.2 pts. Put 10 % por debajo (K\u224875,000): cuesta 0.76% del nocional.",
     "Prima de volatilidad normal.",
     "ESTADO: solo informa. La protecci\u00f3n de cola no se activa: no se puede validar con hist\u00f3rico (sin datos hist\u00f3ricos de opciones)."
    ],
    "shadow": [],
+   "veto": false
+  },
+  {
+   "dept": "Mesa intrad\u00eda",
+   "headline": "1 operaciones \u00b7 1 abiertas",
+   "status": "OK",
+   "metrics": {
+    "resumen": 1
+   },
+   "notes": [
+    "14 traders en papel \u00b7 1 operaciones cerradas (2.0 al d\u00eda entre todos) \u00b7 1 posiciones abiertas.",
+    "Datos: Deribit BTC-PERPETUAL 1 h (velas cerradas), \u00faltima vela cerrada 2026-09-30 04:00 UTC.",
+    "  I12 Ichimoku 1 h: +0.10% \u00b7 0 ops \u00b7 R total +0.00",
+    "  I01 Rango asi\u00e1tico \u2192 Londres/NY: +0.00% \u00b7 0 ops \u00b7 R total +0.00",
+    "  I02 Ruptura Donchian 24 h: +0.00% \u00b7 0 ops \u00b7 R total +0.00",
+    "El hist\u00f3rico 2020-2026 da expectativa negativa tras costes en los 14 (0/14 certificadas): esta prueba mide si se confirma hacia delante."
+   ],
+   "shadow": [
+    "I12 Ichimoku 1 h abierta: CORTO @ 83584"
+   ],
    "veto": false
   },
   {
@@ -388,15 +412,15 @@
   },
   {
    "dept": "Infraestructura",
-   "headline": "Sano \u00b7 datos hace 17.7 h",
+   "headline": "Sano \u00b7 datos hace 28.3 h",
    "status": "OK",
    "metrics": {
-    "edad_ultima_vela_horas": 17.67615248111111,
+    "edad_ultima_vela_horas": 28.305313176944445,
     "integridad_bd": "ok",
-    "disco_libre_gb": 29.255090176
+    "disco_libre_gb": 29.290872832
    },
    "notes": [
-    "\u00daltima vela cerrada a las 2026-09-29 00:00 UTC (hace 17.7 h) \u00b7 fuente: Binance Vision.",
+    "\u00daltima vela cerrada a las 2026-09-29 00:00 UTC (hace 28.3 h) \u00b7 fuente: Binance Vision.",
     "Base de datos: ok.",
     "Disco libre 29.3 GB."
    ],
@@ -449,6 +473,11 @@
    "Coberturas",
    "NO APLICA por ahora",
    "El sistema se 'cubre' saliendo a efectivo; las estrategias con cortos no mejoraron fuera de muestra."
+  ],
+  [
+   "Mesa intrad\u00eda (papel)",
+   "ACTIVO en papel",
+   "14 traders con stop/TP/tiempo sobre velas de 1 h (Deribit), 1.000 USDT virtuales cada uno; actualizaci\u00f3n horaria. Hist\u00f3rico: 0/14 certificadas."
   ],
   [
    "Opciones",

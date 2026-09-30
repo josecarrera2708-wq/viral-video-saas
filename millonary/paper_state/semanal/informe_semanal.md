@@ -1,4 +1,4 @@
-# Informe semanal de Millonary · 2026-09-29
+# Informe semanal de Millonary · 2026-09-30
 
 La cuenta de papel aún no ha procesado velas. El primer cierre oficial es el 2026-09-29 20:00 UTC.
 

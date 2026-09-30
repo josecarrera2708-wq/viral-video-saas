@@ -1,4 +1,4 @@
-# Sesión del comité · 2026-09-29 17:40 UTC
+# Sesión del comité · 2026-09-30 04:18 UTC
 
 **Estado general:** 🟡 AVISO
 **Decisión:** Mantener el objetivo del núcleo: 0.62× de exposición.
@@ -10,12 +10,12 @@
 - No hay operaciones ni equity registradas.
 
 ## 🟢 Macroeconomía — Entorno NORMAL
-- Fear & Greed 73 (codicia).
-- VIX 14.2 (percentil 2% del último año).
-- Curva 10a-2a: +0.36 pp; 10a 5.17%.
+- Fear & Greed 71 (codicia).
+- VIX 16.1 (percentil 28% del último año).
+- Curva 10a-2a: +0.32 pp; 10a 5.24%.
 - Dólar (índice amplio) -0.2% en 50 días.
-- Funding actual 0.0100% por 8h (percentil 92% del último año); media 30d anualizada 10.9%.
-- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 696 h.
+- Funding actual 0.0100% por 8h (percentil 92% del último año); media 30d anualizada 11.0%.
+- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 686 h.
 - Regla histórica probada: recortar la exposición alrededor del FOMC EMPEORÓ el núcleo (Sharpe 0,78 → 0,74; rechazada). Solo se informa, no se actúa.
 
 ## 🟢 Análisis de mercados — Tendencia alcista (3/4 horizontes)
@@ -35,9 +35,9 @@
 ## 🟢 Mesa de trading — Sin órdenes todavía
 - La mesa ejecutará cuando el núcleo pida cambiar la exposición.
 
-## 🟢 Derivados y arbitraje — Carry teórico +10.9% anual (investigación)
-- Funding anualizado: 30d +10.9%, 1 año +3.8%.
-- Carry teórico 'cash-and-carry' (largo spot + corto perpetuo): ≈ 10.9% anual bruto a 30d; el coste de montar y desmontar es ≈ 4 × 5 pb = 0,20 % y exige capital en spot y margen en el perpetuo.
+## 🟢 Derivados y arbitraje — Carry teórico +11.0% anual (investigación)
+- Funding anualizado: 30d +11.0%, 1 año +3.8%.
+- Carry teórico 'cash-and-carry' (largo spot + corto perpetuo): ≈ 11.0% anual bruto a 30d; el coste de montar y desmontar es ≈ 4 × 5 pb = 0,20 % y exige capital en spot y margen en el perpetuo.
 - ESTADO: INVESTIGACIÓN. No se opera: requiere ejecución en dos mercados y gestión del riesgo de contraparte; se evaluará como pata aparte con su propio protocolo.
 
 ## 🟢 Laboratorio (cuantitativo / ML) — 6 variantes en sombra · 0 días de prueba
@@ -62,17 +62,25 @@
   S04 Keltner ruptura: +0.00% · caída 0.0% · 0 ops · posición +0
   S05 RSI(2) retroceso (largo): +0.00% · caída 0.0% · 0 ops · posición +0
 
-## 🟢 Mesa de opciones — IV 34% vs RV 34% · put 10 % OTM 0.78%
-- Vencimiento a 30.6 días: volatilidad implícita ATM 34.0% · realizada 30 d 34.4% · prima -0.5 pts.
-- Sesgo 25Δ (puts − calls): -0.2 pts. Put 10 % por debajo (K≈75,000): cuesta 0.78% del nocional.
+## 🟢 Mesa de opciones — IV 34% vs RV 34% · put 10 % OTM 0.76%
+- Vencimiento a 30.2 días: volatilidad implícita ATM 34.0% · realizada 30 d 34.4% · prima -0.5 pts.
+- Sesgo 25Δ (puts − calls): +0.2 pts. Put 10 % por debajo (K≈75,000): cuesta 0.76% del nocional.
 - Prima de volatilidad normal.
 - ESTADO: solo informa. La protección de cola no se activa: no se puede validar con histórico (sin datos históricos de opciones).
+
+## 🟢 Mesa intradía — 1 operaciones · 1 abiertas
+- 14 traders en papel · 1 operaciones cerradas (2.0 al día entre todos) · 1 posiciones abiertas.
+- Datos: Deribit BTC-PERPETUAL 1 h (velas cerradas), última vela cerrada 2026-09-30 04:00 UTC.
+  I12 Ichimoku 1 h: +0.10% · 0 ops · R total +0.00
+  I01 Rango asiático → Londres/NY: +0.00% · 0 ops · R total +0.00
+  I02 Ruptura Donchian 24 h: +0.00% · 0 ops · R total +0.00
+- El histórico 2020-2026 da expectativa negativa tras costes en los 14 (0/14 certificadas): esta prueba mide si se confirma hacia delante.
 
 ## 🟢 Escuela — Sin operaciones que analizar todavía
 - La Escuela empieza a aprender cuando haya lotes cerrados: clasifica cada uno por contexto y mide dónde falla el sistema.
 
-## 🟢 Infraestructura — Sano · datos hace 17.7 h
-- Última vela cerrada a las 2026-09-29 00:00 UTC (hace 17.7 h) · fuente: Binance Vision.
+## 🟢 Infraestructura — Sano · datos hace 28.3 h
+- Última vela cerrada a las 2026-09-29 00:00 UTC (hace 28.3 h) · fuente: Binance Vision.
 - Base de datos: ok.
 - Disco libre 29.3 GB.
 
@@ -89,6 +97,7 @@
 | Gestión de cartera | ACTIVO | Volatility targeting, banda de rebalanceo, coste de funding. |
 | Derivados y arbitraje | INVESTIGACIÓN | Carry teórico cash-and-carry. No se opera. |
 | Coberturas | NO APLICA por ahora | El sistema se 'cubre' saliendo a efectivo; las estrategias con cortos no mejoraron fuera de muestra. |
+| Mesa intradía (papel) | ACTIVO en papel | 14 traders con stop/TP/tiempo sobre velas de 1 h (Deribit), 1.000 USDT virtuales cada uno; actualización horaria. Histórico: 0/14 certificadas. |
 | Opciones | ACTIVO (solo informa) | Deribit público: IV vs RV, sesgo 25Δ y coste de un put 10 % OTM. No se opera con opciones; protección de cola desactivada (sin histórico). |
 | Incubadora de traders / Estrategias minadas | ACTIVO en sombra | 15 traders-estrategia con atribución alfa/beta, corrección por comparaciones múltiples y examen sellado; capital simulado solo por mérito. 0/15 certificadas en el examen. |
 | Cuantitativo / Machine learning | ACTIVO en sombra (Laboratorio) | Minero + embudo de robustez; 7 variantes hacia delante. Sin ventaja probada del ranking del minero. |
