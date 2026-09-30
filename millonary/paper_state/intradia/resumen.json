@@ -1,6 +1,6 @@
 {
- "generado": "2026-09-30 05:13:33.372458+00:00",
- "ultima_vela_cerrada": "2026-09-30 05:00:00+00:00",
+ "generado": "2026-09-30 06:23:29.083133+00:00",
+ "ultima_vela_cerrada": "2026-09-30 06:00:00+00:00",
  "inicio": "2026-09-29 16:30:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas)",
  "funding_disponible": true,
@@ -71,7 +71,7 @@
   },
   "I05 Cruce EMA 9/21 + EMA200": {
    "cerradas": 1,
-   "por_dia": 1.8859122427454629,
+   "por_dia": 1.7276861439394466,
    "ganan": 0,
    "pierden": 1,
    "salidas": {
@@ -196,23 +196,23 @@
    "R_media": 0.0,
    "R_total": 0.0,
    "pnl_usdt": 0.0,
-   "equity": 1001.4194647297105,
-   "retorno": 0.0014194647297105512,
-   "caida_max": 0.0005897447587074334,
+   "equity": 1000.5722007715327,
+   "retorno": 0.0005722007715327493,
+   "caida_max": 0.0011365612356778465,
    "p_R_positiva": null,
    "abierta": {
     "trader": "I12 Ichimoku 1 h",
     "abre": "2026-09-29 23:00:00+00:00",
-    "cierra": "2026-09-30 04:00:00+00:00",
+    "cierra": "2026-09-30 05:00:00+00:00",
     "lado": "CORTO",
     "px_entrada": 83583.77990000001,
-    "px_salida": 83216.64,
+    "px_salida": 83386.1739,
     "cantidad": 0.005,
     "salida": "end",
-    "pnl_usdt": 1.419464729710475,
-    "R": 0.33544395214121203,
-    "comision": 0.4170010497500001,
-    "funding": 0.0007662794604288225,
+    "pnl_usdt": 0.5722007715326239,
+    "R": 0.1352208929208857,
+    "comision": 0.41742488450000004,
+    "funding": 0.0015956560325523987,
     "abierta": true
    },
    "liquidado": false
@@ -251,7 +251,7 @@
   }
  },
  "trades_totales": 1,
- "por_dia_total": 1.8859122427454629,
+ "por_dia_total": 1.7276861439394466,
  "mejoras": {
   "I02 Ruptura Donchian 24 h|M5 dejar correr": {
    "cerradas": 0,
