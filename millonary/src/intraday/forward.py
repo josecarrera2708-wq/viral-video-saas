@@ -60,21 +60,23 @@ def run_all(bars: pd.DataFrame, funding: np.ndarray, start: pd.Timestamp, params
     return out
 
 
-def trades_frame(bars: pd.DataFrame, name: str, r: dict) -> pd.DataFrame:
-    n = int(r["n_trades"]); idx = bars.index
+def trades_frame(bars: pd.DataFrame, name: str, r: dict, spec=None, ctx: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Una fila por operación con hora, entrada, SL, TP, lote, riesgo, salida, R y análisis post-mortem (si se dan spec y contexto)."""
+    from .postmortem import detail
     rows = []
-    for i in range(n):
-        ei, xi = int(r["entry_idx"][i]), int(r["exit_idx"][i]); reason = REASONS[int(r["reason"][i])]
-        rows.append({"trader": name, "abre": idx[ei], "cierra": idx[xi], "lado": "LARGO" if r["dir"][i] > 0 else "CORTO", "px_entrada": float(r["entry_px"][i]),
-                     "px_salida": float(r["exit_px"][i]), "cantidad": float(r["qty"][i]), "salida": reason, "pnl_usdt": float(r["pnl"][i]), "R": float(r["r"][i]),
-                     "comision": float(r["fees"][i]), "funding": float(r["funding"][i]), "abierta": reason == "end"})
-    return pd.DataFrame(rows)
+    for i in range(int(r["n_trades"])):
+        rows.append(detail(bars, ctx, name, spec, r, i, spec.tp_mult, spec.max_bars))
+    cols = ["trader", "abre", "cierra", "lado", "px_entrada", "sl", "tp", "lote_btc", "nocional_usdt", "riesgo_usdt", "stop_pct", "px_salida", "salida", "R", "pnl_usdt",
+            "comision_usdt", "funding_usdt", "barras", "max_barras", "mfe_R", "mae_R", "post_stop_R", "tendencia_a_favor", "vol_percentil", "hora_utc", "abierta", "lecciones"]
+    return pd.DataFrame(rows, columns=cols)
 
 
-def summarize_all(bars: pd.DataFrame, res: dict, start: pd.Timestamp, now: pd.Timestamp) -> tuple[dict, pd.DataFrame]:
+def summarize_all(bars: pd.DataFrame, res: dict, start: pd.Timestamp, now: pd.Timestamp, specs: dict | None = None) -> tuple[dict, pd.DataFrame]:
+    from .postmortem import context
+    specs = specs if specs is not None else all_specs(bars); ctx = context(bars)
     days = max((now - pd.Timestamp(start)).total_seconds() / 86400, 1e-9); summ = {}; frames = []
     for k, r in res.items():
-        t = trades_frame(bars, k, r); frames.append(t); closed = t[~t["abierta"]] if len(t) else t
+        t = trades_frame(bars, k, r, specs[k], ctx); frames.append(t); closed = t[~t["abierta"]] if len(t) else t
         R = closed["R"].to_numpy() if len(closed) else np.array([]); n = len(R); eq = np.asarray(r["equity"]); cap = 1000.0
         live_eq = eq[np.asarray(bars.index + H1 >= pd.Timestamp(start))]
         mean = float(R.mean()) if n else 0.0; sd = float(R.std(ddof=1)) if n > 2 else 0.0
@@ -84,7 +86,7 @@ def summarize_all(bars: pd.DataFrame, res: dict, start: pd.Timestamp, now: pd.Ti
                    "equity": float(live_eq[-1]) if len(live_eq) else cap, "retorno": float(live_eq[-1] / cap - 1) if len(live_eq) else 0.0,
                    "caida_max": float((1 - live_eq / np.maximum.accumulate(live_eq)).max()) if len(live_eq) else 0.0,
                    "p_R_positiva": float(norm.cdf(mean / (sd / np.sqrt(n)))) if n > 10 and sd > 0 else None,
-                   "abierta": (t[t["abierta"]].iloc[-1].to_dict() if len(t) and t["abierta"].any() else None), "liquidado": bool(r["ruined"])}
+                   "abierta": (t[t["abierta"]].iloc[-1].drop("lecciones").to_dict() if len(t) and t["abierta"].any() else None), "liquidado": bool(r["ruined"])}
     allt = pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
     return summ, allt
 
@@ -95,9 +97,12 @@ def main(now: pd.Timestamp | None = None) -> dict:
     bars = fetch_bars(start, now); f = fetch_funding(bars.index, now)
     if len(bars) < 350:
         return {"error": f"pocas velas ({len(bars)})"}
-    res = run_all(bars, f, start); summ, allt = summarize_all(bars, res, start, now)
+    specs = all_specs(bars); res = run_all(bars, f, start, specs=specs); summ, allt = summarize_all(bars, res, start, now, specs)
     if len(allt):
-        allt.to_csv(d / "trades.csv", index=False)
+        from .postmortem import learning
+        allt.assign(lecciones=allt["lecciones"].map(lambda x: " | ".join(x))).to_csv(d / "trades.csv", index=False)
+        (d / "trades_detalle.json").write_text(json.dumps(allt.sort_values("abre", ascending=False).to_dict("records"), default=str, ensure_ascii=False, indent=1))
+        (d / "aprendizaje.json").write_text(json.dumps(learning(allt.to_dict("records")), ensure_ascii=False, indent=1))
     else:
         (d / "trades.csv").write_text("")
     mej = {}
@@ -106,14 +111,14 @@ def main(now: pd.Timestamp | None = None) -> dict:
         from src.intraday.mejora import OPERADORES
         led = json.loads(lp.read_text()); base = all_specs(bars); vs = {k: OPERADORES[led["candidatas"][k]["operador"]](bars, base[led["candidatas"][k]["trader"]]) for k in led["en_sombra"]}
         if vs:
-            rv = run_all(bars, f, start, specs=vs); sv, tv = summarize_all(bars, rv, start, now)
+            rv = run_all(bars, f, start, specs=vs); sv, tv = summarize_all(bars, rv, start, now, vs)
             for k, v in sv.items():
                 v["R_media_base"] = summ[led["candidatas"][k]["trader"]]["R_media"]; v["cerradas_base"] = summ[led["candidatas"][k]["trader"]]["cerradas"]
                 v["etapa"] = "E3 sombra (faltan operaciones)" if v["cerradas"] < 150 else ("E3 candidata" if (v["R_media"] > v["R_media_base"] and (v["p_R_positiva"] or 0) >= 0.90) else "E4 retirada" if v["R_media"] <= 0 else "E3 sombra (sin cumplir)")
             mej = sv
             if len(tv): tv.to_csv(d / "trades_mejoras.csv", index=False)
     out = {"generado": str(now), "ultima_vela_cerrada": str(bars.index[-1] + H1), "inicio": str(start), "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas)",
-           "funding_disponible": bool(np.any(f != 0)), "traders": summ, "trades_totales": int(sum(v["cerradas"] for v in summ.values())),
+           "funding_disponible": bool(np.any(f != 0)), "precio_actual": float(bars["close"].iloc[-1]), "traders": summ, "trades_totales": int(sum(v["cerradas"] for v in summ.values())),
            "por_dia_total": float(sum(v["por_dia"] for v in summ.values())), "mejoras": mej}
     (d / "resumen.json").write_text(json.dumps(out, indent=1, default=str)); return out
 

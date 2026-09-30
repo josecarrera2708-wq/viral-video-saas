@@ -21,10 +21,19 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
     if not eq.empty:
         t = pd.to_datetime(eq["bar"], utc=True); pts = [[int(a.timestamp() * 1000), float(b)] for a, b in zip(t, eq["equity"])]
     inc = next((d for d in (brief or {}).get("departamentos", []) if d["dept"] == "Incubadora de traders"), {}).get("metrics", {})
-    idr = _json(data / "intradia" / "resumen.json"); itr = _csv(data / "intradia" / "trades.csv"); itrades = []
-    if not itr.empty:
-        itrades = itr[~itr["abierta"].astype(bool)].sort_values("cierra", ascending=False).head(30).to_dict("records")
-    return {"intradia": idr, "intradia_trades": itrades, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": feed(brief) if brief else [], "equity": pts, "forward": inc.get("forward", {}),
+    idr = _json(data / "intradia" / "resumen.json"); itrades = (_json(data / "intradia" / "trades_detalle.json") or [])[:300]
+    core = _csv(data / "diario_ordenes.csv"); core_rows = [] if core.empty else core.sort_values("bar", ascending=False).head(50).to_dict("records")
+    chat = (feed(brief) if brief else [])
+    ops = []
+    for t in itrades:
+        who = t["trader"].split(" ")[0]
+        ops.append({"hora": str(t["abre"])[5:16].replace("T", " "), "de": t["trader"], "a": "Mesa", "canal": "Operaciones", "ts": str(t["abre"]),
+                    "texto": f"Abrió {t['lado']} a {t['px_entrada']:,.0f} · SL {t['sl']:,.0f} · TP {('%.0f' % t['tp']) if t['tp'] else 'sin TP'} · lote {t['lote_btc']} BTC ({t['nocional_usdt']:,.0f} USDT, riesgo {t['riesgo_usdt']:.2f} USDT)"})
+        if not t["abierta"]:
+            ops.append({"hora": str(t["cierra"])[5:16].replace("T", " "), "de": t["trader"], "a": "Mesa", "canal": "Operaciones", "ts": str(t["cierra"]),
+                        "texto": f"Cerró por {t['salida']} a {t['px_salida']:,.0f}: {t['R']:+.2f} R ({t['pnl_usdt']:+.2f} USDT). " + " ".join(t["lecciones"][:2])})
+    ops.sort(key=lambda m: m["ts"], reverse=True)
+    return {"intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 
@@ -41,5 +50,8 @@ def build_panel(data: Path, now: pd.Timestamp | None = None) -> Path:
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(); ap.add_argument("--data", default="paper_state"); a = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--data", default="paper_state"); ap.add_argument("--fragment", default=None, help="además escribe la página sin <html>/<head>/<body> (para republicarla como artefacto)")
+    a = ap.parse_args()
     print(build_panel(Path(a.data)))
+    if a.fragment:
+        Path(a.fragment).write_text(fragment(Path(a.data)), encoding="utf-8"); print(a.fragment)

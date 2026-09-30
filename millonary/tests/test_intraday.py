@@ -1,6 +1,6 @@
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-import numpy as np, pandas as pd
+import numpy as np, pandas as pd, pytest
 from src.intraday.setups import all_specs, SETUPS
 from src.intraday import forward as fw
 from src.intraday.evaluate import mc_band, stress
@@ -59,3 +59,21 @@ def test_improvement_operators_only_restrict_or_scale_and_stay_causal():
             assert np.array_equal(v.entry[:cut + 1], v2.entry[:cut + 1]), (k, on)                      # causal
             if on in ("M1 a favor de la tendencia", "M3 sesión 07-21 UTC", "M4 stop mínimo 0,8 %"):
                 assert ((v.entry != 0) <= (base[k].entry != 0)).all(), (k, on)                        # solo elimina entradas, nunca añade
+
+
+def test_trade_detail_sl_tp_lot_and_postmortem():
+    from src.intraday.postmortem import context, lessons
+    df = bars1h(2600); sp = all_specs(df); ctx = context(df); f = np.zeros(len(df)); start = df.index[2000]
+    res = fw.run_all(df, f, start, specs=sp); summ, allt = fw.summarize_all(df, res, start, df.index[-1] + pd.Timedelta("1h"), sp)
+    assert len(allt) > 0
+    for _, t in allt.iterrows():
+        d = 1 if t["lado"] == "LARGO" else -1
+        assert (t["px_entrada"] - t["sl"]) * d > 0                                   # el stop queda en contra de la posición
+        if t["tp"] is not None and not pd.isna(t["tp"]): assert (t["tp"] - t["px_entrada"]) * d > 0
+        assert t["lote_btc"] > 0 and t["riesgo_usdt"] > 0 and t["nocional_usdt"] == pytest.approx(t["lote_btc"] * t["px_entrada"])
+        assert t["mfe_R"] >= 0 and t["mae_R"] >= 0
+        if t["salida"] == "stop": assert t["R"] < 0 and t["mae_R"] >= 0.9                # un stop implica ≈ 1 R de recorrido en contra
+        assert isinstance(t["lecciones"], list) and (t["abierta"] or len(t["lecciones"]) >= 1)
+    base = dict(abierta=False, R=-1.0, salida="stop", mfe_R=0.1, post_stop_R=2.5, tendencia_a_favor=False, vol_percentil=0.1, comision_usdt=0.4, funding_usdt=0.0, riesgo_usdt=4.0, barras=5)
+    L = lessons(base, 2.0); assert any("barrido" in x for x in L) and any("contra la tendencia" in x for x in L) and any("Volatilidad baja" in x for x in L)
+    assert lessons({**base, "abierta": True}, 2.0) == []

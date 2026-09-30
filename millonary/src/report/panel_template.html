@@ -61,10 +61,12 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="kpis" id="kpis"></div>
   </header>
   <div class="banner" id="banner"></div>
+  <div><span id="fresh" class="pill">…</span> <span class="foot">Se actualiza cada hora, al cierre de cada vela de 1 h (que es cuando los traders deciden).</span></div>
   <nav role="tablist" aria-label="Secciones">
     <button role="tab" aria-selected="true" data-tab="sala">Sala</button>
     <button role="tab" aria-selected="false" data-tab="intradia">Intradía</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
+    <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
     <button role="tab" aria-selected="false" data-tab="informe">Informe</button>
   </nav>
@@ -87,9 +89,20 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="card"><div class="tw"><table id="idTable"></table></div></div>
     <h2>Mejoras en sombra</h2>
     <div class="card"><div class="tw"><table id="idMej"></table></div><p class="foot">Variantes que superaron construcción y validación históricas. Pasan a candidatas con ≥ 150 operaciones hacia delante y probabilidad posterior de expectativa positiva ≥ 90 %.</p></div>
-    <h2>Últimas operaciones</h2>
-    <div class="card"><div class="tw"><table id="idTrades"></table></div>
+    <h2>Posiciones abiertas ahora</h2>
+    <div class="grid" id="idOpen"></div>
+    <h2>Historial de operaciones</h2>
+    <div class="card"><div id="idHist"></div>
+      <p class="foot">Toca una operación para ver el análisis de por qué salió así.</p>
       <p class="foot">Cada trader opera con 1.000 USDT virtuales, riesgo 0,5 % por operación y stop/TP fijos. El histórico (2020-2026) muestra expectativa negativa tras costes en los 14: esta prueba hacia delante mide si eso se confirma. Sin dinero real.</p></div>
+  </section>
+
+  <section class="panel sec" id="tab-aprender" hidden>
+    <h2>Qué se está aprendiendo</h2>
+    <div class="card"><div class="tw"><table id="apTable"></table></div>
+      <p class="foot">Los patrones salen de las operaciones perdedoras de cada trader. Con menos de 30 operaciones son hipótesis, no conclusiones: solo pasan al ciclo de mejora (con prerregistro y validación) cuando se repiten en una muestra suficiente. Nada se aplica automáticamente.</p></div>
+    <h2>Cuenta principal (núcleo v1)</h2>
+    <div class="card"><div class="tw"><table id="coreTable"></table></div></div>
   </section>
 
   <section class="panel sec" id="tab-ranking" hidden>
@@ -147,7 +160,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','ranking','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -155,7 +168,7 @@ const canales = ['Todo','Operaciones','Riesgos','Macro','Análisis','Comité','C
 function renderFeed(){
   $('#chips').innerHTML = canales.map(c => `<button class="chip" aria-pressed="${c===canal}" data-c="${c}">${c}</button>`).join('');
   document.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => { canal = b.dataset.c; renderFeed(); }));
-  const all = D.chat.filter(m => canal==='Todo' || m.canal===canal), ms = todos ? all : all.slice(0, LIM);
+  const all = (D.chat_ops || []).concat(D.chat).filter(m => canal==='Todo' || m.canal===canal), ms = todos ? all : all.slice(0, LIM);
   $('#feed').innerHTML = (ms.length ? ms.map(m => `<div class="msg"><span class="t mono">${esc(m.hora)}</span><span><span class="who">${esc(m.de)}</span> <span class="to">→ ${esc(m.a)}</span></span><span class="txt">${esc(m.texto)}</span></div>`).join('') : '<p class="dim">Sin mensajes en este canal.</p>') + (all.length > LIM ? `<p><button class="chip" id="more">${todos ? 'Mostrar menos' : 'Mostrar los ' + all.length + ' mensajes'}</button></p>` : '');
   const mb = $('#more'); if (mb) mb.addEventListener('click', () => { todos = !todos; renderFeed(); });
 }
@@ -206,10 +219,30 @@ if (I) {
       return `<tr><td>${esc(k)}</td><td class="n num">${v.cerradas}</td><td class="n num">${v.ganan} / ${v.pierden}</td><td class="n num">${s.tp||0} / ${s.stop||0} / ${s.time||0}</td><td class="n num ${cls(v.R_total)}">${v.R_total.toFixed(2)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td>${a ? `<span class="pill gold">${esc(a.lado)} @ ${Number(a.px_entrada).toFixed(0)}</span>` : '<span class="dim">plana</span>'}</td></tr>`; }).join('');
   const MJ = Object.entries(I.mejoras || {});
   $('#idMej').innerHTML = '<tr><th>Variante</th><th class="n">Ops</th><th class="n">R media</th><th class="n">R media base</th><th class="n">Retorno</th><th>Etapa</th></tr>' + (MJ.length ? MJ.map(([k,v]) => `<tr><td>${esc(k.replace('|',' · '))}</td><td class="n num">${v.cerradas}</td><td class="n num ${cls(v.R_media)}">${v.R_media.toFixed(3)}</td><td class="n num">${v.R_media_base.toFixed(3)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td><span class="pill gold">${esc(v.etapa)}</span></td></tr>`).join('') : '<tr><td colspan="6" class="dim">Sin variantes en sombra.</td></tr>');
-  const tr = D.intradia_trades || [];
-  $('#idTrades').innerHTML = '<tr><th>Cierre</th><th>Trader</th><th>Lado</th><th class="n">Entrada</th><th class="n">Salida</th><th>Motivo</th><th class="n">R</th><th class="n">P&L USDT</th></tr>' +
-    (tr.length ? tr.map(t => `<tr><td class="mono">${esc(String(t.cierra).slice(5,16))}</td><td>${esc(t.trader)}</td><td>${esc(t.lado)}</td><td class="n num">${Number(t.px_entrada).toFixed(0)}</td><td class="n num">${Number(t.px_salida).toFixed(0)}</td><td>${esc(t.salida)}</td><td class="n num ${cls(t.R)}">${Number(t.R).toFixed(2)}</td><td class="n num ${cls(t.pnl_usdt)}">${Number(t.pnl_usdt).toFixed(2)}</td></tr>`).join('') : '<tr><td colspan="8" class="dim">Aún no hay operaciones cerradas.</td></tr>');
+  const px = I.precio_actual, TR = D.intradia_trades || [], f0 = (x, d=0) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  const abiertas = TR.filter(t => t.abierta);
+  $('#idOpen').innerHTML = abiertas.length ? abiertas.map(t => { const dir = t.lado === 'LARGO' ? 1 : -1, riskPx = Math.abs(t.px_entrada - t.sl), rNow = (px - t.px_entrada) * dir / riskPx, usd = (px - t.px_entrada) * dir * t.lote_btc;
+    return `<div class="card dept"><h3><span>${esc(t.trader)}</span><span class="pill gold">${t.lado}</span></h3><p>Abrió ${esc(String(t.abre).slice(0,16))} UTC</p>
+    <table><tr><td>Entrada</td><td class="n num">${f0(t.px_entrada)}</td></tr><tr><td>Precio actual</td><td class="n num">${f0(px)}</td></tr><tr><td>Stop (SL)</td><td class="n num neg">${f0(t.sl)}</td></tr><tr><td>Objetivo (TP)</td><td class="n num pos">${t.tp ? f0(t.tp) : 'sin TP'}</td></tr>
+    <tr><td>Lote</td><td class="n num">${t.lote_btc} BTC · ${f0(t.nocional_usdt)} USDT</td></tr><tr><td>Riesgo</td><td class="n num">${f0(t.riesgo_usdt, 2)} USDT</td></tr>
+    <tr><td>Resultado ahora</td><td class="n num ${cls(rNow)}">${rNow >= 0 ? '+' : ''}${rNow.toFixed(2)} R · ${usd >= 0 ? '+' : ''}${usd.toFixed(2)} USDT</td></tr></table></div>`; }).join('') : '<div class="card"><p class="dim">No hay posiciones abiertas ahora mismo.</p></div>';
+  const cerr = TR.filter(t => !t.abierta);
+  $('#idHist').innerHTML = cerr.length ? cerr.map(t => `<details style="border-bottom:1px solid var(--line);padding:8px 0"><summary style="cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:baseline"><span class="mono dim">${esc(String(t.cierra).slice(5,16))}</span><span><b>${esc(t.trader)}</b> · ${t.lado} · ${f0(t.px_entrada)} → ${f0(t.px_salida)} (${esc(t.salida)})</span><span class="num ${cls(t.R)}">${t.R >= 0 ? '+' : ''}${Number(t.R).toFixed(2)} R · ${t.pnl_usdt >= 0 ? '+' : ''}${Number(t.pnl_usdt).toFixed(2)} $</span></summary>
+    <div style="padding:8px 0 4px 0"><div class="tw"><table><tr><th>Abrió</th><th class="n">Entrada</th><th class="n">SL</th><th class="n">TP</th><th class="n">Lote</th><th class="n">Riesgo</th><th class="n">Duración</th><th class="n">Máx. a favor</th><th class="n">Máx. en contra</th><th class="n">Comisión</th></tr>
+    <tr><td class="mono">${esc(String(t.abre).slice(5,16))}</td><td class="n num">${f0(t.px_entrada)}</td><td class="n num neg">${f0(t.sl)}</td><td class="n num pos">${t.tp ? f0(t.tp) : '—'}</td><td class="n num">${t.lote_btc} BTC</td><td class="n num">${f0(t.riesgo_usdt,2)} $</td><td class="n num">${t.barras} h</td><td class="n num">${Number(t.mfe_R).toFixed(2)} R</td><td class="n num">${Number(t.mae_R).toFixed(2)} R</td><td class="n num">${f0(t.comision_usdt,2)} $</td></tr></table></div>
+    <p style="margin:8px 0 2px"><b>Por qué salió así</b></p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
 } else $('#idTable').innerHTML = '<tr><td class="dim">Sin datos intradía todavía.</td></tr>';
+
+// aprendizaje y núcleo
+const AP = D.aprendizaje || {};
+$('#apTable').innerHTML = '<tr><th>Trader</th><th class="n">Cerradas</th><th class="n">Perdidas</th><th class="n">Nunca a favor</th><th class="n">Stop barrido</th><th class="n">Contra tendencia</th><th class="n">Vol. baja</th><th>Estado</th></tr>' +
+  (Object.keys(AP).length ? Object.entries(AP).map(([k,v]) => `<tr><td>${esc(k)}</td><td class="n num">${v.cerradas}</td><td class="n num">${v.perdedoras}</td><td class="n num">${v.patrones.nunca_a_favor}</td><td class="n num">${v.patrones.stop_barrido}</td><td class="n num">${v.patrones.contra_tendencia}</td><td class="n num">${v.patrones.vol_baja}</td><td><span class="pill">${esc(v.estado)}</span></td></tr>`).join('') : '<tr><td colspan="8" class="dim">Aún no hay operaciones cerradas para analizar.</td></tr>');
+const CO = D.nucleo_ordenes || [];
+$('#coreTable').innerHTML = '<tr><th>Hora (UTC)</th><th>Lado</th><th class="n">Cantidad BTC</th><th class="n">Precio</th><th class="n">Comisión</th><th class="n">Exposición antes → después</th><th>Motivo</th></tr>' +
+  (CO.length ? CO.map(o => `<tr><td class="mono">${esc(String(o.bar).slice(0,16))}</td><td>${esc(o.side)}</td><td class="n num">${o.qty}</td><td class="n num">${Number(o.price).toFixed(0)}</td><td class="n num">${Number(o.fee).toFixed(2)}</td><td class="n num">${Number(o.expo_before).toFixed(2)}× → ${Number(o.expo_after).toFixed(2)}×</td><td>${esc(o.reason)}</td></tr>`).join('') : '<tr><td colspan="7" class="dim">El núcleo aún no ha operado (espera datos de Binance Vision; opera unas 7 veces al mes).</td></tr>');
+
+// frescura
+(function(){ const g = Date.parse(D.generado); const upd = () => { const m = Math.max(0, Math.round((Date.now() - g) / 60000)); const el = $('#fresh'); if (el) { el.textContent = 'Datos de hace ' + (m < 90 ? m + ' min' : Math.round(m / 60) + ' h') + (m > 90 ? ' · esperando la próxima actualización' : ''); el.className = 'pill ' + (m > 90 ? 'warn' : 'ok'); } }; upd(); setInterval(upd, 30000); })();
 
 // informe
 function chart(pts){
