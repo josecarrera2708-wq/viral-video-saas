@@ -1,4 +1,15 @@
 {
+ "I01 Rango asiático → Londres/NY": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
  "I05 Cruce EMA 9/21 + EMA200": {
   "cerradas": 1,
   "perdedoras": 1,
