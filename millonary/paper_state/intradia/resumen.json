@@ -1,6 +1,6 @@
 {
- "generado": "2026-09-29 23:14:41.957932+00:00",
- "ultima_vela_cerrada": "2026-09-29 23:00:00+00:00",
+ "generado": "2026-09-30 00:14:30.514426+00:00",
+ "ultima_vela_cerrada": "2026-09-30 00:00:00+00:00",
  "inicio": "2026-09-29 16:30:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas)",
  "funding_disponible": true,
@@ -70,33 +70,25 @@
    "liquidado": false
   },
   "I05 Cruce EMA 9/21 + EMA200": {
-   "cerradas": 0,
-   "por_dia": 0.0,
+   "cerradas": 1,
+   "por_dia": 3.100050421724498,
    "ganan": 0,
-   "pierden": 0,
-   "salidas": {},
-   "R_media": 0.0,
-   "R_total": 0.0,
-   "pnl_usdt": 0.0,
-   "equity": 996.7347670308965,
-   "retorno": -0.0032652329691035265,
-   "caida_max": 0.0032652329691035265,
-   "p_R_positiva": null,
-   "abierta": {
-    "trader": "I05 Cruce EMA 9/21 + EMA200",
-    "abre": "2026-09-29 17:00:00+00:00",
-    "cierra": "2026-09-29 22:00:00+00:00",
-    "lado": "CORTO",
-    "px_entrada": 83045.3876,
-    "px_salida": 83617.22009999999,
-    "cantidad": 0.005,
-    "salida": "end",
-    "pnl_usdt": -3.2652329691035367,
-    "R": -0.8802902627615733,
-    "comision": 0.41665651925,
-    "funding": 0.010586050146411008,
-    "abierta": true
+   "pierden": 1,
+   "salidas": {
+    "tp": 0,
+    "stop": 1,
+    "time": 0,
+    "signal": 0,
+    "liq": 0
    },
+   "R_media": -1.1321890429482877,
+   "R_total": -1.1321890429482877,
+   "pnl_usdt": -4.199593187246039,
+   "equity": 995.800406812754,
+   "retorno": -0.0041995931872460535,
+   "caida_max": 0.0041995931872460535,
+   "p_R_positiva": null,
+   "abierta": null,
    "liquidado": false
   },
   "I06 RSI(2) retroceso": {
@@ -204,11 +196,25 @@
    "R_media": 0.0,
    "R_total": 0.0,
    "pnl_usdt": 0.0,
-   "equity": 1000.0,
-   "retorno": 0.0,
-   "caida_max": 0.0,
+   "equity": 999.1174034112926,
+   "retorno": -0.0008825965887073739,
+   "caida_max": 0.0008825965887073739,
    "p_R_positiva": null,
-   "abierta": null,
+   "abierta": {
+    "trader": "I12 Ichimoku 1 h",
+    "abre": "2026-09-29 23:00:00+00:00",
+    "cierra": "2026-09-29 23:00:00+00:00",
+    "lado": "CORTO",
+    "px_entrada": 83583.77990000001,
+    "px_salida": 83676.732,
+    "cantidad": 0.005,
+    "salida": "end",
+    "pnl_usdt": -0.882596588707468,
+    "R": -0.20857276807629588,
+    "comision": 0.41815127975000005,
+    "funding": 0.0003151910425068786,
+    "abierta": true
+   },
    "liquidado": false
   },
   "I13 Parabolic SAR + EMA200": {
@@ -244,8 +250,8 @@
    "liquidado": false
   }
  },
- "trades_totales": 0,
- "por_dia_total": 0.0,
+ "trades_totales": 1,
+ "por_dia_total": 3.100050421724498,
  "mejoras": {
   "I02 Ruptura Donchian 24 h|M5 dejar correr": {
    "cerradas": 0,
