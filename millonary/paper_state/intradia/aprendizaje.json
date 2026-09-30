@@ -1,6 +1,39 @@
 {
  "I01 Rango asiático → Londres/NY": {
-  "cerradas": 0,
+  "cerradas": 1,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "I02 Ruptura Donchian 24 h": {
+  "cerradas": 1,
+  "perdedoras": 1,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 1,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "I03 Bollinger + RSI (reversión)": {
+  "cerradas": 1,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "I04 Reversión a VWAP diaria": {
+  "cerradas": 1,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
@@ -21,13 +54,46 @@
   },
   "estado": "muestra insuficiente para concluir"
  },
- "I12 Ichimoku 1 h": {
+ "I07 Ruptura tras squeeze": {
   "cerradas": 1,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 1,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "I08 Ruptura del máx./mín. de ayer": {
+  "cerradas": 1,
+  "perdedoras": 1,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 1,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "I10 Ráfaga de momentum": {
+  "cerradas": 1,
+  "perdedoras": 1,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 1,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "I12 Ichimoku 1 h": {
+  "cerradas": 2,
+  "perdedoras": 2,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 2,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
