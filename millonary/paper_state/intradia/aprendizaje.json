@@ -110,7 +110,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I13 Parabolic SAR + EMA200": {
-  "cerradas": 0,
+  "cerradas": 1,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
