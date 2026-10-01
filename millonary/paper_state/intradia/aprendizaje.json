@@ -44,12 +44,12 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I05 Cruce EMA 9/21 + EMA200": {
-  "cerradas": 3,
-  "perdedoras": 2,
+  "cerradas": 4,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 2,
+   "nunca_a_favor": 3,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
+   "contra_tendencia": 3,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
