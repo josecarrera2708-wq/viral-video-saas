@@ -33,7 +33,8 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
             ops.append({"hora": str(t["cierra"])[5:16].replace("T", " "), "de": t["trader"], "a": "Mesa", "canal": "Operaciones", "ts": str(t["cierra"]),
                         "texto": f"Cerró por {t['salida']} a {t['px_salida']:,.0f}: {t['R']:+.2f} R ({t['pnl_usdt']:+.2f} USDT). " + " ".join(t["lecciones"][:2])})
     ops.sort(key=lambda m: m["ts"], reverse=True)
-    return {"intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
+    m15 = _json(data / "mesa15" / "resumen.json"); m15t = (_json(data / "mesa15" / "trades_detalle.json") or [])[:300]; m15l = _json(data / "mesa15" / "aprendices.json")
+    return {"m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 

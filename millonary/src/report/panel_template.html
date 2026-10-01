@@ -66,6 +66,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <button role="tab" aria-selected="true" data-tab="sala">Sala</button>
     <button role="tab" aria-selected="false" data-tab="intradia">Intradía</button>
     <button role="tab" aria-selected="false" data-tab="marcador">Marcador</button>
+    <button role="tab" aria-selected="false" data-tab="m15">Mesa 15 min</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
@@ -115,6 +116,19 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="card"><div id="mcCore"></div></div>
     <h2>Últimas operaciones cerradas</h2>
     <div class="card"><div class="tw"><table id="mcLast"></table></div></div>
+  </section>
+
+  <section class="panel sec" id="tab-m15" hidden>
+    <h2>Mesa de 15 minutos (en paralelo a la de 1 h)</h2>
+    <div class="card"><div class="funnel" id="m15Kpis"></div><p class="foot" id="m15Note"></p></div>
+    <h2>Lo que han aprendido</h2>
+    <div class="card" id="m15Learn"></div>
+    <h2>Traders: base (B), aprendiz individual (A) y colectivo (C)</h2>
+    <div class="card"><div class="tw"><table id="m15Table"></table></div><p class="foot">13 traders de acción de precio (envolventes, pin bar, barrido de liquidez, ineficiencias/FVG, barra interior, estrella, doble techo/suelo) y fórmulas cuantitativas (momentum de series temporales, Ornstein–Uhlenbeck, razón de varianzas, Garman–Klass, flujo, CTA+ADX). Los aprendices vetan contextos donde la evidencia ya cerrada dice que el trader pierde más que su media. En el histórico los 13 salieron con expectativa negativa tras costes: esta prueba mide si se confirma.</p></div>
+    <h2>Posiciones abiertas ahora</h2>
+    <div class="grid" id="m15Open"></div>
+    <h2>Historial de operaciones</h2>
+    <div class="card"><div id="m15Hist"></div></div>
   </section>
 
   <section class="panel sec" id="tab-ranking" hidden>
@@ -172,7 +186,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','ranking','aprender','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -258,6 +272,27 @@ if (I) {
   const C = D.nucleo_ordenes || [], Sm = (D.summary || {}).posiciones;
   $('#mcCore').innerHTML = Sm ? `<table><tr><td>Posiciones cerradas</td><td class="n num">${Sm.cerradas}</td></tr><tr><td>Ganadas</td><td class="n num pos">${Sm.ganan}</td></tr><tr><td>Perdidas</td><td class="n num neg">${Sm.pierden}</td></tr><tr><td>Abiertas</td><td class="n num">${Sm.abiertas}</td></tr><tr><td>Órdenes ejecutadas</td><td class="n num">${C.length}</td></tr></table><p class="foot">El núcleo opera a 4 h con tendencia y mantiene posiciones durante días: tardará semanas en cerrar una.</p>` : '<p class="dim">Aún sin datos del núcleo.</p>';
   $('#mcLast').innerHTML = '<tr><th>Cerró (UTC)</th><th>Trader</th><th>Lado</th><th class="n">R</th><th class="n">Resultado</th><th>Salida</th></tr>' + (cerr.slice().sort((a,b) => String(b.cierra).localeCompare(String(a.cierra))).slice(0,15).map(t => `<tr><td class="mono">${esc(String(t.cierra).slice(5,16))}</td><td>${esc(t.trader)}</td><td>${t.lado}</td><td class="n num ${cls(t.R)}">${(t.R>=0?'+':'')+f2(t.R)}</td><td class="n num ${cls(t.pnl_usdt)}">${(t.pnl_usdt>=0?'+':'')+f2(t.pnl_usdt)} $</td><td>${esc(t.salida)}</td></tr>`).join('') || '<tr><td class="dim">Aún sin operaciones cerradas.</td></tr>'); }
+
+
+// mesa de 15 min
+{ const M = D.m15, f0 = (x, d=0) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  if (!M) { $('#m15Table').innerHTML = '<tr><td class="dim">La mesa de 15 min arranca el 2026-10-02 00:00 UTC.</td></tr>'; }
+  else {
+    const T = Object.entries(M.traders), base = T.filter(([k]) => !k.includes(' · ')), tr = D.m15_trades || [], ab = tr.filter(t => t.abierta), cl = tr.filter(t => !t.abierta);
+    const w = base.reduce((a,[k,v]) => a + v.ganan, 0), l = base.reduce((a,[k,v]) => a + v.pierden, 0), R = base.reduce((a,[k,v]) => a + v.R_total, 0);
+    $('#m15Kpis').innerHTML = [[w,'ganadas (base)'],[l,'perdidas (base)'],[ab.filter(t => !t.trader.includes(' · ')).length,'abiertas (base)'],[(R>=0?'+':'')+R.toFixed(2)+' R','R total (base)'],[M.por_dia_total.toFixed(1),'ops/día (13 traders)']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#m15Note').textContent = `Fuente: ${M.fuente}. Última vela cerrada ${String(M.ultima_vela_cerrada).slice(0,16)} UTC. Inicio ${String(M.inicio).slice(0,16)} UTC.`;
+    const AP = D.m15_aprende, vet = AP ? AP.vetado : {}; const rows = [];
+    Object.entries(vet).forEach(([k, v]) => ['A','C'].forEach(tag => (v[tag] || []).forEach(x => rows.push(`<li><b>${esc(k)}</b> · ${tag === 'A' ? 'individual' : 'colectivo'}: evita <b>${esc(x.contexto)}</b> — ${x.n} operaciones, R media ${x.R_media >= 0 ? '+' : ''}${x.R_media.toFixed(2)}${x.vetado_desde ? ', desde ' + esc(String(x.vetado_desde).slice(0,10)) : ''}</li>`))));
+    $('#m15Learn').innerHTML = rows.length ? `<ul style="margin:0;padding-left:18px">${rows.slice(0,15).join('')}</ul><p class="foot">Aprendido con operaciones ya cerradas (histórico 2022-2026 + nuevas). Es una hipótesis estadística: con pocas operaciones puede ser ruido; se mide comparando cada aprendiz con su base.</p>` : '<p class="dim">Aún sin contextos vetados.</p>';
+    $('#m15Table').innerHTML = '<tr><th>Trader</th><th class="n">Ops</th><th class="n">Ganan/pierden</th><th class="n">R total</th><th class="n">Retorno</th><th class="n">Caída</th><th>Abierta</th></tr>' +
+      T.map(([k,v]) => `<tr><td${k.includes(' · ') ? ' class="dim"' : ''}>${esc(k)}</td><td class="n num">${v.cerradas}</td><td class="n num">${v.ganan} / ${v.pierden}</td><td class="n num ${cls(v.R_total)}">${v.R_total.toFixed(2)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td>${v.abierta ? `<span class="pill gold">${esc(v.abierta.lado)} @ ${Number(v.abierta.px_entrada).toFixed(0)}</span>` : '—'}</td></tr>`).join('');
+    const px = M.precio_actual;
+    $('#m15Open').innerHTML = ab.length ? ab.map(t => { const dir = t.lado === 'LARGO' ? 1 : -1, rk = Math.abs(t.px_entrada - t.sl), rNow = (px - t.px_entrada) * dir / rk, usd = (px - t.px_entrada) * dir * t.lote_btc;
+      return `<div class="card dept"><h3><span>${esc(t.trader)}</span><span class="pill gold">${t.lado}</span></h3><p>Abrió ${esc(String(t.abre).slice(0,16))} UTC</p><table><tr><td>Entrada</td><td class="n num">${f0(t.px_entrada)}</td></tr><tr><td>Stop (SL)</td><td class="n num neg">${f0(t.sl)}</td></tr><tr><td>Objetivo (TP)</td><td class="n num pos">${t.tp ? f0(t.tp) : 'sin TP'}</td></tr><tr><td>Lote</td><td class="n num">${t.lote_btc} BTC · ${f0(t.nocional_usdt)} USDT</td></tr><tr><td>Resultado ahora</td><td class="n num ${cls(rNow)}">${rNow >= 0 ? '+' : ''}${rNow.toFixed(2)} R · ${usd >= 0 ? '+' : ''}${usd.toFixed(2)} USDT</td></tr></table></div>`; }).join('') : '<div class="card"><p class="dim">No hay posiciones abiertas ahora mismo.</p></div>';
+    $('#m15Hist').innerHTML = cl.length ? cl.slice(0,60).map(t => `<details style="border-bottom:1px solid var(--line);padding:8px 0"><summary style="cursor:pointer"><span class="mono dim">${esc(String(t.cierra).slice(5,16))}</span> <b>${esc(t.trader)}</b> · ${t.lado} · ${f0(t.px_entrada)} → ${f0(t.px_salida)} (${esc(t.salida)}) <span class="num ${cls(t.R)}">${t.R >= 0 ? '+' : ''}${Number(t.R).toFixed(2)} R</span></summary>
+      <div style="padding:6px 0"><p class="foot">SL ${f0(t.sl)} · TP ${t.tp ? f0(t.tp) : '—'} · lote ${t.lote_btc} BTC · riesgo ${f0(t.riesgo_usdt,2)} $ · duración ${t.duracion_min} min · máx. a favor ${Number(t.mfe_R).toFixed(2)} R · máx. en contra ${Number(t.mae_R).toFixed(2)} R</p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
+  } }
 
 // aprendizaje y núcleo
 const AP = D.aprendizaje || {};

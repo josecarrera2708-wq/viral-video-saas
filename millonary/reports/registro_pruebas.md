@@ -27,3 +27,9 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - El freno de pérdida diaria mide la caída intradía desde las 00:00 UTC (máx. histórica 5,8 %), no cierre a cierre (4,7 %).
 
 - Mesa intradía: el test de causalidad detectó que el stop de I01 usaba el rango asiático completo en velas anteriores al cierre de esa sesión (sin efecto en entradas: comprobado que entradas y stops de entrada son idénticos antes y después de la corrección).
+
+## Mesa de 15 min (2026-10-01/02) — pruebas 213-251 (39 variantes: 13 traders base + 26 aprendices A/C)
+- Prerregistro `config/mesa15_prerregistrada.md` y código `src/desk15/` confirmados en git ANTES de ejecutar validación y examen. Única enmienda previa: la regla de veto de los aprendices pasó de absoluta (R media < 0) a relativa (peor que la media global), tras una prueba de tubería SOLO sobre construcción que mostró que la absoluta vetaba casi todo.
+- Examen sellado 2025-10-01→2026-09-29 ejecutado UNA vez (`reports/mesa15_resultados.md`): **0/13 certificadas**; los 13 con R media negativa en construcción, validación y examen (costes ≈ −0,3 R por operación con stops de ≈ 0,4 %); 20 de 26 aprendices reducen la pérdida de su base en validación y examen con ≥ 30 operaciones, pero siguen negativos (aprender a evitar los peores contextos no crea ventaja donde no la hay).
+- Tests: `tests/test_desk15.py` (causalidad de los 13 setups por truncamiento, veto causal del aprendiz, paginación de datos, funding por vela).
+- Hacia delante: inicio 2026-10-02 00:00 UTC, rutina horaria compartida con la mesa de 1 h.

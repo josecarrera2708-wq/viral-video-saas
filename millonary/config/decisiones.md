@@ -55,3 +55,8 @@ estar mucho más cerca que ese nivel. El apalancamiento es un tope, no un objeti
 - Histórico (examen sellado, una sola ejecución): 0/14 certificadas; expectativa negativa en los 14. Causa estructural: el coste de ida y vuelta (≈12 pb) equivale a ≈0,2 R con stops de 1-2 ATR de 1 h. Con 1-2 operaciones al día el edge bruto tendría que superar ese coste.
 - Aun así los 14 operan en papel hacia delante con datos de Deribit (único proveedor accesible), actualización horaria, para medir en semanas lo que el núcleo tardaría años en mostrar.
 - Skills instalados: ninguno de trading; el catálogo de la organización solo tiene plugins de contabilidad. Referencias comunitarias de GitHub (solo Markdown) usadas como lista de comprobaciones: prueba de truncamiento, estrés de costes ×1,5/2/3, remuestreo Monte Carlo, control de deriva. No se instala código de terceros.
+
+## 2026-10-02 · Mesa de 15 min en paralelo + aprendices
+Petición del dueño: acelerar con velas de 15 min sin tocar la mesa de 1 h, añadir acción de precio (techos/suelos, ineficiencias, patrones de velas) y fórmulas cuantitativas, y que los agentes aprendan sin esperar 90 días.
+Decisión: sistema aparte (`src/desk15`, `paper_state/mesa15`), 13 traders prerregistrados, y aprendices A (individual) y C (colectivo) que vetan contextos donde la evidencia ya cerrada es peor que la media del trader; se evalúan contra su base. Nada toca dinero real.
+Honestidad: el histórico dio 0/13 certificadas y R media ≈ −0,3 por operación (costes); el aprendizaje reduce pérdidas pero no crea ventaja.
