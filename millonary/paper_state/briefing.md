@@ -1,39 +1,43 @@
-# Sesión del comité · 2026-09-30 04:18 UTC
+# Sesión del comité · 2026-10-01 04:17 UTC
 
-**Estado general:** 🟡 AVISO
-**Decisión:** Mantener el objetivo del núcleo: 0.62× de exposición.
+**Estado general:** 🟢 OK
+**Decisión:** Mantener el objetivo del núcleo: 0.61× de exposición.
 **Principio:** los agentes analizan y recomiendan; la operativa la fija el núcleo validado y solo Riesgos puede vetar.
 
-**Avisos:** Gestión de cartera
 
-## 🟢 Riesgos — Sin cuenta todavía
-- No hay operaciones ni equity registradas.
+## 🟢 Riesgos — Operativa permitida · exposición 0.59× · caída 0.0%
+- Distancia a los frenos: caída 0.0% de 30%; pérdida diaria 0.0% de 7%.
+- Exposición 0.59× (tope efectivo 2.0×; el 5× del exchange no se usa).
+- Liquidación (margen cruzado): el precio tendría que moverse ≈ 170% en contra; con esta exposición un gap de -50% costaría -29% del capital.
 
 ## 🟢 Macroeconomía — Entorno NORMAL
-- Fear & Greed 71 (codicia).
-- VIX 16.1 (percentil 28% del último año).
-- Curva 10a-2a: +0.32 pp; 10a 5.24%.
+- Fear & Greed 74 (codicia).
+- VIX 16.0 (percentil 28% del último año).
+- Curva 10a-2a: +0.37 pp; 10a 5.26%.
 - Dólar (índice amplio) -0.2% en 50 días.
 - Funding actual 0.0100% por 8h (percentil 92% del último año); media 30d anualizada 11.0%.
-- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 686 h.
+- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 662 h.
 - Regla histórica probada: recortar la exposición alrededor del FOMC EMPEORÓ el núcleo (Sharpe 0,78 → 0,74; rechazada). Solo se informa, no se actúa.
 
 ## 🟢 Análisis de mercados — Tendencia alcista (3/4 horizontes)
-- Momentum por horizonte: 20d +6.4%, 60d +28.9%, 120d +13.3%, 250d -6.7% → 3/4 positivos.
+- Momentum por horizonte: 20d +6.8%, 60d +33.0%, 120d +17.1%, 250d -6.6% → 3/4 positivos.
 - Ruptura Donchian-50 (4h): LARGO.
-- Precio +17.3% sobre la SMA200 diaria; SMA50 > SMA200.
-- Volatilidad (ATR 4h) 0.99% del precio, percentil 23% del último año.
-- Estructura: último máximo confirmado 85,146 (+2.0 ATR), último mínimo 83,778 (+0.4 ATR).
-- Patrones de velas recientes (informativo, sin ventaja probada): pin_bar bajista.
+- Precio +17.4% sobre la SMA200 diaria; SMA50 > SMA200.
+- Volatilidad (ATR 4h) 1.05% del precio, percentil 28% del último año.
+- Estructura: último máximo confirmado 84,350 (+0.8 ATR), último mínimo 82,500 (-1.3 ATR).
+- Patrones de velas recientes (informativo, sin ventaja probada): engulfing bajista, harami alcista, tweezers alcista, tweezers bajista.
 
-## 🟡 Gestión de cartera — Objetivo 0.62× · actual 0.00×
+## 🟢 Gestión de cartera — Objetivo 0.61× · actual 0.59×
 - Señal = 0,5·A(0.75) + 0,5·B(1) = 0.875.
-- Volatilidad anual (EWMA 45d) 35% → escala mín(2; 25%/σ) = 0.71.
-- Exposición objetivo 0.62× frente a 0.00× actual (banda ±20%) → REBALANCEO pendiente.
-- Coste de funding estimado a esta exposición: +0.00% anual del capital.
+- Volatilidad anual (EWMA 45d) 36% → escala mín(2; 25%/σ) = 0.70.
+- Exposición objetivo 0.61× frente a 0.59× actual (banda ±20%) → sin cambios necesarios.
+- Coste de funding estimado a esta exposición: +6.41% anual del capital.
+- Cuenta pequeña: el lote mínimo (84 USDT) es el 8% del capital; el objetivo se redondea a ese paso.
 
-## 🟢 Mesa de trading — Sin órdenes todavía
-- La mesa ejecutará cuando el núcleo pida cambiar la exposición.
+## 🟢 Mesa de trading — 1 órdenes · 1 lotes abiertos
+- 1 órdenes ejecutadas (comisiones 0.29 USDT). Modelo de costes: 5 pb comisión + 2 pb deslizamiento por lado.
+  2026-09-29 20:00 BUY 0.0070 BTC @ 83,579.1 (BANDA)
+- Lotes abiertos: 1 (no realizado -0.03 USDT). Cuadre del diario: OK.
 
 ## 🟢 Derivados y arbitraje — Carry teórico +11.0% anual (investigación)
 - Funding anualizado: 30d +11.0%, 1 año +3.8%.
@@ -42,45 +46,47 @@
 
 ## 🟢 Laboratorio (cuantitativo / ML) — 6 variantes en sombra · 0 días de prueba
 - Todas las variantes arrancan planas el 2026-09-29 16:30 UTC; 0 días hacia delante.
-  solo pata A (momentum diario): retorno +0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
-  solo pata B (Donchian 50): retorno +0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
-  vol. objetivo 20 %: retorno +0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
-  vol. objetivo 35 %: retorno +0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
-  horizontes cortos (10/20/40/60d): retorno +0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
-  horizontes largos (60/120/250/365d): retorno +0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
+  solo pata A (momentum diario): retorno -0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
+  solo pata B (Donchian 50): retorno -0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
+  vol. objetivo 20 %: retorno -0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
+  vol. objetivo 35 %: retorno -0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
+  horizontes cortos (10/20/40/60d): retorno -0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
+  horizontes largos (60/120/250/365d): retorno -0.0% · caída 0.0% · Sharpe n/d → sin evidencia (faltan días)
 - Contexto histórico de cada variante (2017-2025-06, solo exploratorio) en reports/lab_historia.json; cada una cuenta como prueba en el registro.
 - Regla de promoción: ≥ 90 días hacia delante, Sharpe ≥ núcleo + 0,3, caída ≤ 1,2× la del núcleo, embudo de robustez superado.
 
-## 🟢 Incubadora de traders — 15 traders en sombra · 0 certificadas · 0 días
+## 🟢 Incubadora de traders — 15 traders en sombra · 0 certificadas · 1 días
 - Histórico (examen 2024-01→2025-06, 15 traders): certificadas 0/15 · PBO del conjunto 0.31. Mejor Sharpe en examen ≈ 1.19 (buy&hold 1.47); menor p (Holm) del α = 1.00.
 - Reparto de capital simulado por mérito: núcleo v1 100%.
 - Mesa de estrategias minadas: vacía (ninguna certificada; el capital sigue 100 % en el núcleo).
-- Ranking hacia delante (0 días, sombra; sin capital, sin valor estadístico hasta ≥ 90 días):
-  S01 Parabolic SAR + EMA200: +0.00% · caída 0.0% · 0 ops · posición +0
+- Ranking hacia delante (1 días, sombra; sin capital, sin valor estadístico hasta ≥ 90 días):
   S02 Ichimoku: +0.00% · caída 0.0% · 0 ops · posición +0
   S03 Bollinger + RSI (reversión): +0.00% · caída 0.0% · 0 ops · posición +0
   S04 Keltner ruptura: +0.00% · caída 0.0% · 0 ops · posición +0
   S05 RSI(2) retroceso (largo): +0.00% · caída 0.0% · 0 ops · posición +0
+  S07 SMA 7-25 + filtro 200 (largo): +0.00% · caída 0.0% · 0 ops · posición +0
 
-## 🟢 Mesa de opciones — IV 34% vs RV 34% · put 10 % OTM 0.76%
-- Vencimiento a 30.2 días: volatilidad implícita ATM 34.0% · realizada 30 d 34.4% · prima -0.5 pts.
-- Sesgo 25Δ (puts − calls): +0.2 pts. Put 10 % por debajo (K≈75,000): cuesta 0.76% del nocional.
+## 🟢 Mesa de opciones — IV 34% vs RV 35% · put 10 % OTM 0.88%
+- Vencimiento a 29.2 días: volatilidad implícita ATM 33.8% · realizada 30 d 34.7% · prima -0.9 pts.
+- Sesgo 25Δ (puts − calls): +1.4 pts. Put 10 % por debajo (K≈76,000): cuesta 0.88% del nocional.
 - Prima de volatilidad normal.
 - ESTADO: solo informa. La protección de cola no se activa: no se puede validar con histórico (sin datos históricos de opciones).
 
-## 🟢 Mesa intradía — 1 operaciones · 1 abiertas
-- 14 traders en papel · 1 operaciones cerradas (2.0 al día entre todos) · 1 posiciones abiertas.
-- Datos: Deribit BTC-PERPETUAL 1 h (velas cerradas), última vela cerrada 2026-09-30 04:00 UTC.
-  I12 Ichimoku 1 h: +0.10% · 0 ops · R total +0.00
-  I01 Rango asiático → Londres/NY: +0.00% · 0 ops · R total +0.00
-  I02 Ruptura Donchian 24 h: +0.00% · 0 ops · R total +0.00
+## 🟢 Mesa intradía — 14 operaciones · 1 abiertas
+- 14 traders en papel · 14 operaciones cerradas (9.4 al día entre todos) · 1 posiciones abiertas.
+- Datos: Deribit BTC-PERPETUAL 1 h (velas cerradas), última vela cerrada 2026-10-01 04:00 UTC.
+  I01 Rango asiático → Londres/NY: +0.78% · 1 ops · R total +1.93
+  I14 Apertura de Nueva York: +0.47% · 1 ops · R total +1.08
+  I05 Cruce EMA 9/21 + EMA200: +0.38% · 2 ops · R total +0.77
 - El histórico 2020-2026 da expectativa negativa tras costes en los 14 (0/14 certificadas): esta prueba mide si se confirma hacia delante.
 
-## 🟢 Escuela — Sin operaciones que analizar todavía
-- La Escuela empieza a aprender cuando haya lotes cerrados: clasifica cada uno por contexto y mide dónde falla el sistema.
+## 🟢 Escuela — 0 lotes cerrados analizados · 0 categorías débiles
+- Sin lotes cerrados
+- Aún no hay lotes cerrados con contexto suficiente para clasificar.
+- Con muestras < 20 estas cifras son ANECDÓTICAS: se muestran para acumular evidencia, no para cambiar reglas.
 
 ## 🟢 Infraestructura — Sano · datos hace 28.3 h
-- Última vela cerrada a las 2026-09-29 00:00 UTC (hace 28.3 h) · fuente: Binance Vision.
+- Última vela cerrada a las 2026-09-30 00:00 UTC (hace 28.3 h) · fuente: Binance Vision.
 - Base de datos: ok.
 - Disco libre 29.3 GB.
 
