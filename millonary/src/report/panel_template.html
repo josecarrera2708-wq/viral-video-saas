@@ -65,6 +65,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
   <nav role="tablist" aria-label="Secciones">
     <button role="tab" aria-selected="true" data-tab="sala">Sala</button>
     <button role="tab" aria-selected="false" data-tab="intradia">Intradía</button>
+    <button role="tab" aria-selected="false" data-tab="marcador">Marcador</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
@@ -103,6 +104,17 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
       <p class="foot">Los patrones salen de las operaciones perdedoras de cada trader. Con menos de 30 operaciones son hipótesis, no conclusiones: solo pasan al ciclo de mejora (con prerregistro y validación) cuando se repiten en una muestra suficiente. Nada se aplica automáticamente.</p></div>
     <h2>Cuenta principal (núcleo v1)</h2>
     <div class="card"><div class="tw"><table id="coreTable"></table></div></div>
+  </section>
+
+  <section class="panel sec" id="tab-marcador" hidden>
+    <h2>Marcador: ganadas y perdidas</h2>
+    <div class="card"><div class="funnel" id="mcKpis"></div><p class="foot" id="mcNote"></p></div>
+    <h2>Por trader</h2>
+    <div class="card"><div class="tw"><table id="mcTable"></table></div><p class="foot">Ganada = operación cerrada con R &gt; 0; perdida = R ≤ 0. «Abiertas» aún no cuentan. Con pocas operaciones el porcentaje de acierto no demuestra nada: lo que importa es la R media tras costes.</p></div>
+    <h2>Núcleo (cuenta de papel oficial)</h2>
+    <div class="card"><div id="mcCore"></div></div>
+    <h2>Últimas operaciones cerradas</h2>
+    <div class="card"><div class="tw"><table id="mcLast"></table></div></div>
   </section>
 
   <section class="panel sec" id="tab-ranking" hidden>
@@ -160,7 +172,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','ranking','aprender','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -232,6 +244,20 @@ if (I) {
     <tr><td class="mono">${esc(String(t.abre).slice(5,16))}</td><td class="n num">${f0(t.px_entrada)}</td><td class="n num neg">${f0(t.sl)}</td><td class="n num pos">${t.tp ? f0(t.tp) : '—'}</td><td class="n num">${t.lote_btc} BTC</td><td class="n num">${f0(t.riesgo_usdt,2)} $</td><td class="n num">${t.barras} h</td><td class="n num">${Number(t.mfe_R).toFixed(2)} R</td><td class="n num">${Number(t.mae_R).toFixed(2)} R</td><td class="n num">${f0(t.comision_usdt,2)} $</td></tr></table></div>
     <p style="margin:8px 0 2px"><b>Por qué salió así</b></p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(l => `<li>${esc(l)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
 } else $('#idTable').innerHTML = '<tr><td class="dim">Sin datos intradía todavía.</td></tr>';
+
+
+// marcador
+{ const f2 = (x, d=2) => Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  const TR = (D.intradia_trades || []), cerr = TR.filter(t => !t.abierta), ab = TR.filter(t => t.abierta);
+  const win = cerr.filter(t => t.R > 0).length, los = cerr.length - win, rs = cerr.reduce((a,t) => a + t.R, 0), pnl = cerr.reduce((a,t) => a + t.pnl_usdt, 0);
+  $('#mcKpis').innerHTML = [[win,'ganadas'],[los,'perdidas'],[ab.length,'abiertas'],[cerr.length ? Math.round(100*win/cerr.length)+' %' : '—','acierto'],[(rs>=0?'+':'')+f2(rs)+' R','R total'],[(pnl>=0?'+':'')+f2(pnl)+' $','resultado (sin dinero real)']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+  $('#mcNote').textContent = 'Mesa intradía (14 traders con 1.000 USDT virtuales cada uno). Muestra aún muy pequeña para concluir.';
+  const by = {}; TR.forEach(t => { const b = by[t.trader] = by[t.trader] || {w:0,l:0,o:0,R:0,p:0}; if (t.abierta) b.o++; else { t.R > 0 ? b.w++ : b.l++; b.R += t.R; b.p += t.pnl_usdt; } });
+  $('#mcTable').innerHTML = '<tr><th>Trader</th><th class="n">Ganadas</th><th class="n">Perdidas</th><th class="n">Abiertas</th><th class="n">Acierto</th><th class="n">R total</th><th class="n">Resultado</th></tr>' +
+    Object.entries(by).sort((a,b) => b[1].R - a[1].R).map(([k,v]) => `<tr><td>${esc(k)}</td><td class="n num pos">${v.w}</td><td class="n num neg">${v.l}</td><td class="n num">${v.o}</td><td class="n num">${v.w+v.l ? Math.round(100*v.w/(v.w+v.l))+' %' : '—'}</td><td class="n num ${cls(v.R)}">${(v.R>=0?'+':'')+f2(v.R)}</td><td class="n num ${cls(v.p)}">${(v.p>=0?'+':'')+f2(v.p)} $</td></tr>`).join('') || '<tr><td class="dim">Aún sin operaciones.</td></tr>';
+  const C = D.nucleo_ordenes || [], Sm = (D.summary || {}).posiciones;
+  $('#mcCore').innerHTML = Sm ? `<table><tr><td>Posiciones cerradas</td><td class="n num">${Sm.cerradas}</td></tr><tr><td>Ganadas</td><td class="n num pos">${Sm.ganan}</td></tr><tr><td>Perdidas</td><td class="n num neg">${Sm.pierden}</td></tr><tr><td>Abiertas</td><td class="n num">${Sm.abiertas}</td></tr><tr><td>Órdenes ejecutadas</td><td class="n num">${C.length}</td></tr></table><p class="foot">El núcleo opera a 4 h con tendencia y mantiene posiciones durante días: tardará semanas en cerrar una.</p>` : '<p class="dim">Aún sin datos del núcleo.</p>';
+  $('#mcLast').innerHTML = '<tr><th>Cerró (UTC)</th><th>Trader</th><th>Lado</th><th class="n">R</th><th class="n">Resultado</th><th>Salida</th></tr>' + (cerr.slice().sort((a,b) => String(b.cierra).localeCompare(String(a.cierra))).slice(0,15).map(t => `<tr><td class="mono">${esc(String(t.cierra).slice(5,16))}</td><td>${esc(t.trader)}</td><td>${t.lado}</td><td class="n num ${cls(t.R)}">${(t.R>=0?'+':'')+f2(t.R)}</td><td class="n num ${cls(t.pnl_usdt)}">${(t.pnl_usdt>=0?'+':'')+f2(t.pnl_usdt)} $</td><td>${esc(t.salida)}</td></tr>`).join('') || '<tr><td class="dim">Aún sin operaciones cerradas.</td></tr>'); }
 
 // aprendizaje y núcleo
 const AP = D.aprendizaje || {};

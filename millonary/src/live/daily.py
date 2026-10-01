@@ -39,7 +39,7 @@ def main(now: pd.Timestamp | None = None) -> dict:
     (d / "briefing.md").write_text(md); (d / "briefing.json").write_text(json.dumps(s, indent=1, default=str))
     export_journal(ctx.journal, d)
     if store.rows("equity"):
-        rep = forward_report(cfg, store, bars, funding.copy() if len(funding) else fund_year, start - INTERVAL, load_bands())
+        rep = forward_report(cfg, store, bars, funding.copy() if len(funding) else fund_year, start.floor(INTERVAL) - INTERVAL, load_bands())   # vela anterior a la primera procesada (el inicio puede no caer en la rejilla de 4 h)
         (d / "informe_prueba.md").write_text(informe_texto(rep)); (d / "informe_prueba.json").write_text(json.dumps(rep, indent=1, default=str))
         out["puertas"] = rep.get("puertas"); out["equity"] = store.rows("equity")[-1]["equity"]
     out["estado_comite"] = s["estado"]

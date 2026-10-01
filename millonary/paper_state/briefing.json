@@ -1,8 +1,8 @@
 {
- "ts": "2026-10-01 04:17:39.199622+00:00",
- "decision": "Mantener el objetivo del n\u00facleo: 0.61\u00d7 de exposici\u00f3n.",
- "objetivo_nucleo": 0.6135457420193983,
- "objetivo_final": 0.6135457420193983,
+ "ts": "2026-10-01 10:11:05.733781+00:00",
+ "decision": "Mantener el objetivo del n\u00facleo: 0.62\u00d7 de exposici\u00f3n.",
+ "objetivo_nucleo": 0.622285465172533,
+ "objetivo_final": 0.622285465172533,
  "veto": false,
  "estado": "OK",
  "alertas": [],
@@ -22,28 +22,32 @@
   ],
   [
    "Mesa intrad\u00eda",
+   "I10 R\u00e1faga de momentum abierta: CORTO @ 83368"
+  ],
+  [
+   "Mesa intrad\u00eda",
    "I12 Ichimoku 1 h abierta: CORTO @ 83647"
   ]
  ],
  "departamentos": [
   {
    "dept": "Riesgos",
-   "headline": "Operativa permitida \u00b7 exposici\u00f3n 0.59\u00d7 \u00b7 ca\u00edda 0.0%",
+   "headline": "Operativa permitida \u00b7 exposici\u00f3n 0.59\u00d7 \u00b7 ca\u00edda 0.4%",
    "status": "OK",
    "metrics": {
-    "caida_desde_maximo": 3.335140368010414e-05,
+    "caida_desde_maximo": 0.003742184637251178,
     "perdida_dia": 0.0,
-    "exposicion": 0.5853910236123392,
+    "exposicion": 0.5853090200318001,
     "estres_capital": {
      "gap -10%": -0.0585,
      "gap -20%": -0.1171,
      "gap -35%": -0.2049,
      "gap -50%": -0.2927
     },
-    "distancia_liquidacion": 1.7032598804286168
+    "distancia_liquidacion": 1.7034992128528443
    },
    "notes": [
-    "Distancia a los frenos: ca\u00edda 0.0% de 30%; p\u00e9rdida diaria 0.0% de 7%.",
+    "Distancia a los frenos: ca\u00edda 0.4% de 30%; p\u00e9rdida diaria 0.0% de 7%.",
     "Exposici\u00f3n 0.59\u00d7 (tope efectivo 2.0\u00d7; el 5\u00d7 del exchange no se usa).",
     "Liquidaci\u00f3n (margen cruzado): el precio tendr\u00eda que moverse \u2248 170% en contra; con esta exposici\u00f3n un gap de -50% costar\u00eda -29% del capital."
    ],
@@ -60,9 +64,9 @@
     "vix_percentil_1a": 0.276,
     "curva_10y_2y": 0.3700000000000001,
     "dolar_50d": -0.0016717621534618754,
-    "funding_anualizado_30d": 0.10950000000000001,
-    "funding_percentil_1a": 0.9210045662100457,
-    "horas_al_proximo_evento": 661.7057778827777,
+    "funding_anualizado_30d": 0.055270125,
+    "funding_percentil_1a": 0.9584474885844749,
+    "horas_al_proximo_evento": 655.8150739497222,
     "banderas": []
    },
    "notes": [
@@ -70,8 +74,8 @@
     "VIX 16.0 (percentil 28% del \u00faltimo a\u00f1o).",
     "Curva 10a-2a: +0.37 pp; 10a 5.26%.",
     "D\u00f3lar (\u00edndice amplio) -0.2% en 50 d\u00edas.",
-    "Funding actual 0.0100% por 8h (percentil 92% del \u00faltimo a\u00f1o); media 30d anualizada 11.0%.",
-    "Pr\u00f3ximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 662 h.",
+    "Funding actual 0.0100% por 8h (percentil 96% del \u00faltimo a\u00f1o); media 30d anualizada 5.5%.",
+    "Pr\u00f3ximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 656 h.",
     "Regla hist\u00f3rica probada: recortar la exposici\u00f3n alrededor del FOMC EMPEOR\u00d3 el n\u00facleo (Sharpe 0,78 \u2192 0,74; rechazada). Solo se informa, no se act\u00faa."
    ],
    "shadow": [],
@@ -83,49 +87,49 @@
    "status": "OK",
    "metrics": {
     "retorno_por_horizonte": {
-     "20": 0.06849117283658779,
-     "60": 0.3303314195536422,
-     "120": 0.17135093113325817,
-     "250": -0.06584113898244492
+     "20": 0.09199889724664434,
+     "60": 0.33100555322866,
+     "120": 0.2524636595234526,
+     "250": -0.0667919476276454
     },
     "donchian50": "largo",
-    "precio_vs_sma200d": 0.17443324777837343,
-    "sma50_vs_sma200": 0.07945069817015682,
-    "atr_pct": 0.010458806540943217,
-    "volatilidad_percentil_1a": 0.28127853881278536,
-    "soporte": 82500.1,
-    "resistencia": 84350.0
+    "precio_vs_sma200d": 0.17274339149917117,
+    "sma50_vs_sma200": 0.08412554856254384,
+    "atr_pct": 0.010875306182982275,
+    "volatilidad_percentil_1a": 0.3269406392694064,
+    "soporte": 82851.5,
+    "resistencia": 84554.9
    },
    "notes": [
-    "Momentum por horizonte: 20d +6.8%, 60d +33.0%, 120d +17.1%, 250d -6.6% \u2192 3/4 positivos.",
+    "Momentum por horizonte: 20d +9.2%, 60d +33.1%, 120d +25.2%, 250d -6.7% \u2192 3/4 positivos.",
     "Ruptura Donchian-50 (4h): LARGO.",
-    "Precio +17.4% sobre la SMA200 diaria; SMA50 > SMA200.",
-    "Volatilidad (ATR 4h) 1.05% del precio, percentil 28% del \u00faltimo a\u00f1o.",
-    "Estructura: \u00faltimo m\u00e1ximo confirmado 84,350 (+0.8 ATR), \u00faltimo m\u00ednimo 82,500 (-1.3 ATR).",
-    "Patrones de velas recientes (informativo, sin ventaja probada): engulfing bajista, harami alcista, tweezers alcista, tweezers bajista."
+    "Precio +17.3% sobre la SMA200 diaria; SMA50 > SMA200.",
+    "Volatilidad (ATR 4h) 1.09% del precio, percentil 33% del \u00faltimo a\u00f1o.",
+    "Estructura: \u00faltimo m\u00e1ximo confirmado 84,555 (+1.1 ATR), \u00faltimo m\u00ednimo 82,852 (-0.8 ATR).",
+    "Patrones de velas recientes (informativo, sin ventaja probada): harami alcista, pin_bar bajista, stars bajista, tweezers alcista."
    ],
    "shadow": [],
    "veto": false
   },
   {
    "dept": "Gesti\u00f3n de cartera",
-   "headline": "Objetivo 0.61\u00d7 \u00b7 actual 0.59\u00d7",
+   "headline": "Objetivo 0.62\u00d7 \u00b7 actual 0.59\u00d7",
    "status": "OK",
    "metrics": {
     "pata_A": 0.75,
     "pata_B": 1.0,
     "senal": 0.875,
-    "volatilidad_anual_ewma": 0.35653413432552816,
-    "escala_vol": 0.7011951337364551,
-    "objetivo": 0.6135457420193983,
-    "exposicion_actual": 0.5853910236123392,
-    "coste_funding_anual_estimado": 0.06410031708555114
+    "volatilidad_anual_ewma": 0.3515267706587844,
+    "escala_vol": 0.7111833887686092,
+    "objetivo": 0.622285465172533,
+    "exposicion_actual": 0.5853090200318001,
+    "coste_funding_anual_estimado": 0.0323501027007851
    },
    "notes": [
     "Se\u00f1al = 0,5\u00b7A(0.75) + 0,5\u00b7B(1) = 0.875.",
-    "Volatilidad anual (EWMA 45d) 36% \u2192 escala m\u00edn(2; 25%/\u03c3) = 0.70.",
-    "Exposici\u00f3n objetivo 0.61\u00d7 frente a 0.59\u00d7 actual (banda \u00b120%) \u2192 sin cambios necesarios.",
-    "Coste de funding estimado a esta exposici\u00f3n: +6.41% anual del capital.",
+    "Volatilidad anual (EWMA 45d) 35% \u2192 escala m\u00edn(2; 25%/\u03c3) = 0.71.",
+    "Exposici\u00f3n objetivo 0.62\u00d7 frente a 0.59\u00d7 actual (banda \u00b120%) \u2192 sin cambios necesarios.",
+    "Coste de funding estimado a esta exposici\u00f3n: +3.24% anual del capital.",
     "Cuenta peque\u00f1a: el lote m\u00ednimo (84 USDT) es el 8% del capital; el objetivo se redondea a ese paso."
    ],
    "shadow": [],
@@ -143,22 +147,22 @@
    "notes": [
     "1 \u00f3rdenes ejecutadas (comisiones 0.29 USDT). Modelo de costes: 5 pb comisi\u00f3n + 2 pb deslizamiento por lado.",
     "  2026-09-29 20:00 BUY 0.0070 BTC @ 83,579.1 (BANDA)",
-    "Lotes abiertos: 1 (no realizado -0.03 USDT). Cuadre del diario: OK."
+    "Lotes abiertos: 1 (no realizado -0.46 USDT). Cuadre del diario: OK."
    ],
    "shadow": [],
    "veto": false
   },
   {
    "dept": "Derivados y arbitraje",
-   "headline": "Carry te\u00f3rico +11.0% anual (investigaci\u00f3n)",
+   "headline": "Carry te\u00f3rico +5.5% anual (investigaci\u00f3n)",
    "status": "OK",
    "metrics": {
-    "funding_30d_anual": 0.10950000000000001,
-    "funding_1a_anual": 0.03828079
+    "funding_30d_anual": 0.055270125,
+    "funding_1a_anual": 0.03387379
    },
    "notes": [
-    "Funding anualizado: 30d +11.0%, 1 a\u00f1o +3.8%.",
-    "Carry te\u00f3rico 'cash-and-carry' (largo spot + corto perpetuo): \u2248 11.0% anual bruto a 30d; el coste de montar y desmontar es \u2248 4 \u00d7 5 pb = 0,20 % y exige capital en spot y margen en el perpetuo.",
+    "Funding anualizado: 30d +5.5%, 1 a\u00f1o +3.4%.",
+    "Carry te\u00f3rico 'cash-and-carry' (largo spot + corto perpetuo): \u2248 5.5% anual bruto a 30d; el coste de montar y desmontar es \u2248 4 \u00d7 5 pb = 0,20 % y exige capital en spot y margen en el perpetuo.",
     "ESTADO: INVESTIGACI\u00d3N. No se opera: requiere ejecuci\u00f3n en dos mercados y gesti\u00f3n del riesgo de contraparte; se evaluar\u00e1 como pata aparte con su propio protocolo."
    ],
    "shadow": [],
@@ -166,62 +170,62 @@
   },
   {
    "dept": "Laboratorio (cuantitativo / ML)",
-   "headline": "6 variantes en sombra \u00b7 0 d\u00edas de prueba",
+   "headline": "6 variantes en sombra \u00b7 1 d\u00edas de prueba",
    "status": "OK",
    "metrics": {
     "variantes": {
      "nucleo (referencia)": {
-      "dias": 0,
-      "retorno": -3.491501017571785e-05,
-      "caida_max": 3.491501017571785e-05,
+      "dias": 1,
+      "retorno": -0.0004688560004609821,
+      "caida_max": 0.003908067581395502,
       "sharpe": null
      },
      "solo pata A (momentum diario)": {
-      "dias": 0,
-      "retorno": -2.9906552452940716e-05,
-      "caida_max": 2.9906552452940716e-05,
+      "dias": 1,
+      "retorno": -0.0004019010290966518,
+      "caida_max": 0.003351664863521009,
       "sharpe": null
      },
      "solo pata B (Donchian 50)": {
-      "dias": 0,
-      "retorno": -3.993033427407422e-05,
-      "caida_max": 3.993033427407422e-05,
+      "dias": 1,
+      "retorno": -0.0005358028525619396,
+      "caida_max": 0.004463842264057716,
       "sharpe": null
      },
      "vol. objetivo 20 %": {
-      "dias": 0,
-      "retorno": -2.7905091948832172e-05,
-      "caida_max": 2.7905091948832172e-05,
+      "dias": 1,
+      "retorno": -0.0003751167643800679,
+      "caida_max": 0.003128927688001548,
       "sharpe": null
      },
      "vol. objetivo 35 %": {
-      "dias": 0,
-      "retorno": -4.897522091706907e-05,
-      "caida_max": 4.897522091706907e-05,
+      "dias": 1,
+      "retorno": -0.0006562867652766258,
+      "caida_max": 0.005462657434835316,
       "sharpe": null
      },
      "horizontes cortos (10/20/40/60d)": {
-      "dias": 0,
-      "retorno": -3.993033427407422e-05,
-      "caida_max": 3.993033427407422e-05,
+      "dias": 1,
+      "retorno": -0.0005358028525619396,
+      "caida_max": 0.004463842264057716,
       "sharpe": null
      },
      "horizontes largos (60/120/250/365d)": {
-      "dias": 0,
-      "retorno": -2.9906552452940716e-05,
-      "caida_max": 2.9906552452940716e-05,
+      "dias": 1,
+      "retorno": -0.0004019010290966518,
+      "caida_max": 0.003351664863521009,
       "sharpe": null
      }
     }
    },
    "notes": [
-    "Todas las variantes arrancan planas el 2026-09-29 16:30 UTC; 0 d\u00edas hacia delante.",
-    "  solo pata A (momentum diario): retorno -0.0% \u00b7 ca\u00edda 0.0% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
-    "  solo pata B (Donchian 50): retorno -0.0% \u00b7 ca\u00edda 0.0% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
-    "  vol. objetivo 20 %: retorno -0.0% \u00b7 ca\u00edda 0.0% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
-    "  vol. objetivo 35 %: retorno -0.0% \u00b7 ca\u00edda 0.0% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
-    "  horizontes cortos (10/20/40/60d): retorno -0.0% \u00b7 ca\u00edda 0.0% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
-    "  horizontes largos (60/120/250/365d): retorno -0.0% \u00b7 ca\u00edda 0.0% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
+    "Todas las variantes arrancan planas el 2026-09-29 16:30 UTC; 1 d\u00edas hacia delante.",
+    "  solo pata A (momentum diario): retorno -0.0% \u00b7 ca\u00edda 0.3% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
+    "  solo pata B (Donchian 50): retorno -0.1% \u00b7 ca\u00edda 0.4% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
+    "  vol. objetivo 20 %: retorno -0.0% \u00b7 ca\u00edda 0.3% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
+    "  vol. objetivo 35 %: retorno -0.1% \u00b7 ca\u00edda 0.5% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
+    "  horizontes cortos (10/20/40/60d): retorno -0.1% \u00b7 ca\u00edda 0.4% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
+    "  horizontes largos (60/120/250/365d): retorno -0.0% \u00b7 ca\u00edda 0.3% \u00b7 Sharpe n/d \u2192 sin evidencia (faltan d\u00edas)",
     "Contexto hist\u00f3rico de cada variante (2017-2025-06, solo exploratorio) en reports/lab_historia.json; cada una cuenta como prueba en el registro.",
     "Regla de promoci\u00f3n: \u2265 90 d\u00edas hacia delante, Sharpe \u2265 n\u00facleo + 0,3, ca\u00edda \u2264 1,2\u00d7 la del n\u00facleo, embudo de robustez superado."
    ],
@@ -230,15 +234,15 @@
   },
   {
    "dept": "Incubadora de traders",
-   "headline": "15 traders en sombra \u00b7 0 certificadas \u00b7 1 d\u00edas",
+   "headline": "15 traders en sombra \u00b7 0 certificadas \u00b7 2 d\u00edas",
    "status": "OK",
    "metrics": {
     "forward": {
      "S01 Parabolic SAR + EMA200": {
-      "retorno": -5.684279053730368e-05,
-      "caida_max": 5.684279053730368e-05,
+      "retorno": -0.0007663354382617671,
+      "caida_max": 0.006377236760283789,
       "ops": 1,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 1.0
      },
@@ -246,7 +250,7 @@
       "retorno": 0.0,
       "caida_max": 0.0,
       "ops": 0,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
@@ -254,7 +258,7 @@
       "retorno": 0.0,
       "caida_max": 0.0,
       "ops": 0,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
@@ -262,7 +266,7 @@
       "retorno": 0.0,
       "caida_max": 0.0,
       "ops": 0,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
@@ -270,15 +274,15 @@
       "retorno": 0.0,
       "caida_max": 0.0,
       "ops": 0,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
      "S06 Cruce SMA 7-25": {
-      "retorno": -0.0013431572094627642,
-      "caida_max": 0.0013431572094627642,
+      "retorno": -0.0007555304832757015,
+      "caida_max": 0.010057059455663264,
       "ops": 1,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": -1.0
      },
@@ -286,63 +290,63 @@
       "retorno": 0.0,
       "caida_max": 0.0,
       "ops": 0,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
      "S08 Canal 20 por tercios": {
-      "retorno": 0.0,
-      "caida_max": 0.0,
-      "ops": 0,
-      "dias": 1,
+      "retorno": -0.008755142750290323,
+      "caida_max": 0.008755142750290323,
+      "ops": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
      "S09 Donchian 20/10": {
-      "retorno": -0.0013431572094627642,
-      "caida_max": 0.0013431572094627642,
+      "retorno": -0.0007555304832757015,
+      "caida_max": 0.010057059455663264,
       "ops": 1,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": -1.0
      },
      "S10 MACD + EMA200": {
-      "retorno": 0.0,
-      "caida_max": 0.0,
-      "ops": 0,
-      "dias": 1,
+      "retorno": -0.0045099301825412,
+      "caida_max": 0.006377236760283789,
+      "ops": 1,
+      "dias": 2,
       "sharpe": null,
-      "posicion_actual": 0.0
+      "posicion_actual": 1.0
      },
      "S11 Supertrend 10/3": {
-      "retorno": -0.0013431572094627642,
-      "caida_max": 0.0013431572094627642,
+      "retorno": -0.0007555304832757015,
+      "caida_max": 0.010057059455663264,
       "ops": 1,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": -1.0
      },
      "S12 Expansi\u00f3n de volatilidad": {
-      "retorno": 0.0,
-      "caida_max": 0.0,
-      "ops": 0,
-      "dias": 1,
+      "retorno": -0.007077236284004473,
+      "caida_max": 0.007077236284004473,
+      "ops": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      },
      "S13 Retroceso a EMA20": {
-      "retorno": 0.0,
-      "caida_max": 0.0,
-      "ops": 0,
-      "dias": 1,
+      "retorno": -0.0045099301825412,
+      "caida_max": 0.006377236760283789,
+      "ops": 1,
+      "dias": 2,
       "sharpe": null,
-      "posicion_actual": 0.0
+      "posicion_actual": 1.0
      },
      "S14 Momentum 90 d": {
-      "retorno": -5.684279053730368e-05,
-      "caida_max": 5.684279053730368e-05,
+      "retorno": -0.0007663354382617671,
+      "caida_max": 0.006377236760283789,
       "ops": 1,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 1.0
      },
@@ -350,7 +354,7 @@
       "retorno": 0.0,
       "caida_max": 0.0,
       "ops": 0,
-      "dias": 1,
+      "dias": 2,
       "sharpe": null,
       "posicion_actual": 0.0
      }
@@ -361,7 +365,7 @@
     "Hist\u00f3rico (examen 2024-01\u21922025-06, 15 traders): certificadas 0/15 \u00b7 PBO del conjunto 0.31. Mejor Sharpe en examen \u2248 1.19 (buy&hold 1.47); menor p (Holm) del \u03b1 = 1.00.",
     "Reparto de capital simulado por m\u00e9rito: n\u00facleo v1 100%.",
     "Mesa de estrategias minadas: vac\u00eda (ninguna certificada; el capital sigue 100 % en el n\u00facleo).",
-    "Ranking hacia delante (1 d\u00edas, sombra; sin capital, sin valor estad\u00edstico hasta \u2265 90 d\u00edas):",
+    "Ranking hacia delante (2 d\u00edas, sombra; sin capital, sin valor estad\u00edstico hasta \u2265 90 d\u00edas):",
     "  S02 Ichimoku: +0.00% \u00b7 ca\u00edda 0.0% \u00b7 0 ops \u00b7 posici\u00f3n +0",
     "  S03 Bollinger + RSI (reversi\u00f3n): +0.00% \u00b7 ca\u00edda 0.0% \u00b7 0 ops \u00b7 posici\u00f3n +0",
     "  S04 Keltner ruptura: +0.00% \u00b7 ca\u00edda 0.0% \u00b7 0 ops \u00b7 posici\u00f3n +0",
@@ -380,17 +384,17 @@
    "headline": "IV 34% vs RV 35% \u00b7 put 10 % OTM 0.88%",
    "status": "OK",
    "metrics": {
-    "dias_vencimiento": 29.154407411782405,
-    "iv_atm": 0.3378,
-    "sesgo_25d": 0.014000000000000012,
-    "put10_coste_pct": 0.008761202090899861,
+    "dias_vencimiento": 28.908961414571756,
+    "iv_atm": 0.33840000000000003,
+    "sesgo_25d": 0.010799999999999976,
+    "put10_coste_pct": 0.00880432,
     "put10_strike": 76000.0,
-    "rv30": 0.3467130795821112,
-    "prima": -0.008913079582111239
+    "rv30": 0.3476199455009072,
+    "prima": -0.009219945500907156
    },
    "notes": [
-    "Vencimiento a 29.2 d\u00edas: volatilidad impl\u00edcita ATM 33.8% \u00b7 realizada 30 d 34.7% \u00b7 prima -0.9 pts.",
-    "Sesgo 25\u0394 (puts \u2212 calls): +1.4 pts. Put 10 % por debajo (K\u224876,000): cuesta 0.88% del nocional.",
+    "Vencimiento a 28.9 d\u00edas: volatilidad impl\u00edcita ATM 33.8% \u00b7 realizada 30 d 34.8% \u00b7 prima -0.9 pts.",
+    "Sesgo 25\u0394 (puts \u2212 calls): +1.1 pts. Put 10 % por debajo (K\u224876,000): cuesta 0.88% del nocional.",
     "Prima de volatilidad normal.",
     "ESTADO: solo informa. La protecci\u00f3n de cola no se activa: no se puede validar con hist\u00f3rico (sin datos hist\u00f3ricos de opciones)."
    ],
@@ -399,20 +403,21 @@
   },
   {
    "dept": "Mesa intrad\u00eda",
-   "headline": "14 operaciones \u00b7 1 abiertas",
+   "headline": "15 operaciones \u00b7 2 abiertas",
    "status": "OK",
    "metrics": {
-    "resumen": 14
+    "resumen": 15
    },
    "notes": [
-    "14 traders en papel \u00b7 14 operaciones cerradas (9.4 al d\u00eda entre todos) \u00b7 1 posiciones abiertas.",
-    "Datos: Deribit BTC-PERPETUAL 1 h (velas cerradas), \u00faltima vela cerrada 2026-10-01 04:00 UTC.",
+    "14 traders en papel \u00b7 15 operaciones cerradas (8.8 al d\u00eda entre todos) \u00b7 2 posiciones abiertas.",
+    "Datos: Deribit BTC-PERPETUAL 1 h (velas cerradas), \u00faltima vela cerrada 2026-10-01 09:00 UTC.",
     "  I01 Rango asi\u00e1tico \u2192 Londres/NY: +0.78% \u00b7 1 ops \u00b7 R total +1.93",
     "  I14 Apertura de Nueva York: +0.47% \u00b7 1 ops \u00b7 R total +1.08",
-    "  I05 Cruce EMA 9/21 + EMA200: +0.38% \u00b7 2 ops \u00b7 R total +0.77",
+    "  I03 Bollinger + RSI (reversi\u00f3n): +0.37% \u00b7 1 ops \u00b7 R total +0.94",
     "El hist\u00f3rico 2020-2026 da expectativa negativa tras costes en los 14 (0/14 certificadas): esta prueba mide si se confirma hacia delante."
    ],
    "shadow": [
+    "I10 R\u00e1faga de momentum abierta: CORTO @ 83368",
     "I12 Ichimoku 1 h abierta: CORTO @ 83647"
    ],
    "veto": false
@@ -435,15 +440,15 @@
   },
   {
    "dept": "Infraestructura",
-   "headline": "Sano \u00b7 datos hace 28.3 h",
+   "headline": "Sano \u00b7 datos hace 10.2 h",
    "status": "OK",
    "metrics": {
-    "edad_ultima_vela_horas": 28.294222117222223,
+    "edad_ultima_vela_horas": 10.18492605027778,
     "integridad_bd": "ok",
-    "disco_libre_gb": 29.27757312
+    "disco_libre_gb": 29.275344896
    },
    "notes": [
-    "\u00daltima vela cerrada a las 2026-09-30 00:00 UTC (hace 28.3 h) \u00b7 fuente: Binance Vision.",
+    "\u00daltima vela cerrada a las 2026-10-01 00:00 UTC (hace 10.2 h) \u00b7 fuente: Binance Vision.",
     "Base de datos: ok.",
     "Disco libre 29.3 GB."
    ],

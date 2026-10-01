@@ -100,7 +100,7 @@ def replicate_with_fine_lot(cfg: LiveConfig, bars: pd.DataFrame, funding_events:
 def replicate_state(cfg: LiveConfig, bars: pd.DataFrame, funding_events: pd.DataFrame, start_bar: pd.Timestamp, live_store: Store) -> dict:
     """La cuenta REAL de papel (con sus reglas de lote/mínimo y con reinicios) frente a un replay limpio con la misma
     configuración: detecta velas perdidas, estado corrupto o dobles procesados."""
-    tr = replay(cfg, bars, funding_events, str(start_bar), str(bars.index[-1]))
+    tr = replay(cfg, bars, funding_events, str(start_bar + H4), str(bars.index[-1]))   # la cuenta real procesa desde la vela SIGUIENTE a start_bar
     a, b = tr.st.rows("equity"), live_store.rows("equity")
     ea, eb = a[-1]["equity"], b[-1]["equity"]
     return {"equity_replay": ea, "equity_cuenta": eb, "diferencia_rel": eb / ea - 1, "ordenes_replay": len(tr.st.rows("trades")),
