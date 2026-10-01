@@ -23,10 +23,10 @@ LEVELS = [["a favor de la tendencia", "en contra de la tendencia", "sin tendenci
 LABELS = [LEVELS[d][k] for d in range(3) for k in range(3)]
 
 
-def context15(bars: pd.DataFrame) -> pd.DataFrame:
+def context15(bars: pd.DataFrame, ema_n: int = 3200, win: int = 2000) -> pd.DataFrame:
     """Contexto causal por vela de 15 min: tendencia de fondo (EMA 3200 ≈ 800 h) y percentil de volatilidad (ATR/precio, ventana 2000)."""
     c = bars["close"]
-    return pd.DataFrame({"trend": np.sign(c - ema(c, 3200)), "atr_pct": (atr(bars, 14) / c).rolling(2000, min_periods=400).rank(pct=True)}, index=bars.index)
+    return pd.DataFrame({"trend": np.sign(c - ema(c, ema_n)), "atr_pct": (atr(bars, 14) / c).rolling(win, min_periods=win // 5).rank(pct=True)}, index=bars.index)
 
 
 def level_ids(bars: pd.DataFrame, ctx: pd.DataFrame, side: np.ndarray) -> np.ndarray:
