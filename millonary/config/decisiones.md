@@ -60,3 +60,6 @@ estar mucho más cerca que ese nivel. El apalancamiento es un tope, no un objeti
 Petición del dueño: acelerar con velas de 15 min sin tocar la mesa de 1 h, añadir acción de precio (techos/suelos, ineficiencias, patrones de velas) y fórmulas cuantitativas, y que los agentes aprendan sin esperar 90 días.
 Decisión: sistema aparte (`src/desk15`, `paper_state/mesa15`), 13 traders prerregistrados, y aprendices A (individual) y C (colectivo) que vetan contextos donde la evidencia ya cerrada es peor que la media del trader; se evalúan contra su base. Nada toca dinero real.
 Honestidad: el histórico dio 0/13 certificadas y R media ≈ −0,3 por operación (costes); el aprendizaje reduce pérdidas pero no crea ventaja.
+
+## 2026-10-02 · Mesa de 1 h con los 13 traders (petición del dueño) y prueba de stops
+Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horaria). Stops más anchos: solo informe, sin cambios en mesas en marcha.

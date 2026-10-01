@@ -35,10 +35,14 @@ def _eng(bars, f, sp, entry=None):
     return run(bars["open"], bars["high"], bars["low"], bars["close"], ent, np.nan_to_num(sp.stop, nan=0.0), Params(tp_mult=sp.tp_mult, max_bars=sp.max_bars), exit_sig=sp.exit, funding=f)
 
 
-def run_all(now: pd.Timestamp | None = None, start: str | None = None) -> dict:
+DESK15 = {"dir": D, "iv": M15, "load": load_bars, "specs": all_specs, "ctx": context15, "fuente": "Deribit BTC-PERPETUAL 15 min (velas cerradas)"}
+
+
+def run_all(now: pd.Timestamp | None = None, start: str | None = None, dk: dict | None = None) -> dict:
+    dk = dk or DESK15; iv = dk["iv"]
     cfg = json.loads((ROOT / "config" / "mesa15_start.json").read_text()); start = pd.Timestamp(start or cfg["start"]); now = now or pd.Timestamp.now(tz="UTC")
-    bars, f = load_bars(now); specs = all_specs(bars); ctx = context15(bars)
-    live = np.asarray(bars.index + M15 >= start); i0 = int(np.argmax(live)) if live.any() else len(bars)
+    bars, f = dk["load"](now); specs = dk["specs"](bars); ctx = dk["ctx"](bars)
+    live = np.asarray(bars.index + iv >= start); i0 = int(np.argmax(live)) if live.any() else len(bars)
     tb = {k: base_trades(_eng(bars, f, sp), bars, ctx) for k, sp in specs.items()}                 # base sobre TODO el histórico: material de aprendizaje (solo operaciones cerradas)
     pooled = [t for v in tb.values() for t in v]; variants = {}; veto_info = {}
     n = len(bars); ccnt, cs, css = _cum_stats(pooled, n)
@@ -52,7 +56,7 @@ def run_all(now: pd.Timestamp | None = None, start: str | None = None) -> dict:
         from dataclasses import replace
         r = run(bars["open"], bars["high"], bars["low"], bars["close"], ent, np.nan_to_num(sp.stop, nan=0.0), Params(tp_mult=sp.tp_mult, max_bars=sp.max_bars), exit_sig=ex, funding=f)
         rows = [detail(bars, ctx, name, sp, r, i, sp.tp_mult, sp.max_bars) for i in range(int(r["n_trades"]))]
-        t = pd.DataFrame(rows, columns=COLS); t["duracion_min"] = t["barras"] * 15; frames.append(t); cl = t[~t["abierta"]] if len(t) else t
+        t = pd.DataFrame(rows, columns=COLS); t["duracion_min"] = t["barras"] * int(iv.total_seconds() // 60); frames.append(t); cl = t[~t["abierta"]] if len(t) else t
         R = cl["R"].to_numpy() if len(cl) else np.array([]); m = len(R); eq = np.asarray(r["equity"])[i0:]; sd = float(R.std(ddof=1)) if m > 2 else 0.0; mean = float(R.mean()) if m else 0.0
         summ[name] = {"cerradas": m, "por_dia": m / days, "ganan": int((R > 0).sum()), "pierden": int((R <= 0).sum()), "R_media": mean, "R_total": float(R.sum()) if m else 0.0,
                       "pnl_usdt": float(cl["pnl_usdt"].sum()) if m else 0.0, "equity": float(eq[-1]) if len(eq) else 1000.0, "retorno": float(eq[-1] / 1000 - 1) if len(eq) else 0.0,
@@ -63,8 +67,8 @@ def run_all(now: pd.Timestamp | None = None, start: str | None = None) -> dict:
     return {"bars": bars, "now": now, "start": start, "summ": summ, "trades": allt, "veto": veto_info, "days": days, "funding_ok": bool(np.any(f[-200:] != 0))}
 
 
-def main(now: pd.Timestamp | None = None) -> dict:
-    D.mkdir(parents=True, exist_ok=True); o = run_all(now); allt, summ = o["trades"], o["summ"]
+def main(now: pd.Timestamp | None = None, dk: dict | None = None) -> dict:
+    dk = dk or DESK15; D = dk["dir"]; iv = dk["iv"]; D.mkdir(parents=True, exist_ok=True); o = run_all(now, dk=dk); allt, summ = o["trades"], o["summ"]
     if len(allt):
         allt.assign(lecciones=allt["lecciones"].map(lambda x: " | ".join(x))).to_csv(D / "trades.csv", index=False)
         (D / "trades_detalle.json").write_text(json.dumps(allt.sort_values("abre", ascending=False).head(400).to_dict("records"), default=str, ensure_ascii=False, indent=1))
@@ -76,7 +80,7 @@ def main(now: pd.Timestamp | None = None) -> dict:
     (D / "aprendices.json").write_text(json.dumps({"generado": str(o["now"]), "reglas": {"A": f"n ≥ {N_MIN['A']} con operaciones propias", "C": f"n ≥ {N_MIN['C']} con operaciones de toda la sala", "t": "t ≤ −1 frente a la media global"},
                                                    "vetado": learned, "estado": o["veto"]}, ensure_ascii=False, indent=1, default=str))
     bars = o["bars"]
-    out = {"generado": str(o["now"]), "ultima_vela_cerrada": str(bars.index[-1] + M15), "inicio": str(o["start"]), "fuente": "Deribit BTC-PERPETUAL 15 min (velas cerradas)", "funding_disponible": o["funding_ok"],
+    out = {"generado": str(o["now"]), "ultima_vela_cerrada": str(bars.index[-1] + iv), "inicio": str(o["start"]), "fuente": dk["fuente"], "funding_disponible": o["funding_ok"],
            "precio_actual": float(bars["close"].iloc[-1]), "traders": summ, "trades_totales": int(sum(v["cerradas"] for k, v in summ.items() if " · " not in k)),
            "por_dia_total": float(sum(v["por_dia"] for k, v in summ.items() if " · " not in k))}
     (D / "resumen.json").write_text(json.dumps(out, indent=1, default=str)); return out

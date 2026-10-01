@@ -33,3 +33,7 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - Examen sellado 2025-10-01→2026-09-29 ejecutado UNA vez (`reports/mesa15_resultados.md`): **0/13 certificadas**; los 13 con R media negativa en construcción, validación y examen (costes ≈ −0,3 R por operación con stops de ≈ 0,4 %); 20 de 26 aprendices reducen la pérdida de su base en validación y examen con ≥ 30 operaciones, pero siguen negativos (aprender a evitar los peores contextos no crea ventaja donde no la hay).
 - Tests: `tests/test_desk15.py` (causalidad de los 13 setups por truncamiento, veto causal del aprendiz, paginación de datos, funding por vela).
 - Hacia delante: inicio 2026-10-02 00:00 UTC, rutina horaria compartida con la mesa de 1 h.
+
+## 2026-10-02 · Mesa de 1 h (13 traders ÷4) y anchura del stop
+- Stop ×1,5 / ×2,0 (mesa 15 min, validación): R media −0,31 → −0,19 / −0,14; mesa 1 h: −0,16 → −0,09 / −0,07. Mejor en 12-13 de 13 traders, pero todo sigue negativo; el examen confirma (segunda mirada en 15 min). Informe: reports/mesa15_stops.md, mesa1h_stops.md. Nada adoptado.
+- Mesa 1 h: 0/13 certificadas (examen R −0,27 … 0,00; mejor Q01 R 0,00, P07 −0,03); 5 aprendices mejoran a su base (P01·C, P02·A, P03·C, P04·A, P04·C), hipótesis. reports/mesa1h_resultados.md.
