@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02 09:10:39.041102+00:00",
+ "generado": "2026-10-02 09:14:03.385826+00:00",
  "ultima_vela_cerrada": "2026-10-02 09:00:00+00:00",
  "inicio": "2026-10-02 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas, desde 15 min)",
@@ -637,7 +637,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas": {
    "cerradas": 1,
-   "por_dia": 2.615088002501677,
+   "por_dia": 2.599013242881706,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1202741215256207,
@@ -686,7 +686,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 2.615088002501677,
+   "por_dia": 2.599013242881706,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1202741215256207,
@@ -735,7 +735,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 2.615088002501677,
+   "por_dia": 2.599013242881706,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1202741215256207,
@@ -829,7 +829,7 @@
   },
   "Q05 Desequilibrio de flujo": {
    "cerradas": 1,
-   "por_dia": 2.615088002501677,
+   "por_dia": 2.599013242881706,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1370642321516193,
@@ -865,7 +865,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 2.615088002501677,
+   "por_dia": 2.599013242881706,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1370642321516193,
@@ -931,5 +931,5 @@
   }
  },
  "trades_totales": 2,
- "por_dia_total": 5.230176005003354
+ "por_dia_total": 5.198026485763412
 }
