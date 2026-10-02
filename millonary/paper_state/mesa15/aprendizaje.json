@@ -1,6 +1,6 @@
 {
  "P02 Pin bar en techo/suelo": {
-  "cerradas": 2,
+  "cerradas": 3,
   "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 2,
@@ -11,7 +11,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 2,
+  "cerradas": 3,
   "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 1,

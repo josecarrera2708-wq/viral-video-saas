@@ -33,7 +33,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q03 Régimen por razón de varianzas": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 1,
