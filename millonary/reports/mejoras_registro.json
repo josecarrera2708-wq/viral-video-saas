@@ -1177,7 +1177,33 @@
     "S15 RSI14 + EMA200|O2 solo largos": "E3 sombra",
     "S15 RSI14 + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra"
    }
+  },
+  {
+   "fecha": "2026-10-02",
+   "etapas": {
+    "S01 Parabolic SAR + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S02 Ichimoku|O2 solo largos": "E3 sombra",
+    "S02 Ichimoku|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S03 Bollinger + RSI (reversi\u00f3n)|O2 solo largos": "E3 sombra",
+    "S03 Bollinger + RSI (reversi\u00f3n)|O4 stop 3\u00d7ATR": "E3 sombra",
+    "S04 Keltner ruptura|O2 solo largos": "E3 sombra",
+    "S04 Keltner ruptura|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S06 Cruce SMA 7-25|O2 solo largos": "E3 sombra",
+    "S07 SMA 7-25 + filtro 200 (largo)|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S08 Canal 20 por tercios|O2 solo largos": "E3 sombra",
+    "S08 Canal 20 por tercios|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S09 Donchian 20/10|O2 solo largos": "E3 sombra",
+    "S09 Donchian 20/10|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S10 MACD + EMA200|O2 solo largos": "E3 sombra",
+    "S10 MACD + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S11 Supertrend 10/3|O2 solo largos": "E3 sombra",
+    "S11 Supertrend 10/3|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S12 Expansi\u00f3n de volatilidad|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S14 Momentum 90 d|O2 solo largos": "E3 sombra",
+    "S15 RSI14 + EMA200|O2 solo largos": "E3 sombra",
+    "S15 RSI14 + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra"
+   }
   }
  ],
- "ultima_actualizacion": "2026-10-02 09:10:46.609269+00:00"
+ "ultima_actualizacion": "2026-10-02 09:34:24.962435+00:00"
 }

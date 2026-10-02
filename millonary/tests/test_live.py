@@ -308,3 +308,41 @@ def test_second_process_cannot_process_the_same_bar_twice():
     ra = a.step(bars.iloc[:1101], _noF(), now); rb = b.step(bars.iloc[:1101], _noF(), now)
     assert ra["status"] == "ok" and rb["status"] == "ya_procesada"
     assert len(a.st.rows("equity")) == 1
+
+
+def test_synthetic_funding_is_corrected_when_real_rate_is_published():
+    """Binance Vision publica el funding por meses: lo cobrado con la tasa sintética (0,01 %/8 h) se corrige con la real,
+    con las unidades y el precio de entonces, y la cuenta termina igual que un replay con la tasa real desde el principio."""
+    bars = synth(1300); risk = RiskLimits(dd_halt=9, daily_loss_halt=9)
+    tr, cfg = mk_trader(1000.0, risk=risk); ref, _ = mk_trader(1000.0, risk=risk)        # escala real: el ajuste no mueve el lote
+    ev_t = [t + H4 for t in bars.index[1000:1200] if (t + H4).hour % 8 == 0]
+    real = pd.DataFrame({"time": ev_t, "funding_rate": 0.0003, "synthetic": False})
+    syn = real.assign(funding_rate=0.0001, synthetic=True)
+    for i in range(1000, 1150):                                       # el mes aún no está publicado: tasa sintética
+        tr.step(bars.iloc[: i + 1], syn, bars.index[i] + H4 + pd.Timedelta(seconds=60))
+    for i in range(1000, 1151):
+        ref.step(bars.iloc[: i + 1], real, bars.index[i] + H4 + pd.Timedelta(seconds=60))
+    pend = tr.st.synthetic_funding()
+    if not pend:
+        pytest.skip("sin posición durante las marcas de funding")
+    expected = sum(u * p * (0.0003 - r) for _, r, u, p in pend)
+    tr.step(bars.iloc[:1151], real, bars.index[1150] + H4 + pd.Timedelta(seconds=60))   # se publica el mes
+    assert tr.st.synthetic_funding() == []
+    row, prev = tr.st.rows("equity")[-1], tr.st.rows("equity")[-2]
+    assert row["funding"] == pytest.approx(expected + prev["units"] * row["price"] * 0.0003 * (row["bar"] in {str(t) for t in ev_t}), rel=1e-9)
+    assert [t["qty"] for t in tr.st.rows("trades")] == [t["qty"] for t in ref.st.rows("trades")]
+    assert tr.st.rows("equity")[-1]["equity"] == pytest.approx(ref.st.rows("equity")[-1]["equity"], rel=1e-9)
+
+
+def test_ledger_backfill_for_accounts_created_before_it():
+    bars = synth(1300); tr, cfg = mk_trader(100000.0, risk=RiskLimits(dd_halt=9, daily_loss_halt=9))
+    ev_t = [t + H4 for t in bars.index[1000:1100] if (t + H4).hour % 8 == 0]
+    syn = pd.DataFrame({"time": ev_t, "funding_rate": 0.0001, "synthetic": True})
+    for i in range(1000, 1100):
+        tr.step(bars.iloc[: i + 1], syn, bars.index[i] + H4 + pd.Timedelta(seconds=60))
+    before = tr.st.synthetic_funding()
+    tr.st.db.execute("DELETE FROM funding_ledger")                    # cuenta antigua, sin libro
+    tr2 = PaperTrader(cfg, tr.st)
+    after = tr2.st.synthetic_funding()
+    assert [(t, round(u, 12)) for t, r, u, p in after] == [(t, round(u, 12)) for t, r, u, p in before]
+    assert all(abs(r - 0.0001) < 1e-12 for _, r, _, _ in after)

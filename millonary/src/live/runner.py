@@ -47,8 +47,9 @@ def build(cfg: LiveConfig):
 def run_once(trader: PaperTrader, feed, now: pd.Timestamp | None = None) -> list:
     now = now or pd.Timestamp.now(tz="UTC")
     bars = feed.bars(trader.cfg.history_bars + 50, now)
-    since = trader.st.get("last_funding_event")
-    funding = feed.funding((pd.Timestamp(since) if since else bars.index[-1] - pd.Timedelta(days=3)) - pd.Timedelta(hours=1), now)
+    since = min((pd.Timestamp(x) for x in (trader.st.get("last_funding_event"), trader.st.oldest_synthetic_funding()) if x),
+                default=bars.index[-1] - pd.Timedelta(days=3))
+    funding = feed.funding(since - pd.Timedelta(hours=1), now)
     results = process_pending(trader, bars, funding, now)
     for res in results:
         if res["status"] == "ok":

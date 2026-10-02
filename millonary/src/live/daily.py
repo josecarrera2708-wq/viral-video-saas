@@ -26,20 +26,20 @@ def main(now: pd.Timestamp | None = None) -> dict:
     feed = VisionFeed(); bars = feed.bars(cfg.history_bars + 400, now)
     since = None
     store = Store(d / "state.db"); trader = PaperTrader(cfg, store)
-    lf = store.get("last_funding_event")
-    funding = feed.funding((pd.Timestamp(lf) if lf else start) - pd.Timedelta(days=2), now)
+    # funding desde el inicio de la prueba (o 400 días): lo usan el cobro, la corrección de tasas sintéticas y las réplicas de G1
+    funding = feed.funding(min(start, now - pd.Timedelta(days=400)) - pd.Timedelta(days=2), now)
     res = process_pending(trader, bars, funding, now, start=start, delayed_feed=True)
     bad = [r for r in res if r["status"] not in ("ok", "ya_procesada")]
     export(store, d)
     out = {"velas_nuevas": sum(r["status"] == "ok" for r in res), "ultima_vela": store.get("last_bar"), "problemas": bad[:1]}
-    fund_year = feed.funding(now - pd.Timedelta(days=400), now)
+    fund_year = funding[funding["time"] > now - pd.Timedelta(days=400)].reset_index(drop=True)
     ctx = build_context(cfg, store, now, start, bars=bars, funding=fund_year)
     s = sesion(ctx); md = markdown(s); txt = narrate(s)
     if txt: md = md.replace("**Principio:**", f"**Resumen de la Directora (IA):** {txt}\n\n**Principio:**", 1)
     (d / "briefing.md").write_text(md); (d / "briefing.json").write_text(json.dumps(s, indent=1, default=str))
     export_journal(ctx.journal, d)
     if store.rows("equity"):
-        rep = forward_report(cfg, store, bars, funding.copy() if len(funding) else fund_year, start.floor(INTERVAL) - INTERVAL, load_bands())   # vela anterior a la primera procesada (el inicio puede no caer en la rejilla de 4 h)
+        rep = forward_report(cfg, store, bars, funding.copy(), start.floor(INTERVAL) - INTERVAL, load_bands())   # vela anterior a la primera procesada (el inicio puede no caer en la rejilla de 4 h)
         (d / "informe_prueba.md").write_text(informe_texto(rep)); (d / "informe_prueba.json").write_text(json.dumps(rep, indent=1, default=str))
         out["puertas"] = rep.get("puertas"); out["equity"] = store.rows("equity")[-1]["equity"]
     out["estado_comite"] = s["estado"]

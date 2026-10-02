@@ -28,8 +28,9 @@ def catchup(cfg: LiveConfig, feed, start: pd.Timestamp, now: pd.Timestamp | None
     now = now or pd.Timestamp.now(tz="UTC")
     trader = trader or PaperTrader(cfg, Store(cfg.data_dir / "state.db"))
     bars = feed.bars(cfg.history_bars + 400, now)
-    since = trader.st.get("last_funding_event")
-    funding = feed.funding((pd.Timestamp(since) if since else bars.index[0]) - pd.Timedelta(hours=1), now)
+    since = min((pd.Timestamp(x) for x in (trader.st.get("last_funding_event"), trader.st.oldest_synthetic_funding()) if x),
+                default=bars.index[0])                         # incluye las tasas sintéticas pendientes de corregir
+    funding = feed.funding(since - pd.Timedelta(hours=1), now)
     results = process_pending(trader, bars, funding, now, start=start, delayed_feed=True)
     bad = [r for r in results if r["status"] not in ("ok", "ya_procesada")]
     export(trader.st, cfg.data_dir)

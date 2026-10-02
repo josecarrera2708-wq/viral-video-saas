@@ -1,5 +1,5 @@
 {
- "ts": "2026-10-02 09:10:46.609269+00:00",
+ "ts": "2026-10-02 09:34:24.962435+00:00",
  "decision": "Mantener el objetivo del n\u00facleo: 0.63\u00d7 de exposici\u00f3n.",
  "objetivo_nucleo": 0.6324433845610925,
  "objetivo_final": 0.6324433845610925,
@@ -70,7 +70,7 @@
     "dolar_50d": -0.0016717621534618754,
     "funding_anualizado_30d": 0.05650662333333333,
     "funding_percentil_1a": 0.9579908675799087,
-    "horas_al_proximo_evento": 632.8203863141666,
+    "horas_al_proximo_evento": 632.4263993236111,
     "banderas": []
    },
    "notes": [
@@ -79,7 +79,7 @@
     "Curva 10a-2a: +0.41 pp; 10a 5.29%.",
     "D\u00f3lar (\u00edndice amplio) -0.2% en 50 d\u00edas.",
     "Funding actual 0.0100% por 8h (percentil 96% del \u00faltimo a\u00f1o); media 30d anualizada 5.7%.",
-    "Pr\u00f3ximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 633 h.",
+    "Pr\u00f3ximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 632 h.",
     "Regla hist\u00f3rica probada: recortar la exposici\u00f3n alrededor del FOMC EMPEOR\u00d3 el n\u00facleo (Sharpe 0,78 \u2192 0,74; rechazada). Solo se informa, no se act\u00faa."
    ],
    "shadow": [],
@@ -384,20 +384,20 @@
   },
   {
    "dept": "Mesa de opciones",
-   "headline": "IV 33% vs RV 35% \u00b7 put 10 % OTM 0.83%",
+   "headline": "IV 33% vs RV 35% \u00b7 put 10 % OTM 0.79%",
    "status": "OK",
    "metrics": {
-    "dias_vencimiento": 27.950849429756943,
-    "iv_atm": 0.3328,
-    "sesgo_25d": 0.019100000000000006,
-    "put10_coste_pct": 0.00826221780834649,
+    "dias_vencimiento": 27.934433305150463,
+    "iv_atm": 0.33270000000000005,
+    "sesgo_25d": 0.010300000000000031,
+    "put10_coste_pct": 0.007890431902010124,
     "put10_strike": 78000.0,
     "rv30": 0.3469763383118336,
-    "prima": -0.014176338311833625
+    "prima": -0.014276338311833559
    },
    "notes": [
-    "Vencimiento a 28.0 d\u00edas: volatilidad impl\u00edcita ATM 33.3% \u00b7 realizada 30 d 34.7% \u00b7 prima -1.4 pts.",
-    "Sesgo 25\u0394 (puts \u2212 calls): +1.9 pts. Put 10 % por debajo (K\u224878,000): cuesta 0.83% del nocional.",
+    "Vencimiento a 27.9 d\u00edas: volatilidad impl\u00edcita ATM 33.3% \u00b7 realizada 30 d 34.7% \u00b7 prima -1.4 pts.",
+    "Sesgo 25\u0394 (puts \u2212 calls): +1.0 pts. Put 10 % por debajo (K\u224878,000): cuesta 0.79% del nocional.",
     "Prima de volatilidad normal.",
     "ESTADO: solo informa. La protecci\u00f3n de cola no se activa: no se puede validar con hist\u00f3rico (sin datos hist\u00f3ricos de opciones)."
    ],
@@ -444,15 +444,15 @@
   },
   {
    "dept": "Infraestructura",
-   "headline": "Sano \u00b7 datos hace 9.2 h",
+   "headline": "Sano \u00b7 datos hace 9.6 h",
    "status": "OK",
    "metrics": {
-    "edad_ultima_vela_horas": 9.179613685833333,
+    "edad_ultima_vela_horas": 9.573600676388889,
     "integridad_bd": "ok",
-    "disco_libre_gb": 29.227020288
+    "disco_libre_gb": 29.218414592
    },
    "notes": [
-    "\u00daltima vela cerrada a las 2026-10-02 00:00 UTC (hace 9.2 h) \u00b7 fuente: Binance Vision.",
+    "\u00daltima vela cerrada a las 2026-10-02 00:00 UTC (hace 9.6 h) \u00b7 fuente: Binance Vision.",
     "Base de datos: ok.",
     "Disco libre 29.2 GB."
    ],

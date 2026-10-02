@@ -4,7 +4,9 @@ Orden en cada cierre de vela de 4h (T):
   0) si el sistema está PARADO o hay KILL: se aplana con el último precio válido aunque los datos no
      sean fiables (la emergencia va antes que la validación);
   1) valida datos (si falla: NO se opera, se conserva la posición, se avisa);
-  2) contabiliza el funding realmente publicado desde el último evento cobrado (no se pierde si llega tarde);
+  2) contabiliza el funding realmente publicado desde el último evento cobrado (no se pierde si llega tarde) y, si
+     antes se cobró una tasa SINTÉTICA (mes aún no publicado en Binance Vision), apunta la diferencia con la real
+     en cuanto se publica, con las mismas unidades y precio de entonces (libro funding_ledger);
   3) marca a mercado, actualiza máximos y pérdida del día;
   4) señal y exposición objetivo (código compartido); 5) capa de riesgo; 6) rebalanceo con banda;
   7) registra todo en UNA transacción (BEGIN IMMEDIATE + recomprobación de la vela procesada).
@@ -28,6 +30,8 @@ class PaperTrader:
         if self.st.get("cash") is None:
             self.st.set("cash", cfg.capital); self.st.set("units", 0.0)
             self.st.set("peak", cfg.capital); self.st.set("halted", False)
+        if self.st.rows("equity") and not self.st.rows("funding_ledger"):
+            self._backfill_ledger()
 
     # ------------------------------------------------------------------ utilidades
     def equity(self, price: float) -> float:
@@ -36,6 +40,32 @@ class PaperTrader:
     def _round_units(self, u: float) -> float:
         lot = self.cfg.lot_step
         return math.floor(u / lot + 1e-9) * lot
+
+    def _backfill_ledger(self):
+        """Cuentas anteriores al libro de funding: reconstruye cada cobro de las marcas de 8 h (unidades antes de la orden
+        de esa vela = las de la vela anterior) y lo deja pendiente de cotejar con la tasa real publicada."""
+        prev_units = 0.0
+        for r in self.st.rows("equity"):
+            t = pd.Timestamp(r["bar"])
+            if r["funding"] and prev_units and t.hour % 8 == 0 and t.minute == 0 and r["price"] > 0:
+                self.st.add_funding(t, r["funding"] / (prev_units * r["price"]), prev_units, r["price"], r["funding"], True)
+            prev_units = r["units"]
+
+    def _reconcile_funding(self, funding: pd.DataFrame, now) -> float:
+        """Coste adicional (positivo) o devolución (negativo) al sustituir tasas sintéticas ya cobradas por las reales."""
+        pend = self.st.synthetic_funding()
+        if not pend or not len(funding):
+            return 0.0
+        real = funding if "synthetic" not in funding else funding[~funding["synthetic"].astype(bool)]
+        rates = {str(t): float(r) for t, r in zip(real["time"], real["funding_rate"])}
+        adj = 0.0
+        for t, rate, units, price in pend:
+            if t in rates:
+                adj += units * price * (rates[t] - rate)
+                self.st.add_funding(t, rates[t], units, price, units * price * rates[t], False)
+        if adj:
+            self.st.log(str(now), "INFO", f"AJUSTE_FUNDING {adj:+.6f} USDT: tasa sintética sustituida por la real publicada")
+        return adj
 
     def reset_halt(self, now: pd.Timestamp, price: float | None = None) -> dict:
         """Reanuda tras una parada: reinicia 'parado', máximo histórico y referencia diaria. Queda registrado.
@@ -77,12 +107,16 @@ class PaperTrader:
             # 2) funding publicado y aún no cobrado
             last_f = st.get("last_funding_event")
             since = pd.Timestamp(last_f) if last_f else (t_close - 3 * INTERVAL)   # ventana amplia: admite eventos retrasados
-            fpay = 0.0
+            fpay = self._reconcile_funding(funding, now)
             if len(funding):
                 ev = funding[(funding["time"] > since) & (funding["time"] <= t_close)]
                 if len(ev):
-                    fpay = float((units * close * ev["funding_rate"]).sum())     # los largos pagan si es positivo
+                    fpay += float((units * close * ev["funding_rate"]).sum())    # los largos pagan si es positivo
                     st.set("last_funding_event", str(ev["time"].max()))
+                    if units:
+                        syn = ev["synthetic"].astype(bool) if "synthetic" in ev else pd.Series(False, index=ev.index)
+                        for t_ev, rate, s_ in zip(ev["time"], ev["funding_rate"], syn):
+                            st.add_funding(t_ev, rate, units, close, units * close * float(rate), s_)
             cash -= fpay
             # 3) marca a mercado y control diario/máximos
             equity = cash + units * close

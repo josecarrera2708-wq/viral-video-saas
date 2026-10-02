@@ -16,6 +16,8 @@ class Store:
         CREATE TABLE IF NOT EXISTS equity(bar TEXT PRIMARY KEY, equity REAL, units REAL, price REAL,
             expo REAL, signal REAL, target REAL, funding REAL, flags TEXT);
         CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY AUTOINCREMENT, ts TEXT, level TEXT, msg TEXT);
+        CREATE TABLE IF NOT EXISTS funding_ledger(time TEXT PRIMARY KEY, rate REAL, units REAL, price REAL, amount REAL,
+            synthetic INTEGER);
         """)
 
     def get(self, k, default=None):
@@ -37,6 +39,18 @@ class Store:
         self.db.execute("INSERT OR REPLACE INTO equity VALUES(?,?,?,?,?,?,?,?,?)",
                         (e["bar"], e["equity"], e["units"], e["price"], e["expo"], e["signal"], e["target"],
                          e["funding"], e.get("flags", "")))
+
+    def add_funding(self, time, rate, units, price, amount, synthetic):
+        self.db.execute("INSERT OR REPLACE INTO funding_ledger VALUES(?,?,?,?,?,?)",
+                        (str(time), float(rate), float(units), float(price), float(amount), int(bool(synthetic))))
+
+    def synthetic_funding(self) -> list:
+        cur = self.db.execute("SELECT time, rate, units, price FROM funding_ledger WHERE synthetic=1 ORDER BY time")
+        return cur.fetchall()
+
+    def oldest_synthetic_funding(self):
+        row = self.db.execute("SELECT MIN(time) FROM funding_ledger WHERE synthetic=1").fetchone()
+        return row[0] if row else None
 
     def log(self, ts, level, msg):
         self.db.execute("INSERT INTO events(ts,level,msg) VALUES(?,?,?)", (ts, level, msg))

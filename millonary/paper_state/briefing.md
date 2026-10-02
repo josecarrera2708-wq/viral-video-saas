@@ -1,4 +1,4 @@
-# Sesión del comité · 2026-10-02 09:10 UTC
+# Sesión del comité · 2026-10-02 09:34 UTC
 
 **Estado general:** 🟢 OK
 **Decisión:** Mantener el objetivo del núcleo: 0.63× de exposición.
@@ -16,7 +16,7 @@
 - Curva 10a-2a: +0.41 pp; 10a 5.29%.
 - Dólar (índice amplio) -0.2% en 50 días.
 - Funding actual 0.0100% por 8h (percentil 96% del último año); media 30d anualizada 5.7%.
-- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 633 h.
+- Próximo evento: FOMC (alto) 2026-10-28 18:00 UTC, en 632 h.
 - Regla histórica probada: recortar la exposición alrededor del FOMC EMPEORÓ el núcleo (Sharpe 0,78 → 0,74; rechazada). Solo se informa, no se actúa.
 
 ## 🟢 Análisis de mercados — Tendencia alcista (3/4 horizontes)
@@ -65,9 +65,9 @@
   S06 Cruce SMA 7-25: +0.54% · caída 1.0% · 2 ops · posición +1
   S13 Retroceso a EMA20: +0.27% · caída 0.9% · 2 ops · posición +1
 
-## 🟢 Mesa de opciones — IV 33% vs RV 35% · put 10 % OTM 0.83%
-- Vencimiento a 28.0 días: volatilidad implícita ATM 33.3% · realizada 30 d 34.7% · prima -1.4 pts.
-- Sesgo 25Δ (puts − calls): +1.9 pts. Put 10 % por debajo (K≈78,000): cuesta 0.83% del nocional.
+## 🟢 Mesa de opciones — IV 33% vs RV 35% · put 10 % OTM 0.79%
+- Vencimiento a 27.9 días: volatilidad implícita ATM 33.3% · realizada 30 d 34.7% · prima -1.4 pts.
+- Sesgo 25Δ (puts − calls): +1.0 pts. Put 10 % por debajo (K≈78,000): cuesta 0.79% del nocional.
 - Prima de volatilidad normal.
 - ESTADO: solo informa. La protección de cola no se activa: no se puede validar con histórico (sin datos históricos de opciones).
 
@@ -84,8 +84,8 @@
 - Aún no hay lotes cerrados con contexto suficiente para clasificar.
 - Con muestras < 20 estas cifras son ANECDÓTICAS: se muestran para acumular evidencia, no para cambiar reglas.
 
-## 🟢 Infraestructura — Sano · datos hace 9.2 h
-- Última vela cerrada a las 2026-10-02 00:00 UTC (hace 9.2 h) · fuente: Binance Vision.
+## 🟢 Infraestructura — Sano · datos hace 9.6 h
+- Última vela cerrada a las 2026-10-02 00:00 UTC (hace 9.6 h) · fuente: Binance Vision.
 - Base de datos: ok.
 - Disco libre 29.2 GB.
 
