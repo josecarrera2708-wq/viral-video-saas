@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-02 01:13:27.142614+00:00",
- "ultima_vela_cerrada": "2026-10-02 01:00:00+00:00",
+ "generado": "2026-10-02 02:12:55.983590+00:00",
+ "ultima_vela_cerrada": "2026-10-02 02:00:00+00:00",
  "inicio": "2026-10-02 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 15 min (velas cerradas)",
  "funding_disponible": true,
- "precio_actual": 84779.0,
+ "precio_actual": 84900.5,
  "traders": {
   "P01 Envolvente en soporte/resistencia": {
    "cerradas": 0,
