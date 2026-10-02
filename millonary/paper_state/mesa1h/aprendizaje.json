@@ -43,6 +43,17 @@
   },
   "estado": "muestra insuficiente para concluir"
  },
+ "Q04 Expansión de volatilidad Garman-Klass": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
  "Q05 Desequilibrio de flujo": {
   "cerradas": 1,
   "perdedoras": 1,
