@@ -194,18 +194,18 @@ def nr7(d: pd.DataFrame, cm: float = 1.0, t0: int = 0) -> dict:
 def _sim_expo(d: pd.DataFrame, target: np.ndarray, rebal: np.ndarray, cm: float, t0: int = 0) -> dict:
     """target[t] y rebal[t] se deciden al cierre de t y se aplican desde el día t+1. Entre reajustes las unidades son constantes."""
     C = d["close"].to_numpy(float); f = d["f"].to_numpy(float); n = len(d)
-    r = np.r_[0.0, C[1:] / C[:-1] - 1]; eq = np.ones(n); ex = np.zeros(n); e = 0.0; cur = 1.0; ops = 0
+    r = np.r_[0.0, C[1:] / C[:-1] - 1]; eq = np.ones(n); ex = np.zeros(n); e = 0.0; cur = 1.0; ops = 0; log = []
     target = np.where(np.arange(n) >= t0 - 1, np.nan_to_num(target), 0.0)
     for i in range(n):
         if i > 0 and (rebal[i - 1] or (i - 1 == t0 - 1)) and target[i - 1] != e:
-            tv = abs(target[i - 1] - e); cur *= 1 - tv * (FEE + SLIP) * cm; e = target[i - 1]; ops += 1
+            tv = abs(target[i - 1] - e); cur *= 1 - tv * (FEE + SLIP) * cm; log.append((d.index[i], e, target[i - 1], C[i - 1], "señal / reajuste")); e = target[i - 1]; ops += 1
         elif abs(e) > MAX_EXPO:                                            # la deriva nunca deja abrir el día por encima de 2×
-            cur *= 1 - (abs(e) - MAX_EXPO) * (FEE + SLIP) * cm; e = np.sign(e) * MAX_EXPO; ops += 1
+            cur *= 1 - (abs(e) - MAX_EXPO) * (FEE + SLIP) * cm; log.append((d.index[i], e, np.sign(e) * MAX_EXPO, C[i - 1], "tope 2×")); e = np.sign(e) * MAX_EXPO; ops += 1
         g = 1 + e * r[i]; cur *= g - e * f[i]; eq[i] = cur; ex[i] = e
         e = e * (1 + r[i]) / g if g > 0 else 0.0
     eqs = pd.Series(eq, index=d.index)
     return {"ret": eqs.pct_change().fillna(0.0), "expo": pd.Series(ex, index=d.index), "nocional": pd.Series(np.abs(ex), index=d.index),
-            "trades": pd.DataFrame(), "n_ops": ops}
+            "trades": pd.DataFrame(), "n_ops": ops, "reajustes": pd.DataFrame(log, columns=["dia", "de", "a", "precio", "motivo"])}
 
 
 def _month_end(d: pd.DataFrame) -> np.ndarray:
@@ -255,14 +255,16 @@ def carry(d: pd.DataFrame, cm: float = 1.0, t0: int = 0, win: int = 7, band: flo
     S = d["close"].to_numpy(float); F0 = d["pclose"].to_numpy(float); F = d["pclose"].ffill().to_numpy(float); f = d["f"].to_numpy(float); n = len(d)
     avg = pd.Series(f).rolling(win).mean().to_numpy()
     want = np.where(np.isfinite(avg) & np.isfinite(F0) & (avg > 0) & (np.arange(n) >= t0 - 1), 1, 0)
-    eq = np.ones(n); ex = np.zeros(n); q = 0.0; cur = 1.0; ops = 0; trades = []; t_in = 0; e_in = 1.0
+    eq = np.ones(n); ex = np.zeros(n); q = 0.0; cur = 1.0; ops = 0; trades = []; t_in = 0; e_in = 1.0; log = []
     leg = lambda s, p: s * (SPOT_FEE + SLIP) * cm + p * (FEE + SLIP) * cm
     for i in range(1, n):
         if want[i - 1] and q == 0 and np.isfinite(F[i - 1]):
-            q = cur / S[i - 1]; cur -= q * leg(S[i - 1], F[i - 1]); ops += 1; t_in = i; e_in = cur
+            q = cur / S[i - 1]; cur -= q * leg(S[i - 1], F[i - 1]); ops += 1; t_in = i; e_in = cur; log.append((d.index[i], 0.0, 1.0, S[i - 1], "entra en carry"))
         elif want[i - 1] and q > 0 and abs(q * S[i - 1] / cur - 1) > band:       # nocional fuera de la banda del 20 %: reajuste a 1×
+            log.append((d.index[i], q * S[i - 1] / cur, 1.0, S[i - 1], "banda 20 %"))
             q2 = cur / S[i - 1]; cur -= abs(q2 - q) * leg(S[i - 1], F[i - 1]); q = q2; ops += 1
         elif not want[i - 1] and q > 0:
+            log.append((d.index[i], q * S[i - 1] / cur, 0.0, S[i - 1], "sale: funding 7 d ≤ 0"))
             cur -= q * leg(S[i - 1], F[i - 1]); ops += 1
             trades.append((d.index[t_in], d.index[i - 1], "CARRY", S[t_in - 1], S[i - 1], 1, cur / e_in - 1, np.nan, "funding medio 7 d ≤ 0")); q = 0.0
         if q > 0:
@@ -271,7 +273,7 @@ def carry(d: pd.DataFrame, cm: float = 1.0, t0: int = 0, win: int = 7, band: flo
     eqs = pd.Series(eq, index=d.index)
     tr = pd.DataFrame(trades, columns=["entrada", "salida", "lado", "px_entrada", "px_salida", "unidades", "ret", "R", "motivo"])
     return {"ret": eqs.pct_change().fillna(0.0), "expo": pd.Series(0.0, index=d.index), "nocional": pd.Series(2 * ex, index=d.index),
-            "trades": tr, "n_ops": ops}
+            "trades": tr, "n_ops": ops, "reajustes": pd.DataFrame(log, columns=["dia", "de", "a", "precio", "motivo"])}
 
 
 # ------------------------------------------------------------------------------------------------------------ catálogo
@@ -295,14 +297,16 @@ def run_all(d: pd.DataFrame, cm: float = 1.0, t0: int = 0) -> dict:
     return out
 
 
-def multi(res: dict, cm: float = 1.0, win: int = 90, min_days: int = 60) -> dict:
+def multi(res: dict, cm: float = 1.0, win: int = 90, min_days: int = 60, ref: dict | None = None, t0: int = 0) -> dict:
     """Paridad de riesgo entre F01–F09 (como un fondo multiestrategia): a cada fin de mes, peso ∝ 1/σ de los últimos 90 días de cada
     estrategia (solo las que ya tienen ≥ 60 días con actividad), suma de pesos = 1; coste del reajuste = Σ|Δpeso|·nocional·7 pb."""
     R = pd.DataFrame({k: v["ret"] for k, v in res.items()}); E = pd.DataFrame({k: v["nocional"] for k, v in res.items()})
-    me = _month_end(R); sd = R.rolling(win, min_periods=min_days).std(); act = (R != 0).rolling(win, min_periods=1).sum()
+    Rr = R if ref is None else pd.DataFrame({k: ref[k]["ret"] for k in res})        # hacia delante: σ de la historia completa (información, no posición)
+    me = _month_end(R); sd = Rr.rolling(win, min_periods=min_days).std(); act = (Rr != 0).rolling(win, min_periods=1).sum()
     w = (1 / sd.where((sd > 0) & (act >= min_days))).fillna(0.0)
     w = w.div(w.sum(axis=1).replace(0, np.nan), axis=0).fillna(0.0)
     W = w.where(pd.Series(me, index=R.index), np.nan).ffill().fillna(0.0).shift(1).fillna(0.0)   # peso decidido al cierre de mes, aplica desde el día siguiente
+    W.iloc[:t0] = 0.0
     dw = W.diff().abs().fillna(W.abs())
     cost = (dw * E.shift(1).fillna(0.0)).sum(axis=1) * (FEE + SLIP) * cm
     ret = (W * R).sum(axis=1) - cost

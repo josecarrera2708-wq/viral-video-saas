@@ -32,6 +32,17 @@ def _splice_spot(d: pd.DataFrame) -> pd.DataFrame:
     return d
 
 
+def _grid(d: pd.DataFrame) -> pd.DataFrame:
+    """Precios REALES en la rejilla de 4 h; los huecos (caída del servidor de feb-2018) se rellenan planos con el último cierre.
+    No se reescala como en el núcleo: el carry compara el nivel del contado con el del perpetuo y la rutina empalma datos nuevos reales
+    (la primera ejecución con el empalme ×0,89 dio al carry una beta oculta de −0,11; corregido y anotado en el registro)."""
+    full = pd.date_range(d.index[0], d.index[-1], freq="4h", tz="UTC"); d = d.reindex(full)
+    d["close"] = d["close"].ffill()
+    for c in ("open", "high", "low"):
+        d[c] = d[c].fillna(d["close"])
+    return d
+
+
 def to_daily(b4: pd.DataFrame) -> pd.DataFrame:
     """Velas diarias desde las de 4 h; solo días con sus 6 velas."""
     g = b4.groupby(b4.index.floor("1D"))
@@ -61,7 +72,7 @@ def build_history(now: pd.Timestamp | None = None) -> pd.DataFrame:
     s4 = pd.read_parquet(RAW / "spot_BTCUSDT_4h.parquet").set_index("time")[["open", "high", "low", "close"]]
     p4 = pd.read_parquet(RAW / "perp_BTCUSDT_4h.parquet").set_index("time")[["open", "high", "low", "close"]]
     s4, p4 = _append_vision(s4, VisionFeed(base=SPOT), now), _append_vision(p4, VisionFeed(), now)
-    d = to_daily(_splice_spot(s4))
+    d = to_daily(_grid(s4))
     pc = to_daily(p4)["close"]
     d["pclose"] = pc.reindex(d.index)
     fr = pd.read_parquet(RAW / "perp_BTCUSDT_funding.parquet")[["time", "funding_rate"]]

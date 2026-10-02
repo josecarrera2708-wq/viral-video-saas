@@ -79,3 +79,12 @@ def test_daily_bars_need_six_4h_bars_and_funding_sums_by_day():
                        "funding_rate": [1e-4, 2e-4, 3e-4, 4e-4], "synthetic": [False, False, True, False]})
     f, real = funding_daily(dd.index, ev)
     assert np.allclose(f, [6e-4, 4e-4]) and list(real) == [False, True]
+
+
+def test_gap_fill_keeps_real_price_levels():
+    from src.fondos.data import _grid
+    i = pd.date_range("2018-02-07", periods=30, freq="4h", tz="UTC"); i = i[(i < "2018-02-08") | (i >= "2018-02-11")]
+    b = pd.DataFrame({"open": 100.0, "high": 101.0, "low": 99.0, "close": 100.0}, index=i); b.loc[b.index >= "2018-02-11", ["open", "high", "low", "close"]] = 80.0
+    g = _grid(b)
+    assert len(g) == 30 and (g.loc[g.index >= "2018-02-11", "close"] == 80.0).all()      # sin reescalar el tramo posterior
+    assert (g.loc[(g.index >= "2018-02-08") & (g.index < "2018-02-11"), "close"] == 100.0).all()

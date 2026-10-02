@@ -63,3 +63,7 @@ Honestidad: el histórico dio 0/13 certificadas y R media ≈ −0,3 por operaci
 
 ## 2026-10-02 · Mesa de 1 h con los 13 traders (petición del dueño) y prueba de stops
 Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horaria). Stops más anchos: solo informe, sin cambios en mesas en marcha.
+
+## 2026-10-02 · Revisión completa + mesa de fondos (petición del dueño)
+- Fallos corregidos: (1) el funding sintético del mes en curso nunca se sustituía por el real (causa de G1 en NO desde el día 1; libro funding_ledger con corrección automática); (2) la réplica de G1 recibía solo 2 días de funding (habría fallado con el paso de las semanas); (3) la mesa intradía no paginaba Deribit (límite 744 tasas / 5.000 velas: desde ~30-oct habría reescrito en silencio el funding de operaciones cerradas).
+- Mesa de fondos en papel desde 2026-10-03 (10 estrategias, rutina horaria, pestaña «Fondos»). La única certificada es el carry de funding (neutral al precio, no correlacionado con el núcleo): es la candidata natural para complementar el núcleo, pero NO se activa con dinero: requiere ≥ 90 días en papel, revisar el riesgo de contraparte y aprobación EXPRESA del dueño.

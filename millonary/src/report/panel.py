@@ -35,7 +35,10 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
     ops.sort(key=lambda m: m["ts"], reverse=True)
     m15 = _json(data / "mesa15" / "resumen.json"); m15t = (_json(data / "mesa15" / "trades_detalle.json") or [])[:300]; m15l = _json(data / "mesa15" / "aprendices.json")
     m1h = _json(data / "mesa1h" / "resumen.json"); m1ht = (_json(data / "mesa1h" / "trades_detalle.json") or [])[:300]; m1hl = _json(data / "mesa1h" / "aprendices.json")
-    return {"m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
+    fh = _json(ROOT / "reports" / "fondos_resultados.json")
+    if fh:
+        fh = {**fh, "estrategias": {k: {a: b for a, b in v.items() if a not in ("operaciones", "alfa")} for k, v in fh["estrategias"].items()}}
+    return {"fondos": _json(data / "fondos" / "resumen.json"), "fondos_hist": fh, "m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 

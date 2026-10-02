@@ -68,6 +68,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <button role="tab" aria-selected="false" data-tab="marcador">Marcador</button>
     <button role="tab" aria-selected="false" data-tab="m15">Mesa 15 min</button>
     <button role="tab" aria-selected="false" data-tab="m1h">Mesa 1 h</button>
+    <button role="tab" aria-selected="false" data-tab="fondos">Fondos</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
@@ -145,6 +146,15 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="card"><div id="m1hHist"></div></div>
   </section>
 
+  <section class="panel sec" id="tab-fondos" hidden>
+    <h2>Mesa de fondos: estrategias célebres de grandes fondos y traders</h2>
+    <div class="card"><div class="funnel" id="fnKpis"></div><p class="foot" id="fnNote"></p></div>
+    <h2>Estrategias (histórico 2018-2026 y papel hacia delante)</h2>
+    <div class="card"><div class="tw"><table id="fnTable"></table></div><p class="foot">Parámetros publicados por sus autores, sin ajustar sobre BTC. Certificada = Sharpe &gt; 0 con Holm, positiva en los tres subperiodos, positiva con costes ×2, Sharpe deflactado ≥ 0,80 contando las 261 pruebas del proyecto y ≥ 30 operaciones. Papel: 1.000 USDT por estrategia. Sin dinero real.</p></div>
+    <h2>Operaciones y reajustes</h2>
+    <div class="card"><div class="tw"><table id="fnOps"></table></div></div>
+  </section>
+
   <section class="panel sec" id="tab-ranking" hidden>
     <h2>Traders de la incubadora</h2>
     <div class="card"><div class="tw"><table id="rankFwd"></table></div>
@@ -200,7 +210,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','ranking','aprender','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','fondos','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -306,6 +316,20 @@ if (I) {
       return `<div class="card dept"><h3><span>${esc(t.trader)}</span><span class="pill gold">${t.lado}</span></h3><p>Abrió ${esc(String(t.abre).slice(0,16))} UTC</p><table><tr><td>Entrada</td><td class="n num">${f0(t.px_entrada)}</td></tr><tr><td>Stop (SL)</td><td class="n num neg">${f0(t.sl)}</td></tr><tr><td>Objetivo (TP)</td><td class="n num pos">${t.tp ? f0(t.tp) : 'sin TP'}</td></tr><tr><td>Lote</td><td class="n num">${t.lote_btc} BTC · ${f0(t.nocional_usdt)} USDT</td></tr><tr><td>Resultado ahora</td><td class="n num ${cls(rNow)}">${rNow >= 0 ? '+' : ''}${rNow.toFixed(2)} R · ${usd >= 0 ? '+' : ''}${usd.toFixed(2)} USDT</td></tr></table></div>`; }).join('') : '<div class="card"><p class="dim">No hay posiciones abiertas ahora mismo.</p></div>';
     $('#m15Hist').innerHTML = cl.length ? cl.slice(0,60).map(t => `<details style="border-bottom:1px solid var(--line);padding:8px 0"><summary style="cursor:pointer"><span class="mono dim">${esc(String(t.cierra).slice(5,16))}</span> <b>${esc(t.trader)}</b> · ${t.lado} · ${f0(t.px_entrada)} → ${f0(t.px_salida)} (${esc(t.salida)}) <span class="num ${cls(t.R)}">${t.R >= 0 ? '+' : ''}${Number(t.R).toFixed(2)} R</span></summary>
       <div style="padding:6px 0"><p class="foot">SL ${f0(t.sl)} · TP ${t.tp ? f0(t.tp) : '—'} · lote ${t.lote_btc} BTC · riesgo ${f0(t.riesgo_usdt,2)} $ · duración ${t.duracion_min} min · máx. a favor ${Number(t.mfe_R).toFixed(2)} R · máx. en contra ${Number(t.mae_R).toFixed(2)} R</p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
+  } }
+
+// mesa de fondos
+{ const M = D.fondos, H = D.fondos_hist, f0 = (x, d=0) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  const n2 = x => x == null ? '—' : Number(x).toFixed(2);
+  if (!M || !H) { $('#fnTable').innerHTML = '<tr><td class="dim">La mesa de fondos arranca el 2026-10-03 00:00 UTC.</td></tr>'; }
+  else {
+    const E = Object.entries(M.estrategias), rf = H.referencias;
+    $('#fnKpis').innerHTML = [[H.certificadas.length + '/' + E.length,'certificadas (histórico)'],[n2(rf.nucleo_v1.sharpe),'Sharpe núcleo v1'],[n2(rf.comprar_y_mantener.sharpe),'Sharpe comprar y mantener'],[(M.funding_7d_anual*100).toFixed(1)+' %','funding 7 d (anual)'],[f0(M.precio),'BTC']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#fnNote').textContent = `Fuente: ${M.fuente}. Último día cerrado ${M.ultimo_dia_cerrado}. Inicio en papel ${String(M.inicio).slice(0,10)}. ${M.nota}`;
+    $('#fnTable').innerHTML = '<tr><th>Estrategia</th><th class="n">Sharpe hist.</th><th class="n">Caída hist.</th><th class="n">Puertas</th><th class="n">Días papel</th><th class="n">Retorno papel</th><th class="n">Caída papel</th><th class="n">Ops / reajustes</th><th class="n">Exposición</th></tr>' +
+      E.map(([k,v]) => { const h = (H.estrategias[k] || {}); return `<tr><td>${esc(k)} ${h.certificada ? '<span class="pill gold">certificada</span>' : ''}</td><td class="n num ${cls(h.sharpe)}">${n2(h.sharpe)}</td><td class="n num">${h.caida_max == null ? '—' : (h.caida_max*100).toFixed(0)+'%'}</td><td class="n num">${h.puertas ? Object.values(h.puertas).filter(Boolean).length + '/5' : '—'}</td><td class="n num">${v.dias}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td class="n num">${v.operaciones} / ${v.reajustes ?? 0}</td><td class="n num">${(v.exposicion >= 0 ? '+' : '') + v.exposicion.toFixed(2)}×</td></tr>`; }).join('');
+    const ops = M.operaciones || [];
+    $('#fnOps').innerHTML = ops.length ? '<tr><th>Día</th><th>Estrategia</th><th>Lado</th><th class="n">Entrada</th><th class="n">Salida</th><th class="n">Resultado</th><th>Motivo</th></tr>' + ops.slice(0,120).map(o => `<tr><td class="mono">${esc(o.salida)}</td><td>${esc(o.estrategia)}</td><td>${esc(o.lado)}</td><td class="n num">${f0(o.px_entrada)}</td><td class="n num">${f0(o.px_salida)}</td><td class="n num ${cls(o.pnl_usdt)}">${o.pnl_usdt == null ? '—' : (o.pnl_usdt >= 0 ? '+' : '') + f0(o.pnl_usdt, 2) + ' $'}</td><td>${esc(o.motivo)}</td></tr>`).join('') : '<tr><td class="dim">Aún sin operaciones desde el inicio en papel.</td></tr>';
   } }
 
 // mesa de 1 h
