@@ -16,6 +16,7 @@ import requests
 
 HOST = "data.binance.vision"
 BASE = f"https://{HOST}/data/futures/um"
+SPOT = f"https://{HOST}/data/spot"
 COLS = ["open_time", "open", "high", "low", "close", "volume", "close_time", "quote_volume", "trades",
         "taker_buy_base", "taker_buy_quote", "ignore"]
 H4 = pd.Timedelta("4h")
@@ -70,17 +71,17 @@ def _parse_klines(raw: bytes) -> pd.DataFrame:
 class VisionFeed:
     name = "vision"
 
-    def __init__(self, symbol="BTCUSDT", interval="4h", get_bytes: Callable = default_bytes):
-        self.symbol, self.interval, self.get = symbol, interval, get_bytes
+    def __init__(self, symbol="BTCUSDT", interval="4h", get_bytes: Callable = default_bytes, base: str = BASE):
+        self.symbol, self.interval, self.get, self.base = symbol, interval, get_bytes, base     # base=SPOT: velas del contado
 
     def _month(self, y, m):
         n = f"{self.symbol}-{self.interval}-{y}-{m:02d}"
-        raw = _verified_csv(self.get, f"{BASE}/monthly/klines/{self.symbol}/{self.interval}/{n}.zip", n + ".csv")
+        raw = _verified_csv(self.get, f"{self.base}/monthly/klines/{self.symbol}/{self.interval}/{n}.zip", n + ".csv")
         return None if raw is None else _parse_klines(raw)
 
     def _day(self, d: pd.Timestamp):
         n = f"{self.symbol}-{self.interval}-{d:%Y-%m-%d}"
-        raw = _verified_csv(self.get, f"{BASE}/daily/klines/{self.symbol}/{self.interval}/{n}.zip", n + ".csv")
+        raw = _verified_csv(self.get, f"{self.base}/daily/klines/{self.symbol}/{self.interval}/{n}.zip", n + ".csv")
         return None if raw is None else _parse_klines(raw)
 
     def bars(self, n: int, now: pd.Timestamp) -> pd.DataFrame:
