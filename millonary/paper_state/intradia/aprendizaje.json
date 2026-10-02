@@ -33,12 +33,12 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I04 Reversión a VWAP diaria": {
-  "cerradas": 1,
-  "perdedoras": 0,
+  "cerradas": 2,
+  "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
-   "contra_tendencia": 0,
+   "contra_tendencia": 1,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -55,7 +55,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I07 Ruptura tras squeeze": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
@@ -66,7 +66,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I08 Ruptura del máx./mín. de ayer": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
@@ -77,23 +77,23 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I10 Ráfaga de momentum": {
-  "cerradas": 2,
-  "perdedoras": 2,
+  "cerradas": 3,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
+   "contra_tendencia": 3,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
  },
  "I11 Ruptura fallida": {
-  "cerradas": 2,
-  "perdedoras": 1,
+  "cerradas": 3,
+  "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 2,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"

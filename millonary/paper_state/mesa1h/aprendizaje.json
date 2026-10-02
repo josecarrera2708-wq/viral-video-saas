@@ -1,0 +1,57 @@
+{
+ "P04 Ineficiencia (Fair Value Gap)": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "P07 Doble techo/suelo": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "Q01 Momentum de series temporales": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "Q03 Régimen por razón de varianzas": {
+  "cerradas": 1,
+  "perdedoras": 1,
+  "patrones": {
+   "nunca_a_favor": 1,
+   "stop_barrido": 0,
+   "contra_tendencia": 1,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
+ "Q05 Desequilibrio de flujo": {
+  "cerradas": 1,
+  "perdedoras": 1,
+  "patrones": {
+   "nunca_a_favor": 1,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ }
+}
