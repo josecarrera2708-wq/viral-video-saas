@@ -28,22 +28,37 @@ def _ms(t: pd.Timestamp) -> int:
 
 
 def fetch_bars(start: pd.Timestamp, now: pd.Timestamp, get=None) -> pd.DataFrame:
-    """Velas de 1 h CERRADAS desde start-WARM_H hasta now. `get(url, params)->dict` inyectable para pruebas."""
+    """Velas de 1 h CERRADAS desde start-WARM_H hasta now. `get(url, params)->dict` inyectable para pruebas.
+    Deribit devuelve como mucho las 5.000 velas MÁS RECIENTES anteriores a end: se pagina hacia atrás (sin esto, a los ~190 días
+    se perdería el principio del histórico y se recalcularían las primeras operaciones con otro calentamiento)."""
     get = get or (lambda u, p: requests.get(u, params=p, timeout=30).json())
-    a = pd.Timestamp(start).floor("1h") - pd.Timedelta(hours=WARM_H)
-    j = get(f"{API}/get_tradingview_chart_data", {"instrument_name": INSTR, "resolution": "60", "start_timestamp": _ms(a), "end_timestamp": _ms(now)})["result"]
-    t = pd.to_datetime(pd.Series(j["ticks"]), unit="ms", utc=True)
-    df = pd.DataFrame({"open": j["open"], "high": j["high"], "low": j["low"], "close": j["close"], "volume": j["volume"]}, index=pd.DatetimeIndex(t))
-    df = df[~df.index.duplicated()].sort_index()
+    a = pd.Timestamp(start).floor("1h") - pd.Timedelta(hours=WARM_H); end = pd.Timestamp(now); parts = []
+    while True:
+        j = get(f"{API}/get_tradingview_chart_data", {"instrument_name": INSTR, "resolution": "60", "start_timestamp": _ms(a), "end_timestamp": _ms(end)})["result"]
+        if not j["ticks"]:
+            break
+        t = pd.to_datetime(pd.Series(j["ticks"]), unit="ms", utc=True)
+        parts.append(pd.DataFrame({"open": j["open"], "high": j["high"], "low": j["low"], "close": j["close"], "volume": j["volume"]}, index=pd.DatetimeIndex(t)))
+        if t.iloc[0] <= a or len(t) < 5000:
+            break
+        end = t.iloc[0] - pd.Timedelta("1min")
+    df = pd.concat(parts).sort_index(); df = df[~df.index.duplicated()]
+    df = df[df.index >= a]
     return df[df.index + H1 <= pd.Timestamp(now)]                   # solo velas cerradas
 
 
 def fetch_funding(idx: pd.DatetimeIndex, now: pd.Timestamp, get=None) -> np.ndarray:
-    """Funding por vela (tasa horaria de Deribit, `interest_1h`); 0 si el proveedor no responde (se anota en el resumen)."""
+    """Funding por vela (tasa horaria de Deribit, `interest_1h`); 0 si el proveedor no responde (se anota en el resumen).
+    Deribit devuelve como mucho 744 registros (31 días) por petición: se pide en tramos de 30 días hacia atrás."""
     get = get or (lambda u, p: requests.get(u, params=p, timeout=30).json())
     try:
-        j = get(f"{API}/get_funding_rate_history", {"instrument_name": INSTR, "start_timestamp": _ms(idx[0]), "end_timestamp": _ms(now)})["result"]
-        s = pd.Series({pd.Timestamp(x["timestamp"], unit="ms", tz="UTC").floor("1h"): x["interest_1h"] for x in j})
+        s = {}; a = idx[0]; end = pd.Timestamp(now)
+        while end > a:
+            j = get(f"{API}/get_funding_rate_history", {"instrument_name": INSTR, "start_timestamp": _ms(max(a, end - pd.Timedelta(days=30))), "end_timestamp": _ms(end)})["result"]
+            for x in j:
+                s[pd.Timestamp(x["timestamp"], unit="ms", tz="UTC").floor("1h")] = x["interest_1h"]
+            end = end - pd.Timedelta(days=30)
+        s = pd.Series(s).sort_index()
         # el pago marcado a la hora h cubre la vela que cierra en h
         return s.reindex(idx + H1).fillna(0.0).to_numpy()
     except Exception:                                                # noqa: BLE001
