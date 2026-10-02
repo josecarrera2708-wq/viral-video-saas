@@ -23,6 +23,27 @@ from .store import Store
 INTERVAL = pd.Timedelta("4h")
 
 
+def reconcile_funding(st: Store, funding: pd.DataFrame, now) -> float:
+    """Funding ya cobrado con una tasa NO definitiva (0,01 % o estimación por el índice de prima): cuando la fuente trae una tasa
+    mejor (la real publicada o una estimación con datos completos) se apunta la diferencia con las unidades y el precio de entonces.
+    Devuelve el ajuste a restar de la caja (positivo = coste adicional). Nunca empeora una estimación con el 0,01 % de reserva."""
+    pend = st.synthetic_funding()
+    if not pend or not len(funding):
+        return 0.0
+    syn = funding["synthetic"].astype(bool).to_numpy() if "synthetic" in funding else np.zeros(len(funding), bool)
+    est = funding["estimado"].astype(bool).to_numpy() if "estimado" in funding else np.zeros(len(funding), bool)
+    good = ~syn | est
+    rates = {str(t): (float(r), bool(sy)) for t, r, sy, g in zip(funding["time"], funding["funding_rate"], syn, good) if g}
+    adj = 0.0
+    for t, rate, units, price in pend:
+        if t in rates and (abs(rates[t][0] - rate) > 1e-12 or not rates[t][1]):
+            adj += units * price * (rates[t][0] - rate)
+            st.add_funding(t, rates[t][0], units, price, units * price * rates[t][0], rates[t][1])
+    if abs(adj) > 0:
+        st.log(str(now), "INFO", f"AJUSTE_FUNDING {adj:+.6f} USDT: tasa provisional sustituida por una mejor (real o estimada)")
+    return adj
+
+
 class PaperTrader:
     def __init__(self, cfg: LiveConfig, store: Store, kill_file=None):
         self.cfg, self.st = cfg, store
@@ -52,20 +73,7 @@ class PaperTrader:
             prev_units = r["units"]
 
     def _reconcile_funding(self, funding: pd.DataFrame, now) -> float:
-        """Coste adicional (positivo) o devolución (negativo) al sustituir tasas sintéticas ya cobradas por las reales."""
-        pend = self.st.synthetic_funding()
-        if not pend or not len(funding):
-            return 0.0
-        real = funding if "synthetic" not in funding else funding[~funding["synthetic"].astype(bool)]
-        rates = {str(t): float(r) for t, r in zip(real["time"], real["funding_rate"])}
-        adj = 0.0
-        for t, rate, units, price in pend:
-            if t in rates:
-                adj += units * price * (rates[t] - rate)
-                self.st.add_funding(t, rates[t], units, price, units * price * rates[t], False)
-        if adj:
-            self.st.log(str(now), "INFO", f"AJUSTE_FUNDING {adj:+.6f} USDT: tasa sintética sustituida por la real publicada")
-        return adj
+        return reconcile_funding(self.st, funding, now)
 
     def reset_halt(self, now: pd.Timestamp, price: float | None = None) -> dict:
         """Reanuda tras una parada: reinicia 'parado', máximo histórico y referencia diaria. Queda registrado.

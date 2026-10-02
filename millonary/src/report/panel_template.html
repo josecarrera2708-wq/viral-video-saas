@@ -68,6 +68,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <button role="tab" aria-selected="false" data-tab="marcador">Marcador</button>
     <button role="tab" aria-selected="false" data-tab="m15">Mesa 15 min</button>
     <button role="tab" aria-selected="false" data-tab="m1h">Mesa 1 h</button>
+    <button role="tab" aria-selected="false" data-tab="cartera">Núcleo + carry</button>
     <button role="tab" aria-selected="false" data-tab="fondos">Fondos</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
@@ -146,6 +147,15 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="card"><div id="m1hHist"></div></div>
   </section>
 
+  <section class="panel sec" id="tab-cartera" hidden>
+    <h2>Cartera principal en papel: núcleo + carry de funding</h2>
+    <div class="card"><div class="funnel" id="caKpis"></div><p class="foot" id="caNote"></p></div>
+    <h2>Carry de funding (subcuenta de 1.000 USDT)</h2>
+    <div class="card"><div class="tw"><table id="caPos"></table></div><p class="foot">Largo contado + corto perpetuo con la misma cantidad de BTC: el precio no mueve el resultado; gana el funding que pagan los largos. Decide una vez al día (00:00 UTC): dentro si el funding medio de 7 días es positivo. Mientras Binance no publica el mes, el funding se estima con su fórmula sobre el índice de prima (error medio 0,0001 puntos) y luego se corrige al real. Sin dinero real.</p></div>
+    <h2>Órdenes del carry</h2>
+    <div class="card"><div class="tw"><table id="caOrd"></table></div></div>
+  </section>
+
   <section class="panel sec" id="tab-fondos" hidden>
     <h2>Mesa de fondos: estrategias célebres de grandes fondos y traders</h2>
     <div class="card"><div class="funnel" id="fnKpis"></div><p class="foot" id="fnNote"></p></div>
@@ -202,7 +212,8 @@ const kp = [['Patrimonio', S.equity_actual!=null ? S.equity_actual.toLocaleStrin
   ['Semana', S.retorno_semana!=null ? `<span class="${cls(S.retorno_semana)}">${pct(S.retorno_semana)}</span>` : '—'],
   ['Caída máx.', S.caida_max!=null ? (S.caida_max*100).toFixed(2)+'%' : '—'],
   ['Exposición', S.exposicion_actual!=null ? S.exposicion_actual.toFixed(2)+'×' : '—'],
-  ['Comité', D.brief ? pill(D.brief.estado) : '—']];
+  ['Comité', D.brief ? pill(D.brief.estado) : '—'],
+  ['Núcleo + carry', D.carry && D.carry.cartera ? D.carry.cartera.total_usdt.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' USDT' : '—']];
 $('#kpis').innerHTML = kp.map(([a,b]) => `<div class="kpi"><span>${a}</span><b>${b}</b></div>`).join('');
 $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.decision : 'Aún sin sesión del comité.')} Un mes no demuestra rentabilidad: hacen falta años de datos nuevos para una conclusión estadística.`;
 
@@ -210,7 +221,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','fondos','ranking','aprender','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','cartera','fondos','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -316,6 +327,18 @@ if (I) {
       return `<div class="card dept"><h3><span>${esc(t.trader)}</span><span class="pill gold">${t.lado}</span></h3><p>Abrió ${esc(String(t.abre).slice(0,16))} UTC</p><table><tr><td>Entrada</td><td class="n num">${f0(t.px_entrada)}</td></tr><tr><td>Stop (SL)</td><td class="n num neg">${f0(t.sl)}</td></tr><tr><td>Objetivo (TP)</td><td class="n num pos">${t.tp ? f0(t.tp) : 'sin TP'}</td></tr><tr><td>Lote</td><td class="n num">${t.lote_btc} BTC · ${f0(t.nocional_usdt)} USDT</td></tr><tr><td>Resultado ahora</td><td class="n num ${cls(rNow)}">${rNow >= 0 ? '+' : ''}${rNow.toFixed(2)} R · ${usd >= 0 ? '+' : ''}${usd.toFixed(2)} USDT</td></tr></table></div>`; }).join('') : '<div class="card"><p class="dim">No hay posiciones abiertas ahora mismo.</p></div>';
     $('#m15Hist').innerHTML = cl.length ? cl.slice(0,60).map(t => `<details style="border-bottom:1px solid var(--line);padding:8px 0"><summary style="cursor:pointer"><span class="mono dim">${esc(String(t.cierra).slice(5,16))}</span> <b>${esc(t.trader)}</b> · ${t.lado} · ${f0(t.px_entrada)} → ${f0(t.px_salida)} (${esc(t.salida)}) <span class="num ${cls(t.R)}">${t.R >= 0 ? '+' : ''}${Number(t.R).toFixed(2)} R</span></summary>
       <div style="padding:6px 0"><p class="foot">SL ${f0(t.sl)} · TP ${t.tp ? f0(t.tp) : '—'} · lote ${t.lote_btc} BTC · riesgo ${f0(t.riesgo_usdt,2)} $ · duración ${t.duracion_min} min · máx. a favor ${Number(t.mfe_R).toFixed(2)} R · máx. en contra ${Number(t.mae_R).toFixed(2)} R</p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
+  } }
+
+// cartera núcleo + carry
+{ const C = D.carry, f2 = (x, d=2) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  if (!C) { $('#caPos').innerHTML = '<tr><td class="dim">El carry arranca con el cierre diario del 2026-10-02 (00:00 UTC del 3 de octubre).</td></tr>'; }
+  else {
+    const K = C.cartera || {};
+    $('#caKpis').innerHTML = [[K.total_usdt != null ? f2(K.total_usdt) + ' $' : '—','total (2 subcuentas)'],[K.nucleo_usdt != null ? f2(K.nucleo_usdt) + ' $' : '—','núcleo v1'],[f2(C.equity) + ' $','carry'],[pct(C.retorno),'retorno carry'],[(C.dentro ? 'dentro' : 'fuera'),'carry ahora']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#caNote').textContent = (K.nota || '') + ` Última vela del carry: ${C.ultima_vela ? String(C.ultima_vela).slice(0,16) + ' UTC (apertura)' : 'aún ninguna'}.`;
+    $('#caPos').innerHTML = [['Contado (BTC)', f2(C.contado_btc, 3)],['Perpetuo (BTC)', f2(C.perpetuo_btc, 3)],['Nocional', f2(C.nocional_usdt) + ' $'],['Funding cobrado', f2(C.funding_cobrado_usdt, 4) + ' $'],['Marcas de funding', C.marcas_funding + (C.tasas_no_definitivas ? ` (${C.tasas_no_definitivas} aún estimadas)` : '')],['Caída máx.', (C.caida_max*100).toFixed(2) + '%']].map(([a,b]) => `<tr><td>${a}</td><td class="n num">${b}</td></tr>`).join('');
+    const O = (C.ordenes || []).slice().reverse();
+    $('#caOrd').innerHTML = O.length ? '<tr><th>Cierre de vela</th><th>Orden</th><th class="n">BTC</th><th class="n">Precio</th><th class="n">Comisión</th><th>Motivo</th></tr>' + O.map(o => `<tr><td class="mono">${esc(String(o.bar).slice(0,16))}</td><td>${esc(o.side)}</td><td class="n num">${f2(o.qty, 3)}</td><td class="n num">${f2(o.price, 0)}</td><td class="n num">${f2(o.fee, 3)} $</td><td>${esc(o.reason)}</td></tr>`).join('') : '<tr><td class="dim">Aún sin órdenes.</td></tr>';
   } }
 
 // mesa de fondos

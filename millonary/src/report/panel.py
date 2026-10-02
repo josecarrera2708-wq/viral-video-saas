@@ -38,7 +38,7 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
     fh = _json(ROOT / "reports" / "fondos_resultados.json")
     if fh:
         fh = {**fh, "estrategias": {k: {a: b for a, b in v.items() if a not in ("operaciones", "alfa")} for k, v in fh["estrategias"].items()}}
-    return {"fondos": _json(data / "fondos" / "resumen.json"), "fondos_hist": fh, "m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
+    return {"carry": _json(data / "carry" / "resumen.json"), "fondos": _json(data / "fondos" / "resumen.json"), "fondos_hist": fh, "m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 

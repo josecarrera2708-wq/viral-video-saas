@@ -43,6 +43,12 @@ def main(now: pd.Timestamp | None = None) -> dict:
         (d / "informe_prueba.md").write_text(informe_texto(rep)); (d / "informe_prueba.json").write_text(json.dumps(rep, indent=1, default=str))
         out["puertas"] = rep.get("puertas"); out["equity"] = store.rows("equity")[-1]["equity"]
     out["estado_comite"] = s["estado"]
+    # carry de funding junto al núcleo (subcuenta propia): nunca debe tumbar la rutina de la cuenta oficial
+    try:
+        from src.live.carry import main as carry_main
+        c = carry_main(now, funding); out["carry"] = {k: c.get(k) for k in ("equity", "dentro", "velas_nuevas", "problemas", "cartera")}
+    except Exception as e:                                           # noqa: BLE001
+        out["carry_error"] = f"{type(e).__name__}: {e}"
     # perfeccionamiento continuo, informe semanal y panel: nunca deben tumbar la rutina de la cuenta
     try:
         from src.lab.mejora import update as mejora_update

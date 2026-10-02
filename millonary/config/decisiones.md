@@ -67,3 +67,8 @@ Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horar
 ## 2026-10-02 · Revisión completa + mesa de fondos (petición del dueño)
 - Fallos corregidos: (1) el funding sintético del mes en curso nunca se sustituía por el real (causa de G1 en NO desde el día 1; libro funding_ledger con corrección automática); (2) la réplica de G1 recibía solo 2 días de funding (habría fallado con el paso de las semanas); (3) la mesa intradía no paginaba Deribit (límite 744 tasas / 5.000 velas: desde ~30-oct habría reescrito en silencio el funding de operaciones cerradas).
 - Mesa de fondos en papel desde 2026-10-03 (10 estrategias, rutina horaria, pestaña «Fondos»). La única certificada es el carry de funding (neutral al precio, no correlacionado con el núcleo): es la candidata natural para complementar el núcleo, pero NO se activa con dinero: requiere ≥ 90 días en papel, revisar el riesgo de contraparte y aprobación EXPRESA del dueño.
+
+## 2026-10-02 · Carry de funding en papel junto al núcleo (petición del dueño)
+- Subcuenta propia de 1.000 USDT con la regla F06 (prerregistro `config/carry_papel_prerregistrado.md`); la cuenta oficial del núcleo no se toca. El panel muestra la cartera principal (2 × 1.000 USDT) en la pestaña «Núcleo + carry».
+- Funding provisional: en lugar del 0,01 % fijo, fórmula de Binance sobre el índice de prima de 1 min (error medio 1,2e-6 en jul-sep 2026). Sin esto el carry decidiría con un funding inventado y siempre positivo. Afecta solo a lo provisional (núcleo, mesa de fondos y carry); todo se corrige a la tasa real al publicarse el mes.
+- Aviso de costes: entrar y salir cuesta ≈ 0,29 % del nocional; con el funding actual (~4 % anual) se tarda ~4 semanas en recuperarlo.
