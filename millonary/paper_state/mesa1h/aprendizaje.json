@@ -22,8 +22,8 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q01 Momentum de series temporales": {
-  "cerradas": 0,
-  "perdedoras": 0,
+  "cerradas": 1,
+  "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
@@ -44,7 +44,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q04 Expansión de volatilidad Garman-Klass": {
-  "cerradas": 0,
+  "cerradas": 1,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,

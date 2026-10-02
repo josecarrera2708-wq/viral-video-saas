@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02 18:13:28.391665+00:00",
+ "generado": "2026-10-02 19:13:58.593493+00:00",
  "reglas": {
   "A": "n ≥ 6 con operaciones propias",
   "C": "n ≥ 15 con operaciones de toda la sala",
@@ -187,8 +187,8 @@
    "A": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 183,
-     "R_media": -0.42940692368928207,
+     "n": 184,
+     "R_media": -0.43412776548470644,
      "vetado": true,
      "vetado_desde": "2026-03-23 05:00:00+00:00"
     },
@@ -505,8 +505,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -540,8 +540,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -561,8 +561,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -637,8 +637,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -672,8 +672,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -693,8 +693,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -769,8 +769,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -804,8 +804,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -825,8 +825,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -901,8 +901,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -936,8 +936,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -957,8 +957,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1033,8 +1033,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1068,8 +1068,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1089,8 +1089,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1100,8 +1100,8 @@
    "A": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 183,
-     "R_media": -0.42940692368928207,
+     "n": 184,
+     "R_media": -0.43412776548470644,
      "vetado": true,
      "vetado_desde": "2026-03-23 05:00:00+00:00"
     },
@@ -1135,8 +1135,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 210,
-     "R_media": -0.10515992758981253,
+     "n": 211,
+     "R_media": -0.11081339624600949,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1156,8 +1156,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 215,
-     "R_media": -0.1661603699065682,
+     "n": 216,
+     "R_media": -0.17140056177759042,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1165,8 +1165,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1200,8 +1200,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1221,8 +1221,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1297,8 +1297,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1332,8 +1332,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1353,8 +1353,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1429,8 +1429,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1464,8 +1464,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1485,8 +1485,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1561,8 +1561,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1596,8 +1596,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1617,8 +1617,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1693,8 +1693,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1728,8 +1728,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1749,8 +1749,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1825,8 +1825,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1860,8 +1860,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1881,8 +1881,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1957,8 +1957,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -1992,8 +1992,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -2013,8 +2013,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
@@ -2089,8 +2089,8 @@
    "C": [
     {
      "contexto": "a favor de la tendencia",
-     "n": 8759,
-     "R_media": -0.35661340590835267,
+     "n": 8760,
+     "R_media": -0.35672087490471555,
      "vetado": false,
      "vetado_desde": "2022-07-09 21:45:00+00:00"
     },
@@ -2124,8 +2124,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8106,
-     "R_media": -0.2161522498180968,
+     "n": 8107,
+     "R_media": -0.216285701102694,
      "vetado": false,
      "vetado_desde": null
     },
@@ -2145,8 +2145,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7688,
-     "R_media": -0.2902072286399784,
+     "n": 7689,
+     "R_media": -0.2903383034982704,
      "vetado": false,
      "vetado_desde": null
     }
