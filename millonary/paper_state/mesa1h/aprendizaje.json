@@ -1,7 +1,7 @@
 {
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 0,
-  "perdedoras": 0,
+  "cerradas": 1,
+  "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,

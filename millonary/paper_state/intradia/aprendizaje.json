@@ -22,7 +22,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I03 Bollinger + RSI (reversión)": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
@@ -33,7 +33,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I04 Reversión a VWAP diaria": {
-  "cerradas": 2,
+  "cerradas": 3,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
@@ -88,7 +88,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I11 Ruptura fallida": {
-  "cerradas": 3,
+  "cerradas": 4,
   "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 1,
