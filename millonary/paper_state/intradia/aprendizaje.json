@@ -11,7 +11,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I02 Ruptura Donchian 24 h": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
@@ -99,7 +99,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I12 Ichimoku 1 h": {
-  "cerradas": 3,
+  "cerradas": 4,
   "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 0,
