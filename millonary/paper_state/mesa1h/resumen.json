@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03 22:13:22.937696+00:00",
- "ultima_vela_cerrada": "2026-10-03 22:00:00+00:00",
+ "generado": "2026-10-03 23:13:22.885623+00:00",
+ "ultima_vela_cerrada": "2026-10-03 23:00:00+00:00",
  "inicio": "2026-10-02 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas, desde 15 min)",
  "funding_disponible": true,
- "precio_actual": 84712.0,
+ "precio_actual": 84762.0,
  "traders": {
   "P01 Envolvente en soporte/resistencia": {
    "cerradas": 0,
@@ -53,15 +53,15 @@
   },
   "P02 Pin bar en techo/suelo": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.5552884824094434,
    "R_total": 0.5552884824094434,
    "pnl_usdt": 2.1833600543986815,
-   "equity": 1002.1833600543986,
-   "retorno": 0.0021833600543985643,
-   "caida_max": 0.0004629529733831683,
+   "equity": 1001.2225149243986,
+   "retorno": 0.001222514924398732,
+   "caida_max": 0.001411388652182044,
    "p_R_positiva": null,
    "salidas": {
     "tp": 0,
@@ -70,7 +70,35 @@
     "signal": 0,
     "liq": 0
    },
-   "abierta": null
+   "abierta": {
+    "trader": "P02 Pin bar en techo/suelo",
+    "abre": "2026-10-03 22:00:00+00:00",
+    "cierra": "NaT",
+    "lado": "LARGO",
+    "px_entrada": 84728.9424,
+    "sl": 84485.17030311172,
+    "tp": 85216.48659377656,
+    "lote_btc": 0.014,
+    "nocional_usdt": 1186.2051936,
+    "riesgo_usdt": 3.4128093564359485,
+    "stop_pct": 0.0028770817855538586,
+    "px_salida": 84745.0476,
+    "salida": "end",
+    "R": -0.2815408156883835,
+    "pnl_usdt": -0.9608451299999241,
+    "comision_usdt": 1.18631793,
+    "funding_usdt": 0.0,
+    "barras": 1,
+    "max_barras": 8,
+    "mfe_R": 0.3222583757648118,
+    "mae_R": 0.17820907542141323,
+    "post_stop_R": null,
+    "tendencia_a_favor": true,
+    "vol_percentil": 0.042,
+    "hora_utc": 22,
+    "abierta": true,
+    "duracion_min": 60
+   }
   },
   "P02 Pin bar en techo/suelo \u00b7 A": {
    "cerradas": 0,
@@ -89,7 +117,7 @@
   },
   "P02 Pin bar en techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.5552884824094434,
@@ -110,7 +138,7 @@
   },
   "P03 Barrido de liquidez": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.5956323276908955,
@@ -161,7 +189,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap)": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -182,7 +210,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -203,7 +231,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -224,7 +252,7 @@
   },
   "P05 Barra interior + tendencia": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.412279442510496,
@@ -245,7 +273,7 @@
   },
   "P05 Barra interior + tendencia \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.412279442510496,
@@ -326,15 +354,15 @@
   },
   "P07 Doble techo/suelo": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.24786016551236412,
    "R_total": -0.24786016551236412,
    "pnl_usdt": -1.1007877104166888,
-   "equity": 996.187210280775,
-   "retorno": -0.0038127897192249405,
-   "caida_max": 0.008821833318711558,
+   "equity": 996.6868603307751,
+   "retorno": -0.0033131396692249737,
+   "caida_max": 0.008324695616650946,
    "p_R_positiva": null,
    "salidas": {
     "tp": 0,
@@ -355,13 +383,13 @@
     "nocional_usdt": 848.8147289999999,
     "riesgo_usdt": 3.796716146513521,
     "stop_pct": 0.004472962139790485,
-    "px_salida": 84695.0576,
+    "px_salida": 84745.0476,
     "salida": "end",
-    "R": -0.7143020189430757,
-    "pnl_usdt": -2.712002008808382,
-    "comision_usdt": 0.8478826525000001,
+    "R": -0.5827014381467274,
+    "pnl_usdt": -2.2123519588083296,
+    "comision_usdt": 0.8481326025,
     "funding_usdt": 3.3643691551032927e-05,
-    "barras": 9,
+    "barras": 10,
     "max_barras": 12,
     "mfe_R": 0.3753957222503651,
     "mae_R": 0.937581020711488,
@@ -370,7 +398,7 @@
     "vol_percentil": 0.11,
     "hora_utc": 13,
     "abierta": true,
-    "duracion_min": 540
+    "duracion_min": 600
    }
   },
   "P07 Doble techo/suelo \u00b7 A": {
@@ -390,7 +418,7 @@
   },
   "P07 Doble techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.24786016551236412,
@@ -411,7 +439,7 @@
   },
   "Q01 Momentum de series temporales": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -432,7 +460,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -453,7 +481,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -519,7 +547,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas": {
    "cerradas": 2,
-   "por_dia": 1.0384432053458499,
+   "por_dia": 1.0164533346992881,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -540,7 +568,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 A": {
    "cerradas": 2,
-   "por_dia": 1.0384432053458499,
+   "por_dia": 1.0164533346992881,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -561,7 +589,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 1.0384432053458499,
+   "por_dia": 1.0164533346992881,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -582,7 +610,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -603,7 +631,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -624,7 +652,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -645,7 +673,7 @@
   },
   "Q05 Desequilibrio de flujo": {
    "cerradas": 2,
-   "por_dia": 1.0384432053458499,
+   "por_dia": 1.0164533346992881,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.16955495443805302,
@@ -666,7 +694,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.5192216026729249,
+   "por_dia": 0.5082266673496441,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.7979543232755133,
@@ -687,7 +715,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 1.0384432053458499,
+   "por_dia": 1.0164533346992881,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.16955495443805302,
@@ -753,5 +781,5 @@
   }
  },
  "trades_totales": 11,
- "por_dia_total": 5.711437629402174
+ "por_dia_total": 5.590493340846085
 }
