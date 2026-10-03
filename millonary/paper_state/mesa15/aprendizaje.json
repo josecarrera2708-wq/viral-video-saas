@@ -88,7 +88,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q04 Expansión de volatilidad Garman-Klass": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
