@@ -1,6 +1,42 @@
 [
  {
   "trader": "P04 Ineficiencia (Fair Value Gap)",
+  "abre": "2026-10-03 10:15:00+00:00",
+  "cierra": "2026-10-03 10:15:00+00:00",
+  "lado": "CORTO",
+  "px_entrada": 84549.0868,
+  "sl": 84597.92531213303,
+  "tp": 84451.40977573396,
+  "lote_btc": 0.032,
+  "nocional_usdt": 2705.5707776000004,
+  "riesgo_usdt": 1.5628323882567676,
+  "stop_pct": 0.0005776350044862221,
+  "px_salida": 84614.84489719545,
+  "salida": "stop",
+  "R": -3.0783096469964844,
+  "pnl_usdt": -4.810882017409363,
+  "comision_usdt": 2.7066229071551273,
+  "funding_usdt": 0.0,
+  "barras": 1,
+  "max_barras": 48,
+  "mfe_R": -0.018698358326479786,
+  "mae_R": 1.083431859182626,
+  "post_stop_R": -0.2132169786751988,
+  "tendencia_a_favor": false,
+  "vol_percentil": 0.0125,
+  "hora_utc": 10,
+  "abierta": false,
+  "lecciones": [
+   "Nunca fue a favor (máximo -0.02 R): la señal falló desde el principio.",
+   "El precio no se recuperó tras el stop: la salida fue la correcta.",
+   "Operó contra la tendencia de fondo (EMA de 800 h).",
+   "Volatilidad baja (percentil 1%): el stop era estrecho y los costes pesaron más.",
+   "Comisiones y funding costaron 1.73 R de esta pérdida."
+  ],
+  "duracion_min": 15
+ },
+ {
+  "trader": "P04 Ineficiencia (Fair Value Gap)",
   "abre": "2026-10-03 06:00:00+00:00",
   "cierra": "2026-10-03 06:45:00+00:00",
   "lado": "LARGO",
@@ -105,7 +141,7 @@
   "duracion_min": 120
  },
  {
-  "trader": "P04 Ineficiencia (Fair Value Gap) · A",
+  "trader": "P04 Ineficiencia (Fair Value Gap) · C",
   "abre": "2026-10-02 19:15:00+00:00",
   "cierra": "2026-10-03 00:30:00+00:00",
   "lado": "CORTO",
@@ -139,7 +175,7 @@
   "duracion_min": 330
  },
  {
-  "trader": "P04 Ineficiencia (Fair Value Gap) · C",
+  "trader": "P04 Ineficiencia (Fair Value Gap) · A",
   "abre": "2026-10-02 19:15:00+00:00",
   "cierra": "2026-10-03 00:30:00+00:00",
   "lado": "CORTO",
@@ -207,7 +243,7 @@
   "duracion_min": 330
  },
  {
-  "trader": "P03 Barrido de liquidez",
+  "trader": "P03 Barrido de liquidez · A",
   "abre": "2026-10-02 19:00:00+00:00",
   "cierra": "2026-10-03 03:00:00+00:00",
   "lado": "LARGO",
@@ -271,7 +307,7 @@
   "duracion_min": 495
  },
  {
-  "trader": "P03 Barrido de liquidez · A",
+  "trader": "P03 Barrido de liquidez",
   "abre": "2026-10-02 19:00:00+00:00",
   "cierra": "2026-10-03 03:00:00+00:00",
   "lado": "LARGO",
@@ -531,7 +567,7 @@
   "duracion_min": 45
  },
  {
-  "trader": "Q04 Expansión de volatilidad Garman-Klass",
+  "trader": "Q04 Expansión de volatilidad Garman-Klass · A",
   "abre": "2026-10-02 14:30:00+00:00",
   "cierra": "2026-10-02 16:30:00+00:00",
   "lado": "CORTO",
@@ -595,7 +631,7 @@
   "duracion_min": 135
  },
  {
-  "trader": "Q04 Expansión de volatilidad Garman-Klass · A",
+  "trader": "Q04 Expansión de volatilidad Garman-Klass",
   "abre": "2026-10-02 14:30:00+00:00",
   "cierra": "2026-10-02 16:30:00+00:00",
   "lado": "CORTO",
@@ -627,7 +663,7 @@
   "duracion_min": 135
  },
  {
-  "trader": "P02 Pin bar en techo/suelo",
+  "trader": "P02 Pin bar en techo/suelo · A",
   "abre": "2026-10-02 12:45:00+00:00",
   "cierra": "2026-10-02 17:00:00+00:00",
   "lado": "CORTO",
@@ -659,7 +695,7 @@
   "duracion_min": 270
  },
  {
-  "trader": "P02 Pin bar en techo/suelo · A",
+  "trader": "P02 Pin bar en techo/suelo",
   "abre": "2026-10-02 12:45:00+00:00",
   "cierra": "2026-10-02 17:00:00+00:00",
   "lado": "CORTO",
@@ -892,41 +928,6 @@
   "duracion_min": 480
  },
  {
-  "trader": "P03 Barrido de liquidez · A",
-  "abre": "2026-10-02 04:45:00+00:00",
-  "cierra": "2026-10-02 12:30:00+00:00",
-  "lado": "CORTO",
-  "px_entrada": 86497.697,
-  "sl": 86942.55491315147,
-  "tp": 85607.98117369704,
-  "lote_btc": 0.009000000000000001,
-  "nocional_usdt": 778.4792730000001,
-  "riesgo_usdt": 4.003721218363282,
-  "stop_pct": 0.005143002976732152,
-  "px_salida": 86959.9434241341,
-  "salida": "stop",
-  "R": -1.222271592331181,
-  "pnl_usdt": -4.893634708819024,
-  "comision_usdt": 0.7805593819086036,
-  "funding_usdt": 0.04714249029641774,
-  "barras": 32,
-  "max_barras": 32,
-  "mfe_R": 1.6526557767438497,
-  "mae_R": 1.6877366408549166,
-  "post_stop_R": 2.7046770764990464,
-  "tendencia_a_favor": false,
-  "vol_percentil": 0.8245,
-  "hora_utc": 4,
-  "abierta": false,
-  "lecciones": [
-   "Llegó a +1.7 R y lo devolvió todo: sin salida parcial ni stop de protección.",
-   "Stop barrido: tras salir, el precio habría llegado a +2.7 R en 12 h. La dirección era correcta; el stop quedó corto.",
-   "Operó contra la tendencia de fondo (EMA de 800 h).",
-   "Comisiones y funding costaron 0.18 R de esta pérdida."
-  ],
-  "duracion_min": 480
- },
- {
   "trader": "P03 Barrido de liquidez · C",
   "abre": "2026-10-02 04:45:00+00:00",
   "cierra": "2026-10-02 12:30:00+00:00",
@@ -1059,6 +1060,41 @@
  },
  {
   "trader": "P03 Barrido de liquidez · A",
+  "abre": "2026-10-02 04:45:00+00:00",
+  "cierra": "2026-10-02 12:30:00+00:00",
+  "lado": "CORTO",
+  "px_entrada": 86497.697,
+  "sl": 86942.55491315147,
+  "tp": 85607.98117369704,
+  "lote_btc": 0.009000000000000001,
+  "nocional_usdt": 778.4792730000001,
+  "riesgo_usdt": 4.003721218363282,
+  "stop_pct": 0.005143002976732152,
+  "px_salida": 86959.9434241341,
+  "salida": "stop",
+  "R": -1.222271592331181,
+  "pnl_usdt": -4.893634708819024,
+  "comision_usdt": 0.7805593819086036,
+  "funding_usdt": 0.04714249029641774,
+  "barras": 32,
+  "max_barras": 32,
+  "mfe_R": 1.6526557767438497,
+  "mae_R": 1.6877366408549166,
+  "post_stop_R": 2.7046770764990464,
+  "tendencia_a_favor": false,
+  "vol_percentil": 0.8245,
+  "hora_utc": 4,
+  "abierta": false,
+  "lecciones": [
+   "Llegó a +1.7 R y lo devolvió todo: sin salida parcial ni stop de protección.",
+   "Stop barrido: tras salir, el precio habría llegado a +2.7 R en 12 h. La dirección era correcta; el stop quedó corto.",
+   "Operó contra la tendencia de fondo (EMA de 800 h).",
+   "Comisiones y funding costaron 0.18 R de esta pérdida."
+  ],
+  "duracion_min": 480
+ },
+ {
+  "trader": "P03 Barrido de liquidez · A",
   "abre": "2026-10-02 04:15:00+00:00",
   "cierra": "2026-10-02 04:15:00+00:00",
   "lado": "CORTO",
@@ -1128,7 +1164,7 @@
   "duracion_min": 15
  },
  {
-  "trader": "P02 Pin bar en techo/suelo",
+  "trader": "P02 Pin bar en techo/suelo · C",
   "abre": "2026-10-02 04:15:00+00:00",
   "cierra": "2026-10-02 04:15:00+00:00",
   "lado": "CORTO",
@@ -1233,7 +1269,7 @@
   "duracion_min": 15
  },
  {
-  "trader": "P02 Pin bar en techo/suelo · C",
+  "trader": "P02 Pin bar en techo/suelo",
   "abre": "2026-10-02 04:15:00+00:00",
   "cierra": "2026-10-02 04:15:00+00:00",
   "lado": "CORTO",
