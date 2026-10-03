@@ -70,6 +70,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <button role="tab" aria-selected="false" data-tab="m1h">Mesa 1 h</button>
     <button role="tab" aria-selected="false" data-tab="cartera">Núcleo + carry</button>
     <button role="tab" aria-selected="false" data-tab="fondos">Fondos</button>
+    <button role="tab" aria-selected="false" data-tab="primas">Primas y cartera</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
@@ -165,6 +166,19 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="card"><div class="tw"><table id="fnOps"></table></div></div>
   </section>
 
+  <section class="panel sec" id="tab-primas" hidden>
+    <h2>Cartera K4 en papel (Fase 1: HRP + control de caída)</h2>
+    <div class="card"><div class="funnel" id="prKpis"></div><p class="foot" id="prNote"></p><div class="tw"><table id="prPesos"></table></div></div>
+    <h2>Estrategias nuevas en sombra (Fase 2: basis trimestral y prima de volatilidad)</h2>
+    <div class="card"><div class="tw"><table id="prSombra"></table></div><p class="foot">En sombra = se siguen en papel solo para acumular pruebas: no certificaron (les falta el Sharpe deflactado ≥ 0,80 con todas las pruebas del proyecto), no entran en ninguna cartera. B01/B02: largo contado + corto del futuro trimestral, se cobra la diferencia al vencimiento. V01: venta de volatilidad a 30 días (cobra el «seguro» que pagan las opciones; puede perder mucho en un día de pánico). 1.000 USDT cada una. Sin dinero real.</p></div>
+    <h2>Fase 1 · cómo repartir el capital (histórico 2020 → hoy)</h2>
+    <div class="card"><div class="tw"><table id="prF1"></table></div><p class="foot" id="prF1Note"></p></div>
+    <h2>Fase 2 · histórico de las estrategias nuevas</h2>
+    <div class="card"><div class="tw"><table id="prF2"></table></div><p class="foot">Basis desde 2021, prima de volatilidad desde 2021-05. Certificada = Sharpe &gt; 0 con Holm, positiva en 2021-23 y en 2024-hoy, positiva con costes ×2, Sharpe deflactado ≥ 0,80 y ≥ 20 operaciones.</p></div>
+    <h2>Fase 2 · órdenes límite (maker) en las 40 traders de corto plazo</h2>
+    <div class="card"><div class="tw"><table id="prMk"></table></div><p class="foot" id="prMkNote"></p></div>
+  </section>
+
   <section class="panel sec" id="tab-ranking" hidden>
     <h2>Traders de la incubadora</h2>
     <div class="card"><div class="tw"><table id="rankFwd"></table></div>
@@ -221,7 +235,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','cartera','fondos','ranking','aprender','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','cartera','fondos','primas','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -354,6 +368,42 @@ if (I) {
     const ops = M.operaciones || [];
     $('#fnOps').innerHTML = ops.length ? '<tr><th>Día</th><th>Estrategia</th><th>Lado</th><th class="n">Entrada</th><th class="n">Salida</th><th class="n">Resultado</th><th>Motivo</th></tr>' + ops.slice(0,120).map(o => `<tr><td class="mono">${esc(o.salida)}</td><td>${esc(o.estrategia)}</td><td>${esc(o.lado)}</td><td class="n num">${f0(o.px_entrada)}</td><td class="n num">${f0(o.px_salida)}</td><td class="n num ${cls(o.pnl_usdt)}">${o.pnl_usdt == null ? '—' : (o.pnl_usdt >= 0 ? '+' : '') + f0(o.pnl_usdt, 2) + ' $'}</td><td>${esc(o.motivo)}</td></tr>`).join('') : '<tr><td class="dim">Aún sin operaciones desde el inicio en papel.</td></tr>';
   } }
+
+// primas y cartera (Fase 1 y Fase 2)
+{ const K = D.k4, CH = D.cartera_hist, P = D.primas, PH = D.primas_hist, MK = D.maker_hist;
+  const f2 = (x, d=2) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  const n2 = x => x == null ? '—' : Number(x).toFixed(2), p0 = x => x == null ? '—' : (x*100).toFixed(0) + '%', p1 = x => x == null ? '—' : (x >= 0 ? '+' : '') + (x*100).toFixed(1) + '%';
+  const sh = s => s.split(' ')[0];
+  if (!K) { $('#prPesos').innerHTML = '<tr><td class="dim">La cartera K4 arranca en papel el 2026-10-03 (rutina diaria).</td></tr>'; }
+  else {
+    const S = P ? Object.entries(P.estrategias) : [];
+    $('#prKpis').innerHTML = [[f2(K.equity) + ' $','cartera K4'],[pct(K.retorno),'retorno K4'],[(K.multiplicador_caida*100).toFixed(0) + '%','capital invertido'],[K.dias,'días en papel']].concat(S.map(([k,v]) => [f2(v.equity) + ' $', sh(k) + ' (sombra)'])).map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#prNote').textContent = `Último día cerrado ${K.ultimo_dia_cerrado}. Histórico: Sharpe ${n2(K.hist.sharpe)}, ${p1(K.hist.cagr)}/año (≈ ${f2(K.hist.mes_sobre_1000, 1)} USDT/mes con 1.000), caída máx. ${p0(K.hist.caida_max)}. Muy estable pero gana poco: casi todo va al carry. ${K.nota}`;
+    const W = Object.entries(K.pesos || {}).sort((a,b) => b[1] - a[1]);
+    $('#prPesos').innerHTML = '<tr><th>Bolsillo</th><th class="n">Peso de capital ahora</th></tr>' + W.map(([k,v]) => `<tr><td>${esc(k)}</td><td class="n num">${(v*100).toFixed(1)}%</td></tr>`).join('') + `<tr><td>USDT sin usar (control de caída)</td><td class="n num">${(K.en_usdt_sin_usar*100).toFixed(1)}%</td></tr>`;
+  }
+  if (!P) { $('#prSombra').innerHTML = '<tr><td class="dim">La sombra de la Fase 2 arranca el 2026-10-03 (rutina diaria).</td></tr>'; }
+  else {
+    $('#prSombra').innerHTML = '<tr><th>Estrategia</th><th class="n">Puertas hist.</th><th class="n">Sharpe hist.</th><th class="n">Al año hist.</th><th class="n">Caída hist.</th><th class="n">Días papel</th><th class="n">Equity</th><th class="n">Retorno</th><th>Posición</th></tr>' +
+      Object.entries(P.estrategias).map(([k,v]) => { const h = v.hist || {}, pos = v.posicion ? `${esc(v.posicion.contrato)} desde ${esc(v.posicion.desde)} (basis ${p1(v.posicion.basis_anual_entrada)} anual)` : (v.en_posicion != null ? (v.en_posicion ? `vendiendo volatilidad (DVOL ${f2(v.dvol_ultimo, 1)})` : 'fuera') : 'fuera');
+        return `<tr><td>${esc(k)}</td><td class="n num">${esc(h.puertas || '—')}</td><td class="n num ${cls(h.sharpe)}">${n2(h.sharpe)}</td><td class="n num">${p1(h.cagr)}</td><td class="n num">${p0(h.caida_max)}</td><td class="n num">${v.dias}</td><td class="n num">${f2(v.equity)} $</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td>${pos}</td></tr>`; }).join('');
+  }
+  if (CH) {
+    const rows = Object.entries(CH.referencias).map(([k,v]) => ['(ref.) ' + k, v]).concat(Object.entries(CH.carteras));
+    $('#prF1').innerHTML = '<tr><th>Cartera</th><th class="n">Sharpe</th><th class="n">Al año</th><th class="n">USDT/mes con 1.000</th><th class="n">Peor caída</th><th class="n">Puertas</th></tr>' +
+      rows.map(([k,v]) => `<tr><td>${esc(k)} ${v.aprobada ? '<span class="pill gold">aprobada</span>' : ''}</td><td class="n num">${n2(v.sharpe)}</td><td class="n num ${cls(v.cagr)}">${p1(v.cagr)}</td><td class="n num">${f2(v.mes_sobre_1000, 1)}</td><td class="n num">${p0(v.caida_max)}</td><td class="n num">${v.puertas ? Object.values(v.puertas).filter(Boolean).length + '/5' : '—'}</td></tr>`).join('');
+    $('#prF1Note').textContent = `Repartir por riesgo (paridad, HRP) pone casi todo en el carry: mucho más estable, pero gana menos que el núcleo solo. El 50/50 que corre en papel es el mejor equilibrio entre ganancia y caída. Probabilidad de sobreajuste al elegir la «mejor» estrategia célebre por su historial: ${p0(CH.pbo['fondos_F01-F09_sin_carry (CSCV s=16, diagnóstico)'])}.`;
+  }
+  if (PH) {
+    $('#prF2').innerHTML = '<tr><th>Estrategia</th><th class="n">Sharpe</th><th class="n">Al año</th><th class="n">USDT/mes con 1.000</th><th class="n">Peor caída</th><th class="n">Peor día</th><th class="n">Corr. núcleo</th><th class="n">Puertas</th></tr>' +
+      Object.entries(PH.estrategias).map(([k,v]) => `<tr><td>${esc(k)} ${v.certificada ? '<span class="pill gold">certificada</span>' : ''}</td><td class="n num ${cls(v.sharpe)}">${n2(v.sharpe)}</td><td class="n num ${cls(v.cagr)}">${p1(v.cagr)}</td><td class="n num">${f2(v.mes_sobre_1000, 1)}</td><td class="n num">${p0(v.caida_max)}</td><td class="n num neg">${p1(v.peor_dia)}</td><td class="n num">${(v.corr_nucleo >= 0 ? '+' : '') + n2(v.corr_nucleo)}</td><td class="n num">${Object.values(v.puertas).filter(Boolean).length}/5</td></tr>`).join('');
+  }
+  if (MK) {
+    $('#prMk').innerHTML = '<tr><th>Periodo</th><th class="n">R por operación (a mercado)</th><th class="n">R por operación (límite)</th><th class="n">Órdenes llenadas</th><th class="n">Traders con R &gt; 0</th></tr>' +
+      Object.entries(MK.agregado).map(([k,v]) => `<tr><td>${esc(({construccion:'construcción', validacion:'validación', examen:'examen'})[k] || k)}</td><td class="n num ${cls(v.R_taker)}">${(v.R_taker >= 0 ? '+' : '') + v.R_taker.toFixed(3)}</td><td class="n num ${cls(v.R_maker)}">${(v.R_maker >= 0 ? '+' : '') + v.R_maker.toFixed(3)}</td><td class="n num">${p0(v.llenado)}</td><td class="n num">${v.positivas_taker} → ${v.positivas_maker}</td></tr>`).join('');
+    $('#prMkNote').textContent = `Certificadas ${MK.certificadas.length}/${MK.n}. La orden límite mejora la R en ${MK.mejoran} de ${MK.n} traders, pero solo ≈ +0,04 R por operación: la comisión explica una parte pequeña de las pérdidas; el resto es falta de ventaja en las señales de corto plazo. Pruebas acumuladas del proyecto: ${MK.n_pruebas}.`;
+  }
+}
 
 // mesa de 1 h
 { const M = D.m1h, f0 = (x, d=0) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
