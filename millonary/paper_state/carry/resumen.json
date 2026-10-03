@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03 02:13:33.404445+00:00",
+ "generado": "2026-10-03 03:13:46.127869+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
  "ultima_vela": null,
  "equity": 1000.0,
@@ -13,7 +13,14 @@
  "marcas_funding": 0,
  "tasas_no_definitivas": 0,
  "ordenes": [],
- "eventos": [],
+ "eventos": [
+  {
+   "id": 1,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  }
+ ],
  "cartera": {
   "nucleo_usdt": 1008.129739068766,
   "carry_usdt": 1000.0,
@@ -22,5 +29,10 @@
   "nota": "Dos subcuentas de 1.000 USDT: el núcleo (prueba oficial, sin tocar) y el carry. El núcleo empezó el 2026-09-29; el carry el 2026-10-03."
  },
  "velas_nuevas": 0,
- "problemas": []
+ "problemas": [
+  {
+   "status": "datos_no_fiables",
+   "bar": "2026-10-02 20:00:00+00:00"
+  }
+ ]
 }
