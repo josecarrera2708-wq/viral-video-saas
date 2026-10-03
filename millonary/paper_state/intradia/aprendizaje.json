@@ -55,7 +55,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I06 RSI(2) retroceso": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 1,

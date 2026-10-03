@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03 07:13:33.270802+00:00",
+ "generado": "2026-10-03 08:13:22.506607+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
  "ultimo_dia_cerrado": "2026-10-02",
  "precio": 84518.01,
- "funding_dia": 0.00030000000000000003,
- "funding_7d_anual": 0.05063232862635815,
+ "funding_dia": 0.00015904668529106042,
+ "funding_7d_anual": 0.043282620073677724,
  "fuente": "Binance Vision (contado y perpetuo BTCUSDT, velas diarias UTC; ≤ 1 día de retraso)",
  "estrategias": {
   "F01 Tortugas S1 (Dennis, 20/10)": {
