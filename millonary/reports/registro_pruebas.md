@@ -57,3 +57,8 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - Resultado (`reports/primas_resultados.md`): **0/4 certificadas**. B01 basis hasta vencimiento (Sharpe 1,28; +6,8 %/año; caída 7 %; 21/21 vencimientos con ganancia), B02 con salida anticipada (1,32; +7,0 %) y V01 venta de varianza (1,58; +9,4 %; caída 8 %; peor día −4,7 %; 2026 −5,4 %) pasan 4/5 y fallan SOLO el Deflated Sharpe (0,59 / 0,62 / 0,74 < 0,80 con n = 269). V02 (filtro IV > RV) 1/5: el filtro empeora (Sharpe 0,63; negativa con costes ×2).
 - Diagnóstico: correlación con el carry de funding ≈ 0 y con el núcleo −0,1 a −0,4; como tercer bolsillo suben la paridad núcleo+carry (B01 4,95 → 5,49; V01 2,51 → 5,06).
 - B01, B02 y V01 se siguen hacia delante EN SOMBRA (`src/primas/forward.py`, rutina diaria, inicio 2026-10-03): solo evidencia; no entran en la cartera.
+
+## 2026-10-03 · Fase 2, lote 2: entrada maker (orden límite) — pruebas 270-309
+- Prerregistro `config/maker_prerregistrada.md` + código `src/maker/` (copia del motor; el original intacto, con test) en git (d2c5038) ANTES de ejecutar.
+- Resultado (`reports/maker_resultados.md`): **0/40 certificadas**. Llenado 94 %; el maker mejora la R en validación y examen en 32/40, pero solo ≈ +0,04 R por operación (examen: −0,207 → −0,168 de media). Traders con R > 0 en el examen: 1 → 2 (mesa1h P07 +0,003 y Q01 +0,016, no significativas). Con costes ×2 todas negativas.
+- Conclusión: la comisión explica ≈ 20 % del problema; el resto es falta de ventaja en las señales de corto plazo. Nada pasa a papel.

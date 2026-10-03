@@ -80,3 +80,7 @@ Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horar
 ## 2026-10-03 · Fase 2, lote 1 (basis trimestral y prima de volatilidad)
 - 0/4 certificadas con las reglas del proyecto; tres (B01, B02, V01) se quedan a una puerta (Deflated Sharpe) y aportan diversificación real. Van a SOMBRA en papel: si en ≥ 90 días se comportan como en el histórico, se propondrá una prueba nueva de cartera que las incluya. Nada cambia en las cuentas existentes.
 - Datos congelados en `paper_state/hist/` (contado 4 h y 1 h, funding, trimestrales vencidos, DVOL) para que las rutinas funcionen en una máquina nueva sin data/raw.
+
+## 2026-10-03 · Fase 2, lote 2 (órdenes maker)
+- Entrar con orden límite reduce la pérdida (≈ +0,04 R por operación) pero no vuelve rentable ninguna de las 40 traders de corto plazo. Se anota como mejora de ejecución para cuando exista una señal con ventaja; no cambia nada en papel.
+- Se detiene la búsqueda de señales de corto plazo: cada prueba nueva sube la vara (Deflated Sharpe con n = 309) para TODAS, incluidas las primas que ya casi certifican. Prioridad: acumular días de papel del núcleo, el carry, K4 y la sombra B01/B02/V01.
