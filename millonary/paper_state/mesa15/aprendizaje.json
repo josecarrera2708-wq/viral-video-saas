@@ -11,7 +11,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 3,
+  "cerradas": 4,
   "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 1,
@@ -22,13 +22,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 3,
-  "perdedoras": 1,
+  "cerradas": 4,
+  "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 1,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },

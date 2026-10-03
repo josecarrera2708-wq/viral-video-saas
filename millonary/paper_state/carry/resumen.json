@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03 03:13:46.127869+00:00",
+ "generado": "2026-10-03 04:13:30.706006+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
  "ultima_vela": null,
  "equity": 1000.0,
@@ -16,6 +16,12 @@
  "eventos": [
   {
    "id": 1,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 2,
    "ts": "2026-10-03 00:01:00+00:00",
    "level": "ERROR",
    "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
