@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-03 09:13:39.122942+00:00",
- "ultima_vela_cerrada": "2026-10-03 09:00:00+00:00",
+ "generado": "2026-10-03 10:14:14.462357+00:00",
+ "ultima_vela_cerrada": "2026-10-03 10:00:00+00:00",
  "inicio": "2026-10-02 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas, desde 15 min)",
  "funding_disponible": true,
- "precio_actual": 84603.0,
+ "precio_actual": 84582.5,
  "traders": {
   "P01 Envolvente en soporte/resistencia": {
    "cerradas": 0,
@@ -53,7 +53,7 @@
   },
   "P02 Pin bar en techo/suelo": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.5552884824094434,
@@ -89,7 +89,7 @@
   },
   "P02 Pin bar en techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.5552884824094434,
@@ -155,7 +155,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap)": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -176,7 +176,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -197,7 +197,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -308,7 +308,7 @@
   },
   "P07 Doble techo/suelo": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.24786016551236412,
@@ -344,7 +344,7 @@
   },
   "P07 Doble techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.24786016551236412,
@@ -365,7 +365,7 @@
   },
   "Q01 Momentum de series temporales": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -386,7 +386,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -407,7 +407,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -473,7 +473,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas": {
    "cerradas": 2,
-   "por_dia": 1.444585077619955,
+   "por_dia": 1.4019776379332538,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -494,7 +494,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 A": {
    "cerradas": 2,
-   "por_dia": 1.444585077619955,
+   "por_dia": 1.4019776379332538,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -515,7 +515,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 1.444585077619955,
+   "por_dia": 1.4019776379332538,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -536,7 +536,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -557,7 +557,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -578,7 +578,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -599,7 +599,7 @@
   },
   "Q05 Desequilibrio de flujo": {
    "cerradas": 2,
-   "por_dia": 1.444585077619955,
+   "por_dia": 1.4019776379332538,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.16955495443805302,
@@ -620,7 +620,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.7222925388099775,
+   "por_dia": 0.7009888189666269,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.7979543232755133,
@@ -641,7 +641,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 1.444585077619955,
+   "por_dia": 1.4019776379332538,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.16955495443805302,
@@ -707,5 +707,5 @@
   }
  },
  "trades_totales": 9,
- "por_dia_total": 6.500632849289797
+ "por_dia_total": 6.308899370699642
 }
