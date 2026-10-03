@@ -417,3 +417,23 @@ trading-btc/
    estrategias.
 3. Sigo por F2 (motor) con las pruebas de paridad, y te reporto al cerrar cada fase con su
    puerta de salida cumplida o no.
+
+---
+
+## 11. Estado al 2026-10-03 (lo que existe y corre solo)
+
+| Sistema | Qué es | Estado | Dónde |
+|---|---|---|---|
+| Núcleo v1 | tendencia multi-horizonte + volatilidad objetivo, contado 4 h | papel oficial desde 2026-09-29 (puertas G1–G5) | `paper_state/` |
+| Carry de funding | largo contado + corto perpetuo (F06), subcuenta 1.000 USDT | papel desde 2026-10-03 | `paper_state/carry/` |
+| Mesa intradía · 15 min · 1 h | 14 + 13 + 13 traders de corto plazo (+ aprendices A/C) | papel; 0 certificadas (los costes y la falta de ventaja) | `paper_state/intradia`, `mesa15`, `mesa1h` |
+| Mesa de fondos | 10 estrategias célebres (Tortugas, AQR, Tudor Jones…) | papel; 1/10 certificada (F06 carry) | `paper_state/fondos/` |
+| Cartera K4 (Fase 1) | HRP de 10 bolsillos + control de caída | papel desde 2026-10-03; aprobada 5/5 (≈ +6,7 %/año, caída 2 %) | `paper_state/cartera/` |
+| Sombra Fase 2 | B01/B02 basis trimestral, V01 prima de volatilidad | sombra desde 2026-10-03; 4/5 (fallan solo el Sharpe deflactado) | `paper_state/primas/` |
+| Órdenes maker (Fase 2) | entrada con orden límite en las 40 traders | 0/40; +0,04 R por operación; no se usa | `reports/maker_resultados.md` |
+
+- Pruebas acumuladas: **309** (`reports/registro_pruebas.md`). Cada prueba nueva endurece el Sharpe deflactado de TODAS.
+- Rutinas: horaria (:12 UTC) mesas + fondos + carry + panel; diaria (04:17 UTC) núcleo + carry + K4 + sombra. Panel: pestaña «Primas y cartera».
+- Datos congelados en `paper_state/hist/` para que todo funcione en una máquina nueva.
+- Hitos: 2026-10-29 informe de 30 días · desde ~2026-12-27 (90 días) primera revisión posible de carry, K4 y sombra · **dinero real solo con aprobación EXPRESA del dueño**.
+- Decisión: no se buscan más señales de corto plazo; se acumulan días de papel.
