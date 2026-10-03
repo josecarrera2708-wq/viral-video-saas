@@ -11,13 +11,13 @@
   "nocional_usdt": 848.8147289999999,
   "riesgo_usdt": 3.796716146513521,
   "stop_pct": 0.004472962139790485,
-  "px_salida": 84844.5277,
+  "px_salida": 84839.0288,
   "salida": "end",
-  "R": -0.320825143622713,
-  "pnl_usdt": -1.2180820029998738,
-  "comision_usdt": 0.848630003,
+  "R": -0.3353012075103255,
+  "pnl_usdt": -1.2730435084999334,
+  "comision_usdt": 0.8486025085,
   "funding_usdt": 0.0,
-  "barras": 3,
+  "barras": 4,
   "max_barras": 12,
   "mfe_R": 0.18049044847067178,
   "mae_R": 0.40290844534286974,
@@ -27,7 +27,7 @@
   "hora_utc": 13,
   "abierta": true,
   "lecciones": [],
-  "duracion_min": 180
+  "duracion_min": 240
  },
  {
   "trader": "P02 Pin bar en techo/suelo",
