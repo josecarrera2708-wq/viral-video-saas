@@ -50,9 +50,20 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 
+def apodar(js: str) -> str:
+    """Antepone el apodo (config/apodos.json) a cada estrategia: «Nikola Tesla — Núcleo v1». Solo presentación."""
+    import re
+    f = ROOT / "config" / "apodos.json"
+    if not f.exists():
+        return js
+    ap = json.loads(f.read_text(encoding="utf-8"))["apodos"]
+    js = js.replace("N Núcleo v1", "Núcleo v1").replace("Núcleo v1", f"{ap['Núcleo v1']} — Núcleo v1") if "Núcleo v1" in ap else js
+    return re.sub(r"(?<![\w—] )\b([IPQFBV]\d\d|K\d)(?= [A-Za-zÁÉÍÓÚáéíóú(])", lambda m: f"{ap[m.group(1)]} — {m.group(1)}" if m.group(1) in ap else m.group(1), js)
+
+
 def fragment(data: Path, now: pd.Timestamp | None = None) -> str:
     """Página sin <html>/<head>/<body> (formato de artefacto publicable)."""
-    js = json.dumps(payload(data, now), default=str, ensure_ascii=False).replace("</", "<\\/")
+    js = apodar(json.dumps(payload(data, now), default=str, ensure_ascii=False)).replace("</", "<\\/")
     return TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", js)
 
 
