@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-03 10:37:35.036253+00:00",
+ "generado": "2026-10-03 14:04:43.299910+00:00",
  "inicio": "cierre diario del 2026-10-03 (04-oct 00:00 UTC)",
  "ultimo_dia_cerrado": "2026-10-02",
  "precio_btc": 84518.01,
@@ -31,9 +31,23 @@
     "2025": 1.0466681793864296,
     "2026": 1.05609512997381
    }
+  },
+  "A3 Núcleo + carry con ganancias a BTC": {
+   "x_usdt": 3.9170326642658098,
+   "btc_por_btc_inicial": 0.3337272690220517,
+   "caida_max": 0.531529612353471,
+   "btc_por_anio": {
+    "2020": 0.4137914588675428,
+    "2021": 0.8427592763403051,
+    "2022": 1.6981854301763986,
+    "2023": 0.6602459204605957,
+    "2024": 0.8266320941657405,
+    "2025": 1.0143429842378042,
+    "2026": 1.0194610373447328
+   }
   }
  },
- "nota": "Papel. 1.000 USDT cada una. A1 es la aplicada (decisión del dueño: máximo BTC); A2 es sombra para comparar. Sin dinero real.",
+ "nota": "Papel. 1.000 USDT cada una. A1 (hucha de BTC) y A3 (núcleo + carry que pasan sus ganancias a BTC cada mes) son las aplicadas; A2 es sombra para comparar. Sin dinero real.",
  "estado": "pendiente: compra en papel al cierre diario del 2026-10-03 (04-oct 00:00 UTC)",
  "carteras": {}
 }

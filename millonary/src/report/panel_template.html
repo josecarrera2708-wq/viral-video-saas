@@ -167,7 +167,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
   </section>
 
   <section class="panel sec" id="tab-primas" hidden>
-    <h2>Acumulación de BTC (A1 aplicada · A2 en sombra)</h2>
+    <h2>Acumulación de BTC (A1 hucha · A3 ganancias a BTC · A2 comparación)</h2>
     <div class="card"><div class="funnel" id="acKpis"></div><p class="foot" id="acNote"></p><div class="tw"><table id="acTab"></table></div></div>
     <h2>Cartera K4 en papel (Fase 1: HRP + control de caída)</h2>
     <div class="card"><div class="funnel" id="prKpis"></div><p class="foot" id="prNote"></p><div class="tw"><table id="prPesos"></table></div></div>
@@ -380,7 +380,7 @@ if (I) {
     const C = A.carteras || {}, X = A.contexto_2020_hoy || {}, on = A.estado === 'activa', sh = k => k.split(' ')[0];
     $('#acKpis').innerHTML = (on ? Object.entries(C).map(([k,v]) => [[b6(v.btc), sh(k) + (v.papel === 'SOMBRA' ? ' (sombra)' : ' aplicada')], [f2(v.equity) + ' $', sh(k) + ' en USDT']]).flat()
       : [['pendiente', 'compra en papel al cierre del 04-oct 00:00 UTC'], [f2(A.precio_btc) + ' $', 'BTC (último cierre diario)']]).map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
-    $('#acNote').textContent = `A1 es la aplicada: 100 % BTC, compra única y nunca se vende; es lo que más BTC reúne si sube a largo plazo, pero en el histórico llegó a caer un ${p0((X[Object.keys(X)[0]] || {}).caida_max)}. A2 es sombra para comparar: gana BTC en los años bajistas y lo pierde en los alcistas. «Retorno en BTC» = BTC que tienes frente a los que comprabas con 1.000 USDT al inicio. ${A.nota}`;
+    $('#acNote').textContent = `A1 = hucha: 100 % BTC, compra única y nunca se vende (en el histórico llegó a caer un ${p0((X[Object.keys(X)[0]] || {}).caida_max)}). A3 = núcleo + carry siguen operando con 1.000 USDT y cada fin de mes sus ganancias (≥ 10 USDT) se convierten en BTC (0,10 % de comisión sobre lo convertido). A2 = solo comparación. «Retorno en BTC» = BTC que tienes frente a los que comprabas con 1.000 USDT al inicio. ${A.nota}`;
     $('#acTab').innerHTML = '<tr><th>Cartera</th><th class="n">BTC ahora</th><th class="n">Retorno en BTC</th><th class="n">Equity</th><th class="n">Retorno USDT</th><th class="n">Días</th><th class="n">2020→hoy: BTC por cada BTC</th><th class="n">USDT ×</th><th class="n">Caída máx. hist.</th><th class="n">BTC en 2022 (bajista)</th></tr>' +
       Object.entries(X).map(([k,h]) => { const v = C[k] || {};
         return `<tr><td>${esc(k)}</td><td class="n num">${b6(v.btc)}</td><td class="n num ${cls(v.retorno_btc)}">${v.retorno_btc == null ? '—' : pct(v.retorno_btc)}</td><td class="n num">${v.equity == null ? '—' : f2(v.equity) + ' $'}</td><td class="n num ${cls(v.retorno_usdt)}">${v.retorno_usdt == null ? '—' : pct(v.retorno_usdt)}</td><td class="n num">${v.dias ?? '—'}</td><td class="n num">${f2(h.btc_por_btc_inicial)}</td><td class="n num">×${f2(h.x_usdt, 1)}</td><td class="n num">${p0(h.caida_max)}</td><td class="n num">×${f2((h.btc_por_anio || {})['2022'])}</td></tr>`; }).join('');
