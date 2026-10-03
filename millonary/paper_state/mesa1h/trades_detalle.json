@@ -1,5 +1,35 @@
 [
  {
+  "trader": "P07 Doble techo/suelo",
+  "abre": "2026-10-03 13:00:00+00:00",
+  "cierra": "NaT",
+  "lado": "LARGO",
+  "px_entrada": 84881.4729,
+  "sl": 84501.80128534864,
+  "tp": 85640.8161293027,
+  "lote_btc": 0.01,
+  "nocional_usdt": 848.8147289999999,
+  "riesgo_usdt": 3.796716146513521,
+  "stop_pct": 0.004472962139790485,
+  "px_salida": 84832.03020000001,
+  "salida": "end",
+  "R": -0.3537252888217905,
+  "pnl_usdt": -1.3429945154998506,
+  "comision_usdt": 0.8485675155000001,
+  "funding_usdt": 0.0,
+  "barras": 1,
+  "max_barras": 12,
+  "mfe_R": 0.18049044847067178,
+  "mae_R": 0.3594498370001003,
+  "post_stop_R": null,
+  "tendencia_a_favor": true,
+  "vol_percentil": 0.11,
+  "hora_utc": 13,
+  "abierta": true,
+  "lecciones": [],
+  "duracion_min": 60
+ },
+ {
   "trader": "P02 Pin bar en techo/suelo",
   "abre": "2026-10-02 20:00:00+00:00",
   "cierra": "2026-10-03 04:00:00+00:00",
@@ -160,7 +190,7 @@
   "duracion_min": 420
  },
  {
-  "trader": "Q04 Expansión de volatilidad Garman-Klass · A",
+  "trader": "Q04 Expansión de volatilidad Garman-Klass",
   "abre": "2026-10-02 15:00:00+00:00",
   "cierra": "2026-10-02 18:00:00+00:00",
   "lado": "CORTO",
@@ -224,7 +254,7 @@
   "duracion_min": 240
  },
  {
-  "trader": "Q04 Expansión de volatilidad Garman-Klass",
+  "trader": "Q04 Expansión de volatilidad Garman-Klass · A",
   "abre": "2026-10-02 15:00:00+00:00",
   "cierra": "2026-10-02 18:00:00+00:00",
   "lado": "CORTO",
@@ -355,6 +385,38 @@
   "duracion_min": 420
  },
  {
+  "trader": "Q03 Régimen por razón de varianzas",
+  "abre": "2026-10-02 05:00:00+00:00",
+  "cierra": "2026-10-02 17:00:00+00:00",
+  "lado": "CORTO",
+  "px_entrada": 86627.671,
+  "sl": 87634.08804961485,
+  "tp": 84614.83690077033,
+  "lote_btc": 0.004,
+  "nocional_usdt": 346.510684,
+  "riesgo_usdt": 4.025668198459355,
+  "stop_pct": 0.011617731817063843,
+  "px_salida": 85194.0354,
+  "salida": "time",
+  "R": 1.347825937802698,
+  "pnl_usdt": 5.425900014870978,
+  "comision_usdt": 0.3436434128,
+  "funding_usdt": 0.0350010276709423,
+  "barras": 13,
+  "max_barras": 12,
+  "mfe_R": 2.097709891548398,
+  "mae_R": 0.6168705113229078,
+  "post_stop_R": NaN,
+  "tendencia_a_favor": false,
+  "vol_percentil": 0.6,
+  "hora_utc": 5,
+  "abierta": false,
+  "lecciones": [
+   "Ganó +1.35 R saliendo por tiempo; el máximo a favor fue 2.1 R (dejó ganancia sobre la mesa)."
+  ],
+  "duracion_min": 780
+ },
+ {
   "trader": "Q05 Desequilibrio de flujo · C",
   "abre": "2026-10-02 05:00:00+00:00",
   "cierra": "2026-10-02 05:00:00+00:00",
@@ -417,38 +479,6 @@
    "Nunca fue a favor (máximo 0.04 R): la señal falló desde el principio."
   ],
   "duracion_min": 60
- },
- {
-  "trader": "Q03 Régimen por razón de varianzas",
-  "abre": "2026-10-02 05:00:00+00:00",
-  "cierra": "2026-10-02 17:00:00+00:00",
-  "lado": "CORTO",
-  "px_entrada": 86627.671,
-  "sl": 87634.08804961485,
-  "tp": 84614.83690077033,
-  "lote_btc": 0.004,
-  "nocional_usdt": 346.510684,
-  "riesgo_usdt": 4.025668198459355,
-  "stop_pct": 0.011617731817063843,
-  "px_salida": 85194.0354,
-  "salida": "time",
-  "R": 1.347825937802698,
-  "pnl_usdt": 5.425900014870978,
-  "comision_usdt": 0.3436434128,
-  "funding_usdt": 0.0350010276709423,
-  "barras": 13,
-  "max_barras": 12,
-  "mfe_R": 2.097709891548398,
-  "mae_R": 0.6168705113229078,
-  "post_stop_R": NaN,
-  "tendencia_a_favor": false,
-  "vol_percentil": 0.6,
-  "hora_utc": 5,
-  "abierta": false,
-  "lecciones": [
-   "Ganó +1.35 R saliendo por tiempo; el máximo a favor fue 2.1 R (dejó ganancia sobre la mesa)."
-  ],
-  "duracion_min": 780
  },
  {
   "trader": "Q03 Régimen por razón de varianzas · A",
@@ -548,39 +578,6 @@
   "duracion_min": 780
  },
  {
-  "trader": "Q03 Régimen por razón de varianzas · C",
-  "abre": "2026-10-02 04:00:00+00:00",
-  "cierra": "2026-10-02 04:00:00+00:00",
-  "lado": "CORTO",
-  "px_entrada": 85479.4007,
-  "sl": 86337.31136881598,
-  "tp": 83763.57936236804,
-  "lote_btc": 0.005,
-  "nocional_usdt": 427.3970035,
-  "riesgo_usdt": 4.2895533440799,
-  "stop_pct": 0.010036460969431903,
-  "px_salida": 86354.57883108973,
-  "salida": "stop",
-  "R": -1.1202741215256207,
-  "pnl_usdt": -4.805475604276399,
-  "comision_usdt": 0.42958494882772436,
-  "funding_usdt": 0.0,
-  "barras": 1,
-  "max_barras": 12,
-  "mfe_R": 0.04650915468281341,
-  "mae_R": 1.665207523263046,
-  "post_stop_R": 0.5395674827530201,
-  "tendencia_a_favor": false,
-  "vol_percentil": 0.398,
-  "hora_utc": 4,
-  "abierta": false,
-  "lecciones": [
-   "Nunca fue a favor (máximo 0.05 R): la señal falló desde el principio.",
-   "Operó contra la tendencia de fondo (EMA de 800 h)."
-  ],
-  "duracion_min": 60
- },
- {
   "trader": "P07 Doble techo/suelo · C",
   "abre": "2026-10-02 04:00:00+00:00",
   "cierra": "2026-10-02 16:00:00+00:00",
@@ -612,6 +609,39 @@
    "Se agotó el tiempo (13 h) sin alcanzar el objetivo ni el stop: la idea no se desarrolló."
   ],
   "duracion_min": 780
+ },
+ {
+  "trader": "Q03 Régimen por razón de varianzas · A",
+  "abre": "2026-10-02 04:00:00+00:00",
+  "cierra": "2026-10-02 04:00:00+00:00",
+  "lado": "CORTO",
+  "px_entrada": 85479.4007,
+  "sl": 86337.31136881598,
+  "tp": 83763.57936236804,
+  "lote_btc": 0.005,
+  "nocional_usdt": 427.3970035,
+  "riesgo_usdt": 4.2895533440799,
+  "stop_pct": 0.010036460969431903,
+  "px_salida": 86354.57883108973,
+  "salida": "stop",
+  "R": -1.1202741215256207,
+  "pnl_usdt": -4.805475604276399,
+  "comision_usdt": 0.42958494882772436,
+  "funding_usdt": 0.0,
+  "barras": 1,
+  "max_barras": 12,
+  "mfe_R": 0.04650915468281341,
+  "mae_R": 1.665207523263046,
+  "post_stop_R": 0.5395674827530201,
+  "tendencia_a_favor": false,
+  "vol_percentil": 0.398,
+  "hora_utc": 4,
+  "abierta": false,
+  "lecciones": [
+   "Nunca fue a favor (máximo 0.05 R): la señal falló desde el principio.",
+   "Operó contra la tendencia de fondo (EMA de 800 h)."
+  ],
+  "duracion_min": 60
  },
  {
   "trader": "Q03 Régimen por razón de varianzas",
@@ -647,7 +677,7 @@
   "duracion_min": 60
  },
  {
-  "trader": "Q03 Régimen por razón de varianzas · A",
+  "trader": "Q03 Régimen por razón de varianzas · C",
   "abre": "2026-10-02 04:00:00+00:00",
   "cierra": "2026-10-02 04:00:00+00:00",
   "lado": "CORTO",

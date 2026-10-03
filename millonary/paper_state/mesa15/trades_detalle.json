@@ -1,5 +1,35 @@
 [
  {
+  "trader": "P02 Pin bar en techo/suelo",
+  "abre": "2026-10-03 13:45:00+00:00",
+  "cierra": "NaT",
+  "lado": "CORTO",
+  "px_entrada": 84801.0364,
+  "sl": 84953.90739266587,
+  "tp": 84495.29441466824,
+  "lote_btc": 0.019,
+  "nocional_usdt": 1611.2196915999998,
+  "riesgo_usdt": 2.904548860651703,
+  "stop_pct": 0.001802701938037624,
+  "px_salida": 84865.96979999999,
+  "salida": "end",
+  "R": -0.9796947117844057,
+  "pnl_usdt": -2.845571158899894,
+  "comision_usdt": 1.6118365588999999,
+  "funding_usdt": 0.0,
+  "barras": 1,
+  "max_barras": 32,
+  "mfe_R": -0.09461310970626709,
+  "mae_R": 0.42822774195679236,
+  "post_stop_R": NaN,
+  "tendencia_a_favor": false,
+  "vol_percentil": 0.0555,
+  "hora_utc": 13,
+  "abierta": true,
+  "lecciones": [],
+  "duracion_min": 15
+ },
+ {
   "trader": "P07 Doble techo/suelo",
   "abre": "2026-10-03 12:15:00+00:00",
   "cierra": "NaT",
@@ -11,15 +41,15 @@
   "nocional_usdt": 1693.88871,
   "riesgo_usdt": 2.921508087047895,
   "stop_pct": 0.0017247343758775599,
-  "px_salida": 84847.0272,
+  "px_salida": 84832.03020000001,
   "salida": "end",
-  "R": 0.46428739287547727,
-  "pnl_usdt": 1.35641937300009,
-  "comision_usdt": 1.695414627,
+  "R": 0.36167257167102884,
+  "pnl_usdt": 1.0566293430003202,
+  "comision_usdt": 1.695264657,
   "funding_usdt": 0.0,
-  "barras": 3,
+  "barras": 7,
   "max_barras": 48,
-  "mfe_R": 1.506513029867235,
+  "mfe_R": 1.7495382000345494,
   "mae_R": 0.2254691687899639,
   "post_stop_R": null,
   "tendencia_a_favor": true,
@@ -27,7 +57,7 @@
   "hora_utc": 12,
   "abierta": true,
   "lecciones": [],
-  "duracion_min": 45
+  "duracion_min": 105
  },
  {
   "trader": "P04 Ineficiencia (Fair Value Gap)",
@@ -171,7 +201,7 @@
   "duracion_min": 120
  },
  {
-  "trader": "P04 Ineficiencia (Fair Value Gap) · A",
+  "trader": "P04 Ineficiencia (Fair Value Gap) · C",
   "abre": "2026-10-02 19:15:00+00:00",
   "cierra": "2026-10-03 00:30:00+00:00",
   "lado": "CORTO",
@@ -205,7 +235,7 @@
   "duracion_min": 330
  },
  {
-  "trader": "P04 Ineficiencia (Fair Value Gap) · C",
+  "trader": "P04 Ineficiencia (Fair Value Gap) · A",
   "abre": "2026-10-02 19:15:00+00:00",
   "cierra": "2026-10-03 00:30:00+00:00",
   "lado": "CORTO",
@@ -821,7 +851,7 @@
   "duracion_min": 75
  },
  {
-  "trader": "Q01 Momentum de series temporales · A",
+  "trader": "Q01 Momentum de series temporales · C",
   "abre": "2026-10-02 06:30:00+00:00",
   "cierra": "2026-10-02 14:45:00+00:00",
   "lado": "LARGO",
@@ -855,7 +885,7 @@
   "duracion_min": 510
  },
  {
-  "trader": "Q01 Momentum de series temporales · C",
+  "trader": "Q01 Momentum de series temporales · A",
   "abre": "2026-10-02 06:30:00+00:00",
   "cierra": "2026-10-02 14:45:00+00:00",
   "lado": "LARGO",
