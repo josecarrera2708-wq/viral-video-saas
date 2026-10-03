@@ -72,3 +72,7 @@ Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horar
 - Subcuenta propia de 1.000 USDT con la regla F06 (prerregistro `config/carry_papel_prerregistrado.md`); la cuenta oficial del núcleo no se toca. El panel muestra la cartera principal (2 × 1.000 USDT) en la pestaña «Núcleo + carry».
 - Funding provisional: en lugar del 0,01 % fijo, fórmula de Binance sobre el índice de prima de 1 min (error medio 1,2e-6 en jul-sep 2026). Sin esto el carry decidiría con un funding inventado y siempre positivo. Afecta solo a lo provisional (núcleo, mesa de fondos y carry); todo se corrige a la tasa real al publicarse el mes.
 - Aviso de costes: entrar y salir cuesta ≈ 0,29 % del nocional; con el funding actual (~4 % anual) se tarda ~4 semanas en recuperarlo.
+
+## 2026-10-03 · Fase 1: gestor de cartera (petición del dueño: «que gane por todos lados»)
+- Se prerregistraron y evaluaron 4 formas de repartir el capital (paridad de riesgo, HRP, control de caída). Aprobada K4 (HRP + control de caída): muy estable pero ~+6,7 %/año. Pasa a papel; nada cambia en las cuentas existentes.
+- Conclusión honesta: optimizar por riesgo NO sube la rentabilidad; la sube solo añadir fuentes de retorno nuevas y no correlacionadas (Fase 2: basis trimestral, prima de volatilidad, órdenes maker). Toda estrategia nueva con parámetros ajustados pasa además por PBO ≤ 0,5 y CPCV (≥ 75 % de caminos con Sharpe > 0).
