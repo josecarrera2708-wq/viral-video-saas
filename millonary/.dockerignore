@@ -1,0 +1,9 @@
+data/
+live_data/
+paper_state/
+reports/
+tests/
+docs/
+**/__pycache__/
+*.pyc
+.git

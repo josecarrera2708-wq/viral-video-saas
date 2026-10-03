@@ -1,0 +1,10 @@
+# Dependencias mínimas del ejecutor en vivo (paper). Sin numba: no hace falta y ahorra RAM en un VPS pequeño.
+pandas==3.0.6
+numpy>=2.0
+requests==2.33.1
+openpyxl>=3.1
+numba>=0.60
+scipy>=1.13
+statsmodels>=0.14
+scikit-learn>=1.4
+pyarrow>=15

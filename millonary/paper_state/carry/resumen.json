@@ -1,0 +1,80 @@
+{
+ "generado": "2026-10-03 23:13:49.056165+00:00",
+ "inicio": "2026-10-03 00:00:00+00:00",
+ "ultima_vela": "2026-10-02 20:00:00+00:00",
+ "equity": 998.2337516994581,
+ "retorno": -0.0017662483005418395,
+ "caida_max": 0.0,
+ "contado_btc": 0.011,
+ "perpetuo_btc": -0.011,
+ "nocional_usdt": 929.6981099999999,
+ "dentro": true,
+ "funding_cobrado_usdt": 0.0,
+ "marcas_funding": 0,
+ "tasas_no_definitivas": 0,
+ "ordenes": [
+  {
+   "bar": "2026-10-03 00:00:00+00:00",
+   "side": "COMPRA CONTADO",
+   "qty": 0.011,
+   "price": 84534.91360199999,
+   "fee": 0.9298840496219998,
+   "reason": "entra"
+  },
+  {
+   "bar": "2026-10-03 00:00:00+00:00",
+   "side": "VENTA PERPETUO",
+   "qty": -0.011,
+   "price": 84465.90344000001,
+   "fee": 0.46456246892,
+   "reason": "entra"
+  }
+ ],
+ "eventos": [
+  {
+   "id": 1,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 2,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 3,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 4,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 5,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 6,
+   "ts": "2026-10-03 00:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  }
+ ],
+ "cartera": {
+  "nucleo_usdt": 1008.129739068766,
+  "carry_usdt": 998.2337516994581,
+  "total_usdt": 2006.363490768224,
+  "capital_inicial_usdt": 2000.0,
+  "nota": "Dos subcuentas de 1.000 USDT: el núcleo (prueba oficial, sin tocar) y el carry. El núcleo empezó el 2026-09-29; el carry el 2026-10-03."
+ },
+ "velas_nuevas": 0,
+ "problemas": []
+}

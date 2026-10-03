@@ -1,0 +1,16 @@
+{
+ "pruebas_unicas_totales": 32304,
+ "candidatas_analizadas": 150,
+ "pbo_global": 0.7976666666666666,
+ "var_sr_val": 0.000910397610058527,
+ "pasan_por_prueba": {
+  "p_val": 39,
+  "p_blocks": 139,
+  "p_mc": 86,
+  "p_sens": 150,
+  "p_cost": 138,
+  "p_random": 148,
+  "p_dsr": 0
+ },
+ "supervivientes": 0
+}

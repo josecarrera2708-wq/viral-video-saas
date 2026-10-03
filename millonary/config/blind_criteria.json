@@ -1,0 +1,16 @@
+{
+ "nota": "Fijado antes de abrir el ciego, solo con datos < 2025-07-01",
+ "dd_bootstrap_p50": 0.13834079298407403,
+ "dd_bootstrap_p95": 0.24154127360064315,
+ "exposicion_media_ref": 0.2531691375800432,
+ "rotacion_anual_ref": 8.323197452298338,
+ "banda_exposicion": [
+  0.1265845687900216,
+  0.37975370637006484
+ ],
+ "banda_rotacion": [
+  4.161598726149169,
+  12.484796178447507
+ ],
+ "aceptable_si": "DD ciego <= dd_bootstrap_p95 Y exposici\u00f3n media dentro de banda_exposicion Y rotaci\u00f3n anual dentro de banda_rotacion"
+}

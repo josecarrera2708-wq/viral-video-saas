@@ -1,0 +1,25 @@
+services:
+  millonary:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: millonary-paper
+    restart: unless-stopped
+    init: true                      # cierra limpio con `docker stop` (SIGTERM)
+    environment:
+      MILLONARY_DATA: /data
+      # Opcional: avisos por Telegram (créalos con @BotFather; déjalos vacíos si no los quieres)
+      TELEGRAM_TOKEN: ${TELEGRAM_TOKEN:-}
+      TELEGRAM_CHAT: ${TELEGRAM_CHAT:-}
+    volumes:
+      - millonary_data:/data        # volumen con nombre: hereda el dueño (uid 10001) de /data en la imagen
+    mem_limit: 512m
+    security_opt: ["no-new-privileges:true"]
+    read_only: true
+    tmpfs: ["/tmp"]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+volumes:
+  millonary_data:

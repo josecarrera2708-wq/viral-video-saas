@@ -1,0 +1,26 @@
+{
+ "generado": "2026-10-03 04:18:57.139733+00:00",
+ "inicio": "2026-10-03",
+ "ultimo_dia_cerrado": "2026-10-02",
+ "dias": 0,
+ "equity": 1000.0,
+ "retorno": 0.0,
+ "caida_max": 0.0,
+ "multiplicador_caida": 0.75,
+ "pesos": {
+  "N Núcleo v1": 0.0013,
+  "F01 Tortugas S1 (Dennis, 20/10)": 0.0049,
+  "F02 Tortugas S2 (Dennis, 55/20)": 0.0034,
+  "F03 Momentum 12 m (AQR/MOP)": 0.0006,
+  "F06 Carry de funding (cash-and-carry)": 0.7397,
+  "F07 Volatilidad gestionada (Moreira-Muir)": 0.0
+ },
+ "en_usdt_sin_usar": 0.25,
+ "hist": {
+  "sharpe": 4.480483992194369,
+  "cagr": 0.06703121348607577,
+  "caida_max": 0.016517680844929772,
+  "mes_sobre_1000": 5.421327950447585
+ },
+ "nota": "Papel. 1.000 USDT. Pesos de capital × multiplicador de caída; el resto queda en USDT. Sin dinero real."
+}

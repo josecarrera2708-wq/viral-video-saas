@@ -1,0 +1,2 @@
+{"nota": "Cuenta de papel oficial. Arranca en el primer cierre de vela de 4h posterior al commit del protocolo (bdb699e, 2026-09-29 16:22 UTC).",
+ "start": "2026-09-29T16:30:00Z", "capital": 1000.0, "data_dir": "paper_state"}

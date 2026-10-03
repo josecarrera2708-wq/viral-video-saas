@@ -1,0 +1,4 @@
+{
+ "nota": "Carry de funding en papel junto al núcleo (subcuenta propia). Prerregistro: config/carry_papel_prerregistrado.md. Primera decisión al cierre diario del 2026-10-02 (00:00 UTC del 2026-10-03).",
+ "start": "2026-10-03T00:00:00Z", "capital": 1000.0, "data_dir": "paper_state/carry"
+}
