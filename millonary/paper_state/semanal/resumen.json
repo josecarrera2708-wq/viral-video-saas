@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-02 09:34:24.962435+00:00",
+ "generado": "2026-10-03 04:17:36.656115+00:00",
  "tiene_datos": true,
  "equity_inicial": 999.59048574632,
  "equity_actual": 1008.129739068766,
@@ -44,8 +44,8 @@
   "certificadas": [],
   "forward": {
    "S01 Parabolic SAR + EMA200": {
-    "retorno": -0.0038991736216299477,
-    "caida_max": 0.009492483416736697,
+    "retorno": -0.003818821648301718,
+    "caida_max": 0.009412582636166844,
     "ops": 1,
     "dias": 3,
     "sharpe": null,
@@ -84,7 +84,7 @@
     "posicion_actual": 0.0
    },
    "S06 Cruce SMA 7-25": {
-    "retorno": 0.005386602181837397,
+    "retorno": 0.00541285478297282,
     "caida_max": 0.010057059455663264,
     "ops": 2,
     "dias": 3,
@@ -92,7 +92,7 @@
     "posicion_actual": 1.0
    },
    "S07 SMA 7-25 + filtro 200 (largo)": {
-    "retorno": 0.010435130319854657,
+    "retorno": 0.010542510629850232,
     "caida_max": 0.0,
     "ops": 1,
     "dias": 3,
@@ -100,7 +100,7 @@
     "posicion_actual": 1.0
    },
    "S08 Canal 20 por tercios": {
-    "retorno": -0.014501381419916859,
+    "retorno": -0.01443023395662224,
     "caida_max": 0.016041874299728143,
     "ops": 3,
     "dias": 3,
@@ -108,55 +108,55 @@
     "posicion_actual": 1.0
    },
    "S09 Donchian 20/10": {
-    "retorno": -0.015320017115938334,
-    "caida_max": 0.018264879276909896,
+    "retorno": -0.015504084875667234,
+    "caida_max": 0.018448396548977675,
     "ops": 1,
     "dias": 3,
     "sharpe": null,
     "posicion_actual": -1.0
    },
    "S10 MACD + EMA200": {
-    "retorno": 0.010108091071524328,
-    "caida_max": 0.008798642466463114,
+    "retorno": 0.010296903112296363,
+    "caida_max": 0.008718685716168184,
     "ops": 1,
     "dias": 3,
     "sharpe": null,
     "posicion_actual": 1.0
    },
    "S11 Supertrend 10/3": {
-    "retorno": -0.015320017115938334,
-    "caida_max": 0.018264879276909896,
+    "retorno": -0.015504084875667234,
+    "caida_max": 0.018448396548977675,
     "ops": 1,
     "dias": 3,
     "sharpe": null,
     "posicion_actual": -1.0
    },
    "S12 Expansi\u00f3n de volatilidad": {
-    "retorno": -0.0062188423978757346,
-    "caida_max": 0.007772282218605708,
+    "retorno": -0.006125106611438724,
+    "caida_max": 0.007750327807717339,
     "ops": 2,
     "dias": 3,
     "sharpe": null,
     "posicion_actual": 0.0
    },
    "S13 Retroceso a EMA20": {
-    "retorno": 0.002724468219000631,
-    "caida_max": 0.009492483416736586,
+    "retorno": 0.002911923981757214,
+    "caida_max": 0.009412582636166844,
     "ops": 2,
     "dias": 3,
     "sharpe": null,
     "posicion_actual": 1.0
    },
    "S14 Momentum 90 d": {
-    "retorno": 0.013906657682623225,
-    "caida_max": 0.008798642466463114,
+    "retorno": 0.014096179761380778,
+    "caida_max": 0.008718685716168073,
     "ops": 1,
     "dias": 3,
     "sharpe": null,
     "posicion_actual": 1.0
    },
    "S15 RSI14 + EMA200": {
-    "retorno": 0.001565608169265209,
+    "retorno": 0.0016379155789367772,
     "caida_max": 0.0,
     "ops": 1,
     "dias": 3,
@@ -173,6 +173,6 @@
   },
   "adoptables": [],
   "top_forward": [],
-  "ultima_actualizacion": "2026-10-02 09:34:24.962435+00:00"
+  "ultima_actualizacion": "2026-10-03 04:17:36.656115+00:00"
  }
 }

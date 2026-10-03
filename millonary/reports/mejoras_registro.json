@@ -67,10 +67,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.0038654915341479468,
-    "caida_var": 0.002753864071783463,
-    "ret_base": -0.0038991736216296147,
-    "ret_var": -0.0027774207770011605,
+    "caida_base": 0.0037851368438034383,
+    "caida_var": 0.002696611579677599,
+    "ret_base": -0.003818821648301496,
+    "ret_var": -0.0027201696372997075,
     "p_boot": null
    }
   },
@@ -396,8 +396,8 @@
     "delta_sharpe": null,
     "caida_base": 0.0,
     "caida_var": 0.0,
-    "ret_base": 0.005386602181837397,
-    "ret_var": 0.010435130319854657,
+    "ret_base": 0.00541285478297282,
+    "ret_var": 0.010542510629850232,
     "p_boot": null
    }
   },
@@ -471,8 +471,8 @@
     "delta_sharpe": null,
     "caida_base": 0.0,
     "caida_var": 0.0,
-    "ret_base": 0.010435130319854657,
-    "ret_var": 0.007491783968441856,
+    "ret_base": 0.010542510629850232,
+    "ret_var": 0.007568823797512669,
     "p_boot": null
    }
   },
@@ -522,10 +522,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.01450138141991697,
+    "caida_base": 0.01443023395662224,
     "caida_var": 0.0,
-    "ret_base": -0.01450138141991697,
-    "ret_var": 0.001565608169265209,
+    "ret_base": -0.01443023395662224,
+    "ret_var": 0.0016379155789367772,
     "p_boot": null
    }
   },
@@ -542,10 +542,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.01450138141991697,
-    "caida_var": 0.010290262363832348,
-    "ret_base": -0.01450138141991697,
-    "ret_var": -0.010290262363832348,
+    "caida_base": 0.01443023395662224,
+    "caida_var": 0.010238775611675965,
+    "ret_base": -0.01443023395662224,
+    "ret_var": -0.010238775611675965,
     "p_boot": null
    }
   },
@@ -595,9 +595,9 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.014575498866365,
+    "caida_base": 0.014737905542877128,
     "caida_var": 0.0,
-    "ret_base": -0.015320017115938112,
+    "ret_base": -0.015504084875667346,
     "ret_var": 0.0,
     "p_boot": null
    }
@@ -615,10 +615,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.014575498866365,
-    "caida_var": 0.010481740297180187,
-    "ret_base": -0.015320017115938112,
-    "ret_var": -0.01099513566973509,
+    "caida_base": 0.014737905542877128,
+    "caida_var": 0.010598703309770419,
+    "ret_base": -0.015504084875667346,
+    "ret_var": -0.011127541720721168,
     "p_boot": null
    }
   },
@@ -668,10 +668,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.0045099301825412,
-    "caida_var": 0.0045099301825412,
-    "ret_base": 0.010108091071524328,
-    "ret_var": 0.010108091071524328,
+    "caida_base": 0.004487903587600872,
+    "caida_var": 0.004487903587600872,
+    "ret_base": 0.010296903112296363,
+    "ret_var": 0.010296903112296363,
     "p_boot": null
    }
   },
@@ -688,10 +688,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.0045099301825412,
-    "caida_var": 0.003197868795499992,
-    "ret_base": 0.010108091071524328,
-    "ret_var": 0.007290064698796117,
+    "caida_base": 0.004487903587600872,
+    "caida_var": 0.003182240979845652,
+    "ret_base": 0.010296903112296363,
+    "ret_var": 0.007424910325955825,
     "p_boot": null
    }
   },
@@ -741,9 +741,9 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.014575498866365,
+    "caida_base": 0.014737905542877128,
     "caida_var": 0.0,
-    "ret_base": -0.015320017115938112,
+    "ret_base": -0.015504084875667346,
     "ret_var": 0.0,
     "p_boot": null
    }
@@ -761,10 +761,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.014575498866365,
-    "caida_var": 0.010481740297180187,
-    "ret_base": -0.015320017115938112,
-    "ret_var": -0.01099513566973509,
+    "caida_base": 0.014737905542877128,
+    "caida_var": 0.010598703309770419,
+    "ret_base": -0.015504084875667346,
+    "ret_var": -0.011127541720721168,
     "p_boot": null
    }
   },
@@ -825,10 +825,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.007077236284004473,
-    "caida_var": 0.005012223730500365,
-    "ret_base": -0.006218842397875846,
-    "ret_var": -0.00438428286414283,
+    "caida_base": 0.007055266494263246,
+    "caida_var": 0.004996624360215085,
+    "ret_base": -0.006125106611438613,
+    "ret_var": -0.0043168788435546945,
     "p_boot": null
    }
   },
@@ -933,10 +933,10 @@
    "forward": {
     "dias": 3,
     "delta_sharpe": null,
-    "caida_base": 0.0007325474171966384,
-    "caida_var": 0.0007325474171966384,
-    "ret_base": 0.01390665768262389,
-    "ret_var": 0.01390665768262389,
+    "caida_base": 0.0007104372424371341,
+    "caida_var": 0.0007104372424371341,
+    "ret_base": 0.014096179761381,
+    "ret_var": 0.014096179761381,
     "p_boot": null
    }
   },
@@ -999,8 +999,8 @@
     "delta_sharpe": null,
     "caida_base": 0.0,
     "caida_var": 0.0,
-    "ret_base": 0.001565608169265209,
-    "ret_var": 0.001565608169265209,
+    "ret_base": 0.0016379155789367772,
+    "ret_var": 0.0016379155789367772,
     "p_boot": null
    }
   },
@@ -1019,8 +1019,8 @@
     "delta_sharpe": null,
     "caida_base": 0.0,
     "caida_var": 0.0,
-    "ret_base": 0.001565608169265209,
-    "ret_var": 0.0011276579561576572,
+    "ret_base": 0.0016379155789367772,
+    "ret_var": 0.0011797386921976738,
     "p_boot": null
    }
   },
@@ -1203,7 +1203,33 @@
     "S15 RSI14 + EMA200|O2 solo largos": "E3 sombra",
     "S15 RSI14 + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra"
    }
+  },
+  {
+   "fecha": "2026-10-03",
+   "etapas": {
+    "S01 Parabolic SAR + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S02 Ichimoku|O2 solo largos": "E3 sombra",
+    "S02 Ichimoku|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S03 Bollinger + RSI (reversi\u00f3n)|O2 solo largos": "E3 sombra",
+    "S03 Bollinger + RSI (reversi\u00f3n)|O4 stop 3\u00d7ATR": "E3 sombra",
+    "S04 Keltner ruptura|O2 solo largos": "E3 sombra",
+    "S04 Keltner ruptura|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S06 Cruce SMA 7-25|O2 solo largos": "E3 sombra",
+    "S07 SMA 7-25 + filtro 200 (largo)|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S08 Canal 20 por tercios|O2 solo largos": "E3 sombra",
+    "S08 Canal 20 por tercios|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S09 Donchian 20/10|O2 solo largos": "E3 sombra",
+    "S09 Donchian 20/10|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S10 MACD + EMA200|O2 solo largos": "E3 sombra",
+    "S10 MACD + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S11 Supertrend 10/3|O2 solo largos": "E3 sombra",
+    "S11 Supertrend 10/3|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S12 Expansi\u00f3n de volatilidad|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S14 Momentum 90 d|O2 solo largos": "E3 sombra",
+    "S15 RSI14 + EMA200|O2 solo largos": "E3 sombra",
+    "S15 RSI14 + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra"
+   }
   }
  ],
- "ultima_actualizacion": "2026-10-02 09:34:24.962435+00:00"
+ "ultima_actualizacion": "2026-10-03 04:17:36.656115+00:00"
 }

@@ -38,16 +38,16 @@
   "diferencia": -1.1013412404281553e-13
  },
  "replica_decisiones": {
-  "equity_trader": 1012.3977752932054,
-  "equity_simulador": 1012.3904844003202,
-  "diferencia_rel": 7.201660819244893e-06,
+  "equity_trader": 1012.5133141956749,
+  "equity_simulador": 1012.5065375616946,
+  "diferencia_rel": 6.692928617102467e-06,
   "ordenes_trader": 1,
   "ordenes_simulador": 1
  },
  "replica_estado": {
-  "equity_replay": 1008.143220174411,
+  "equity_replay": 1008.2532644858093,
   "equity_cuenta": 1008.129739068766,
-  "diferencia_rel": -1.3372212772200243e-05,
+  "diferencia_rel": -0.00012251427433396245,
   "ordenes_replay": 1,
   "ordenes_cuenta": 1,
   "velas_replay": 14,

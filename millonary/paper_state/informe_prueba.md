@@ -16,7 +16,7 @@ PUERTAS del protocolo (paso a dinero real mínimo):
   [OK] G4 Retorno no anómalo
   [OK] G5 El registro cuadra con la equity
   Réplica de decisiones: dif. equity +0.001% vs simulador validado; órdenes 1 vs 1
-  Réplica de estado (cuenta vs replay limpio): dif. -1.34e-05; velas 14 vs 14
+  Réplica de estado (cuenta vs replay limpio): dif. -1.23e-04; velas 14 vs 14
 
 PROBABILIDAD DE QUE EL SISTEMA SEA RENTABLE (Sharpe verdadero > 0):
   Con 3 días aún no se puede calcular (mínimo 10).

@@ -1,4 +1,4 @@
-# Informe semanal de Millonary · 2026-10-02
+# Informe semanal de Millonary · 2026-10-03
 
 ## Resumen
 
@@ -27,21 +27,21 @@ Certificadas en el examen: 0/15.
 
 | Trader | Retorno hacia delante | Caída | Ops | Posición |
 |---|---|---|---|---|
-| S14 Momentum 90 d | +1.39% | 0.9% | 1 | +1 |
-| S07 SMA 7-25 + filtro 200 (largo) | +1.04% | 0.0% | 1 | +1 |
-| S10 MACD + EMA200 | +1.01% | 0.9% | 1 | +1 |
+| S14 Momentum 90 d | +1.41% | 0.9% | 1 | +1 |
+| S07 SMA 7-25 + filtro 200 (largo) | +1.05% | 0.0% | 1 | +1 |
+| S10 MACD + EMA200 | +1.03% | 0.9% | 1 | +1 |
 | S06 Cruce SMA 7-25 | +0.54% | 1.0% | 2 | +1 |
-| S13 Retroceso a EMA20 | +0.27% | 0.9% | 2 | +1 |
+| S13 Retroceso a EMA20 | +0.29% | 0.9% | 2 | +1 |
 | S15 RSI14 + EMA200 | +0.16% | 0.0% | 1 | +1 |
 | S02 Ichimoku | +0.00% | 0.0% | 0 | +1 |
 | S03 Bollinger + RSI (reversión) | +0.00% | 0.0% | 0 | +0 |
 | S04 Keltner ruptura | +0.00% | 0.0% | 0 | +0 |
 | S05 RSI(2) retroceso (largo) | +0.00% | 0.0% | 0 | +0 |
-| S01 Parabolic SAR + EMA200 | -0.39% | 0.9% | 1 | +0 |
-| S12 Expansión de volatilidad | -0.62% | 0.8% | 2 | +0 |
-| S08 Canal 20 por tercios | -1.45% | 1.6% | 3 | +1 |
-| S09 Donchian 20/10 | -1.53% | 1.8% | 1 | -1 |
-| S11 Supertrend 10/3 | -1.53% | 1.8% | 1 | -1 |
+| S01 Parabolic SAR + EMA200 | -0.38% | 0.9% | 1 | +0 |
+| S12 Expansión de volatilidad | -0.61% | 0.8% | 2 | +0 |
+| S08 Canal 20 por tercios | -1.44% | 1.6% | 3 | +1 |
+| S09 Donchian 20/10 | -1.55% | 1.8% | 1 | -1 |
+| S11 Supertrend 10/3 | -1.55% | 1.8% | 1 | -1 |
 
 ## Perfeccionamiento continuo (Laboratorio)
 
