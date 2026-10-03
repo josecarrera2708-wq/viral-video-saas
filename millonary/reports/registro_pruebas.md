@@ -62,3 +62,7 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - Prerregistro `config/maker_prerregistrada.md` + código `src/maker/` (copia del motor; el original intacto, con test) en git (d2c5038) ANTES de ejecutar.
 - Resultado (`reports/maker_resultados.md`): **0/40 certificadas**. Llenado 94 %; el maker mejora la R en validación y examen en 32/40, pero solo ≈ +0,04 R por operación (examen: −0,207 → −0,168 de media). Traders con R > 0 en el examen: 1 → 2 (mesa1h P07 +0,003 y Q01 +0,016, no significativas). Con costes ×2 todas negativas.
 - Conclusión: la comisión explica ≈ 20 % del problema; el resto es falta de ventaja en las señales de corto plazo. Nada pasa a papel.
+
+## 2026-10-03 · Acumulación de BTC (decisión del dueño) — pruebas 310-313 (exploratorias)
+- Petición del dueño: reunir el máximo de BTC. Mezclas de BTC con núcleo y carry vistas ANTES del prerregistro, sin prerregistrar: ⅓ cada uno, 50 % BTC/50 % carry, 25/25/50 y 50/25/25 → pruebas 310-313, para que cuenten en el n. Medido en BTC (2020→hoy, por cada BTC inicial): 100 % BTC 1,00; 50/50 0,60; 50/25/25 0,59; ⅓ 0,47; 25/25/50 0,39.
+- Prerregistro `config/acumulacion_prerregistrada.md` + código `src/acumulacion/` en git ANTES del inicio en papel (compra al cierre del 2026-10-03). A1 100 % BTC APLICADA; A2 50/25/25 en sombra. No certifica nada (sin puertas).

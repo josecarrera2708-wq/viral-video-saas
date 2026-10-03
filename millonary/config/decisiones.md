@@ -84,3 +84,7 @@ Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horar
 ## 2026-10-03 · Fase 2, lote 2 (órdenes maker)
 - Entrar con orden límite reduce la pérdida (≈ +0,04 R por operación) pero no vuelve rentable ninguna de las 40 traders de corto plazo. Se anota como mejora de ejecución para cuando exista una señal con ventaja; no cambia nada en papel.
 - Se detiene la búsqueda de señales de corto plazo: cada prueba nueva sube la vara (Deflated Sharpe con n = 309) para TODAS, incluidas las primas que ya casi certifican. Prioridad: acumular días de papel del núcleo, el carry, K4 y la sombra B01/B02/V01.
+
+## 2026-10-03 · Acumulación de BTC (decisión del dueño: «el mayor porcentaje de BTC posible»)
+- Medido en BTC, ninguna estrategia del proyecto suma BTC frente a mantenerlo: núcleo y carry salen a USDT y pierden BTC en los años alcistas (lo ganan en los bajistas). Lo que más BTC reúne es el 100 % en BTC.
+- Se aplica en papel A1 (100 % BTC, compra única al cierre del 2026-10-03, nunca se vende) y se sigue A2 (50 % BTC / 25 % núcleo / 25 % carry) en sombra para comparar. Nada cambia en las cuentas existentes. Sin dinero real.
