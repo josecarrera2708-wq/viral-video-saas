@@ -32,3 +32,14 @@ Informativa, sin umbrales: a los 30 días y después cada mes, BTC de A1 frente 
 
 ## Qué NO cambia
 Núcleo, carry, K4, la sombra B01/B02/V01 y las mesas siguen igual. **Sin dinero real:** pasar a dinero real requiere aprobación EXPRESA del dueño.
+
+## Añadido 2026-10-03 ~14 h UTC (antes del inicio): A3, ganancias a BTC
+Petición del dueño: «que las ganancias se conviertan en BTC, siempre que no suban las comisiones».
+- **A3 Núcleo + carry con ganancias a BTC (APLICADA):** cuenta aparte de 1.000 USDT con núcleo v1 y carry 50/50 (misma regla del
+  histórico, rebalanceo mensual, 15 pb por rotación). Al cierre de cada fin de mes, si la cuenta supera 1.000 USDT en ≥ 10 USDT, ese
+  exceso se convierte en BTC al cierre (una sola compra al mes, comisión de contado 0,10 % sobre lo convertido) y la cuenta vuelve a
+  1.000. Con pérdidas no se convierte nada (primero recupera los 1.000). El BTC nunca se vende. Mismo inicio que A1/A2.
+- Comisiones: las de las estrategias no cambian; la conversión cuesta 0,10 % de lo convertido (1 USDT por cada 1.000), una vez al mes.
+- Contexto ya visto (2020 → hoy, mismas reglas): valor ×3,9 (frente a ×2,5 del 50/50 reinvirtiendo en USDT), 0,33 BTC por cada BTC
+  inicial, caída máx. 53 % (por el BTC acumulado). No certifica nada.
+- Las cuentas núcleo y carry que ya corren NO se tocan: A3 es una copia aparte.

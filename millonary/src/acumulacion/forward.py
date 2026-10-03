@@ -20,6 +20,9 @@ FEE = 0.001                                                       # comisión de
 H0 = pd.Timestamp("2020-01-01", tz="UTC")                         # contexto histórico (exploratorio, ya visto)
 A1, A2 = "A1 Acumulación BTC (100 % BTC)", "A2 50 % BTC / 25 % núcleo / 25 % carry"
 W2 = {"BTC": 0.50, NUC: 0.25, CAR: 0.25}
+A3 = "A3 Núcleo + carry con ganancias a BTC"
+W3 = {NUC: 0.50, CAR: 0.50}
+MIN_SWEEP = 10.0                                                  # USDT mínimos de ganancia para convertir (mínimo de Binance: 5)
 
 
 def returns(d: pd.DataFrame) -> pd.DataFrame:
@@ -46,6 +49,24 @@ def rebalanced(R: pd.DataFrame, w: dict, t0: pd.Timestamp, cap: float = CAP) -> 
     return pd.Series(eq, index=days), pd.DataFrame(ws, index=days, columns=R.columns)
 
 
+def swept(R: pd.DataFrame, px: pd.Series, w: dict, t0: pd.Timestamp, cap: float = CAP) -> tuple[pd.Series, pd.Series, pd.Series]:
+    """Núcleo + carry 50/50 que sigue operando con `cap`; al cierre de cada fin de mes, si la cuenta supera `cap` en ≥ MIN_SWEEP, ese
+    exceso se convierte en BTC (comisión FEE, una sola compra al mes) y la cuenta vuelve a `cap`. Con pérdidas no se convierte nada.
+    El BTC nunca se vende. Devuelve (USDT operando, BTC acumulados, valor total) al cierre de cada día desde t0."""
+    R = R[list(w)]; days = R.index[R.index >= t0]; tgt = np.array([w[c] for c in R.columns], float)
+    v = cap * (1 - G.COST) * tgt; me = G.month_end(days); btc = 0.0; us, bs = [v.sum()], [0.0]
+    for i in range(1, len(days)):
+        t = days[i]; v = v * (1 + R.loc[t].to_numpy(float))
+        if me[i]:
+            tot = v.sum()
+            if tot - cap >= MIN_SWEEP:
+                btc += (tot - cap) * (1 - FEE) / float(px[t]); tot = cap; v = v / v.sum() * tot
+            tot *= 1 - np.abs(v / v.sum() - tgt).sum() * G.COST; v = tot * tgt
+        us.append(v.sum()); bs.append(btc)
+    u, b = pd.Series(us, index=days), pd.Series(bs, index=days)
+    return u, b, u + b * px.reindex(days)
+
+
 def _card(eq: pd.Series, px: pd.Series, ref_btc: float) -> dict:
     b = eq / px.reindex(eq.index)
     return {"equity": float(eq.iloc[-1]), "retorno_usdt": float(eq.iloc[-1] / CAP - 1), "btc": float(b.iloc[-1]),
@@ -55,7 +76,8 @@ def _card(eq: pd.Series, px: pd.Series, ref_btc: float) -> dict:
 def context(d: pd.DataFrame, R: pd.DataFrame) -> dict:
     """Contexto 2020 → hoy con las mismas reglas (exploratorio: ya visto antes del prerregistro, no certifica nada)."""
     px = d["close"]; _, p0, e1 = buy_hold(px, H0); e2, _ = rebalanced(R, W2, H0); out = {}
-    for k, e in ((A1, e1), (A2, e2)):
+    e3 = swept(R, px, W3, H0)[2]
+    for k, e in ((A1, e1), (A2, e2), (A3, e3)):
         b = e / px.reindex(e.index) / (CAP / p0); yb = b.groupby(b.index.year).last(); prev = yb.shift(1).fillna(b.iloc[0])
         out[k] = {"x_usdt": float(e.iloc[-1] / CAP), "btc_por_btc_inicial": float(b.iloc[-1]), "caida_max": float(1 - (e / e.cummax()).min()),
                   "btc_por_anio": {str(y): float(yb[y] / prev[y]) for y in yb.index}}
@@ -66,15 +88,18 @@ def run(now: pd.Timestamp | None = None) -> dict:
     now = now or pd.Timestamp.now(tz="UTC"); d = load(now); px = d["close"]; R = returns(d)
     o = {"generado": str(now), "inicio": "cierre diario del 2026-10-03 (04-oct 00:00 UTC)", "ultimo_dia_cerrado": str(d.index[-1].date()),
          "precio_btc": float(px.iloc[-1]), "contexto_2020_hoy": context(d, R),
-         "nota": "Papel. 1.000 USDT cada una. A1 es la aplicada (decisión del dueño: máximo BTC); A2 es sombra para comparar. Sin dinero real."}
+         "nota": "Papel. 1.000 USDT cada una. A1 (hucha de BTC) y A3 (núcleo + carry que pasan sus ganancias a BTC cada mes) son las aplicadas; A2 es sombra para comparar. Sin dinero real."}
     if d.index[-1] < START:
         return o | {"estado": "pendiente: compra en papel al cierre diario del 2026-10-03 (04-oct 00:00 UTC)", "carteras": {}}
     qty, p0, e1 = buy_hold(px, START); e2, w = rebalanced(R, W2, START); ref = CAP / p0
-    hist = pd.DataFrame({"A1": e1, "A2": e2, "precio": px.reindex(e1.index)})
+    u3, b3, e3 = swept(R, px, W3, START)
+    hist = pd.DataFrame({"A1": e1, "A2": e2, "A3": e3, "precio": px.reindex(e1.index)})
     return o | {"estado": "activa", "precio_entrada": p0, "btc_de_referencia": ref,
                 "carteras": {A1: _card(e1, px, ref) | {"papel": "APLICADA", "btc_comprados": qty},
-                             A2: _card(e2, px, ref) | {"papel": "SOMBRA", "pesos_ahora": {k: round(float(v), 4) for k, v in w.iloc[-1].items()}}},
-                "hist": [[str(t.date()), round(float(r.A1), 2), round(float(r.A2), 2), round(float(r.precio), 2)] for t, r in hist.iterrows()]}
+                             A2: _card(e2, px, ref) | {"papel": "SOMBRA", "pesos_ahora": {k: round(float(v), 4) for k, v in w.iloc[-1].items()}},
+                             A3: _card(e3, px, ref) | {"papel": "APLICADA", "usdt_operando": float(u3.iloc[-1]), "btc_acumulados": float(b3.iloc[-1]),
+                                                       "conversiones": int((b3.diff() > 0).sum())}},
+                "hist": [[str(t.date()), round(float(r.A1), 2), round(float(r.A2), 2), round(float(r.A3), 2), round(float(r.precio), 2)] for t, r in hist.iterrows()]}
 
 
 def main(now: pd.Timestamp | None = None) -> dict:
