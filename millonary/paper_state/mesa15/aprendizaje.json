@@ -22,13 +22,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 4,
-  "perdedoras": 2,
+  "cerradas": 5,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
-   "vol_baja": 1
+   "contra_tendencia": 2,
+   "vol_baja": 2
   },
   "estado": "muestra insuficiente para concluir"
  },
