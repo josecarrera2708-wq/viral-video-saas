@@ -1,12 +1,12 @@
 {
  "P02 Pin bar en techo/suelo": {
-  "cerradas": 3,
-  "perdedoras": 2,
+  "cerradas": 4,
+  "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 2,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
-   "vol_baja": 0
+   "contra_tendencia": 3,
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
@@ -55,7 +55,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P07 Doble techo/suelo": {
-  "cerradas": 1,
+  "cerradas": 2,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
