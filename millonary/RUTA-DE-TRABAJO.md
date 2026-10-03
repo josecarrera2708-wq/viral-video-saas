@@ -430,10 +430,11 @@ trading-btc/
 | Mesa de fondos | 10 estrategias célebres (Tortugas, AQR, Tudor Jones…) | papel; 1/10 certificada (F06 carry) | `paper_state/fondos/` |
 | Cartera K4 (Fase 1) | HRP de 10 bolsillos + control de caída | papel desde 2026-10-03; aprobada 5/5 (≈ +6,7 %/año, caída 2 %) | `paper_state/cartera/` |
 | Sombra Fase 2 | B01/B02 basis trimestral, V01 prima de volatilidad | sombra desde 2026-10-03; 4/5 (fallan solo el Sharpe deflactado) | `paper_state/primas/` |
+| Acumulación de BTC | A1 100 % BTC (aplicada, decisión del dueño) · A2 50 % BTC/25 % núcleo/25 % carry (sombra) | papel desde el cierre del 2026-10-03; sin puertas (no es prueba de ventaja); se mide en BTC | `paper_state/acumulacion/` |
 | Órdenes maker (Fase 2) | entrada con orden límite en las 40 traders | 0/40; +0,04 R por operación; no se usa | `reports/maker_resultados.md` |
 
-- Pruebas acumuladas: **309** (`reports/registro_pruebas.md`). Cada prueba nueva endurece el Sharpe deflactado de TODAS.
-- Rutinas: horaria (:12 UTC) mesas + fondos + carry + panel; diaria (04:17 UTC) núcleo + carry + K4 + sombra. Panel: pestaña «Primas y cartera».
+- Pruebas acumuladas: **313** (310-313: mezclas con BTC, exploratorias) (`reports/registro_pruebas.md`). Cada prueba nueva endurece el Sharpe deflactado de TODAS.
+- Rutinas: horaria (:12 UTC) mesas + fondos + carry + panel; diaria (04:17 UTC) núcleo + carry + K4 + sombra + acumulación BTC. Panel: pestaña «BTC, primas y cartera».
 - Datos congelados en `paper_state/hist/` para que todo funcione en una máquina nueva.
 - Hitos: 2026-10-29 informe de 30 días · desde ~2026-12-27 (90 días) primera revisión posible de carry, K4 y sombra · **dinero real solo con aprobación EXPRESA del dueño**.
 - Decisión: no se buscan más señales de corto plazo; se acumulan días de papel.

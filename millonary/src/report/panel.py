@@ -45,7 +45,7 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
         mh = {"n_pruebas": mh["n_pruebas"], "certificadas": mh["certificadas"], "agregado": mh["agregado"], "n": len(mh["traders"]),
               "mejoran": len(mh["maker_mejora_en_valid_y_examen"]),
               "positivas_examen": {k: v["periodos"]["examen"]["maker"]["R_media"] for k, v in mh["traders"].items() if v["periodos"]["examen"]["maker"]["R_media"] > 0}}
-    fase = {"k4": _json(data / "cartera" / "resumen.json"), "cartera_hist": ch, "primas": _json(data / "primas" / "resumen.json"), "primas_hist": ph, "maker_hist": mh}
+    fase = {"acum": _json(data / "acumulacion" / "resumen.json"), "k4": _json(data / "cartera" / "resumen.json"), "cartera_hist": ch, "primas": _json(data / "primas" / "resumen.json"), "primas_hist": ph, "maker_hist": mh}
     return {**fase, "carry": _json(data / "carry" / "resumen.json"), "fondos": _json(data / "fondos" / "resumen.json"), "fondos_hist": fh, "m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 

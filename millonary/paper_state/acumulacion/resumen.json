@@ -1,0 +1,39 @@
+{
+ "generado": "2026-10-03 10:37:35.036253+00:00",
+ "inicio": "cierre diario del 2026-10-03 (04-oct 00:00 UTC)",
+ "ultimo_dia_cerrado": "2026-10-02",
+ "precio_btc": 84518.01,
+ "contexto_2020_hoy": {
+  "A1 Acumulación BTC (100 % BTC)": {
+   "x_usdt": 11.725489628307768,
+   "btc_por_btc_inicial": 0.999,
+   "caida_max": 0.7662925431645935,
+   "btc_por_anio": {
+    "2020": 1.0,
+    "2021": 1.0,
+    "2022": 1.0,
+    "2023": 1.0,
+    "2024": 1.0,
+    "2025": 1.0,
+    "2026": 1.0
+   }
+  },
+  "A2 50 % BTC / 25 % núcleo / 25 % carry": {
+   "x_usdt": 6.866312638665781,
+   "btc_por_btc_inicial": 0.5850029758643926,
+   "caida_max": 0.5174146222520912,
+   "btc_por_anio": {
+    "2020": 0.624608769030076,
+    "2021": 0.9124592931155324,
+    "2022": 1.6889900265178597,
+    "2023": 0.7097287183859515,
+    "2024": 0.7758127370585528,
+    "2025": 1.0466681793864296,
+    "2026": 1.05609512997381
+   }
+  }
+ },
+ "nota": "Papel. 1.000 USDT cada una. A1 es la aplicada (decisión del dueño: máximo BTC); A2 es sombra para comparar. Sin dinero real.",
+ "estado": "pendiente: compra en papel al cierre diario del 2026-10-03 (04-oct 00:00 UTC)",
+ "carteras": {}
+}

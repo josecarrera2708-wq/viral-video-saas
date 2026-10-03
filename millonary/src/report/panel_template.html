@@ -70,7 +70,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <button role="tab" aria-selected="false" data-tab="m1h">Mesa 1 h</button>
     <button role="tab" aria-selected="false" data-tab="cartera">Núcleo + carry</button>
     <button role="tab" aria-selected="false" data-tab="fondos">Fondos</button>
-    <button role="tab" aria-selected="false" data-tab="primas">Primas y cartera</button>
+    <button role="tab" aria-selected="false" data-tab="primas">BTC, primas y cartera</button>
     <button role="tab" aria-selected="false" data-tab="ranking">Ranking</button>
     <button role="tab" aria-selected="false" data-tab="aprender">Aprendizaje</button>
     <button role="tab" aria-selected="false" data-tab="equipos">Equipos</button>
@@ -167,6 +167,8 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
   </section>
 
   <section class="panel sec" id="tab-primas" hidden>
+    <h2>Acumulación de BTC (A1 aplicada · A2 en sombra)</h2>
+    <div class="card"><div class="funnel" id="acKpis"></div><p class="foot" id="acNote"></p><div class="tw"><table id="acTab"></table></div></div>
     <h2>Cartera K4 en papel (Fase 1: HRP + control de caída)</h2>
     <div class="card"><div class="funnel" id="prKpis"></div><p class="foot" id="prNote"></p><div class="tw"><table id="prPesos"></table></div></div>
     <h2>Estrategias nuevas en sombra (Fase 2: basis trimestral y prima de volatilidad)</h2>
@@ -368,6 +370,22 @@ if (I) {
     const ops = M.operaciones || [];
     $('#fnOps').innerHTML = ops.length ? '<tr><th>Día</th><th>Estrategia</th><th>Lado</th><th class="n">Entrada</th><th class="n">Salida</th><th class="n">Resultado</th><th>Motivo</th></tr>' + ops.slice(0,120).map(o => `<tr><td class="mono">${esc(o.salida)}</td><td>${esc(o.estrategia)}</td><td>${esc(o.lado)}</td><td class="n num">${f0(o.px_entrada)}</td><td class="n num">${f0(o.px_salida)}</td><td class="n num ${cls(o.pnl_usdt)}">${o.pnl_usdt == null ? '—' : (o.pnl_usdt >= 0 ? '+' : '') + f0(o.pnl_usdt, 2) + ' $'}</td><td>${esc(o.motivo)}</td></tr>`).join('') : '<tr><td class="dim">Aún sin operaciones desde el inicio en papel.</td></tr>';
   } }
+
+// acumulación de BTC (decisión del dueño, config/acumulacion_prerregistrada.md)
+{ const A = D.acum;
+  const f2 = (x, d=2) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  const b6 = x => x == null ? '—' : Number(x).toFixed(6) + ' ₿', p0 = x => x == null ? '—' : (x*100).toFixed(0) + '%';
+  if (!A) { $('#acTab').innerHTML = '<tr><td class="dim">Arranca en papel al cierre del 2026-10-03 (rutina diaria).</td></tr>'; }
+  else {
+    const C = A.carteras || {}, X = A.contexto_2020_hoy || {}, on = A.estado === 'activa', sh = k => k.split(' ')[0];
+    $('#acKpis').innerHTML = (on ? Object.entries(C).map(([k,v]) => [[b6(v.btc), sh(k) + (v.papel === 'SOMBRA' ? ' (sombra)' : ' aplicada')], [f2(v.equity) + ' $', sh(k) + ' en USDT']]).flat()
+      : [['pendiente', 'compra en papel al cierre del 04-oct 00:00 UTC'], [f2(A.precio_btc) + ' $', 'BTC (último cierre diario)']]).map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#acNote').textContent = `A1 es la aplicada: 100 % BTC, compra única y nunca se vende; es lo que más BTC reúne si sube a largo plazo, pero en el histórico llegó a caer un ${p0((X[Object.keys(X)[0]] || {}).caida_max)}. A2 es sombra para comparar: gana BTC en los años bajistas y lo pierde en los alcistas. «Retorno en BTC» = BTC que tienes frente a los que comprabas con 1.000 USDT al inicio. ${A.nota}`;
+    $('#acTab').innerHTML = '<tr><th>Cartera</th><th class="n">BTC ahora</th><th class="n">Retorno en BTC</th><th class="n">Equity</th><th class="n">Retorno USDT</th><th class="n">Días</th><th class="n">2020→hoy: BTC por cada BTC</th><th class="n">USDT ×</th><th class="n">Caída máx. hist.</th><th class="n">BTC en 2022 (bajista)</th></tr>' +
+      Object.entries(X).map(([k,h]) => { const v = C[k] || {};
+        return `<tr><td>${esc(k)}</td><td class="n num">${b6(v.btc)}</td><td class="n num ${cls(v.retorno_btc)}">${v.retorno_btc == null ? '—' : pct(v.retorno_btc)}</td><td class="n num">${v.equity == null ? '—' : f2(v.equity) + ' $'}</td><td class="n num ${cls(v.retorno_usdt)}">${v.retorno_usdt == null ? '—' : pct(v.retorno_usdt)}</td><td class="n num">${v.dias ?? '—'}</td><td class="n num">${f2(h.btc_por_btc_inicial)}</td><td class="n num">×${f2(h.x_usdt, 1)}</td><td class="n num">${p0(h.caida_max)}</td><td class="n num">×${f2((h.btc_por_anio || {})['2022'])}</td></tr>`; }).join('');
+  }
+}
 
 // primas y cartera (Fase 1 y Fase 2)
 { const K = D.k4, CH = D.cartera_hist, P = D.primas, PH = D.primas_hist, MK = D.maker_hist;
