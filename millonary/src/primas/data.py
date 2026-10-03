@@ -11,7 +11,9 @@ import requests
 from src.live.vision_feed import VisionFeed, SPOT, BASE
 
 ROOT = Path(__file__).resolve().parents[2]
-RAW = ROOT / "data" / "raw"; P = RAW / "primas"
+HIST = ROOT / "paper_state" / "hist"                              # copia congelada en git (las máquinas nuevas no tienen data/raw)
+RAW = ROOT / "data" / "raw" if (ROOT / "data" / "raw" / "spot_BTCUSDT_1h.parquet").exists() else HIST
+P = RAW / "primas"
 FIRST_EXPIRY = pd.Timestamp("2021-03-26 08:00", tz="UTC")       # primer trimestral BTCUSDT USDT-M
 LISTED_DAYS = 200                                                # se busca historia desde ~200 d antes del vencimiento
 
@@ -79,7 +81,8 @@ def futures(now: pd.Timestamp) -> dict[str, pd.DataFrame]:
 
 
 def spot_1h(now: pd.Timestamp) -> pd.DataFrame:
-    s = pd.read_parquet(RAW / "spot_BTCUSDT_1h.parquet").set_index("time")[["open", "high", "low", "close"]].astype(float)
+    s = pd.read_parquet(RAW / "spot_BTCUSDT_1h.parquet")
+    s = (s.set_index("time") if "time" in s else s)[["open", "high", "low", "close"]].astype(float)
     new = _klines(VisionFeed(symbol="BTCUSDT", interval="1h", base=SPOT), s.index[-1] + pd.Timedelta("1h"), now, now)
     s = pd.concat([s, new]); return s[~s.index.duplicated(keep="first")].sort_index()
 

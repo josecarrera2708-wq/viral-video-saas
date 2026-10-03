@@ -1,0 +1,109 @@
+{
+ "generado": "2026-10-03 00:32:29.277398+00:00",
+ "inicio": "2026-10-03",
+ "ultimo_dia": "2026-10-01",
+ "estado": "SOMBRA (no certificadas)",
+ "estrategias": {
+  "B01 Basis trimestral hasta vencimiento": {
+   "dias": 0,
+   "equity": 1000.0,
+   "retorno": 0.0,
+   "hist": {
+    "sharpe": 1.2826047022359097,
+    "cagr": 0.06814981517450391,
+    "caida_max": 0.07026626371475497,
+    "mes_sobre_1000": 5.5091202878374546,
+    "puertas": "4/5"
+   },
+   "posicion": {
+    "contrato": "BTCUSDT_261225",
+    "desde": "2026-09-27",
+    "basis_anual_entrada": 0.05132856929190804
+   },
+   "operaciones": [
+    {
+     "contrato": "BTCUSDT_260925",
+     "entrada": "2026-08-18 00:00:00+00:00",
+     "px_spot": "64532.1",
+     "px_fut": "64872.4",
+     "basis_anual": "0.05021141146943954",
+     "salida": "2026-09-25 08:00:00+00:00",
+     "px_spot_salida": "84043.96",
+     "px_fut_salida": "83981.8",
+     "motivo": "vencimiento",
+     "ret": "0.0018590869970138701"
+    },
+    {
+     "contrato": "BTCUSDT_261225",
+     "entrada": "2026-09-27 00:00:00+00:00",
+     "px_spot": "84433.1",
+     "px_fut": "85493.8",
+     "basis_anual": "0.05132856929190804",
+     "salida": "NaT",
+     "px_spot_salida": "nan",
+     "px_fut_salida": "nan",
+     "motivo": "abierta",
+     "ret": "-0.001074405416833235"
+    }
+   ]
+  },
+  "B02 Basis trimestral con salida anticipada": {
+   "dias": 0,
+   "equity": 1000.0,
+   "retorno": 0.0,
+   "hist": {
+    "sharpe": 1.3231359838815022,
+    "cagr": 0.06996515038013063,
+    "caida_max": 0.07026626371475497,
+    "mes_sobre_1000": 5.651415855639996,
+    "puertas": "4/5"
+   },
+   "posicion": {
+    "contrato": "BTCUSDT_261225",
+    "desde": "2026-09-23",
+    "basis_anual_entrada": 0.05089048830285225
+   },
+   "operaciones": [
+    {
+     "contrato": "BTCUSDT_260925",
+     "entrada": "2026-08-18 00:00:00+00:00",
+     "px_spot": "64532.1",
+     "px_fut": "64872.4",
+     "basis_anual": "0.05021141146943954",
+     "salida": "2026-09-23 00:00:00+00:00",
+     "px_spot_salida": "86208.56",
+     "px_fut_salida": "86208.5",
+     "motivo": "basis < 1 %",
+     "ret": "0.0008323699058299106"
+    },
+    {
+     "contrato": "BTCUSDT_261225",
+     "entrada": "2026-09-23 00:00:00+00:00",
+     "px_spot": "86208.56",
+     "px_fut": "87330.4",
+     "basis_anual": "0.05089048830285225",
+     "salida": "NaT",
+     "px_spot_salida": "nan",
+     "px_fut_salida": "nan",
+     "motivo": "abierta",
+     "ret": "-0.00038269461872464383"
+    }
+   ]
+  },
+  "V01 Prima de volatilidad (venta de varianza 30 d)": {
+   "dias": 0,
+   "equity": 1000.0,
+   "retorno": 0.0,
+   "hist": {
+    "sharpe": 1.5774660030963739,
+    "cagr": 0.09375484884977547,
+    "caida_max": 0.08469762903976275,
+    "mes_sobre_1000": 7.496004754038221,
+    "puertas": "4/5"
+   },
+   "en_posicion": true,
+   "dvol_ultimo": 34.82
+  }
+ },
+ "nota": "Papel en sombra. 1.000 USDT por estrategia. No entran en la cartera. Sin dinero real."
+}

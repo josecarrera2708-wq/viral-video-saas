@@ -36,9 +36,10 @@ def core_daily(d: pd.DataFrame, cm: float = 1.0) -> pd.Series:
     from src.fondos.data import _append_vision
     from src.live.vision_feed import VisionFeed, SPOT
     now = d.index[-1] + pd.Timedelta("1D")
-    s4 = pd.read_parquet(RAW / "spot_BTCUSDT_4h.parquet").set_index("time")[["open", "high", "low", "close"]]
+    RAW_ = RAW if (RAW / "spot_BTCUSDT_4h.parquet").exists() else ROOT / "paper_state" / "hist"       # copia congelada en máquinas nuevas
+    s4 = pd.read_parquet(RAW_ / "spot_BTCUSDT_4h.parquet").set_index("time")[["open", "high", "low", "close"]]
     s4 = _splice_spot(_append_vision(s4, VisionFeed(base=SPOT), now)); s4 = s4[s4.index + pd.Timedelta("4h") <= now]
-    fr = pd.read_parquet(RAW / "perp_BTCUSDT_funding.parquet")[["time", "funding_rate"]]; fr["time"] = pd.DatetimeIndex(fr["time"]).round("min")
+    fr = pd.read_parquet(RAW_ / "perp_BTCUSDT_funding.parquet")[["time", "funding_rate"]]; fr["time"] = pd.DatetimeIndex(fr["time"]).round("min")
     ev = pd.concat([fr, VisionFeed().funding(fr["time"].max(), now)[["time", "funding_rate"]]]).drop_duplicates("time", keep="last")
     closes = s4.index + pd.Timedelta("4h")
     syn = closes[(closes.hour % 8 == 0) & (closes < EVAL0)]

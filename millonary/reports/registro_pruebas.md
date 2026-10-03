@@ -51,3 +51,9 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - Anotado: la fórmula prerregistrada del control (⌊(1 − DD/20 %)/0,25⌋·0,25) baja a 0,75 con CUALQUIER caída > 0 (no solo desde el 5 %): actúa como un desapalancamiento casi permanente (K3 reducido el 94 % de los días, K4 el 59 %). No se corrige: cambiarlo sería una prueba nueva.
 - PBO (CSCV): familia {N, K1-K4} 0,34; F01-F09 sin carry 0,76 (elegir la «mejor» estrategia célebre por su historial es casi siempre sobreajuste).
 - K4 en papel desde 2026-10-03 con 1.000 USDT (`src/cartera/forward.py`, rutina diaria).
+
+## 2026-10-03 · Fase 2, lote 1: primas de riesgo — pruebas 266-269
+- Prerregistro `config/primas_prerregistrada.md` + código `src/primas/` en git (f991bd0) ANTES de ejecutar. Datos nuevos: 25 trimestrales BTCUSDT USDT-M (Binance Vision 1 h, 2021-02→hoy) y DVOL de Deribit (2021-03→hoy).
+- Resultado (`reports/primas_resultados.md`): **0/4 certificadas**. B01 basis hasta vencimiento (Sharpe 1,28; +6,8 %/año; caída 7 %; 21/21 vencimientos con ganancia), B02 con salida anticipada (1,32; +7,0 %) y V01 venta de varianza (1,58; +9,4 %; caída 8 %; peor día −4,7 %; 2026 −5,4 %) pasan 4/5 y fallan SOLO el Deflated Sharpe (0,59 / 0,62 / 0,74 < 0,80 con n = 269). V02 (filtro IV > RV) 1/5: el filtro empeora (Sharpe 0,63; negativa con costes ×2).
+- Diagnóstico: correlación con el carry de funding ≈ 0 y con el núcleo −0,1 a −0,4; como tercer bolsillo suben la paridad núcleo+carry (B01 4,95 → 5,49; V01 2,51 → 5,06).
+- B01, B02 y V01 se siguen hacia delante EN SOMBRA (`src/primas/forward.py`, rutina diaria, inicio 2026-10-03): solo evidencia; no entran en la cartera.

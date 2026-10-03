@@ -76,3 +76,7 @@ Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horar
 ## 2026-10-03 · Fase 1: gestor de cartera (petición del dueño: «que gane por todos lados»)
 - Se prerregistraron y evaluaron 4 formas de repartir el capital (paridad de riesgo, HRP, control de caída). Aprobada K4 (HRP + control de caída): muy estable pero ~+6,7 %/año. Pasa a papel; nada cambia en las cuentas existentes.
 - Conclusión honesta: optimizar por riesgo NO sube la rentabilidad; la sube solo añadir fuentes de retorno nuevas y no correlacionadas (Fase 2: basis trimestral, prima de volatilidad, órdenes maker). Toda estrategia nueva con parámetros ajustados pasa además por PBO ≤ 0,5 y CPCV (≥ 75 % de caminos con Sharpe > 0).
+
+## 2026-10-03 · Fase 2, lote 1 (basis trimestral y prima de volatilidad)
+- 0/4 certificadas con las reglas del proyecto; tres (B01, B02, V01) se quedan a una puerta (Deflated Sharpe) y aportan diversificación real. Van a SOMBRA en papel: si en ≥ 90 días se comportan como en el histórico, se propondrá una prueba nueva de cartera que las incluya. Nada cambia en las cuentas existentes.
+- Datos congelados en `paper_state/hist/` (contado 4 h y 1 h, funding, trimestrales vencidos, DVOL) para que las rutinas funcionen en una máquina nueva sin data/raw.
