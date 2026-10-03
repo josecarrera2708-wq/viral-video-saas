@@ -10,6 +10,17 @@
   },
   "estado": "muestra insuficiente para concluir"
  },
+ "P03 Barrido de liquidez": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
  "P04 Ineficiencia (Fair Value Gap)": {
   "cerradas": 1,
   "perdedoras": 1,
@@ -22,13 +33,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P05 Barra interior + tendencia": {
-  "cerradas": 0,
-  "perdedoras": 0,
+  "cerradas": 1,
+  "perdedoras": 1,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },

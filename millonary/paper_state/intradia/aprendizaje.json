@@ -11,12 +11,12 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I02 Ruptura Donchian 24 h": {
-  "cerradas": 2,
-  "perdedoras": 1,
+  "cerradas": 3,
+  "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 2,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
