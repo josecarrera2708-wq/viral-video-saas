@@ -11,7 +11,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 0,
+  "cerradas": 1,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
