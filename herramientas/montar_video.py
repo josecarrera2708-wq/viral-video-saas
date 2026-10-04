@@ -2,7 +2,7 @@ import os, json, re, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 V = f"{BASE}/video/musculo-01"
-TMP = os.environ.get("VID_TMP", "/tmp/clips2"); os.makedirs(TMP, exist_ok=True)
+TMP = os.environ.get("VID_TMP", "/tmp/clips3"); os.makedirs(TMP, exist_ok=True)
 X, FPS = 0.5, 25
 MAP = {1:[1,2,3],2:[4,5],3:[6,7,8],4:[9,10],5:[11,12],6:[13],7:[14],8:[15],9:[16,17],10:[18],
        11:[19,20,21],12:[22,23],13:[24,25],14:[26,27,28],15:[29,30],16:[31,32],17:[33,34,35],
@@ -24,7 +24,7 @@ def clip(k):
     if os.path.exists(out): return out
     z = f"1+0.10*on/{n}" if k % 2 == 0 else f"1.10-0.10*on/{n}"
     vf = f"scale=6400:3600:flags=lanczos,zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1920x1080:fps={FPS},format=yuv420p"
-    subprocess.run(["ffmpeg","-y","-loglevel","error","-loop","1","-i",f"{V}/escenas/{e:02d}.png","-vf",vf,"-frames:v",str(n),
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-loop","1","-i",f"{V}/escenas_v2/{e:02d}.png","-vf",vf,"-frames:v",str(n),
                     "-c:v","libx264","-preset","veryfast","-crf","17",out], check=True)
     return out
 def ts(t):
@@ -60,5 +60,5 @@ if __name__ == "__main__":
     fc.append(f"[{n+1}:a]volume=0.13,afade=t=in:st=0:d=3,afade=t=out:st={total-5.8:.1f}:d=5.8[m];[{n}:a][m]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5[a]")
     subprocess.run(["ffmpeg","-y","-loglevel","error"]+ins+["-filter_complex",";".join(fc),"-map","[v]","-map","[a]",
         "-pix_fmt","yuv420p","-c:v","libx264","-preset","veryfast","-crf","24","-c:a","aac","-b:a","160k","-shortest",
-        "-movflags","+faststart",f"{V}/musculo-01_final.mp4"], check=True)
+        "-movflags","+faststart",f"{V}/musculo-01_v2.mp4"], check=True)
     print("listo")
