@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-04 15:13:46.799161+00:00",
+ "generado": "2026-10-04 16:13:55.153901+00:00",
  "reglas": {
   "A": "n ≥ 6 con operaciones propias",
   "C": "n ≥ 15 con operaciones de toda la sala",
@@ -17,15 +17,15 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 233,
-     "R_media": -0.6910050692364206,
+     "n": 234,
+     "R_media": -0.6947550023425938,
      "vetado": true,
      "vetado_desde": "2022-08-30 19:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 292,
-     "R_media": -0.43603429874800526,
+     "n": 293,
+     "R_media": -0.43989933327815184,
      "vetado": true,
      "vetado_desde": "2023-03-02 19:00:00+00:00"
     }
@@ -33,15 +33,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -60,15 +60,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -94,15 +94,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -135,15 +135,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -169,15 +169,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -210,15 +210,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -237,15 +237,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -264,15 +264,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -298,15 +298,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -325,15 +325,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -352,15 +352,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -393,15 +393,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -420,15 +420,15 @@
    "C": [
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     }
@@ -447,8 +447,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 778,
-     "R_media": -0.2862208065382649,
+     "n": 779,
+     "R_media": -0.28786685096643266,
      "vetado": false,
      "vetado_desde": null
     },
@@ -461,8 +461,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 233,
-     "R_media": -0.6910050692364206,
+     "n": 234,
+     "R_media": -0.6947550023425938,
      "vetado": true,
      "vetado_desde": "2022-08-30 19:00:00+00:00"
     },
@@ -489,8 +489,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 292,
-     "R_media": -0.43603429874800526,
+     "n": 293,
+     "R_media": -0.43989933327815184,
      "vetado": true,
      "vetado_desde": "2023-03-02 19:00:00+00:00"
     },
@@ -512,8 +512,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -526,8 +526,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -554,8 +554,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -644,8 +644,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -658,8 +658,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -686,8 +686,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -776,8 +776,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -790,8 +790,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -818,8 +818,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -908,8 +908,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -922,8 +922,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -950,8 +950,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1040,8 +1040,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1054,8 +1054,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1082,8 +1082,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1172,8 +1172,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1186,8 +1186,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1214,8 +1214,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1304,8 +1304,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1318,8 +1318,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1346,8 +1346,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1436,8 +1436,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1450,8 +1450,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1478,8 +1478,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1568,8 +1568,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1582,8 +1582,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1610,8 +1610,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1700,8 +1700,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1714,8 +1714,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1742,8 +1742,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1832,8 +1832,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1846,8 +1846,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -1874,8 +1874,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -1964,8 +1964,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1978,8 +1978,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -2006,8 +2006,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },
@@ -2096,8 +2096,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9032,
-     "R_media": -0.3458355199018145,
+     "n": 9033,
+     "R_media": -0.3459708740362304,
      "vetado": false,
      "vetado_desde": null
     },
@@ -2110,8 +2110,8 @@
     },
     {
      "contexto": "volatilidad baja",
-     "n": 4396,
-     "R_media": -0.6291687354355794,
+     "n": 4397,
+     "R_media": -0.6293823630636542,
      "vetado": true,
      "vetado_desde": "2022-08-03 01:00:00+00:00"
     },
@@ -2138,8 +2138,8 @@
     },
     {
      "contexto": "sesión Europa (08-14 UTC)",
-     "n": 4063,
-     "R_media": -0.4612699141229212,
+     "n": 4064,
+     "R_media": -0.4615423598665132,
      "vetado": true,
      "vetado_desde": "2022-06-11 11:30:00+00:00"
     },

@@ -1,59 +1,31 @@
 {
- "generado": "2026-10-04 15:13:46.799161+00:00",
- "ultima_vela_cerrada": "2026-10-04 15:00:00+00:00",
+ "generado": "2026-10-04 16:13:55.153901+00:00",
+ "ultima_vela_cerrada": "2026-10-04 16:00:00+00:00",
  "inicio": "2026-10-02 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 15 min (velas cerradas)",
  "funding_disponible": true,
- "precio_actual": 85291.5,
+ "precio_actual": 85252.5,
  "traders": {
   "P01 Envolvente en soporte/resistencia": {
-   "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "cerradas": 2,
+   "por_dia": 0.7472912188515325,
    "ganan": 0,
-   "pierden": 1,
-   "R_media": -1.8335675171570718,
-   "R_total": -1.8335675171570718,
-   "pnl_usdt": -4.953011307822503,
-   "equity": 992.110783935061,
-   "retorno": -0.007889216064938975,
-   "caida_max": 0.007889216064938975,
+   "pierden": 2,
+   "R_media": -1.70102846661901,
+   "R_total": -3.40205693323802,
+   "pnl_usdt": -9.747744608294798,
+   "equity": 990.2522553917053,
+   "retorno": -0.00974774460829475,
+   "caida_max": 0.00974774460829475,
    "p_R_positiva": null,
    "salidas": {
     "tp": 0,
-    "stop": 1,
+    "stop": 2,
     "time": 0,
     "signal": 0,
     "liq": 0
    },
-   "abierta": {
-    "trader": "P01 Envolvente en soporte/resistencia",
-    "abre": "2026-10-04 12:15:00+00:00",
-    "cierra": "NaT",
-    "lado": "CORTO",
-    "px_entrada": 85220.9524,
-    "sl": 85400.77072228528,
-    "tp": 84861.31575542943,
-    "lote_btc": 0.017,
-    "nocional_usdt": 1448.7561908,
-    "riesgo_usdt": 3.056911478849816,
-    "stop_pct": 0.0021100247911015287,
-    "px_salida": 85308.5583,
-    "salida": "end",
-    "R": -0.9605135043757854,
-    "pnl_usdt": -2.9362047571166014,
-    "comision_usdt": 1.44950084095,
-    "funding_usdt": 0.002596383833561315,
-    "barras": 11,
-    "max_barras": 32,
-    "mfe_R": 0.7087842794895525,
-    "mae_R": 0.6425796800433278,
-    "post_stop_R": NaN,
-    "tendencia_a_favor": false,
-    "vol_percentil": 0.0875,
-    "hora_utc": 12,
-    "abierta": true,
-    "duracion_min": 165
-   }
+   "abierta": null
   },
   "P01 Envolvente en soporte/resistencia \u00b7 A": {
    "cerradas": 0,
@@ -87,7 +59,7 @@
   },
   "P02 Pin bar en techo/suelo": {
    "cerradas": 6,
-   "por_dia": 2.277411982731157,
+   "por_dia": 2.2418736565545974,
    "ganan": 2,
    "pierden": 4,
    "R_media": -0.7546553618902747,
@@ -108,7 +80,7 @@
   },
   "P02 Pin bar en techo/suelo \u00b7 A": {
    "cerradas": 3,
-   "por_dia": 1.1387059913655786,
+   "por_dia": 1.1209368282772987,
    "ganan": 1,
    "pierden": 2,
    "R_media": -0.30381474590549123,
@@ -129,7 +101,7 @@
   },
   "P02 Pin bar en techo/suelo \u00b7 C": {
    "cerradas": 4,
-   "por_dia": 1.5182746551541049,
+   "por_dia": 1.494582437703065,
    "ganan": 0,
    "pierden": 4,
    "R_media": -1.3883796006565559,
@@ -150,15 +122,15 @@
   },
   "P03 Barrido de liquidez": {
    "cerradas": 8,
-   "por_dia": 3.0365493103082097,
+   "por_dia": 2.98916487540613,
    "ganan": 3,
    "pierden": 5,
    "R_media": -0.6594183308654439,
    "R_total": -5.275346646923551,
    "pnl_usdt": -13.344513522912404,
-   "equity": 986.6554864770881,
-   "retorno": -0.013344513522911994,
-   "caida_max": 0.01474060555563883,
+   "equity": 985.8163920425319,
+   "retorno": -0.014183607957468092,
+   "caida_max": 0.0161953627131457,
    "p_R_positiva": null,
    "salidas": {
     "tp": 2,
@@ -167,11 +139,39 @@
     "signal": 0,
     "liq": 0
    },
-   "abierta": null
+   "abierta": {
+    "trader": "P03 Barrido de liquidez",
+    "abre": "2026-10-04 15:30:00+00:00",
+    "cierra": "NaT",
+    "lado": "CORTO",
+    "px_entrada": 85305.4355,
+    "sl": 85492.21560881921,
+    "tp": 84931.8752823616,
+    "lote_btc": 0.017,
+    "nocional_usdt": 1450.1924035000002,
+    "riesgo_usdt": 3.1752618499265073,
+    "stop_pct": 0.0021895452232842338,
+    "px_salida": 85269.5505,
+    "salida": "end",
+    "R": -0.2642599175168875,
+    "pnl_usdt": -0.8390944345560984,
+    "comision_usdt": 1.4498873810000001,
+    "funding_usdt": 0.0007479464437433032,
+    "barras": 2,
+    "max_barras": 32,
+    "mfe_R": 0.2834107996545058,
+    "mae_R": 0.5919500780836034,
+    "post_stop_R": NaN,
+    "tendencia_a_favor": false,
+    "vol_percentil": 0.135,
+    "hora_utc": 15,
+    "abierta": true,
+    "duracion_min": 30
+   }
   },
   "P03 Barrido de liquidez \u00b7 A": {
    "cerradas": 3,
-   "por_dia": 1.1387059913655786,
+   "por_dia": 1.1209368282772987,
    "ganan": 1,
    "pierden": 2,
    "R_media": -0.7592691676258396,
@@ -192,7 +192,7 @@
   },
   "P03 Barrido de liquidez \u00b7 C": {
    "cerradas": 3,
-   "por_dia": 1.1387059913655786,
+   "por_dia": 1.1209368282772987,
    "ganan": 1,
    "pierden": 2,
    "R_media": -0.7592691676258396,
@@ -213,7 +213,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap)": {
    "cerradas": 12,
-   "por_dia": 4.554823965462314,
+   "por_dia": 4.483747313109195,
    "ganan": 4,
    "pierden": 8,
    "R_media": -0.7975622676790052,
@@ -234,7 +234,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.202825359174996,
@@ -255,7 +255,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.3182469877495533,
@@ -276,15 +276,15 @@
   },
   "P05 Barra interior + tendencia": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.0656505750864742,
    "R_total": 0.1313011501729484,
    "pnl_usdt": 1.761066456792654,
-   "equity": 1001.7610664567927,
-   "retorno": 0.001761066456792637,
-   "caida_max": 0.004863477027559404,
+   "equity": 998.6836123317092,
+   "retorno": -0.001316387668290786,
+   "caida_max": 0.00792058026323883,
    "p_R_positiva": null,
    "salidas": {
     "tp": 1,
@@ -293,11 +293,39 @@
     "signal": 0,
     "liq": 0
    },
-   "abierta": null
+   "abierta": {
+    "trader": "P05 Barra interior + tendencia",
+    "abre": "2026-10-04 15:00:00+00:00",
+    "cierra": "NaT",
+    "lado": "LARGO",
+    "px_entrada": 85312.059,
+    "sl": 85152.059,
+    "tp": 85632.059,
+    "lote_btc": 0.019,
+    "nocional_usdt": 1620.929121,
+    "riesgo_usdt": 3.04,
+    "stop_pct": 0.0018754675701825462,
+    "px_salida": 85235.4495,
+    "salida": "end",
+    "R": -1.0123204358827285,
+    "pnl_usdt": -3.0774541250834946,
+    "comision_usdt": 1.62020133075,
+    "funding_usdt": -0.0016722943336582665,
+    "barras": 4,
+    "max_barras": 24,
+    "mfe_R": 1.0965062500000387,
+    "mae_R": 0.4284937499999614,
+    "post_stop_R": NaN,
+    "tendencia_a_favor": true,
+    "vol_percentil": 0.116,
+    "hora_utc": 15,
+    "abierta": true,
+    "duracion_min": 60
+   }
   },
   "P05 Barra interior + tendencia \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.8491442383996672,
@@ -318,7 +346,7 @@
   },
   "P05 Barra interior + tendencia \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.8491442383996672,
@@ -339,7 +367,7 @@
   },
   "P06 Estrella de ma\u00f1ana/tarde": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.2980418140473686,
@@ -375,7 +403,7 @@
   },
   "P06 Estrella de ma\u00f1ana/tarde \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.2980418140473686,
@@ -396,7 +424,7 @@
   },
   "P07 Doble techo/suelo": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 2,
    "pierden": 0,
    "R_media": 1.7446200501642553,
@@ -417,7 +445,7 @@
   },
   "P07 Doble techo/suelo \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.8954996980673775,
@@ -438,7 +466,7 @@
   },
   "P07 Doble techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.8954996980673775,
@@ -459,7 +487,7 @@
   },
   "Q01 Momentum de series temporales": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.8284746766625061,
@@ -480,7 +508,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 A": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.8284746766625061,
@@ -501,7 +529,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.8284746766625061,
@@ -522,7 +550,7 @@
   },
   "Q02 Reversi\u00f3n Ornstein-Uhlenbeck": {
    "cerradas": 4,
-   "por_dia": 1.5182746551541049,
+   "por_dia": 1.494582437703065,
    "ganan": 2,
    "pierden": 2,
    "R_media": -0.4220968099346759,
@@ -543,7 +571,7 @@
   },
   "Q02 Reversi\u00f3n Ornstein-Uhlenbeck \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.9004958330770516,
@@ -564,7 +592,7 @@
   },
   "Q02 Reversi\u00f3n Ornstein-Uhlenbeck \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.3795686637885262,
+   "por_dia": 0.37364560942576625,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.9004958330770516,
@@ -630,7 +658,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 2,
    "pierden": 0,
    "R_media": 1.2515690077398123,
@@ -651,7 +679,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 A": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 2,
    "pierden": 0,
    "R_media": 1.2515690077398123,
@@ -672,7 +700,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 0.7591373275770524,
+   "por_dia": 0.7472912188515325,
    "ganan": 2,
    "pierden": 0,
    "R_media": 1.2515690077398123,
@@ -782,6 +810,6 @@
    "abierta": null
   }
  },
- "trades_totales": 40,
- "por_dia_total": 15.182746551541047
+ "trades_totales": 41,
+ "por_dia_total": 15.319469986456419
 }
