@@ -11,24 +11,24 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P02 Pin bar en techo/suelo": {
-  "cerradas": 4,
-  "perdedoras": 2,
+  "cerradas": 5,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 1,
+   "nunca_a_favor": 2,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
-   "vol_baja": 2
+   "contra_tendencia": 3,
+   "vol_baja": 3
   },
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 5,
-  "perdedoras": 4,
+  "cerradas": 6,
+  "perdedoras": 5,
   "patrones": {
-   "nunca_a_favor": 3,
+   "nunca_a_favor": 4,
    "stop_barrido": 0,
-   "contra_tendencia": 4,
-   "vol_baja": 4
+   "contra_tendencia": 5,
+   "vol_baja": 5
   },
   "estado": "muestra insuficiente para concluir"
  },
