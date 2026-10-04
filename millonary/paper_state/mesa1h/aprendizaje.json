@@ -1,4 +1,15 @@
 {
+ "P01 Envolvente en soporte/resistencia": {
+  "cerradas": 0,
+  "perdedoras": 0,
+  "patrones": {
+   "nunca_a_favor": 0,
+   "stop_barrido": 0,
+   "contra_tendencia": 0,
+   "vol_baja": 0
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
  "P02 Pin bar en techo/suelo": {
   "cerradas": 2,
   "perdedoras": 0,
