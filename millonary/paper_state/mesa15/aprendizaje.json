@@ -22,13 +22,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 8,
-  "perdedoras": 5,
+  "cerradas": 9,
+  "perdedoras": 6,
   "patrones": {
    "nunca_a_favor": 3,
    "stop_barrido": 1,
-   "contra_tendencia": 5,
-   "vol_baja": 3
+   "contra_tendencia": 6,
+   "vol_baja": 4
   },
   "estado": "muestra insuficiente para concluir"
  },

@@ -77,7 +77,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I08 Ruptura del máx./mín. de ayer": {
-  "cerradas": 2,
+  "cerradas": 3,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
@@ -110,13 +110,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I11 Ruptura fallida": {
-  "cerradas": 7,
-  "perdedoras": 4,
+  "cerradas": 8,
+  "perdedoras": 5,
   "patrones": {
-   "nunca_a_favor": 2,
+   "nunca_a_favor": 3,
    "stop_barrido": 0,
-   "contra_tendencia": 4,
-   "vol_baja": 2
+   "contra_tendencia": 5,
+   "vol_baja": 3
   },
   "estado": "muestra insuficiente para concluir"
  },
