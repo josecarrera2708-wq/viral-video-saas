@@ -11,13 +11,13 @@
   "nocional_usdt": 1186.2051936,
   "riesgo_usdt": 3.4128093564359485,
   "stop_pct": 0.0028770817855538586,
-  "px_salida": 84820.5325,
+  "px_salida": 84802.0362,
   "salida": "end",
-  "R": 0.027957927248435908,
-  "pnl_usdt": 0.09541507570001762,
-  "comision_usdt": 1.1868463243,
+  "R": -0.0478795130738307,
+  "pnl_usdt": -0.16340365019996672,
+  "comision_usdt": 1.1867168502,
   "funding_usdt": 0.0,
-  "barras": 6,
+  "barras": 7,
   "max_barras": 8,
   "mfe_R": 0.6853023874859668,
   "mae_R": 0.17820907542141323,
@@ -27,7 +27,7 @@
   "hora_utc": 22,
   "abierta": true,
   "lecciones": [],
-  "duracion_min": 360
+  "duracion_min": 420
  },
  {
   "trader": "P03 Barrido de liquidez",
