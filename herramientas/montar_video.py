@@ -2,7 +2,7 @@ import os, json, re, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 V = f"{BASE}/video/musculo-01"
-TMP = os.environ.get("VID_TMP", "/tmp/clips"); os.makedirs(TMP, exist_ok=True)
+TMP = os.environ.get("VID_TMP", "/tmp/clips2"); os.makedirs(TMP, exist_ok=True)
 X, FPS = 0.5, 25
 MAP = {1:[1,2,3],2:[4,5],3:[6,7,8],4:[9,10],5:[11,12],6:[13],7:[14],8:[15],9:[16,17],10:[18],
        11:[19,20,21],12:[22,23],13:[24,25],14:[26,27,28],15:[29,30],16:[31,32],17:[33,34,35],
@@ -23,7 +23,7 @@ def clip(k):
     out = f"{TMP}/{e:02d}.mp4"
     if os.path.exists(out): return out
     z = f"1+0.10*on/{n}" if k % 2 == 0 else f"1.10-0.10*on/{n}"
-    vf = f"scale=2880:1620,zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1920x1080:fps={FPS},format=yuv420p"
+    vf = f"scale=6400:3600:flags=lanczos,zoompan=z='{z}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1920x1080:fps={FPS},format=yuv420p"
     subprocess.run(["ffmpeg","-y","-loglevel","error","-loop","1","-i",f"{V}/escenas/{e:02d}.png","-vf",vf,"-frames:v",str(n),
                     "-c:v","libx264","-preset","veryfast","-crf","17",out], check=True)
     return out
@@ -50,13 +50,15 @@ if __name__ == "__main__":
     srt()
     ins = []; 
     for c in clips: ins += ["-i", c]
-    ins += ["-i", f"{V}/voz.mp3"]
+    ins += ["-i", f"{V}/voz.mp3", "-stream_loop", "-1", "-i", f"{V}/musica/comercial.mp3"]
     fc, prev, S = [], "[0:v]", 0.0
     for k in range(len(durs)-1):
         S += durs[k][1]; lab = f"[x{k}]"
         fc.append(f"{prev}[{k+1}:v]xfade=transition=fade:duration={X}:offset={S:.3f}{lab}"); prev = lab
-    fc.append(f"{prev}subtitles={V}/subtitulos.srt:force_style='FontName=DejaVu Sans,Bold=1,FontSize=17,Outline=2,Shadow=1,MarginV=36'[v]")
-    subprocess.run(["ffmpeg","-y","-loglevel","error"]+ins+["-filter_complex",";".join(fc),"-map","[v]","-map",f"{len(clips)}:a",
-        "-af","loudnorm=I=-16:TP=-1.5","-c:v","libx264","-preset","veryfast","-crf","20","-c:a","aac","-b:a","160k","-shortest",
-        "-movflags","+faststart",f"{V}/musculo-01.mp4"], check=True)
+    fc.append(f"{prev}subtitles={V}/subtitulos.srt:force_style='FontName=DejaVu Sans,Bold=1,FontSize=17,Outline=2,Shadow=1,MarginV=36',format=yuv420p[v]")
+    n = len(clips)
+    fc.append(f"[{n+1}:a]volume=0.13,afade=t=in:st=0:d=3,afade=t=out:st={total-5.8:.1f}:d=5.8[m];[{n}:a][m]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5[a]")
+    subprocess.run(["ffmpeg","-y","-loglevel","error"]+ins+["-filter_complex",";".join(fc),"-map","[v]","-map","[a]",
+        "-pix_fmt","yuv420p","-c:v","libx264","-preset","veryfast","-crf","24","-c:a","aac","-b:a","160k","-shortest",
+        "-movflags","+faststart",f"{V}/musculo-01_final.mp4"], check=True)
     print("listo")
