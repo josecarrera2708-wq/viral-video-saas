@@ -44,13 +44,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P07 Doble techo/suelo": {
-  "cerradas": 1,
-  "perdedoras": 1,
+  "cerradas": 2,
+  "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
