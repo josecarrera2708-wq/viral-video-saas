@@ -33,13 +33,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 11,
-  "perdedoras": 7,
+  "cerradas": 12,
+  "perdedoras": 8,
   "patrones": {
-   "nunca_a_favor": 3,
+   "nunca_a_favor": 4,
    "stop_barrido": 0,
    "contra_tendencia": 4,
-   "vol_baja": 6
+   "vol_baja": 7
   },
   "estado": "muestra insuficiente para concluir"
  },
@@ -88,7 +88,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q02 Reversión Ornstein-Uhlenbeck": {
-  "cerradas": 3,
+  "cerradas": 4,
   "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 1,
