@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-04 08:13:50.138136+00:00",
+ "generado": "2026-10-04 09:13:29.286860+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
  "ultima_vela": "2026-10-03 20:00:00+00:00",
  "equity": 998.3508368512519,
@@ -99,6 +99,6 @@
   "capital_inicial_usdt": 2000.0,
   "nota": "Dos subcuentas de 1.000 USDT: el núcleo (prueba oficial, sin tocar) y el carry. El núcleo empezó el 2026-09-29; el carry el 2026-10-03."
  },
- "velas_nuevas": 6,
+ "velas_nuevas": 0,
  "problemas": []
 }

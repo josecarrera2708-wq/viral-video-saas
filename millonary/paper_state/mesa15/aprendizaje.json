@@ -22,7 +22,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 9,
+  "cerradas": 10,
   "perdedoras": 7,
   "patrones": {
    "nunca_a_favor": 3,

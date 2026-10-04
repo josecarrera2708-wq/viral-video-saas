@@ -55,7 +55,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I06 RSI(2) retroceso": {
-  "cerradas": 2,
+  "cerradas": 3,
   "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 1,
@@ -121,13 +121,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I12 Ichimoku 1 h": {
-  "cerradas": 4,
-  "perdedoras": 3,
+  "cerradas": 5,
+  "perdedoras": 4,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 3,
-   "vol_baja": 0
+   "contra_tendencia": 4,
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
