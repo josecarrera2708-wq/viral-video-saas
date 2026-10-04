@@ -21,13 +21,14 @@
   "max_barras": 8,
   "mfe_R": 0.11470416459320987,
   "mae_R": 2.353150107387282,
-  "post_stop_R": NaN,
+  "post_stop_R": -1.8575769371518485,
   "tendencia_a_favor": false,
   "vol_percentil": 0.026,
   "hora_utc": 20,
   "abierta": false,
   "lecciones": [
    "Nunca fue a favor (máximo 0.11 R): la señal falló desde el principio.",
+   "El precio no se recuperó tras el stop: la salida fue la correcta.",
    "Operó contra la tendencia de fondo (EMA de 800 h).",
    "Volatilidad baja (percentil 3%): el stop era estrecho y los costes pesaron más.",
    "Comisiones y funding costaron 0.43 R de esta pérdida."
