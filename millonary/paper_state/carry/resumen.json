@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-04 05:13:46.359310+00:00",
+ "generado": "2026-10-04 06:15:03.772572+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
  "ultima_vela": "2026-10-02 20:00:00+00:00",
  "equity": 998.2337516994581,
@@ -31,12 +31,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": 1,
-   "ts": "2026-10-03 00:01:00+00:00",
-   "level": "ERROR",
-   "msg": "datos incompletos en 2026-10-02 20:00:00+00:00: contado y perpetuo deben tener la misma vela"
-  },
   {
    "id": 2,
    "ts": "2026-10-03 00:01:00+00:00",
@@ -87,6 +81,12 @@
   },
   {
    "id": 10,
+   "ts": "2026-10-03 04:01:00+00:00",
+   "level": "ERROR",
+   "msg": "datos incompletos en 2026-10-03 00:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 11,
    "ts": "2026-10-03 04:01:00+00:00",
    "level": "ERROR",
    "msg": "datos incompletos en 2026-10-03 00:00:00+00:00: contado y perpetuo deben tener la misma vela"

@@ -37,7 +37,7 @@
  {
   "trader": "P02 Pin bar en techo/suelo",
   "abre": "2026-10-03 21:15:00+00:00",
-  "cierra": "NaT",
+  "cierra": "2026-10-04 05:15:00+00:00",
   "lado": "LARGO",
   "px_entrada": 84689.9346,
   "sl": 84518.88764019069,
@@ -46,13 +46,13 @@
   "nocional_usdt": 1524.4188228,
   "riesgo_usdt": 3.07884527656743,
   "stop_pct": 0.0020196846368718494,
-  "px_salida": 84802.0362,
-  "salida": "end",
-  "R": 0.1599451851349925,
-  "pnl_usdt": 0.49244647776257483,
-  "comision_usdt": 1.5254277372000002,
-  "funding_usdt": 4.541496241180746e-05,
-  "barras": 31,
+  "px_salida": 84821.5323,
+  "salida": "time",
+  "R": 0.2738591189298711,
+  "pnl_usdt": 0.8431698547621517,
+  "comision_usdt": 1.5256032021000003,
+  "funding_usdt": 1.4456861918082715e-05,
+  "barras": 33,
   "max_barras": 32,
   "mfe_R": 1.20472997725155,
   "mae_R": 0.09900555975314276,
@@ -60,9 +60,11 @@
   "tendencia_a_favor": true,
   "vol_percentil": 0.071,
   "hora_utc": 21,
-  "abierta": true,
-  "lecciones": [],
-  "duracion_min": 465
+  "abierta": false,
+  "lecciones": [
+   "Ganó +0.27 R saliendo por tiempo; el máximo a favor fue 1.2 R (dejó ganancia sobre la mesa)."
+  ],
+  "duracion_min": 495
  },
  {
   "trader": "P03 Barrido de liquidez",
