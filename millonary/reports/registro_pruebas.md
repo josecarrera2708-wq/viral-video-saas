@@ -67,3 +67,7 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - Petición del dueño: reunir el máximo de BTC. Mezclas de BTC con núcleo y carry vistas ANTES del prerregistro, sin prerregistrar: ⅓ cada uno, 50 % BTC/50 % carry, 25/25/50 y 50/25/25 → pruebas 310-313, para que cuenten en el n. Medido en BTC (2020→hoy, por cada BTC inicial): 100 % BTC 1,00; 50/50 0,60; 50/25/25 0,59; ⅓ 0,47; 25/25/50 0,39.
 - Prerregistro `config/acumulacion_prerregistrada.md` + código `src/acumulacion/` en git ANTES del inicio en papel (compra al cierre del 2026-10-03). A1 100 % BTC APLICADA; A2 50/25/25 en sombra. No certifica nada (sin puertas).
 - Añadida A3 (núcleo + carry 50/50 que convierte en BTC sus ganancias ≥ 10 USDT a fin de mes; copia aparte) antes del inicio, por petición del dueño. Sin puertas.
+
+## 2026-10-04 · Revisión a petición del dueño (sin pruebas nuevas)
+- Fallo encontrado en el post-mortem de la mesa intradía: la EMA de 800 h necesita 800 velas y el papel solo carga 420 de calentamiento, así que la tendencia salía vacía y TODAS las operaciones se marcaban «contra la tendencia de fondo». Corregido: ahora queda vacío (sin lección) mientras no haya datos. No cambia ninguna entrada, stop, TP ni resultado; solo las lecciones.
+- Pérdidas en papel coherentes con los históricos ya registrados (0/14, 0/13, 0/13 certificadas, R esperada negativa). En papel: mesa 15 min R −0,44/op (costes ≈ 0,45 R/op con stops del 0,22 %); 1 h −0,47; intradía +0,03.

@@ -37,7 +37,7 @@ def detail(bars: pd.DataFrame, ctx: pd.DataFrame, name: str, spec, r: dict, i: i
            "px_entrada": px, "sl": float(sl), "tp": None if tp is None else float(tp), "lote_btc": qty, "nocional_usdt": qty * px, "riesgo_usdt": risk,
            "stop_pct": sd / px if px else 0.0, "px_salida": float(r["exit_px"][i]), "salida": reason, "R": float(r["r"][i]), "pnl_usdt": float(r["pnl"][i]),
            "comision_usdt": float(r["fees"][i]), "funding_usdt": float(r["funding"][i]), "barras": int(xi - ei + 1), "max_barras": int(max_bars),
-           "mfe_R": float(mfe), "mae_R": float(mae), "post_stop_R": post, "tendencia_a_favor": bool(t_sig["trend"] == d) if t_sig["trend"] != 0 else None,
+           "mfe_R": float(mfe), "mae_R": float(mae), "post_stop_R": post, "tendencia_a_favor": bool(t_sig["trend"] == d) if pd.notna(t_sig["trend"]) and t_sig["trend"] != 0 else None,
            "vol_percentil": None if pd.isna(t_sig["atr_pct"]) else float(t_sig["atr_pct"]), "hora_utc": int(bars.index[ei].hour), "abierta": reason == "end"}
     out["lecciones"] = lessons(out, tp_mult)
     return out
