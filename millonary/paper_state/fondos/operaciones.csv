@@ -1,1 +1,5 @@
-
+estrategia,entrada,salida,lado,px_entrada,px_salida,unidades,ret_pct,pnl_usdt,R,motivo
+F03 Momentum 12 m (AQR/MOP),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → -0.62×
+F04 Media 200 d (Tudor Jones),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → +1.00×
+F06 Carry de funding (cash-and-carry),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,entra en carry: exposición +0.00× → +1.00×
+F07 Volatilidad gestionada (Moreira-Muir),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → +2.00×
