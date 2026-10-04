@@ -1,4 +1,15 @@
 {
+ "P01 Envolvente en soporte/resistencia": {
+  "cerradas": 1,
+  "perdedoras": 1,
+  "patrones": {
+   "nunca_a_favor": 1,
+   "stop_barrido": 0,
+   "contra_tendencia": 1,
+   "vol_baja": 1
+  },
+  "estado": "muestra insuficiente para concluir"
+ },
  "P02 Pin bar en techo/suelo": {
   "cerradas": 6,
   "perdedoras": 4,
@@ -11,18 +22,18 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 7,
-  "perdedoras": 4,
+  "cerradas": 8,
+  "perdedoras": 5,
   "patrones": {
-   "nunca_a_favor": 2,
+   "nunca_a_favor": 3,
    "stop_barrido": 1,
-   "contra_tendencia": 4,
-   "vol_baja": 2
+   "contra_tendencia": 5,
+   "vol_baja": 3
   },
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 10,
+  "cerradas": 11,
   "perdedoras": 7,
   "patrones": {
    "nunca_a_favor": 3,
@@ -77,13 +88,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q02 Reversión Ornstein-Uhlenbeck": {
-  "cerradas": 2,
-  "perdedoras": 1,
+  "cerradas": 3,
+  "perdedoras": 2,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
-   "vol_baja": 1
+   "contra_tendencia": 2,
+   "vol_baja": 2
   },
   "estado": "muestra insuficiente para concluir"
  },

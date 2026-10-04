@@ -44,7 +44,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I05 Cruce EMA 9/21 + EMA200": {
-  "cerradas": 5,
+  "cerradas": 6,
   "perdedoras": 4,
   "patrones": {
    "nunca_a_favor": 4,

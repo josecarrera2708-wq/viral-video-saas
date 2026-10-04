@@ -1,10 +1,10 @@
 {
- "generado": "2026-10-04 10:13:12.438442+00:00",
- "ultima_vela_cerrada": "2026-10-04 10:00:00+00:00",
+ "generado": "2026-10-04 11:14:46.412277+00:00",
+ "ultima_vela_cerrada": "2026-10-04 11:00:00+00:00",
  "inicio": "2026-10-02 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas, desde 15 min)",
  "funding_disponible": true,
- "precio_actual": 85230.5,
+ "precio_actual": 85266.5,
  "traders": {
   "P01 Envolvente en soporte/resistencia": {
    "cerradas": 0,
@@ -53,7 +53,7 @@
   },
   "P02 Pin bar en techo/suelo": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 2,
    "pierden": 0,
    "R_media": 0.462755735211957,
@@ -89,7 +89,7 @@
   },
   "P02 Pin bar en techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.5552884824094434,
@@ -110,7 +110,7 @@
   },
   "P03 Barrido de liquidez": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.09226694922716616,
@@ -161,7 +161,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap)": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -182,7 +182,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -203,7 +203,7 @@
   },
   "P04 Ineficiencia (Fair Value Gap) \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1633108246588812,
@@ -224,7 +224,7 @@
   },
   "P05 Barra interior + tendencia": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.06492861226746749,
@@ -245,7 +245,7 @@
   },
   "P05 Barra interior + tendencia \u00b7 A": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.06492861226746749,
@@ -326,14 +326,14 @@
   },
   "P07 Doble techo/suelo": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 0,
    "pierden": 2,
    "R_media": -0.36527258112693495,
    "R_total": -0.7305451622538699,
    "pnl_usdt": -2.93340563122499,
-   "equity": 997.6463254101751,
-   "retorno": -0.002353674589824939,
+   "equity": 997.8981490353751,
+   "retorno": -0.002101850964624896,
    "caida_max": 0.008231915255879962,
    "p_R_positiva": null,
    "salidas": {
@@ -355,22 +355,22 @@
     "nocional_usdt": 595.3185399,
     "riesgo_usdt": 3.6805954351829753,
     "stop_pct": 0.006182564775827798,
-    "px_salida": 85213.45390000001,
+    "px_salida": 85249.4467,
     "salida": "end",
-    "R": 0.15751012345948684,
-    "pnl_usdt": 0.5797310414000941,
-    "comision_usdt": 0.5959063586000001,
+    "R": 0.22592938594966872,
+    "pnl_usdt": 0.8315546666000433,
+    "comision_usdt": 0.5960323334000001,
     "funding_usdt": 0.0,
-    "barras": 3,
+    "barras": 4,
     "max_barras": 12,
-    "mfe_R": 0.5439228883629031,
+    "mfe_R": 0.72364924287519,
     "mae_R": 0.25486090946948275,
     "post_stop_R": null,
     "tendencia_a_favor": true,
     "vol_percentil": 0.004,
     "hora_utc": 7,
     "abierta": true,
-    "duracion_min": 180
+    "duracion_min": 240
    }
   },
   "P07 Doble techo/suelo \u00b7 A": {
@@ -381,9 +381,9 @@
    "R_media": 0.0,
    "R_total": 0.0,
    "pnl_usdt": 0.0,
-   "equity": 1000.5797310414,
-   "retorno": 0.0005797310413999668,
-   "caida_max": 2.4496661084727478e-05,
+   "equity": 1000.8315546666,
+   "retorno": 0.0008315546666000095,
+   "caida_max": 0.00016558102935193553,
    "p_R_positiva": null,
    "salidas": {},
    "abierta": {
@@ -398,27 +398,27 @@
     "nocional_usdt": 595.3185399,
     "riesgo_usdt": 3.6805954351829753,
     "stop_pct": 0.006182564775827798,
-    "px_salida": 85213.45390000001,
+    "px_salida": 85249.4467,
     "salida": "end",
-    "R": 0.15751012345948684,
-    "pnl_usdt": 0.5797310414000941,
-    "comision_usdt": 0.5959063586000001,
+    "R": 0.22592938594966872,
+    "pnl_usdt": 0.8315546666000433,
+    "comision_usdt": 0.5960323334000001,
     "funding_usdt": 0.0,
-    "barras": 3,
+    "barras": 4,
     "max_barras": 12,
-    "mfe_R": 0.5439228883629031,
+    "mfe_R": 0.72364924287519,
     "mae_R": 0.25486090946948275,
     "post_stop_R": null,
     "tendencia_a_favor": true,
     "vol_percentil": 0.004,
     "hora_utc": 7,
     "abierta": true,
-    "duracion_min": 180
+    "duracion_min": 240
    }
   },
   "P07 Doble techo/suelo \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.24786016551236412,
@@ -439,7 +439,7 @@
   },
   "Q01 Momentum de series temporales": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -460,7 +460,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -481,7 +481,7 @@
   },
   "Q01 Momentum de series temporales \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 0,
    "pierden": 1,
    "R_media": -1.1320525009448512,
@@ -547,7 +547,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -568,7 +568,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 A": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -589,7 +589,7 @@
   },
   "Q03 R\u00e9gimen por raz\u00f3n de varianzas \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": 0.11377590813853866,
@@ -610,7 +610,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -631,7 +631,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -652,7 +652,7 @@
   },
   "Q04 Expansi\u00f3n de volatilidad Garman-Klass \u00b7 C": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 1,
    "pierden": 0,
    "R_media": 1.937579698122598,
@@ -673,7 +673,7 @@
   },
   "Q05 Desequilibrio de flujo": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.16955495443805302,
@@ -694,7 +694,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 A": {
    "cerradas": 1,
-   "por_dia": 0.4122286120732798,
+   "por_dia": 0.4050890962889391,
    "ganan": 1,
    "pierden": 0,
    "R_media": 0.7979543232755133,
@@ -715,7 +715,7 @@
   },
   "Q05 Desequilibrio de flujo \u00b7 C": {
    "cerradas": 2,
-   "por_dia": 0.8244572241465596,
+   "por_dia": 0.8101781925778782,
    "ganan": 1,
    "pierden": 1,
    "R_media": -0.16955495443805302,
@@ -781,5 +781,5 @@
   }
  },
  "trades_totales": 15,
- "por_dia_total": 6.183429181099197
+ "por_dia_total": 6.0763364443340855
 }
