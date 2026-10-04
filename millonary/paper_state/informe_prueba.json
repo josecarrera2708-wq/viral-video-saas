@@ -1,9 +1,9 @@
 {
- "dias": 2,
- "velas": 14,
- "retorno": 0.008129739068766018,
- "caida_max": 0.00516297454689163,
- "exposicion_media": 0.5859914039246531,
+ "dias": 3,
+ "velas": 20,
+ "retorno": 0.005730437336484817,
+ "caida_max": 0.014500746889439031,
+ "exposicion_media": 0.5873094754628299,
  "ordenes": 1,
  "cono_30d": {
   "horizonte_usado_dias": 7,
@@ -31,39 +31,39 @@
    "n": 0
   },
   "lotes_abiertos": 1,
-  "pnl_no_realizado": 8.129739068766067
+  "pnl_no_realizado": 5.730437336484955
  },
  "cuadre": {
   "ok": true,
-  "diferencia": -1.1013412404281553e-13
+  "diferencia": -1.7141843500212417e-13
  },
  "replica_decisiones": {
-  "equity_trader": 1012.5133141956749,
-  "equity_simulador": 1012.5065375616946,
-  "diferencia_rel": 6.692928617102467e-06,
+  "equity_trader": 1009.8645204847654,
+  "equity_simulador": 1009.8606258054795,
+  "diferencia_rel": 3.856650300448905e-06,
   "ordenes_trader": 1,
   "ordenes_simulador": 1
  },
  "replica_estado": {
-  "equity_replay": 1008.2532644858093,
-  "equity_cuenta": 1008.129739068766,
-  "diferencia_rel": -0.00012251427433396245,
+  "equity_replay": 1005.7304373364848,
+  "equity_cuenta": 1005.7304373364848,
+  "diferencia_rel": 0.0,
   "ordenes_replay": 1,
   "ordenes_cuenta": 1,
-  "velas_replay": 14,
-  "velas_cuenta": 14
+  "velas_replay": 20,
+  "velas_cuenta": 20
  },
  "posterior_sharpe": {
-  "dias": 3,
+  "dias": 4,
   "estado": "insuficiente"
  },
  "puertas": {
-  "G1_replica": false,
+  "G1_replica": true,
   "G2_integridad": true,
   "G3_envolvente": true,
   "G4_no_anomalo": true,
   "G5_registro_cuadra": true
  },
- "todas_las_puertas": false,
+ "todas_las_puertas": true,
  "aviso": "Con menos de 30 d\u00edas las puertas G3/G4 son provisionales."
 }
