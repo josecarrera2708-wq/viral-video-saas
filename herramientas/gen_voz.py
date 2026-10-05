@@ -1,7 +1,7 @@
 import os, re, json, subprocess, requests, sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = f"{BASE}/guiones/musculo-guion-02.md"
-OUT = f"{BASE}/video/musculo-01"
+SRC = os.environ.get("GUION", f"{BASE}/guiones/musculo-guion-02.md")
+OUT = os.environ.get("OUT_DIR", f"{BASE}/video/musculo-01")
 TMP = os.environ.get("VOZ_TMP", "/tmp/voz_partes")
 VOICE = os.environ.get("VOICE_ID", "9b67072c-d46c-465d-87dc-f7a1c6db2bf3")
 SPEED = float(os.environ.get("VOICE_SPEED", "1.05"))
