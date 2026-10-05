@@ -33,13 +33,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 1,
-  "perdedoras": 1,
+  "cerradas": 2,
+  "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
@@ -99,13 +99,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q04 Expansión de volatilidad Garman-Klass": {
-  "cerradas": 1,
-  "perdedoras": 0,
+  "cerradas": 2,
+  "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
