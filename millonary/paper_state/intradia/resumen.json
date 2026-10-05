@@ -1,14 +1,14 @@
 {
- "generado": "2026-10-05 11:26:39.869338+00:00",
- "ultima_vela_cerrada": "2026-10-05 11:00:00+00:00",
+ "generado": "2026-10-05 12:36:07.958830+00:00",
+ "ultima_vela_cerrada": "2026-10-05 12:00:00+00:00",
  "inicio": "2026-09-29 16:30:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas)",
  "funding_disponible": true,
- "precio_actual": 86116.5,
+ "precio_actual": 86220.0,
  "traders": {
   "I01 Rango asi\u00e1tico \u2192 Londres/NY": {
    "cerradas": 3,
-   "por_dia": 0.5181928582729214,
+   "por_dia": 0.5139105200125624,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -30,7 +30,7 @@
   },
   "I02 Ruptura Donchian 24 h": {
    "cerradas": 6,
-   "por_dia": 1.0363857165458428,
+   "por_dia": 1.0278210400251249,
    "ganan": 3,
    "pierden": 3,
    "salidas": {
@@ -52,7 +52,7 @@
   },
   "I03 Bollinger + RSI (reversi\u00f3n)": {
    "cerradas": 5,
-   "por_dia": 0.8636547637882023,
+   "por_dia": 0.8565175333542707,
    "ganan": 2,
    "pierden": 3,
    "salidas": {
@@ -74,7 +74,7 @@
   },
   "I04 Reversi\u00f3n a VWAP diaria": {
    "cerradas": 9,
-   "por_dia": 1.554578574818764,
+   "por_dia": 1.5417315600376873,
    "ganan": 3,
    "pierden": 6,
    "salidas": {
@@ -96,7 +96,7 @@
   },
   "I05 Cruce EMA 9/21 + EMA200": {
    "cerradas": 6,
-   "por_dia": 1.0363857165458428,
+   "por_dia": 1.0278210400251249,
    "ganan": 2,
    "pierden": 4,
    "salidas": {
@@ -118,7 +118,7 @@
   },
   "I06 RSI(2) retroceso": {
    "cerradas": 4,
-   "por_dia": 0.6909238110305618,
+   "por_dia": 0.6852140266834166,
    "ganan": 2,
    "pierden": 2,
    "salidas": {
@@ -140,7 +140,7 @@
   },
   "I07 Ruptura tras squeeze": {
    "cerradas": 3,
-   "por_dia": 0.5181928582729214,
+   "por_dia": 0.5139105200125624,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -162,7 +162,7 @@
   },
   "I08 Ruptura del m\u00e1x./m\u00edn. de ayer": {
    "cerradas": 3,
-   "por_dia": 0.5181928582729214,
+   "por_dia": 0.5139105200125624,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -184,7 +184,7 @@
   },
   "I09 Supertrend 10/3": {
    "cerradas": 2,
-   "por_dia": 0.3454619055152809,
+   "por_dia": 0.3426070133417083,
    "ganan": 0,
    "pierden": 2,
    "salidas": {
@@ -206,7 +206,7 @@
   },
   "I10 R\u00e1faga de momentum": {
    "cerradas": 6,
-   "por_dia": 1.0363857165458428,
+   "por_dia": 1.0278210400251249,
    "ganan": 2,
    "pierden": 4,
    "salidas": {
@@ -228,7 +228,7 @@
   },
   "I11 Ruptura fallida": {
    "cerradas": 11,
-   "por_dia": 1.900040480334045,
+   "por_dia": 1.8843385733793956,
    "ganan": 4,
    "pierden": 7,
    "salidas": {
@@ -250,7 +250,7 @@
   },
   "I12 Ichimoku 1 h": {
    "cerradas": 5,
-   "por_dia": 0.8636547637882023,
+   "por_dia": 0.8565175333542707,
    "ganan": 1,
    "pierden": 4,
    "salidas": {
@@ -272,7 +272,7 @@
   },
   "I13 Parabolic SAR + EMA200": {
    "cerradas": 4,
-   "por_dia": 0.6909238110305618,
+   "por_dia": 0.6852140266834166,
    "ganan": 4,
    "pierden": 0,
    "salidas": {
@@ -294,7 +294,7 @@
   },
   "I14 Apertura de Nueva York": {
    "cerradas": 2,
-   "por_dia": 0.3454619055152809,
+   "por_dia": 0.3426070133417083,
    "ganan": 2,
    "pierden": 0,
    "salidas": {
@@ -316,11 +316,11 @@
   }
  },
  "trades_totales": 69,
- "por_dia_total": 11.918435740277191,
+ "por_dia_total": 11.819941960288936,
  "mejoras": {
   "I02 Ruptura Donchian 24 h|M5 dejar correr": {
    "cerradas": 4,
-   "por_dia": 0.6909238110305618,
+   "por_dia": 0.6852140266834166,
    "ganan": 0,
    "pierden": 4,
    "salidas": {
@@ -345,7 +345,7 @@
   },
   "I07 Ruptura tras squeeze|M5 dejar correr": {
    "cerradas": 3,
-   "por_dia": 0.5181928582729214,
+   "por_dia": 0.5139105200125624,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -370,7 +370,7 @@
   },
   "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M2 stops \u00d72": {
    "cerradas": 3,
-   "por_dia": 0.5181928582729214,
+   "por_dia": 0.5139105200125624,
    "ganan": 1,
    "pierden": 2,
    "salidas": {
@@ -395,7 +395,7 @@
   },
   "I10 R\u00e1faga de momentum|M2 stops \u00d72": {
    "cerradas": 6,
-   "por_dia": 1.0363857165458428,
+   "por_dia": 1.0278210400251249,
    "ganan": 1,
    "pierden": 5,
    "salidas": {
