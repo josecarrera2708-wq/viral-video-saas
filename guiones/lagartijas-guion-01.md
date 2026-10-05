@@ -1,7 +1,7 @@
 # Guion 01: 50 lagartijas al día durante 90 días (sin gimnasio)
 
 Versión larga (objetivo 20 min, unas 3.300 palabras). Tono hablado, cercano, con ejemplos de personas imaginarias (no se inventan experiencias propias del narrador).
-Bucles abiertos: "la sorpresa de la sección 9", "el error que frena a casi todos (sección 17)", "lo que NO va a pasar (sección 21)".
+Bucles abiertos: "la sorpresa de la sección 9", "el error que frena a casi todos (sección 17)", "lo que NO va a pasar (sección 23)".
 Nota de contenido: las cifras de salud son asociaciones de estudios, no promesas. Se dice así en el guion.
 
 ---
@@ -278,7 +278,37 @@ No necesitas más. Lo importante es que no abandones una parte de tu cuerpo.
 
 ---
 
-## 21. LO QUE NO VA A PASAR
+## 21. SI FALLAS UN DÍA
+
+Ahora hablemos de lo que pasa en la vida real. Porque en noventa días vas a fallar algún día. Seguro.
+
+Te enfermas. Viajas. Se te olvida. O simplemente amaneces sin ganas de nada.
+
+Y aquí está lo que separa a los que llegan de los que abandonan. No es no fallar nunca. Es no fallar dos veces seguidas.
+
+Un día perdido casi no se nota en tu cuerpo. Dos días seguidos empiezan a convertirse en una costumbre. Así que la regla es simple: si fallas hoy, mañana vuelves, aunque sea con una versión mini. Diez lagartijas. Cinco. Las que puedas.
+
+Lo importante es no romper la cadena. Una cadena con un eslabón flojo sigue siendo una cadena. Una cadena rota ya no.
+
+Y también presta atención a tu cuerpo. Si estás enfermo con fiebre, descansa. Si tienes un dolor de verdad, descansa. Esa no es una falla, es inteligencia.
+
+---
+
+## 22. QUÉ COMER PARA QUE FUNCIONE
+
+Otra pregunta que seguro tienes: ¿y qué como?
+
+Sin complicarte. La proteína es el material de construcción. Una referencia habitual es entre uno coma seis y dos gramos por kilo de peso al día. Para alguien de ochenta kilos, eso es entre ciento treinta y ciento sesenta gramos.
+
+Suena mucho, pero se reparte. Huevos en el desayuno. Pollo, pescado, carne o legumbres en el almuerzo y la cena. Un yogur o queso en medio. Y listo.
+
+Si quieres ganar músculo, necesitas comer un poquito más de lo que gastas. No muchísimo más: solo un pequeño exceso. Y si tu objetivo es perder grasa, un pequeño déficit, pero con proteína alta para no perder músculo.
+
+No necesitas suplementos para empezar. La comida de verdad hace el trabajo.
+
+---
+
+## 23. LO QUE NO VA A PASAR
 
 Te lo prometí. Esto es lo que este reto no hace.
 
@@ -294,7 +324,7 @@ Y por último: si tienes dolor en hombros, muñecas o alguna lesión, consúltal
 
 ---
 
-## 22. TU PLAN DE 90 DÍAS Y CIERRE
+## 24. TU PLAN DE 90 DÍAS Y CIERRE
 
 Te dejo el plan en cuatro pasos.
 
