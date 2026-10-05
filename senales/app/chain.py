@@ -58,8 +58,10 @@ def parse_tx(tx):
             "err": meta.get("err"), "keys": set(keys), "sol": sol, "tok": tok}
 
 
-def detect(p, wallets, sol_usd):
-    """wallets: {addr: {"payers": [...]}} -> compras y ventas de esas wallets en la transacción."""
+def detect(p, wallets, sol_usd, infer_payer=False):
+    """wallets: {addr: {"payers": [...]}} -> compras y ventas de esas wallets en la transacción.
+    infer_payer: si la wallet no paga ni cobra nada (opera desde una plataforma que paga por ella),
+    toma como precio el mayor pago/cobro en SOL o stablecoin de otra cuenta de la transacción."""
     out = []
     if not p or p["err"]:
         return out
@@ -75,6 +77,13 @@ def detect(p, wallets, sol_usd):
         if len(toks) != 1:  # varias monedas a la vez: no se puede repartir el precio con seguridad
             continue
         (mint, d), = toks.items()
+        if infer_payer and abs(quote) < MIN_USD:
+            others = [v * (sol_usd if m == WSOL else 1) for (o, m), v in p["tok"].items() if o != w and m in QUOTE]
+            others += [v * sol_usd for k, v in p["sol"].items() if k != w and abs(v) > 0.01]
+            if d > 0 and others and min(others) < -MIN_USD:
+                quote = min(others)
+            elif d < 0 and others and max(others) > MIN_USD:
+                quote = max(others)
         if d > 0 and quote < -MIN_USD:
             side = "buy"
         elif d < 0 and quote > MIN_USD:
