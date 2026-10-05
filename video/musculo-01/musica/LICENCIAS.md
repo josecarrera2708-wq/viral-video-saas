@@ -10,3 +10,6 @@ Segunda tanda (CC0, verificadas por API de Freesound el 2026-10-05):
 - D: Digital Donut Clip, BaDoink, 531866
 - E: Dangerous World, loveless1017, 458147
 - F: Bass loops 004 long loop 120 bpm, josefpres, 569175
+Tercera tanda, electrónica tranquila (CC0, verificadas por API de Freesound el 2026-10-05):
+- G: Action4ME_mixdown, cummingtt, 441250
+- H: Daylight, Andrewkn, 496204
