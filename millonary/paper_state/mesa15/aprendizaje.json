@@ -44,11 +44,11 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P05 Barra interior + tendencia": {
-  "cerradas": 5,
-  "perdedoras": 2,
+  "cerradas": 6,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 0,
-   "stop_barrido": 1,
+   "nunca_a_favor": 1,
+   "stop_barrido": 2,
    "contra_tendencia": 0,
    "vol_baja": 1
   },
