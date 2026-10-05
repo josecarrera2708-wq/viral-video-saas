@@ -88,12 +88,12 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q02 Reversión Ornstein-Uhlenbeck": {
-  "cerradas": 4,
-  "perdedoras": 2,
+  "cerradas": 5,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 1,
+   "nunca_a_favor": 2,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
+   "contra_tendencia": 3,
    "vol_baja": 2
   },
   "estado": "muestra insuficiente para concluir"

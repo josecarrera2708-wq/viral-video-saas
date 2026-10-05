@@ -5,7 +5,7 @@
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 1,
-   "contra_tendencia": 1,
+   "contra_tendencia": 0,
    "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
@@ -16,7 +16,7 @@
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
+   "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -27,7 +27,7 @@
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 2,
+   "contra_tendencia": 0,
    "vol_baja": 2
   },
   "estado": "muestra insuficiente para concluir"
@@ -38,7 +38,7 @@
   "patrones": {
    "nunca_a_favor": 3,
    "stop_barrido": 0,
-   "contra_tendencia": 5,
+   "contra_tendencia": 0,
    "vol_baja": 3
   },
   "estado": "muestra insuficiente para concluir"
@@ -49,7 +49,7 @@
   "patrones": {
    "nunca_a_favor": 4,
    "stop_barrido": 0,
-   "contra_tendencia": 4,
+   "contra_tendencia": 0,
    "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
@@ -60,7 +60,7 @@
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -71,7 +71,7 @@
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -82,7 +82,7 @@
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -93,7 +93,7 @@
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -104,7 +104,7 @@
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 3,
+   "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
@@ -115,7 +115,7 @@
   "patrones": {
    "nunca_a_favor": 5,
    "stop_barrido": 0,
-   "contra_tendencia": 7,
+   "contra_tendencia": 0,
    "vol_baja": 5
   },
   "estado": "muestra insuficiente para concluir"
@@ -126,7 +126,7 @@
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 4,
+   "contra_tendencia": 0,
    "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
