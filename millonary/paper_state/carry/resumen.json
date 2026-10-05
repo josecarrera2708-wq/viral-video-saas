@@ -1,17 +1,17 @@
 {
- "generado": "2026-10-05 08:14:41.952513+00:00",
+ "generado": "2026-10-05 09:14:39.484046+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
- "ultima_vela": "2026-10-03 20:00:00+00:00",
- "equity": 998.3508368512519,
- "retorno": -0.0016491631487480785,
+ "ultima_vela": "2026-10-04 20:00:00+00:00",
+ "equity": 998.5363998311711,
+ "retorno": -0.0014636001688288491,
  "caida_max": 0.00016254093790801782,
  "contado_btc": 0.011,
  "perpetuo_btc": -0.011,
- "nocional_usdt": 932.2891599999999,
+ "nocional_usdt": 951.8299999999999,
  "dentro": true,
- "funding_cobrado_usdt": 0.03183515179369879,
- "marcas_funding": 3,
- "tasas_no_definitivas": 3,
+ "funding_cobrado_usdt": 0.17075813171301027,
+ "marcas_funding": 6,
+ "tasas_no_definitivas": 6,
  "ordenes": [
   {
    "bar": "2026-10-03 00:00:00+00:00",
@@ -94,16 +94,11 @@
  ],
  "cartera": {
   "nucleo_usdt": 1007.3047786035253,
-  "carry_usdt": 998.3508368512519,
-  "total_usdt": 2005.655615454777,
+  "carry_usdt": 998.5363998311711,
+  "total_usdt": 2005.8411784346963,
   "capital_inicial_usdt": 2000.0,
   "nota": "Dos subcuentas de 1.000 USDT: el núcleo (prueba oficial, sin tocar) y el carry. El núcleo empezó el 2026-09-29; el carry el 2026-10-03."
  },
- "velas_nuevas": 0,
- "problemas": [
-  {
-   "status": "datos_no_fiables",
-   "bar": "2026-10-04 00:00:00+00:00"
-  }
- ]
+ "velas_nuevas": 6,
+ "problemas": []
 }

@@ -21,13 +21,14 @@
   "max_barras": 48,
   "mfe_R": 0.11643605157236432,
   "mae_R": 1.0875898395720882,
-  "post_stop_R": null,
+  "post_stop_R": -0.5979489259894901,
   "tendencia_a_favor": null,
   "vol_percentil": 0.242,
   "hora_utc": 5,
   "abierta": false,
   "lecciones": [
-   "Nunca fue a favor (máximo 0.12 R): la señal falló desde el principio."
+   "Nunca fue a favor (máximo 0.12 R): la señal falló desde el principio.",
+   "El precio no se recuperó tras el stop: la salida fue la correcta."
   ]
  },
  {
@@ -52,7 +53,7 @@
   "max_barras": 6,
   "mfe_R": 0.2910901289309108,
   "mae_R": 2.3787912762817185,
-  "post_stop_R": -1.7081839886016794,
+  "post_stop_R": -1.4948723149737253,
   "tendencia_a_favor": null,
   "vol_percentil": 0.242,
   "hora_utc": 5,
@@ -116,7 +117,7 @@
   "max_barras": 12,
   "mfe_R": 0.05264028603329783,
   "mae_R": 1.0574704237736037,
-  "post_stop_R": 0.5532345644475659,
+  "post_stop_R": 0.5696474916086894,
   "tendencia_a_favor": null,
   "vol_percentil": 0.184,
   "hora_utc": 4,
@@ -276,7 +277,7 @@
   "max_barras": 24,
   "mfe_R": 0.9983502353852161,
   "mae_R": 1.7987050312104755,
-  "post_stop_R": 0.032427712878356926,
+  "post_stop_R": 0.052570173063334086,
   "tendencia_a_favor": null,
   "vol_percentil": 0.11,
   "hora_utc": 23,
@@ -1178,7 +1179,7 @@
   "max_barras": 48,
   "mfe_R": 0.880095127689191,
   "mae_R": 0.18256758068241258,
-  "post_stop_R": null,
+  "post_stop_R": NaN,
   "tendencia_a_favor": null,
   "vol_percentil": 0.8559498956158664,
   "hora_utc": 17,
