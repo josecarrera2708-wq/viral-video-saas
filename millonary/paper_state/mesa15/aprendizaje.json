@@ -33,8 +33,8 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P04 Ineficiencia (Fair Value Gap)": {
-  "cerradas": 13,
-  "perdedoras": 9,
+  "cerradas": 14,
+  "perdedoras": 10,
   "patrones": {
    "nunca_a_favor": 4,
    "stop_barrido": 0,
@@ -77,10 +77,10 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q01 Momentum de series temporales": {
-  "cerradas": 5,
-  "perdedoras": 3,
+  "cerradas": 6,
+  "perdedoras": 4,
   "patrones": {
-   "nunca_a_favor": 2,
+   "nunca_a_favor": 3,
    "stop_barrido": 1,
    "contra_tendencia": 0,
    "vol_baja": 1

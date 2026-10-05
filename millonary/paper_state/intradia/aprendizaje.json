@@ -132,8 +132,8 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I13 Parabolic SAR + EMA200": {
-  "cerradas": 4,
-  "perdedoras": 0,
+  "cerradas": 5,
+  "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
@@ -143,8 +143,8 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I14 Apertura de Nueva York": {
-  "cerradas": 2,
-  "perdedoras": 0,
+  "cerradas": 3,
+  "perdedoras": 1,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
