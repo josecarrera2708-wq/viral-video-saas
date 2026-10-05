@@ -531,10 +531,12 @@ async def push_test(req: Request):
 @app.get("/api/candidates")
 async def candidates(req: Request):
     need(req)
-    rows = db.q("select * from candidates where status!='descartada' order by score desc limit 50")
+    rows = db.q("select * from candidates where status in ('nueva', 'seguida') order by score desc limit 50")
     for r in rows:
         r["detail"] = json.loads(r.get("detail") or "{}")
-    return {"rows": rows, "last_scan": db.get("last_scan"), "tokens": db.q("select count(*) c from scan_tokens where done=1", one=True)["c"]}
+    cnt = {r["status"]: r["c"] for r in db.q("select status, count(*) c from candidates group by status")}
+    return {"rows": rows, "last_scan": db.get("last_scan"), "counts": cnt,
+            "tokens": db.q("select count(*) c from scan_tokens where done=1", one=True)["c"]}
 
 
 @app.post("/api/candidates/{addr}/{action}")

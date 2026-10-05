@@ -29,7 +29,7 @@ function price(p) {
 }
 function xs(v) { return v == null ? '' : `<span class="x ${v >= 1 ? 'up' : 'dn'}">x${v.toFixed(2)}</span>`; }
 function tagCls(o) { o = (o || '').toLowerCase(); return o.includes('list') ? 'list' : o.includes('unip') ? 'uni' : ''; }
-function copy(t) { navigator.clipboard?.writeText(t).then(() => toast('Copiado')); }
+function copy(t) { (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Copiado'), () => toast(t)); }
 
 // ---------- acceso ----------
 async function boot() {
@@ -149,7 +149,11 @@ async function loadToken() {
 async function loadScan() {
   let d;
   try { d = await api('/api/candidates'); } catch (e) { return; }
-  $('#scan-info').textContent = `Cada noche revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y las mide con tu método (x hasta el máximo y vender el 50% en cada x2). Tokens revisados: ${d.tokens}. Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' — ' + (d.last_scan.msg || '') : 'todavía no'}.`;
+  const c = d.counts || {}, measured = (c['no pasa'] || 0) + (c.nueva || 0) + (c.seguida || 0);
+  $('#scan-info').innerHTML = `Cada noche revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y las mide con tu método (x hasta el máximo y vender el 50% en cada x2).
+    <div class="stats"><div class="stat"><b>${d.tokens}</b><span>listados revisados</span></div><div class="stat"><b>${measured}</b><span>wallets medidas</span></div>
+    <div class="stat"><b>${c.bot || 0}</b><span>bots descartados</span></div><div class="stat"><b>${(c.nueva || 0) + (c.seguida || 0)}</b><span>pasan el corte</span></div></div>
+    Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' · ' + esc(d.last_scan.msg || '') : 'todavía no'}.`;
   $('#cands').innerHTML = d.rows.length ? d.rows.map(c => `<div class="card">
       <div class="row" style="margin:0;align-items:center"><b class="addr" style="flex:1">${esc(c.addr.slice(0, 6))}…${esc(c.addr.slice(-4))}</b>
       <span class="tag ${tagCls(c.origin)}">${esc(c.origin)}</span>${c.status === 'seguida' ? '<span class="tag">seguida</span>' : ''}</div>
