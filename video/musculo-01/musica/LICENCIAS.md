@@ -13,3 +13,5 @@ Segunda tanda (CC0, verificadas por API de Freesound el 2026-10-05):
 Tercera tanda, electrónica tranquila (CC0, verificadas por API de Freesound el 2026-10-05):
 - G: Action4ME_mixdown, cummingtt, 441250
 - H: Daylight, Andrewkn, 496204
+Cuarta tanda, música alegre (CC0): I: A Hectic Backpacker Trip, dekstromoramid, 441150; J: SLAPDASH, MadGravityStudio, 736465; K: Calamity GO GO demo loop, StygalAlexander, 651716
+Efectos de sonido (CC0): disco de pesas OBJGym-Int_GymPlatesDrop, ZusIsKing, 766862; Woosh, florianreichelt, 683096; Pop in sfx, Sadiquecat, 824189; victory chime, 1bob, 717771; Single Heartbeat Clean, Lunardrive, 22440
