@@ -179,6 +179,8 @@ async def record(tr, w, source):
     """Guarda una compra o venta y actualiza la posición de la wallet en ese token."""
     info = await S["market"].token(tr["mint"])
     mc = tr["price"] * info["supply"] if info["supply"] else None
+    if db.q("select 1 from trades where sig=? and wallet=? and mint=?", (tr["sig"], tr["wallet"], tr["mint"]), one=True):
+        return info, mc  # ya guardada (p. ej. la encontraron a la vez el sondeo y la búsqueda en el historial)
     db.x("insert or ignore into trades(sig, wallet, mint, side, t, amount, usd, sol, price, mc, sym) values(?,?,?,?,?,?,?,?,?,?,?)",
          (tr["sig"], tr["wallet"], tr["mint"], tr["side"], tr["t"], tr["amount"], tr["usd"], tr["sol"], tr["price"], mc, info["sym"]))
     pos = db.q("select * from positions where wallet=? and mint=?", (tr["wallet"], tr["mint"]), one=True)
@@ -240,13 +242,13 @@ async def backfill_buys(tr, acct=None):
 
 async def sell_entry(tr, acct=None):
     """Precio medio al que la wallet compró lo que ahora vende (0 si no se encuentra la compra)."""
-    key = (tr["sig"], tr["wallet"], tr["mint"])
-    while key in S["busy"]:
+    key, tok = (tr["sig"], tr["wallet"], tr["mint"]), (tr["wallet"], tr["mint"])
+    while tok in S["busy"]:  # una sola búsqueda a la vez por wallet y token
         await asyncio.sleep(1)
     row = db.q("select entry from trades where sig=? and wallet=? and mint=?", key, one=True)
     if row and row["entry"] is not None:
         return row["entry"]
-    S["busy"].add(key)
+    S["busy"].add(tok)
     try:
         e, have, sold = cost_basis(tr["wallet"], tr["mint"], tr["t"])
         if not e or have < 0.9 * sold:
@@ -256,7 +258,7 @@ async def sell_entry(tr, acct=None):
         db.x("update trades set entry=? where sig=? and wallet=? and mint=?", (e,) + key)
         return e
     finally:
-        S["busy"].discard(key)
+        S["busy"].discard(tok)
 
 
 def gain(tr, entry):
@@ -319,7 +321,7 @@ async def entries():
             now = int(time.time())
             for t in db.q("select * from trades where side='sell' and entry is null and t > ? order by t desc limit 5", (now - 30 * 86400,)):
                 key = (t["sig"], t["wallet"], t["mint"])
-                if S["tried"].get(key, 0) > now - 3600 or key in S["busy"]:
+                if S["tried"].get(key, 0) > now - 3600 or key[1:] in S["busy"]:
                     continue
                 S["tried"][key] = now
                 try:
