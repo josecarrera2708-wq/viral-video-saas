@@ -114,7 +114,7 @@
   "perdedoras": 8,
   "patrones": {
    "nunca_a_favor": 6,
-   "stop_barrido": 1,
+   "stop_barrido": 2,
    "contra_tendencia": 0,
    "vol_baja": 5
   },
