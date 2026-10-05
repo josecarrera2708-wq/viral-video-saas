@@ -1,11 +1,11 @@
 {
- "generado": "2026-10-04 04:20:17.740984+00:00",
+ "generado": "2026-10-05 04:20:51.752428+00:00",
  "inicio": "cierre diario del 2026-10-03 (04-oct 00:00 UTC)",
- "ultimo_dia_cerrado": "2026-10-03",
- "precio_btc": 84753.56,
+ "ultimo_dia_cerrado": "2026-10-04",
+ "precio_btc": 86530.0,
  "contexto_2020_hoy": {
   "A1 Acumulación BTC (100 % BTC)": {
-   "x_usdt": 11.758168332905143,
+   "x_usdt": 12.00462028788268,
    "btc_por_btc_inicial": 0.999,
    "caida_max": 0.7662925431645935,
    "btc_por_anio": {
@@ -19,8 +19,8 @@
    }
   },
   "A2 50 % BTC / 25 % núcleo / 25 % carry": {
-   "x_usdt": 6.884191173852054,
-   "btc_por_btc_inicial": 0.5848961154461543,
+   "x_usdt": 7.012403571312451,
+   "btc_por_btc_inicial": 0.5835579135153733,
    "caida_max": 0.5174146222520912,
    "btc_por_anio": {
     "2020": 0.624608769030076,
@@ -29,12 +29,12 @@
     "2023": 0.7097287183859515,
     "2024": 0.7758127370585528,
     "2025": 1.0466681793864296,
-    "2026": 1.055902216823032
+    "2026": 1.0534863854506684
    }
   },
   "A3 Núcleo + carry con ganancias a BTC": {
-   "x_usdt": 3.9275822441886374,
-   "btc_por_btc_inicial": 0.3336960784073938,
+   "x_usdt": 4.005210957147776,
+   "btc_por_btc_inicial": 0.3333054815760726,
    "caida_max": 0.531529612353471,
    "btc_por_anio": {
     "2020": 0.4137914588675428,
@@ -43,7 +43,7 @@
     "2023": 0.6602459204605957,
     "2024": 0.8266320941657405,
     "2025": 1.0143429842378042,
-    "2026": 1.0193657570984775
+    "2026": 1.0181725724599877
    }
   }
  },
@@ -53,38 +53,38 @@
  "btc_de_referencia": 0.01179891440548338,
  "carteras": {
   "A1 Acumulación BTC (100 % BTC)": {
-   "equity": 999.0,
-   "retorno_usdt": -0.0010000000000000009,
+   "equity": 1019.9391034429705,
+   "retorno_usdt": 0.019939103442970563,
    "btc": 0.011787115491077898,
    "retorno_btc": -0.0009999999999998899,
    "caida_max": 0.0,
-   "dias": 0,
+   "dias": 1,
    "papel": "APLICADA",
    "btc_comprados": 0.011787115491077898
   },
   "A2 50 % BTC / 25 % núcleo / 25 % carry": {
-   "equity": 998.5,
-   "retorno_usdt": -0.0014999999999999458,
-   "btc": 0.011781216033875155,
-   "retorno_btc": -0.0015000000000000568,
+   "equity": 1017.856363224071,
+   "retorno_usdt": 0.017856363224070915,
+   "btc": 0.011763045917301177,
+   "retorno_btc": -0.003039982065259572,
    "caida_max": 0.0,
-   "dias": 0,
+   "dias": 1,
    "papel": "SOMBRA",
    "pesos_ahora": {
-    "BTC": 0.5,
-    "N Núcleo v1": 0.25,
-    "F06 Carry de funding (cash-and-carry)": 0.25
+    "BTC": 0.5008,
+    "N Núcleo v1": 0.2484,
+    "F06 Carry de funding (cash-and-carry)": 0.2508
    }
   },
   "A3 Núcleo + carry con ganancias a BTC": {
-   "equity": 998.5,
-   "retorno_usdt": -0.0014999999999999458,
-   "btc": 0.011781216033875155,
-   "retorno_btc": -0.0015000000000000568,
+   "equity": 1016.2841030369248,
+   "retorno_usdt": 0.016284103036924735,
+   "btc": 0.011744875800727202,
+   "retorno_btc": -0.0045799641305190875,
    "caida_max": 0.0,
-   "dias": 0,
+   "dias": 1,
    "papel": "APLICADA",
-   "usdt_operando": 998.5,
+   "usdt_operando": 1016.2841030369248,
    "btc_acumulados": 0.0,
    "conversiones": 0
   }
@@ -96,6 +96,13 @@
    998.5,
    998.5,
    84753.56
+  ],
+  [
+   "2026-10-04",
+   1019.94,
+   1017.86,
+   1016.28,
+   86530.0
   ]
  ]
 }
