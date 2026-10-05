@@ -1,9 +1,9 @@
 {
- "generado": "2026-10-05 19:14:15.963600+00:00",
- "ultima_vela_cerrada": "2026-10-05 19:00:00+00:00",
+ "generado": "2026-10-05 20:13:45.512866+00:00",
+ "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00",
  "inicio": "2026-10-06 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL (1 h, 4 h y diario desde velas de 15 min cerradas)",
- "precio_actual": 85667.5,
+ "precio_actual": 85749.0,
  "traders": {
   "X01 Ruptura 20 velas 4 h (largos)": {
    "temporalidad": "4h",
@@ -21,7 +21,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X02 Retroceso a EMA20 4 h (largos)": {
    "temporalidad": "4h",
@@ -39,7 +39,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X03 Barra interior 4 h (largos)": {
    "temporalidad": "4h",
@@ -57,7 +57,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X04 Envolvente en retroceso 4 h (largos, dejar correr)": {
    "temporalidad": "4h",
@@ -75,7 +75,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X05 Pin bar en retroceso 4 h": {
    "temporalidad": "4h",
@@ -93,7 +93,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X06 Cruce EMA 9/21 4 h (largos)": {
    "temporalidad": "4h",
@@ -111,7 +111,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X07 Conjunto de tendencias CTA 4 h": {
    "temporalidad": "4h",
@@ -129,7 +129,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 16:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   },
   "X08 MAX de 20 d\u00edas (Quantpedia)": {
    "temporalidad": "1d",
@@ -165,7 +165,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-05 19:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00"
   }
  },
  "trades_totales": 0,
