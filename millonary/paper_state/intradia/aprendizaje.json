@@ -33,7 +33,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I04 Reversión a VWAP diaria": {
-  "cerradas": 8,
+  "cerradas": 9,
   "perdedoras": 6,
   "patrones": {
    "nunca_a_favor": 3,
@@ -99,10 +99,10 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I10 Ráfaga de momentum": {
-  "cerradas": 5,
-  "perdedoras": 3,
+  "cerradas": 6,
+  "perdedoras": 4,
   "patrones": {
-   "nunca_a_favor": 1,
+   "nunca_a_favor": 2,
    "stop_barrido": 0,
    "contra_tendencia": 0,
    "vol_baja": 0
