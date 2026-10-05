@@ -92,7 +92,7 @@
   "perdedoras": 4,
   "patrones": {
    "nunca_a_favor": 2,
-   "stop_barrido": 0,
+   "stop_barrido": 1,
    "contra_tendencia": 4,
    "vol_baja": 2
   },

@@ -11,13 +11,13 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I02 Ruptura Donchian 24 h": {
-  "cerradas": 5,
-  "perdedoras": 2,
+  "cerradas": 6,
+  "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
@@ -26,7 +26,7 @@
   "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 1,
-   "stop_barrido": 0,
+   "stop_barrido": 1,
    "contra_tendencia": 0,
    "vol_baja": 3
   },
@@ -37,7 +37,7 @@
   "perdedoras": 6,
   "patrones": {
    "nunca_a_favor": 3,
-   "stop_barrido": 0,
+   "stop_barrido": 1,
    "contra_tendencia": 0,
    "vol_baja": 4
   },
@@ -110,7 +110,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I11 Ruptura fallida": {
-  "cerradas": 10,
+  "cerradas": 11,
   "perdedoras": 7,
   "patrones": {
    "nunca_a_favor": 5,
@@ -132,7 +132,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I13 Parabolic SAR + EMA200": {
-  "cerradas": 3,
+  "cerradas": 4,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,

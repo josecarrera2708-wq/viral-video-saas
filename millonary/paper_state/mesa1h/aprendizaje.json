@@ -11,22 +11,22 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P02 Pin bar en techo/suelo": {
-  "cerradas": 6,
+  "cerradas": 7,
   "perdedoras": 4,
   "patrones": {
    "nunca_a_favor": 2,
-   "stop_barrido": 0,
+   "stop_barrido": 1,
    "contra_tendencia": 4,
    "vol_baja": 4
   },
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 6,
+  "cerradas": 7,
   "perdedoras": 5,
   "patrones": {
    "nunca_a_favor": 4,
-   "stop_barrido": 0,
+   "stop_barrido": 1,
    "contra_tendencia": 5,
    "vol_baja": 5
   },
@@ -66,18 +66,18 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q01 Momentum de series temporales": {
-  "cerradas": 1,
-  "perdedoras": 1,
+  "cerradas": 2,
+  "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 0,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 0
+   "vol_baja": 1
   },
   "estado": "muestra insuficiente para concluir"
  },
  "Q02 Reversión Ornstein-Uhlenbeck": {
-  "cerradas": 0,
+  "cerradas": 1,
   "perdedoras": 0,
   "patrones": {
    "nunca_a_favor": 0,
