@@ -1,4 +1,6 @@
 estrategia,entrada,salida,lado,px_entrada,px_salida,unidades,ret_pct,pnl_usdt,R,motivo
+F05 Ruptura de volatilidad (L. Williams),2026-10-04,2026-10-04,LARGO,85061.383875,86512.694,1,0.015751354349567537,15.751354349567537,,cierre del día
+F09 NR7 (Crabel),2026-10-04,2026-10-04,LARGO,85054.637526,86512.694,1,0.009607431955659607,9.607431955659607,1.9214863911319213,cierre del día
 F03 Momentum 12 m (AQR/MOP),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → -0.62×
 F04 Media 200 d (Tudor Jones),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → +1.00×
 F06 Carry de funding (cash-and-carry),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,entra en carry: exposición +0.00× → +1.00×

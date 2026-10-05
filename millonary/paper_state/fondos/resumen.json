@@ -1,14 +1,14 @@
 {
- "generado": "2026-10-05 01:13:55.787968+00:00",
+ "generado": "2026-10-05 02:13:40.816794+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
- "ultimo_dia_cerrado": "2026-10-03",
- "precio": 84753.56,
- "funding_dia": 3.410842158264036e-05,
- "funding_7d_anual": 0.04032238777048684,
+ "ultimo_dia_cerrado": "2026-10-04",
+ "precio": 86530.0,
+ "funding_dia": 0.00030000000000000003,
+ "funding_7d_anual": 0.05362559491334398,
  "fuente": "Binance Vision (contado y perpetuo BTCUSDT, velas diarias UTC; ≤ 1 día de retraso)",
  "estrategias": {
   "F01 Tortugas S1 (Dennis, 20/10)": {
-   "dias": 1,
+   "dias": 2,
    "equity": 1000.0,
    "retorno": 0.0,
    "caida_max": 0.0,
@@ -28,7 +28,7 @@
    }
   },
   "F02 Tortugas S2 (Dennis, 55/20)": {
-   "dias": 1,
+   "dias": 2,
    "equity": 1000.0,
    "retorno": 0.0,
    "caida_max": 0.0,
@@ -48,16 +48,16 @@
    }
   },
   "F03 Momentum 12 m (AQR/MOP)": {
-   "dias": 1,
-   "equity": 997.8641457712819,
-   "retorno": -0.0021358542287180926,
-   "caida_max": 0.0,
+   "dias": 2,
+   "equity": 985.0496194564425,
+   "retorno": -0.014950380543557462,
+   "caida_max": 0.012841954858428761,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
-   "exposicion": -0.6187870162511929,
-   "nocional_usdt": 617.465377385857,
+   "exposicion": -0.6215835132550723,
+   "nocional_usdt": 612.2906031923076,
    "sharpe": null,
    "hist": {
     "sharpe": 0.37224569316924394,
@@ -68,16 +68,16 @@
    }
   },
   "F04 Media 200 d (Tudor Jones)": {
-   "dias": 1,
-   "equity": 1002.0509445268142,
-   "retorno": 0.0020509445268142024,
+   "dias": 2,
+   "equity": 1022.7533806774634,
+   "retorno": 0.022753380677463353,
    "caida_max": 0.0,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
    "exposicion": 1.0,
-   "nocional_usdt": 1002.0509445268142,
+   "nocional_usdt": 1022.7533806774634,
    "sharpe": null,
    "hist": {
     "sharpe": 0.7185020146093065,
@@ -88,13 +88,13 @@
    }
   },
   "F05 Ruptura de volatilidad (L. Williams)": {
-   "dias": 1,
-   "equity": 1000.0,
-   "retorno": 0.0,
+   "dias": 2,
+   "equity": 1015.7513543495676,
+   "retorno": 0.015751354349567537,
    "caida_max": 0.0,
-   "operaciones": 0,
+   "operaciones": 1,
    "reajustes": 0,
-   "ganan": 0,
+   "ganan": 1,
    "pierden": 0,
    "exposicion": 0.0,
    "nocional_usdt": 0.0,
@@ -108,16 +108,16 @@
    }
   },
   "F06 Carry de funding (cash-and-carry)": {
-   "dias": 1,
-   "equity": 998.2261741947938,
-   "retorno": -0.0017738258052062417,
+   "dias": 2,
+   "equity": 1019.5453365839697,
+   "retorno": 0.01954533658396973,
    "caida_max": 0.0,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
    "exposicion": 0.0,
-   "nocional_usdt": 2005.5739599169456,
+   "nocional_usdt": 2047.6109174837409,
    "sharpe": null,
    "hist": {
     "sharpe": 7.029738314535747,
@@ -128,16 +128,16 @@
    }
   },
   "F07 Volatilidad gestionada (Moreira-Muir)": {
-   "dias": 1,
-   "equity": 1004.0980350334769,
-   "retorno": 0.004098035033476943,
+   "dias": 2,
+   "equity": 1045.4725040316212,
+   "retorno": 0.045472504031621064,
    "caida_max": 0.0,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
-   "exposicion": 2.0,
-   "nocional_usdt": 2008.1960700669538,
+   "exposicion": 1.994456936894621,
+   "nocional_usdt": 2085.1498879984565,
    "sharpe": null,
    "hist": {
     "sharpe": 0.5151958959110413,
@@ -148,7 +148,7 @@
    }
   },
   "F08 Turtle Soup +1 (Raschke)": {
-   "dias": 1,
+   "dias": 2,
    "equity": 1000.0,
    "retorno": 0.0,
    "caida_max": 0.0,
@@ -168,13 +168,13 @@
    }
   },
   "F09 NR7 (Crabel)": {
-   "dias": 1,
-   "equity": 1000.0,
-   "retorno": 0.0,
+   "dias": 2,
+   "equity": 1009.6074319556596,
+   "retorno": 0.009607431955659607,
    "caida_max": 0.0,
-   "operaciones": 0,
+   "operaciones": 1,
    "reajustes": 0,
-   "ganan": 0,
+   "ganan": 1,
    "pierden": 0,
    "exposicion": 0.0,
    "nocional_usdt": 0.0,
@@ -188,16 +188,16 @@
    }
   },
   "F10 Cartera multiestrategia (paridad de riesgo)": {
-   "dias": 1,
-   "equity": 998.2469588782725,
-   "retorno": -0.0017530411217274722,
+   "dias": 2,
+   "equity": 1019.277848525651,
+   "retorno": 0.019277848525651065,
    "caida_max": 0.0,
    "operaciones": 0,
    "reajustes": 0,
    "ganan": 0,
    "pierden": 0,
-   "exposicion": 0.0016779394549383334,
-   "nocional_usdt": 1990.4468680016944,
+   "exposicion": 0.0016241067395605952,
+   "nocional_usdt": 2031.60458725015,
    "sharpe": null,
    "hist": {
     "sharpe": 0.23954674537102563,
@@ -220,6 +220,32 @@
   }
  },
  "operaciones": [
+  {
+   "estrategia": "F05 Ruptura de volatilidad (L. Williams)",
+   "entrada": "2026-10-04",
+   "salida": "2026-10-04",
+   "lado": "LARGO",
+   "px_entrada": 85061.383875,
+   "px_salida": 86512.694,
+   "unidades": 1,
+   "ret_pct": 0.015751354349567537,
+   "pnl_usdt": 15.751354349567537,
+   "R": null,
+   "motivo": "cierre del día"
+  },
+  {
+   "estrategia": "F09 NR7 (Crabel)",
+   "entrada": "2026-10-04",
+   "salida": "2026-10-04",
+   "lado": "LARGO",
+   "px_entrada": 85054.637526,
+   "px_salida": 86512.694,
+   "unidades": 1,
+   "ret_pct": 0.009607431955659607,
+   "pnl_usdt": 9.607431955659607,
+   "R": 1.9214863911319213,
+   "motivo": "cierre del día"
+  },
   {
    "estrategia": "F03 Momentum 12 m (AQR/MOP)",
    "entrada": "2026-10-03",

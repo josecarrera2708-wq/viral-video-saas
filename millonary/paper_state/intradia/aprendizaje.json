@@ -22,24 +22,24 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I03 Bollinger + RSI (reversión)": {
-  "cerradas": 4,
-  "perdedoras": 2,
+  "cerradas": 5,
+  "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 2
+   "vol_baja": 3
   },
   "estado": "muestra insuficiente para concluir"
  },
  "I04 Reversión a VWAP diaria": {
-  "cerradas": 7,
-  "perdedoras": 5,
+  "cerradas": 8,
+  "perdedoras": 6,
   "patrones": {
    "nunca_a_favor": 3,
    "stop_barrido": 0,
    "contra_tendencia": 0,
-   "vol_baja": 3
+   "vol_baja": 4
   },
   "estado": "muestra insuficiente para concluir"
  },
@@ -99,7 +99,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I10 Ráfaga de momentum": {
-  "cerradas": 4,
+  "cerradas": 5,
   "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 1,

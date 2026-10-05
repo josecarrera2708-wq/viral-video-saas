@@ -11,23 +11,23 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P02 Pin bar en techo/suelo": {
-  "cerradas": 6,
-  "perdedoras": 4,
+  "cerradas": 7,
+  "perdedoras": 5,
   "patrones": {
-   "nunca_a_favor": 2,
+   "nunca_a_favor": 3,
    "stop_barrido": 0,
-   "contra_tendencia": 4,
+   "contra_tendencia": 5,
    "vol_baja": 2
   },
   "estado": "muestra insuficiente para concluir"
  },
  "P03 Barrido de liquidez": {
-  "cerradas": 11,
-  "perdedoras": 8,
+  "cerradas": 12,
+  "perdedoras": 9,
   "patrones": {
-   "nunca_a_favor": 5,
+   "nunca_a_favor": 6,
    "stop_barrido": 1,
-   "contra_tendencia": 8,
+   "contra_tendencia": 9,
    "vol_baja": 6
   },
   "estado": "muestra insuficiente para concluir"
@@ -77,7 +77,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q01 Momentum de series temporales": {
-  "cerradas": 3,
+  "cerradas": 4,
   "perdedoras": 2,
   "patrones": {
    "nunca_a_favor": 1,
@@ -88,21 +88,21 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q02 Reversión Ornstein-Uhlenbeck": {
-  "cerradas": 5,
-  "perdedoras": 3,
+  "cerradas": 6,
+  "perdedoras": 4,
   "patrones": {
    "nunca_a_favor": 2,
    "stop_barrido": 0,
-   "contra_tendencia": 3,
+   "contra_tendencia": 4,
    "vol_baja": 2
   },
   "estado": "muestra insuficiente para concluir"
  },
  "Q04 Expansión de volatilidad Garman-Klass": {
-  "cerradas": 2,
-  "perdedoras": 0,
+  "cerradas": 4,
+  "perdedoras": 1,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
    "contra_tendencia": 0,
    "vol_baja": 0
