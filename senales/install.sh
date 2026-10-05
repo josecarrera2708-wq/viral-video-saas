@@ -47,6 +47,7 @@ After=network-online.target
 User=senales
 WorkingDirectory=$DIR
 Environment=SENALES_DATA=$DIR/data
+Environment=SENALES_SETUP_CODE=${SENALES_SETUP_CODE:-}
 ExecStart=$DIR/venv/bin/uvicorn app.server:app --host 127.0.0.1 --port 8080 --proxy-headers --forwarded-allow-ips 127.0.0.1
 Restart=always
 RestartSec=3

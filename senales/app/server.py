@@ -334,7 +334,7 @@ async def lifespan(app):
     S["queue"] = asyncio.Queue()
     vapid()
     if not db.get("password") and not db.get("setup_token"):
-        db.put("setup_token", secrets.token_hex(4).upper())
+        db.put("setup_token", (os.environ.get("SENALES_SETUP_CODE") or secrets.token_hex(4)).strip().upper())
     if db.get("setup_token"):
         with open(os.path.join(db.DATA, "codigo_inicial.txt"), "w") as f:
             f.write(db.get("setup_token") + "\n")
