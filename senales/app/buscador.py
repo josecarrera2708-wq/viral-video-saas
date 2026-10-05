@@ -326,14 +326,19 @@ def main():
         log(f"{tk['sym']} ({tk['exch']}): {len(b)} compradores antes del listado")
 
     followed = {r["addr"] for r in db.q("select addr from wallets")}
-    recent = {r["addr"] for r in db.q("select addr from candidates where found > ?", (int(time.time()) - 14 * 86400,))}
+    skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or found > ?", (int(time.time()) - 14 * 86400,))}
     hits = db.q("select addr, count(*) n, group_concat(mint) mints from prelist where usd>=? and x>=? group by addr having n>=? order by n desc",
                 (MIN_BUY_USD, MIN_X, MIN_HITS))
-    pool = [h for h in hits if h["addr"] not in followed and h["addr"] not in recent][:WALLETS_PER_RUN]
-    log(f"{len(hits)} wallets con {MIN_HITS}+ aciertos; se miden {len(pool)}")
-    passed = 0
+    pool = [h for h in hits if h["addr"] not in followed and h["addr"] not in skip]
+    log(f"{len(hits)} wallets con {MIN_HITS}+ aciertos; pendientes {len(pool)}; se miden hasta {WALLETS_PER_RUN} que no sean bots")
+    passed = measured = checked = 0
     for h in pool:
+        if measured >= WALLETS_PER_RUN or checked >= 80:
+            break
+        checked += 1
         prof, trades = history(h["addr"])
+        if not (prof and prof.get("tx_day", 0) > MAX_TX_DAY):
+            measured += 1   # los bots se descartan rápido y no gastan hueco
         sel_mints = set(h["mints"].split(","))
         st = score(trades, sel_mints) if trades else None
         ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] >= PASS["pct_x2"] and st["ladder"] >= PASS["ladder"])
@@ -348,7 +353,7 @@ def main():
             passed += 1
             push("Buscador: nueva wallet candidata",
                  f"{st['pct_x2']}% de sus compras llegan a x2 · tu método {st['ladder']:+d}% · {h['n']} aciertos antes de listados")
-    msg = f"{len(todo)} listados nuevos, {len(pool)} wallets medidas, {passed} pasan el corte"
+    msg = f"{len(todo)} listados nuevos, {measured} wallets medidas ({checked - measured} bots descartados), {passed} pasan el corte"
     db.put("last_scan", {"t": int(time.time()), "msg": msg, "secs": int(time.time() - t0)})
     log("FIN:", msg)
 
