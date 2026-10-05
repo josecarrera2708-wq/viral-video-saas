@@ -71,3 +71,6 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 ## 2026-10-04 · Revisión a petición del dueño (sin pruebas nuevas)
 - Fallo encontrado en el post-mortem de la mesa intradía: la EMA de 800 h necesita 800 velas y el papel solo carga 420 de calentamiento, así que la tendencia salía vacía y TODAS las operaciones se marcaban «contra la tendencia de fondo». Corregido: ahora queda vacío (sin lección) mientras no haya datos. No cambia ninguna entrada, stop, TP ni resultado; solo las lecciones.
 - Pérdidas en papel coherentes con los históricos ya registrados (0/14, 0/13, 0/13 certificadas, R esperada negativa). En papel: mesa 15 min R −0,44/op (costes ≈ 0,45 R/op con stops del 0,22 %); 1 h −0,47; intradía +0,03.
+
+## 2026-10-05 · Búsqueda v2: acción de precio a favor de tendencia en 15 min/1 h/4 h/diario — pruebas 314-1081 (768 variantes)
+- Prerregistro `config/busqueda_v2_prerregistrada.md` + código `src/busqueda/` (test de causalidad por truncamiento y tubería sintética) confirmados en git ANTES de ejecutar sobre datos reales. Resultado: pendiente.
