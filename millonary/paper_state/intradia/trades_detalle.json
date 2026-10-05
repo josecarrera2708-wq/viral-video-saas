@@ -2,7 +2,7 @@
  {
   "trader": "I09 Supertrend 10/3",
   "abre": "2026-10-05 05:00:00+00:00",
-  "cierra": "NaT",
+  "cierra": "2026-10-05 07:00:00+00:00",
   "lado": "CORTO",
   "px_entrada": 85514.3937,
   "sl": 86410.9691041833,
@@ -11,22 +11,24 @@
   "nocional_usdt": 427.5719685,
   "riesgo_usdt": 4.4828770209165185,
   "stop_pct": 0.010484496999752495,
-  "px_salida": 86264.7495,
-  "salida": "end",
-  "R": -0.9306747789652,
-  "pnl_usdt": -4.172100580569655,
-  "comision_usdt": 0.429447858,
+  "px_salida": 86428.25129800414,
+  "salida": "stop",
+  "R": -1.113128533707827,
+  "pnl_usdt": -4.990018325085316,
+  "comision_usdt": 0.42985661249501034,
   "funding_usdt": 0.009126277430369489,
-  "barras": 2,
+  "barras": 3,
   "max_barras": 48,
   "mfe_R": 0.11643605157236432,
-  "mae_R": 0.9515165105126874,
+  "mae_R": 1.0875898395720882,
   "post_stop_R": null,
   "tendencia_a_favor": null,
   "vol_percentil": 0.242,
   "hora_utc": 5,
-  "abierta": true,
-  "lecciones": []
+  "abierta": false,
+  "lecciones": [
+   "Nunca fue a favor (máximo 0.12 R): la señal falló desde el principio."
+  ]
  },
  {
   "trader": "I10 Ráfaga de momentum",
@@ -50,13 +52,14 @@
   "max_barras": 6,
   "mfe_R": 0.2910901289309108,
   "mae_R": 2.3787912762817185,
-  "post_stop_R": NaN,
+  "post_stop_R": -1.7081839886016794,
   "tendencia_a_favor": null,
   "vol_percentil": 0.242,
   "hora_utc": 5,
   "abierta": false,
   "lecciones": [
    "Nunca fue a favor (máximo 0.29 R): la señal falló desde el principio.",
+   "El precio no se recuperó tras el stop: la salida fue la correcta.",
    "Comisiones y funding costaron 0.24 R de esta pérdida."
   ]
  },
@@ -113,14 +116,13 @@
   "max_barras": 12,
   "mfe_R": 0.05264028603329783,
   "mae_R": 1.0574704237736037,
-  "post_stop_R": 0.37120028138783207,
+  "post_stop_R": 0.5532345644475659,
   "tendencia_a_favor": null,
   "vol_percentil": 0.184,
   "hora_utc": 4,
   "abierta": false,
   "lecciones": [
    "Nunca fue a favor (máximo 0.05 R): la señal falló desde el principio.",
-   "El precio no se recuperó tras el stop: la salida fue la correcta.",
    "Volatilidad baja (percentil 18%): el stop era estrecho y los costes pesaron más."
   ]
  },
@@ -274,7 +276,7 @@
   "max_barras": 24,
   "mfe_R": 0.9983502353852161,
   "mae_R": 1.7987050312104755,
-  "post_stop_R": -0.19097048190048063,
+  "post_stop_R": 0.032427712878356926,
   "tendencia_a_favor": null,
   "vol_percentil": 0.11,
   "hora_utc": 23,

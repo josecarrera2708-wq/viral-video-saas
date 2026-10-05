@@ -88,10 +88,10 @@
   "estado": "muestra insuficiente para concluir"
  },
  "I09 Supertrend 10/3": {
-  "cerradas": 1,
-  "perdedoras": 1,
+  "cerradas": 2,
+  "perdedoras": 2,
   "patrones": {
-   "nunca_a_favor": 0,
+   "nunca_a_favor": 1,
    "stop_barrido": 0,
    "contra_tendencia": 0,
    "vol_baja": 0
