@@ -142,3 +142,29 @@ Prerregistro: `config/busqueda_v5_prerregistrada.md` (commit 134d411, ANTES de e
 - Doble suelo + barrido de liquidez: +0,35 R. Doble techo: flojo con cualquier confirmación. Cuña: sin ventaja.
 - Mesa de trading: entran Z01 (doble suelo + tendencia superior, +0,15 R en el examen) y Z02 (triple + tendencia superior, +0,57 R). Z de doble techo + tendencia superior: fuera (−0,09 R en el examen).
 - Total acumulado del proyecto: 1.685 pruebas.
+
+## 2026-10-05 · Búsqueda v6: más combinaciones de patrones — pruebas 1686-1797 (112 variantes)
+Prerregistro: `config/busqueda_v6_prerregistrada.md` (commit 1581163, ANTES de ejecutar). Resultados: `reports/busqueda_v6_resultados.md`.
+- Variantes: 112. Elegibles: 24. Certificadas: **0**.
+- **18 de 20 finalistas ganan en el examen**, todas también con costes ×2 menos dos.
+- Mejores combinaciones en validación:
+
+| Combinación | R en validación |
+|---|---|
+| Tendencia + funding | +0,27 |
+| Funding a contrapié | +0,17 |
+| Tendencia + volumen | +0,07 |
+| Compresión doble | −0,10 / −0,14 |
+
+- Mejores del examen:
+
+| Variante | Ops | R examen | Retorno |
+|---|---|---|---|
+| Bandera 1 h + funding a contrapié | 41 | +1,04 | +17,4 % |
+| Triple + volumen + compresión | 30 | +1,02 | +13,3 % |
+| Triple + tendencia + volumen | 32 | +0,75 | +10,5 % |
+| Triple con entrada en retesteo | 58 | +0,52 | +12,7 % |
+
+- Ninguna pasa Holm ni DSR.
+- Mesa de trading: entran W01-W04 por la regla prerregistrada. En la repetición con datos de Deribit desde 2025-07 ganan los cuatro, pero W01 (+0,08 R) y W03 (+0,22 R) ganan menos que con Binance: el funding y el volumen difieren entre bolsas.
+- Total acumulado del proyecto: 1.797 pruebas.
