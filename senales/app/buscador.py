@@ -14,17 +14,15 @@ import collections
 import datetime
 import json
 import os
-import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 
 import httpx
 
-from . import chain, db
+from . import cex, chain, db
 
 UA = chain.UA
-B58 = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{32,44}$")
 DAYS = 60                 # listados de los últimos N días (Jupiter guarda unos 3 meses de operaciones)
 TOKENS_PER_RUN = int(os.environ.get("SENALES_TOKENS", 12))   # listados nuevos que se procesan por noche
 WALLETS_PER_RUN = int(os.environ.get("SENALES_WALLETS", 12))  # wallets que se miden por noche
@@ -55,62 +53,17 @@ def get(url, **params):
 
 # ---------- 1. listados ----------
 def listings():
+    snap = cex.snapshot()                      # Gate, Bitget, KuCoin y MEXC por contrato
     L = collections.defaultdict(dict)          # mint -> {exchange: t}
-    sym2mint = collections.defaultdict(set)
-    try:
-        cur, pairs = get("https://api.gateio.ws/api/v4/spot/currencies") or [], get("https://api.gateio.ws/api/v4/spot/currency_pairs") or []
-        gsol = {}
-        for c in cur:
-            for ch in c.get("chains") or []:
-                if ch.get("name") == "SOL" and B58.match(ch.get("addr") or ""):
-                    gsol[c["currency"]] = ch["addr"]
-                    sym2mint[c["currency"].upper()].add(ch["addr"])
-        for p in pairs:
-            if p.get("base") in gsol and int(p.get("buy_start") or 0) > 0:
-                m = gsol[p["base"]]
-                L[m]["gate"] = min(L[m].get("gate", 9e12), int(p["buy_start"]))
-    except Exception as e:
-        log("gate", e)
-    try:
-        coins = (get("https://api.bitget.com/api/v2/spot/public/coins") or {}).get("data") or []
-        syms = (get("https://api.bitget.com/api/v2/spot/public/symbols") or {}).get("data") or []
-        bsol = {}
-        for c in coins:
-            for ch in c.get("chains") or []:
-                if (ch.get("chain") or "").upper() in ("SOL", "SOLANA") and B58.match(ch.get("contractAddress") or ""):
-                    bsol[c["coin"]] = ch["contractAddress"]
-                    sym2mint[c["coin"].upper()].add(ch["contractAddress"])
-        for s in syms:
-            if s.get("baseCoin") in bsol and int(s.get("openTime") or 0) > 0:
-                m = bsol[s["baseCoin"]]
-                L[m]["bitget"] = min(L[m].get("bitget", 9e12), int(s["openTime"]) / 1000)
-    except Exception as e:
-        log("bitget", e)
-    try:
-        cur = (get("https://api.kucoin.com/api/v3/currencies") or {}).get("data") or []
-        syms = (get("https://api.kucoin.com/api/v2/symbols") or {}).get("data") or []
-        ksol = {}
-        for c in cur:
-            for ch in c.get("chains") or []:
-                if ch.get("chainId") in ("sol", "spl") and B58.match(ch.get("contractAddress") or ""):
-                    ksol[c["currency"]] = ch["contractAddress"]
-                    sym2mint[c["currency"].upper()].add(ch["contractAddress"])
-        for s in syms:
-            if s.get("baseCurrency") in ksol and s.get("tradingStartTime"):
-                m = ksol[s["baseCurrency"]]
-                L[m]["kucoin"] = min(L[m].get("kucoin", 9e12), int(s["tradingStartTime"]) / 1000)
-    except Exception as e:
-        log("kucoin", e)
+    for m, v in snap["mints"].items():
+        for ex, t in v.items():
+            if t > 0:
+                L[m][ex] = t
+    sym2mint = snap["sym2mint"]
     start = time.time() - DAYS * 86400
     try:
-        info = get("https://api.mexc.com/api/v3/exchangeInfo") or {}
-        mx = {s["symbol"]: s["contractAddress"] for s in info.get("symbols") or []
-              if B58.match(s.get("contractAddress") or "") and s.get("quoteAsset") == "USDT"}
-        for s in info.get("symbols") or []:
-            if s["symbol"] in mx:
-                sym2mint[s["baseAsset"].upper()].add(mx[s["symbol"]])
         known = {r["mint"] for r in db.q("select mint from scan_tokens")}
-        for sym, ca in mx.items():
+        for sym, ca in snap["mexc"].items():   # MEXC no da la fecha de alta: se mira la primera vela diaria
             if ca in known or ca in L:
                 continue
             k = get("https://api.mexc.com/api/v3/klines", symbol=sym, interval="1d", startTime=int(start * 1000), limit=1000)

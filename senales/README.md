@@ -4,6 +4,8 @@ Vigilante de wallets de Solana en tiempo real con app web privada (se instala en
 
 - **Avisos al instante** (1-5 s) cuando una wallet de tu lista compra o vende, con token, importe, hora, precio y MC. Usa los webhooks de Helius (el plan gratuito vale) y un sondeo de respaldo cada 90 s por si se pierde alguno.
 - **Seguimiento de cada token comprado** durante 14 días: x hasta el máximo desde la compra, x actual y el resultado del método «vender el 50% en cada x2».
+- **Ganancia de cada venta**: cuánto ganó o perdió la wallet frente a su precio medio de compra. Si la compra fue antes de empezar a vigilarla, la busca en el historial.
+- **Listados**: cada 10 min mira qué tokens de Solana dan de alta MEXC, Gate, Bitget y KuCoin (por contrato). Si una wallet de tu lista lo compró, te avisa. Las compras de tokens jóvenes que aún no cotizan en ningún exchange llevan la marca «posible listado», y la app cuenta cuántas de esas acaban listándose.
 - **Buscador diario**: cada noche revisa los nuevos listados de memecoins de Solana en Gate, Bitget, KuCoin, MEXC, OKX y BingX. Busca las wallets que compraron antes y las mide en otros tokens. Las que pasan el corte aparecen como candidatas.
 - **Privada**: contraseña, HTTPS automático y avisos push en iPhone (iOS 16.4+, añadida a la pantalla de inicio) y Android.
 

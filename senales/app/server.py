@@ -18,7 +18,7 @@ from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import chain, db
+from . import cex, chain, db
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("senales")
@@ -27,6 +27,11 @@ HELIUS = "https://mainnet.helius-rpc.com"
 TRACK_DAYS = 14          # días que se sigue el precio de cada token comprado
 POLL_S = int(os.environ.get("SENALES_POLL_S", "90"))   # sondeo de respaldo por si se pierde un aviso
 NOTIFY_MAX_AGE = 900     # solo se avisa de operaciones de los últimos 15 min
+CEX_S = 600              # cada cuánto se miran los listados de MEXC, Gate, Bitget y KuCoin
+# «Posible listado»: perfil de los tokens que listaron esos exchanges (la mayoría con 0-5 días de vida)
+HINT_MAX_AGE = 5 * 86400
+HINT_MIN_MC = 300_000
+HINT_MIN_HOLDERS = 1000
 S = {"client": None, "market": None, "queue": None, "last_hook": 0, "last_poll": 0, "fails": {},
      "bg": set(), "busy": set(), "tried": {}}
 
@@ -175,14 +180,27 @@ async def rpc_any(method, params):
     return None
 
 
+def listing_hint(mint, info, mc, t):
+    """Exchanges donde cotiza (o va a cotizar) el token, o «posible listado» si se parece a los que suelen listarse."""
+    rows = db.q("select exch, t_start from cex where mint=?", (mint,))
+    if rows:
+        names = ", ".join(sorted(cex.NAMES.get(r["exch"], r["exch"]) for r in rows))
+        return ("se lista en " if all(r["t_start"] > time.time() for r in rows) else "cotiza en ") + names
+    if info.get("created") and t - info["created"] <= HINT_MAX_AGE and (mc or 0) >= HINT_MIN_MC \
+            and info.get("holders", 0) >= HINT_MIN_HOLDERS:
+        return "posible listado"
+    return None
+
+
 async def record(tr, w, source):
     """Guarda una compra o venta y actualiza la posición de la wallet en ese token."""
     info = await S["market"].token(tr["mint"])
     mc = tr["price"] * info["supply"] if info["supply"] else None
     if db.q("select 1 from trades where sig=? and wallet=? and mint=?", (tr["sig"], tr["wallet"], tr["mint"]), one=True):
         return info, mc  # ya guardada (p. ej. la encontraron a la vez el sondeo y la búsqueda en el historial)
-    db.x("insert or ignore into trades(sig, wallet, mint, side, t, amount, usd, sol, price, mc, sym) values(?,?,?,?,?,?,?,?,?,?,?)",
-         (tr["sig"], tr["wallet"], tr["mint"], tr["side"], tr["t"], tr["amount"], tr["usd"], tr["sol"], tr["price"], mc, info["sym"]))
+    tr["hint"] = listing_hint(tr["mint"], info, mc, tr["t"]) if tr["side"] == "buy" else None
+    db.x("insert or ignore into trades(sig, wallet, mint, side, t, amount, usd, sol, price, mc, sym, hint) values(?,?,?,?,?,?,?,?,?,?,?,?)",
+         (tr["sig"], tr["wallet"], tr["mint"], tr["side"], tr["t"], tr["amount"], tr["usd"], tr["sol"], tr["price"], mc, info["sym"], tr["hint"]))
     pos = db.q("select * from positions where wallet=? and mint=?", (tr["wallet"], tr["mint"]), one=True)
     if tr["side"] == "buy":
         if not pos:
@@ -276,6 +294,8 @@ async def notify(tr, w, info, mc, entry=None):
     body += f" · {hhmm(tr['t'])} · precio {fmt_price(tr['price'])} · MC {fmt_usd(mc)}"
     if tr["side"] == "buy" and mc:
         body += f" · x2 = MC {fmt_usd(2 * mc)}"
+    if tr.get("hint"):
+        body += f" · {tr['hint']}"
     pnl, xs = gain(tr, entry)
     if pnl is not None:
         body += f" · {'ganó' if pnl >= 0 else 'perdió'} {fmt_usd(abs(pnl))} (x{xs:.2f})"
@@ -312,6 +332,44 @@ async def process_tx(tx, source="hook"):
             bg(finish_sell(tr, w, info, mc, p["acct"].get((tr["wallet"], tr["mint"])), fresh))
         elif fresh:
             await notify(tr, w, info, mc)
+
+
+async def listing_alert(mint, exch, t_start):
+    """Un exchange acaba de dar de alta un token: si una Ganadora lo compró en los últimos 30 días, aviso."""
+    pos = db.q("select p.*, w.name from positions p join wallets w on w.addr=p.wallet "
+               "where p.mint=? and w.active=1 and p.first_t>? order by p.first_t", (mint, int(time.time()) - 30 * 86400))
+    if not pos:
+        return
+    p0, name = pos[0], cex.NAMES.get(exch, exch)
+    x = (p0["last_price"] or p0["entry_price"]) / p0["entry_price"] if p0["entry_price"] else None
+    who = ", ".join(sorted({p["name"] for p in pos}))
+    body = f"Lo compró {who} el {hhmm(p0['first_t'])} (MC {fmt_usd(p0['entry_mc'])})" + (f" · ahora x{x:.2f}" if x else "")
+    body += f" · empieza a cotizar {hhmm(t_start)}" if t_start > time.time() else " · ya cotiza"
+    log.info("listado en %s de %s (%s)", name, p0["sym"], who)
+    await push(f"LISTADO EN {name.upper()}: {p0['sym']}", body, url=f"/#t/{mint}", tag=f"cex-{exch}-{mint}")
+
+
+async def cex_watch():
+    """Tokens de Solana nuevos en MEXC, Gate, Bitget o KuCoin (por contrato). La primera vez que responde
+    cada exchange solo se toma la foto de lo que ya cotizaba, sin avisar."""
+    while True:
+        try:
+            snap = await asyncio.to_thread(cex.snapshot)
+            now = int(time.time())
+            have = {}
+            for r in db.q("select mint, exch from cex"):
+                have.setdefault(r["exch"], set()).add(r["mint"])
+            for exch in cex.NAMES:
+                fresh = [(m, v[exch]) for m, v in snap["mints"].items() if exch in v and m not in have.get(exch, ())]
+                if not fresh:
+                    continue
+                db.xm("insert or ignore into cex(mint, exch, t_start, t_seen) values(?,?,?,?)", [(m, exch, t, now) for m, t in fresh])
+                if exch in have:
+                    for m, t in fresh:
+                        await listing_alert(m, exch, t)
+        except Exception:
+            log.exception("error vigilando los listados")
+        await asyncio.sleep(CEX_S)
 
 
 async def entries():
@@ -478,7 +536,7 @@ async def lifespan(app):
     if db.get("setup_token"):
         with open(os.path.join(db.DATA, "codigo_inicial.txt"), "w") as f:
             f.write(db.get("setup_token") + "\n")
-    tasks = [asyncio.create_task(t()) for t in (worker, poller, tracker, daily_summary, entries)]
+    tasks = [asyncio.create_task(t()) for t in (worker, poller, tracker, daily_summary, entries, cex_watch)]
     if db.get("helius_key"):
         asyncio.create_task(sync_webhook())
     yield
@@ -677,7 +735,9 @@ async def candidates(req: Request):
     for r in rows:
         r["detail"] = json.loads(r.get("detail") or "{}")
     cnt = {r["status"]: r["c"] for r in db.q("select status, count(*) c from candidates group by status")}
-    return {"rows": rows, "last_scan": db.get("last_scan"), "counts": cnt,
+    marked = db.q("select mint, min(t) t from trades where side='buy' and hint='posible listado' group by mint")
+    listed = sum(1 for m in marked if db.q("select 1 from cex where mint=? and t_seen>=?", (m["mint"], m["t"]), one=True))
+    return {"rows": rows, "last_scan": db.get("last_scan"), "counts": cnt, "hint": {"marked": len(marked), "listed": listed},
             "tokens": db.q("select count(*) c from scan_tokens where done=1", one=True)["c"]}
 
 

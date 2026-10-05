@@ -17,7 +17,7 @@ create table if not exists sessions(token text primary key, exp integer);
 create table if not exists wallets(addr text primary key, name text, rank integer, origin text,
     note text, payers text default '[]', active integer default 1, added integer);
 create table if not exists trades(sig text, wallet text, mint text, side text, t integer, amount real,
-    usd real, sol real, price real, mc real, sym text, entry real, primary key(sig, wallet, mint));
+    usd real, sol real, price real, mc real, sym text, entry real, hint text, primary key(sig, wallet, mint));
 create table if not exists positions(wallet text, mint text, sym text, icon text, first_t integer,
     entry_price real, entry_mc real, usd_in real, usd_out real default 0, max_price real, max_t integer,
     last_price real, last_t integer, supply real, bf integer, primary key(wallet, mint));
@@ -25,15 +25,20 @@ create table if not exists seen(sig text primary key, t integer);
 create table if not exists subs(endpoint text primary key, data text, added integer);
 create table if not exists candidates(addr text primary key, origin text, found integer, score real,
     n integer, pct_x2 real, ladder real, all_x2 real, avg_xmax real, hits integer, detail text, status text default 'nueva');
+create table if not exists cex(mint text, exch text, t_start integer, t_seen integer, primary key(mint, exch));
 create table if not exists scan_tokens(mint text primary key, sym text, exch text, t_list integer, done integer, buyers integer);
 """
 with _lock:
     _conn.executescript(SCHEMA)
     if "bf" not in [r[1] for r in _conn.execute("pragma table_info(positions)")]:
         _conn.execute("alter table positions add column bf integer")
-    if "entry" not in [r[1] for r in _conn.execute("pragma table_info(trades)")]:
+    cols = [r[1] for r in _conn.execute("pragma table_info(trades)")]
+    if "entry" not in cols:
         # en las ventas: precio medio al que había comprado (null = por buscar, 0 = no se encontró la compra)
         _conn.execute("alter table trades add column entry real")
+    if "hint" not in cols:
+        # en las compras: «posible listado» o los exchanges donde ya cotiza el token
+        _conn.execute("alter table trades add column hint text")
     _conn.commit()
 
 

@@ -8,7 +8,7 @@ REPO="${SENALES_REPO:-josecarrera2708-wq/viral-video-saas}"
 BRANCH="${SENALES_BRANCH:-claude/nifty-dirac-lbhzl5}"
 RAW="https://raw.githubusercontent.com/${REPO}/refs/heads/${BRANCH}/senales"
 DIR=/opt/senales
-FILES="app/__init__.py app/chain.py app/db.py app/server.py app/buscador.py requirements.txt
+FILES="app/__init__.py app/chain.py app/cex.py app/db.py app/server.py app/buscador.py requirements.txt
 app/static/index.html app/static/app.js app/static/style.css app/static/sw.js app/static/manifest.webmanifest
 app/static/icon-192.png app/static/icon-512.png app/static/apple-touch-icon.png"
 

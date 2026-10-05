@@ -83,7 +83,7 @@ function tradeRow(r) {
   const buy = r.side === 'buy';
   return `<div class="trow" onclick="location.hash='t/${r.mint}'">
     <span class="side ${r.side}">${buy ? 'COMPRA' : 'VENDE'}</span>
-    <div class="l1"><span class="sym">${esc(r.sym)}</span><span class="who">${esc(r.name)}</span></div>
+    <div class="l1"><span class="sym">${esc(r.sym)}</span><span class="who">${esc(r.name)}</span>${r.hint ? `<span class="tag ${r.hint === 'posible listado' ? 'hint' : 'cexs'}">${esc(r.hint)}</span>` : ''}</div>
     <div class="xr">${buy ? xs(r.x_now) + `<small>máx ${r.x_max ? 'x' + r.x_max.toFixed(2) : '—'}</small>` : sellGain(r)}</div>
     <div class="l2">${hm(r.t)} · ${usd(r.usd)}${r.sol >= 0.05 ? ' (' + r.sol.toFixed(2) + ' SOL)' : ''} · MC ${usd(r.mc)}</div>
   </div>`;
@@ -160,7 +160,8 @@ async function loadScan() {
   $('#scan-info').innerHTML = `Cada noche revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y las mide con tu método (x hasta el máximo y vender el 50% en cada x2).
     <div class="stats"><div class="stat"><b>${d.tokens}</b><span>listados revisados</span></div><div class="stat"><b>${measured}</b><span>wallets medidas</span></div>
     <div class="stat"><b>${c.bot || 0}</b><span>bots descartados</span></div><div class="stat"><b>${(c.nueva || 0) + (c.seguida || 0)}</b><span>pasan el corte</span></div></div>
-    Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' · ' + esc(d.last_scan.msg || '') : 'todavía no'}.`;
+    Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' · ' + esc(d.last_scan.msg || '') : 'todavía no'}.
+    <br>Marca «posible listado» (compras de tokens jóvenes que aún no cotizan en MEXC, Gate, Bitget ni KuCoin): ${d.hint ? `${d.hint.marked} tokens marcados, ${d.hint.listed} listados después` : '—'}.`;
   $('#cands').innerHTML = d.rows.length ? d.rows.map(c => `<div class="card">
       <div class="row" style="margin:0;align-items:center"><b class="addr" style="flex:1">${esc(c.addr.slice(0, 6))}…${esc(c.addr.slice(-4))}</b>
       <span class="tag ${tagCls(c.origin)}">${esc(c.origin)}</span>${c.status === 'seguida' ? '<span class="tag">seguida</span>' : ''}</div>

@@ -5,6 +5,7 @@ Una compra se detecta igual que en el vigilante por horas: el token sube en la w
 qué DEX se usó.
 """
 import asyncio
+import datetime
 import time
 
 import httpx
@@ -101,6 +102,13 @@ def detect(p, wallets, sol_usd, infer_payer=False):
     return out
 
 
+def _epoch(iso):
+    try:
+        return int(datetime.datetime.fromisoformat(iso.replace("Z", "+00:00")).timestamp())
+    except Exception:
+        return 0
+
+
 class Market:
     """Precios y datos de tokens con caché (Jupiter, sin clave)."""
 
@@ -163,15 +171,17 @@ class Market:
         m = self.meta.get(mint)
         if m and time.time() - m["_t"] < 6 * 3600:
             return m
-        info = {"sym": mint[:4], "name": "", "supply": 0, "icon": "", "_t": time.time()}
+        info = {"sym": mint[:4], "name": "", "supply": 0, "icon": "", "created": 0, "holders": 0, "_t": time.time()}
         for i in range(3):
             try:
                 r = await self.c.get("https://datapi.jup.ag/v1/assets/search", params={"query": mint}, headers=UA, timeout=20)
                 for x in r.json() or []:
                     if x.get("id") == mint:
+                        created = (x.get("firstPool") or {}).get("createdAt") or x.get("createdAt") or ""
                         info.update(sym=x.get("symbol") or info["sym"], name=x.get("name") or "",
                                     supply=float(x.get("totalSupply") or x.get("circSupply") or 0),
-                                    icon=x.get("icon") or "")
+                                    icon=x.get("icon") or "", holders=int(x.get("holderCount") or 0),
+                                    created=_epoch(created))
                         break
                 break
             except Exception:
