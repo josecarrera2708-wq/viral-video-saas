@@ -76,3 +76,18 @@ El periodo ciego (2025-07 → 2026-08) se abrió UNA vez y está consumido.
 - Prerregistro `config/busqueda_v2_prerregistrada.md` + código `src/busqueda/` (test de causalidad por truncamiento y tubería sintética) confirmados en git (4b3dca6) ANTES de ejecutar sobre datos reales.
 - Resultado (`reports/busqueda_v2_resultados.md`, ejecución única): **0/768 certificadas**. 176 elegibles; 20 finalistas al examen (19 de 4 h, 1 de 1 h): 7 con R > 0 en el examen, 3 sobreviven a costes ×2 (4 h barra interior solo largos con stop 2-3 ATR y TP 3-5R: +0,24 a +0,33 R), pero solo 0,05-0,07 ops/día (≈ 23 en el examen) → p Holm 1,00 y DSR 0,00 con 768 pruebas.
 - Marginales (R construcción / validación): 15 min −0,34/−0,23 · 1 h −0,03/+0,02 · 4 h +0,20/+0,12 · diario +1,05/+0,15; solo largos +0,33/+0,03 frente a ambos +0,11/−0,00; stop 2-3 ATR mejor que 1 ATR en validación; TP2 −0,04/−0,05 · TP5 +0,07/+0,03 · «dejar correr» +0,84/+0,10. Lectura: cuanto más alta la temporalidad, más amplio el stop y más largo el objetivo, mejor; en 15 min ninguna combinación funciona. Nada pasa a papel sin decisión del dueño.
+
+## 2026-10-05 · Búsqueda v3: fondos, investigadores y traders conocidos — pruebas 1082-1109 (28 variantes)
+Prerregistro: `config/busqueda_v3_prerregistrada.md` (commit fa079ef, ANTES de ejecutar). Resultados: `reports/busqueda_v3_resultados.md`.
+- Variantes: 28. Elegibles: 4. Certificadas: **0**.
+- Estrategias publicadas que NO aguantan costes en BTC 2024-2026:
+  - Estacionalidades (lunes de Asia, noche de Wall Street, 21-23 UTC), con R ≤ 0 en validación.
+  - Zona de ruido de Zarattini, con −0,09 R en el examen.
+  - RSI(2) de Connors e IBS.
+- Lo mejor del examen:
+  - Conjunto de tendencias CTA 4 h: +0,09 R, 42 ops, +2,5 %.
+  - MAX(20) diario: +0,035 R.
+  - Ninguno es significativo (p Holm 1,0; DSR ≈ 0).
+- Weinstein, máximos anuales y CTA diario tienen R alto pero muy pocas operaciones (5-9 en validación). No se pueden certificar.
+- Total acumulado del proyecto: 1.109 pruebas.
+- Mesa nueva (X01-X09) creada por la regla prerregistrada. Arranca en papel el 2026-10-06 00:00 UTC.
