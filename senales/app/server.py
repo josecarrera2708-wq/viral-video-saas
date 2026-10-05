@@ -343,25 +343,32 @@ STRATS = {"copiar": "copiar todo", "x2": "todo en x2"}
 
 
 def sim_cfg():
-    """{"start", "days", "usd", "plan": {wallet: {"strat": "copiar"|"x2", "sl": 0.3|0.5|null, "medido": %}}}"""
+    """{"start", "days", "usd", "plan": {wallet: [{"strat": "copiar"|"x2", "sl": 0.3|0.5|null, "medido": %}, ...]}}
+    Una wallet puede probar varias estrategias a la vez; cada una lleva sus propias operaciones."""
     return db.get("sim") or {}
+
+
+def sim_plans(c, wallet):
+    v = (c.get("plan") or {}).get(wallet) or []
+    return v if isinstance(v, list) else [v]
 
 
 def sim_on_trade(tr, info, frac):
     """Una operación nueva de una wallet: la simulación abre o vende como lo haría el copy trade."""
     c = sim_cfg()
-    plan = (c.get("plan") or {}).get(tr["wallet"])
-    if not plan or not c["start"] <= tr["t"] < c["start"] + c["days"] * 86400:
+    if not c or not c["start"] <= tr["t"] < c["start"] + c["days"] * 86400:
         return
-    if tr["side"] == "buy":
-        if plan["strat"] == "x2" and db.q("select 1 from sim where wallet=? and mint=?", (tr["wallet"], tr["mint"]), one=True):
-            return  # con «todo en x2» solo cuenta la primera compra de cada token
-        db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last) values(?,?,?,?,?,?,?,?,?,?)",
-             (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), tr["t"], tr["price"],
-              c["usd"] * (1 - SIM_FEE) / tr["price"], c["usd"], tr["price"]))
-    elif plan["strat"] == "copiar":
-        for lot in db.q("select * from sim where wallet=? and mint=? and closed is null", (tr["wallet"], tr["mint"])):
-            sim_sell(lot, lot["qty"] * frac, tr["price"], tr["t"], "vendió la wallet")
+    for plan in sim_plans(c, tr["wallet"]):
+        same = (tr["wallet"], tr["mint"], plan["strat"], plan.get("sl"))
+        if tr["side"] == "buy":
+            if plan["strat"] == "x2" and db.q("select 1 from sim where wallet=? and mint=? and strat=? and sl is ?", same, one=True):
+                continue  # con «todo en x2» solo cuenta la primera compra de cada token
+            db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last) values(?,?,?,?,?,?,?,?,?,?)",
+                 (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), tr["t"], tr["price"],
+                  c["usd"] * (1 - SIM_FEE) / tr["price"], c["usd"], tr["price"]))
+        elif plan["strat"] == "copiar":
+            for lot in db.q("select * from sim where wallet=? and mint=? and strat=? and sl is ? and closed is null", same):
+                sim_sell(lot, lot["qty"] * frac, tr["price"], tr["t"], "vendió la wallet")
 
 
 def sim_sell(lot, qty, price, t, reason):
@@ -397,11 +404,8 @@ def sim_summary():
     if not c:
         return {"cfg": None, "rows": []}
     rows = []
-    for w in wallets_cfg(False):
-        plan = (c.get("plan") or {}).get(w["addr"])
-        if not plan:
-            continue
-        lots = db.q("select * from sim where wallet=?", (w["addr"],))
+    for w, plan in ((w, plan) for w in wallets_cfg(False) for plan in sim_plans(c, w["addr"])):
+        lots = db.q("select * from sim where wallet=? and strat=? and sl is ?", (w["addr"], plan["strat"], plan.get("sl")))
         inv = sum(x["usd_in"] for x in lots)
         val = sum(x["usd_out"] + x["qty"] * (x["last"] or x["entry"]) * (1 - SIM_FEE) for x in lots)
         done = [x for x in lots if x["closed"]]
@@ -731,10 +735,11 @@ async def sim_get(req: Request):
 
 @app.post("/api/sim")
 async def sim_start(req: Request):
-    """Empieza (o reinicia) la simulación: {"usd": 10, "days": 3, "plan": {wallet: {"strat", "sl", "medido"}}}."""
+    """Empieza (o reinicia) la simulación: {"usd": 10, "days": 3, "plan": {wallet: [{"strat", "sl", "medido"}, ...]}}."""
     need(req)
     d = await req.json()
-    plan = {a: {"strat": v.get("strat") if v.get("strat") in STRATS else "copiar", "sl": v.get("sl"), "medido": v.get("medido")}
+    plan = {a: [{"strat": x.get("strat") if x.get("strat") in STRATS else "copiar", "sl": x.get("sl"), "medido": x.get("medido")}
+                for x in (v if isinstance(v, list) else [v])]
             for a, v in (d.get("plan") or {}).items()}
     db.x("delete from sim")
     db.put("sim", {"start": int(time.time()), "days": float(d.get("days") or 3), "usd": float(d.get("usd") or 10), "plan": plan})
