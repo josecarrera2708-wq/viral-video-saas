@@ -10,7 +10,7 @@ P = {
 }
 for k in sys.argv[1:] or P:
     f = f"{OUT}/{k}.png"
-    body = json.dumps({"model": "gpt-image-2", "prompt": ESTILO + "\n\n" + P[k], "size": "1536x864", "quality": "high", "n": 1}).encode()
+    body = json.dumps({"model": "gpt-image-2", "prompt": ESTILO + "\n\n" + P[k], "size": "1536x864", "quality": "medium", "n": 1}).encode()
     for _ in range(6):
         try:
             r = json.load(urllib.request.urlopen(urllib.request.Request("https://api.openai.com/v1/images/generations", body, {"Content-Type": "application/json"}), timeout=170))
