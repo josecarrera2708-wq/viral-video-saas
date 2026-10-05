@@ -69,6 +69,7 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <button role="tab" aria-selected="false" data-tab="m15">Mesa 15 min</button>
     <button role="tab" aria-selected="false" data-tab="m1h">Mesa 1 h</button>
     <button role="tab" aria-selected="false" data-tab="mnueva">Mesa nueva</button>
+    <button role="tab" aria-selected="false" data-tab="mpat">Mesa de patrones</button>
     <button role="tab" aria-selected="false" data-tab="cartera">Núcleo + carry</button>
     <button role="tab" aria-selected="false" data-tab="fondos">Fondos</button>
     <button role="tab" aria-selected="false" data-tab="primas">BTC, primas y cartera</button>
@@ -145,6 +146,16 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="grid" id="mnOpen"></div>
     <h2>Historial de operaciones</h2>
     <div class="card"><div id="mnHist"></div></div>
+  </section>
+  <section class="panel sec" id="tab-mpat" hidden>
+    <h2>Mesa de patrones · chartistas, velas e ineficiencias (desde 2026-10-06)</h2>
+    <div class="card"><div class="funnel" id="mpKpis"></div><p class="foot" id="mpNote"></p></div>
+    <h2>Traders</h2>
+    <div class="card"><div class="tw"><table id="mpTable"></table></div><p class="foot">Elegidos con una regla fijada en git ANTES de ver resultados (config/busqueda_v4_prerregistrada.md): la mejor variante elegible de cada familia de la búsqueda v4 (doble/triple suelo, rectángulo, bandera, martillo, velas seguidas, FVG; estadística de Bulkowski y estudios académicos). Ninguno está certificado: en el examen 2025-07→2026-09 la bandera de 4 h (+0,73 R, 22 ops), el doble suelo (+0,28 R) y el triple suelo/techo (+0,48 R en su versión «dejar correr») fueron los mejores. Pocas operaciones: hacen falta semanas.</p></div>
+    <h2>Posiciones abiertas ahora</h2>
+    <div class="grid" id="mpOpen"></div>
+    <h2>Historial de operaciones</h2>
+    <div class="card"><div id="mpHist"></div></div>
   </section>
   <section class="panel sec" id="tab-m1h" hidden>
     <h2>Mesa de 1 hora (mismos 13 traders, velas de 1 h)</h2>
@@ -248,7 +259,7 @@ $('#banner').innerHTML = `<b>Simulación en papel.</b> ${esc(D.brief ? D.brief.d
 const tabs = [...document.querySelectorAll('nav button')];
 function show(t){ tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.tab===t)); document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'tab-'+t); try{history.replaceState(null,'','#'+t)}catch(e){} }
 tabs.forEach(b => b.addEventListener('click', () => show(b.dataset.tab)));
-const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','mnueva','cartera','fondos','primas','ranking','aprender','equipos','informe'].includes(h)) show(h); };
+const fromHash = () => { const h = (location.hash||'').slice(1); if (['sala','intradia','marcador','m15','m1h','mnueva','mpat','cartera','fondos','primas','ranking','aprender','equipos','informe'].includes(h)) show(h); };
 fromHash(); window.addEventListener('hashchange', fromHash);
 
 // sala
@@ -466,6 +477,21 @@ if (I) {
     $('#mnOpen').innerHTML = ab.length ? ab.map(t => { const dir = t.lado === 'LARGO' ? 1 : -1, rk = Math.abs(t.px_entrada - t.sl), rNow = (px - t.px_entrada) * dir / rk, usd = (px - t.px_entrada) * dir * t.lote_btc;
       return `<div class="card dept"><h3><span>${esc(t.trader)}</span><span class="pill gold">${t.lado}</span></h3><p>Abrió ${esc(String(t.abre).slice(0,16))} UTC</p><table><tr><td>Entrada</td><td class="n num">${f0(t.px_entrada)}</td></tr><tr><td>Stop (SL)</td><td class="n num neg">${f0(t.sl)}</td></tr><tr><td>Objetivo (TP)</td><td class="n num pos">${t.tp ? f0(t.tp) : 'sin TP'}</td></tr><tr><td>Lote</td><td class="n num">${t.lote_btc} BTC · ${f0(t.nocional_usdt)} USDT</td></tr><tr><td>Resultado ahora</td><td class="n num ${cls(rNow)}">${rNow >= 0 ? '+' : ''}${rNow.toFixed(2)} R · ${usd >= 0 ? '+' : ''}${usd.toFixed(2)} USDT</td></tr></table></div>`; }).join('') : '<div class="card"><p class="dim">No hay posiciones abiertas ahora mismo.</p></div>';
     $('#mnHist').innerHTML = cl.length ? cl.slice(0,60).map(t => `<details style="border-bottom:1px solid var(--line);padding:8px 0"><summary style="cursor:pointer"><span class="mono dim">${esc(String(t.cierra).slice(5,16))}</span> <b>${esc(t.trader)}</b> · ${t.lado} · ${f0(t.px_entrada)} → ${f0(t.px_salida)} (${esc(t.salida)}) <span class="num ${cls(t.R)}">${t.R >= 0 ? '+' : ''}${Number(t.R).toFixed(2)} R</span></summary>
+      <div style="padding:6px 0"><p class="foot">SL ${f0(t.sl)} · TP ${t.tp ? f0(t.tp) : '—'} · lote ${t.lote_btc} BTC · riesgo ${f0(t.riesgo_usdt,2)} $ · duración ${t.duracion_min} min · máx. a favor ${Number(t.mfe_R).toFixed(2)} R · máx. en contra ${Number(t.mae_R).toFixed(2)} R</p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
+  } }
+{ const M = D.mp, f0 = (x, d=0) => x == null ? '—' : Number(x).toLocaleString('es-ES', {minimumFractionDigits: d, maximumFractionDigits: d});
+  if (!M) { $('#mpTable').innerHTML = '<tr><td class="dim">La mesa de patrones arranca el 2026-10-06 00:00 UTC.</td></tr>'; }
+  else {
+    const T = Object.entries(M.traders), base = T.filter(([k]) => !k.includes(' · ')), tr = D.mp_trades || [], ab = tr.filter(t => t.abierta), cl = tr.filter(t => !t.abierta);
+    const w = base.reduce((a,[k,v]) => a + v.ganan, 0), l = base.reduce((a,[k,v]) => a + v.pierden, 0), R = base.reduce((a,[k,v]) => a + v.R_total, 0);
+    $('#mpKpis').innerHTML = [[w,'ganadas'],[l,'perdidas'],[ab.filter(t => !t.trader.includes(' · ')).length,'abiertas'],[(R>=0?'+':'')+R.toFixed(2)+' R','R total'],[M.por_dia_total.toFixed(1),'ops/día (7 traders)']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#mpNote').textContent = `Fuente: ${M.fuente}. Última vela cerrada ${String(M.ultima_vela_cerrada).slice(0,16)} UTC. Inicio ${String(M.inicio).slice(0,16)} UTC.`;
+    $('#mpTable').innerHTML = '<tr><th>Trader</th><th>Velas</th><th class="n">Ops</th><th class="n">Ganan/pierden</th><th class="n">R total</th><th class="n">Retorno</th><th class="n">Caída</th><th>Abierta</th></tr>' +
+      T.map(([k,v]) => `<tr><td>${esc(k)}</td><td>${esc(v.temporalidad)}</td><td class="n num">${v.cerradas}</td><td class="n num">${v.ganan} / ${v.pierden}</td><td class="n num ${cls(v.R_total)}">${v.R_total.toFixed(2)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td>${v.abierta ? `<span class="pill gold">${esc(v.abierta.lado)} @ ${Number(v.abierta.px_entrada).toFixed(0)}</span>` : '—'}</td></tr>`).join('');
+    const px = M.precio_actual;
+    $('#mpOpen').innerHTML = ab.length ? ab.map(t => { const dir = t.lado === 'LARGO' ? 1 : -1, rk = Math.abs(t.px_entrada - t.sl), rNow = (px - t.px_entrada) * dir / rk, usd = (px - t.px_entrada) * dir * t.lote_btc;
+      return `<div class="card dept"><h3><span>${esc(t.trader)}</span><span class="pill gold">${t.lado}</span></h3><p>Abrió ${esc(String(t.abre).slice(0,16))} UTC</p><table><tr><td>Entrada</td><td class="n num">${f0(t.px_entrada)}</td></tr><tr><td>Stop (SL)</td><td class="n num neg">${f0(t.sl)}</td></tr><tr><td>Objetivo (TP)</td><td class="n num pos">${t.tp ? f0(t.tp) : 'sin TP'}</td></tr><tr><td>Lote</td><td class="n num">${t.lote_btc} BTC · ${f0(t.nocional_usdt)} USDT</td></tr><tr><td>Resultado ahora</td><td class="n num ${cls(rNow)}">${rNow >= 0 ? '+' : ''}${rNow.toFixed(2)} R · ${usd >= 0 ? '+' : ''}${usd.toFixed(2)} USDT</td></tr></table></div>`; }).join('') : '<div class="card"><p class="dim">No hay posiciones abiertas ahora mismo.</p></div>';
+    $('#mpHist').innerHTML = cl.length ? cl.slice(0,60).map(t => `<details style="border-bottom:1px solid var(--line);padding:8px 0"><summary style="cursor:pointer"><span class="mono dim">${esc(String(t.cierra).slice(5,16))}</span> <b>${esc(t.trader)}</b> · ${t.lado} · ${f0(t.px_entrada)} → ${f0(t.px_salida)} (${esc(t.salida)}) <span class="num ${cls(t.R)}">${t.R >= 0 ? '+' : ''}${Number(t.R).toFixed(2)} R</span></summary>
       <div style="padding:6px 0"><p class="foot">SL ${f0(t.sl)} · TP ${t.tp ? f0(t.tp) : '—'} · lote ${t.lote_btc} BTC · riesgo ${f0(t.riesgo_usdt,2)} $ · duración ${t.duracion_min} min · máx. a favor ${Number(t.mfe_R).toFixed(2)} R · máx. en contra ${Number(t.mae_R).toFixed(2)} R</p><ul style="margin:0;padding-left:18px">${(t.lecciones || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></details>`).join('') : '<p class="dim">Aún no hay operaciones cerradas.</p>';
   } }
 

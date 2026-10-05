@@ -91,3 +91,28 @@ Prerregistro: `config/busqueda_v3_prerregistrada.md` (commit fa079ef, ANTES de e
 - Weinstein, máximos anuales y CTA diario tienen R alto pero muy pocas operaciones (5-9 en validación). No se pueden certificar.
 - Total acumulado del proyecto: 1.109 pruebas.
 - Mesa nueva (X01-X09) creada por la regla prerregistrada. Arranca en papel el 2026-10-06 00:00 UTC.
+
+## 2026-10-05 · Búsqueda v4: patrones chartistas, velas japonesas e ineficiencias — pruebas 1110-1517 (408 variantes)
+Prerregistro: `config/busqueda_v4_prerregistrada.md` (commit c78a456, ANTES de ejecutar). Resultados: `reports/busqueda_v4_resultados.md`.
+- Variantes: 408. Elegibles: 31. Al examen: 20. Certificadas: **0**.
+- Aun así es la mejor tanda del proyecto: 12 de las 20 finalistas ganan en el examen, también con costes ×2.
+- Mejores del examen:
+
+| Variante | Ops | Acierto | R examen | Retorno | p Holm |
+|---|---|---|---|---|---|
+| Bandera 4 h, TP 2R | 23 | 65 % | +0,80 | +9,1 % | 0,12 |
+| Bandera 4 h, TP 3R | 22 | 64 % | +0,73 | +8,4 % | 0,44 |
+| Cuatro velas seguidas 4 h, TP 2R | 76 | — | +0,38 | +13,9 % | 0,14 |
+| Triple suelo/techo 1 h, dejar correr | 82 | — | +0,48 | +16,7 % | — |
+| Doble suelo 1 h a favor de tendencia | — | — | +0,28 | — | — |
+
+- Ninguna pasa Holm ni DSR (n_trials = 408).
+- Un «acierto» alto con TP 1R (≈50-70 %) NO da beneficio por sí solo. La mejor salida media fue «dejar correr»: +0,55 / +0,14 R, con un acierto del 30 %.
+- Malos en BTC:
+  - Triángulo descendente.
+  - HCH.
+  - Estrella de la mañana/tarde en 1 h.
+  - Velas en 1 h en general (−0,08 R de media).
+- Mesa de patrones (Y01-Y07) creada por la regla prerregistrada. Empieza el 2026-10-06 00:00 UTC.
+- Repetición con datos de Deribit desde 2025-07: coincide con el examen de Binance. Y04 bandera +0,74 R; Y01 doble suelo +0,26 R.
+- Total acumulado del proyecto: 1.517 pruebas.

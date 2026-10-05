@@ -36,6 +36,7 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
     m15 = _json(data / "mesa15" / "resumen.json"); m15t = (_json(data / "mesa15" / "trades_detalle.json") or [])[:300]; m15l = _json(data / "mesa15" / "aprendices.json")
     m1h = _json(data / "mesa1h" / "resumen.json"); m1ht = (_json(data / "mesa1h" / "trades_detalle.json") or [])[:300]; m1hl = _json(data / "mesa1h" / "aprendices.json")
     mn = _json(data / "mesanueva" / "resumen.json"); mnt = (_json(data / "mesanueva" / "trades_detalle.json") or [])[:300]
+    mp = _json(data / "mesapatrones" / "resumen.json"); mpt = (_json(data / "mesapatrones" / "trades_detalle.json") or [])[:300]
     fh = _json(ROOT / "reports" / "fondos_resultados.json")
     if fh:
         fh = {**fh, "estrategias": {k: {a: b for a, b in v.items() if a not in ("operaciones", "alfa")} for k, v in fh["estrategias"].items()}}
@@ -47,7 +48,7 @@ def payload(data: Path, now: pd.Timestamp | None = None) -> dict:
               "mejoran": len(mh["maker_mejora_en_valid_y_examen"]),
               "positivas_examen": {k: v["periodos"]["examen"]["maker"]["R_media"] for k, v in mh["traders"].items() if v["periodos"]["examen"]["maker"]["R_media"] > 0}}
     fase = {"acum": _json(data / "acumulacion" / "resumen.json"), "k4": _json(data / "cartera" / "resumen.json"), "cartera_hist": ch, "primas": _json(data / "primas" / "resumen.json"), "primas_hist": ph, "maker_hist": mh}
-    return {**fase, "carry": _json(data / "carry" / "resumen.json"), "fondos": _json(data / "fondos" / "resumen.json"), "fondos_hist": fh, "mn": mn, "mn_trades": mnt, "m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
+    return {**fase, "carry": _json(data / "carry" / "resumen.json"), "fondos": _json(data / "fondos" / "resumen.json"), "fondos_hist": fh, "mp": mp, "mp_trades": mpt, "mn": mn, "mn_trades": mnt, "m1h": m1h, "m1h_trades": m1ht, "m1h_aprende": m1hl, "m15": m15, "m15_trades": m15t, "m15_aprende": m15l, "intradia": idr, "intradia_trades": itrades, "aprendizaje": _json(data / "intradia" / "aprendizaje.json"), "nucleo_ordenes": core_rows, "chat_ops": ops, "generado": now.isoformat(), "summary": s, "brief": brief, "chat": chat, "equity": pts, "forward": inc.get("forward", {}),
             "hist": _json(ROOT / "reports" / "incubadora_resultados.json"), "mejoras": _json(ROOT / "reports" / "mejoras_registro.json"), "weekly_md": markdown(s)}
 
 
@@ -59,7 +60,7 @@ def apodar(js: str) -> str:
         return js
     ap = json.loads(f.read_text(encoding="utf-8"))["apodos"]
     js = js.replace("N Núcleo v1", "Núcleo v1").replace("Núcleo v1", f"{ap['Núcleo v1']} — Núcleo v1") if "Núcleo v1" in ap else js
-    return re.sub(r"(?<![\w—] )\b([IPQFBVX]\d\d|K\d)(?= [A-Za-zÁÉÍÓÚáéíóú(])", lambda m: f"{ap[m.group(1)]} — {m.group(1)}" if m.group(1) in ap else m.group(1), js)
+    return re.sub(r"(?<![\w—] )\b([IPQFBVXY]\d\d|K\d)(?= [A-Za-zÁÉÍÓÚáéíóú(])", lambda m: f"{ap[m.group(1)]} — {m.group(1)}" if m.group(1) in ap else m.group(1), js)
 
 
 def fragment(data: Path, now: pd.Timestamp | None = None) -> str:

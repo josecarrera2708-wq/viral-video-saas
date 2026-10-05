@@ -3,6 +3,7 @@
 Se recalcula todo desde el inicio en cada ejecución (idempotente). Entra en la apertura de la vela siguiente a la señal, con el mismo motor y costes."""
 from __future__ import annotations
 import json
+from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
@@ -38,15 +39,16 @@ def resample(bars: pd.DataFrame, f: np.ndarray, tf: str) -> tuple[pd.DataFrame, 
     return o[["open", "high", "low", "close", "volume"]], o["f"].to_numpy()
 
 
-def main(now: pd.Timestamp | None = None) -> dict:
-    now = now or pd.Timestamp.now(tz="UTC"); D.mkdir(parents=True, exist_ok=True); b15, f15 = F.load_bars(now)
-    data = {tf: resample(b15, f15, tf) for tf in IV}; specs = {tf: None for tf in IV}; summ, frames = {}, []
+def main(now: pd.Timestamp | None = None, traders: dict | None = None, D: Path = D, START: pd.Timestamp = START) -> dict:
+    """Corre la mesa `traders` ({nombre: (tf, clave de variante, módulo con variants(df, tf))}). Por defecto, la mesa nueva X01-X09."""
+    traders = traders or TRADERS; now = now or pd.Timestamp.now(tz="UTC"); D.mkdir(parents=True, exist_ok=True); b15, f15 = F.load_bars(now)
+    data = {tf: resample(b15, f15, tf) for tf in IV}; specs = {}; summ, frames = {}, []
     days = max((now - START).total_seconds() / 86400, 1e-9)
-    for name, (tf, key, mod) in TRADERS.items():
+    for name, (tf, key, mod) in traders.items():
         bars, f = data[tf]
-        if specs[tf] is None:
-            specs[tf] = {**v2.variants(bars, tf), **v3.variants(bars, tf)} if tf != "1h" else v3.variants(bars, tf)
-        sp = specs[tf][key]; ctx = context15(bars, *CTX[tf]); live = np.asarray(bars.index + IV[tf] >= START); i0 = int(np.argmax(live)) if live.any() else len(bars)
+        if (tf, mod.__name__) not in specs:
+            specs[(tf, mod.__name__)] = mod.variants(bars, tf)
+        sp = specs[(tf, mod.__name__)][key]; ctx = context15(bars, *CTX[tf]); live = np.asarray(bars.index + IV[tf] >= START); i0 = int(np.argmax(live)) if live.any() else len(bars)
         ent = np.where(live, sp.entry, 0).astype(np.int8); ex = None if sp.exit is None else np.where(live, sp.exit, 0).astype(np.int8)
         r = run(bars["open"], bars["high"], bars["low"], bars["close"], ent, np.nan_to_num(sp.stop, nan=0.0), Params(tp_mult=sp.tp_mult, max_bars=sp.max_bars), exit_sig=ex, funding=f)
         rows = [detail(bars, ctx, name, sp, r, i, sp.tp_mult, sp.max_bars) for i in range(int(r["n_trades"]))]

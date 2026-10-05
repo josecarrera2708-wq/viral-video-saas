@@ -1,5 +1,5 @@
 {
- "nota": "Apodos SOLO de presentación (panel e informes). No cambian reglas, parámetros ni contabilidad. Orden = calidad histórica: Tesla el mejor (núcleo, certificado), Einstein el carry (certificado), luego cartera K4, primas en sombra, fondos por Sharpe y traders de corto plazo por R del examen. Fijos: no se reordenan con los resultados del papel. Mesa nueva (X01-X09, 2026-10-06): exploradores.",
+ "nota": "Apodos SOLO de presentación (panel e informes). No cambian reglas, parámetros ni contabilidad. Orden = calidad histórica: Tesla el mejor (núcleo, certificado), Einstein el carry (certificado), luego cartera K4, primas en sombra, fondos por Sharpe y traders de corto plazo por R del examen. Fijos: no se reordenan con los resultados del papel. Mesa nueva (X01-X09, 2026-10-06): exploradores. Mesa de patrones (Y01-Y07, 2026-10-06): pintores.",
  "apodos": {
   "Núcleo v1": "Nikola Tesla",
   "F06": "Albert Einstein",
@@ -52,6 +52,13 @@
   "X06": "Juan Sebastián Elcano",
   "X07": "Neil Armstrong",
   "X08": "Yuri Gagarin",
-  "X09": "Valentina Tereshkova"
+  "X09": "Valentina Tereshkova",
+  "Y01": "Diego Velázquez",
+  "Y02": "Francisco de Goya",
+  "Y03": "Pablo Picasso",
+  "Y04": "Salvador Dalí",
+  "Y05": "Frida Kahlo",
+  "Y06": "Vincent van Gogh",
+  "Y07": "Claude Monet"
  }
 }
