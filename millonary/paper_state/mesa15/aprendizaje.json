@@ -44,7 +44,7 @@
   "estado": "muestra insuficiente para concluir"
  },
  "P05 Barra interior + tendencia": {
-  "cerradas": 6,
+  "cerradas": 7,
   "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 1,
@@ -99,12 +99,12 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q04 Expansión de volatilidad Garman-Klass": {
-  "cerradas": 5,
-  "perdedoras": 2,
+  "cerradas": 6,
+  "perdedoras": 3,
   "patrones": {
    "nunca_a_favor": 1,
    "stop_barrido": 0,
-   "contra_tendencia": 1,
+   "contra_tendencia": 2,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"

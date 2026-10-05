@@ -1,14 +1,14 @@
 {
- "generado": "2026-10-05 20:13:26.307457+00:00",
- "ultima_vela_cerrada": "2026-10-05 20:00:00+00:00",
+ "generado": "2026-10-05 21:13:33.030640+00:00",
+ "ultima_vela_cerrada": "2026-10-05 21:00:00+00:00",
  "inicio": "2026-09-29 16:30:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL 1 h (velas cerradas)",
  "funding_disponible": true,
- "precio_actual": 85749.0,
+ "precio_actual": 85783.0,
  "traders": {
   "I01 Rango asi\u00e1tico \u2192 Londres/NY": {
    "cerradas": 3,
-   "por_dia": 0.48739549788239017,
+   "por_dia": 0.4841122370334696,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -21,8 +21,8 @@
    "R_media": 0.8070518246417945,
    "R_total": 2.4211554739253835,
    "pnl_usdt": 9.602716559117686,
-   "equity": 1007.8321601534419,
-   "retorno": 0.007832160153441903,
+   "equity": 1007.7302487759706,
+   "retorno": 0.007730248775970505,
    "caida_max": 0.007269501112415533,
    "p_R_positiva": null,
    "abierta": {
@@ -37,16 +37,16 @@
     "nocional_usdt": 255.77833410000002,
     "riesgo_usdt": 4.1864937879971755,
     "stop_pct": 0.01636766383176305,
-    "px_salida": 85766.1498,
+    "px_salida": 85800.1566,
     "salida": "end",
-    "R": -0.42292106362411674,
-    "pnl_usdt": -1.770556405675523,
-    "comision_usdt": 0.25653839175,
-    "funding_usdt": 0.006097286074452707,
-    "barras": 4,
+    "R": -0.4472639583307859,
+    "pnl_usdt": -1.8724677831468628,
+    "comision_usdt": 0.25658940195,
+    "funding_usdt": 0.00625731880312143,
+    "barras": 5,
     "max_barras": 12,
     "mfe_R": 0.21493740241055123,
-    "mae_R": 0.3959556573934409,
+    "mae_R": 0.44432548910812647,
     "post_stop_R": NaN,
     "tendencia_a_favor": null,
     "vol_percentil": 0.5,
@@ -57,7 +57,7 @@
   },
   "I02 Ruptura Donchian 24 h": {
    "cerradas": 6,
-   "por_dia": 0.9747909957647803,
+   "por_dia": 0.9682244740669392,
    "ganan": 3,
    "pierden": 3,
    "salidas": {
@@ -79,7 +79,7 @@
   },
   "I03 Bollinger + RSI (reversi\u00f3n)": {
    "cerradas": 5,
-   "por_dia": 0.8123258298039836,
+   "por_dia": 0.806853728389116,
    "ganan": 2,
    "pierden": 3,
    "salidas": {
@@ -101,7 +101,7 @@
   },
   "I04 Reversi\u00f3n a VWAP diaria": {
    "cerradas": 9,
-   "por_dia": 1.4621864936471705,
+   "por_dia": 1.4523367111004089,
    "ganan": 3,
    "pierden": 6,
    "salidas": {
@@ -123,7 +123,7 @@
   },
   "I05 Cruce EMA 9/21 + EMA200": {
    "cerradas": 6,
-   "por_dia": 0.9747909957647803,
+   "por_dia": 0.9682244740669392,
    "ganan": 2,
    "pierden": 4,
    "salidas": {
@@ -145,7 +145,7 @@
   },
   "I06 RSI(2) retroceso": {
    "cerradas": 4,
-   "por_dia": 0.6498606638431869,
+   "por_dia": 0.6454829827112928,
    "ganan": 2,
    "pierden": 2,
    "salidas": {
@@ -167,7 +167,7 @@
   },
   "I07 Ruptura tras squeeze": {
    "cerradas": 3,
-   "por_dia": 0.48739549788239017,
+   "por_dia": 0.4841122370334696,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -189,7 +189,7 @@
   },
   "I08 Ruptura del m\u00e1x./m\u00edn. de ayer": {
    "cerradas": 3,
-   "por_dia": 0.48739549788239017,
+   "por_dia": 0.4841122370334696,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -211,7 +211,7 @@
   },
   "I09 Supertrend 10/3": {
    "cerradas": 2,
-   "por_dia": 0.32493033192159343,
+   "por_dia": 0.3227414913556464,
    "ganan": 0,
    "pierden": 2,
    "salidas": {
@@ -233,7 +233,7 @@
   },
   "I10 R\u00e1faga de momentum": {
    "cerradas": 6,
-   "por_dia": 0.9747909957647803,
+   "por_dia": 0.9682244740669392,
    "ganan": 2,
    "pierden": 4,
    "salidas": {
@@ -246,8 +246,8 @@
    "R_media": -0.3727802531612278,
    "R_total": -2.2366815189673668,
    "pnl_usdt": -8.495198944585962,
-   "equity": 989.6638800584224,
-   "retorno": -0.010336119941577682,
+   "equity": 989.3921163851655,
+   "retorno": -0.010607883614834446,
    "caida_max": 0.014153575784309425,
    "p_R_positiva": null,
    "abierta": {
@@ -262,16 +262,16 @@
     "nocional_usdt": 684.9549816000001,
     "riesgo_usdt": 3.698353027826356,
     "stop_pct": 0.0053994103659006885,
-    "px_salida": 85766.1498,
+    "px_salida": 85800.1566,
     "salida": "end",
-    "R": -0.4977677855901246,
-    "pnl_usdt": -1.8409209969916576,
-    "comision_usdt": 0.6855420900000001,
-    "funding_usdt": 0.0188378930082791,
-    "barras": 5,
+    "R": -0.5712501360342709,
+    "pnl_usdt": -2.1126846702485635,
+    "comision_usdt": 0.6856781172000002,
+    "funding_usdt": 0.019264646951395695,
+    "barras": 6,
     "max_barras": 6,
     "mfe_R": 1.4273871532222788,
-    "mae_R": 0.4166769338690336,
+    "mae_R": 0.5626878733161463,
     "post_stop_R": NaN,
     "tendencia_a_favor": null,
     "vol_percentil": 0.482,
@@ -282,7 +282,7 @@
   },
   "I11 Ruptura fallida": {
    "cerradas": 12,
-   "por_dia": 1.9495819915295607,
+   "por_dia": 1.9364489481338785,
    "ganan": 4,
    "pierden": 8,
    "salidas": {
@@ -295,8 +295,8 @@
    "R_media": -0.5286311771615685,
    "R_total": -6.343574125938822,
    "pnl_usdt": -20.426636001260807,
-   "equity": 982.054408788815,
-   "retorno": -0.017945591211184997,
+   "equity": 982.3257916620718,
+   "retorno": -0.01767420833792821,
    "caida_max": 0.024215893710555658,
    "p_R_positiva": 0.07758822301444418,
    "abierta": {
@@ -311,15 +311,15 @@
     "nocional_usdt": 682.6805088,
     "riesgo_usdt": 3.9708270332183484,
     "stop_pct": 0.00581652322284428,
-    "px_salida": 85731.8502,
+    "px_salida": 85765.8434,
     "salida": "end",
-    "R": 0.6248181472827703,
-    "pnl_usdt": 2.4810447900758277,
-    "comision_usdt": 0.6842676552,
-    "funding_usdt": -0.008980354724226598,
-    "barras": 3,
+    "R": 0.6931623161389253,
+    "pnl_usdt": 2.752427663332688,
+    "comision_usdt": 0.684403628,
+    "funding_usdt": -0.009407108667343192,
+    "barras": 4,
     "max_barras": 12,
-    "mfe_R": 0.9608807354440716,
+    "mfe_R": 1.096872556664834,
     "mae_R": 0.2318179040032075,
     "post_stop_R": NaN,
     "tendencia_a_favor": null,
@@ -331,7 +331,7 @@
   },
   "I12 Ichimoku 1 h": {
    "cerradas": 5,
-   "por_dia": 0.8123258298039836,
+   "por_dia": 0.806853728389116,
    "ganan": 1,
    "pierden": 4,
    "salidas": {
@@ -344,8 +344,8 @@
    "R_media": -0.5304343006953014,
    "R_total": -2.6521715034765068,
    "pnl_usdt": -10.307415043846703,
-   "equity": 989.6532866546488,
-   "retorno": -0.0103467133453512,
+   "equity": 989.7889780912773,
+   "retorno": -0.010211021908722695,
    "caida_max": 0.01793345403866753,
    "p_R_positiva": null,
    "abierta": {
@@ -360,15 +360,15 @@
     "nocional_usdt": 342.6145092,
     "riesgo_usdt": 3.698353027826356,
     "stop_pct": 0.010794502067241571,
-    "px_salida": 85731.8502,
+    "px_salida": 85765.8434,
     "salida": "end",
-    "R": -0.010625892446834557,
-    "pnl_usdt": -0.03929830150410779,
-    "comision_usdt": 0.342770955,
-    "funding_usdt": -0.00941894650413955,
-    "barras": 5,
+    "R": 0.026063800399545957,
+    "pnl_usdt": 0.09639313512432257,
+    "comision_usdt": 0.3428389414,
+    "funding_usdt": -0.009632323475697847,
+    "barras": 6,
     "max_barras": 48,
-    "mfe_R": 0.17128997562797627,
+    "mfe_R": 0.24429544535153264,
     "mae_R": 0.75074206791768,
     "post_stop_R": NaN,
     "tendencia_a_favor": null,
@@ -380,7 +380,7 @@
   },
   "I13 Parabolic SAR + EMA200": {
    "cerradas": 5,
-   "por_dia": 0.8123258298039836,
+   "por_dia": 0.806853728389116,
    "ganan": 4,
    "pierden": 1,
    "salidas": {
@@ -402,7 +402,7 @@
   },
   "I14 Apertura de Nueva York": {
    "cerradas": 3,
-   "por_dia": 0.48739549788239017,
+   "por_dia": 0.4841122370334696,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -424,11 +424,11 @@
   }
  },
  "trades_totales": 72,
- "por_dia_total": 11.697491949177364,
+ "por_dia_total": 11.618693688803274,
  "mejoras": {
   "I02 Ruptura Donchian 24 h|M5 dejar correr": {
    "cerradas": 4,
-   "por_dia": 0.6498606638431869,
+   "por_dia": 0.6454829827112928,
    "ganan": 0,
    "pierden": 4,
    "salidas": {
@@ -453,7 +453,7 @@
   },
   "I07 Ruptura tras squeeze|M5 dejar correr": {
    "cerradas": 3,
-   "por_dia": 0.48739549788239017,
+   "por_dia": 0.4841122370334696,
    "ganan": 2,
    "pierden": 1,
    "salidas": {
@@ -478,7 +478,7 @@
   },
   "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M2 stops \u00d72": {
    "cerradas": 3,
-   "por_dia": 0.48739549788239017,
+   "por_dia": 0.4841122370334696,
    "ganan": 1,
    "pierden": 2,
    "salidas": {
@@ -503,7 +503,7 @@
   },
   "I10 R\u00e1faga de momentum|M2 stops \u00d72": {
    "cerradas": 6,
-   "por_dia": 0.9747909957647803,
+   "por_dia": 0.9682244740669392,
    "ganan": 1,
    "pierden": 5,
    "salidas": {
@@ -516,9 +516,9 @@
    "R_media": -0.5312835013133067,
    "R_total": -3.1877010078798405,
    "pnl_usdt": -13.368023186118787,
-   "equity": 985.7115163153851,
-   "retorno": -0.014288483684614883,
-   "caida_max": 0.014288483684614883,
+   "equity": 985.5756344787567,
+   "retorno": -0.014424365521243265,
+   "caida_max": 0.014424365521243265,
    "p_R_positiva": null,
    "abierta": {
     "trader": "I10 R\u00e1faga de momentum|M2 stops \u00d72",
@@ -532,16 +532,16 @@
     "nocional_usdt": 342.47749080000006,
     "riesgo_usdt": 3.698353027826356,
     "stop_pct": 0.010798820731801377,
-    "px_salida": 85766.1498,
+    "px_salida": 85800.1566,
     "salida": "end",
-    "R": -0.2488838927950623,
-    "pnl_usdt": -0.9204604984958288,
-    "comision_usdt": 0.34277104500000005,
-    "funding_usdt": 0.00941894650413955,
-    "barras": 5,
+    "R": -0.28562506801713544,
+    "pnl_usdt": -1.0563423351242818,
+    "comision_usdt": 0.3428390586000001,
+    "funding_usdt": 0.009632323475697847,
+    "barras": 6,
     "max_barras": 6,
     "mfe_R": 0.7136935766111394,
-    "mae_R": 0.2083384669345168,
+    "mae_R": 0.28134393665807317,
     "post_stop_R": NaN,
     "tendencia_a_favor": null,
     "vol_percentil": 0.482,

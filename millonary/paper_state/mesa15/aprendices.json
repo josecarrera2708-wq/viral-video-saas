@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-05 20:13:31.190731+00:00",
+ "generado": "2026-10-05 21:13:37.471134+00:00",
  "reglas": {
   "A": "n ≥ 6 con operaciones propias",
   "C": "n ≥ 15 con operaciones de toda la sala",
@@ -504,8 +504,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -532,8 +532,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -553,8 +553,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -636,8 +636,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -664,8 +664,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -685,8 +685,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -768,8 +768,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -796,8 +796,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -817,8 +817,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -900,8 +900,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -928,8 +928,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -949,8 +949,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1032,8 +1032,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1060,8 +1060,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1081,8 +1081,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1164,8 +1164,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1192,8 +1192,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1213,8 +1213,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1296,8 +1296,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1324,8 +1324,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1345,8 +1345,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1428,8 +1428,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1456,8 +1456,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1477,8 +1477,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1560,8 +1560,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1588,8 +1588,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1609,8 +1609,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1692,8 +1692,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1720,8 +1720,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1741,8 +1741,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1759,8 +1759,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 403,
-     "R_media": -0.025624239284679697,
+     "n": 404,
+     "R_media": -0.026439096799635266,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1787,8 +1787,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 818,
-     "R_media": -0.06423770644776058,
+     "n": 819,
+     "R_media": -0.06459251593357129,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1808,8 +1808,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 615,
-     "R_media": -0.0604130630789191,
+     "n": 616,
+     "R_media": -0.060891007254646065,
      "vetado": false,
      "vetado_desde": "2022-07-18 23:00:00+00:00"
     }
@@ -1824,8 +1824,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1852,8 +1852,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1873,8 +1873,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -1956,8 +1956,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -1984,8 +1984,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -2005,8 +2005,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
@@ -2088,8 +2088,8 @@
     },
     {
      "contexto": "en contra de la tendencia",
-     "n": 9039,
-     "R_media": -0.3462795105915564,
+     "n": 9040,
+     "R_media": -0.3462804560743811,
      "vetado": false,
      "vetado_desde": null
     },
@@ -2116,8 +2116,8 @@
     },
     {
      "contexto": "volatilidad alta",
-     "n": 8112,
-     "R_media": -0.21630558757496585,
+     "n": 8113,
+     "R_media": -0.21632266154116228,
      "vetado": false,
      "vetado_desde": null
     },
@@ -2137,8 +2137,8 @@
     },
     {
      "contexto": "sesión EE. UU. (14-22 UTC)",
-     "n": 7696,
-     "R_media": -0.29011956693054236,
+     "n": 7697,
+     "R_media": -0.29012797372648835,
      "vetado": false,
      "vetado_desde": null
     }
