@@ -14,6 +14,7 @@ las rutas relativas de cada skill se refieren a esa carpeta (cada skill lo indic
 | `creador-de-kits` | Crear nuevos kits de Claude Code (kit 08) | `/nuevo-kit`, `/revisa-kit`, `/empaqueta` |
 
 - Agente `kit-onboarding`: diagnóstico técnico del agente de WhatsApp (kit 02, `kits/02-kit-agente-whatsapp`).
+- Agente `doctor-pc`: diagnostica y arregla problemas del PC (audio, auriculares, micro). Comando `/doctor-pc`. Hay que usarlo con Claude Code instalado en tu PC, no en la nube.
 - Comandos del kit 02: `/kit-agente-whatsapp-setup`, `/whatsapp-personaliza`, `/whatsapp-deploy`.
 - Cada kit tiene su `/kit-<nombre>-setup` para instalar dependencias.
 - Los permisos amplios de cada kit (`curl`, `python`, `powershell`) NO se activaron globalmente: Claude pedirá confirmación.
