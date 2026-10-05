@@ -5,7 +5,8 @@ OUT = os.environ.get("OUT_DIR", f"{BASE}/video/musculo-01")
 TMP = os.environ.get("VOZ_TMP", "/tmp/voz_partes")
 VOICE = os.environ.get("VOICE_ID", "9b67072c-d46c-465d-87dc-f7a1c6db2bf3")
 SPEED = float(os.environ.get("VOICE_SPEED", "1.05"))
-PAUSA = 0.45
+PAUSA = float(os.environ.get("PAUSA", "0.55"))
+PAUSA_MAX = float(os.environ.get("PAUSA_MAX", "0.4"))  # tope de pausa interna (s)
 os.makedirs(TMP, exist_ok=True)
 txt = open(SRC, encoding="utf-8").read()
 secciones = re.split(r"\n## (\d+)\. .*\n", txt)[1:]
@@ -28,15 +29,26 @@ def tts(i, t):
             open(f, "wb").write(r.content); return f
         print(i, r.status_code, r.text[:200], file=sys.stderr)
     raise SystemExit("fallo TTS")
+def limpiar(f):
+    """Recorta silencio inicial, limita pausas internas largas y suaviza bordes (evita saltos/cortes secos)."""
+    g = f.replace(".mp3", "_c.wav")
+    if os.path.exists(g): return g
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-i",f,"-af",
+        f"silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.06:stop_periods=-1:stop_duration=0.5:stop_threshold=-45dB:stop_silence={PAUSA_MAX},afade=t=in:d=0.012",
+        "-ar","44100","-ac","1",g],check=True)
+    d = float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",g]).decode())
+    h = g.replace("_c.wav","_f.wav")
+    subprocess.run(["ffmpeg","-y","-loglevel","error","-i",g,"-af",f"afade=t=out:st={max(d-0.04,0):.3f}:d=0.04",h],check=True)
+    os.replace(h, g); return g
 def dur(f):
     return float(subprocess.check_output(["ffprobe","-v","error","-show_entries","format=duration","-of","csv=p=0",f]).decode())
 print(len(bloques), "bloques", sum(len(t) for _, t in bloques), "caracteres")
 if "--dry" in sys.argv: raise SystemExit
-sil = f"{TMP}/sil.mp3"
-subprocess.run(["ffmpeg","-y","-loglevel","error","-f","lavfi","-i","anullsrc=r=44100:cl=mono","-t",str(PAUSA),"-b:a","128k",sil],check=True)
+sil = f"{TMP}/sil.wav"
+subprocess.run(["ffmpeg","-y","-loglevel","error","-f","lavfi","-i","anullsrc=r=44100:cl=mono","-t",str(PAUSA),"-ar","44100",sil],check=True)
 t0, tiempos, lista = 0.0, [], []
 for i, (n, t) in enumerate(bloques):
-    f = tts(i, t); d = dur(f)
+    f = limpiar(tts(i, t)); d = dur(f)
     tiempos.append({"seccion": n, "texto": t, "inicio": round(t0, 2), "fin": round(t0 + d, 2)})
     lista += [f, sil]; t0 += d + PAUSA
 open(f"{TMP}/lista.txt", "w").write("".join(f"file '{x}'\n" for x in lista))
