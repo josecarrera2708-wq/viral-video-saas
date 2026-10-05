@@ -27,7 +27,8 @@ HELIUS = "https://mainnet.helius-rpc.com"
 TRACK_DAYS = 14          # días que se sigue el precio de cada token comprado
 POLL_S = int(os.environ.get("SENALES_POLL_S", "90"))   # sondeo de respaldo por si se pierde un aviso
 NOTIFY_MAX_AGE = 900     # solo se avisa de operaciones de los últimos 15 min
-S = {"client": None, "market": None, "queue": None, "last_hook": 0, "last_poll": 0, "fails": {}}
+S = {"client": None, "market": None, "queue": None, "last_hook": 0, "last_poll": 0, "fails": {},
+     "bg": set(), "busy": set(), "tried": {}}
 
 
 # ---------- utilidades ----------
@@ -153,6 +154,144 @@ async def push(title, body, url="/", tag=None):
 
 
 # ---------- operaciones ----------
+def bg(coro):
+    """Lanza una tarea en segundo plano sin que se pierda (asyncio solo guarda referencias débiles)."""
+    t = asyncio.create_task(coro)
+    S["bg"].add(t)
+
+    def done(t):
+        S["bg"].discard(t)
+        if not t.cancelled() and t.exception():
+            log.warning("tarea en segundo plano: %r", t.exception())
+    t.add_done_callback(done)
+    return t
+
+
+async def rpc_any(method, params):
+    for url in rpc_urls():
+        r = await chain.rpc(S["client"], url, method, params)
+        if r is not None:
+            return r
+    return None
+
+
+async def record(tr, w, source):
+    """Guarda una compra o venta y actualiza la posición de la wallet en ese token."""
+    info = await S["market"].token(tr["mint"])
+    mc = tr["price"] * info["supply"] if info["supply"] else None
+    db.x("insert or ignore into trades(sig, wallet, mint, side, t, amount, usd, sol, price, mc, sym) values(?,?,?,?,?,?,?,?,?,?,?)",
+         (tr["sig"], tr["wallet"], tr["mint"], tr["side"], tr["t"], tr["amount"], tr["usd"], tr["sol"], tr["price"], mc, info["sym"]))
+    pos = db.q("select * from positions where wallet=? and mint=?", (tr["wallet"], tr["mint"]), one=True)
+    if tr["side"] == "buy":
+        if not pos:
+            db.x("insert into positions(wallet, mint, sym, icon, first_t, entry_price, entry_mc, usd_in, max_price, max_t, last_price, last_t, supply) "
+                 "values(?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                 (tr["wallet"], tr["mint"], info["sym"], info["icon"], tr["t"], tr["price"], mc, tr["usd"],
+                  tr["price"], tr["t"], tr["price"], tr["t"], info["supply"]))
+        elif tr["t"] < pos["first_t"]:  # compra más antigua encontrada al buscar en el historial
+            db.x("update positions set usd_in=usd_in+?, first_t=?, entry_price=?, entry_mc=?, bf=null where wallet=? and mint=?",
+                 (tr["usd"], tr["t"], tr["price"], mc, tr["wallet"], tr["mint"]))
+        else:
+            db.x("update positions set usd_in=usd_in+? where wallet=? and mint=?", (tr["usd"], tr["wallet"], tr["mint"]))
+    elif pos:
+        db.x("update positions set usd_out=usd_out+? where wallet=? and mint=?", (tr["usd"], tr["wallet"], tr["mint"]))
+    log.info("%s %s %s %s via %s", w["name"], tr["side"], info["sym"], tr["usd"], source)
+    return info, mc
+
+
+def cost_basis(wallet, mint, t):
+    """Precio medio de las compras vistas hasta `t`, tokens que cubren y tokens vendidos hasta `t`."""
+    b = db.q("select sum(usd) u, sum(amount) a from trades where wallet=? and mint=? and side='buy' and t<=?", (wallet, mint, t), one=True)
+    s = db.q("select sum(amount) a from trades where wallet=? and mint=? and side='sell' and t<=?", (wallet, mint, t), one=True)
+    return (b["u"] / b["a"] if b["a"] else None), (b["a"] or 0), (s["a"] or 0)
+
+
+async def backfill_buys(tr, acct=None):
+    """Busca en el historial de la cuenta de ese token las compras que no vimos (anteriores a vigilarla)."""
+    w = {x["addr"]: x for x in wallets_cfg(False)}.get(tr["wallet"])
+    if not w:
+        return
+    if not acct:
+        tx = await rpc_any("getTransaction", [tr["sig"], {"encoding": "json", "maxSupportedTransactionVersion": 1}])
+        if not tx:
+            raise RuntimeError("no se pudo leer la venta")
+        acct = (chain.parse_tx(tx) or {}).get("acct", {}).get((tr["wallet"], tr["mint"]))
+        if not acct:
+            return
+    sigs = await rpc_any("getSignaturesForAddress", [acct, {"limit": 100, "before": tr["sig"]}])
+    if sigs is None:
+        raise RuntimeError("no se pudo leer el historial")
+    for s in reversed(sigs[:60]):
+        sig = s["signature"]
+        if s.get("err") or db.q("select 1 from trades where sig=? and wallet=?", (sig, tr["wallet"]), one=True):
+            continue
+        tx = await rpc_any("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 1}])
+        p = chain.parse_tx(tx)
+        if not p:
+            continue
+        sol_usd = await S["market"].sol_usd_at(p["t"])
+        mine = {w["addr"]: w}
+        found = [x for x in chain.detect(p, mine, sol_usd) if x["mint"] == tr["mint"]] or \
+                [x for x in chain.detect(p, mine, sol_usd, infer_payer=True) if x["mint"] == tr["mint"]]
+        for x in found:
+            db.x("insert or ignore into seen(sig, t) values(?, ?)", (sig, int(time.time())))
+            await record(x, w, "historial")
+
+
+async def sell_entry(tr, acct=None):
+    """Precio medio al que la wallet compró lo que ahora vende (0 si no se encuentra la compra)."""
+    key = (tr["sig"], tr["wallet"], tr["mint"])
+    while key in S["busy"]:
+        await asyncio.sleep(1)
+    row = db.q("select entry from trades where sig=? and wallet=? and mint=?", key, one=True)
+    if row and row["entry"] is not None:
+        return row["entry"]
+    S["busy"].add(key)
+    try:
+        e, have, sold = cost_basis(tr["wallet"], tr["mint"], tr["t"])
+        if not e or have < 0.9 * sold:
+            await backfill_buys(tr, acct)
+            e, have, sold = cost_basis(tr["wallet"], tr["mint"], tr["t"])
+        e = e or 0
+        db.x("update trades set entry=? where sig=? and wallet=? and mint=?", (e,) + key)
+        return e
+    finally:
+        S["busy"].discard(key)
+
+
+def gain(tr, entry):
+    """Ganancia de una venta en dólares y en x sobre su precio medio de compra."""
+    if not entry:
+        return None, None
+    return tr["usd"] - tr["amount"] * entry, tr["price"] / entry
+
+
+async def notify(tr, w, info, mc, entry=None):
+    verb = "COMPRA" if tr["side"] == "buy" else "VENDE"
+    body = f"{fmt_usd(tr['usd'])}"
+    if tr["sol"] >= 0.05:
+        body += f" ({tr['sol']:.2f} SOL)"
+    body += f" · {hhmm(tr['t'])} · precio {fmt_price(tr['price'])} · MC {fmt_usd(mc)}"
+    if tr["side"] == "buy" and mc:
+        body += f" · x2 = MC {fmt_usd(2 * mc)}"
+    pnl, xs = gain(tr, entry)
+    if pnl is not None:
+        body += f" · {'ganó' if pnl >= 0 else 'perdió'} {fmt_usd(abs(pnl))} (x{xs:.2f})"
+    await push(f"{w['name'].upper()} {verb} {info['sym']}", body, url=f"/#t/{tr['mint']}", tag=tr["sig"])
+
+
+async def finish_sell(tr, w, info, mc, acct, fresh):
+    """Calcula la ganancia de la venta y avisa. El aviso espera como mucho 20 s a la búsqueda de la compra."""
+    task = bg(sell_entry(tr, acct))
+    entry = None
+    try:
+        entry = await asyncio.wait_for(asyncio.shield(task), 20)
+    except Exception:
+        pass
+    if fresh:
+        await notify(tr, w, info, mc, entry)
+
+
 async def process_tx(tx, source="hook"):
     p = chain.parse_tx(tx)
     if not p or not p["sig"]:
@@ -163,34 +302,33 @@ async def process_tx(tx, source="hook"):
     ws = {w["addr"]: w for w in wallets_cfg()}
     if not ws:
         return
-    trades = chain.detect(p, ws, await S["market"].sol_usd())
-    for tr in trades:
-        info = await S["market"].token(tr["mint"])
-        mc = tr["price"] * info["supply"] if info["supply"] else None
-        db.x("insert or ignore into trades(sig, wallet, mint, side, t, amount, usd, sol, price, mc, sym) values(?,?,?,?,?,?,?,?,?,?,?)",
-             (tr["sig"], tr["wallet"], tr["mint"], tr["side"], tr["t"], tr["amount"], tr["usd"], tr["sol"], tr["price"], mc, info["sym"]))
-        pos = db.q("select * from positions where wallet=? and mint=?", (tr["wallet"], tr["mint"]), one=True)
-        if tr["side"] == "buy":
-            if not pos:
-                db.x("insert into positions(wallet, mint, sym, icon, first_t, entry_price, entry_mc, usd_in, max_price, max_t, last_price, last_t, supply) "
-                     "values(?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                     (tr["wallet"], tr["mint"], info["sym"], info["icon"], tr["t"], tr["price"], mc, tr["usd"],
-                      tr["price"], tr["t"], tr["price"], tr["t"], info["supply"]))
-            else:
-                db.x("update positions set usd_in=usd_in+? where wallet=? and mint=?", (tr["usd"], tr["wallet"], tr["mint"]))
-        elif pos:
-            db.x("update positions set usd_out=usd_out+? where wallet=? and mint=?", (tr["usd"], tr["wallet"], tr["mint"]))
+    for tr in chain.detect(p, ws, await S["market"].sol_usd_at(p["t"])):
         w = ws[tr["wallet"]]
-        log.info("%s %s %s %s via %s", w["name"], tr["side"], info["sym"], tr["usd"], source)
-        if time.time() - tr["t"] <= NOTIFY_MAX_AGE:
-            verb = "COMPRA" if tr["side"] == "buy" else "VENDE"
-            body = f"{fmt_usd(tr['usd'])}"
-            if tr["sol"] >= 0.05:
-                body += f" ({tr['sol']:.2f} SOL)"
-            body += f" · {hhmm(tr['t'])} · precio {fmt_price(tr['price'])} · MC {fmt_usd(mc)}"
-            if tr["side"] == "buy" and mc:
-                body += f" · x2 = MC {fmt_usd(2 * mc)}"
-            await push(f"{w['name'].upper()} {verb} {info['sym']}", body, url=f"/#t/{tr['mint']}", tag=tr["sig"])
+        info, mc = await record(tr, w, source)
+        fresh = time.time() - tr["t"] <= NOTIFY_MAX_AGE
+        if tr["side"] == "sell":
+            bg(finish_sell(tr, w, info, mc, p["acct"].get((tr["wallet"], tr["mint"])), fresh))
+        elif fresh:
+            await notify(tr, w, info, mc)
+
+
+async def entries():
+    """Respaldo: ventas a las que aún les falta el precio de compra (p. ej. si falló la red)."""
+    while True:
+        try:
+            now = int(time.time())
+            for t in db.q("select * from trades where side='sell' and entry is null and t > ? order by t desc limit 5", (now - 30 * 86400,)):
+                key = (t["sig"], t["wallet"], t["mint"])
+                if S["tried"].get(key, 0) > now - 3600 or key in S["busy"]:
+                    continue
+                S["tried"][key] = now
+                try:
+                    await asyncio.wait_for(sell_entry(t), 180)
+                except Exception:
+                    log.exception("no se pudo calcular la ganancia de una venta")
+        except Exception:
+            log.exception("error en el respaldo de ganancias")
+        await asyncio.sleep(60)
 
 
 async def worker():
@@ -338,7 +476,7 @@ async def lifespan(app):
     if db.get("setup_token"):
         with open(os.path.join(db.DATA, "codigo_inicial.txt"), "w") as f:
             f.write(db.get("setup_token") + "\n")
-    tasks = [asyncio.create_task(t()) for t in (worker, poller, tracker, daily_summary)]
+    tasks = [asyncio.create_task(t()) for t in (worker, poller, tracker, daily_summary, entries)]
     if db.get("helius_key"):
         asyncio.create_task(sync_webhook())
     yield
@@ -439,6 +577,8 @@ async def feed(req: Request, limit: int = 150, mint: str = ""):
         if r["side"] == "buy" and r["price"]:
             r["x_now"] = (r["last_price"] or r["price"]) / r["price"]
             r["x_max"] = max(1.0, (r["max_price"] or r["price"]) / r["price"])
+        elif r["side"] == "sell":
+            r["pnl"], r["x_sell"] = gain(r, r["entry"])
     return rows
 
 

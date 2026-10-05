@@ -84,9 +84,14 @@ function tradeRow(r) {
   return `<div class="trow" onclick="location.hash='t/${r.mint}'">
     <span class="side ${r.side}">${buy ? 'COMPRA' : 'VENDE'}</span>
     <div class="l1"><span class="sym">${esc(r.sym)}</span><span class="who">${esc(r.name)}</span></div>
-    <div class="xr">${buy ? xs(r.x_now) + `<small>máx ${r.x_max ? 'x' + r.x_max.toFixed(2) : '—'}</small>` : `<span class="muted">${usd(r.usd)}</span>`}</div>
+    <div class="xr">${buy ? xs(r.x_now) + `<small>máx ${r.x_max ? 'x' + r.x_max.toFixed(2) : '—'}</small>` : sellGain(r)}</div>
     <div class="l2">${hm(r.t)} · ${usd(r.usd)}${r.sol >= 0.05 ? ' (' + r.sol.toFixed(2) + ' SOL)' : ''} · MC ${usd(r.mc)}</div>
   </div>`;
+}
+function pnlTxt(v) { return `<b class="${v >= 0 ? 'up' : 'dn'}">${v >= 0 ? 'ganó' : 'perdió'} ${usd(Math.abs(v))}</b>`; }
+function sellGain(r) {
+  if (r.pnl != null) return xs(r.x_sell) + `<small>${pnlTxt(r.pnl)}</small>`;
+  return `<span class="muted">${usd(r.usd)}</span><small>${r.entry === 0 ? 'compra no vista' : 'buscando compra…'}</small>`;
 }
 async function loadFeed() {
   try { FEED = await api('/api/feed?limit=200'); } catch (e) { return; }
@@ -128,7 +133,8 @@ async function loadToken() {
   let rows = [];
   try { rows = await api('/api/feed?mint=' + encodeURIComponent(mint)); } catch (e) { return; }
   const sym = rows[0]?.sym || mint.slice(0, 6);
-  const buy = rows.find(r => r.side === 'buy');
+  const buys = rows.filter(r => r.side === 'buy'), buy = buys[buys.length - 1];
+  const sold = rows.filter(r => r.side === 'sell' && r.pnl != null), pnl = sold.reduce((a, r) => a + r.pnl, 0);
   $('#token').innerHTML = `<div class="card">
     <h1>${esc(sym)}</h1>
     <div class="addr">${esc(mint)} <button class="btn sm" onclick="copy('${mint}')">copiar contrato</button></div>
@@ -138,6 +144,7 @@ async function loadToken() {
       <div class="stat"><b>${buy.x_now ? 'x' + buy.x_now.toFixed(2) : '—'}</b><span>ahora</span></div>
       <div class="stat"><b>${buy.x_max ? 'x' + buy.x_max.toFixed(2) : '—'}</b><span>máximo</span></div></div>
       <p class="small muted">Objetivo x2: MC ${usd(buy.mc * 2)} · tu método: vender 50% en x2, 50% del resto en x4…</p>` : ''}
+    ${sold.length ? `<p class="small">Con sus ventas de este token ${pnlTxt(pnl)} (vendió ${usd(sold.reduce((a, r) => a + r.usd, 0))} en ${sold.length} ${sold.length > 1 ? 'ventas' : 'venta'}).</p>` : ''}
     <div class="links">
       <a href="https://gmgn.ai/sol/token/${mint}" target="_blank" rel="noopener">Comprar en GMGN</a>
       <a href="https://jup.ag/swap/SOL-${mint}" target="_blank" rel="noopener">Jupiter</a>

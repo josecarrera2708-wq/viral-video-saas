@@ -17,7 +17,7 @@ create table if not exists sessions(token text primary key, exp integer);
 create table if not exists wallets(addr text primary key, name text, rank integer, origin text,
     note text, payers text default '[]', active integer default 1, added integer);
 create table if not exists trades(sig text, wallet text, mint text, side text, t integer, amount real,
-    usd real, sol real, price real, mc real, sym text, primary key(sig, wallet, mint));
+    usd real, sol real, price real, mc real, sym text, entry real, primary key(sig, wallet, mint));
 create table if not exists positions(wallet text, mint text, sym text, icon text, first_t integer,
     entry_price real, entry_mc real, usd_in real, usd_out real default 0, max_price real, max_t integer,
     last_price real, last_t integer, supply real, bf integer, primary key(wallet, mint));
@@ -31,6 +31,9 @@ with _lock:
     _conn.executescript(SCHEMA)
     if "bf" not in [r[1] for r in _conn.execute("pragma table_info(positions)")]:
         _conn.execute("alter table positions add column bf integer")
+    if "entry" not in [r[1] for r in _conn.execute("pragma table_info(trades)")]:
+        # en las ventas: precio medio al que había comprado (null = por buscar, 0 = no se encontró la compra)
+        _conn.execute("alter table trades add column entry real")
     _conn.commit()
 
 

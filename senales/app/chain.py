@@ -45,7 +45,11 @@ def parse_tx(tx):
     for i, k in enumerate(keys):
         if i < len(pre) and i < len(post) and pre[i] != post[i]:
             sol[k] = (post[i] - pre[i]) / 1e9
-    tok = {}
+    tok, acct = {}, {}
+    for b in (meta.get("preTokenBalances") or []) + (meta.get("postTokenBalances") or []):
+        i = b.get("accountIndex")
+        if isinstance(i, int) and i < len(keys):
+            acct[(b.get("owner"), b["mint"])] = keys[i]
     for b in meta.get("preTokenBalances") or []:
         key = (b.get("owner"), b["mint"])
         tok[key] = tok.get(key, 0) - _num(b)
@@ -55,7 +59,7 @@ def parse_tx(tx):
     tok = {k: v for k, v in tok.items() if abs(v) > 1e-12}
     sigs = tx["transaction"].get("signatures") or []
     return {"sig": sigs[0] if sigs else "", "t": tx.get("blockTime") or int(time.time()),
-            "err": meta.get("err"), "keys": set(keys), "sol": sol, "tok": tok}
+            "err": meta.get("err"), "keys": set(keys), "sol": sol, "tok": tok, "acct": acct}
 
 
 def detect(p, wallets, sol_usd, infer_payer=False):
@@ -104,6 +108,7 @@ class Market:
         self.c = client
         self.meta = {}
         self._sol = (0.0, 0)
+        self.sol_hist = {}
 
     async def sol_usd(self):
         v, t = self._sol
@@ -113,6 +118,30 @@ class Market:
         if p.get(WSOL):
             self._sol = (p[WSOL], time.time())
         return self._sol[0] or 120.0
+
+    async def sol_usd_at(self, t):
+        """Precio de SOL en un momento pasado (vela de 1 min de MEXC; si falla, Coinbase; si no, el actual)."""
+        t = int(t) // 60 * 60
+        if time.time() - t < 600:
+            return await self.sol_usd()
+        if t in self.sol_hist:
+            return self.sol_hist[t]
+        v = None
+        try:
+            r = await self.c.get("https://api.mexc.com/api/v3/klines", headers=UA, timeout=15,
+                                 params={"symbol": "SOLUSDT", "interval": "1m", "startTime": t * 1000, "endTime": (t + 60) * 1000})
+            v = float(r.json()[0][4])
+        except Exception:
+            try:
+                r = await self.c.get("https://api.exchange.coinbase.com/products/SOL-USD/candles", headers=UA, timeout=15,
+                                     params={"granularity": 60, "start": t, "end": t + 60})
+                v = float(r.json()[-1][4])
+            except Exception:
+                pass
+        if not v:
+            return await self.sol_usd()
+        self.sol_hist[t] = v
+        return v
 
     async def prices(self, mints):
         out = {}
