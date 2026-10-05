@@ -201,8 +201,8 @@ def prelist_buyers(mint, T):
 def rpc(method, params):
     urls = [chain.PUBLIC_RPC]
     key = db.get("helius_key")
-    if key:
-        urls.append(f"https://mainnet.helius-rpc.com/?api-key={key}")
+    if key:  # con clave de Helius se usa primero (más rápido y sin límites tan bajos)
+        urls.insert(0, f"https://mainnet.helius-rpc.com/?api-key={key}")
     for url in urls:
         for i in range(4):
             try:
@@ -238,9 +238,9 @@ def history(addr, max_tx=800):
     sel = [x["signature"] for x in ok if x["blockTime"] >= since][:max_tx]
 
     def one(sig):
-        tx = rpc("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 0}])
+        tx = rpc("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 1}])
         return chain.detect(chain.parse_tx(tx), {addr: {}}, sol_usd) if tx else []
-    with ThreadPoolExecutor(6) as ex:
+    with ThreadPoolExecutor(6 if db.get("helius_key") else 2) as ex:
         trades = [t for r in ex.map(one, sel) for t in r]
     return prof, trades
 

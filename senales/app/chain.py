@@ -174,4 +174,4 @@ async def rpc(client, url, method, params):
 
 
 async def get_tx(client, url, sig):
-    return await rpc(client, url, "getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 0}])
+    return await rpc(client, url, "getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 1}])
