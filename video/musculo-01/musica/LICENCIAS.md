@@ -6,3 +6,7 @@ Opciones para lagartijas-01 (CC0, verificadas por API de Freesound el 2026-10-05
 - A: High speed, AllenBass, 476196 (CC0)
 - B: Energetic Rock, 135 BPM, carloseton, 724498 (CC0)
 - C: Big City Intro Theme, felineterror, 579729 (CC0)
+Segunda tanda (CC0, verificadas por API de Freesound el 2026-10-05):
+- D: Digital Donut Clip, BaDoink, 531866
+- E: Dangerous World, loveless1017, 458147
+- F: Bass loops 004 long loop 120 bpm, josefpres, 569175
