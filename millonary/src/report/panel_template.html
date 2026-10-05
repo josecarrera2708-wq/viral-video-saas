@@ -64,12 +64,8 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
   <div><span id="fresh" class="pill">…</span> <span class="foot">Se actualiza cada hora, al cierre de cada vela de 1 h (que es cuando los traders deciden).</span></div>
   <nav role="tablist" aria-label="Secciones">
     <button role="tab" aria-selected="true" data-tab="sala">Sala</button>
-    <button role="tab" aria-selected="false" data-tab="intradia">Intradía</button>
     <button role="tab" aria-selected="false" data-tab="marcador">Marcador</button>
-    <button role="tab" aria-selected="false" data-tab="m15">Mesa 15 min</button>
-    <button role="tab" aria-selected="false" data-tab="m1h">Mesa 1 h</button>
-    <button role="tab" aria-selected="false" data-tab="mnueva">Mesa nueva</button>
-    <button role="tab" aria-selected="false" data-tab="mpat">Mesa de patrones</button>
+    <button role="tab" aria-selected="false" data-tab="mpat">Mesa de trading</button>
     <button role="tab" aria-selected="false" data-tab="cartera">Núcleo + carry</button>
     <button role="tab" aria-selected="false" data-tab="fondos">Fondos</button>
     <button role="tab" aria-selected="false" data-tab="primas">BTC, primas y cartera</button>
@@ -148,10 +144,10 @@ svg text{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
     <div class="card"><div id="mnHist"></div></div>
   </section>
   <section class="panel sec" id="tab-mpat" hidden>
-    <h2>Mesa de patrones · chartistas, velas e ineficiencias (desde 2026-10-06)</h2>
+    <h2>Mesa de trading · la única activa: patrones + tendencia (desde 2026-10-06)</h2>
     <div class="card"><div class="funnel" id="mpKpis"></div><p class="foot" id="mpNote"></p></div>
     <h2>Traders</h2>
-    <div class="card"><div class="tw"><table id="mpTable"></table></div><p class="foot">Elegidos con una regla fijada en git ANTES de ver resultados (config/busqueda_v4_prerregistrada.md): la mejor variante elegible de cada familia de la búsqueda v4 (doble/triple suelo, rectángulo, bandera, martillo, velas seguidas, FVG; estadística de Bulkowski y estudios académicos). Ninguno está certificado: en el examen 2025-07→2026-09 la bandera de 4 h (+0,73 R, 22 ops), el doble suelo (+0,28 R) y el triple suelo/techo (+0,48 R en su versión «dejar correr») fueron los mejores. Pocas operaciones: hacen falta semanas.</p></div>
+    <div class="card"><div class="tw"><table id="mpTable"></table></div><p class="foot">Única mesa de trading activa (decisión del dueño, 2026-10-05; config/busqueda_v5_prerregistrada.md). Se detuvieron la mesa intradía, la de 15 min y la de 1 h (perdían en papel y en su histórico); sus datos quedan congelados como registro. Aquí solo siguen los traders que GANARON fuera de muestra (examen 2025-07→2026-09): doble suelo, triple suelo/techo, bandera de 4 h, FVG diario, conjunto CTA 4 h, MAX 20 días y dos combinaciones «patrón + tendencia superior». Ninguno certificado; revisión a los 90 días: el que no rinda, fuera.</p></div>
     <h2>Posiciones abiertas ahora</h2>
     <div class="grid" id="mpOpen"></div>
     <h2>Historial de operaciones</h2>
@@ -484,7 +480,7 @@ if (I) {
   else {
     const T = Object.entries(M.traders), base = T.filter(([k]) => !k.includes(' · ')), tr = D.mp_trades || [], ab = tr.filter(t => t.abierta), cl = tr.filter(t => !t.abierta);
     const w = base.reduce((a,[k,v]) => a + v.ganan, 0), l = base.reduce((a,[k,v]) => a + v.pierden, 0), R = base.reduce((a,[k,v]) => a + v.R_total, 0);
-    $('#mpKpis').innerHTML = [[w,'ganadas'],[l,'perdidas'],[ab.filter(t => !t.trader.includes(' · ')).length,'abiertas'],[(R>=0?'+':'')+R.toFixed(2)+' R','R total'],[M.por_dia_total.toFixed(1),'ops/día (7 traders)']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
+    $('#mpKpis').innerHTML = [[w,'ganadas'],[l,'perdidas'],[ab.filter(t => !t.trader.includes(' · ')).length,'abiertas'],[(R>=0?'+':'')+R.toFixed(2)+' R','R total'],[M.por_dia_total.toFixed(1),'ops/día (8 traders)']].map(([n,t]) => `<div><b>${n}</b><span>${t}</span></div>`).join('');
     $('#mpNote').textContent = `Fuente: ${M.fuente}. Última vela cerrada ${String(M.ultima_vela_cerrada).slice(0,16)} UTC. Inicio ${String(M.inicio).slice(0,16)} UTC.`;
     $('#mpTable').innerHTML = '<tr><th>Trader</th><th>Velas</th><th class="n">Ops</th><th class="n">Ganan/pierden</th><th class="n">R total</th><th class="n">Retorno</th><th class="n">Caída</th><th>Abierta</th></tr>' +
       T.map(([k,v]) => `<tr><td>${esc(k)}</td><td>${esc(v.temporalidad)}</td><td class="n num">${v.cerradas}</td><td class="n num">${v.ganan} / ${v.pierden}</td><td class="n num ${cls(v.R_total)}">${v.R_total.toFixed(2)}</td><td class="n num ${cls(v.retorno)}">${pct(v.retorno)}</td><td class="n num">${(v.caida_max*100).toFixed(1)}%</td><td>${v.abierta ? `<span class="pill gold">${esc(v.abierta.lado)} @ ${Number(v.abierta.px_entrada).toFixed(0)}</span>` : '—'}</td></tr>`).join('');

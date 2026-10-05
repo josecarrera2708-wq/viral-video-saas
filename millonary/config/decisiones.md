@@ -88,3 +88,15 @@ Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horar
 ## 2026-10-03 · Acumulación de BTC (decisión del dueño: «el mayor porcentaje de BTC posible»)
 - Medido en BTC, ninguna estrategia del proyecto suma BTC frente a mantenerlo: núcleo y carry salen a USDT y pierden BTC en los años alcistas (lo ganan en los bajistas). Lo que más BTC reúne es el 100 % en BTC.
 - Se aplica en papel A1 (100 % BTC, compra única al cierre del 2026-10-03, nunca se vende) y se sigue A2 (50 % BTC / 25 % núcleo / 25 % carry) en sombra para comparar. Nada cambia en las cuentas existentes. Sin dinero real.
+
+## 2026-10-05 · Una sola mesa de trading (decisión del dueño: «no quiero muchas mesas; eliminar las que no rinden»)
+- **Se detienen** la mesa intradía (I01-I14), la de 15 min y la de 1 h. En papel sumaban −6,6 R, −30,5 R y −15,3 R. Sus archivos quedan congelados como registro y salen de la rutina y del panel.
+- **La mesa nueva (X) no llega a arrancar.** X07 (CTA 4 h) y X08 (MAX 20 días) pasan a la mesa de patrones; el resto perdía en el examen.
+- **La mesa de patrones pasa a ser la «mesa de trading», la única activa**, desde el 2026-10-06 00:00 UTC. Composición:
+  - De la v4: Y01, Y02, Y04 y Y07.
+  - De la mesa nueva: X07 y X08.
+  - De la v5 (patrón + tendencia superior): Z01 y Z02.
+  - Todos ganaron fuera de muestra en el examen.
+  - Fuera Y03, Y05 y Y06, que perdieron en el examen.
+- Revisión a los 90 días: el que no rinda, fuera.
+- El modelo fondo de inversión no se toca: núcleo, carry, fondos, K4, primas y acumulación.

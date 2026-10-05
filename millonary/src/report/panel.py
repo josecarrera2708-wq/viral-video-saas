@@ -60,7 +60,7 @@ def apodar(js: str) -> str:
         return js
     ap = json.loads(f.read_text(encoding="utf-8"))["apodos"]
     js = js.replace("N Núcleo v1", "Núcleo v1").replace("Núcleo v1", f"{ap['Núcleo v1']} — Núcleo v1") if "Núcleo v1" in ap else js
-    return re.sub(r"(?<![\w—] )\b([IPQFBVXY]\d\d|K\d)(?= [A-Za-zÁÉÍÓÚáéíóú(])", lambda m: f"{ap[m.group(1)]} — {m.group(1)}" if m.group(1) in ap else m.group(1), js)
+    return re.sub(r"(?<![\w—] )\b([IPQFBVXYZ]\d\d|K\d)(?= [A-Za-zÁÉÍÓÚáéíóú(])", lambda m: f"{ap[m.group(1)]} — {m.group(1)}" if m.group(1) in ap else m.group(1), js)
 
 
 def fragment(data: Path, now: pd.Timestamp | None = None) -> str:

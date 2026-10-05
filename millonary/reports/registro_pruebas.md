@@ -116,3 +116,29 @@ Prerregistro: `config/busqueda_v4_prerregistrada.md` (commit c78a456, ANTES de e
 - Mesa de patrones (Y01-Y07) creada por la regla prerregistrada. Empieza el 2026-10-06 00:00 UTC.
 - Repetición con datos de Deribit desde 2025-07: coincide con el examen de Binance. Y04 bandera +0,74 R; Y01 doble suelo +0,26 R.
 - Total acumulado del proyecto: 1.517 pruebas.
+
+## 2026-10-05 · Búsqueda v5: patrones ligados a una confirmación + cuñas — pruebas 1518-1685 (168 variantes)
+Prerregistro: `config/busqueda_v5_prerregistrada.md` (commit 134d411, ANTES de ejecutar). Resultados: `reports/busqueda_v5_resultados.md`.
+- Variantes: 168. Elegibles: 21. Certificadas: **0**.
+- Media en validación de cada confirmación, frente a +0,024 R sin confirmación:
+
+| Confirmación | R en validación |
+|---|---|
+| Barrido de liquidez | +0,104 |
+| FVG | +0,042 |
+| Volumen | +0,032 |
+| Tendencia superior | +0,029 |
+| Divergencia RSI | −0,038 |
+| Compresión | −0,075 |
+
+- En el examen, el triple suelo/techo 1 h dejar correr ganó con varias confirmaciones:
+
+| Confirmación | Ops | R examen | Retorno |
+|---|---|---|---|
+| Compresión | 40 | +0,87 | +14,7 % |
+| Volumen | 59 | +0,59 | +14,9 % |
+| Tendencia superior | 43 | +0,57 | +10,2 % |
+
+- Doble suelo + barrido de liquidez: +0,35 R. Doble techo: flojo con cualquier confirmación. Cuña: sin ventaja.
+- Mesa de trading: entran Z01 (doble suelo + tendencia superior, +0,15 R en el examen) y Z02 (triple + tendencia superior, +0,57 R). Z de doble techo + tendencia superior: fuera (−0,09 R en el examen).
+- Total acumulado del proyecto: 1.685 pruebas.
