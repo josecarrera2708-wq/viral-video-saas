@@ -77,10 +77,10 @@
   "estado": "muestra insuficiente para concluir"
  },
  "Q01 Momentum de series temporales": {
-  "cerradas": 4,
-  "perdedoras": 2,
+  "cerradas": 5,
+  "perdedoras": 3,
   "patrones": {
-   "nunca_a_favor": 1,
+   "nunca_a_favor": 2,
    "stop_barrido": 1,
    "contra_tendencia": 0,
    "vol_baja": 1
