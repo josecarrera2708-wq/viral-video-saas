@@ -74,7 +74,7 @@ function route() {
   const v = curView();
   for (const s of document.querySelectorAll('.view')) if (s.id !== 'v-login') s.hidden = s.id !== 'v-' + v;
   for (const b of document.querySelectorAll('.tabs button')) b.classList.toggle('on', b.dataset.v === v);
-  ({feed: loadFeed, wallets: loadWallets, scan: loadScan, settings: loadSettings, token: loadToken}[v] || loadFeed)();
+  ({feed: loadFeed, copy: loadCopy, wallets: loadWallets, scan: loadScan, settings: loadSettings, token: loadToken}[v] || loadFeed)();
 }
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { location.hash = b.dataset.v; });
 $('#token-back').onclick = () => history.length > 1 ? history.back() : (location.hash = 'feed');
@@ -101,6 +101,25 @@ async function loadFeed() {
   const rows = FEED.filter(r => !FILTER || r.name === FILTER);
   $('#feed').innerHTML = rows.length ? rows.map(tradeRow).join('') :
     `<div class="empty">Todavía no hay compras ni ventas registradas.<br>En cuanto una de tus wallets opere, aparecerá aquí y te llegará el aviso.</div>`;
+}
+
+function money(v) { return (v >= 0 ? '+' : '−') + '$' + Math.abs(v).toFixed(2); }
+async function loadCopy() {
+  let d;
+  try { d = await api('/api/sim'); } catch (e) { return; }
+  if (!d.cfg) { $('#copy').innerHTML = `<div class="empty">La simulación no está en marcha.</div>`; return; }
+  const end = d.cfg.start + d.cfg.days * 86400, now = Date.now() / 1000;
+  $('#copy-info').textContent = `${d.cfg.usd} USDT por operación, con comisiones del 1% al comprar y al vender. Empezó el ${hm(d.cfg.start)} y ` +
+    (now < end ? `termina el ${hm(end)}.` : `terminó el ${hm(end)}.`) + ' Las operaciones abiertas se valoran al precio de ahora.';
+  const tot = d.rows.reduce((a, r) => ({inv: a.inv + r.invested, pnl: a.pnl + r.pnl, won: a.won + r.won, lost: a.lost + r.lost, open: a.open + r.open}),
+    {inv: 0, pnl: 0, won: 0, lost: 0, open: 0});
+  const row = (name, plan, r, pct) => `<div class="crow">
+      <div class="c1"><span class="nm">${esc(name)}</span>${plan ? `<span class="tag">${esc(plan)}</span>` : ''}</div>
+      <div class="cr"><span class="x ${r.pnl >= 0 ? 'up' : 'dn'}">${pct == null ? '—' : (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%'}</span><small class="${r.pnl >= 0 ? 'up' : 'dn'}">${money(r.pnl)}</small></div>
+      <div class="c2">${r.won} ganadas · ${r.lost} perdidas · ${r.open} abiertas · invertido $${(r.invested ?? r.inv).toFixed(0)}${r.medido != null ? ` · medido antes ${r.medido >= 0 ? '+' : ''}${r.medido}%` : ''}</div>
+    </div>`;
+  $('#copy').innerHTML = d.rows.map(r => row(r.name, r.plan, r, r.pct)).join('') +
+    (d.rows.length > 1 ? row('Total', '', tot, tot.inv ? 100 * tot.pnl / tot.inv : null) : '');
 }
 
 async function loadWallets() {

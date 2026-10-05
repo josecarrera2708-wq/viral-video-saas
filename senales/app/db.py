@@ -25,6 +25,8 @@ create table if not exists seen(sig text primary key, t integer);
 create table if not exists subs(endpoint text primary key, data text, added integer);
 create table if not exists candidates(addr text primary key, origin text, found integer, score real,
     n integer, pct_x2 real, ladder real, all_x2 real, avg_xmax real, hits integer, detail text, status text default 'nueva');
+create table if not exists sim(id integer primary key autoincrement, wallet text, mint text, sym text, strat text,
+    sl real, opened integer, entry real, qty real, usd_in real, usd_out real default 0, last real, closed integer, reason text);
 create table if not exists cex(mint text, exch text, t_start integer, t_seen integer, primary key(mint, exch));
 create table if not exists scan_tokens(mint text primary key, sym text, exch text, t_list integer, done integer, buyers integer);
 """

@@ -197,7 +197,7 @@ async def record(tr, w, source):
     info = await S["market"].token(tr["mint"])
     mc = tr["price"] * info["supply"] if info["supply"] else None
     if db.q("select 1 from trades where sig=? and wallet=? and mint=?", (tr["sig"], tr["wallet"], tr["mint"]), one=True):
-        return info, mc  # ya guardada (p. ej. la encontraron a la vez el sondeo y la búsqueda en el historial)
+        return info, mc, False  # ya guardada (p. ej. la encontraron a la vez el sondeo y la búsqueda en el historial)
     tr["hint"] = listing_hint(tr["mint"], info, mc, tr["t"]) if tr["side"] == "buy" else None
     db.x("insert or ignore into trades(sig, wallet, mint, side, t, amount, usd, sol, price, mc, sym, hint) values(?,?,?,?,?,?,?,?,?,?,?,?)",
          (tr["sig"], tr["wallet"], tr["mint"], tr["side"], tr["t"], tr["amount"], tr["usd"], tr["sol"], tr["price"], mc, info["sym"], tr["hint"]))
@@ -216,7 +216,7 @@ async def record(tr, w, source):
     elif pos:
         db.x("update positions set usd_out=usd_out+? where wallet=? and mint=?", (tr["usd"], tr["wallet"], tr["mint"]))
     log.info("%s %s %s %s via %s", w["name"], tr["side"], info["sym"], tr["usd"], source)
-    return info, mc
+    return info, mc, True
 
 
 def cost_basis(wallet, mint, t):
@@ -326,12 +326,91 @@ async def process_tx(tx, source="hook"):
         return
     for tr in chain.detect(p, ws, await S["market"].sol_usd_at(p["t"])):
         w = ws[tr["wallet"]]
-        info, mc = await record(tr, w, source)
+        info, mc, new = await record(tr, w, source)
+        if new:
+            pre = p["pre"].get((tr["wallet"], tr["mint"])) or 0
+            sim_on_trade(tr, info, min(1.0, tr["amount"] / pre) if pre else 1.0)
         fresh = time.time() - tr["t"] <= NOTIFY_MAX_AGE
         if tr["side"] == "sell":
             bg(finish_sell(tr, w, info, mc, p["acct"].get((tr["wallet"], tr["mint"])), fresh))
         elif fresh:
             await notify(tr, w, info, mc)
+
+
+# ---------- simulación de copia ----------
+SIM_FEE = 0.01   # comisión de cada compra y de cada venta
+STRATS = {"copiar": "copiar todo", "x2": "todo en x2"}
+
+
+def sim_cfg():
+    """{"start", "days", "usd", "plan": {wallet: {"strat": "copiar"|"x2", "sl": 0.3|0.5|null, "medido": %}}}"""
+    return db.get("sim") or {}
+
+
+def sim_on_trade(tr, info, frac):
+    """Una operación nueva de una wallet: la simulación abre o vende como lo haría el copy trade."""
+    c = sim_cfg()
+    plan = (c.get("plan") or {}).get(tr["wallet"])
+    if not plan or not c["start"] <= tr["t"] < c["start"] + c["days"] * 86400:
+        return
+    if tr["side"] == "buy":
+        if plan["strat"] == "x2" and db.q("select 1 from sim where wallet=? and mint=?", (tr["wallet"], tr["mint"]), one=True):
+            return  # con «todo en x2» solo cuenta la primera compra de cada token
+        db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last) values(?,?,?,?,?,?,?,?,?,?)",
+             (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), tr["t"], tr["price"],
+              c["usd"] * (1 - SIM_FEE) / tr["price"], c["usd"], tr["price"]))
+    elif plan["strat"] == "copiar":
+        for lot in db.q("select * from sim where wallet=? and mint=? and closed is null", (tr["wallet"], tr["mint"])):
+            sim_sell(lot, lot["qty"] * frac, tr["price"], tr["t"], "vendió la wallet")
+
+
+def sim_sell(lot, qty, price, t, reason):
+    out, left = qty * price * (1 - SIM_FEE), lot["qty"] - qty
+    if left <= lot["qty"] * 1e-6:
+        db.x("update sim set qty=0, usd_out=usd_out+?, last=?, closed=?, reason=? where id=?", (out, price, t, reason, lot["id"]))
+    else:
+        db.x("update sim set qty=?, usd_out=usd_out+?, last=? where id=?", (left, out, price, lot["id"]))
+
+
+def sim_check(prices, now):
+    """Cada minuto: objetivo x2, stop-loss y, al acabar la prueba, cierre de lo que quede abierto."""
+    c = sim_cfg()
+    if not c:
+        return
+    end = c["start"] + c["days"] * 86400
+    for lot in db.q("select * from sim where closed is null"):
+        v = prices.get(lot["mint"])
+        if not v:
+            continue
+        if now >= end:
+            sim_sell(lot, lot["qty"], v, now, "fin de la prueba")
+        elif lot["strat"] == "x2" and v >= 2 * lot["entry"]:
+            sim_sell(lot, lot["qty"], 2 * lot["entry"], now, "x2")
+        elif lot["sl"] and v <= lot["entry"] * (1 - lot["sl"]):
+            sim_sell(lot, lot["qty"], v, now, f"stop {lot['sl']:.0%}")
+        else:
+            db.x("update sim set last=? where id=?", (v, lot["id"]))
+
+
+def sim_summary():
+    c = sim_cfg()
+    if not c:
+        return {"cfg": None, "rows": []}
+    rows = []
+    for w in wallets_cfg(False):
+        plan = (c.get("plan") or {}).get(w["addr"])
+        if not plan:
+            continue
+        lots = db.q("select * from sim where wallet=?", (w["addr"],))
+        inv = sum(x["usd_in"] for x in lots)
+        val = sum(x["usd_out"] + x["qty"] * (x["last"] or x["entry"]) * (1 - SIM_FEE) for x in lots)
+        done = [x for x in lots if x["closed"]]
+        label = STRATS.get(plan["strat"], plan["strat"]) + (f" · stop {plan['sl']:.0%}" if plan.get("sl") else " · sin stop")
+        rows.append({"name": w["name"], "plan": label, "medido": plan.get("medido"), "n": len(lots),
+                     "won": sum(1 for x in done if x["usd_out"] > x["usd_in"]), "lost": sum(1 for x in done if x["usd_out"] <= x["usd_in"]),
+                     "open": len(lots) - len(done), "invested": round(inv, 2), "pnl": round(val - inv, 2),
+                     "pct": round(100 * (val - inv) / inv, 1) if inv else None})
+    return {"cfg": {k: c[k] for k in ("start", "days", "usd")}, "rows": rows}
 
 
 async def listing_alert(mint, exch, t_start):
@@ -433,8 +512,10 @@ async def tracker():
         try:
             now = int(time.time())
             pos = db.q("select wallet, mint, max_price from positions where first_t > ?", (now - TRACK_DAYS * 86400,))
-            if pos:
-                pr = await S["market"].prices([p["mint"] for p in pos])
+            sim_open = [r["mint"] for r in db.q("select distinct mint from sim where closed is null")]
+            if pos or sim_open:
+                pr = await S["market"].prices([p["mint"] for p in pos] + sim_open)
+                sim_check(pr, now)
                 for p in pos:
                     v = pr.get(p["mint"])
                     if not v:
@@ -640,6 +721,24 @@ async def feed(req: Request, limit: int = 150, mint: str = ""):
         elif r["side"] == "sell":
             r["pnl"], r["x_sell"] = gain(r, r["entry"])
     return rows
+
+
+@app.get("/api/sim")
+async def sim_get(req: Request):
+    need(req)
+    return sim_summary()
+
+
+@app.post("/api/sim")
+async def sim_start(req: Request):
+    """Empieza (o reinicia) la simulación: {"usd": 10, "days": 3, "plan": {wallet: {"strat", "sl", "medido"}}}."""
+    need(req)
+    d = await req.json()
+    plan = {a: {"strat": v.get("strat") if v.get("strat") in STRATS else "copiar", "sl": v.get("sl"), "medido": v.get("medido")}
+            for a, v in (d.get("plan") or {}).items()}
+    db.x("delete from sim")
+    db.put("sim", {"start": int(time.time()), "days": float(d.get("days") or 3), "usd": float(d.get("usd") or 10), "plan": plan})
+    return sim_summary()
 
 
 @app.get("/api/wallets")

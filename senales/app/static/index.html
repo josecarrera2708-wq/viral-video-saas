@@ -37,6 +37,14 @@
       <div id="feed" class="list"></div>
     </section>
 
+    <section id="v-copy" class="view" hidden>
+      <div class="card">
+        <h2>Simulación de copia</h2>
+        <p class="muted small" id="copy-info">Simula que copias cada wallet con la estrategia que mejor le salió, sin poner dinero.</p>
+      </div>
+      <div id="copy" class="list"></div>
+    </section>
+
     <section id="v-wallets" class="view" hidden>
       <div id="wallets" class="list"></div>
       <p class="muted small">Toca una wallet para ver su dirección, sus números de los últimos 30 días y la nota.</p>
@@ -92,6 +100,7 @@
 
   <nav class="tabs" id="tabs" hidden>
     <button data-v="feed" class="on">Señales</button>
+    <button data-v="copy">Copia</button>
     <button data-v="wallets">Wallets</button>
     <button data-v="scan">Buscador</button>
     <button data-v="settings">Ajustes</button>

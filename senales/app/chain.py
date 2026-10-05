@@ -51,16 +51,18 @@ def parse_tx(tx):
         i = b.get("accountIndex")
         if isinstance(i, int) and i < len(keys):
             acct[(b.get("owner"), b["mint"])] = keys[i]
+    pre = {}
     for b in meta.get("preTokenBalances") or []:
         key = (b.get("owner"), b["mint"])
         tok[key] = tok.get(key, 0) - _num(b)
+        pre[key] = pre.get(key, 0) + _num(b)
     for b in meta.get("postTokenBalances") or []:
         key = (b.get("owner"), b["mint"])
         tok[key] = tok.get(key, 0) + _num(b)
     tok = {k: v for k, v in tok.items() if abs(v) > 1e-12}
     sigs = tx["transaction"].get("signatures") or []
     return {"sig": sigs[0] if sigs else "", "t": tx.get("blockTime") or int(time.time()),
-            "err": meta.get("err"), "keys": set(keys), "sol": sol, "tok": tok, "acct": acct}
+            "err": meta.get("err"), "keys": set(keys), "sol": sol, "tok": tok, "acct": acct, "pre": pre}
 
 
 def detect(p, wallets, sol_usd, infer_payer=False):
