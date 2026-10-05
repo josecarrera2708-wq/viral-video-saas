@@ -15,7 +15,7 @@
   "perdedoras": 4,
   "patrones": {
    "nunca_a_favor": 2,
-   "stop_barrido": 1,
+   "stop_barrido": 2,
    "contra_tendencia": 4,
    "vol_baja": 4
   },
