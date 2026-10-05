@@ -103,17 +103,17 @@
   "perdedoras": 4,
   "patrones": {
    "nunca_a_favor": 2,
-   "stop_barrido": 0,
+   "stop_barrido": 1,
    "contra_tendencia": 0,
    "vol_baja": 0
   },
   "estado": "muestra insuficiente para concluir"
  },
  "I11 Ruptura fallida": {
-  "cerradas": 11,
-  "perdedoras": 7,
+  "cerradas": 12,
+  "perdedoras": 8,
   "patrones": {
-   "nunca_a_favor": 5,
+   "nunca_a_favor": 6,
    "stop_barrido": 1,
    "contra_tendencia": 0,
    "vol_baja": 5
