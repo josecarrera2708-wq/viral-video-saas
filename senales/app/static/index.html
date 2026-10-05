@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Señales</title>
+<meta name="theme-color" content="#0b0e11">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Señales">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+<link rel="icon" href="/static/icon-192.png">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <div class="brand"><span class="dot" id="live"></span>Señales</div>
+    <div class="status" id="status"></div>
+  </header>
+
+  <section id="v-login" class="view auth" hidden>
+    <div class="card">
+      <h1 id="auth-title">Entrar</h1>
+      <p class="muted" id="auth-help">Escribe tu contraseña.</p>
+      <label id="code-wrap" hidden>Código inicial (te lo dio el instalador)<input id="code" autocomplete="one-time-code" autocapitalize="characters"></label>
+      <label>Contraseña<input id="pw" type="password" autocomplete="current-password"></label>
+      <button class="btn primary" id="auth-go">Entrar</button>
+      <p class="err" id="auth-err"></p>
+    </div>
+  </section>
+
+  <main id="main" hidden>
+    <section id="v-feed" class="view">
+      <div class="filters" id="feed-filters"></div>
+      <div id="feed" class="list"></div>
+    </section>
+
+    <section id="v-wallets" class="view" hidden>
+      <div id="wallets" class="list"></div>
+      <p class="muted small">Toca una wallet para ver su dirección, sus números de los últimos 30 días y la nota.</p>
+    </section>
+
+    <section id="v-scan" class="view" hidden>
+      <div class="card">
+        <h2>Buscador diario</h2>
+        <p class="muted small" id="scan-info">Cada noche revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y las mide con tu método (x hasta el máximo y vender el 50% en cada x2). Las que pasan el corte salen aquí.</p>
+      </div>
+      <div id="cands" class="list"></div>
+    </section>
+
+    <section id="v-token" class="view" hidden>
+      <button class="btn ghost" id="token-back">← Volver</button>
+      <div id="token"></div>
+    </section>
+
+    <section id="v-settings" class="view" hidden>
+      <div class="card">
+        <h2>Avisos al móvil</h2>
+        <p class="muted small" id="push-help">En iPhone: abre esta página en Safari, pulsa Compartir → «Añadir a pantalla de inicio», abre la app desde el icono y pulsa el botón.</p>
+        <div class="row"><button class="btn primary" id="push-on">Activar avisos en este móvil</button><button class="btn" id="push-test">Probar</button></div>
+        <p class="small" id="push-msg"></p>
+      </div>
+      <div class="card">
+        <h2>Wallets que se vigilan</h2>
+        <p class="muted small">Una por línea, en orden de ranking: <code>Nombre | dirección | origen | cuentas que pagan (opcional, separadas por comas)</code></p>
+        <textarea id="w-edit" rows="7" spellcheck="false"></textarea>
+        <div class="row"><button class="btn primary" id="w-save">Guardar wallets</button></div>
+        <p class="small" id="w-msg"></p>
+      </div>
+      <div class="card">
+        <h2>Tiempo real (Helius)</h2>
+        <p class="muted small" id="helius-state"></p>
+        <label>Clave de Helius (API key)<input id="helius" placeholder="pega aquí tu clave" autocomplete="off"></label>
+        <label>Dirección pública de esta app<input id="puburl" placeholder="https://..."></label>
+        <div class="row"><button class="btn primary" id="helius-save">Guardar y conectar</button></div>
+        <p class="small" id="helius-msg"></p>
+      </div>
+      <div class="card">
+        <h2>Resumen diario y cuenta</h2>
+        <div class="grid2">
+          <label>Hora del resumen<input id="dhour" type="number" min="0" max="23"></label>
+          <label>Zona horaria<input id="tz"></label>
+        </div>
+        <label>Nueva contraseña (opcional)<input id="newpw" type="password" autocomplete="new-password"></label>
+        <div class="row"><button class="btn primary" id="gen-save">Guardar</button><button class="btn ghost" id="logout">Cerrar sesión</button></div>
+        <p class="small" id="gen-msg"></p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabs" id="tabs" hidden>
+    <button data-v="feed" class="on">Señales</button>
+    <button data-v="wallets">Wallets</button>
+    <button data-v="scan">Buscador</button>
+    <button data-v="settings">Ajustes</button>
+  </nav>
+</div>
+<div id="toast" class="toast" hidden></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
