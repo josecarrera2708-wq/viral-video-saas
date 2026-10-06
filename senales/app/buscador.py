@@ -7,9 +7,8 @@ Repite por lotes el estudio que hicimos a mano:
  4. Fuera bots (cientos de operaciones al día) y wallets inactivas.
  5. Se mide cada wallet en sus primeras compras de OTROS tokens de sus últimos 30 días (fuera de muestra: ni los
     tokens por los que se la encontró ni ningún token elegido por su éxito), como lo haría un bot de copia de verdad:
-    entra al precio de mercado al acabar el minuto de su compra (nunca más barato que ella), solo cuentan las velas
-    posteriores, el x2 tiene que ser de verdad (no un pico suelto), cada operación dura como mucho 72 h y se cuentan
-    comisiones y costes fijos. Precios en dólares con el SOL de cada hora. Velas de Jupiter (todos los pools) o de
+    entra un 5% más caro que ella, solo cuentan las velas posteriores al minuto de su compra, el x2 tiene que ser de
+    verdad (no un pico suelto), cada operación dura como mucho 72 h y se cuentan comisiones y costes fijos. Precios en dólares con el SOL de cada hora. Velas de Jupiter (todos los pools) o de
     GeckoTerminal. Se prueban 6 estrategias (copiar todo o vender todo en x2, sin stop o con stop del 30/50%).
  6. Pasan las selectivas (≤15 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más con su mejor
     estrategia en al menos 15 compras, que siguen ganando sin su mejor token, ganan en ≥40% de los tokens, aguantan el
@@ -245,7 +244,8 @@ def rpc(method, params):
     return None
 
 
-MEASURE_DAYS = 30         # historial que se mide: sus últimos 30 días (por tiempo, no por número de firmas)
+MEASURE_DAYS = 60         # historial que se mide: sus últimos 60 días (por tiempo, no por número de firmas;
+                          # las muy selectivas compran menos de un token al día)
 MAX_SIGS = 1500           # tope de transacciones leídas por wallet (el RPC público es lento)
 MAX_MISSING = 0.02        # si no se puede leer más del 2% de sus transacciones, no se mide (se reintenta en otra vuelta)
 _sol_h = {}
@@ -346,7 +346,9 @@ def _history(addr, max_tx):
 
 # ---------- 6. medición: cuánto daría copiarla (como lo haría un bot de copia de verdad) ----------
 COPY_USD = 10             # importe por compra en la copia sobre el papel
-ENTRY_SLIP = 1.02         # deslizamiento del bot sobre el precio de mercado al que entra
+ENTRY_SLIP = 1.05         # un bot que la copia a los pocos segundos paga su impacto + deslizamiento: un 5% más que ella
+                          # (verifica.py lo comprueba después con los precios reales de la cinta a 5 y 30 s)
+EXIT_SLIP = 0.95          # y al copiar sus ventas vende después que ella: un 5% más barato
 FEE = 0.98                # ~1% al comprar y ~1% al vender
 FIXED_USD = 0.25          # prioridad + propina de cada transacción (con 10 USDT pesa un ~2,5% por lado)
 HORIZON = 72 * 3600       # igual que la simulación de la app: lo que no llegó a x2 en 72 h se vende a las 72 h
@@ -422,21 +424,23 @@ def after(path, t):
 
 
 def entry_at(path, t, price):
-    """Precio al que entra el copiador: el de mercado al acabar el minuto de su compra (cierre de esa vela, ya con el
-    impacto de ella), nunca más barato que ella, con deslizamiento; y las velas posteriores. (None, []) si no hay vela
-    en ese minuto: no se sabe a qué precio habría entrado el copiador."""
+    """Precio al que entra el copiador (el suyo + ENTRY_SLIP) y las velas posteriores al minuto de su compra.
+    (None, []) si las velas no tienen el minuto de su compra: no cubren el mercado en el que compró (p. ej. otro pool)."""
     m0 = int(t) // 60 * 60
-    k0 = next((k for k in path if k[0] == m0), None)
-    if not k0:
+    if not any(k[0] == m0 for k in path):
         return None, []
-    return max(k0[4], price) * ENTRY_SLIP, after(path, t)
+    return price * ENTRY_SLIP, after(path, t)
 
 
-def x2_hit(ks, e):
-    """Primera vela en la que el x2 es de verdad: toca 2e y cierra por encima, o la siguiente vela también lo toca
-    (un pico suelto de una sola operación no cuenta)."""
+X2_MIN_VOL = 500          # $ negociados en un minuto para fiarse de un pico de un solo minuto
+
+
+def x2_hit(ks, e, t):
+    """Primera vela en la que el x2 es de verdad: toca 2e y cierra por encima, o la siguiente vela también lo toca, o es
+    una vela de 1 minuto con volumen real (un pico suelto de una operación pequeña o una mecha de 15 min no cuentan)."""
     for i, k in enumerate(ks):
-        if k[2] >= 2 * e and (k[4] >= 2 * e or (i + 1 < len(ks) and ks[i + 1][2] >= 2 * e)):
+        if k[2] >= 2 * e and (k[4] >= 2 * e or (i + 1 < len(ks) and ks[i + 1][2] >= 2 * e)
+                              or (k[0] < t + 60000 and (k[5] or 0) >= X2_MIN_VOL)):
             return i
     return None
 
@@ -462,9 +466,9 @@ def ladder(xmax, xnow):
 
 
 def copy_sim(path, trades, mint, t0, pnow, sl):
-    """Copy trade sobre el papel: COPY_USD en cada compra suya y, en cada venta suya, vendes la misma parte; siempre al
-    precio de mercado al acabar el minuto de su operación (nunca mejor que ella al comprar); stop de cada compra a
-    (1 - sl) de tu precio; horizonte de 72 h y costes fijos. Devuelve (valor final, invertido)."""
+    """Copy trade sobre el papel: COPY_USD en cada compra suya (un ENTRY_SLIP más caro que ella) y, en cada venta suya,
+    vendes la misma parte (un EXIT_SLIP más barato); stop de cada compra a (1 - sl) de tu precio; horizonte de 72 h y
+    costes fijos. Devuelve (valor final, invertido)."""
     hold, lots, got, inv = 0.0, [], 0.0, 0.0
     ks = [k for k in path if k[0] < t0 + HORIZON]
     # cada vela cuenta al TERMINAR (1 o 15 min según su tamaño): así sus ventas de esos minutos van antes
@@ -473,10 +477,8 @@ def copy_sim(path, trades, mint, t0, pnow, sl):
          [(x["t"], 0, x) for x in trades if x.get("mint") == mint and t0 <= x["t"] < t0 + HORIZON]
     for _, is_candle, k in sorted(ev, key=lambda z: (z[0], z[1])):
         if not is_candle:
-            prev = [c for c in path if c[0] <= k["t"] // 60 * 60]
-            px = prev[-1][4] if prev else k["price"]
             if k["side"] == "buy":
-                e = max(px, k["price"]) * ENTRY_SLIP
+                e = k["price"] * ENTRY_SLIP
                 lots.append([e, COPY_USD / e, k["t"]])
                 inv += COPY_USD
                 got -= FIXED_USD
@@ -486,7 +488,7 @@ def copy_sim(path, trades, mint, t0, pnow, sl):
                 hold -= min(hold, k["amount"])
                 for lot in lots:
                     q = lot[1] * fr
-                    got += q * px * FEE
+                    got += q * k["price"] * EXIT_SLIP * FEE
                     lot[1] -= q
                 got -= FIXED_USD
         elif sl:
@@ -498,11 +500,11 @@ def copy_sim(path, trades, mint, t0, pnow, sl):
     return got + left * exit_price(path, t0, pnow) * FEE - (FIXED_USD if left else 0), inv
 
 
-def x2_sim(ks, e, pexit, sl):
-    """Entras a `e` (ya con deslizamiento) y vendes TODO en el primer x2 de verdad desde tu precio; stop opcional a
-    (1 - sl). `ks` = velas posteriores a tu entrada dentro del horizonte. Devuelve el valor por 1 invertido."""
+def x2_sim(ks, e, pexit, sl, t):
+    """Entras a `e` (ya con deslizamiento) en `t` y vendes TODO en el primer x2 de verdad desde tu precio; stop opcional
+    a (1 - sl). `ks` = velas posteriores a tu entrada dentro del horizonte. Devuelve el valor por 1 invertido."""
     c = 2 * FIXED_USD / COPY_USD
-    hit = x2_hit(ks, e)
+    hit = x2_hit(ks, e, t)
     for i, k in enumerate(ks):
         if sl and k[3] <= e * (1 - sl):     # en la misma vela que el objetivo, cuenta el stop (lo prudente)
             return stop_fill(k, e, sl) / e * FEE - c
@@ -534,8 +536,8 @@ def winners():
 
 
 def score(trades, exclude):
-    """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad: entrada al precio de
-    mercado al acabar el minuto de su compra, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
+    """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad: entrada un 5% más cara
+    que ella, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
     exclude = set(exclude) | winners()
     swapped = {x.get(k) for x in trades if x["side"] == "swap" for k in ("mint_in", "mint_out")}
     first = {}
@@ -567,7 +569,7 @@ def score(trades, exclude):
             nomed += 1
             continue
         pexit = exit_price(path, b["t"], now_p.get(b["mint"]) or path[-1][4])
-        hit = x2_hit(ks, e)
+        hit = x2_hit(ks, e, b["t"])
         rows.append((xmax, pexit / e, hit is not None))
         if hit is not None:
             mins.append((ks[hit][0] - b["t"]) / 60)
@@ -584,7 +586,7 @@ def score(trades, exclude):
                     per["copiar" + tag].append(g / i)
                     per_t["copiar" + tag].append((b["t"], g / i))
                     gi["copiar" + tag].append((g, i))
-            v = x2_sim(ks, e, pexit, sl)
+            v = x2_sim(ks, e, pexit, sl, b["t"])
             per["x2" + tag].append(v)
             per_t["x2" + tag].append((b["t"], v))
     n = len(rows)

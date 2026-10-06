@@ -365,6 +365,7 @@ SIM_SLIP = 1.02  # el copiador entra después que ella: paga un 2% más que el p
 SIM_MAX_DELAY = 120   # s: una compra que vemos más tarde (servidor parado, aviso perdido) un bot ya no la copiaría a tiempo
 SIM_MIN_USD = 100     # como en la medición del buscador: solo se copian compras suyas de 100 $ o más
 SIM_HOURS = 72        # cada operación se sigue 72 h desde que se abre (igual que la medición del buscador)
+SIM_FIXED = 0.25      # $ de prioridad + propina de cada transacción del bot (con 10 USDT pesa un ~2,5% por lado)
 STRATS = {"copiar": "copiar todo", "x2": "todo en x2"}
 
 
@@ -420,7 +421,7 @@ async def _sim_on_trade(tr, info, frac, pre=0):
             e = max(mkt, tr["price"]) * SIM_SLIP
             db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last, chk) values(?,?,?,?,?,?,?,?,?,?,?)",
                  (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), now, e,
-                  c["usd"] * (1 - SIM_FEE) / e, c["usd"], e, now))
+                  (c["usd"] - SIM_FIXED) * (1 - SIM_FEE) / e, c["usd"], e, now))
         elif plan["strat"] == "copiar":
             px = tr["price"]
             if late:   # la venta ya pasó: se vende al precio de AHORA, no al de su venta
@@ -434,7 +435,7 @@ async def _sim_on_trade(tr, info, frac, pre=0):
 
 
 def sim_sell(lot, qty, price, t, reason):
-    out, left = qty * price * (1 - SIM_FEE), lot["qty"] - qty
+    out, left = qty * price * (1 - SIM_FEE) - SIM_FIXED, lot["qty"] - qty
     if left <= lot["qty"] * 1e-6:
         db.x("update sim set qty=0, usd_out=usd_out+?, last=?, closed=?, reason=? where id=?", (out, price, t, reason, lot["id"]))
     else:
@@ -513,7 +514,8 @@ def sim_summary():
     for w, plan in ((w, plan) for w in wallets_cfg(False) for plan in sim_plans(c, w["addr"])):
         lots = db.q("select * from sim where wallet=? and strat=? and sl is ?", (w["addr"], plan["strat"], plan.get("sl")))
         inv = sum(x["usd_in"] for x in lots)
-        val = sum(x["usd_out"] + x["qty"] * (x["last"] or x["entry"]) * (1 - SIM_FEE) for x in lots)
+        val = sum(x["usd_out"] + (x["qty"] * (x["last"] or x["entry"]) * (1 - SIM_FEE) - SIM_FIXED if x["qty"] > 0 else 0)
+                  for x in lots)
         done = [x for x in lots if x["closed"]]
         label = STRATS.get(plan["strat"], plan["strat"]) + (f" · stop {plan['sl']:.0%}" if plan.get("sl") else " · sin stop")
         start, end = sim_window(c, plan)
