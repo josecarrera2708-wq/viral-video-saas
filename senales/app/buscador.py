@@ -7,7 +7,7 @@ Repite por lotes el estudio que hicimos a mano:
  4. Fuera bots (cientos de operaciones al día) y wallets inactivas.
  5. Se mide cada wallet en sus primeras compras de OTROS tokens de sus últimos 30 días (fuera de muestra: ni los
     tokens por los que se la encontró ni ningún token elegido por su éxito), como lo haría un bot de copia de verdad:
-    entra un 5% más caro que ella, solo cuentan las velas posteriores al minuto de su compra, el x2 tiene que ser de
+    entra ~1 s después (un 2% más caro que ella), solo cuentan las velas posteriores al minuto de su compra, el x2 tiene que ser de
     verdad (no un pico suelto), cada operación dura como mucho 72 h y se cuentan comisiones y costes fijos. Precios en dólares con el SOL de cada hora. Velas de Jupiter (todos los pools) o de
     GeckoTerminal. Se prueban 6 estrategias (copiar todo o vender todo en x2, sin stop o con stop del 30/50%).
  6. Pasan las selectivas (≤15 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más con su mejor
@@ -387,9 +387,9 @@ def _history(addr, max_tx):
 
 # ---------- 6. medición: cuánto daría copiarla (como lo haría un bot de copia de verdad) ----------
 COPY_USD = 10             # importe por compra en la copia sobre el papel
-ENTRY_SLIP = 1.05         # un bot que la copia a los pocos segundos paga su impacto + deslizamiento: un 5% más que ella
-                          # (verifica.py lo comprueba después con los precios reales de la cinta a 5 y 30 s)
-EXIT_SLIP = 0.95          # y al copiar sus ventas vende después que ella: un 5% más barato
+ENTRY_SLIP = 1.02         # el bot (en un VPS) entra ~1 s después que ella: paga un 2% más que ella
+                          # (verifica.py lo comprueba después con los precios reales de la cinta a 1 s)
+EXIT_SLIP = 0.98          # y al copiar sus ventas vende ~1 s después que ella: un 2% más barato
 FEE = 0.98                # ~1% al comprar y ~1% al vender
 FIXED_USD = 0.25          # prioridad + propina de cada transacción (con 10 USDT pesa un ~2,5% por lado)
 HORIZON = 72 * 3600       # igual que la simulación de la app: lo que no llegó a x2 en 72 h se vende a las 72 h
@@ -577,8 +577,8 @@ def winners():
 
 
 def score(trades, exclude):
-    """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad: entrada un 5% más cara
-    que ella, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
+    """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad (en un VPS, ~1 s después
+    que ella): entrada un 2% más cara, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
     exclude = set(exclude) | winners()
     swapped = {x.get(k) for x in trades if x["side"] == "swap" for k in ("mint_in", "mint_out")}
     first = {}
@@ -739,7 +739,7 @@ def main():
             for src, hits in (("list", hits_l), ("new", hits_n), ("kol", hits_k), ("fund", hits_f))]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
     redo = []
-    for c in db.q("select addr, origin, status from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 4%') "
+    for c in db.q("select addr, origin, status from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 5%') "
                   "or (status='no selectiva' and json_extract(detail, '$.perfil.tx_day') <= ?) "
                   "order by status, pct_x2 desc limit 6", (PASS["pct_x2"], SELECT_TX_DAY)):
         src = {v: k for k, v in ORIGIN.items()}.get(c["origin"], "list")
@@ -791,7 +791,7 @@ def main():
               json.dumps({"perfil": prof, "copia": {k: st.get(k) for k in ("copy", "copy_sl30", "copy_sl50", "x2", "x2_sl30", "x2_sl50", "plan", "best",
                                                             "robust", "robust3", "won", "tokens_day", "lcb", "mitad_nueva", "no_medibles",
                                                             "raras", "no_copiables", "min_x2")},
-                          "muestra": st.get("muestra"), "v": 4}), status))
+                          "muestra": st.get("muestra"), "v": 5}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {({k: v for k, v in st.items() if k != 'muestra'})}")
         if ok:
             passed += 1

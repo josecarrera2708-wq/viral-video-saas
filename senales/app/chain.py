@@ -252,6 +252,20 @@ async def gt_candles(client, mint, since, until):
         return []
 
 
+async def tape_price(client, mint, t, skip=""):
+    """Precio real al que se podía comprar a partir del segundo t: mediana de las 3 primeras operaciones válidas de la
+    cinta de Jupiter (sin MEV ni la operación `skip`). None si no hay datos."""
+    try:
+        r = await client.get(f"https://datapi.jup.ag/v1/txs/{mint}", params={"dir": "asc", "fromTs": int(t) * 1000},
+                             headers=UA, timeout=20)
+        xs = [x for x in (r.json().get("txs") or []) if not x.get("isMev") and x.get("isValidPrice") is not False
+              and (x.get("usdPrice") or 0) > 0 and x.get("txHash") != skip and _epoch(x.get("timestamp") or "") >= t]
+        ps = sorted(x["usdPrice"] for x in sorted(xs, key=lambda x: x["timestamp"])[:3])
+        return ps[len(ps) // 2] if ps else None
+    except Exception:
+        return None
+
+
 async def rpc(client, url, method, params):
     for i in range(4):
         try:

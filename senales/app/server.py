@@ -361,7 +361,7 @@ async def process_tx(tx, source="hook"):
 
 # ---------- simulación de copia ----------
 SIM_FEE = 0.01   # comisión de cada compra y de cada venta
-SIM_SLIP = 1.02  # el copiador entra después que ella: paga un 2% más que el precio de mercado de ese momento
+SIM_SLIP = 1.02  # el bot (en un VPS) entra ~1 s después que ella: precio real de ese momento + un 2% de deslizamiento
 SIM_MAX_DELAY = 120   # s: una compra que vemos más tarde (servidor parado, aviso perdido) un bot ya no la copiaría a tiempo
 SIM_MIN_USD = 100     # como en la medición del buscador: solo se copian compras suyas de 100 $ o más
 SIM_HOURS = 72        # cada operación se sigue 72 h desde que se abre (igual que la medición del buscador)
@@ -416,12 +416,15 @@ async def _sim_on_trade(tr, info, frac, pre=0):
             if why:
                 log.info("simulación: compra de %s no copiada (%s)", info["sym"], why)
                 continue
-            # el copiador entra DESPUÉS que ella: al precio de mercado de ahora (nunca más barato que ella) + deslizamiento
-            mkt = (await S["market"].prices([tr["mint"]])).get(tr["mint"]) or tr["price"]
+            # el bot entra ~1 s después que ella: al precio real de la cinta en ese segundo (si no lo hay, al de ahora),
+            # nunca más barato que ella, + deslizamiento
+            p1 = await chain.tape_price(S["client"], tr["mint"], tr["t"] + 1, skip=tr["sig"])
+            mkt = p1 or (await S["market"].prices([tr["mint"]])).get(tr["mint"]) or tr["price"]
             e = max(mkt, tr["price"]) * SIM_SLIP
+            opened = tr["t"] + 1 if p1 else now
             db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last, chk) values(?,?,?,?,?,?,?,?,?,?,?)",
-                 (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), now, e,
-                  (c["usd"] - SIM_FIXED) * (1 - SIM_FEE) / e, c["usd"], e, now))
+                 (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), opened, e,
+                  (c["usd"] - SIM_FIXED) * (1 - SIM_FEE) / e, c["usd"], e, opened))
         elif plan["strat"] == "copiar":
             px = tr["price"]
             if late:   # la venta ya pasó: se vende al precio de AHORA, no al de su venta
