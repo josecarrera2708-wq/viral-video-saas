@@ -5,11 +5,15 @@ Repite por lotes el estudio que hicimos a mano:
  2. Quién compró cada token en las 96 h antes del listado (operaciones de Jupiter) y a qué x llegó en el listado.
  3. Wallets que repiten acierto (compraron antes y el token llegó a x2+) en 2 o más listados (primero las que más).
  4. Fuera bots (cientos de operaciones al día) y wallets inactivas.
- 5. Se mide cada wallet en sus últimas compras de OTROS tokens (fuera de muestra), con velas de 1 minuto:
-    cuánto habría dado copiarla (10 USDT por compra, vendiendo cuando vende, sin stop y con stop del 30 y 50%),
-    la x hasta el máximo y el método del usuario (vender el 50% en cada x2).
- 6. Pasan las selectivas (≤15 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más copiándolas,
-    en al menos 15 compras. Aparecen en la app (pestaña Buscador) y llega un aviso.
+ 5. Se mide cada wallet en sus primeras compras de OTROS tokens de sus últimos 30 días (fuera de muestra: ni los
+    tokens por los que se la encontró ni ningún token elegido por su éxito), como lo haría un bot de copia de verdad:
+    entra al precio de mercado al acabar el minuto de su compra (nunca más barato que ella), solo cuentan las velas
+    posteriores, el x2 tiene que ser de verdad (no un pico suelto), cada operación dura como mucho 72 h y se cuentan
+    comisiones y costes fijos. Precios en dólares con el SOL de cada hora. Velas de Jupiter (todos los pools) o de
+    GeckoTerminal. Se prueban 6 estrategias (copiar todo o vender todo en x2, sin stop o con stop del 30/50%).
+ 6. Pasan las selectivas (≤15 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más con su mejor
+    estrategia en al menos 15 compras, que siguen ganando sin su mejor token, ganan en ≥40% de los tokens, aguantan el
+    remuestreo y la mitad más reciente, y han operado en los últimos 7 días. Aparecen en la app y llega un aviso.
 Todo es reanudable: lo ya hecho se guarda en la base de datos y no se repite.
 """
 import collections
@@ -35,10 +39,11 @@ MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos
 MAX_TX_DAY = 300          # más que esto = bot
 SELECT_TX_DAY = 150       # más que esto = compra de todo (gana por volumen, no por elegir bien): se descarta sin medir
 MAX_TOKENS_DAY = 15       # selectiva: como mucho 15 tokens nuevos al día de media
-PASS = {"n": 15, "pct_x2": 40, "best": 15, "robust": 5, "won": 40}
-# corte: ≥15 compras medidas, más del 40% llegan a x2, copiarla da ≥ +15% contando cada token por igual,
-# sigue dando ≥ +5% sin su mejor token (que no dependa de un golpe de suerte), gana en ≥40% de los tokens
-# y es selectiva (≤ MAX_TOKENS_DAY tokens nuevos al día)
+PASS = {"n": 15, "pct_x2": 40, "best": 15, "robust": 5, "won": 40, "lcb": 0, "mitad_nueva": 0, "dias": 7}
+# corte: ≥15 compras medidas, más del 40% llegan a x2, su mejor estrategia da ≥ +15%, sigue dando ≥ +5% sin su mejor
+# token (que no dependa de un golpe de suerte), gana en ≥40% de los tokens, el límite inferior de la media por
+# remuestreo no pierde (que no sea ruido), la estrategia elegida con su mitad antigua gana en la reciente, ha operado
+# en los últimos 7 días y es selectiva (≤ MAX_TOKENS_DAY tokens nuevos al día)
 # Segunda categoría: wallets que compran tokens recién nacidos a MC muy bajo
 NEW_DAYS = 10             # tokens nacidos en los últimos N días...
 NEW_MIN_MC = 1_000_000    # ...que ya valen al menos esto
@@ -240,12 +245,56 @@ def rpc(method, params):
     return None
 
 
-def history(addr, max_tx=500):
-    prof, trades = cached(f"hist_{addr}.json", 12 * 3600, lambda: _history(addr, max_tx))
-    return prof, trades
+MEASURE_DAYS = 30         # historial que se mide: sus últimos 30 días (por tiempo, no por número de firmas)
+MAX_SIGS = 1500           # tope de transacciones leídas por wallet (el RPC público es lento)
+MAX_MISSING = 0.02        # si no se puede leer más del 2% de sus transacciones, no se mide (se reintenta en otra vuelta)
+_sol_h = {}
+
+
+def sol_usd_at(t):
+    """Precio de SOL en la hora de `t` (velas de 1 h de MEXC; si fallan, Coinbase). Las operaciones de hace semanas
+    se pasan a dólares con el SOL de entonces: con el de hoy, su precio de compra salía hasta un 20% mal."""
+    h = int(t) // 3600 * 3600
+    if h not in _sol_h:
+        k = get("https://api.mexc.com/api/v3/klines", symbol="SOLUSDT", interval="60m",
+                startTime=h * 1000, endTime=(h + 499 * 3600) * 1000, limit=500)
+        for x in k if isinstance(k, list) else []:
+            _sol_h[int(x[0]) // 1000] = float(x[4])
+    if h not in _sol_h:
+        iso = lambda v: datetime.datetime.utcfromtimestamp(v).strftime("%Y-%m-%dT%H:%M:%SZ")
+        k = get("https://api.exchange.coinbase.com/products/SOL-USD/candles", granularity=3600, start=iso(h), end=iso(h + 299 * 3600))
+        for x in k if isinstance(k, list) else []:   # [hora, mínimo, máximo, apertura, cierre, volumen]
+            _sol_h[int(x[0])] = float(x[4])
+    return _sol_h.get(h)
+
+
+def reprice(trades):
+    """Las transacciones que se guardaron antes de este arreglo se pasaron a dólares con el SOL del día en que se
+    leyeron. Las pagadas (o cobradas) en SOL se recalculan con el SOL de su hora; las de stablecoin no cambian."""
+    rs = sorted(x["usd"] / x["sol"] for x in trades if "su" not in x and x.get("side") in ("buy", "sell") and x.get("sol", 0) > 0.001)
+    ref = rs[len(rs) // 2] if rs else 0          # el precio de SOL que se usó al leerlas (el de casi todas)
+    out = []
+    for x in trades:
+        if "su" not in x and x.get("side") in ("buy", "sell") and x.get("sol", 0) > 0.001 and ref \
+                and 0.85 * ref < x["usd"] / x["sol"] < 1.15 * ref:
+            su = sol_usd_at(x["t"])
+            if su:
+                x = dict(x, usd=round(x["sol"] * su, 2), su=su)
+                x["price"] = x["usd"] / x["amount"]
+        out.append(x)
+    return out
+
+
+def history(addr, max_tx=MAX_SIGS):
+    prof, trades = cached(f"hist2_{addr}.json", 12 * 3600, lambda: _history(addr, max_tx))
+    if prof and prof.get("faltan"):
+        # historial incompleto (transacciones que no se pudieron leer): no se guarda, se reintenta en la próxima vuelta
+        os.remove(os.path.join(CACHE, f"hist2_{addr}.json"))
+    return prof, reprice(trades)
 
 
 def _history(addr, max_tx):
+    since = time.time() - MEASURE_DAYS * 86400
     sigs, before = [], None
     while len(sigs) < max_tx:
         p = {"limit": 1000}
@@ -253,7 +302,7 @@ def _history(addr, max_tx):
             p["before"] = before
         s = rpc("getSignaturesForAddress", [addr, p]) or []
         sigs += s
-        if len(s) < 1000:
+        if len(s) < 1000 or (s[-1].get("blockTime") or 0) < since:
             break
         before = s[-1]["signature"]
     ok = [x for x in sigs if not x.get("err") and x.get("blockTime")]
@@ -263,31 +312,44 @@ def _history(addr, max_tx):
     prof = {"tx_day": round(len(ok) / span), "last": ok[0]["blockTime"]}
     if prof["tx_day"] > SELECT_TX_DAY or time.time() - prof["last"] > 30 * 86400:
         return prof, []
-    sol_usd = (get("https://lite-api.jup.ag/price/v3", ids=chain.WSOL) or {}).get(chain.WSOL, {}).get("usdPrice") or 120
-    since = time.time() - DAYS * 86400
     sel = [x["signature"] for x in ok if x["blockTime"] >= since][:max_tx]
+    prof["desde"] = min((x["blockTime"] for x in ok if x["blockTime"] >= since), default=0)
 
     def fetch(sig):
         tx = rpc("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 1}])
         if tx is None:
-            raise RuntimeError("sin respuesta")   # no se guarda: se reintenta en la próxima vuelta
-        return chain.detect(chain.parse_tx(tx), {addr: {}}, sol_usd, infer_payer=True)
+            raise RuntimeError("sin respuesta")   # no se guarda: se reintenta
+        p = chain.parse_tx(tx)
+        su = sol_usd_at(p["t"]) if p else None
+        if p and not su:
+            raise RuntimeError("sin precio de SOL")
+        out = chain.detect(p, {addr: {}}, su, infer_payer=True, swaps=True)
+        return [dict(x, su=su) for x in out]
 
     def one(sig):
         # cada transacción leída se guarda: si la vuelta se corta a medias, no se vuelve a pedir
         try:
             return cached(f"tx_{addr[:8]}_{sig}.json", 30 * 86400, lambda: fetch(sig))
         except RuntimeError:
-            return []
+            return None
     with ThreadPoolExecutor(6 if db.get("helius_key") else 2) as ex:
-        trades = [t for r in ex.map(one, sel) for t in r]
-    return prof, trades
+        res = list(ex.map(one, sel))
+    for i, r in enumerate(res):   # segundo intento, de una en una, de las que fallaron
+        if r is None:
+            res[i] = one(sel[i])
+    miss = sum(1 for r in res if r is None)
+    prof["leidas"], prof["huecos"] = len(sel) - miss, miss
+    if miss > MAX_MISSING * len(sel):
+        prof["faltan"] = miss
+    return prof, [t for r in res if r for t in r]
 
 
-# ---------- 6. medición: cuánto daría copiarla ----------
+# ---------- 6. medición: cuánto daría copiarla (como lo haría un bot de copia de verdad) ----------
 COPY_USD = 10             # importe por compra en la copia sobre el papel
-ENTRY_SLIP = 1.02         # el bot de copia compra unos segundos después: se paga un 2% más que ella
+ENTRY_SLIP = 1.02         # deslizamiento del bot sobre el precio de mercado al que entra
 FEE = 0.98                # ~1% al comprar y ~1% al vender
+FIXED_USD = 0.25          # prioridad + propina de cada transacción (con 10 USDT pesa un ~2,5% por lado)
+HORIZON = 72 * 3600       # igual que la simulación de la app: lo que no llegó a x2 en 72 h se vende a las 72 h
 _gt_last = [0.0]
 
 
@@ -301,8 +363,8 @@ def gt(path, **params):
 
 
 def fine_path(mint, t):
-    """Velas desde la compra: de 1 min las primeras ~16 h, de 15 min hasta ~10 días y de 4 h después.
-    Con velas más gruesas el máximo sale inflado (el pico de la vela puede ser anterior a la compra)."""
+    """Velas de GeckoTerminal (solo su pool principal) desde la compra: de 1 min las primeras ~16 h, de 15 min hasta
+    ~10 días y de 4 h después."""
     return cached(f"path_{mint}_{int(t)}.json", 6 * 3600, lambda: _fine_path(mint, t))
 
 
@@ -324,6 +386,74 @@ def _fine_path(mint, t):
     return sorted({k[0]: k for k in out}.values())
 
 
+def jup_path(mint, t):
+    """Velas de Jupiter (todos los pools, también la curva de pump.fun antes de migrar): de 1 min las primeras ~16 h
+    y de 15 min hasta el final del horizonte. Solo hay velas en los minutos con operaciones."""
+    done = time.time() > t + HORIZON + 3600   # pasado el horizonte las velas ya no cambian
+    return cached(f"jpath_{mint}_{int(t)}.json", 30 * 86400 if done else 1800, lambda: _jup_path(mint, t))
+
+
+def _jup_path(mint, t):
+    def q(interval, to, n):
+        d = get(f"https://datapi.jup.ag/v2/charts/{mint}", interval=interval, to=int(to) * 1000, candles=n, type="price", quote="usd") or {}
+        return [[k["time"], k["open"], k["high"], k["low"], k["close"], k.get("volume") or 0] for k in d.get("candles") or []]
+    m0 = int(t) // 60 * 60
+    out = [k for k in q("1_MINUTE", m0 + 60000, 1000) if k[0] >= m0]
+    if time.time() > m0 + 60000:
+        out += [k for k in q("15_MINUTE", m0 + HORIZON + 900, 300) if k[0] >= m0 + 60000]
+    return sorted({k[0]: k for k in out}.values())
+
+
+def price_path(mint, t):
+    """Velas para medir una compra: las de Jupiter si tienen la vela del minuto de su compra; si no, GeckoTerminal."""
+    m0 = int(t) // 60 * 60
+    p = jup_path(mint, t)
+    if any(k[0] == m0 for k in p):
+        return p
+    g = fine_path(mint, t)
+    return g if any(k[0] == m0 for k in g) else p
+
+
+def after(path, t):
+    """Velas que EMPIEZAN después del minuto de `t` (la de ese minuto pudo tener su máximo o su mínimo antes de la
+    compra) y dentro del horizonte."""
+    m1 = int(t) // 60 * 60 + 60
+    return [k for k in path if m1 <= k[0] < t + HORIZON]
+
+
+def entry_at(path, t, price):
+    """Precio al que entra el copiador: el de mercado al acabar el minuto de su compra (cierre de esa vela, ya con el
+    impacto de ella), nunca más barato que ella, con deslizamiento; y las velas posteriores. (None, []) si no hay vela
+    en ese minuto: no se sabe a qué precio habría entrado el copiador."""
+    m0 = int(t) // 60 * 60
+    k0 = next((k for k in path if k[0] == m0), None)
+    if not k0:
+        return None, []
+    return max(k0[4], price) * ENTRY_SLIP, after(path, t)
+
+
+def x2_hit(ks, e):
+    """Primera vela en la que el x2 es de verdad: toca 2e y cierra por encima, o la siguiente vela también lo toca
+    (un pico suelto de una sola operación no cuenta)."""
+    for i, k in enumerate(ks):
+        if k[2] >= 2 * e and (k[4] >= 2 * e or (i + 1 < len(ks) and ks[i + 1][2] >= 2 * e)):
+            return i
+    return None
+
+
+def exit_price(path, t, pnow):
+    """Lo que vale lo no vendido: el cierre al acabar el horizonte si ya pasó; si no, el precio de hoy."""
+    ks = [k for k in path if k[0] < t + HORIZON]
+    if time.time() >= t + HORIZON and ks:
+        return ks[-1][4]
+    return pnow or (ks[-1][4] if ks else 0)
+
+
+def stop_fill(k, e, sl):
+    """Precio al que salta un stop en la vela k: en memecoins resbala, si la vela cerró por debajo se vende al cierre."""
+    return min(e * (1 - sl), k[1], max(k[4], k[3]))
+
+
 def ladder(xmax, xnow):
     n = 0
     while xmax >= 2 ** (n + 1):
@@ -332,41 +462,61 @@ def ladder(xmax, xnow):
 
 
 def copy_sim(path, trades, mint, t0, pnow, sl):
-    """Copy trade sobre el papel: COPY_USD en cada compra suya, a su precio; en cada venta suya vendes la misma
-    parte; stop de cada compra a (1 - sl) de su precio (0 = sin stop). Devuelve (valor final, invertido)."""
+    """Copy trade sobre el papel: COPY_USD en cada compra suya y, en cada venta suya, vendes la misma parte; siempre al
+    precio de mercado al acabar el minuto de su operación (nunca mejor que ella al comprar); stop de cada compra a
+    (1 - sl) de tu precio; horizonte de 72 h y costes fijos. Devuelve (valor final, invertido)."""
     hold, lots, got, inv = 0.0, [], 0.0, 0.0
-    ev = [(k[0] + 60, 1, k) for k in path] + [(x["t"], 0, x) for x in trades if x["mint"] == mint and x["t"] >= t0]
+    ks = [k for k in path if k[0] < t0 + HORIZON]
+    # cada vela cuenta al TERMINAR (1 o 15 min según su tamaño): así sus ventas de esos minutos van antes
+    dur = lambda i: (ks[i + 1][0] - ks[i][0]) if i + 1 < len(ks) and ks[i + 1][0] - ks[i][0] <= 900 else 60
+    ev = [(k[0] + dur(i), 1, k) for i, k in enumerate(ks)] + \
+         [(x["t"], 0, x) for x in trades if x.get("mint") == mint and t0 <= x["t"] < t0 + HORIZON]
     for _, is_candle, k in sorted(ev, key=lambda z: (z[0], z[1])):
         if not is_candle:
+            prev = [c for c in path if c[0] <= k["t"] // 60 * 60]
+            px = prev[-1][4] if prev else k["price"]
             if k["side"] == "buy":
-                lots.append([k["price"] * ENTRY_SLIP, COPY_USD / (k["price"] * ENTRY_SLIP)])
+                e = max(px, k["price"]) * ENTRY_SLIP
+                lots.append([e, COPY_USD / e, k["t"]])
                 inv += COPY_USD
+                got -= FIXED_USD
                 hold += k["amount"]
-            elif hold > 0:
+            elif k["side"] == "sell" and hold > 0:
                 fr = min(1.0, k["amount"] / hold)
                 hold -= min(hold, k["amount"])
                 for lot in lots:
                     q = lot[1] * fr
-                    got += q * k["price"] * FEE
+                    got += q * px * FEE
                     lot[1] -= q
+                got -= FIXED_USD
         elif sl:
             for lot in lots:
-                if lot[1] > 0 and k[3] <= lot[0] * (1 - sl):   # k = [t, apertura, máximo, mínimo, cierre, volumen]
-                    got += lot[1] * min(lot[0] * (1 - sl), k[1]) * FEE
+                if lot[1] > 0 and k[0] >= lot[2] // 60 * 60 + 60 and k[3] <= lot[0] * (1 - sl):
+                    got += lot[1] * stop_fill(k, lot[0], sl) * FEE - FIXED_USD
                     lot[1] = 0
-    return got + sum(lot[1] for lot in lots) * pnow * FEE, inv
+    left = sum(lot[1] for lot in lots)
+    return got + left * exit_price(path, t0, pnow) * FEE - (FIXED_USD if left else 0), inv
 
 
-def x2_sim(path, e, pnow, sl):
-    """Compras como ella (pagando ENTRY_SLIP más) y vendes TODO al llegar a x2 desde tu precio; stop opcional
-    a (1 - sl). Si no llega a nada, sigue en cartera al precio de hoy. Devuelve el valor por 1 invertido."""
-    e *= ENTRY_SLIP
-    for k in path:
+def x2_sim(ks, e, pexit, sl):
+    """Entras a `e` (ya con deslizamiento) y vendes TODO en el primer x2 de verdad desde tu precio; stop opcional a
+    (1 - sl). `ks` = velas posteriores a tu entrada dentro del horizonte. Devuelve el valor por 1 invertido."""
+    c = 2 * FIXED_USD / COPY_USD
+    hit = x2_hit(ks, e)
+    for i, k in enumerate(ks):
         if sl and k[3] <= e * (1 - sl):     # en la misma vela que el objetivo, cuenta el stop (lo prudente)
-            return min(e * (1 - sl), k[1]) / e * FEE
-        if k[2] >= 2 * e:
-            return 2 * FEE
-    return pnow / e * FEE
+            return stop_fill(k, e, sl) / e * FEE - c
+        if i == hit:
+            return 2 * FEE - c
+    return pexit / e * FEE - c
+
+
+def boot_lcb(v, q=0.10, n=2000):
+    """Límite inferior (percentil q) de la media por remuestreo: con 15-40 tokens la media tiene ±15-20 puntos de ruido."""
+    import random
+    rnd = random.Random(len(v))   # reproducible
+    m = sorted(sum(rnd.choice(v) for _ in v) / len(v) for _ in range(n))
+    return m[int(q * n)]
 
 
 # estrategias que se prueban con cada wallet (la mejor es la que se usaría para copiarla)
@@ -374,14 +524,28 @@ PLANS = {"copiar": "copiar todo", "copiar_sl30": "copiar todo + stop 30%", "copi
          "x2": "todo en x2", "x2_sl30": "todo en x2 + stop 30%", "x2_sl50": "todo en x2 + stop 50%"}
 
 
+def winners():
+    """Tokens elegidos POR su éxito (listados en exchanges, recién nacidos que ya valen ≥ NEW_MIN_MC): no sirven para
+    medir a ninguna wallet (serían aciertos dentro de la muestra)."""
+    try:
+        return {r["mint"] for r in db.q("select mint from scan_tokens union select mint from newborn")}
+    except Exception:
+        return set()
+
+
 def score(trades, exclude):
-    """Mide las primeras compras de cada token (fuera de muestra): x hasta el máximo, tu método y, sobre todo,
-    cuánto daría copiarla (COPY_USD por compra, vendiendo cuando ella vende, sin stop y con stop del 30 y 50%)."""
+    """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad: entrada al precio de
+    mercado al acabar el minuto de su compra, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
+    exclude = set(exclude) | winners()
+    swapped = {x.get(k) for x in trades if x["side"] == "swap" for k in ("mint_in", "mint_out")}
     first = {}
     for t in sorted(trades, key=lambda t: t["t"]):
         if t["side"] == "buy" and t["usd"] >= 100 and t["mint"] not in exclude and t["mint"] not in first:
             first[t["mint"]] = t
-    buys = sorted(first.values(), key=lambda t: -t["t"])[:40]
+    # compras que pagó otra cuenta (precio deducido) o de algo que ya tenía: la app no las copiaría así -> no se miden
+    skipped = sum(1 for t in first.values() if t.get("inferred") or t.get("pre", 0) > 0.01 * t["amount"])
+    buys = sorted((t for t in first.values() if not t.get("inferred") and t.get("pre", 0) <= 0.01 * t["amount"]),
+                  key=lambda t: -t["t"])[:40]
     if not buys:
         return None
     now_p = {}
@@ -390,44 +554,83 @@ def score(trades, exclude):
         d = get("https://lite-api.jup.ag/price/v3", ids=",".join(mints[i:i + 50])) or {}
         for m in mints[i:i + 50]:
             now_p[m] = (d.get(m) or {}).get("usdPrice") or 0
-    rows, per = [], collections.defaultdict(list)   # per[plan] = resultado en cada token (1 = ni gana ni pierde)
+    rows, per, per_t, gi, nomed, odd, mins, used = [], collections.defaultdict(list), collections.defaultdict(list), \
+        collections.defaultdict(list), 0, 0, [], []
     for b in buys:
-        path = fine_path(b["mint"], b["t"])
-        if not path or not b["price"]:
+        path = price_path(b["mint"], b["t"])
+        e, ks = entry_at(path, b["t"], b["price"]) if path and b["price"] else (None, [])
+        if not e or not ks:
+            nomed += 1          # sin mercado medible al copiarla: no cuenta ni como acierto ni como fallo
             continue
-        e = b["price"]
-        xmax = max(1.0, max(k[2] for k in path) / e)
+        xmax = max(1.0, max(k[2] for k in ks) / e)
         if xmax > 500:          # dato roto (pico de un pool recién creado)
+            nomed += 1
             continue
-        pnow = now_p.get(b["mint"]) or path[-1][4]
-        rows.append((xmax, pnow / e))
+        pexit = exit_price(path, b["t"], now_p.get(b["mint"]) or path[-1][4])
+        hit = x2_hit(ks, e)
+        rows.append((xmax, pexit / e, hit is not None))
+        if hit is not None:
+            mins.append((ks[hit][0] - b["t"]) / 60)
+        used.append([b["mint"], b["t"], b["price"]])
+        tm = [t for t in trades if t.get("mint") == b["mint"] and t["t"] >= b["t"]]
+        # vende más de lo que le vimos comprar o rota memecoin→memecoin: el bot no ve esas compras -> fuera de «copiar»
+        bad = b["mint"] in swapped or sum(t["amount"] for t in tm if t["side"] == "sell") > \
+            1.05 * sum(t["amount"] for t in tm if t["side"] == "buy")
+        odd += bad
         for sl, tag in ((0, ""), (0.3, "_sl30"), (0.5, "_sl50")):
-            g, i = copy_sim(path, trades, b["mint"], b["t"], pnow, sl)
-            if i:
-                per["copiar" + tag].append(g / i)
-            per["x2" + tag].append(x2_sim([k for k in path if k[0] + 60 > b["t"]], e, pnow, sl))
+            if not bad:
+                g, i = copy_sim(path, trades, b["mint"], b["t"], pexit, sl)
+                if i:
+                    per["copiar" + tag].append(g / i)
+                    per_t["copiar" + tag].append((b["t"], g / i))
+                    gi["copiar" + tag].append((g, i))
+            v = x2_sim(ks, e, pexit, sl)
+            per["x2" + tag].append(v)
+            per_t["x2" + tag].append((b["t"], v))
     n = len(rows)
     if not n:
         return None
-    # cada token cuenta igual, compre ella una vez o diez: así un solo token con muchas compras no lo decide todo
+    # «todo en x2»: cada token cuenta igual (una entrada por token). «Copiar»: por USDT invertido, como la simulación y
+    # el bot (10 USDT en CADA compra suya): por token, un token en el que promedia 6 veces a la baja contaba como uno
     cp = {k: round(100 * (sum(per[k]) / len(per[k]) - 1)) if per[k] else -100 for k in PLANS}
-    st = {"n": n, "pct_x2": round(100 * sum(1 for a, _ in rows if a >= 2) / n),
-          "avg_xmax": round(sum(a for a, _ in rows) / n, 2),
-          "ladder": round(100 * (sum(ladder(a, b) * FEE for a, b in rows) / n - 1)),
-          "all_x2": round(100 * (sum((2 if a >= 2 else b) * FEE for a, b in rows) / n - 1)),
+    for k in ("copiar", "copiar_sl30", "copiar_sl50"):
+        if gi[k]:
+            cp[k] = round(100 * (sum(g for g, _ in gi[k]) / sum(i for _, i in gi[k]) - 1))
+    st = {"n": n, "pct_x2": round(100 * sum(1 for r in rows if r[2]) / n),
+          "avg_xmax": round(sum(r[0] for r in rows) / n, 2),
+          "ladder": round(100 * (sum(ladder(a, b) * FEE for a, b, _ in rows) / n - 1)),
+          "all_x2": round(100 * (sum((2 if h else b) * FEE for _, b, h in rows) / n - 1)),
           "copy": cp["copiar"], "copy_sl30": cp["copiar_sl30"], "copy_sl50": cp["copiar_sl50"],
-          "x2": cp["x2"], "x2_sl30": cp["x2_sl30"], "x2_sl50": cp["x2_sl50"]}
-    rob, won = {}, {}
+          "x2": cp["x2"], "x2_sl30": cp["x2_sl30"], "x2_sl50": cp["x2_sl50"],
+          "no_medibles": nomed, "raras": odd, "no_copiables": skipped,
+          "min_x2": round(sorted(mins)[len(mins) // 2]) if mins else None}
+    rob, rob3, won = {}, {}, {}
     for k in PLANS:
         v = sorted(per[k])
         rob[k] = round(100 * (sum(v[:-1]) / (len(v) - 1) - 1)) if len(v) > 1 else -100   # sin su mejor token
+        rob3[k] = round(100 * (sum(v[:-3]) / (len(v) - 3) - 1)) if len(v) > 3 else -100  # sin sus 3 mejores
+        if len(gi.get(k) or []) > 3:
+            g2 = sorted(gi[k], key=lambda x: x[0] - x[1])
+            rob[k] = round(100 * (sum(g for g, _ in g2[:-1]) / sum(i for _, i in g2[:-1]) - 1))
+            rob3[k] = round(100 * (sum(g for g, _ in g2[:-3]) / sum(i for _, i in g2[:-3]) - 1))
         won[k] = round(100 * sum(1 for x in v if x > 1) / len(v)) if v else 0            # % de tokens en que gana
     # la mejor de las que ganan de forma regular; si ninguna lo hace, la de más media (y no pasará el corte)
     steady = [k for k in PLANS if rob[k] >= PASS["robust"] and won[k] >= PASS["won"]]
     st["plan"] = max(steady or PLANS, key=lambda k: cp[k])
-    st["best"], st["robust"], st["won"] = cp[st["plan"]], rob[st["plan"]], won[st["plan"]]
+    st["best"], st["robust"], st["robust3"], st["won"] = cp[st["plan"]], rob[st["plan"]], rob3[st["plan"]], won[st["plan"]]
+    # la estrategia se eligió mirando estos mismos tokens: además, la media tiene que aguantar el remuestreo...
+    v = per[st["plan"]]
+    st["lcb"] = round(100 * (boot_lcb(v) - 1)) if len(v) >= 5 else -100
+    # ...y la estrategia elegida con su mitad más antigua de tokens tiene que ganar también en la mitad más reciente
+    ts = sorted(t for t, _ in per_t["x2"])
+    cut = ts[len(ts) // 2] if ts else 0
+    old = {k: [x for t, x in v2 if t < cut] for k, v2 in per_t.items()}
+    new = {k: [x for t, x in v2 if t >= cut] for k, v2 in per_t.items()}
+    k_old = max(PLANS, key=lambda k: sum(old.get(k) or [0]) / max(1, len(old.get(k) or [])))
+    st["mitad_nueva"] = round(100 * (sum(new[k_old]) / len(new[k_old]) - 1)) if new.get(k_old) else -100
     span = max(1.0, (max(t["t"] for t in trades) - min(t["t"] for t in trades)) / 86400)
     st["tokens_day"] = round(len(first) / span, 1)   # tokens nuevos al día: cuanto menos, más selectiva
+    st["muestra"] = used                             # para que verifica.py mida exactamente lo mismo
     return st
 
 
@@ -478,7 +681,7 @@ def main():
             for src, hits in (("list", hits_l), ("new", hits_n))]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
     redo = []
-    for c in db.q("select addr, origin, status from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 3%') "
+    for c in db.q("select addr, origin, status from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 4%') "
                   "or (status='no selectiva' and json_extract(detail, '$.perfil.tx_day') <= ?) "
                   "order by status, pct_x2 desc limit 6", (PASS["pct_x2"], SELECT_TX_DAY)):
         src = "new" if c["origin"] == ORIGIN["new"] else "list"
@@ -510,10 +713,15 @@ def main():
         tx_day = (prof or {}).get("tx_day", 0)
         if tx_day <= SELECT_TX_DAY:
             measured += 1   # los bots y las que compran de todo se descartan rápido y no gastan hueco
-        sel_mints = set(h["mints"].split(","))
-        st = score(trades, sel_mints) if trades else None
+        # fuera de muestra: TODOS sus tokens de las dos tablas (no solo los aciertos de una); score quita además los ganadores
+        sel_mints = set(h["mints"].split(",")) | {r["mint"] for r in db.q(
+            "select mint from prelist where addr=? union select mint from early where addr=?", (h["addr"], h["addr"]))}
+        st = score(trades, sel_mints) if trades and not (prof or {}).get("faltan") else None
         ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] > PASS["pct_x2"] and st["best"] >= PASS["best"]
-                  and st["robust"] >= PASS["robust"] and st["won"] >= PASS["won"] and st["tokens_day"] <= MAX_TOKENS_DAY)
+                  and st["robust"] >= PASS["robust"] and st["won"] >= PASS["won"] and st["tokens_day"] <= MAX_TOKENS_DAY
+                  and st["lcb"] >= PASS["lcb"] and st["mitad_nueva"] >= PASS["mitad_nueva"]
+                  and st["no_medibles"] <= 0.2 * (st["n"] + st["no_medibles"]) and st["raras"] <= 0.2 * st["n"]
+                  and time.time() - (prof or {}).get("last", 0) <= PASS["dias"] * 86400)
         status = "nueva" if ok else "bot" if tx_day > MAX_TX_DAY else "no selectiva" if tx_day > SELECT_TX_DAY else "no pasa"
         st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0,
                     "x2": 0, "x2_sl30": 0, "x2_sl50": 0, "plan": "", "best": 0, "robust": 0, "won": 0, "tokens_day": 0}
@@ -521,9 +729,11 @@ def main():
              "values(?,?,?,?,?,?,?,?,?,?,?,?)",
              (h["addr"], ORIGIN[h["src"]], int(time.time()), st["best"], st["n"], st["pct_x2"],
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
-              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "x2", "x2_sl30", "x2_sl50", "plan", "best", "robust", "won",
-                                                        "tokens_day")}, "v": 3}), status))
-        log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")
+              json.dumps({"perfil": prof, "copia": {k: st.get(k) for k in ("copy", "copy_sl30", "copy_sl50", "x2", "x2_sl30", "x2_sl50", "plan", "best",
+                                                            "robust", "robust3", "won", "tokens_day", "lcb", "mitad_nueva", "no_medibles",
+                                                            "raras", "no_copiables", "min_x2")},
+                          "muestra": st.get("muestra"), "v": 4}), status))
+        log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {({k: v for k, v in st.items() if k != 'muestra'})}")
         if ok:
             passed += 1
             push("Buscador: nueva wallet muy buena",

@@ -351,7 +351,7 @@ async def process_tx(tx, source="hook"):
         info, mc, new = await record(tr, w, source)
         if new:
             pre = p["pre"].get((tr["wallet"], tr["mint"])) or 0
-            await sim_on_trade(tr, info, min(1.0, tr["amount"] / pre) if pre else 1.0)
+            await sim_on_trade(tr, info, min(1.0, tr["amount"] / pre) if pre else 1.0, pre)
         fresh = time.time() - tr["t"] <= NOTIFY_MAX_AGE
         if tr["side"] == "sell":
             bg(finish_sell(tr, w, info, mc, p["acct"].get((tr["wallet"], tr["mint"])), fresh))
@@ -361,6 +361,10 @@ async def process_tx(tx, source="hook"):
 
 # ---------- simulación de copia ----------
 SIM_FEE = 0.01   # comisión de cada compra y de cada venta
+SIM_SLIP = 1.02  # el copiador entra después que ella: paga un 2% más que el precio de mercado de ese momento
+SIM_MAX_DELAY = 120   # s: una compra que vemos más tarde (servidor parado, aviso perdido) un bot ya no la copiaría a tiempo
+SIM_MIN_USD = 100     # como en la medición del buscador: solo se copian compras suyas de 100 $ o más
+SIM_HOURS = 72        # cada operación se sigue 72 h desde que se abre (igual que la medición del buscador)
 STRATS = {"copiar": "copiar todo", "x2": "todo en x2"}
 
 
@@ -384,34 +388,49 @@ def sim_window(c, plan):
 SIM_LOCK = asyncio.Lock()   # el sondeo y el seguimiento no pueden cerrar a la vez la misma operación
 
 
-async def sim_on_trade(tr, info, frac):
-    """Una operación nueva de una wallet: la simulación abre o vende como lo haría el copy trade."""
+async def sim_on_trade(tr, info, frac, pre=0):
+    """Una operación nueva de una wallet: la simulación abre o vende como lo haría el copy trade.
+    pre = lo que la wallet ya tenía del token antes de esta operación."""
     async with SIM_LOCK:
-        await _sim_on_trade(tr, info, frac)
+        await _sim_on_trade(tr, info, frac, pre)
 
 
-async def _sim_on_trade(tr, info, frac):
+async def _sim_on_trade(tr, info, frac, pre=0):
     c = sim_cfg()
     if not c:
         return
+    now = int(time.time())
+    late = now - tr["t"] > SIM_MAX_DELAY
     for plan in sim_plans(c, tr["wallet"]):
         start, end = sim_window(c, plan)
         if not start <= tr["t"] < end:
             continue
         same = (tr["wallet"], tr["mint"], plan["strat"], plan.get("sl"))
         if tr["side"] == "buy":
-            if plan["strat"] == "x2" and db.q("select 1 from sim where wallet=? and mint=? and strat=? and sl is ?", same, one=True):
-                continue  # con «todo en x2» solo cuenta la primera compra de cada token
+            held = db.q("select 1 from sim where wallet=? and mint=? and strat=? and sl is ?", same, one=True)
+            # se copia lo mismo que midió el buscador: su PRIMERA compra de cada token (con «copiar», también las
+            # siguientes de un token ya copiado), de 100 $ o más, vista a tiempo; no las recompras de algo que ya tenía
+            why = "tarde" if late else "pequeña" if tr["usd"] < SIM_MIN_USD else \
+                "repetida" if plan["strat"] == "x2" and held else "ya lo tenía" if not held and pre > 0.01 * tr["amount"] else None
+            if why:
+                log.info("simulación: compra de %s no copiada (%s)", info["sym"], why)
+                continue
+            # el copiador entra DESPUÉS que ella: al precio de mercado de ahora (nunca más barato que ella) + deslizamiento
+            mkt = (await S["market"].prices([tr["mint"]])).get(tr["mint"]) or tr["price"]
+            e = max(mkt, tr["price"]) * SIM_SLIP
             db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last, chk) values(?,?,?,?,?,?,?,?,?,?,?)",
-                 (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), tr["t"], tr["price"],
-                  c["usd"] * (1 - SIM_FEE) / tr["price"], c["usd"], tr["price"], tr["t"]))
+                 (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), now, e,
+                  c["usd"] * (1 - SIM_FEE) / e, c["usd"], e, now))
         elif plan["strat"] == "copiar":
+            px = tr["price"]
+            if late:   # la venta ya pasó: se vende al precio de AHORA, no al de su venta
+                px = (await S["market"].prices([tr["mint"]])).get(tr["mint"]) or tr["price"]
             for lot in db.q("select * from sim where wallet=? and mint=? and strat=? and sl is ? and closed is null", same):
                 # una venta que llega tarde: antes, el stop que pudo saltar mientras el servidor estaba parado
-                if await sim_catchup(lot, tr["t"]):
+                if await sim_catchup(lot, now if late else tr["t"]):
                     continue
                 lot = db.q("select * from sim where id=?", (lot["id"],), one=True)
-                sim_sell(lot, lot["qty"] * frac, tr["price"], tr["t"], "vendió la wallet")
+                sim_sell(lot, lot["qty"] * frac, px, now if late else tr["t"], "vendió la wallet")
 
 
 def sim_sell(lot, qty, price, t, reason):
@@ -426,9 +445,9 @@ SIM_GAP = 180   # s sin revisar una operación a partir de los cuales se repasan
 
 
 def sim_end(lot, c=None):
-    c = c or sim_cfg()
-    plan = next((p for p in sim_plans(c, lot["wallet"]) if p["strat"] == lot["strat"] and p.get("sl") == lot["sl"]), {})
-    return sim_window(c, plan)[1]
+    """Cada operación se sigue SIM_HOURS desde que se abre, como en la medición (con un fin común de la prueba, una
+    compra de la hora 70 solo tenía 2 h para llegar a x2). Los días de prueba deciden qué compras se copian."""
+    return lot["opened"] + SIM_HOURS * 3600
 
 
 async def sim_catchup(lot, until):
@@ -445,7 +464,8 @@ async def sim_catchup(lot, until):
         if t < chk // 60 * 60 + 60 or t >= upto:
             continue  # la vela en curso al revisar ya se miró (o es anterior a la compra)
         if sl and lo <= e * (1 - sl):   # stop y x2 en la misma vela: se supone que saltó antes el stop
-            sim_sell(lot, lot["qty"], min(o, e * (1 - sl)), t + 60, f"stop {sl:.0%}")
+            # en memecoins el stop resbala: si la vela cerró por debajo, se vende al cierre
+            sim_sell(lot, lot["qty"], min(o, e * (1 - sl), max(cl, lo)), t + 60, f"stop {sl:.0%}")
             return True
         if lot["strat"] == "x2" and h >= 2 * e:
             sim_sell(lot, lot["qty"], 2 * e, t + 60, "x2")

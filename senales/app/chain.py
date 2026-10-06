@@ -93,7 +93,9 @@ def detect(p, wallets, sol_usd, infer_payer=False, swaps=False):
         if len(toks) != 1:  # varias monedas a la vez: no se puede repartir el precio con seguridad
             continue
         (mint, d), = toks.items()
+        inferred = False
         if infer_payer and abs(quote) < MIN_USD:
+            inferred = True   # el precio no sale de lo que pagó ella sino de otra cuenta de la transacción
             others = [v * (sol_usd if m == WSOL else 1) for (o, m), v in p["tok"].items() if o != w and m in QUOTE]
             others += [v * sol_usd for k, v in p["sol"].items() if k != w and abs(v) > 0.01]
             if d > 0 and others and min(others) < -MIN_USD:
@@ -109,7 +111,8 @@ def detect(p, wallets, sol_usd, infer_payer=False, swaps=False):
         usd = abs(quote)
         out.append({"sig": p["sig"], "t": p["t"], "wallet": w, "mint": mint, "side": side,
                     "amount": abs(d), "usd": round(usd, 2), "sol": round(abs(sol), 4),
-                    "price": usd / abs(d)})
+                    "price": usd / abs(d), "inferred": inferred,
+                    "pre": p["pre"].get((w, mint)) or 0})   # lo que ya tenía del token antes de esta operación
     return out
 
 
@@ -213,7 +216,7 @@ async def gt_max(client, mint, since):
         r = await client.get(f"https://api.geckoterminal.com/api/v2/networks/solana/pools/{pool}/ohlcv/minute",
                              params={"aggregate": 15, "limit": 1000, "token": mint, "currency": "usd"}, headers=UA, timeout=20)
         lst = ((r.json().get("data") or {}).get("attributes") or {}).get("ohlcv_list") or []
-        highs = [c[2] for c in lst if c[0] + 900 > since]
+        highs = [c[2] for c in lst if c[0] >= since // 900 * 900 + 900]   # sin la vela de la compra: su máximo pudo ser anterior
         return max(highs) if highs else None
     except Exception:
         return None
