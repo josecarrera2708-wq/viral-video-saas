@@ -1,7 +1,7 @@
 # Paquete YouTube: 50 lagartijas al día durante 90 días
 
 ## Título (recomendado)
-**Qué pasa si haces 50 lagartijas al día durante 90 días** (55 caracteres, sin emojis, no se corta en el móvil)
+**Esto puede transformar tu cuerpo en 90 días (sin gimnasio)** (elegido: genera intriga sin revelar el ejercicio y sin prometer de más)
 
 Alternativas:
 - 50 lagartijas al día durante 90 días: esto es lo que pasa
@@ -9,7 +9,8 @@ Alternativas:
 - Sin gimnasio ni pesas: 90 días de lagartijas (qué cambia en tu cuerpo)
 
 ## Miniatura
-- Recomendada: `video/lagartijas-01/marca/miniatura_lagartijas_A_1280x720.jpg` (antes y después, DÍA 1 / DÍA 90).
+- Recomendada: `video/lagartijas-01/marca/miniatura_lagartijas_C_1280x720.jpg` (antes y después, DÍA 1 / DÍA 90, texto: LO QUE NADIE TE DICE; no revela el ejercicio).
+- Descartada: `..._A_...` (decía "50 lagartijas al día" y daba la información del vídeo).
 - Alternativa: `miniatura_lagartijas_B_1280x720.jpg` (cara de sorpresa + calendario de 90 días).
 - Probar una y, si en 2 o 3 días el CTR es bajo, cambiar a la otra.
 
