@@ -8,7 +8,7 @@ Repite por lotes el estudio que hicimos a mano:
  5. Se mide cada wallet en sus últimas compras de OTROS tokens (fuera de muestra), con velas de 1 minuto:
     cuánto habría dado copiarla (10 USDT por compra, vendiendo cuando vende, sin stop y con stop del 30 y 50%),
     la x hasta el máximo y el método del usuario (vender el 50% en cada x2).
- 6. Pasan las selectivas (≤3 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más copiándolas,
+ 6. Pasan las selectivas (≤15 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más copiándolas,
     en al menos 15 compras. Aparecen en la app (pestaña Buscador) y llega un aviso.
 Todo es reanudable: lo ya hecho se guarda en la base de datos y no se repite.
 """
@@ -33,8 +33,8 @@ MIN_BUY_USD = 500         # compra mínima antes del listado para contar como ac
 MIN_X = 2.0               # x mínima al llegar el listado
 MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos para medir la wallet
 MAX_TX_DAY = 300          # más que esto = bot
-SELECT_TX_DAY = 80        # más que esto = compra de todo (gana por volumen, no por elegir bien): se descarta sin medir
-MAX_TOKENS_DAY = 3        # selectiva: como mucho 3 tokens nuevos al día de media
+SELECT_TX_DAY = 150       # más que esto = compra de todo (gana por volumen, no por elegir bien): se descarta sin medir
+MAX_TOKENS_DAY = 15       # selectiva: como mucho 15 tokens nuevos al día de media
 PASS = {"n": 15, "pct_x2": 40, "best": 15, "robust": 5, "won": 40}
 # corte: ≥15 compras medidas, más del 40% llegan a x2, copiarla da ≥ +15% contando cada token por igual,
 # sigue dando ≥ +5% sin su mejor token (que no dependa de un golpe de suerte), gana en ≥40% de los tokens
@@ -442,8 +442,9 @@ def main():
             for src, hits in (("list", hits_l), ("new", hits_n))]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
     redo = []
-    for c in db.q("select addr, origin from candidates where status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 3%' "
-                  "order by pct_x2 desc limit 4", (PASS["pct_x2"],)):
+    for c in db.q("select addr, origin from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 3%') "
+                  "or (status='no selectiva' and json_extract(detail, '$.perfil.tx_day') <= ?) "
+                  "order by status, pct_x2 desc limit 6", (PASS["pct_x2"], SELECT_TX_DAY)):
         src = "new" if c["origin"] == ORIGIN["new"] else "list"
         table = "early" if src == "new" else "prelist"
         ms = [r["mint"] for r in db.q(f"select mint from {table} where addr=?", (c["addr"],))]
