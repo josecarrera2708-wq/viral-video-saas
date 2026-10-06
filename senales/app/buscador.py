@@ -240,7 +240,7 @@ def rpc(method, params):
     return None
 
 
-def history(addr, max_tx=800):
+def history(addr, max_tx=500):
     prof, trades = cached(f"hist_{addr}.json", 12 * 3600, lambda: _history(addr, max_tx))
     return prof, trades
 
@@ -267,9 +267,18 @@ def _history(addr, max_tx):
     since = time.time() - DAYS * 86400
     sel = [x["signature"] for x in ok if x["blockTime"] >= since][:max_tx]
 
-    def one(sig):
+    def fetch(sig):
         tx = rpc("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 1}])
-        return chain.detect(chain.parse_tx(tx), {addr: {}}, sol_usd, infer_payer=True) if tx else []
+        if tx is None:
+            raise RuntimeError("sin respuesta")   # no se guarda: se reintenta en la próxima vuelta
+        return chain.detect(chain.parse_tx(tx), {addr: {}}, sol_usd, infer_payer=True)
+
+    def one(sig):
+        # cada transacción leída se guarda: si la vuelta se corta a medias, no se vuelve a pedir
+        try:
+            return cached(f"tx_{addr[:8]}_{sig}.json", 30 * 86400, lambda: fetch(sig))
+        except RuntimeError:
+            return []
     with ThreadPoolExecutor(6 if db.get("helius_key") else 2) as ex:
         trades = [t for r in ex.map(one, sel) for t in r]
     return prof, trades
@@ -469,19 +478,27 @@ def main():
             for src, hits in (("list", hits_l), ("new", hits_n))]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
     redo = []
-    for c in db.q("select addr, origin from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 3%') "
+    for c in db.q("select addr, origin, status from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 3%') "
                   "or (status='no selectiva' and json_extract(detail, '$.perfil.tx_day') <= ?) "
                   "order by status, pct_x2 desc limit 6", (PASS["pct_x2"], SELECT_TX_DAY)):
         src = "new" if c["origin"] == ORIGIN["new"] else "list"
         table = "early" if src == "new" else "prelist"
         ms = [r["mint"] for r in db.q(f"select mint from {table} where addr=?", (c["addr"],))]
-        redo.append({"addr": c["addr"], "n": len(ms), "mints": ",".join(ms), "src": src})
-    pool, seen = list(redo), {h["addr"] for h in redo}
+        redo.append({"addr": c["addr"], "n": len(ms), "mints": ",".join(ms), "src": src, "slow": c["status"] == "no selectiva"})
+    fresh, seen = [], {h["addr"] for h in redo}
     for pair in itertools.zip_longest(*pend):   # una de cada categoría, por turnos
         for h in pair:
             if h and h["addr"] not in seen:
                 seen.add(h["addr"])
-                pool.append(h)
+                fresh.append(h)
+    # primero las de mucho acierto medidas con un corte anterior; las «no selectiva» (lentas) van intercaladas,
+    # una de cada cuatro, para que no frenen la búsqueda de wallets nuevas
+    slow = [h for h in redo if h["slow"]]
+    pool = [h for h in redo if not h["slow"]]
+    for i, h in enumerate(fresh):
+        if i % 3 == 0 and slow:
+            pool.append(slow.pop(0))
+        pool.append(h)
     log(f"antes de listados: {len(hits_l)} wallets con {MIN_HITS}+ aciertos · recién nacidas: {len(hits_n)} con 2+ aciertos x{EARLY_X}; "
         f"pendientes {len(pool)} ({len(redo)} se vuelven a medir); se miden hasta {WALLETS_PER_RUN} que no sean bots")
     passed = measured = checked = 0
