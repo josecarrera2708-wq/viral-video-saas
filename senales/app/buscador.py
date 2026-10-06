@@ -321,6 +321,23 @@ def copy_sim(path, trades, mint, t0, pnow, sl):
     return got + sum(lot[1] for lot in lots) * pnow * FEE, inv
 
 
+def x2_sim(path, e, pnow, sl):
+    """Compras como ella (pagando ENTRY_SLIP más) y vendes TODO al llegar a x2 desde tu precio; stop opcional
+    a (1 - sl). Si no llega a nada, sigue en cartera al precio de hoy. Devuelve el valor por 1 invertido."""
+    e *= ENTRY_SLIP
+    for k in path:
+        if sl and k[3] <= e * (1 - sl):     # en la misma vela que el objetivo, cuenta el stop (lo prudente)
+            return min(e * (1 - sl), k[1]) / e * FEE
+        if k[2] >= 2 * e:
+            return 2 * FEE
+    return pnow / e * FEE
+
+
+# estrategias que se prueban con cada wallet (la mejor es la que se usaría para copiarla)
+PLANS = {"copiar": "copiar todo", "copiar_sl30": "copiar todo + stop 30%", "copiar_sl50": "copiar todo + stop 50%",
+         "x2": "todo en x2", "x2_sl30": "todo en x2 + stop 30%", "x2_sl50": "todo en x2 + stop 50%"}
+
+
 def score(trades, exclude):
     """Mide las primeras compras de cada token (fuera de muestra): x hasta el máximo, tu método y, sobre todo,
     cuánto daría copiarla (COPY_USD por compra, vendiendo cuando ella vende, sin stop y con stop del 30 y 50%)."""
@@ -337,7 +354,7 @@ def score(trades, exclude):
         d = get("https://lite-api.jup.ag/price/v3", ids=",".join(mints[i:i + 50])) or {}
         for m in mints[i:i + 50]:
             now_p[m] = (d.get(m) or {}).get("usdPrice") or 0
-    rows, per = [], collections.defaultdict(list)   # per[sl] = resultado de copiarla en cada token (1 = igual)
+    rows, per = [], collections.defaultdict(list)   # per[plan] = resultado en cada token (1 = ni gana ni pierde)
     for b in buys:
         path = fine_path(b["mint"], b["t"])
         if not path or not b["price"]:
@@ -348,24 +365,25 @@ def score(trades, exclude):
             continue
         pnow = now_p.get(b["mint"]) or path[-1][4]
         rows.append((xmax, pnow / e))
-        for sl in (0, 0.3, 0.5):
+        for sl, tag in ((0, ""), (0.3, "_sl30"), (0.5, "_sl50")):
             g, i = copy_sim(path, trades, b["mint"], b["t"], pnow, sl)
             if i:
-                per[sl].append(g / i)
+                per["copiar" + tag].append(g / i)
+            per["x2" + tag].append(x2_sim([k for k in path if k[0] + 60 > b["t"]], e, pnow, sl))
     n = len(rows)
     if not n:
         return None
     # cada token cuenta igual, compre ella una vez o diez: así un solo token con muchas compras no lo decide todo
-    cp = {sl: round(100 * (sum(v) / len(v) - 1)) if v else -100 for sl, v in per.items()}
-    for sl in (0, 0.3, 0.5):
-        cp.setdefault(sl, -100)
+    cp = {k: round(100 * (sum(per[k]) / len(per[k]) - 1)) if per[k] else -100 for k in PLANS}
     st = {"n": n, "pct_x2": round(100 * sum(1 for a, _ in rows if a >= 2) / n),
           "avg_xmax": round(sum(a for a, _ in rows) / n, 2),
           "ladder": round(100 * (sum(ladder(a, b) * FEE for a, b in rows) / n - 1)),
           "all_x2": round(100 * (sum((2 if a >= 2 else b) * FEE for a, b in rows) / n - 1)),
-          "copy": cp[0], "copy_sl30": cp[0.3], "copy_sl50": cp[0.5]}
-    st["best"] = max(st["copy"], st["copy_sl30"], st["copy_sl50"])
-    v = sorted(per[max((0, 0.3, 0.5), key=lambda sl: cp[sl])]) if per else []
+          "copy": cp["copiar"], "copy_sl30": cp["copiar_sl30"], "copy_sl50": cp["copiar_sl50"],
+          "x2": cp["x2"], "x2_sl30": cp["x2_sl30"], "x2_sl50": cp["x2_sl50"]}
+    st["plan"] = max(PLANS, key=lambda k: cp[k])
+    st["best"] = cp[st["plan"]]
+    v = sorted(per[st["plan"]])
     st["robust"] = round(100 * (sum(v[:-1]) / (len(v) - 1) - 1)) if len(v) > 1 else -100   # sin su mejor token
     st["won"] = round(100 * sum(1 for x in v if x > 1) / len(v)) if v else 0                # % de tokens en que gana
     span = max(1.0, (max(t["t"] for t in trades) - min(t["t"] for t in trades)) / 86400)
@@ -418,14 +436,22 @@ def main():
                   "group by addr having n>=2 order by n desc, u desc", (EARLY_X,))
     pend = [[dict(h, src=src) for h in hits if h["addr"] not in followed and h["addr"] not in skip]
             for src, hits in (("list", hits_l), ("new", hits_n))]
-    pool, seen = [], set()
+    # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
+    redo = []
+    for c in db.q("select addr, origin from candidates where status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 2%' "
+                  "order by pct_x2 desc limit 4", (PASS["pct_x2"],)):
+        src = "new" if c["origin"] == ORIGIN["new"] else "list"
+        table = "early" if src == "new" else "prelist"
+        ms = [r["mint"] for r in db.q(f"select mint from {table} where addr=?", (c["addr"],))]
+        redo.append({"addr": c["addr"], "n": len(ms), "mints": ",".join(ms), "src": src})
+    pool, seen = list(redo), {h["addr"] for h in redo}
     for pair in itertools.zip_longest(*pend):   # una de cada categoría, por turnos
         for h in pair:
             if h and h["addr"] not in seen:
                 seen.add(h["addr"])
                 pool.append(h)
     log(f"antes de listados: {len(hits_l)} wallets con {MIN_HITS}+ aciertos · recién nacidas: {len(hits_n)} con 2+ aciertos x{EARLY_X}; "
-        f"pendientes {len(pool)}; se miden hasta {WALLETS_PER_RUN} que no sean bots")
+        f"pendientes {len(pool)} ({len(redo)} se vuelven a medir); se miden hasta {WALLETS_PER_RUN} que no sean bots")
     passed = measured = checked = 0
     for h in pool:
         if measured >= WALLETS_PER_RUN or checked >= 80:
@@ -441,17 +467,18 @@ def main():
                   and st["robust"] >= PASS["robust"] and st["won"] >= PASS["won"] and st["tokens_day"] <= MAX_TOKENS_DAY)
         status = "nueva" if ok else "bot" if tx_day > MAX_TX_DAY else "no selectiva" if tx_day > SELECT_TX_DAY else "no pasa"
         st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0,
-                    "best": 0, "robust": 0, "won": 0, "tokens_day": 0}
+                    "x2": 0, "x2_sl30": 0, "x2_sl50": 0, "plan": "", "best": 0, "robust": 0, "won": 0, "tokens_day": 0}
         db.x("insert or replace into candidates(addr, origin, found, score, n, pct_x2, ladder, all_x2, avg_xmax, hits, detail, status) "
              "values(?,?,?,?,?,?,?,?,?,?,?,?)",
              (h["addr"], ORIGIN[h["src"]], int(time.time()), st["best"], st["n"], st["pct_x2"],
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
-              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best", "robust", "won", "tokens_day")}}), status))
+              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "x2", "x2_sl30", "x2_sl50", "plan", "best", "robust", "won",
+                                                        "tokens_day")}, "v": 2}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")
         if ok:
             passed += 1
             push("Buscador: nueva wallet muy buena",
-                 f"Copiarla da {st['best']:+d}% · {st['pct_x2']}% de sus compras llegan a x2 · {h['n']} aciertos antes de listados")
+                 f"{PLANS[st['plan']]}: {st['best']:+d}% · {st['pct_x2']}% de sus compras llegan a x2 · {st['tokens_day']} tokens al día")
     msg = f"{len(todo)} listados nuevos, {measured} wallets medidas ({checked - measured} bots descartados), {passed} pasan el corte"
     db.put("last_scan", {"t": int(time.time()), "msg": msg, "secs": int(time.time() - t0)})
     log("FIN:", msg)
