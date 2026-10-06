@@ -35,8 +35,10 @@ MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos
 MAX_TX_DAY = 300          # más que esto = bot
 SELECT_TX_DAY = 80        # más que esto = compra de todo (gana por volumen, no por elegir bien): se descarta sin medir
 MAX_TOKENS_DAY = 3        # selectiva: como mucho 3 tokens nuevos al día de media
-PASS = {"n": 15, "pct_x2": 40, "best": 15}   # corte: ≥15 compras medidas, más del 40% llegan a x2, copiarla da ≥ +15%
-                                             # y es selectiva (≤ MAX_TOKENS_DAY tokens nuevos al día)
+PASS = {"n": 15, "pct_x2": 40, "best": 15, "robust": 5, "won": 40}
+# corte: ≥15 compras medidas, más del 40% llegan a x2, copiarla da ≥ +15% contando cada token por igual,
+# sigue dando ≥ +5% sin su mejor token (que no dependa de un golpe de suerte), gana en ≥40% de los tokens
+# y es selectiva (≤ MAX_TOKENS_DAY tokens nuevos al día)
 # Segunda categoría: wallets que compran tokens recién nacidos a MC muy bajo
 NEW_DAYS = 10             # tokens nacidos en los últimos N días...
 NEW_MIN_MC = 1_000_000    # ...que ya valen al menos esto
@@ -335,7 +337,7 @@ def score(trades, exclude):
         d = get("https://lite-api.jup.ag/price/v3", ids=",".join(mints[i:i + 50])) or {}
         for m in mints[i:i + 50]:
             now_p[m] = (d.get(m) or {}).get("usdPrice") or 0
-    rows, got, inv = [], collections.defaultdict(float), collections.defaultdict(float)
+    rows, per = [], collections.defaultdict(list)   # per[sl] = resultado de copiarla en cada token (1 = igual)
     for b in buys:
         path = fine_path(b["mint"], b["t"])
         if not path or not b["price"]:
@@ -348,18 +350,24 @@ def score(trades, exclude):
         rows.append((xmax, pnow / e))
         for sl in (0, 0.3, 0.5):
             g, i = copy_sim(path, trades, b["mint"], b["t"], pnow, sl)
-            got[sl] += g
-            inv[sl] += i
+            if i:
+                per[sl].append(g / i)
     n = len(rows)
     if not n:
         return None
-    cp = {sl: round(100 * (got[sl] / inv[sl] - 1)) if inv[sl] else -100 for sl in (0, 0.3, 0.5)}
+    # cada token cuenta igual, compre ella una vez o diez: así un solo token con muchas compras no lo decide todo
+    cp = {sl: round(100 * (sum(v) / len(v) - 1)) if v else -100 for sl, v in per.items()}
+    for sl in (0, 0.3, 0.5):
+        cp.setdefault(sl, -100)
     st = {"n": n, "pct_x2": round(100 * sum(1 for a, _ in rows if a >= 2) / n),
           "avg_xmax": round(sum(a for a, _ in rows) / n, 2),
           "ladder": round(100 * (sum(ladder(a, b) * FEE for a, b in rows) / n - 1)),
           "all_x2": round(100 * (sum((2 if a >= 2 else b) * FEE for a, b in rows) / n - 1)),
           "copy": cp[0], "copy_sl30": cp[0.3], "copy_sl50": cp[0.5]}
-    st["best"] = max(st["copy"], st["copy_sl30"], st["copy_sl50"], st["all_x2"])
+    st["best"] = max(st["copy"], st["copy_sl30"], st["copy_sl50"])
+    v = sorted(per[max((0, 0.3, 0.5), key=lambda sl: cp[sl])]) if per else []
+    st["robust"] = round(100 * (sum(v[:-1]) / (len(v) - 1) - 1)) if len(v) > 1 else -100   # sin su mejor token
+    st["won"] = round(100 * sum(1 for x in v if x > 1) / len(v)) if v else 0                # % de tokens en que gana
     span = max(1.0, (max(t["t"] for t in trades) - min(t["t"] for t in trades)) / 86400)
     st["tokens_day"] = round(len(first) / span, 1)   # tokens nuevos al día: cuanto menos, más selectiva
     return st
@@ -430,15 +438,15 @@ def main():
         sel_mints = set(h["mints"].split(","))
         st = score(trades, sel_mints) if trades else None
         ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] > PASS["pct_x2"] and st["best"] >= PASS["best"]
-                  and st["tokens_day"] <= MAX_TOKENS_DAY)
+                  and st["robust"] >= PASS["robust"] and st["won"] >= PASS["won"] and st["tokens_day"] <= MAX_TOKENS_DAY)
         status = "nueva" if ok else "bot" if tx_day > MAX_TX_DAY else "no selectiva" if tx_day > SELECT_TX_DAY else "no pasa"
         st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0,
-                    "best": 0, "tokens_day": 0}
+                    "best": 0, "robust": 0, "won": 0, "tokens_day": 0}
         db.x("insert or replace into candidates(addr, origin, found, score, n, pct_x2, ladder, all_x2, avg_xmax, hits, detail, status) "
              "values(?,?,?,?,?,?,?,?,?,?,?,?)",
              (h["addr"], ORIGIN[h["src"]], int(time.time()), st["best"], st["n"], st["pct_x2"],
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
-              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best", "tokens_day")}}), status))
+              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best", "robust", "won", "tokens_day")}}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")
         if ok:
             passed += 1
