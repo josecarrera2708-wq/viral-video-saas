@@ -103,3 +103,4 @@ tmp/
 temp/
 *.temp
 video/musculo-01/*.mp4
+video/*/*.mp4
