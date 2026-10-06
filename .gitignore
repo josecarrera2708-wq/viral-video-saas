@@ -102,3 +102,4 @@ dmypy.json
 tmp/
 temp/
 *.temp
+investigacion/canales/cache/
