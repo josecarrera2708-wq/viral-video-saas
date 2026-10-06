@@ -361,8 +361,16 @@ def _history(addr, max_tx):
 
     def one(sig):
         # cada transacción leída se guarda: si la vuelta se corta a medias, no se vuelve a pedir
+        name = f"tx_{addr[:8]}_{sig}.json"
         try:
-            return cached(f"tx_{addr[:8]}_{sig}.json", 30 * 86400, lambda: fetch(sig))
+            r = cached(name, 30 * 86400, lambda: fetch(sig))
+            # guardadas antes de marcar los precios deducidos: las que no pagó en SOL se vuelven a leer (una compra
+            # «suya» puede ser la que pagó otra cuenta en la misma transacción, p. ej. el dev del token)
+            if any("su" not in x and x.get("side") in ("buy", "sell") and x.get("sol", 0) < 0.01 for x in r):
+                r = fetch(sig)
+                with open(os.path.join(CACHE, name), "w") as f:
+                    json.dump(r, f)
+            return r
         except RuntimeError:
             return None
     with ThreadPoolExecutor(6 if db.get("helius_key") else 2) as ex:
