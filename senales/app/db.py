@@ -41,6 +41,9 @@ with _lock:
     if "hint" not in cols:
         # en las compras: «posible listado» o los exchanges donde ya cotiza el token
         _conn.execute("alter table trades add column hint text")
+    if "chk" not in [r[1] for r in _conn.execute("pragma table_info(sim)")]:
+        # hasta cuándo se revisó el x2 y el stop de cada operación simulada (para repasar las velas si el servidor paró)
+        _conn.execute("alter table sim add column chk integer")
     _conn.commit()
 
 

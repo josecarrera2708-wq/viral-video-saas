@@ -219,6 +219,36 @@ async def gt_max(client, mint, since):
         return None
 
 
+_pools = {}
+
+
+async def gt_candles(client, mint, since, until):
+    """Velas de 1 min de GeckoTerminal ([t, open, high, low, close, vol]) entre since y until, de más antigua a
+    más reciente; vacío si el token no tiene pool. Hasta unas 66 h hacia atrás (4 páginas de 1000 velas)."""
+    try:
+        if mint not in _pools:
+            r = await client.get(f"https://api.geckoterminal.com/api/v2/networks/solana/tokens/{mint}/pools",
+                                 params={"page": 1}, headers=UA, timeout=20)
+            _pools[mint] = ((r.json().get("data") or [{}])[0].get("attributes") or {}).get("address")
+            await asyncio.sleep(2.2)
+        if not _pools[mint]:
+            return []
+        out, before = {}, int(until)
+        for _ in range(4):
+            r = await client.get(f"https://api.geckoterminal.com/api/v2/networks/solana/pools/{_pools[mint]}/ohlcv/minute",
+                                 params={"aggregate": 1, "limit": 1000, "token": mint, "currency": "usd",
+                                         "before_timestamp": before}, headers=UA, timeout=20)
+            lst = ((r.json().get("data") or {}).get("attributes") or {}).get("ohlcv_list") or []
+            out.update({c[0]: c for c in lst if since - 60 < c[0] < until})
+            await asyncio.sleep(2.2)
+            if len(lst) < 1000 or min(c[0] for c in lst) <= since:
+                break
+            before = min(c[0] for c in lst)
+        return [out[k] for k in sorted(out)]
+    except Exception:
+        return []
+
+
 async def rpc(client, url, method, params):
     for i in range(4):
         try:

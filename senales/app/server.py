@@ -351,7 +351,7 @@ async def process_tx(tx, source="hook"):
         info, mc, new = await record(tr, w, source)
         if new:
             pre = p["pre"].get((tr["wallet"], tr["mint"])) or 0
-            sim_on_trade(tr, info, min(1.0, tr["amount"] / pre) if pre else 1.0)
+            await sim_on_trade(tr, info, min(1.0, tr["amount"] / pre) if pre else 1.0)
         fresh = time.time() - tr["t"] <= NOTIFY_MAX_AGE
         if tr["side"] == "sell":
             bg(finish_sell(tr, w, info, mc, p["acct"].get((tr["wallet"], tr["mint"])), fresh))
@@ -381,8 +381,16 @@ def sim_window(c, plan):
     return start, start + c["days"] * 86400
 
 
-def sim_on_trade(tr, info, frac):
+SIM_LOCK = asyncio.Lock()   # el sondeo y el seguimiento no pueden cerrar a la vez la misma operación
+
+
+async def sim_on_trade(tr, info, frac):
     """Una operación nueva de una wallet: la simulación abre o vende como lo haría el copy trade."""
+    async with SIM_LOCK:
+        await _sim_on_trade(tr, info, frac)
+
+
+async def _sim_on_trade(tr, info, frac):
     c = sim_cfg()
     if not c:
         return
@@ -394,11 +402,15 @@ def sim_on_trade(tr, info, frac):
         if tr["side"] == "buy":
             if plan["strat"] == "x2" and db.q("select 1 from sim where wallet=? and mint=? and strat=? and sl is ?", same, one=True):
                 continue  # con «todo en x2» solo cuenta la primera compra de cada token
-            db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last) values(?,?,?,?,?,?,?,?,?,?)",
+            db.x("insert into sim(wallet, mint, sym, strat, sl, opened, entry, qty, usd_in, last, chk) values(?,?,?,?,?,?,?,?,?,?,?)",
                  (tr["wallet"], tr["mint"], info["sym"], plan["strat"], plan.get("sl"), tr["t"], tr["price"],
-                  c["usd"] * (1 - SIM_FEE) / tr["price"], c["usd"], tr["price"]))
+                  c["usd"] * (1 - SIM_FEE) / tr["price"], c["usd"], tr["price"], tr["t"]))
         elif plan["strat"] == "copiar":
             for lot in db.q("select * from sim where wallet=? and mint=? and strat=? and sl is ? and closed is null", same):
+                # una venta que llega tarde: antes, el stop que pudo saltar mientras el servidor estaba parado
+                if await sim_catchup(lot, tr["t"]):
+                    continue
+                lot = db.q("select * from sim where id=?", (lot["id"],), one=True)
                 sim_sell(lot, lot["qty"] * frac, tr["price"], tr["t"], "vendió la wallet")
 
 
@@ -410,25 +422,67 @@ def sim_sell(lot, qty, price, t, reason):
         db.x("update sim set qty=?, usd_out=usd_out+?, last=? where id=?", (left, out, price, lot["id"]))
 
 
-def sim_check(prices, now):
+SIM_GAP = 180   # s sin revisar una operación a partir de los cuales se repasan las velas de 1 min
+
+
+def sim_end(lot, c=None):
+    c = c or sim_cfg()
+    plan = next((p for p in sim_plans(c, lot["wallet"]) if p["strat"] == lot["strat"] and p.get("sl") == lot["sl"]), {})
+    return sim_window(c, plan)[1]
+
+
+async def sim_catchup(lot, until):
+    """Si el servidor estuvo parado, el x2, el stop y el fin de la prueba se aplican cuando ocurrieron (con las velas
+    de 1 min), no al volver. Devuelve True si la operación quedó cerrada."""
+    chk = lot["chk"] or lot["opened"]
+    if until - chk < SIM_GAP:
+        return False
+    end = sim_end(lot)
+    upto = min(until, end)
+    cs = await chain.gt_candles(S["client"], lot["mint"], chk, upto)
+    e, sl = lot["entry"], lot["sl"]
+    for t, o, h, lo, cl, *_ in cs:
+        if t < chk // 60 * 60 + 60 or t >= upto:
+            continue  # la vela en curso al revisar ya se miró (o es anterior a la compra)
+        if sl and lo <= e * (1 - sl):   # stop y x2 en la misma vela: se supone que saltó antes el stop
+            sim_sell(lot, lot["qty"], min(o, e * (1 - sl)), t + 60, f"stop {sl:.0%}")
+            return True
+        if lot["strat"] == "x2" and h >= 2 * e:
+            sim_sell(lot, lot["qty"], 2 * e, t + 60, "x2")
+            return True
+    last = cs[-1][4] if cs else lot["last"]
+    if until >= end:
+        sim_sell(lot, lot["qty"], last, end, "fin de la prueba")
+        return True
+    db.x("update sim set last=?, chk=? where id=?", (last, upto if cs else until, lot["id"]))
+    return False
+
+
+async def sim_check(prices, now):
     """Cada minuto: objetivo x2, stop-loss y, al acabar la prueba, cierre de lo que quede abierto."""
+    async with SIM_LOCK:
+        await _sim_check(prices, now)
+
+
+async def _sim_check(prices, now):
     c = sim_cfg()
     if not c:
         return
     for lot in db.q("select * from sim where closed is null"):
-        plan = next((p for p in sim_plans(c, lot["wallet"]) if p["strat"] == lot["strat"] and p.get("sl") == lot["sl"]), {})
-        end = sim_window(c, plan)[1]
-        v = prices.get(lot["mint"])
-        if not v:
+        if await sim_catchup(lot, now):
             continue
-        if now >= end:
+        lot = db.q("select * from sim where id=?", (lot["id"],), one=True)
+        v = prices.get(lot["mint"])
+        if not v or lot["closed"]:
+            continue
+        if now >= sim_end(lot, c):
             sim_sell(lot, lot["qty"], v, now, "fin de la prueba")
         elif lot["strat"] == "x2" and v >= 2 * lot["entry"]:
             sim_sell(lot, lot["qty"], 2 * lot["entry"], now, "x2")
         elif lot["sl"] and v <= lot["entry"] * (1 - lot["sl"]):
             sim_sell(lot, lot["qty"], v, now, f"stop {lot['sl']:.0%}")
         else:
-            db.x("update sim set last=? where id=?", (v, lot["id"]))
+            db.x("update sim set last=?, chk=? where id=?", (v, now, lot["id"]))
 
 
 def sim_summary():
@@ -516,17 +570,36 @@ async def worker():
             log.exception("error procesando aviso")
 
 
+async def recent_sigs(addr, since, page=100, pages=5):
+    """Firmas recientes de una wallet, de más nueva a más antigua. Tras un parón sigue hacia atrás hasta llegar a
+    una ya vista o a `since`, para no perder operaciones (una wallet activa hace más de 20 en una hora)."""
+    out, before = [], None
+    for _ in range(pages):
+        p = {"limit": page}
+        if before:
+            p["before"] = before
+        sigs = None
+        for url in rpc_urls():
+            sigs = await chain.rpc(S["client"], url, "getSignaturesForAddress", [addr, p])
+            if sigs is not None:
+                break
+        out += sigs or []
+        if not sigs or len(sigs) < page or (sigs[-1].get("blockTime") or 0) < since \
+                or db.q("select 1 from seen where sig=?", (sigs[-1]["signature"],), one=True):
+            break
+        before = sigs[-1]["signature"]
+    return out
+
+
 async def poller():
     """Respaldo: revisa las últimas firmas de cada wallet por si un aviso de Helius se perdió."""
     while True:
         try:
+            since = (db.get("last_poll") or time.time()) - 120   # si el servidor estuvo parado, hasta donde se quedó
             for w in wallets_cfg():
-                sigs = None
-                for url in rpc_urls():
-                    sigs = await chain.rpc(S["client"], url, "getSignaturesForAddress", [w["addr"], {"limit": 20}])
-                    if sigs is not None:
-                        break
-                for s in reversed(sigs or []):
+                # las 20 últimas siempre (como antes, también para una wallet recién añadida); más atrás, solo el parón
+                sigs = [s for i, s in enumerate(await recent_sigs(w["addr"], since)) if i < 20 or (s.get("blockTime") or 0) >= since]
+                for s in reversed(sigs):
                     if s.get("err") or db.q("select 1 from seen where sig=?", (s["signature"],), one=True):
                         continue
                     tx = None
@@ -552,7 +625,7 @@ async def tracker():
             sim_open = [r["mint"] for r in db.q("select distinct mint from sim where closed is null")]
             if pos or sim_open:
                 pr = await S["market"].prices([p["mint"] for p in pos] + sim_open)
-                sim_check(pr, now)
+                await sim_check(pr, now)
                 for p in pos:
                     v = pr.get(p["mint"])
                     if not v:
@@ -654,6 +727,9 @@ async def lifespan(app):
     if db.get("setup_token"):
         with open(os.path.join(db.DATA, "codigo_inicial.txt"), "w") as f:
             f.write(db.get("setup_token") + "\n")
+    if time.time() - (db.get("last_poll") or time.time()) > 300:
+        # el servidor estuvo parado: el máximo de cada token se vuelve a mirar en las velas (pudo subir mientras tanto)
+        db.x("update positions set bf=null where first_t > ?", (int(time.time()) - TRACK_DAYS * 86400,))
     tasks = [asyncio.create_task(t()) for t in (worker, poller, tracker, daily_summary, entries, cex_watch)]
     if db.get("helius_key"):
         asyncio.create_task(sync_webhook())
