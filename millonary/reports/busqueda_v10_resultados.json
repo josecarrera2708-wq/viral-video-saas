@@ -1,0 +1,1635 @@
+{
+ "n_variantes": 32,
+ "elegibles": 2,
+ "finalistas": [
+  "1h | E03 Bandera / bander\u00edn | B1 confluencia | dejar_correr",
+  "1h | E02 Triple suelo/techo | B1 confluencia | dejar_correr"
+ ],
+ "certificadas": [],
+ "mesa_v10": [
+  "1h | E02 Triple suelo/techo | B1 confluencia | dejar_correr",
+  "1h | E03 Bandera / bander\u00edn | B1 confluencia | dejar_correr"
+ ],
+ "marginales": {
+  "tf": {
+   "1h": {
+    "Rc": 0.274,
+    "R": 0.037,
+    "acierto": 0.346,
+    "n": 21.25
+   },
+   "4h": {
+    "Rc": -0.471,
+    "R": 1.34,
+    "acierto": 0.417,
+    "n": 1.75
+   }
+  },
+  "familia": {
+   "E01 Doble suelo": {
+    "Rc": 0.048,
+    "R": 0.09,
+    "acierto": 0.369,
+    "n": 17.5
+   },
+   "E02 Triple suelo/techo": {
+    "Rc": 0.446,
+    "R": 0.022,
+    "acierto": 0.362,
+    "n": 25.0
+   },
+   "E03 Bandera / bander\u00edn": {
+    "Rc": -0.071,
+    "R": 0.67,
+    "acierto": 0.362,
+    "n": 11.5
+   }
+  },
+  "combinacion": {
+   "B1 confluencia": {
+    "Rc": 0.093,
+    "R": 0.214,
+    "acierto": 0.345,
+    "n": 24.5
+   },
+   "B2 confluencia + tendencia": {
+    "Rc": 0.311,
+    "R": 0.163,
+    "acierto": 0.341,
+    "n": 18.375
+   },
+   "B3 confluencia + funding": {
+    "Rc": -0.002,
+    "R": 1.323,
+    "acierto": 0.598,
+    "n": 12.75
+   },
+   "B4 confluencia + compresi\u00f3n": {
+    "Rc": -0.051,
+    "R": -0.249,
+    "acierto": 0.171,
+    "n": 9.875
+   }
+  },
+  "salida": {
+   "TP3": {
+    "Rc": -0.057,
+    "R": 0.244,
+    "acierto": 0.397,
+    "n": 15.938
+   },
+   "dejar_correr": {
+    "Rc": 0.232,
+    "R": 0.482,
+    "acierto": 0.331,
+    "n": 16.812
+   }
+  }
+ },
+ "variantes": {
+  "1h | E01 Doble suelo | B1 confluencia | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 65,
+    "por_dia": 0.046395431834404,
+    "acierto": 0.4461538461538462,
+    "R_media": 0.12610532926627727,
+    "t_R": 0.6945931577305142,
+    "p_1s": 0.24491212850878008,
+    "retorno": 0.05331349795436302,
+    "caida_max": 0.04006798536856104,
+    "sharpe": 0.5282577240605657,
+    "salidas": {
+     "stop": 0.5076923076923077,
+     "tp": 0.13846153846153847,
+     "signal": 0.0,
+     "time": 0.35384615384615387,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 25,
+    "por_dia": 0.04570383912248629,
+    "acierto": 0.48,
+    "R_media": 0.40136943435353706,
+    "t_R": 1.1893478613452177,
+    "p_1s": 0.12296846939522199,
+    "retorno": 0.04988913801923678,
+    "caida_max": 0.02282824528966887,
+    "sharpe": 1.1304709341272694,
+    "salidas": {
+     "stop": 0.48,
+     "tp": 0.2,
+     "signal": 0.0,
+     "time": 0.32,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B1 confluencia | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 63,
+    "por_dia": 0.044967880085653104,
+    "acierto": 0.2857142857142857,
+    "R_media": 0.0741040025290926,
+    "t_R": 0.38472172853980074,
+    "p_1s": 0.3508800716818865,
+    "retorno": 0.01570665659393522,
+    "caida_max": 0.047309319343451284,
+    "sharpe": 0.15946778266408257,
+    "salidas": {
+     "stop": 0.20634920634920634,
+     "tp": 0.0,
+     "signal": 0.7936507936507936,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 25,
+    "por_dia": 0.04570383912248629,
+    "acierto": 0.32,
+    "R_media": -0.07845424821030791,
+    "t_R": -0.40657393031209865,
+    "p_1s": 0.6560380798049903,
+    "retorno": 0.00033746249624400093,
+    "caida_max": 0.018057294257135204,
+    "sharpe": 0.021172938794714415,
+    "salidas": {
+     "stop": 0.08,
+     "tp": 0.0,
+     "signal": 0.92,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B2 confluencia + tendencia | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 47,
+    "por_dia": 0.03354746609564597,
+    "acierto": 0.46808510638297873,
+    "R_media": 0.15081240082040018,
+    "t_R": 0.7196109239378189,
+    "p_1s": 0.23770248832449925,
+    "retorno": 0.049729874103927374,
+    "caida_max": 0.034066284045412565,
+    "sharpe": 0.5641662869495095,
+    "salidas": {
+     "stop": 0.48936170212765956,
+     "tp": 0.1276595744680851,
+     "signal": 0.0,
+     "time": 0.3829787234042553,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 19,
+    "por_dia": 0.03473491773308958,
+    "acierto": 0.42105263157894735,
+    "R_media": 0.04788492355431221,
+    "t_R": 0.1340385858695273,
+    "p_1s": 0.44742968536951655,
+    "retorno": 0.014199346753998476,
+    "caida_max": 0.02649230485556342,
+    "sharpe": 0.41957824728921506,
+    "salidas": {
+     "stop": 0.5789473684210527,
+     "tp": 0.15789473684210525,
+     "signal": 0.0,
+     "time": 0.2631578947368421,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B2 confluencia + tendencia | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 45,
+    "por_dia": 0.032119914346895075,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.07325445808536535,
+    "t_R": 0.3265674201423675,
+    "p_1s": 0.3727717310087577,
+    "retorno": 0.014290148706121775,
+    "caida_max": 0.0488337798143762,
+    "sharpe": 0.1396817376689754,
+    "salidas": {
+     "stop": 0.24444444444444444,
+     "tp": 0.0,
+     "signal": 0.7555555555555555,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 19,
+    "por_dia": 0.03473491773308958,
+    "acierto": 0.3157894736842105,
+    "R_media": -0.06394073386542598,
+    "t_R": -0.2670163461614265,
+    "p_1s": 0.6037541233285209,
+    "retorno": 0.0033774631709750924,
+    "caida_max": 0.02079483574176888,
+    "sharpe": 0.1233480240699867,
+    "salidas": {
+     "stop": 0.05263157894736842,
+     "tp": 0.0,
+     "signal": 0.9473684210526315,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B3 confluencia + funding | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 37,
+    "por_dia": 0.026409707351891507,
+    "acierto": 0.4594594594594595,
+    "R_media": 0.17454424901218452,
+    "t_R": 0.6903929145158934,
+    "p_1s": 0.2471872483327704,
+    "retorno": 0.036344953136222546,
+    "caida_max": 0.045983286935515455,
+    "sharpe": 0.4760264876274037,
+    "salidas": {
+     "stop": 0.5135135135135135,
+     "tp": 0.16216216216216217,
+     "signal": 0.0,
+     "time": 0.32432432432432434,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.5714285714285714,
+    "R_media": 0.8027450769018364,
+    "t_R": 1.7114667811583908,
+    "p_1s": 0.055366418060818656,
+    "retorno": 0.04882947769168777,
+    "caida_max": 0.01510526296413861,
+    "sharpe": 1.4278058035393824,
+    "salidas": {
+     "stop": 0.35714285714285715,
+     "tp": 0.2857142857142857,
+     "signal": 0.0,
+     "time": 0.35714285714285715,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B3 confluencia + funding | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 36,
+    "por_dia": 0.02569593147751606,
+    "acierto": 0.3055555555555556,
+    "R_media": 0.09982868213446816,
+    "t_R": 0.3502542250823799,
+    "p_1s": 0.36412354383380596,
+    "retorno": 0.01036337550891564,
+    "caida_max": 0.043520746364395735,
+    "sharpe": 0.13386167083129966,
+    "salidas": {
+     "stop": 0.25,
+     "tp": 0.0,
+     "signal": 0.75,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 15,
+    "por_dia": 0.027422303473491772,
+    "acierto": 0.4,
+    "R_media": -0.006156793766186585,
+    "t_R": -0.025029756321313754,
+    "p_1s": 0.5098077503040449,
+    "retorno": 0.0024391671849159913,
+    "caida_max": 0.01570439207767438,
+    "sharpe": 0.12037350277646122,
+    "salidas": {
+     "stop": 0.06666666666666667,
+     "tp": 0.0,
+     "signal": 0.9333333333333333,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B4 confluencia + compresi\u00f3n | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 25,
+    "por_dia": 0.017844396859386154,
+    "acierto": 0.32,
+    "R_media": -0.16380493305635624,
+    "t_R": -0.5584070584916648,
+    "p_1s": 0.7091303810461858,
+    "retorno": -0.008335821378987585,
+    "caida_max": 0.035229468998855484,
+    "sharpe": -0.12166555760577312,
+    "salidas": {
+     "stop": 0.68,
+     "tp": 0.12,
+     "signal": 0.0,
+     "time": 0.2,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 11,
+    "por_dia": 0.02010968921389397,
+    "acierto": 0.36363636363636365,
+    "R_media": 0.1468170779302719,
+    "t_R": 0.2664278444485953,
+    "p_1s": 0.3976613725080198,
+    "retorno": 0.00420619327032723,
+    "caida_max": 0.01796758213249272,
+    "sharpe": 0.1626615235872474,
+    "salidas": {
+     "stop": 0.6363636363636364,
+     "tp": 0.18181818181818182,
+     "signal": 0.0,
+     "time": 0.18181818181818182,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | B4 confluencia + compresi\u00f3n | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 27,
+    "por_dia": 0.019271948608137045,
+    "acierto": 0.25925925925925924,
+    "R_media": -0.15141111622322742,
+    "t_R": -0.6624473063787117,
+    "p_1s": 0.7432427705160698,
+    "retorno": -0.017749348887132532,
+    "caida_max": 0.05535725736672026,
+    "sharpe": -0.18891481410271518,
+    "salidas": {
+     "stop": 0.3333333333333333,
+     "tp": 0.0,
+     "signal": 0.6666666666666666,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 12,
+    "por_dia": 0.021937842778793418,
+    "acierto": 0.08333333333333333,
+    "R_media": -0.5315496824069385,
+    "t_R": -4.376852294349301,
+    "p_1s": 0.9994475614062567,
+    "retorno": -0.025724905664393116,
+    "caida_max": 0.029317856684067056,
+    "sharpe": -1.7011602687827956,
+    "salidas": {
+     "stop": 0.16666666666666666,
+     "tp": 0.0,
+     "signal": 0.8333333333333334,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B1 confluencia | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 72,
+    "por_dia": 0.05139186295503212,
+    "acierto": 0.4305555555555556,
+    "R_media": 0.2257151125024896,
+    "t_R": 1.2315124765847907,
+    "p_1s": 0.11109737552552001,
+    "retorno": 0.08544667009007267,
+    "caida_max": 0.045131783536642156,
+    "sharpe": 0.7114818580318661,
+    "salidas": {
+     "stop": 0.4861111111111111,
+     "tp": 0.18055555555555555,
+     "signal": 0.0,
+     "time": 0.3333333333333333,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 32,
+    "por_dia": 0.05850091407678245,
+    "acierto": 0.40625,
+    "R_media": -0.07097021061654911,
+    "t_R": -0.294645129793104,
+    "p_1s": 0.6148854201360786,
+    "retorno": -0.008595096906986344,
+    "caida_max": 0.03468696075083966,
+    "sharpe": -0.18083178151976728,
+    "salidas": {
+     "stop": 0.53125,
+     "tp": 0.0625,
+     "signal": 0.0,
+     "time": 0.40625,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B1 confluencia | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 77,
+    "por_dia": 0.054960742326909354,
+    "acierto": 0.3116883116883117,
+    "R_media": 0.513925252313225,
+    "t_R": 1.6426024737583165,
+    "p_1s": 0.05229836162824697,
+    "retorno": 0.19004732131704882,
+    "caida_max": 0.04349396340124745,
+    "sharpe": 1.100516125501909,
+    "salidas": {
+     "stop": 0.12987012987012986,
+     "tp": 0.0,
+     "signal": 0.8701298701298701,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 37,
+    "por_dia": 0.06764168190127971,
+    "acierto": 0.2702702702702703,
+    "R_media": 0.09733049355164711,
+    "t_R": 0.5006928950534358,
+    "p_1s": 0.30981740512484945,
+    "retorno": 0.021258782215818783,
+    "caida_max": 0.022172687174632943,
+    "sharpe": 0.5359478403614385,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 36,
+    "por_dia": 0.07929515418502203,
+    "acierto": 0.2222222222222222,
+    "R_media": 0.6068237888657277,
+    "t_R": 0.9776951483218171,
+    "p_1s": 0.16746746158537695,
+    "retorno": 0.09280695641705439,
+    "caida_max": 0.05943217125593725,
+    "sharpe": 1.5954860348808826,
+    "salidas": {
+     "stop": 0.1111111111111111,
+     "tp": 0.0,
+     "signal": 0.8888888888888888,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 36,
+    "por_dia": 0.07929515418502203,
+    "acierto": 0.2222222222222222,
+    "R_media": 0.5151466480148886,
+    "t_R": 0.8349833661242467,
+    "p_1s": 0.20469532634793408,
+    "retorno": 0.04969205009822497,
+    "caida_max": 0.06242118267886321,
+    "sharpe": 1.0828492859012173,
+    "salidas": {
+     "stop": 0.1111111111111111,
+     "tp": 0.0,
+     "signal": 0.8888888888888888,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0678275385102601,
+   "p_holm": 0.24308456733717665,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E02 Triple suelo/techo | B2 confluencia + tendencia | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 48,
+    "por_dia": 0.034261241970021415,
+    "acierto": 0.5208333333333334,
+    "R_media": 0.45682198225343607,
+    "t_R": 1.986973085659322,
+    "p_1s": 0.026385803577148703,
+    "retorno": 0.10716352649528926,
+    "caida_max": 0.028716358890592875,
+    "sharpe": 1.0254821454111949,
+    "salidas": {
+     "stop": 0.3958333333333333,
+     "tp": 0.22916666666666666,
+     "signal": 0.0,
+     "time": 0.375,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 25,
+    "por_dia": 0.04570383912248629,
+    "acierto": 0.4,
+    "R_media": -0.1984358414133998,
+    "t_R": -0.8332264575397571,
+    "p_1s": 0.7935336028847682,
+    "retorno": -0.014301650933940535,
+    "caida_max": 0.045153457808720376,
+    "sharpe": -0.37192478108841526,
+    "salidas": {
+     "stop": 0.52,
+     "tp": 0.04,
+     "signal": 0.0,
+     "time": 0.44,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B2 confluencia + tendencia | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 49,
+    "por_dia": 0.03497501784439686,
+    "acierto": 0.3877551020408163,
+    "R_media": 0.8302977940765744,
+    "t_R": 1.7778416884582111,
+    "p_1s": 0.04088254882114761,
+    "retorno": 0.19374777065480808,
+    "caida_max": 0.03963126507949655,
+    "sharpe": 1.2061754523021686,
+    "salidas": {
+     "stop": 0.12244897959183673,
+     "tp": 0.0,
+     "signal": 0.8775510204081632,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 28,
+    "por_dia": 0.051188299817184646,
+    "acierto": 0.2857142857142857,
+    "R_media": 0.1134638597917409,
+    "t_R": 0.46955029194216624,
+    "p_1s": 0.32122319493698304,
+    "retorno": 0.021164748313753368,
+    "caida_max": 0.03035705856992621,
+    "sharpe": 0.5589663470761906,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B3 confluencia + funding | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 44,
+    "por_dia": 0.03140613847251963,
+    "acierto": 0.3409090909090909,
+    "R_media": 0.02218442566067246,
+    "t_R": 0.095037619916005,
+    "p_1s": 0.46236322885365033,
+    "retorno": 0.008453375832113252,
+    "caida_max": 0.0656866528594705,
+    "sharpe": 0.10179193804524099,
+    "salidas": {
+     "stop": 0.5909090909090909,
+     "tp": 0.1590909090909091,
+     "signal": 0.0,
+     "time": 0.25,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 20,
+    "por_dia": 0.03656307129798903,
+    "acierto": 0.5,
+    "R_media": 0.14254012354725906,
+    "t_R": 0.4455695695449661,
+    "p_1s": 0.3304718139584857,
+    "retorno": 0.012125336033252054,
+    "caida_max": 0.022423899178947604,
+    "sharpe": 0.3979651425509962,
+    "salidas": {
+     "stop": 0.5,
+     "tp": 0.1,
+     "signal": 0.0,
+     "time": 0.4,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B3 confluencia + funding | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 49,
+    "por_dia": 0.03497501784439686,
+    "acierto": 0.2857142857142857,
+    "R_media": 0.28291730128742537,
+    "t_R": 0.9609724471834932,
+    "p_1s": 0.1706910391042753,
+    "retorno": 0.05826017830994035,
+    "caida_max": 0.03647019796522699,
+    "sharpe": 0.5706322433647316,
+    "salidas": {
+     "stop": 0.14285714285714285,
+     "tp": 0.0,
+     "signal": 0.8571428571428571,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 22,
+    "por_dia": 0.04021937842778794,
+    "acierto": 0.4090909090909091,
+    "R_media": 0.38031589799538673,
+    "t_R": 1.246290931426162,
+    "p_1s": 0.1131908732328295,
+    "retorno": 0.03834783127131036,
+    "caida_max": 0.013517452264615648,
+    "sharpe": 1.1209707135160403,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B4 confluencia + compresi\u00f3n | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 40,
+    "por_dia": 0.028551034975017844,
+    "acierto": 0.425,
+    "R_media": 0.26308487902707356,
+    "t_R": 0.9851632582894153,
+    "p_1s": 0.16530829145776904,
+    "retorno": 0.05969570744850494,
+    "caida_max": 0.03179056605555797,
+    "sharpe": 0.6376813565739403,
+    "salidas": {
+     "stop": 0.55,
+     "tp": 0.225,
+     "signal": 0.0,
+     "time": 0.225,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 16,
+    "por_dia": 0.029250457038391225,
+    "acierto": 0.375,
+    "R_media": -0.14722149358328301,
+    "t_R": -0.42647382106332543,
+    "p_1s": 0.662090067397421,
+    "retorno": -0.008294515604867048,
+    "caida_max": 0.016301604884167653,
+    "sharpe": -0.23587559605803454,
+    "salidas": {
+     "stop": 0.625,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.375,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | B4 confluencia + compresi\u00f3n | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 43,
+    "por_dia": 0.030692362598144184,
+    "acierto": 0.32558139534883723,
+    "R_media": 0.9690825089001692,
+    "t_R": 1.8585293001633265,
+    "p_1s": 0.035055642287672883,
+    "retorno": 0.20595915851940583,
+    "caida_max": 0.03948372678910994,
+    "sharpe": 1.270478104065744,
+    "salidas": {
+     "stop": 0.13953488372093023,
+     "tp": 0.0,
+     "signal": 0.8604651162790697,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 20,
+    "por_dia": 0.03656307129798903,
+    "acierto": 0.25,
+    "R_media": -0.1401719136234757,
+    "t_R": -0.8908952824552057,
+    "p_1s": 0.8079358194104304,
+    "retorno": -0.0064887857254085635,
+    "caida_max": 0.017359306436702693,
+    "sharpe": -0.22566373286573713,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B1 confluencia | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 88,
+    "por_dia": 0.06281227694503926,
+    "acierto": 0.3977272727272727,
+    "R_media": 0.006263713242539886,
+    "t_R": 0.03844109606690661,
+    "p_1s": 0.4847120341501445,
+    "retorno": 0.01141657182968192,
+    "caida_max": 0.09519790019145635,
+    "sharpe": 0.10435226164995422,
+    "salidas": {
+     "stop": 0.5909090909090909,
+     "tp": 0.1590909090909091,
+     "signal": 0.0,
+     "time": 0.25,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 36,
+    "por_dia": 0.06581352833638025,
+    "acierto": 0.3055555555555556,
+    "R_media": -0.10021388505717625,
+    "t_R": -0.3872335041994035,
+    "p_1s": 0.6495359462630391,
+    "retorno": -0.013312421776361383,
+    "caida_max": 0.043933350054708,
+    "sharpe": -0.24225407449604047,
+    "salidas": {
+     "stop": 0.6111111111111112,
+     "tp": 0.16666666666666666,
+     "signal": 0.0,
+     "time": 0.2222222222222222,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B1 confluencia | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 85,
+    "por_dia": 0.06067094932191292,
+    "acierto": 0.3411764705882353,
+    "R_media": 0.34257902327954715,
+    "t_R": 0.9788415522831739,
+    "p_1s": 0.16523450858418498,
+    "retorno": 0.11329769730809103,
+    "caida_max": 0.09999292682791028,
+    "sharpe": 0.5320603487018395,
+    "salidas": {
+     "stop": 0.4588235294117647,
+     "tp": 0.0,
+     "signal": 0.5411764705882353,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 35,
+    "por_dia": 0.06398537477148081,
+    "acierto": 0.3142857142857143,
+    "R_media": 0.17043002540410804,
+    "t_R": 0.5085726653628027,
+    "p_1s": 0.3071680756653514,
+    "retorno": 0.031008905817857757,
+    "caida_max": 0.0374852578023297,
+    "sharpe": 0.5558243121957605,
+    "salidas": {
+     "stop": 0.34285714285714286,
+     "tp": 0.0,
+     "signal": 0.6571428571428571,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 33,
+    "por_dia": 0.07268722466960352,
+    "acierto": 0.36363636363636365,
+    "R_media": 1.1420001825505022,
+    "t_R": 1.1892672396181883,
+    "p_1s": 0.12154228366858832,
+    "retorno": 0.15525841394807038,
+    "caida_max": 0.04242149685668284,
+    "sharpe": 1.6196921036609597,
+    "salidas": {
+     "stop": 0.42424242424242425,
+     "tp": 0.0,
+     "signal": 0.5757575757575758,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 33,
+    "por_dia": 0.07268722466960352,
+    "acierto": 0.3333333333333333,
+    "R_media": 1.0283614040194742,
+    "t_R": 1.0747921148140416,
+    "p_1s": 0.14525270342125884,
+    "retorno": 0.11568975587886032,
+    "caida_max": 0.043550809021270065,
+    "sharpe": 1.3624113594635925,
+    "salidas": {
+     "stop": 0.42424242424242425,
+     "tp": 0.0,
+     "signal": 0.5757575757575758,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.005915853144836815,
+   "p_holm": 0.24308456733717665,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E03 Bandera / bander\u00edn | B2 confluencia + tendencia | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 71,
+    "por_dia": 0.05067808708065667,
+    "acierto": 0.39436619718309857,
+    "R_media": 0.050196899061780736,
+    "t_R": 0.2658730272220232,
+    "p_1s": 0.39555925748043297,
+    "retorno": 0.03152366057654188,
+    "caida_max": 0.0700461421657178,
+    "sharpe": 0.2698191515091994,
+    "salidas": {
+     "stop": 0.5915492957746479,
+     "tp": 0.18309859154929578,
+     "signal": 0.0,
+     "time": 0.22535211267605634,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 25,
+    "por_dia": 0.04570383912248629,
+    "acierto": 0.36,
+    "R_media": -0.005335217954131499,
+    "t_R": -0.016049299986798434,
+    "p_1s": 0.5063361309647983,
+    "retorno": -0.0012885668553014318,
+    "caida_max": 0.034661647665900186,
+    "sharpe": -0.017510727111683645,
+    "salidas": {
+     "stop": 0.6,
+     "tp": 0.2,
+     "signal": 0.0,
+     "time": 0.2,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B2 confluencia + tendencia | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 69,
+    "por_dia": 0.04925053533190578,
+    "acierto": 0.34782608695652173,
+    "R_media": 0.4767550702979822,
+    "t_R": 1.1182486210618625,
+    "p_1s": 0.13369791679676235,
+    "retorno": 0.13512589992029156,
+    "caida_max": 0.08251383147264779,
+    "sharpe": 0.6358539060613309,
+    "salidas": {
+     "stop": 0.4782608695652174,
+     "tp": 0.0,
+     "signal": 0.5217391304347826,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 25,
+    "por_dia": 0.04570383912248629,
+    "acierto": 0.28,
+    "R_media": 0.11613891567099163,
+    "t_R": 0.3043801146730689,
+    "p_1s": 0.3817309712688217,
+    "retorno": 0.022503579206663682,
+    "caida_max": 0.03391618210117808,
+    "sharpe": 0.48495268171735084,
+    "salidas": {
+     "stop": 0.32,
+     "tp": 0.0,
+     "signal": 0.68,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B3 confluencia + funding | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 45,
+    "por_dia": 0.032119914346895075,
+    "acierto": 0.4222222222222222,
+    "R_media": 0.0941252238686103,
+    "t_R": 0.4029062493579744,
+    "p_1s": 0.34448412459588007,
+    "retorno": 0.013349544493584276,
+    "caida_max": 0.05546967294037464,
+    "sharpe": 0.15860482697357592,
+    "salidas": {
+     "stop": 0.5555555555555556,
+     "tp": 0.17777777777777778,
+     "signal": 0.0,
+     "time": 0.26666666666666666,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 15,
+    "por_dia": 0.027422303473491772,
+    "acierto": 0.4,
+    "R_media": 0.1438254550348264,
+    "t_R": 0.34356642207715915,
+    "p_1s": 0.3681387122892371,
+    "retorno": 0.017295314155802988,
+    "caida_max": 0.023285178973285414,
+    "sharpe": 0.4935507947275115,
+    "salidas": {
+     "stop": 0.4666666666666667,
+     "tp": 0.2,
+     "signal": 0.0,
+     "time": 0.3333333333333333,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B3 confluencia + funding | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 43,
+    "por_dia": 0.030692362598144184,
+    "acierto": 0.37209302325581395,
+    "R_media": 0.9242298600857558,
+    "t_R": 1.4195287777684837,
+    "p_1s": 0.08156241747341075,
+    "retorno": 0.17459948435274253,
+    "caida_max": 0.051802954235964815,
+    "sharpe": 0.8818409420857911,
+    "salidas": {
+     "stop": 0.3953488372093023,
+     "tp": 0.0,
+     "signal": 0.6046511627906976,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.5,
+    "R_media": 0.9902930659099987,
+    "t_R": 1.4304904896779551,
+    "p_1s": 0.0880855797004223,
+    "retorno": 0.06953249951766227,
+    "caida_max": 0.01605438703058426,
+    "sharpe": 1.418490782122086,
+    "salidas": {
+     "stop": 0.21428571428571427,
+     "tp": 0.0,
+     "signal": 0.7857142857142857,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B4 confluencia + compresi\u00f3n | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 23,
+    "por_dia": 0.01641684511063526,
+    "acierto": 0.30434782608695654,
+    "R_media": -0.11109825208566228,
+    "t_R": -0.32609125810511547,
+    "p_1s": 0.6262815482494493,
+    "retorno": -0.009237616132956261,
+    "caida_max": 0.04281126746455244,
+    "sharpe": -0.13099476154600026,
+    "salidas": {
+     "stop": 0.6956521739130435,
+     "tp": 0.17391304347826086,
+     "signal": 0.0,
+     "time": 0.13043478260869565,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 10,
+    "por_dia": 0.018281535648994516,
+    "acierto": 0.1,
+    "R_media": -0.7409168961153897,
+    "t_R": -1.8112675536046183,
+    "p_1s": 0.9482366498791259,
+    "retorno": -0.02842054229332247,
+    "caida_max": 0.03774646511912361,
+    "sharpe": -1.0688822842314447,
+    "salidas": {
+     "stop": 0.9,
+     "tp": 0.1,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | B4 confluencia + compresi\u00f3n | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 23,
+    "por_dia": 0.01641684511063526,
+    "acierto": 0.2608695652173913,
+    "R_media": 0.8452972939732285,
+    "t_R": 0.981713841137485,
+    "p_1s": 0.16845723568953064,
+    "retorno": 0.0865489650056015,
+    "caida_max": 0.05640162570028329,
+    "sharpe": 0.6454334918545286,
+    "salidas": {
+     "stop": 0.5652173913043478,
+     "tp": 0.0,
+     "signal": 0.43478260869565216,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 10,
+    "por_dia": 0.018281535648994516,
+    "acierto": 0.2,
+    "R_media": -0.575513927000387,
+    "t_R": -2.1639016224428373,
+    "p_1s": 0.9706532683975175,
+    "retorno": -0.022113351963923722,
+    "caida_max": 0.034806464595339204,
+    "sharpe": -1.0713663116891383,
+    "salidas": {
+     "stop": 0.5,
+     "tp": 0.0,
+     "signal": 0.5,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B1 confluencia | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 4,
+    "por_dia": 0.0028551034975017845,
+    "acierto": 0.25,
+    "R_media": -0.3920548072806017,
+    "t_R": -0.6184266647259401,
+    "p_1s": 0.7099629475221588,
+    "retorno": -0.0046582292903325495,
+    "caida_max": 0.02250293449454266,
+    "sharpe": -0.13218950660956874,
+    "salidas": {
+     "stop": 0.75,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.25,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.2734541284012402,
+    "t_R": 0.20510805670888943,
+    "p_1s": 0.42823420758915187,
+    "retorno": 0.010059143608233345,
+    "caida_max": 0.012579041378790734,
+    "sharpe": 0.5471197920615882,
+    "salidas": {
+     "stop": 0.6666666666666666,
+     "tp": 0.3333333333333333,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B1 confluencia | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 4,
+    "por_dia": 0.0028551034975017845,
+    "acierto": 0.5,
+    "R_media": -0.15008372519941188,
+    "t_R": -0.30519632720988943,
+    "p_1s": 0.6099168150012813,
+    "retorno": -0.0007080263905002715,
+    "caida_max": 0.014584146816753463,
+    "sharpe": -0.013978129952819919,
+    "salidas": {
+     "stop": 0.25,
+     "tp": 0.0,
+     "signal": 0.75,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.3333333333333333,
+    "R_media": 1.0224995857975356,
+    "t_R": 0.4910531820602972,
+    "p_1s": 0.3359921268677949,
+    "retorno": 0.025667534737185305,
+    "caida_max": 0.012579041378790734,
+    "sharpe": 0.8409250726388696,
+    "salidas": {
+     "stop": 0.6666666666666666,
+     "tp": 0.0,
+     "signal": 0.3333333333333333,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B2 confluencia + tendencia | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 2,
+    "por_dia": 0.0014275517487508922,
+    "acierto": 0.5,
+    "R_media": 0.2449137922786232,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": 0.00750588312086875,
+    "caida_max": 0.010338822083341359,
+    "sharpe": 0.2503728743641109,
+    "salidas": {
+     "stop": 0.5,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.5,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.2734541284012402,
+    "t_R": 0.20510805670888943,
+    "p_1s": 0.42823420758915187,
+    "retorno": 0.010059143608233345,
+    "caida_max": 0.012579041378790734,
+    "sharpe": 0.5471197920615882,
+    "salidas": {
+     "stop": 0.6666666666666666,
+     "tp": 0.3333333333333333,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B2 confluencia + tendencia | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 2,
+    "por_dia": 0.0014275517487508922,
+    "acierto": 0.5,
+    "R_media": 0.20802379792358733,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": 0.006182218638137282,
+    "caida_max": 0.009519288915276758,
+    "sharpe": 0.17678770617803435,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.3333333333333333,
+    "R_media": 1.0224995857975356,
+    "t_R": 0.4910531820602972,
+    "p_1s": 0.3359921268677949,
+    "retorno": 0.025667534737185305,
+    "caida_max": 0.012579041378790734,
+    "sharpe": 0.8409250726388696,
+    "salidas": {
+     "stop": 0.6666666666666666,
+     "tp": 0.0,
+     "signal": 0.3333333333333333,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B3 confluencia + funding | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 3,
+    "por_dia": 0.0021413276231263384,
+    "acierto": 0.0,
+    "R_media": -1.026005758946815,
+    "t_R": -312.15806225132735,
+    "p_1s": 0.9999948688559538,
+    "retorno": -0.02250293449454266,
+    "caida_max": 0.02250293449454266,
+    "sharpe": -1.1860852036333,
+    "salidas": {
+     "stop": 1.0,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 1,
+    "por_dia": 0.0018281535648994515,
+    "acierto": 1.0,
+    "R_media": 2.939855187534163,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": 0.020419948783443997,
+    "caida_max": 0.0022182362035799708,
+    "sharpe": 1.2103714459192534,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 1.0,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B3 confluencia + funding | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 3,
+    "por_dia": 0.0021413276231263384,
+    "acierto": 0.3333333333333333,
+    "R_media": -0.5893263459898309,
+    "t_R": -1.884553433113565,
+    "p_1s": 0.8999186512148584,
+    "retorno": -0.014508723406070234,
+    "caida_max": 0.014584146816753463,
+    "sharpe": -0.9589705137649279,
+    "salidas": {
+     "stop": 0.3333333333333333,
+     "tp": 0.0,
+     "signal": 0.6666666666666666,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 1,
+    "por_dia": 0.0018281535648994515,
+    "acierto": 1.0,
+    "R_media": 5.186991559723049,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": 0.03602833991239618,
+    "caida_max": 0.010187429816359561,
+    "sharpe": 1.2187462827506002,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B4 confluencia + compresi\u00f3n | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 1,
+    "por_dia": 0.0007137758743754461,
+    "acierto": 0.0,
+    "R_media": -1.0312797001349048,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": -0.006965668439320782,
+    "caida_max": 0.006965668439320782,
+    "sharpe": -0.6634530966097122,
+    "salidas": {
+     "stop": 1.0,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 0,
+    "por_dia": 0.0,
+    "acierto": 0.0,
+    "R_media": 0.0,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": 0.0,
+    "caida_max": 0.0,
+    "sharpe": 0.0,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | B4 confluencia + compresi\u00f3n | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 1,
+    "por_dia": 0.0007137758743754461,
+    "acierto": 0.0,
+    "R_media": -1.0312797001349048,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": -0.006965668439320782,
+    "caida_max": 0.006965668439320782,
+    "sharpe": -0.6634530966097122,
+    "salidas": {
+     "stop": 1.0,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 0,
+    "por_dia": 0.0,
+    "acierto": 0.0,
+    "R_media": 0.0,
+    "t_R": 0.0,
+    "p_1s": 1.0,
+    "retorno": 0.0,
+    "caida_max": 0.0,
+    "sharpe": 0.0,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  }
+ }
+}

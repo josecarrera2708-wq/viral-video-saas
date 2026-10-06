@@ -223,3 +223,17 @@ Prerregistro: `config/busqueda_v9_prerregistrada.md` (commit ec3a465, ANTES de e
 
 - Solo 4 variantes pasan del 70 % de acierto en los dos periodos y además ganan. Las cuatro son de bandera con triple confirmación, pero tienen 10 operaciones en validación (se piden ≥30).
 - Total acumulado del proyecto: 2.012 pruebas.
+
+## 2026-10-06 · Búsqueda v10: confluencia de dos patrones — pruebas 2013-2044 (32 variantes)
+Prerregistro: `config/busqueda_v10_prerregistrada.md` (commit 7177089, ANTES de ejecutar). Resultados: `reports/busqueda_v10_resultados.md`.
+- Variantes: 32. Elegibles: 2. Certificadas: **0**. Ambas pasan 3 de 5 puertas; fallan Holm y DSR.
+
+| Trader | Ops examen | Acierto | R examen | Retorno (0,5 %) |
+|---|---|---|---|---|
+| R01 Bandera 1 h + confluencia | 33 | 36 % | +1,14 (la mejor R de todas las búsquedas) | +15,5 % |
+| R02 Triple 1 h + confluencia | 36 | 22 % | +0,61 | +9,3 % |
+
+- Confluencia + funding: +1,32 R en validación, pero con muy pocas operaciones (no elegible).
+- Mesa de trading: entran R01 Vermeer y R02 Tintoretto. Empiezan el 2026-10-07 00:00 UTC. La mesa queda con 18 traders.
+- Medición del 30 % mensual: `reports/objetivo_mensual.md`.
+- Total acumulado del proyecto: 2.044 pruebas.
