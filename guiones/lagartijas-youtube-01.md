@@ -15,7 +15,9 @@ Alternativas:
 - Probar una y, si en 2 o 3 días el CTR es bajo, cambiar a la otra.
 
 ## Descripción (pegar tal cual)
-Qué pasa en tu cuerpo si haces 50 lagartijas al día (25 por la mañana y 25 por la noche) durante 90 días. Sin gimnasio, sin pesas y sin equipo.
+Esto puede transformar tu cuerpo en 90 días, sin gimnasio, sin pesas y sin equipo. Te cuento qué pasa dentro de tu cuerpo semana por semana y lo que casi nadie te dice de esta forma de hacer ejercicio.
+
+El reto: 50 lagartijas al día (25 por la mañana y 25 por la noche) durante 90 días.
 
 En este vídeo te explico, con ciencia y sin humo:
 - Por qué tu propio cuerpo es una carga suficiente para activar el crecimiento muscular
