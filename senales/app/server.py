@@ -375,12 +375,21 @@ def sim_plans(c, wallet):
     return v if isinstance(v, list) else [v]
 
 
+def sim_window(c, plan):
+    """Cada estrategia dura «days» desde su propio inicio (la de una wallet añadida después empieza al añadirla)."""
+    start = plan.get("start") or c["start"]
+    return start, start + c["days"] * 86400
+
+
 def sim_on_trade(tr, info, frac):
     """Una operación nueva de una wallet: la simulación abre o vende como lo haría el copy trade."""
     c = sim_cfg()
-    if not c or not c["start"] <= tr["t"] < c["start"] + c["days"] * 86400:
+    if not c:
         return
     for plan in sim_plans(c, tr["wallet"]):
+        start, end = sim_window(c, plan)
+        if not start <= tr["t"] < end:
+            continue
         same = (tr["wallet"], tr["mint"], plan["strat"], plan.get("sl"))
         if tr["side"] == "buy":
             if plan["strat"] == "x2" and db.q("select 1 from sim where wallet=? and mint=? and strat=? and sl is ?", same, one=True):
@@ -406,8 +415,9 @@ def sim_check(prices, now):
     c = sim_cfg()
     if not c:
         return
-    end = c["start"] + c["days"] * 86400
     for lot in db.q("select * from sim where closed is null"):
+        plan = next((p for p in sim_plans(c, lot["wallet"]) if p["strat"] == lot["strat"] and p.get("sl") == lot["sl"]), {})
+        end = sim_window(c, plan)[1]
         v = prices.get(lot["mint"])
         if not v:
             continue
@@ -432,7 +442,8 @@ def sim_summary():
         val = sum(x["usd_out"] + x["qty"] * (x["last"] or x["entry"]) * (1 - SIM_FEE) for x in lots)
         done = [x for x in lots if x["closed"]]
         label = STRATS.get(plan["strat"], plan["strat"]) + (f" · stop {plan['sl']:.0%}" if plan.get("sl") else " · sin stop")
-        rows.append({"name": w["name"], "plan": label, "medido": plan.get("medido"), "n": len(lots),
+        start, end = sim_window(c, plan)
+        rows.append({"name": w["name"], "plan": label, "medido": plan.get("medido"), "n": len(lots), "start": start, "end": end,
                      "won": sum(1 for x in done if x["usd_out"] > x["usd_in"]), "lost": sum(1 for x in done if x["usd_out"] <= x["usd_in"]),
                      "open": len(lots) - len(done), "invested": round(inv, 2), "pnl": round(val - inv, 2),
                      "pct": round(100 * (val - inv) / inv, 1) if inv else None})
@@ -758,10 +769,11 @@ async def sim_get(req: Request):
 
 @app.post("/api/sim")
 async def sim_start(req: Request):
-    """Empieza (o reinicia) la simulación: {"usd": 10, "days": 3, "plan": {wallet: [{"strat", "sl", "medido"}, ...]}}."""
+    """Empieza (o reinicia) la simulación: {"usd": 10, "days": 3, "plan": {wallet: [{"strat", "sl", "medido", "start"}, ...]}}."""
     need(req)
     d = await req.json()
-    plan = {a: [{"strat": x.get("strat") if x.get("strat") in STRATS else "copiar", "sl": x.get("sl"), "medido": x.get("medido")}
+    plan = {a: [{"strat": x.get("strat") if x.get("strat") in STRATS else "copiar", "sl": x.get("sl"), "medido": x.get("medido"),
+                 "start": x.get("start")}
                 for x in (v if isinstance(v, list) else [v])]
             for a, v in (d.get("plan") or {}).items()}
     db.x("delete from sim")

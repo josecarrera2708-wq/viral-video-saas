@@ -113,13 +113,13 @@ async function loadCopy() {
   if (!d.cfg) { $('#copy').innerHTML = `<div class="empty">La simulación no está en marcha.</div>`; return; }
   const end = d.cfg.start + d.cfg.days * 86400, now = Date.now() / 1000;
   $('#copy-info').textContent = `${d.cfg.usd} USDT por operación, con comisiones del 1% al comprar y al vender. Empezó el ${hm(d.cfg.start)} y ` +
-    (now < end ? `termina el ${hm(end)}.` : `terminó el ${hm(end)}.`) + ' Las operaciones abiertas se valoran al precio de ahora.';
+    (now < end ? `termina el ${hm(end)}.` : `terminó el ${hm(end)}.`) + ' Las wallets añadidas después tienen sus propios días de prueba desde que entran. Las operaciones abiertas se valoran al precio de ahora.';
   const tot = d.rows.reduce((a, r) => ({inv: a.inv + r.invested, pnl: a.pnl + r.pnl, won: a.won + r.won, lost: a.lost + r.lost, open: a.open + r.open}),
     {inv: 0, pnl: 0, won: 0, lost: 0, open: 0});
   const row = (name, plan, r, pct) => `<div class="crow">
       <div class="c1"><span class="nm">${esc(name)}</span>${plan ? `<span class="tag">${esc(plan)}</span>` : ''}</div>
       <div class="cr"><span class="x ${r.pnl >= 0 ? 'up' : 'dn'}">${pct == null ? '—' : (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%'}</span><small class="${r.pnl >= 0 ? 'up' : 'dn'}">${money(r.pnl)}</small></div>
-      <div class="c2">${r.won} ganadas · ${r.lost} perdidas · ${r.open} abiertas · invertido $${(r.invested ?? r.inv).toFixed(0)}${r.medido != null ? ` · medido antes ${r.medido >= 0 ? '+' : ''}${r.medido}%` : ''}</div>
+      <div class="c2">${r.won} ganadas · ${r.lost} perdidas · ${r.open} abiertas · invertido $${(r.invested ?? r.inv).toFixed(0)}${r.medido != null ? ` · medido antes ${r.medido >= 0 ? '+' : ''}${r.medido}%` : ''}${r.start && r.start !== d.cfg.start ? ` · su prueba: ${hm(r.start)} → ${hm(r.end)}` : ''}</div>
     </div>`;
   $('#copy').innerHTML = d.rows.map(r => row(r.name, r.plan, r, r.pct)).join('') +
     (d.rows.length > 1 ? row('Total', '', tot, tot.inv ? 100 * tot.pnl / tot.inv : null) : '');
