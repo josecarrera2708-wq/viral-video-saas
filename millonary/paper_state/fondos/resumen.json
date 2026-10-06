@@ -1,14 +1,14 @@
 {
- "generado": "2026-10-06 01:15:03.144872+00:00",
+ "generado": "2026-10-06 02:13:29.359968+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
- "ultimo_dia_cerrado": "2026-10-04",
- "precio": 86530.0,
- "funding_dia": 0.00014714622778066528,
- "funding_7d_anual": 0.04565536250476438,
+ "ultimo_dia_cerrado": "2026-10-05",
+ "precio": 85766.87,
+ "funding_dia": 0.00030000000000000003,
+ "funding_7d_anual": 0.05725610536190725,
  "fuente": "Binance Vision (contado y perpetuo BTCUSDT, velas diarias UTC; ≤ 1 día de retraso)",
  "estrategias": {
   "F01 Tortugas S1 (Dennis, 20/10)": {
-   "dias": 2,
+   "dias": 3,
    "equity": 1000.0,
    "retorno": 0.0,
    "caida_max": 0.0,
@@ -28,7 +28,7 @@
    }
   },
   "F02 Tortugas S2 (Dennis, 55/20)": {
-   "dias": 2,
+   "dias": 3,
    "equity": 1000.0,
    "retorno": 0.0,
    "caida_max": 0.0,
@@ -48,16 +48,16 @@
    }
   },
   "F03 Momentum 12 m (AQR/MOP)": {
-   "dias": 2,
-   "equity": 984.9548110021601,
-   "retorno": -0.015045188997839909,
+   "dias": 3,
+   "equity": 990.7301727177321,
+   "retorno": -0.009269827282267884,
    "caida_max": 0.012936966243179082,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
-   "exposicion": -0.6215835132550723,
-   "nocional_usdt": 612.2316718202085,
+   "exposicion": -0.6429890813482654,
+   "nocional_usdt": 637.0286836197829,
    "sharpe": null,
    "hist": {
     "sharpe": 0.37224569316924394,
@@ -68,16 +68,16 @@
    }
   },
   "F04 Media 200 d (Tudor Jones)": {
-   "dias": 2,
-   "equity": 1022.9065479442901,
-   "retorno": 0.022906547944290034,
-   "caida_max": 0.0,
+   "dias": 3,
+   "equity": 1013.5784038900799,
+   "retorno": 0.013578403890079915,
+   "caida_max": 0.009119253438113817,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
    "exposicion": 1.0,
-   "nocional_usdt": 1022.9065479442901,
+   "nocional_usdt": 1013.5784038900799,
    "sharpe": null,
    "hist": {
     "sharpe": 0.7185020146093065,
@@ -88,7 +88,7 @@
    }
   },
   "F05 Ruptura de volatilidad (L. Williams)": {
-   "dias": 2,
+   "dias": 3,
    "equity": 1015.9068782970378,
    "retorno": 0.01590687829703774,
    "caida_max": 0.0,
@@ -108,16 +108,16 @@
    }
   },
   "F06 Carry de funding (cash-and-carry)": {
-   "dias": 2,
-   "equity": 998.4269079530533,
-   "retorno": -0.001573092046946778,
-   "caida_max": 0.0,
+   "dias": 3,
+   "equity": 989.7046822404506,
+   "retorno": -0.010295317759549394,
+   "caida_max": 0.008735968194692134,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
    "exposicion": 0.0,
-   "nocional_usdt": 2047.6109174837413,
+   "nocional_usdt": 2029.5525178598025,
    "sharpe": null,
    "hist": {
     "sharpe": 7.029738314535747,
@@ -128,16 +128,16 @@
    }
   },
   "F07 Volatilidad gestionada (Moreira-Muir)": {
-   "dias": 2,
-   "equity": 1045.7786136260063,
-   "retorno": 0.045778613626006326,
-   "caida_max": 0.0,
+   "dias": 3,
+   "equity": 1027.1385898260548,
+   "retorno": 0.02713858982605477,
+   "caida_max": 0.017824062910716143,
    "operaciones": 0,
    "reajustes": 1,
    "ganan": 0,
    "pierden": 0,
-   "exposicion": 1.994456936894621,
-   "nocional_usdt": 2085.760410402428,
+   "exposicion": 1.9545528624328417,
+   "nocional_usdt": 2007.596670859748,
    "sharpe": null,
    "hist": {
     "sharpe": 0.5151958959110413,
@@ -148,7 +148,7 @@
    }
   },
   "F08 Turtle Soup +1 (Raschke)": {
-   "dias": 2,
+   "dias": 3,
    "equity": 1000.0,
    "retorno": 0.0,
    "caida_max": 0.0,
@@ -168,7 +168,7 @@
    }
   },
   "F09 NR7 (Crabel)": {
-   "dias": 2,
+   "dias": 3,
    "equity": 1009.7018171516314,
    "retorno": 0.009701817151631431,
    "caida_max": 0.0,
@@ -188,16 +188,16 @@
    }
   },
   "F10 Cartera multiestrategia (paridad de riesgo)": {
-   "dias": 2,
-   "equity": 998.478406123443,
-   "retorno": -0.001521593876556926,
-   "caida_max": 0.0,
+   "dias": 3,
+   "equity": 989.8764269156053,
+   "retorno": -0.01012357308439471,
+   "caida_max": 0.008615087872790972,
    "operaciones": 0,
    "reajustes": 0,
    "ganan": 0,
    "pierden": 0,
-   "exposicion": 0.0016241067395605952,
-   "nocional_usdt": 2031.922033499758,
+   "exposicion": 0.00122268277654529,
+   "nocional_usdt": 2014.3134826822593,
    "sharpe": null,
    "hist": {
     "sharpe": 0.23954674537102563,
