@@ -1,3 +1,7 @@
+# Canales de YouTube
+
+Antes de nada, lee `CONTEXTO-CANALES.md` (reglas del usuario, flujo de producción y estado de los canales).
+
 # Habilidades disponibles en este repo
 
 Skills, agente y comandos de Claude Code instalados en `.claude/`. Su código, plantillas y datos viven en `kits/<kit>/`;
