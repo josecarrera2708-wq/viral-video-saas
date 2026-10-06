@@ -1,9 +1,9 @@
 {
- "generado": "2026-10-06 04:13:05.527815+00:00",
- "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00",
+ "generado": "2026-10-06 05:13:21.901005+00:00",
+ "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00",
  "inicio": "2026-10-06 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL (1 h, 4 h y diario desde velas de 15 min cerradas)",
- "precio_actual": 85526.0,
+ "precio_actual": 85625.5,
  "traders": {
   "Y01 Doble suelo 1 h (a favor de tendencia, dejar correr)": {
    "temporalidad": "1h",
@@ -21,7 +21,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "Y02 Triple suelo/techo 1 h (TP 3R)": {
    "temporalidad": "1h",
@@ -39,7 +39,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "Y04 Bandera / bander\u00edn 4 h (TP 3R)": {
    "temporalidad": "4h",
@@ -129,7 +129,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "Z02 Triple suelo/techo 1 h + tendencia superior (dejar correr)": {
    "temporalidad": "1h",
@@ -147,7 +147,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "W01 Doble suelo 1 h + tendencia + funding (dejar correr)": {
    "temporalidad": "1h",
@@ -165,7 +165,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "W02 Triple suelo/techo 1 h + tendencia + volumen (dejar correr)": {
    "temporalidad": "1h",
@@ -183,7 +183,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "W03 Bandera 1 h + funding a contrapi\u00e9 (dejar correr)": {
    "temporalidad": "1h",
@@ -201,7 +201,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-06 04:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-06 05:00:00+00:00"
   },
   "W04 Cuatro velas seguidas 4 h + tendencia + volumen (TP 3R)": {
    "temporalidad": "4h",
