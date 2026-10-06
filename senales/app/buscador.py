@@ -512,10 +512,11 @@ def ladder(xmax, xnow):
     return n + 0.5 ** n * xnow
 
 
-def copy_sim(path, trades, mint, t0, pnow, sl):
+def copy_sim(path, trades, mint, t0, pnow, sl, entry_mult=1.0):
     """Copy trade sobre el papel: COPY_USD en cada compra suya (un ENTRY_SLIP más caro que ella) y, en cada venta suya,
     vendes la misma parte (un EXIT_SLIP más barato); stop de cada compra a (1 - sl) de tu precio; horizonte de 72 h y
-    costes fijos. Devuelve (valor final, invertido)."""
+    costes fijos. entry_mult: cuánto más caro que ella entra de verdad el bot (verifica.py lo saca de la cinta).
+    Devuelve (valor final, invertido)."""
     hold, lots, got, inv = 0.0, [], 0.0, 0.0
     ks = [k for k in path if k[0] < t0 + HORIZON]
     # cada vela cuenta al TERMINAR (1 o 15 min según su tamaño): así sus ventas de esos minutos van antes
@@ -525,7 +526,7 @@ def copy_sim(path, trades, mint, t0, pnow, sl):
     for _, is_candle, k in sorted(ev, key=lambda z: (z[0], z[1])):
         if not is_candle:
             if k["side"] == "buy":
-                e = k["price"] * ENTRY_SLIP
+                e = k["price"] * ENTRY_SLIP * entry_mult
                 lots.append([e, COPY_USD / e, k["t"]])
                 inv += COPY_USD
                 got -= FIXED_USD
