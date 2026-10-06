@@ -65,10 +65,12 @@ def parse_tx(tx):
             "err": meta.get("err"), "keys": set(keys), "sol": sol, "tok": tok, "acct": acct, "pre": pre}
 
 
-def detect(p, wallets, sol_usd, infer_payer=False):
+def detect(p, wallets, sol_usd, infer_payer=False, swaps=False):
     """wallets: {addr: {"payers": [...]}} -> compras y ventas de esas wallets en la transacción.
     infer_payer: si la wallet no paga ni cobra nada (opera desde una plataforma que paga por ella),
-    toma como precio el mayor pago/cobro en SOL o stablecoin de otra cuenta de la transacción."""
+    toma como precio el mayor pago/cobro en SOL o stablecoin de otra cuenta de la transacción.
+    swaps: devuelve también los cambios directos de un token por otro (paga un memecoin con otro), con
+    side="swap", sin valorar: el precio lo pone quien llama."""
     out = []
     if not p or p["err"]:
         return out
@@ -81,6 +83,13 @@ def detect(p, wallets, sol_usd, infer_payer=False):
         stable = sum(v for (o, m), v in p["tok"].items() if m in STABLES and (o == w or o in payers))
         quote = sol * sol_usd + stable
         toks = {m: v for (o, m), v in p["tok"].items() if o == w and m not in QUOTE}
+        if swaps and len(toks) == 2 and abs(quote) < MIN_USD:
+            (m1, d1), (m2, d2) = toks.items()
+            if d1 * d2 < 0:
+                (mi, di), (mo, do) = ((m1, d1), (m2, d2)) if d1 > 0 else ((m2, d2), (m1, d1))
+                out.append({"sig": p["sig"], "t": p["t"], "wallet": w, "side": "swap",
+                            "mint_in": mi, "amt_in": di, "mint_out": mo, "amt_out": -do})
+            continue
         if len(toks) != 1:  # varias monedas a la vez: no se puede repartir el precio con seguridad
             continue
         (mint, d), = toks.items()

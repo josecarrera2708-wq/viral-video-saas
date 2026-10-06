@@ -296,6 +296,8 @@ async def notify(tr, w, info, mc, entry=None):
         body += f" · x2 = MC {fmt_usd(2 * mc)}"
     if tr.get("hint"):
         body += f" · {tr['hint']}"
+    if tr.get("paid_with"):
+        body += f" · pagó con {(await S['market'].token(tr['paid_with']))['sym']}"
     pnl, xs = gain(tr, entry)
     if pnl is not None:
         body += f" · {'ganó' if pnl >= 0 else 'perdió'} {fmt_usd(abs(pnl))} (x{xs:.2f})"
@@ -314,6 +316,26 @@ async def finish_sell(tr, w, info, mc, acct, fresh):
         await notify(tr, w, info, mc, entry)
 
 
+async def value_swaps(found):
+    """Un cambio directo de un memecoin por otro se guarda como venta del que entrega y compra del que recibe,
+    valorados con el precio de ahora (solo si la operación es reciente)."""
+    out = []
+    for x in found:
+        if x["side"] != "swap":
+            out.append(x)
+            continue
+        if time.time() - x["t"] > 3600:
+            continue
+        pr = await S["market"].prices([x["mint_in"], x["mint_out"]])
+        usd = x["amt_out"] * pr[x["mint_out"]] if pr.get(x["mint_out"]) else x["amt_in"] * pr[x["mint_in"]] if pr.get(x["mint_in"]) else 0
+        if usd < chain.MIN_USD:
+            continue
+        base = {"sig": x["sig"], "t": x["t"], "wallet": x["wallet"], "usd": round(usd, 2), "sol": 0}
+        out.append({**base, "mint": x["mint_out"], "side": "sell", "amount": x["amt_out"], "price": usd / x["amt_out"]})
+        out.append({**base, "mint": x["mint_in"], "side": "buy", "amount": x["amt_in"], "price": usd / x["amt_in"], "paid_with": x["mint_out"]})
+    return out
+
+
 async def process_tx(tx, source="hook"):
     p = chain.parse_tx(tx)
     if not p or not p["sig"]:
@@ -324,7 +346,7 @@ async def process_tx(tx, source="hook"):
     ws = {w["addr"]: w for w in wallets_cfg()}
     if not ws:
         return
-    for tr in chain.detect(p, ws, await S["market"].sol_usd_at(p["t"])):
+    for tr in await value_swaps(chain.detect(p, ws, await S["market"].sol_usd_at(p["t"]), swaps=True)):
         w = ws[tr["wallet"]]
         info, mc, new = await record(tr, w, source)
         if new:
@@ -710,7 +732,8 @@ async def logout(req: Request):
 async def feed(req: Request, limit: int = 150, mint: str = ""):
     need(req)
     names = {w["addr"]: w for w in wallets_cfg(False)}
-    sql = "select t.*, p.entry_price, p.max_price, p.last_price, p.icon from trades t left join positions p on p.wallet=t.wallet and p.mint=t.mint"
+    sql = ("select t.*, p.entry_price, p.max_price, p.last_price, p.icon from trades t join wallets w on w.addr=t.wallet "
+           "left join positions p on p.wallet=t.wallet and p.mint=t.mint")
     args = ()
     if mint:
         sql += " where t.mint=?"

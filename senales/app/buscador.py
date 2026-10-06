@@ -1,13 +1,14 @@
-"""Buscador diario de wallets (se lanza cada noche con systemd: python -m app.buscador).
+"""Buscador de wallets (se lanza cada 4 horas con systemd: python -m app.buscador).
 
 Repite por lotes el estudio que hicimos a mano:
  1. Nuevos listados de memecoins de Solana en Gate, Bitget, KuCoin, MEXC, OKX y BingX (últimos 60 días).
  2. Quién compró cada token en las 96 h antes del listado (operaciones de Jupiter) y a qué x llegó en el listado.
- 3. Wallets que repiten acierto (compraron antes y el token llegó a x2+) en 3 o más listados.
+ 3. Wallets que repiten acierto (compraron antes y el token llegó a x2+) en 2 o más listados (primero las que más).
  4. Fuera bots (cientos de operaciones al día) y wallets inactivas.
- 5. Se mide cada wallet en sus últimas compras de OTROS tokens (fuera de muestra) con la regla del usuario:
-    x desde su precio de compra hasta el máximo posterior, y su método (vender el 50% en cada x2).
- 6. Las que pasan el corte aparecen en la app (pestaña Buscador) y llega un aviso.
+ 5. Se mide cada wallet en sus últimas compras de OTROS tokens (fuera de muestra), con velas de 1 minuto:
+    cuánto habría dado copiarla (10 USDT por compra, vendiendo cuando vende, sin stop y con stop del 30 y 50%),
+    la x hasta el máximo y el método del usuario (vender el 50% en cada x2).
+ 6. Las que dan +15% o más en al menos 15 compras aparecen en la app (pestaña Buscador) y llega un aviso.
 Todo es reanudable: lo ya hecho se guarda en la base de datos y no se repite.
 """
 import collections
@@ -24,13 +25,13 @@ from . import cex, chain, db
 
 UA = chain.UA
 DAYS = 60                 # listados de los últimos N días (Jupiter guarda unos 3 meses de operaciones)
-TOKENS_PER_RUN = int(os.environ.get("SENALES_TOKENS", 12))   # listados nuevos que se procesan por noche
-WALLETS_PER_RUN = int(os.environ.get("SENALES_WALLETS", 12))  # wallets que se miden por noche
+TOKENS_PER_RUN = int(os.environ.get("SENALES_TOKENS", 12))   # listados nuevos que se procesan en cada vuelta
+WALLETS_PER_RUN = int(os.environ.get("SENALES_WALLETS", 12))  # wallets que se miden en cada vuelta
 MIN_BUY_USD = 500         # compra mínima antes del listado para contar como acierto
 MIN_X = 2.0               # x mínima al llegar el listado
-MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 3))        # aciertos mínimos para medir la wallet
+MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos para medir la wallet
 MAX_TX_DAY = 300          # más que esto = bot
-PASS = {"n": 10, "pct_x2": 45, "ladder": 10}   # corte para aparecer como candidata
+PASS = {"n": 15, "best": 15}   # corte: ≥15 compras medidas y la mejor forma de copiarla da ≥ +15%
 C = httpx.Client(headers=UA, timeout=30, follow_redirects=True)
 
 
@@ -198,16 +199,39 @@ def history(addr, max_tx=800):
     return prof, trades
 
 
-def gt_candles(mint):
-    pools = get(f"https://api.geckoterminal.com/api/v2/networks/solana/tokens/{mint}/pools", page=1) or {}
+# ---------- 6. medición: cuánto daría copiarla ----------
+COPY_USD = 10             # importe por compra en la copia sobre el papel
+FEE = 0.98                # ~1% al comprar y ~1% al vender
+_gt_last = [0.0]
+
+
+def gt(path, **params):
+    """GeckoTerminal admite unas 30 peticiones por minuto."""
+    wait = 2.1 - (time.time() - _gt_last[0])
+    if wait > 0:
+        time.sleep(wait)
+    _gt_last[0] = time.time()
+    return get("https://api.geckoterminal.com/api/v2/networks/solana/" + path, **params) or {}
+
+
+def fine_path(mint, t):
+    """Velas desde la compra: de 1 min las primeras ~16 h, de 15 min hasta ~10 días y de 4 h después.
+    Con velas más gruesas el máximo sale inflado (el pico de la vela puede ser anterior a la compra)."""
+    pools = gt(f"tokens/{mint}/pools", page=1)
     pool = ((pools.get("data") or [{}])[0].get("attributes") or {}).get("address")
-    time.sleep(2.2)
     if not pool:
         return []
-    r = get(f"https://api.geckoterminal.com/api/v2/networks/solana/pools/{pool}/ohlcv/hour",
-            aggregate=4, limit=1000, token=mint, currency="usd") or {}
-    time.sleep(2.2)
-    return [[c[0], c[2], c[4]] for c in ((r.get("data") or {}).get("attributes") or {}).get("ohlcv_list") or []]
+
+    def ohlcv(tf, agg, before):
+        d = gt(f"pools/{pool}/ohlcv/{tf}", aggregate=agg, limit=1000, token=mint, currency="usd", before_timestamp=int(before))
+        return ((d.get("data") or {}).get("attributes") or {}).get("ohlcv_list") or []
+    now = time.time()
+    out = [k for k in ohlcv("minute", 1, t + 60000) if k[0] >= t // 60 * 60]
+    if t + 60000 < now:
+        out += [k for k in ohlcv("minute", 15, t + 900000) if k[0] >= t + 60000]
+    if t + 900000 < now:
+        out += [k for k in ohlcv("hour", 4, now) if k[0] >= t + 900000]
+    return sorted({k[0]: k for k in out}.values())
 
 
 def ladder(xmax, xnow):
@@ -217,8 +241,35 @@ def ladder(xmax, xnow):
     return n + 0.5 ** n * xnow
 
 
+def copy_sim(path, trades, mint, t0, pnow, sl):
+    """Copy trade sobre el papel: COPY_USD en cada compra suya, a su precio; en cada venta suya vendes la misma
+    parte; stop de cada compra a (1 - sl) de su precio (0 = sin stop). Devuelve (valor final, invertido)."""
+    hold, lots, got, inv = 0.0, [], 0.0, 0.0
+    ev = [(k[0] + 60, 1, k) for k in path] + [(x["t"], 0, x) for x in trades if x["mint"] == mint and x["t"] >= t0]
+    for _, is_candle, k in sorted(ev, key=lambda z: (z[0], z[1])):
+        if not is_candle:
+            if k["side"] == "buy":
+                lots.append([k["price"], COPY_USD / k["price"]])
+                inv += COPY_USD
+                hold += k["amount"]
+            elif hold > 0:
+                fr = min(1.0, k["amount"] / hold)
+                hold -= min(hold, k["amount"])
+                for lot in lots:
+                    q = lot[1] * fr
+                    got += q * k["price"] * FEE
+                    lot[1] -= q
+        elif sl:
+            for lot in lots:
+                if lot[1] > 0 and k[3] <= lot[0] * (1 - sl):   # k = [t, apertura, máximo, mínimo, cierre, volumen]
+                    got += lot[1] * min(lot[0] * (1 - sl), k[1]) * FEE
+                    lot[1] = 0
+    return got + sum(lot[1] for lot in lots) * pnow * FEE, inv
+
+
 def score(trades, exclude):
-    """Mide las primeras compras de cada token (fuera de muestra) con la regla del usuario."""
+    """Mide las primeras compras de cada token (fuera de muestra): x hasta el máximo, tu método y, sobre todo,
+    cuánto daría copiarla (COPY_USD por compra, vendiendo cuando ella vende, sin stop y con stop del 30 y 50%)."""
     first = {}
     for t in sorted(trades, key=lambda t: t["t"]):
         if t["side"] == "buy" and t["usd"] >= 100 and t["mint"] not in exclude and t["mint"] not in first:
@@ -232,25 +283,32 @@ def score(trades, exclude):
         d = get("https://lite-api.jup.ag/price/v3", ids=",".join(mints[i:i + 50])) or {}
         for m in mints[i:i + 50]:
             now_p[m] = (d.get(m) or {}).get("usdPrice") or 0
-    rows = []
+    rows, got, inv = [], collections.defaultdict(float), collections.defaultdict(float)
     for b in buys:
-        c = gt_candles(b["mint"])
-        after = [k for k in c if k[0] + 14400 > b["t"]]
-        if not after or not b["price"]:
+        path = fine_path(b["mint"], b["t"])
+        if not path or not b["price"]:
             continue
         e = b["price"]
-        xmax = max(1.0, max(k[1] for k in after) / e)
+        xmax = max(1.0, max(k[2] for k in path) / e)
         if xmax > 500:          # dato roto (pico de un pool recién creado)
             continue
-        xnow = (now_p.get(b["mint"]) or sorted(c)[-1][2]) / e
-        rows.append((xmax, xnow))
+        pnow = now_p.get(b["mint"]) or path[-1][4]
+        rows.append((xmax, pnow / e))
+        for sl in (0, 0.3, 0.5):
+            g, i = copy_sim(path, trades, b["mint"], b["t"], pnow, sl)
+            got[sl] += g
+            inv[sl] += i
     n = len(rows)
     if not n:
         return None
-    return {"n": n, "pct_x2": round(100 * sum(1 for a, _ in rows if a >= 2) / n),
-            "avg_xmax": round(sum(a for a, _ in rows) / n, 2),
-            "ladder": round(100 * (sum(ladder(a, b) for a, b in rows) / n - 1)),
-            "all_x2": round(100 * (sum(2 if a >= 2 else b for a, b in rows) / n - 1))}
+    cp = {sl: round(100 * (got[sl] / inv[sl] - 1)) if inv[sl] else -100 for sl in (0, 0.3, 0.5)}
+    st = {"n": n, "pct_x2": round(100 * sum(1 for a, _ in rows if a >= 2) / n),
+          "avg_xmax": round(sum(a for a, _ in rows) / n, 2),
+          "ladder": round(100 * (sum(ladder(a, b) * FEE for a, b in rows) / n - 1)),
+          "all_x2": round(100 * (sum((2 if a >= 2 else b) * FEE for a, b in rows) / n - 1)),
+          "copy": cp[0], "copy_sl30": cp[0.3], "copy_sl50": cp[0.5]}
+    st["best"] = max(st["copy"], st["copy_sl30"], st["copy_sl50"], st["all_x2"])
+    return st
 
 
 # ---------- ejecución ----------
@@ -270,7 +328,7 @@ def main():
     for m, sym, ex, t in toks:
         db.x("insert or ignore into scan_tokens(mint, sym, exch, t_list, done, buyers) values(?,?,?,?,0,0)", (m, sym, ex, t))
     todo = db.q("select * from scan_tokens where done=0 order by t_list desc limit ?", (TOKENS_PER_RUN,))
-    log(f"{len(toks)} listados en {DAYS} días; esta noche se procesan {len(todo)}")
+    log(f"{len(toks)} listados en {DAYS} días; en esta vuelta se procesan {len(todo)}")
     for tk in todo:
         b = prelist_buyers(tk["mint"], tk["t_list"])
         db.xm("insert or replace into prelist(addr, mint, usd, x, t) values(?,?,?,?,?)",
@@ -280,7 +338,8 @@ def main():
 
     followed = {r["addr"] for r in db.q("select addr from wallets")}
     skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or found > ?", (int(time.time()) - 14 * 86400,))}
-    hits = db.q("select addr, count(*) n, group_concat(mint) mints from prelist where usd>=? and x>=? group by addr having n>=? order by n desc",
+    hits = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from prelist where usd>=? and x>=? "
+                "group by addr having n>=? order by n desc, u desc",
                 (MIN_BUY_USD, MIN_X, MIN_HITS))
     pool = [h for h in hits if h["addr"] not in followed and h["addr"] not in skip]
     log(f"{len(hits)} wallets con {MIN_HITS}+ aciertos; pendientes {len(pool)}; se miden hasta {WALLETS_PER_RUN} que no sean bots")
@@ -294,18 +353,19 @@ def main():
             measured += 1   # los bots se descartan rápido y no gastan hueco
         sel_mints = set(h["mints"].split(","))
         st = score(trades, sel_mints) if trades else None
-        ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] >= PASS["pct_x2"] and st["ladder"] >= PASS["ladder"])
+        ok = bool(st and st["n"] >= PASS["n"] and st["best"] >= PASS["best"])
         status = "nueva" if ok else ("bot" if prof and prof.get("tx_day", 0) > MAX_TX_DAY else "no pasa")
-        st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0}
+        st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0, "best": 0}
         db.x("insert or replace into candidates(addr, origin, found, score, n, pct_x2, ladder, all_x2, avg_xmax, hits, detail, status) "
              "values(?,?,?,?,?,?,?,?,?,?,?,?)",
-             (h["addr"], "compra antes de los listados", int(time.time()), st["ladder"] + st["pct_x2"] / 2, st["n"], st["pct_x2"],
-              st["ladder"], st["all_x2"], st["avg_xmax"], h["n"], json.dumps({"perfil": prof}), status))
+             (h["addr"], "compra antes de los listados", int(time.time()), st["best"], st["n"], st["pct_x2"],
+              st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
+              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best")}}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")
         if ok:
             passed += 1
-            push("Buscador: nueva wallet candidata",
-                 f"{st['pct_x2']}% de sus compras llegan a x2 · tu método {st['ladder']:+d}% · {h['n']} aciertos antes de listados")
+            push("Buscador: nueva wallet muy buena",
+                 f"Copiarla da {st['best']:+d}% · {st['pct_x2']}% de sus compras llegan a x2 · {h['n']} aciertos antes de listados")
     msg = f"{len(todo)} listados nuevos, {measured} wallets medidas ({checked - measured} bots descartados), {passed} pasan el corte"
     db.put("last_scan", {"t": int(time.time()), "msg": msg, "secs": int(time.time() - t0)})
     log("FIN:", msg)

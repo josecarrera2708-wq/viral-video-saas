@@ -103,6 +103,7 @@ async function loadFeed() {
     `<div class="empty">Todavía no hay compras ni ventas registradas.<br>En cuanto una de tus wallets opere, aparecerá aquí y te llegará el aviso.</div>`;
 }
 
+function pct(v) { return v == null ? '—' : (v >= 0 ? '+' : '') + Math.round(v) + '%'; }
 function money(v) { return (v >= 0 ? '+' : '−') + '$' + Math.abs(v).toFixed(2); }
 async function loadCopy() {
   let d;
@@ -176,7 +177,7 @@ async function loadScan() {
   let d;
   try { d = await api('/api/candidates'); } catch (e) { return; }
   const c = d.counts || {}, measured = (c['no pasa'] || 0) + (c.nueva || 0) + (c.seguida || 0);
-  $('#scan-info').innerHTML = `Cada noche revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y las mide con tu método (x hasta el máximo y vender el 50% en cada x2).
+  $('#scan-info').innerHTML = `Revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y mide cuánto habría dado copiarlas (10 USDT por compra, vendiendo cuando venden, con y sin stop). Pasan las que dan +15% o más en al menos 15 compras.
     <div class="stats"><div class="stat"><b>${d.tokens}</b><span>listados revisados</span></div><div class="stat"><b>${measured}</b><span>wallets medidas</span></div>
     <div class="stat"><b>${c.bot || 0}</b><span>bots descartados</span></div><div class="stat"><b>${(c.nueva || 0) + (c.seguida || 0)}</b><span>pasan el corte</span></div></div>
     Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' · ' + esc(d.last_scan.msg || '') : 'todavía no'}.
@@ -187,12 +188,13 @@ async function loadScan() {
       <div class="stats">
         <div class="stat"><b>${c.n}</b><span>compras medidas</span></div>
         <div class="stat"><b>${c.pct_x2}%</b><span>llegan a x2</span></div>
-        <div class="stat"><b>${(c.ladder >= 0 ? '+' : '') + c.ladder}%</b><span>tu método</span></div>
-        <div class="stat"><b>${(c.all_x2 >= 0 ? '+' : '') + c.all_x2}%</b><span>todo en x2</span></div>
+        <div class="stat"><b>${pct(c.detail?.copia?.best ?? c.score)}</b><span>copiarla (mejor)</span></div>
+        <div class="stat"><b>${pct(c.ladder)}</b><span>tu método</span></div>
       </div>
+      ${c.detail?.copia ? `<div class="small muted">Copiarla: sin stop ${pct(c.detail.copia.copy)} · stop 30% ${pct(c.detail.copia.copy_sl30)} · stop 50% ${pct(c.detail.copia.copy_sl50)} · todo en x2 ${pct(c.all_x2)}</div>` : ''}
       <div class="small muted">Compró antes del listado en ${c.hits} tokens · x máx media x${c.avg_xmax}</div>
       ${c.status !== 'seguida' ? `<div class="row"><button class="btn primary" onclick="cand('${c.addr}','seguir')">Seguir</button><button class="btn ghost" onclick="cand('${c.addr}','descartar')">Descartar</button></div>` : ''}
-    </div>`).join('') : `<div class="empty">Aún no hay candidatas que pasen el corte. El buscador sigue cada noche.</div>`;
+    </div>`).join('') : `<div class="empty">Aún no hay candidatas que pasen el corte. El buscador sigue cada 4 horas.</div>`;
 }
 async function cand(a, act) { try { await api(`/api/candidates/${a}/${act}`, {}); toast(act === 'seguir' ? 'Añadida a tus wallets' : 'Descartada'); loadScan(); refreshMeta(); } catch (e) { toast(e.message); } }
 

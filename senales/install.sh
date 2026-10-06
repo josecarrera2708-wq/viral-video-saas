@@ -56,7 +56,7 @@ WantedBy=multi-user.target
 EOF
 cat > /etc/systemd/system/senales-buscador.service <<EOF
 [Unit]
-Description=Señales: buscador diario de wallets
+Description=Señales: buscador de wallets
 [Service]
 Type=oneshot
 User=senales
@@ -67,9 +67,9 @@ TimeoutStartSec=6h
 EOF
 cat > /etc/systemd/system/senales-buscador.timer <<EOF
 [Unit]
-Description=Señales: lanza el buscador cada noche
+Description=Señales: lanza el buscador cada 4 horas
 [Timer]
-OnCalendar=*-*-* 02:30:00
+OnCalendar=*-*-* 00/4:30:00
 Persistent=true
 [Install]
 WantedBy=timers.target
