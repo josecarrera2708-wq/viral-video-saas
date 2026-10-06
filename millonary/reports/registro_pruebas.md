@@ -210,3 +210,16 @@ Prerregistro: `config/busqueda_v8_prerregistrada.md` (commit ed17bca, ANTES de e
 | T02 Triple suelo/techo 1 h + horario Wall Street + RSI no extremo | 41 | 29 % | +0,57 |
 
 - Total acumulado del proyecto: 1.922 pruebas.
+
+## 2026-10-06 · Búsqueda v9: alto acierto (≥70 %) — pruebas 1923-2012 (90 variantes)
+Prerregistro: `config/busqueda_v9_prerregistrada.md` (commit ec3a465, ANTES de ejecutar). Resultados: `reports/busqueda_v9_resultados.md`.
+- Variantes: 90. Elegibles: **0**. Certificadas: **0**. No entra nadie en la mesa.
+- Acertar mucho es fácil, pero no sale a cuenta:
+
+| Salida | Acierto medio en validación | R media en validación |
+|---|---|---|
+| TP 0,5R, stop normal | 71 % | +0,02 |
+| TP 1R, stop ×1,5 | 57 % | +0,08 |
+
+- Solo 4 variantes pasan del 70 % de acierto en los dos periodos y además ganan. Las cuatro son de bandera con triple confirmación, pero tienen 10 operaciones en validación (se piden ≥30).
+- Total acumulado del proyecto: 2.012 pruebas.
