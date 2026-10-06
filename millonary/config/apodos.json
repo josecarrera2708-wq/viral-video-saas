@@ -1,5 +1,5 @@
 {
- "nota": "Apodos SOLO de presentación (panel e informes). No cambian reglas, parámetros ni contabilidad. Orden = calidad histórica: Tesla el mejor (núcleo, certificado), Einstein el carry (certificado), luego cartera K4, primas en sombra, fondos por Sharpe y traders de corto plazo por R del examen. Fijos: no se reordenan con los resultados del papel. Mesa nueva (X01-X09, 2026-10-06): exploradores. Mesa de patrones (Y01-Y07, 2026-10-06): pintores. Z01-Z02 (v5): pintores. Desde 2026-10-06 la mesa de patrones es la única mesa de trading activa. W01-W04 (v6): pintores. U01-U02 (v7): pintores.",
+ "nota": "Apodos SOLO de presentación (panel e informes). No cambian reglas, parámetros ni contabilidad. Orden = calidad histórica: Tesla el mejor (núcleo, certificado), Einstein el carry (certificado), luego cartera K4, primas en sombra, fondos por Sharpe y traders de corto plazo por R del examen. Fijos: no se reordenan con los resultados del papel. Mesa nueva (X01-X09, 2026-10-06): exploradores. Mesa de patrones (Y01-Y07, 2026-10-06): pintores. Z01-Z02 (v5): pintores. Desde 2026-10-06 la mesa de patrones es la única mesa de trading activa. W01-W04 (v6): pintores. U01-U02 (v7): pintores. T01-T02 (v8): pintores.",
  "apodos": {
   "Núcleo v1": "Nikola Tesla",
   "F06": "Albert Einstein",
@@ -67,6 +67,8 @@
   "W03": "Henri Matisse",
   "W04": "Edvard Munch",
   "U01": "Rafael Sanzio",
-  "U02": "El Greco"
+  "U02": "El Greco",
+  "T01": "Tiziano",
+  "T02": "Joaquín Sorolla"
  }
 }

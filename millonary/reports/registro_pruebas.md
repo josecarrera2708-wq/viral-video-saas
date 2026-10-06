@@ -196,3 +196,17 @@ Prerregistro: `config/busqueda_v7_prerregistrada.md` (commit 371968e, ANTES de e
   - U01: 9 ops, +1,85 R. Con Binance fueron 17 ops y +0,11 R; el funding y el volumen de cada bolsa filtran distinto.
   - U02: 23 ops, +0,41 R.
 - Total acumulado del proyecto: 1.878 pruebas.
+
+## 2026-10-06 · Búsqueda v8: combinaciones de las mejores confirmaciones — pruebas 1879-1922 (44 variantes)
+Prerregistro: `config/busqueda_v8_prerregistrada.md` (commit ed17bca, ANTES de ejecutar). Resultados: `reports/busqueda_v8_resultados.md`.
+- Variantes: 44. Elegibles: 6. Certificadas: **0**.
+- R1 y R2 (patrón dentro de patrón + funding / + triple confirmación) dan la mejor validación (+0,61 y +0,59 R), pero con muy pocas operaciones: no son elegibles.
+- R5 gana mucho en construcción y pierde en el examen: sobreajuste.
+- Mesa de trading: entran por la regla prerregistrada T01 y T02. Empiezan el 2026-10-07 00:00 UTC.
+
+| Trader | Ops examen | Acierto | R examen |
+|---|---|---|---|
+| T01 Doble suelo 1 h + horario Wall Street + RSI no extremo | 91 | 21 % | +0,31 |
+| T02 Triple suelo/techo 1 h + horario Wall Street + RSI no extremo | 41 | 29 % | +0,57 |
+
+- Total acumulado del proyecto: 1.922 pruebas.
