@@ -47,6 +47,24 @@ EARLY_X = 5               # acierto: después el token llegó a x5 desde su prec
 NEW_PER_RUN = int(os.environ.get("SENALES_NEW", 8))           # tokens recién nacidos que se procesan en cada vuelta
 ORIGIN = {"list": "compra antes de los listados", "new": "compra recién nacidas a MC muy bajo"}
 C = httpx.Client(headers=UA, timeout=30, follow_redirects=True)
+CACHE = os.path.join(db.DATA, "cache")   # historiales y velas ya descargados: si la vuelta se corta, no se repiten
+os.makedirs(CACHE, exist_ok=True)
+
+
+def cached(name, max_age, fn):
+    """Devuelve lo guardado en CACHE/name si tiene menos de max_age segundos; si no, lo calcula y lo guarda."""
+    path = os.path.join(CACHE, name)
+    try:
+        if time.time() - os.path.getmtime(path) < max_age:
+            with open(path) as f:
+                return json.load(f)
+    except (OSError, ValueError):
+        pass
+    v = fn()
+    with open(path + ".tmp", "w") as f:
+        json.dump(v, f)
+    os.replace(path + ".tmp", path)
+    return v
 
 
 def log(*a):
@@ -223,6 +241,11 @@ def rpc(method, params):
 
 
 def history(addr, max_tx=800):
+    prof, trades = cached(f"hist_{addr}.json", 12 * 3600, lambda: _history(addr, max_tx))
+    return prof, trades
+
+
+def _history(addr, max_tx):
     sigs, before = [], None
     while len(sigs) < max_tx:
         p = {"limit": 1000}
@@ -271,6 +294,10 @@ def gt(path, **params):
 def fine_path(mint, t):
     """Velas desde la compra: de 1 min las primeras ~16 h, de 15 min hasta ~10 días y de 4 h después.
     Con velas más gruesas el máximo sale inflado (el pico de la vela puede ser anterior a la compra)."""
+    return cached(f"path_{mint}_{int(t)}.json", 6 * 3600, lambda: _fine_path(mint, t))
+
+
+def _fine_path(mint, t):
     pools = gt(f"tokens/{mint}/pools", page=1)
     pool = ((pools.get("data") or [{}])[0].get("attributes") or {}).get("address")
     if not pool:
