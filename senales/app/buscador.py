@@ -8,7 +8,8 @@ Repite por lotes el estudio que hicimos a mano:
  5. Se mide cada wallet en sus últimas compras de OTROS tokens (fuera de muestra), con velas de 1 minuto:
     cuánto habría dado copiarla (10 USDT por compra, vendiendo cuando vende, sin stop y con stop del 30 y 50%),
     la x hasta el máximo y el método del usuario (vender el 50% en cada x2).
- 6. Las que dan +15% o más en al menos 15 compras aparecen en la app (pestaña Buscador) y llega un aviso.
+ 6. Pasan las selectivas (≤3 tokens nuevos al día) con más del 40% de acierto (x2) que dan +15% o más copiándolas,
+    en al menos 15 compras. Aparecen en la app (pestaña Buscador) y llega un aviso.
 Todo es reanudable: lo ya hecho se guarda en la base de datos y no se repite.
 """
 import collections
@@ -32,7 +33,10 @@ MIN_BUY_USD = 500         # compra mínima antes del listado para contar como ac
 MIN_X = 2.0               # x mínima al llegar el listado
 MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos para medir la wallet
 MAX_TX_DAY = 300          # más que esto = bot
-PASS = {"n": 15, "pct_x2": 40, "best": 15}   # corte: ≥15 compras medidas, más del 40% llegan a x2 y copiarla da ≥ +15%
+SELECT_TX_DAY = 80        # más que esto = compra de todo (gana por volumen, no por elegir bien): se descarta sin medir
+MAX_TOKENS_DAY = 3        # selectiva: como mucho 3 tokens nuevos al día de media
+PASS = {"n": 15, "pct_x2": 40, "best": 15}   # corte: ≥15 compras medidas, más del 40% llegan a x2, copiarla da ≥ +15%
+                                             # y es selectiva (≤ MAX_TOKENS_DAY tokens nuevos al día)
 # Segunda categoría: wallets que compran tokens recién nacidos a MC muy bajo
 NEW_DAYS = 10             # tokens nacidos en los últimos N días...
 NEW_MIN_MC = 1_000_000    # ...que ya valen al menos esto
@@ -232,7 +236,7 @@ def history(addr, max_tx=800):
         return None, []
     span = max(0.05, (ok[0]["blockTime"] - ok[-1]["blockTime"]) / 86400)
     prof = {"tx_day": round(len(ok) / span), "last": ok[0]["blockTime"]}
-    if prof["tx_day"] > MAX_TX_DAY or time.time() - prof["last"] > 30 * 86400:
+    if prof["tx_day"] > SELECT_TX_DAY or time.time() - prof["last"] > 30 * 86400:
         return prof, []
     sol_usd = (get("https://lite-api.jup.ag/price/v3", ids=chain.WSOL) or {}).get(chain.WSOL, {}).get("usdPrice") or 120
     since = time.time() - DAYS * 86400
@@ -356,6 +360,8 @@ def score(trades, exclude):
           "all_x2": round(100 * (sum((2 if a >= 2 else b) * FEE for a, b in rows) / n - 1)),
           "copy": cp[0], "copy_sl30": cp[0.3], "copy_sl50": cp[0.5]}
     st["best"] = max(st["copy"], st["copy_sl30"], st["copy_sl50"], st["all_x2"])
+    span = max(1.0, (max(t["t"] for t in trades) - min(t["t"] for t in trades)) / 86400)
+    st["tokens_day"] = round(len(first) / span, 1)   # tokens nuevos al día: cuanto menos, más selectiva
     return st
 
 
@@ -418,18 +424,21 @@ def main():
             break
         checked += 1
         prof, trades = history(h["addr"])
-        if not (prof and prof.get("tx_day", 0) > MAX_TX_DAY):
-            measured += 1   # los bots se descartan rápido y no gastan hueco
+        tx_day = (prof or {}).get("tx_day", 0)
+        if tx_day <= SELECT_TX_DAY:
+            measured += 1   # los bots y las que compran de todo se descartan rápido y no gastan hueco
         sel_mints = set(h["mints"].split(","))
         st = score(trades, sel_mints) if trades else None
-        ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] > PASS["pct_x2"] and st["best"] >= PASS["best"])
-        status = "nueva" if ok else ("bot" if prof and prof.get("tx_day", 0) > MAX_TX_DAY else "no pasa")
-        st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0, "best": 0}
+        ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] > PASS["pct_x2"] and st["best"] >= PASS["best"]
+                  and st["tokens_day"] <= MAX_TOKENS_DAY)
+        status = "nueva" if ok else "bot" if tx_day > MAX_TX_DAY else "no selectiva" if tx_day > SELECT_TX_DAY else "no pasa"
+        st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0,
+                    "best": 0, "tokens_day": 0}
         db.x("insert or replace into candidates(addr, origin, found, score, n, pct_x2, ladder, all_x2, avg_xmax, hits, detail, status) "
              "values(?,?,?,?,?,?,?,?,?,?,?,?)",
              (h["addr"], ORIGIN[h["src"]], int(time.time()), st["best"], st["n"], st["pct_x2"],
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
-              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best")}}), status))
+              json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best", "tokens_day")}}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")
         if ok:
             passed += 1

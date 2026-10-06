@@ -177,9 +177,9 @@ async function loadScan() {
   let d;
   try { d = await api('/api/candidates'); } catch (e) { return; }
   const c = d.counts || {}, measured = (c['no pasa'] || 0) + (c.nueva || 0) + (c.seguida || 0);
-  $('#scan-info').innerHTML = `Revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y mide cuánto habría dado copiarlas (10 USDT por compra, vendiendo cuando venden, con y sin stop). Pasan las que, en al menos 15 compras, tienen más del 40% de acierto (llegan a x2) y copiarlas da +15% o más. Busca en dos categorías: compran antes de los listados, y compran tokens recién nacidos a MC muy bajo.
+  $('#scan-info').innerHTML = `Revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y mide cuánto habría dado copiarlas (10 USDT por compra, vendiendo cuando venden, con y sin stop). Pasan las selectivas (3 tokens nuevos al día como mucho) que, en al menos 15 compras, tienen más del 40% de acierto (llegan a x2) y copiarlas da +15% o más. Busca en dos categorías: compran antes de los listados, y compran tokens recién nacidos a MC muy bajo.
     <div class="stats"><div class="stat"><b>${d.tokens}</b><span>listados revisados</span></div><div class="stat"><b>${measured}</b><span>wallets medidas</span></div>
-    <div class="stat"><b>${c.bot || 0}</b><span>bots descartados</span></div><div class="stat"><b>${(c.nueva || 0) + (c.seguida || 0)}</b><span>pasan el corte</span></div></div>
+    <div class="stat"><b>${(c.bot || 0) + (c['no selectiva'] || 0)}</b><span>descartadas (bots o compran de todo)</span></div><div class="stat"><b>${(c.nueva || 0) + (c.seguida || 0)}</b><span>pasan el corte</span></div></div>
     Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' · ' + esc(d.last_scan.msg || '') : 'todavía no'}.
     <br>Marca «posible listado» (compras de tokens jóvenes que aún no cotizan en MEXC, Gate, Bitget ni KuCoin): ${d.hint ? `${d.hint.marked} tokens marcados, ${d.hint.listed} listados después` : '—'}.`;
   $('#cands').innerHTML = d.rows.length ? d.rows.map(c => `<div class="card">
@@ -192,7 +192,7 @@ async function loadScan() {
         <div class="stat"><b>${pct(c.ladder)}</b><span>tu método</span></div>
       </div>
       ${c.detail?.copia ? `<div class="small muted">Copiarla: sin stop ${pct(c.detail.copia.copy)} · stop 30% ${pct(c.detail.copia.copy_sl30)} · stop 50% ${pct(c.detail.copia.copy_sl50)} · todo en x2 ${pct(c.all_x2)}</div>` : ''}
-      <div class="small muted">Compró antes del listado en ${c.hits} tokens · x máx media x${c.avg_xmax}</div>
+      <div class="small muted">${c.hits} aciertos en su categoría · x máx media x${c.avg_xmax}${c.detail?.copia?.tokens_day != null ? ` · ${c.detail.copia.tokens_day} tokens nuevos al día` : ''}</div>
       ${c.status !== 'seguida' ? `<div class="row"><button class="btn primary" onclick="cand('${c.addr}','seguir')">Seguir</button><button class="btn ghost" onclick="cand('${c.addr}','descartar')">Descartar</button></div>` : ''}
     </div>`).join('') : `<div class="empty">Aún no hay candidatas que pasen el corte. El buscador sigue cada 4 horas.</div>`;
 }
