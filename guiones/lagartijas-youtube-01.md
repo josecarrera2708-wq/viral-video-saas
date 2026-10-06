@@ -1,7 +1,7 @@
 # Paquete YouTube FINAL: lagartijas-01 (listo para copiar y pegar)
 
 ## TÍTULO
-Esto puede transformar tu cuerpo en 90 días (sin gimnasio) 💪
+Esto puede transformar tu cuerpo en 90 días: sin gimnasio, sin pesas y lo que nadie te cuenta 💪
 
 ## MINIATURA
 video/lagartijas-01/marca/miniatura_lagartijas_C_1280x720.jpg
