@@ -251,8 +251,14 @@ def early_buyers(mint, t0, supply):
 
 
 # ---------- 4-5. perfil e historial de una wallet ----------
+TX_RPC = "https://solana-rpc.publicnode.com"   # segundo RPC público: lee transacciones (no da historial de firmas)
+_rr = itertools.count()
+
+
 def rpc(method, params):
     urls = [chain.PUBLIC_RPC]
+    if method == "getTransaction":   # las transacciones se reparten entre los dos RPC públicos (el doble de rápido)
+        urls = [chain.PUBLIC_RPC, TX_RPC][::1 if next(_rr) % 2 else -1]
     key = db.get("helius_key")
     if key:  # con clave de Helius se usa primero (más rápido y sin límites tan bajos)
         urls.insert(0, f"https://mainnet.helius-rpc.com/?api-key={key}")
@@ -373,7 +379,7 @@ def _history(addr, max_tx):
             return r
         except RuntimeError:
             return None
-    with ThreadPoolExecutor(6 if db.get("helius_key") else 2) as ex:
+    with ThreadPoolExecutor(6 if db.get("helius_key") else 4) as ex:   # 2 hilos por RPC público
         res = list(ex.map(one, sel))
     for i, r in enumerate(res):   # segundo intento, de una en una, de las que fallaron
         if r is None:
@@ -768,7 +774,8 @@ def main():
         if measured >= WALLETS_PER_RUN or checked >= 80:
             break
         checked += 1
-        prof, trades = history(h["addr"])
+        # a los traders famosos les llegan muchas firmas basura: se leen más para cubrir suficientes compras suyas
+        prof, trades = history(h["addr"], 4000 if h["src"] == "kol" else MAX_SIGS)
         tx_day = (prof or {}).get("tx_day", 0)
         if tx_day <= SELECT_TX_DAY:
             measured += 1   # los bots y las que compran de todo se descartan rápido y no gastan hueco
