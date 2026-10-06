@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-06 22:06:22.948277+00:00",
+ "generado": "2026-10-06 22:13:31.522833+00:00",
  "ultima_vela_cerrada": "2026-10-06 22:00:00+00:00",
  "inicio": "2026-10-06 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL (1 h, 4 h y diario desde velas de 15 min cerradas)",
@@ -9,7 +9,7 @@
    "temporalidad": "1h",
    "variante": "1h | B01 Doble suelo | a_favor_tendencia | dejar_correr",
    "cerradas": 1,
-   "por_dia": 1.085659703122235,
+   "por_dia": 1.0798444641571694,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.42268680303452905,
@@ -123,7 +123,7 @@
    "temporalidad": "1h",
    "variante": "1h | C01 Doble suelo | K3 tendencia superior (EMA 50 d\u00edas) | dejar_correr",
    "cerradas": 1,
-   "por_dia": 1.085659703122235,
+   "por_dia": 1.0798444641571694,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.42268680303452905,
@@ -271,5 +271,5 @@
   }
  },
  "trades_totales": 2,
- "por_dia_total": 2.17131940624447
+ "por_dia_total": 2.159688928314339
 }
