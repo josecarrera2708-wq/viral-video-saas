@@ -13,6 +13,7 @@ Todo es reanudable: lo ya hecho se guarda en la base de datos y no se repite.
 """
 import collections
 import datetime
+import itertools
 import json
 import os
 import sys
@@ -31,7 +32,14 @@ MIN_BUY_USD = 500         # compra mínima antes del listado para contar como ac
 MIN_X = 2.0               # x mínima al llegar el listado
 MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos para medir la wallet
 MAX_TX_DAY = 300          # más que esto = bot
-PASS = {"n": 15, "best": 15}   # corte: ≥15 compras medidas y la mejor forma de copiarla da ≥ +15%
+PASS = {"n": 15, "pct_x2": 40, "best": 15}   # corte: ≥15 compras medidas, más del 40% llegan a x2 y copiarla da ≥ +15%
+# Segunda categoría: wallets que compran tokens recién nacidos a MC muy bajo
+NEW_DAYS = 10             # tokens nacidos en los últimos N días...
+NEW_MIN_MC = 1_000_000    # ...que ya valen al menos esto
+EARLY_MC = 100_000        # «MC muy bajo»: compras hechas antes de que el token valiera esto
+EARLY_X = 5               # acierto: después el token llegó a x5 desde su precio de compra
+NEW_PER_RUN = int(os.environ.get("SENALES_NEW", 8))           # tokens recién nacidos que se procesan en cada vuelta
+ORIGIN = {"list": "compra antes de los listados", "new": "compra recién nacidas a MC muy bajo"}
 C = httpx.Client(headers=UA, timeout=30, follow_redirects=True)
 
 
@@ -151,6 +159,45 @@ def prelist_buyers(mint, T):
     return {o: {"usd": round(u), "x": round(pend / (u / q), 2), "t": int(t0)} for o, (u, q, t0) in agg.items() if q > 0}
 
 
+# ---------- 3b. compradores de tokens recién nacidos ----------
+def newborn_winners():
+    """Tokens de Solana nacidos hace ≤NEW_DAYS días que ya valen ≥NEW_MIN_MC (listas de tendencias de Jupiter)."""
+    seen = {}
+    for kind in ("toptrending", "toptraded", "toporganicscore"):
+        for win in ("1h", "6h", "24h"):
+            for x in get(f"https://datapi.jup.ag/v1/assets/{kind}/{win}", limit=100) or []:
+                seen[x["id"]] = x
+    out = []
+    for m, x in seen.items():
+        t0 = chain._epoch((x.get("firstPool") or {}).get("createdAt") or x.get("createdAt") or "")
+        supply = float(x.get("totalSupply") or 0)
+        if t0 and time.time() - t0 <= NEW_DAYS * 86400 and (x.get("mcap") or 0) >= NEW_MIN_MC \
+                and (x.get("holderCount") or 0) >= 1000 and supply > 0:
+            out.append((m, x.get("symbol") or m[:5], t0, supply))
+    return out
+
+
+def early_buyers(mint, t0, supply):
+    """Quién compró al nacer el token, con MC por debajo de EARLY_MC, y a qué x llegó después desde su precio."""
+    path = fine_path(mint, t0)
+    if not path:
+        return {}
+    cross = next((k[0] for k in path if k[4] * supply >= EARLY_MC), None)
+    end = min((cross + 60) if cross else t0 + 3600, t0 + 6 * 3600)
+    ath = max(k[2] for k in path)
+    agg = collections.defaultdict(lambda: [0.0, 0.0, None])
+    for x in chunk(mint, t0 - 60, end):
+        p = x.get("usdPrice") or 0
+        if x.get("isMev") or x["type"] != "buy" or not p or x["usdVolume"] < 20 or p * supply >= EARLY_MC:
+            continue
+        a = agg[x["traderAddress"]]
+        a[0] += x["usdVolume"]
+        a[1] += x["usdVolume"] / p
+        a[2] = ts(x) if a[2] is None else min(a[2], ts(x))
+    return {o: {"usd": round(u), "x": round(ath / (u / q), 1), "mc": round(supply * u / q), "t": int(t1)}
+            for o, (u, q, t1) in agg.items() if q > 0}
+
+
 # ---------- 4-5. perfil e historial de una wallet ----------
 def rpc(method, params):
     urls = [chain.PUBLIC_RPC]
@@ -201,6 +248,7 @@ def history(addr, max_tx=800):
 
 # ---------- 6. medición: cuánto daría copiarla ----------
 COPY_USD = 10             # importe por compra en la copia sobre el papel
+ENTRY_SLIP = 1.02         # el bot de copia compra unos segundos después: se paga un 2% más que ella
 FEE = 0.98                # ~1% al comprar y ~1% al vender
 _gt_last = [0.0]
 
@@ -249,7 +297,7 @@ def copy_sim(path, trades, mint, t0, pnow, sl):
     for _, is_candle, k in sorted(ev, key=lambda z: (z[0], z[1])):
         if not is_candle:
             if k["side"] == "buy":
-                lots.append([k["price"], COPY_USD / k["price"]])
+                lots.append([k["price"] * ENTRY_SLIP, COPY_USD / (k["price"] * ENTRY_SLIP)])
                 inv += COPY_USD
                 hold += k["amount"]
             elif hold > 0:
@@ -336,13 +384,34 @@ def main():
         db.x("update scan_tokens set done=1, buyers=? where mint=?", (len(b), tk["mint"]))
         log(f"{tk['sym']} ({tk['exch']}): {len(b)} compradores antes del listado")
 
+    db.x("create table if not exists newborn(mint text primary key, sym text, t0 integer, supply real, done integer, buyers integer)")
+    db.x("create table if not exists early(addr text, mint text, usd real, x real, mc real, t integer, primary key(addr, mint))")
+    log("buscando tokens recién nacidos que despegaron…")
+    for m, sym, t, sup in newborn_winners():
+        db.x("insert or ignore into newborn(mint, sym, t0, supply, done, buyers) values(?,?,?,?,0,0)", (m, sym, t, sup))
+    for tk in db.q("select * from newborn where done=0 order by t0 desc limit ?", (NEW_PER_RUN,)):
+        b = early_buyers(tk["mint"], tk["t0"], tk["supply"])
+        db.xm("insert or replace into early(addr, mint, usd, x, mc, t) values(?,?,?,?,?,?)",
+              [(o, tk["mint"], v["usd"], v["x"], v["mc"], v["t"]) for o, v in b.items()])
+        db.x("update newborn set done=1, buyers=? where mint=?", (len(b), tk["mint"]))
+        log(f"{tk['sym']} (recién nacido): {len(b)} compradores con MC < {EARLY_MC:,}")
+
     followed = {r["addr"] for r in db.q("select addr from wallets")}
     skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or found > ?", (int(time.time()) - 14 * 86400,))}
-    hits = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from prelist where usd>=? and x>=? "
-                "group by addr having n>=? order by n desc, u desc",
-                (MIN_BUY_USD, MIN_X, MIN_HITS))
-    pool = [h for h in hits if h["addr"] not in followed and h["addr"] not in skip]
-    log(f"{len(hits)} wallets con {MIN_HITS}+ aciertos; pendientes {len(pool)}; se miden hasta {WALLETS_PER_RUN} que no sean bots")
+    hits_l = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from prelist where usd>=? and x>=? "
+                  "group by addr having n>=? order by n desc, u desc", (MIN_BUY_USD, MIN_X, MIN_HITS))
+    hits_n = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from early where x>=? "
+                  "group by addr having n>=2 order by n desc, u desc", (EARLY_X,))
+    pend = [[dict(h, src=src) for h in hits if h["addr"] not in followed and h["addr"] not in skip]
+            for src, hits in (("list", hits_l), ("new", hits_n))]
+    pool, seen = [], set()
+    for pair in itertools.zip_longest(*pend):   # una de cada categoría, por turnos
+        for h in pair:
+            if h and h["addr"] not in seen:
+                seen.add(h["addr"])
+                pool.append(h)
+    log(f"antes de listados: {len(hits_l)} wallets con {MIN_HITS}+ aciertos · recién nacidas: {len(hits_n)} con 2+ aciertos x{EARLY_X}; "
+        f"pendientes {len(pool)}; se miden hasta {WALLETS_PER_RUN} que no sean bots")
     passed = measured = checked = 0
     for h in pool:
         if measured >= WALLETS_PER_RUN or checked >= 80:
@@ -353,12 +422,12 @@ def main():
             measured += 1   # los bots se descartan rápido y no gastan hueco
         sel_mints = set(h["mints"].split(","))
         st = score(trades, sel_mints) if trades else None
-        ok = bool(st and st["n"] >= PASS["n"] and st["best"] >= PASS["best"])
+        ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] > PASS["pct_x2"] and st["best"] >= PASS["best"])
         status = "nueva" if ok else ("bot" if prof and prof.get("tx_day", 0) > MAX_TX_DAY else "no pasa")
         st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0, "best": 0}
         db.x("insert or replace into candidates(addr, origin, found, score, n, pct_x2, ladder, all_x2, avg_xmax, hits, detail, status) "
              "values(?,?,?,?,?,?,?,?,?,?,?,?)",
-             (h["addr"], "compra antes de los listados", int(time.time()), st["best"], st["n"], st["pct_x2"],
+             (h["addr"], ORIGIN[h["src"]], int(time.time()), st["best"], st["n"], st["pct_x2"],
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
               json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "best")}}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")

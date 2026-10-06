@@ -28,7 +28,7 @@ function price(p) {
   const dec = p.toFixed(15).split('.')[1]; const z = dec.length - dec.replace(/^0+/, '').length; return '$' + p.toFixed(z + 4);
 }
 function xs(v) { return v == null ? '' : `<span class="x ${v >= 1 ? 'up' : 'dn'}">x${v.toFixed(2)}</span>`; }
-function tagCls(o) { o = (o || '').toLowerCase(); return o.includes('list') ? 'list' : o.includes('unip') ? 'uni' : ''; }
+function tagCls(o) { o = (o || '').toLowerCase(); return o.includes('nacid') ? 'new' : o.includes('list') ? 'list' : o.includes('unip') ? 'uni' : ''; }
 function copy(t) { (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Copiado'), () => toast(t)); }
 
 // ---------- acceso ----------
@@ -177,7 +177,7 @@ async function loadScan() {
   let d;
   try { d = await api('/api/candidates'); } catch (e) { return; }
   const c = d.counts || {}, measured = (c['no pasa'] || 0) + (c.nueva || 0) + (c.seguida || 0);
-  $('#scan-info').innerHTML = `Revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y mide cuánto habría dado copiarlas (10 USDT por compra, vendiendo cuando venden, con y sin stop). Pasan las que dan +15% o más en al menos 15 compras.
+  $('#scan-info').innerHTML = `Revisa los nuevos listados de los exchanges, busca las wallets que compraron antes y mide cuánto habría dado copiarlas (10 USDT por compra, vendiendo cuando venden, con y sin stop). Pasan las que, en al menos 15 compras, tienen más del 40% de acierto (llegan a x2) y copiarlas da +15% o más. Busca en dos categorías: compran antes de los listados, y compran tokens recién nacidos a MC muy bajo.
     <div class="stats"><div class="stat"><b>${d.tokens}</b><span>listados revisados</span></div><div class="stat"><b>${measured}</b><span>wallets medidas</span></div>
     <div class="stat"><b>${c.bot || 0}</b><span>bots descartados</span></div><div class="stat"><b>${(c.nueva || 0) + (c.seguida || 0)}</b><span>pasan el corte</span></div></div>
     Última búsqueda: ${d.last_scan ? hm(d.last_scan.t) + ' · ' + esc(d.last_scan.msg || '') : 'todavía no'}.
