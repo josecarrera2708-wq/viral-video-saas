@@ -381,11 +381,15 @@ def score(trades, exclude):
           "all_x2": round(100 * (sum((2 if a >= 2 else b) * FEE for a, b in rows) / n - 1)),
           "copy": cp["copiar"], "copy_sl30": cp["copiar_sl30"], "copy_sl50": cp["copiar_sl50"],
           "x2": cp["x2"], "x2_sl30": cp["x2_sl30"], "x2_sl50": cp["x2_sl50"]}
-    st["plan"] = max(PLANS, key=lambda k: cp[k])
-    st["best"] = cp[st["plan"]]
-    v = sorted(per[st["plan"]])
-    st["robust"] = round(100 * (sum(v[:-1]) / (len(v) - 1) - 1)) if len(v) > 1 else -100   # sin su mejor token
-    st["won"] = round(100 * sum(1 for x in v if x > 1) / len(v)) if v else 0                # % de tokens en que gana
+    rob, won = {}, {}
+    for k in PLANS:
+        v = sorted(per[k])
+        rob[k] = round(100 * (sum(v[:-1]) / (len(v) - 1) - 1)) if len(v) > 1 else -100   # sin su mejor token
+        won[k] = round(100 * sum(1 for x in v if x > 1) / len(v)) if v else 0            # % de tokens en que gana
+    # la mejor de las que ganan de forma regular; si ninguna lo hace, la de más media (y no pasará el corte)
+    steady = [k for k in PLANS if rob[k] >= PASS["robust"] and won[k] >= PASS["won"]]
+    st["plan"] = max(steady or PLANS, key=lambda k: cp[k])
+    st["best"], st["robust"], st["won"] = cp[st["plan"]], rob[st["plan"]], won[st["plan"]]
     span = max(1.0, (max(t["t"] for t in trades) - min(t["t"] for t in trades)) / 86400)
     st["tokens_day"] = round(len(first) / span, 1)   # tokens nuevos al día: cuanto menos, más selectiva
     return st
@@ -438,7 +442,7 @@ def main():
             for src, hits in (("list", hits_l), ("new", hits_n))]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
     redo = []
-    for c in db.q("select addr, origin from candidates where status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 2%' "
+    for c in db.q("select addr, origin from candidates where status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 3%' "
                   "order by pct_x2 desc limit 4", (PASS["pct_x2"],)):
         src = "new" if c["origin"] == ORIGIN["new"] else "list"
         table = "early" if src == "new" else "prelist"
@@ -473,7 +477,7 @@ def main():
              (h["addr"], ORIGIN[h["src"]], int(time.time()), st["best"], st["n"], st["pct_x2"],
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
               json.dumps({"perfil": prof, "copia": {k: st[k] for k in ("copy", "copy_sl30", "copy_sl50", "x2", "x2_sl30", "x2_sl50", "plan", "best", "robust", "won",
-                                                        "tokens_day")}, "v": 2}), status))
+                                                        "tokens_day")}, "v": 3}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {st}")
         if ok:
             passed += 1
