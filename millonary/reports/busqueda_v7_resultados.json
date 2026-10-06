@@ -1,0 +1,4435 @@
+{
+ "n_variantes": 81,
+ "elegibles": 13,
+ "finalistas": [
+  "1h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr",
+  "1h | E01 Doble suelo | Q2 funding + volumen | dejar_correr",
+  "1h | E01 Doble suelo | Q2 funding + volumen | TP3",
+  "4h | E01 Doble suelo | Q5 RSI no extremo | dejar_correr_rapido",
+  "1h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | dejar_correr",
+  "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr",
+  "1h | E01 Doble suelo | Q5 RSI no extremo | dejar_correr",
+  "1h | E02 Triple suelo/techo | Q5 RSI no extremo | dejar_correr",
+  "1h | E02 Triple suelo/techo | Q5 RSI no extremo | dejar_correr_rapido",
+  "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | TP3",
+  "1h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr_rapido",
+  "1h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | dejar_correr",
+  "1h | E01 Doble suelo | Q2 funding + volumen | dejar_correr_rapido"
+ ],
+ "certificadas": [],
+ "mesa_v7": [
+  "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr",
+  "1h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr"
+ ],
+ "marginales": {
+  "tf": {
+   "1h": {
+    "Rc": 0.183,
+    "R": 0.185,
+    "acierto": 0.381,
+    "n": 48.222
+   },
+   "4h": {
+    "Rc": 0.517,
+    "R": 0.2,
+    "acierto": 0.452,
+    "n": 13.861
+   }
+  },
+  "familia": {
+   "E01 Doble suelo": {
+    "Rc": 0.346,
+    "R": 0.166,
+    "acierto": 0.393,
+    "n": 51.778
+   },
+   "E02 Triple suelo/techo": {
+    "Rc": 0.336,
+    "R": 0.281,
+    "acierto": 0.509,
+    "n": 27.0
+   },
+   "E03 Bandera / bander\u00edn": {
+    "Rc": 0.312,
+    "R": 0.127,
+    "acierto": 0.335,
+    "n": 20.074
+   }
+  },
+  "combinacion": {
+   "Q1 tendencia + volumen + funding": {
+    "Rc": 0.422,
+    "R": 0.344,
+    "acierto": 0.495,
+    "n": 14.444
+   },
+   "Q2 funding + volumen": {
+    "Rc": 0.249,
+    "R": 0.191,
+    "acierto": 0.431,
+    "n": 23.333
+   },
+   "Q3 patr\u00f3n dentro de patr\u00f3n (4 h)": {
+    "Rc": 0.375,
+    "R": 0.329,
+    "acierto": 0.452,
+    "n": 15.0
+   },
+   "Q4 ruptura en horario de Wall Street": {
+    "Rc": 0.272,
+    "R": 0.114,
+    "acierto": 0.37,
+    "n": 39.722
+   },
+   "Q5 RSI no extremo": {
+    "Rc": 0.361,
+    "R": 0.049,
+    "acierto": 0.335,
+    "n": 63.278
+   }
+  },
+  "salida": {
+   "TP3": {
+    "Rc": 0.204,
+    "R": 0.259,
+    "acierto": 0.485,
+    "n": 29.407
+   },
+   "dejar_correr": {
+    "Rc": 0.484,
+    "R": 0.158,
+    "acierto": 0.36,
+    "n": 33.63
+   },
+   "dejar_correr_rapido": {
+    "Rc": 0.306,
+    "R": 0.158,
+    "acierto": 0.393,
+    "n": 35.815
+   }
+  }
+ },
+ "variantes": {
+  "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 68,
+    "por_dia": 0.04853675945753034,
+    "acierto": 0.4264705882352941,
+    "R_media": 0.1871742688847487,
+    "t_R": 0.9975467042588682,
+    "p_1s": 0.16104419695498362,
+    "retorno": 0.056711250633186605,
+    "caida_max": 0.04033082703123547,
+    "sharpe": 0.5220272946696771,
+    "salidas": {
+     "stop": 0.5147058823529411,
+     "tp": 0.16176470588235295,
+     "signal": 0.0,
+     "time": 0.3235294117647059,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 35,
+    "por_dia": 0.06398537477148081,
+    "acierto": 0.42857142857142855,
+    "R_media": 0.0685736662182302,
+    "t_R": 0.26391185670946166,
+    "p_1s": 0.39672045753243146,
+    "retorno": 0.004325917896637499,
+    "caida_max": 0.033599463908992266,
+    "sharpe": 0.11263479802088655,
+    "salidas": {
+     "stop": 0.5714285714285714,
+     "tp": 0.17142857142857143,
+     "signal": 0.0,
+     "time": 0.2571428571428571,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 17,
+    "por_dia": 0.037444933920704845,
+    "acierto": 0.35294117647058826,
+    "R_media": 0.08171776823596062,
+    "t_R": 0.2066262814135909,
+    "p_1s": 0.4194541406486667,
+    "retorno": 0.0041084127762178735,
+    "caida_max": 0.02233603081800606,
+    "sharpe": 0.17348366085525405,
+    "salidas": {
+     "stop": 0.5294117647058824,
+     "tp": 0.17647058823529413,
+     "signal": 0.0,
+     "time": 0.29411764705882354,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 17,
+    "por_dia": 0.037444933920704845,
+    "acierto": 0.35294117647058826,
+    "R_media": -0.005863204043283933,
+    "t_R": -0.014631115129034561,
+    "p_1s": 0.5057463169490367,
+    "retorno": -0.0015004694418473408,
+    "caida_max": 0.022878758457891557,
+    "sharpe": -0.06006534781589567,
+    "salidas": {
+     "stop": 0.5294117647058824,
+     "tp": 0.17647058823529413,
+     "signal": 0.0,
+     "time": 0.29411764705882354,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0020004469591801636,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": false,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 76,
+    "por_dia": 0.05424696645253391,
+    "acierto": 0.3815789473684211,
+    "R_media": 0.5029312355256975,
+    "t_R": 1.5082004874247958,
+    "p_1s": 0.06785217216763428,
+    "retorno": 0.17779400729068984,
+    "caida_max": 0.056208866479825814,
+    "sharpe": 1.045242332187093,
+    "salidas": {
+     "stop": 0.14473684210526316,
+     "tp": 0.0,
+     "signal": 0.8552631578947368,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 38,
+    "por_dia": 0.06946983546617916,
+    "acierto": 0.39473684210526316,
+    "R_media": 0.20899237217863,
+    "t_R": 0.7548762473422328,
+    "p_1s": 0.22755079758965846,
+    "retorno": 0.031408944489177415,
+    "caida_max": 0.026412981673209823,
+    "sharpe": 0.6311554775772433,
+    "salidas": {
+     "stop": 0.10526315789473684,
+     "tp": 0.0,
+     "signal": 0.8947368421052632,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 17,
+    "por_dia": 0.037444933920704845,
+    "acierto": 0.29411764705882354,
+    "R_media": 0.11103055164997441,
+    "t_R": 0.259055729245775,
+    "p_1s": 0.39944781481319236,
+    "retorno": 0.005082101934718475,
+    "caida_max": 0.02649453795076473,
+    "sharpe": 0.2140350040384967,
+    "salidas": {
+     "stop": 0.17647058823529413,
+     "tp": 0.0,
+     "signal": 0.8235294117647058,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 17,
+    "por_dia": 0.037444933920704845,
+    "acierto": 0.23529411764705882,
+    "R_media": 0.008600245672253396,
+    "t_R": 0.019914985739759163,
+    "p_1s": 0.49217871500369936,
+    "retorno": -0.0015089369732850244,
+    "caida_max": 0.028524010621045925,
+    "sharpe": -0.05729861537155018,
+    "salidas": {
+     "stop": 0.17647058823529413,
+     "tp": 0.0,
+     "signal": 0.8235294117647058,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0222928532139618,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": false,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 82,
+    "por_dia": 0.05852962169878658,
+    "acierto": 0.36585365853658536,
+    "R_media": 0.26416251573746596,
+    "t_R": 1.2574376702157153,
+    "p_1s": 0.10610429637007501,
+    "retorno": 0.09605025309816795,
+    "caida_max": 0.045437869066863534,
+    "sharpe": 0.6117391954244652,
+    "salidas": {
+     "stop": 0.10975609756097561,
+     "tp": 0.0,
+     "signal": 0.8902439024390244,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 40,
+    "por_dia": 0.07312614259597806,
+    "acierto": 0.325,
+    "R_media": -0.06721548770035413,
+    "t_R": -0.5422817708901423,
+    "p_1s": 0.7046450961550937,
+    "retorno": -0.011966185560992604,
+    "caida_max": 0.027342319621274425,
+    "sharpe": -0.37878508596177657,
+    "salidas": {
+     "stop": 0.025,
+     "tp": 0.0,
+     "signal": 0.975,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q2 funding + volumen | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 136,
+    "por_dia": 0.09707351891506068,
+    "acierto": 0.3602941176470588,
+    "R_media": 0.0027195982480546256,
+    "t_R": 0.02141144864774896,
+    "p_1s": 0.4914745277076489,
+    "retorno": 0.0009167536046594815,
+    "caida_max": 0.09137028246064027,
+    "sharpe": 0.02598481451216179,
+    "salidas": {
+     "stop": 0.5514705882352942,
+     "tp": 0.14705882352941177,
+     "signal": 0.0,
+     "time": 0.3014705882352941,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 52,
+    "por_dia": 0.09506398537477148,
+    "acierto": 0.4230769230769231,
+    "R_media": 0.21377281417946079,
+    "t_R": 0.9274761096181865,
+    "p_1s": 0.17902404514386006,
+    "retorno": 0.038837910847772994,
+    "caida_max": 0.029908197460650432,
+    "sharpe": 0.6796766230598794,
+    "salidas": {
+     "stop": 0.5576923076923077,
+     "tp": 0.21153846153846154,
+     "signal": 0.0,
+     "time": 0.23076923076923078,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 42,
+    "por_dia": 0.09251101321585903,
+    "acierto": 0.35714285714285715,
+    "R_media": -0.03261488827584664,
+    "t_R": -0.13896717010477935,
+    "p_1s": 0.5549217744112932,
+    "retorno": -0.005519996477856837,
+    "caida_max": 0.031247662545219712,
+    "sharpe": -0.11349816306793001,
+    "salidas": {
+     "stop": 0.5714285714285714,
+     "tp": 0.14285714285714285,
+     "signal": 0.0,
+     "time": 0.2857142857142857,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 42,
+    "por_dia": 0.09251101321585903,
+    "acierto": 0.35714285714285715,
+    "R_media": -0.11467229697909476,
+    "t_R": -0.4835543638718747,
+    "p_1s": 0.6843626221267274,
+    "retorno": -0.014019987001220091,
+    "caida_max": 0.03382509499850317,
+    "sharpe": -0.35568570638489483,
+    "salidas": {
+     "stop": 0.5714285714285714,
+     "tp": 0.14285714285714285,
+     "signal": 0.0,
+     "time": 0.2857142857142857,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.00038663448935518074,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": false,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q2 funding + volumen | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 152,
+    "por_dia": 0.10849393290506781,
+    "acierto": 0.3092105263157895,
+    "R_media": 0.2504884433527515,
+    "t_R": 1.3317713791468477,
+    "p_1s": 0.09247105494207453,
+    "retorno": 0.18245903718821954,
+    "caida_max": 0.07212726838257266,
+    "sharpe": 0.8935816576877983,
+    "salidas": {
+     "stop": 0.13157894736842105,
+     "tp": 0.0,
+     "signal": 0.868421052631579,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 58,
+    "por_dia": 0.10603290676416818,
+    "acierto": 0.3620689655172414,
+    "R_media": 0.18155991988132053,
+    "t_R": 0.9305436597931401,
+    "p_1s": 0.1780070790988415,
+    "retorno": 0.03851478590813495,
+    "caida_max": 0.028909376559668742,
+    "sharpe": 0.6538443488149627,
+    "salidas": {
+     "stop": 0.10344827586206896,
+     "tp": 0.0,
+     "signal": 0.896551724137931,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 46,
+    "por_dia": 0.1013215859030837,
+    "acierto": 0.32608695652173914,
+    "R_media": -0.0005931580708361335,
+    "t_R": -0.003374579048424089,
+    "p_1s": 0.5013388017777601,
+    "retorno": -0.002849358300928473,
+    "caida_max": 0.034392776647507506,
+    "sharpe": -0.06623614794947127,
+    "salidas": {
+     "stop": 0.08695652173913043,
+     "tp": 0.0,
+     "signal": 0.9130434782608695,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 46,
+    "por_dia": 0.1013215859030837,
+    "acierto": 0.2608695652173913,
+    "R_media": -0.09471528025928952,
+    "t_R": -0.5348438825355153,
+    "p_1s": 0.7023045427651023,
+    "retorno": -0.017165396000244915,
+    "caida_max": 0.04413313049857115,
+    "sharpe": -0.5080867575151357,
+    "salidas": {
+     "stop": 0.08695652173913043,
+     "tp": 0.0,
+     "signal": 0.9130434782608695,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.017833092777923745,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": false,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q2 funding + volumen | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 162,
+    "por_dia": 0.11563169164882227,
+    "acierto": 0.3271604938271605,
+    "R_media": 0.11201922832095776,
+    "t_R": 0.901494969552159,
+    "p_1s": 0.18433590808957756,
+    "retorno": 0.08279771356739762,
+    "caida_max": 0.04768474762903152,
+    "sharpe": 0.46060977358209293,
+    "salidas": {
+     "stop": 0.10493827160493827,
+     "tp": 0.0,
+     "signal": 0.8950617283950617,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 60,
+    "por_dia": 0.10968921389396709,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.00022800347381560782,
+    "t_R": 0.002089824628828552,
+    "p_1s": 0.4991698062784441,
+    "retorno": -0.002355883345090959,
+    "caida_max": 0.029613842314077377,
+    "sharpe": -0.03867498805503018,
+    "salidas": {
+     "stop": 0.03333333333333333,
+     "tp": 0.0,
+     "signal": 0.9666666666666667,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 48,
+    "por_dia": 0.10572687224669604,
+    "acierto": 0.375,
+    "R_media": 0.07280647110350275,
+    "t_R": 0.4128143469756382,
+    "p_1s": 0.3408099270989984,
+    "retorno": 0.013327664513807846,
+    "caida_max": 0.023228169459708292,
+    "sharpe": 0.45562950545357767,
+    "salidas": {
+     "stop": 0.041666666666666664,
+     "tp": 0.0,
+     "signal": 0.9583333333333334,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 48,
+    "por_dia": 0.10572687224669604,
+    "acierto": 0.2916666666666667,
+    "R_media": -0.02181180706656327,
+    "t_R": -0.12286404180991149,
+    "p_1s": 0.5486306766720759,
+    "retorno": -0.004624188530605533,
+    "caida_max": 0.03568478280598031,
+    "sharpe": -0.15627007808332827,
+    "salidas": {
+     "stop": 0.041666666666666664,
+     "tp": 0.0,
+     "signal": 0.9583333333333334,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0004684634093297533,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 62,
+    "por_dia": 0.04425410421127766,
+    "acierto": 0.5,
+    "R_media": 0.32185027180331593,
+    "t_R": 1.6738474493772044,
+    "p_1s": 0.04964067622284696,
+    "retorno": 0.09735305973485442,
+    "caida_max": 0.029047509159311535,
+    "sharpe": 0.8744624498290243,
+    "salidas": {
+     "stop": 0.43548387096774194,
+     "tp": 0.16129032258064516,
+     "signal": 0.0,
+     "time": 0.4032258064516129,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 18,
+    "por_dia": 0.03290676416819013,
+    "acierto": 0.3333333333333333,
+    "R_media": -0.08385885013057588,
+    "t_R": -0.2186973472387887,
+    "p_1s": 0.585255104860799,
+    "retorno": -0.006268394591257498,
+    "caida_max": 0.028554982967886056,
+    "sharpe": -0.16548208480302662,
+    "salidas": {
+     "stop": 0.6666666666666666,
+     "tp": 0.16666666666666666,
+     "signal": 0.0,
+     "time": 0.16666666666666666,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 57,
+    "por_dia": 0.04068522483940043,
+    "acierto": 0.3508771929824561,
+    "R_media": 0.8831255700580001,
+    "t_R": 1.191192350036958,
+    "p_1s": 0.11930124694800104,
+    "retorno": 0.2145966938411723,
+    "caida_max": 0.04765990628297423,
+    "sharpe": 1.1138163409822321,
+    "salidas": {
+     "stop": 0.21052631578947367,
+     "tp": 0.0,
+     "signal": 0.7894736842105263,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 16,
+    "por_dia": 0.029250457038391225,
+    "acierto": 0.3125,
+    "R_media": 0.17366660513828705,
+    "t_R": 0.4230678018154346,
+    "p_1s": 0.33912438783566023,
+    "retorno": 0.018656219872601465,
+    "caida_max": 0.023796128886998003,
+    "sharpe": 0.48165875168228883,
+    "salidas": {
+     "stop": 0.1875,
+     "tp": 0.0,
+     "signal": 0.8125,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 65,
+    "por_dia": 0.046395431834404,
+    "acierto": 0.46153846153846156,
+    "R_media": 0.2138121004495259,
+    "t_R": 1.3218831768036023,
+    "p_1s": 0.09545626931290996,
+    "retorno": 0.06960250976960625,
+    "caida_max": 0.03254589780215145,
+    "sharpe": 0.7588424546464627,
+    "salidas": {
+     "stop": 0.06153846153846154,
+     "tp": 0.0,
+     "signal": 0.9384615384615385,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 23,
+    "por_dia": 0.04204753199268738,
+    "acierto": 0.30434782608695654,
+    "R_media": -0.07420049592440192,
+    "t_R": -0.42764005899918783,
+    "p_1s": 0.6634649836210895,
+    "retorno": -0.009424509366509959,
+    "caida_max": 0.02041992902197176,
+    "sharpe": -0.3515529003679164,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 208,
+    "por_dia": 0.14846538187009278,
+    "acierto": 0.3701923076923077,
+    "R_media": 0.029082879413796708,
+    "t_R": 0.2840982460262475,
+    "p_1s": 0.38830953345694286,
+    "retorno": 0.032184952901475716,
+    "caida_max": 0.09816762353202058,
+    "sharpe": 0.19218613306126076,
+    "salidas": {
+     "stop": 0.5288461538461539,
+     "tp": 0.14423076923076922,
+     "signal": 0.0,
+     "time": 0.3269230769230769,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 86,
+    "por_dia": 0.15722120658135283,
+    "acierto": 0.4069767441860465,
+    "R_media": -0.10810626610878046,
+    "t_R": -0.7550174874292891,
+    "p_1s": 0.7738372752614607,
+    "retorno": -0.03385504890357738,
+    "caida_max": 0.04795761848869318,
+    "sharpe": -0.46008453794642695,
+    "salidas": {
+     "stop": 0.5581395348837209,
+     "tp": 0.10465116279069768,
+     "signal": 0.0,
+     "time": 0.3372093023255814,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 238,
+    "por_dia": 0.16987865810135616,
+    "acierto": 0.2647058823529412,
+    "R_media": 0.2999902228150257,
+    "t_R": 1.469695564708518,
+    "p_1s": 0.0714852204254901,
+    "retorno": 0.32011738446957216,
+    "caida_max": 0.07794288930843252,
+    "sharpe": 1.1090268221461064,
+    "salidas": {
+     "stop": 0.07563025210084033,
+     "tp": 0.0,
+     "signal": 0.9243697478991597,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 106,
+    "por_dia": 0.19378427787934185,
+    "acierto": 0.29245283018867924,
+    "R_media": 0.011344434975661502,
+    "t_R": 0.08522370322862642,
+    "p_1s": 0.4661229181875052,
+    "retorno": 0.013083352696630968,
+    "caida_max": 0.053227577489505906,
+    "sharpe": 0.21998961374603118,
+    "salidas": {
+     "stop": 0.07547169811320754,
+     "tp": 0.0,
+     "signal": 0.9245283018867925,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 93,
+    "por_dia": 0.20484581497797358,
+    "acierto": 0.20430107526881722,
+    "R_media": 0.3032968367157785,
+    "t_R": 0.9411861688957015,
+    "p_1s": 0.1745371279882556,
+    "retorno": 0.1165878866824317,
+    "caida_max": 0.07901698073188235,
+    "sharpe": 1.2551951898635714,
+    "salidas": {
+     "stop": 0.10752688172043011,
+     "tp": 0.0,
+     "signal": 0.8924731182795699,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 93,
+    "por_dia": 0.20484581497797358,
+    "acierto": 0.17204301075268819,
+    "R_media": 0.18960452176647227,
+    "t_R": 0.5908317778660219,
+    "p_1s": 0.27804093622009407,
+    "retorno": 0.054875515018721455,
+    "caida_max": 0.09254295091627895,
+    "sharpe": 0.6983738226434115,
+    "salidas": {
+     "stop": 0.10752688172043011,
+     "tp": 0.0,
+     "signal": 0.8924731182795699,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.023231439824708645,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 264,
+    "por_dia": 0.18843683083511778,
+    "acierto": 0.29545454545454547,
+    "R_media": 0.04528126716016668,
+    "t_R": 0.5439144247952994,
+    "p_1s": 0.29348057377351333,
+    "retorno": 0.047030642923281185,
+    "caida_max": 0.07529146485776628,
+    "sharpe": 0.2654369692842824,
+    "salidas": {
+     "stop": 0.056818181818181816,
+     "tp": 0.0,
+     "signal": 0.9431818181818182,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 112,
+    "por_dia": 0.20475319926873858,
+    "acierto": 0.29464285714285715,
+    "R_media": -0.046665471815268124,
+    "t_R": -0.4739538145460945,
+    "p_1s": 0.6817681060317566,
+    "retorno": -0.02263703012551388,
+    "caida_max": 0.04169447510211788,
+    "sharpe": -0.40948442202786534,
+    "salidas": {
+     "stop": 0.03571428571428571,
+     "tp": 0.0,
+     "signal": 0.9642857142857143,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q5 RSI no extremo | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 329,
+    "por_dia": 0.23483226266952176,
+    "acierto": 0.3556231003039514,
+    "R_media": 0.016801197061513496,
+    "t_R": 0.20158264592224664,
+    "p_1s": 0.42018398548741676,
+    "retorno": 0.025139112141622677,
+    "caida_max": 0.2170071185602822,
+    "sharpe": 0.13273190207241967,
+    "salidas": {
+     "stop": 0.5683890577507599,
+     "tp": 0.15501519756838905,
+     "signal": 0.0,
+     "time": 0.2765957446808511,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 130,
+    "por_dia": 0.2376599634369287,
+    "acierto": 0.36923076923076925,
+    "R_media": -0.019636016819310542,
+    "t_R": -0.14825230331384004,
+    "p_1s": 0.5588124278502198,
+    "retorno": -0.0004440317448958231,
+    "caida_max": 0.04930487896383762,
+    "sharpe": 0.026135611374404108,
+    "salidas": {
+     "stop": 0.5769230769230769,
+     "tp": 0.15384615384615385,
+     "signal": 0.0,
+     "time": 0.2692307692307692,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E01 Doble suelo | Q5 RSI no extremo | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 447,
+    "por_dia": 0.31905781584582443,
+    "acierto": 0.2483221476510067,
+    "R_media": 0.07760912649399217,
+    "t_R": 0.7055568643463858,
+    "p_1s": 0.24041604919151194,
+    "retorno": 0.13513095289590815,
+    "caida_max": 0.1278090090669155,
+    "sharpe": 0.49051549928279825,
+    "salidas": {
+     "stop": 0.07829977628635347,
+     "tp": 0.0,
+     "signal": 0.9217002237136466,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 183,
+    "por_dia": 0.33455210237659966,
+    "acierto": 0.26229508196721313,
+    "R_media": 0.05603856302885293,
+    "t_R": 0.5629991401838148,
+    "p_1s": 0.28706418359498875,
+    "retorno": 0.04425093338293151,
+    "caida_max": 0.05040085214585621,
+    "sharpe": 0.49620891777875625,
+    "salidas": {
+     "stop": 0.0546448087431694,
+     "tp": 0.0,
+     "signal": 0.9453551912568307,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 164,
+    "por_dia": 0.36123348017621143,
+    "acierto": 0.1951219512195122,
+    "R_media": 0.09303921160019812,
+    "t_R": 0.5006918958896642,
+    "p_1s": 0.3086316888260424,
+    "retorno": 0.05369504796348301,
+    "caida_max": 0.10711557119004178,
+    "sharpe": 0.5939474745441352,
+    "salidas": {
+     "stop": 0.07926829268292683,
+     "tp": 0.0,
+     "signal": 0.9207317073170732,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 165,
+    "por_dia": 0.3634361233480176,
+    "acierto": 0.1696969696969697,
+    "R_media": -0.026163586585082287,
+    "t_R": -0.14213635721677903,
+    "p_1s": 0.5564266182470012,
+    "retorno": -0.022540128709410134,
+    "caida_max": 0.14114878985632007,
+    "sharpe": -0.22999925841254532,
+    "salidas": {
+     "stop": 0.08484848484848485,
+     "tp": 0.0,
+     "signal": 0.9151515151515152,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0023321946056363034,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E01 Doble suelo | Q5 RSI no extremo | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 503,
+    "por_dia": 0.3590292648108494,
+    "acierto": 0.2624254473161034,
+    "R_media": -0.02811088777478886,
+    "t_R": -0.5627065102867987,
+    "p_1s": 0.7130570231526631,
+    "retorno": -0.06731660045754584,
+    "caida_max": 0.15623274006076482,
+    "sharpe": -0.26682997888087523,
+    "salidas": {
+     "stop": 0.061630218687872766,
+     "tp": 0.0,
+     "signal": 0.9383697813121272,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 201,
+    "por_dia": 0.36745886654478976,
+    "acierto": 0.25870646766169153,
+    "R_media": -0.02454981775126978,
+    "t_R": -0.3456441790298756,
+    "p_1s": 0.6350132868345442,
+    "retorno": -0.02076001664648397,
+    "caida_max": 0.062103490653628524,
+    "sharpe": -0.23453836520879207,
+    "salidas": {
+     "stop": 0.024875621890547265,
+     "tp": 0.0,
+     "signal": 0.9751243781094527,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q1 tendencia + volumen + funding | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 51,
+    "por_dia": 0.03640256959314775,
+    "acierto": 0.35294117647058826,
+    "R_media": 0.04231002341699918,
+    "t_R": 0.19730147209906818,
+    "p_1s": 0.4221957571332926,
+    "retorno": 0.0023406329414621396,
+    "caida_max": 0.03902734249404194,
+    "sharpe": 0.03683132750121182,
+    "salidas": {
+     "stop": 0.5490196078431373,
+     "tp": 0.17647058823529413,
+     "signal": 0.0,
+     "time": 0.27450980392156865,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.7142857142857143,
+    "R_media": 0.9324632853811644,
+    "t_R": 2.1337552376133253,
+    "p_1s": 0.026244540794013393,
+    "retorno": 0.06702833203991321,
+    "caida_max": 0.014779956757978496,
+    "sharpe": 1.772210859388838,
+    "salidas": {
+     "stop": 0.2857142857142857,
+     "tp": 0.2857142857142857,
+     "signal": 0.0,
+     "time": 0.42857142857142855,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q1 tendencia + volumen + funding | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 53,
+    "por_dia": 0.03783012134189864,
+    "acierto": 0.37735849056603776,
+    "R_media": 0.41054947565439315,
+    "t_R": 1.4908873066950088,
+    "p_1s": 0.07101635364416259,
+    "retorno": 0.08308593966636924,
+    "caida_max": 0.029121900981957216,
+    "sharpe": 0.7716146821397215,
+    "salidas": {
+     "stop": 0.07547169811320754,
+     "tp": 0.0,
+     "signal": 0.9245283018867925,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 16,
+    "por_dia": 0.029250457038391225,
+    "acierto": 0.625,
+    "R_media": 0.7137733515514046,
+    "t_R": 1.7782268759100992,
+    "p_1s": 0.04781906909765399,
+    "retorno": 0.05865694790071729,
+    "caida_max": 0.01985101726208316,
+    "sharpe": 1.5291676455386891,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q1 tendencia + volumen + funding | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 56,
+    "por_dia": 0.03997144896502498,
+    "acierto": 0.39285714285714285,
+    "R_media": 0.2356750476442012,
+    "t_R": 1.1543191479322983,
+    "p_1s": 0.12668021125150664,
+    "retorno": 0.05176330813354113,
+    "caida_max": 0.03247902151703641,
+    "sharpe": 0.5987788597237099,
+    "salidas": {
+     "stop": 0.03571428571428571,
+     "tp": 0.0,
+     "signal": 0.9642857142857143,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 18,
+    "por_dia": 0.03290676416819013,
+    "acierto": 0.3888888888888889,
+    "R_media": 0.31171580029440477,
+    "t_R": 0.971300619709154,
+    "p_1s": 0.17250834379494995,
+    "retorno": 0.027085040831420715,
+    "caida_max": 0.01653439778216137,
+    "sharpe": 0.9831391914456195,
+    "salidas": {
+     "stop": 0.05555555555555555,
+     "tp": 0.0,
+     "signal": 0.9444444444444444,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q2 funding + volumen | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 102,
+    "por_dia": 0.0728051391862955,
+    "acierto": 0.28431372549019607,
+    "R_media": -0.1263496517470669,
+    "t_R": -0.8700454693773949,
+    "p_1s": 0.8068306744004428,
+    "retorno": -0.0623503979451685,
+    "caida_max": 0.10914265092585973,
+    "sharpe": -0.45521844637680753,
+    "salidas": {
+     "stop": 0.6274509803921569,
+     "tp": 0.13725490196078433,
+     "signal": 0.0,
+     "time": 0.23529411764705882,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 32,
+    "por_dia": 0.05850091407678245,
+    "acierto": 0.46875,
+    "R_media": 0.25545312356804417,
+    "t_R": 0.9013450534785321,
+    "p_1s": 0.1871773254586927,
+    "retorno": 0.04512215026076327,
+    "caida_max": 0.03299565144311889,
+    "sharpe": 0.9381961532453171,
+    "salidas": {
+     "stop": 0.5,
+     "tp": 0.1875,
+     "signal": 0.0,
+     "time": 0.3125,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 103,
+    "por_dia": 0.07351891506067094,
+    "acierto": 0.32038834951456313,
+    "R_media": 0.2351271649282738,
+    "t_R": 1.3596826394763823,
+    "p_1s": 0.08846423541958537,
+    "retorno": 0.10606340324860519,
+    "caida_max": 0.050122285982196035,
+    "sharpe": 0.8015531297080707,
+    "salidas": {
+     "stop": 0.08737864077669903,
+     "tp": 0.0,
+     "signal": 0.912621359223301,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 35,
+    "por_dia": 0.06398537477148081,
+    "acierto": 0.4,
+    "R_media": 0.22788863811474303,
+    "t_R": 1.017710812187184,
+    "p_1s": 0.15800149756070314,
+    "retorno": 0.04222943040396787,
+    "caida_max": 0.02363349627950939,
+    "sharpe": 0.9741274277380869,
+    "salidas": {
+     "stop": 0.02857142857142857,
+     "tp": 0.0,
+     "signal": 0.9714285714285714,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 30,
+    "por_dia": 0.06607929515418502,
+    "acierto": 0.3,
+    "R_media": 0.27866182653674076,
+    "t_R": 0.6409375767167794,
+    "p_1s": 0.2632981388496318,
+    "retorno": 0.04090675779618613,
+    "caida_max": 0.03728464996857439,
+    "sharpe": 0.9752105121656098,
+    "salidas": {
+     "stop": 0.1,
+     "tp": 0.0,
+     "signal": 0.9,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 30,
+    "por_dia": 0.06607929515418502,
+    "acierto": 0.3,
+    "R_media": 0.19952775276493792,
+    "t_R": 0.45851928493642563,
+    "p_1s": 0.3249986229400178,
+    "retorno": 0.012390183785045972,
+    "caida_max": 0.03958779894246944,
+    "sharpe": 0.38448342707498007,
+    "salidas": {
+     "stop": 0.1,
+     "tp": 0.0,
+     "signal": 0.9,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.016917573484729775,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 111,
+    "por_dia": 0.07922912205567452,
+    "acierto": 0.34234234234234234,
+    "R_media": 0.0870046335490571,
+    "t_R": 0.7694150001382131,
+    "p_1s": 0.22164801303618054,
+    "retorno": 0.04579249035788879,
+    "caida_max": 0.052432792037033216,
+    "sharpe": 0.45343011776030406,
+    "salidas": {
+     "stop": 0.036036036036036036,
+     "tp": 0.0,
+     "signal": 0.963963963963964,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 38,
+    "por_dia": 0.06946983546617916,
+    "acierto": 0.3157894736842105,
+    "R_media": 0.022927258996450702,
+    "t_R": 0.13720394108461056,
+    "p_1s": 0.4458067518048001,
+    "retorno": 0.005369514610894299,
+    "caida_max": 0.032460551014910854,
+    "sharpe": 0.17988507716968352,
+    "salidas": {
+     "stop": 0.05263157894736842,
+     "tp": 0.0,
+     "signal": 0.9473684210526315,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 32,
+    "por_dia": 0.07048458149779736,
+    "acierto": 0.25,
+    "R_media": 0.04147638208652919,
+    "t_R": 0.17436678239773726,
+    "p_1s": 0.43135549546112095,
+    "retorno": 0.0020138202224655455,
+    "caida_max": 0.028355880124093513,
+    "sharpe": 0.10334942769287843,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 32,
+    "por_dia": 0.07048458149779736,
+    "acierto": 0.21875,
+    "R_media": -0.03779823501777797,
+    "t_R": -0.15834164688670763,
+    "p_1s": 0.5623927055253406,
+    "retorno": -0.00660940118541975,
+    "caida_max": 0.03207550966734418,
+    "sharpe": -0.29815484174859597,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0008752978243396242,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E02 Triple suelo/techo | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 32,
+    "por_dia": 0.022840827980014276,
+    "acierto": 0.53125,
+    "R_media": 0.4799941880627394,
+    "t_R": 1.7169416805150028,
+    "p_1s": 0.04798352103015202,
+    "retorno": 0.06520693421618828,
+    "caida_max": 0.02585842897311086,
+    "sharpe": 0.7919754160914785,
+    "salidas": {
+     "stop": 0.375,
+     "tp": 0.21875,
+     "signal": 0.0,
+     "time": 0.40625,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 5,
+    "por_dia": 0.009140767824497258,
+    "acierto": 0.8,
+    "R_media": 1.683063714471698,
+    "t_R": 2.2404431933049542,
+    "p_1s": 0.04428919726537839,
+    "retorno": 0.03218978804460093,
+    "caida_max": 0.00930607548260276,
+    "sharpe": 1.3281675885341908,
+    "salidas": {
+     "stop": 0.2,
+     "tp": 0.4,
+     "signal": 0.0,
+     "time": 0.4,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 29,
+    "por_dia": 0.02069950035688794,
+    "acierto": 0.3448275862068966,
+    "R_media": 0.6597127510666082,
+    "t_R": 1.085036406206845,
+    "p_1s": 0.14357984470747165,
+    "retorno": 0.07679215733078282,
+    "caida_max": 0.0342355995920246,
+    "sharpe": 0.8492585415128104,
+    "salidas": {
+     "stop": 0.20689655172413793,
+     "tp": 0.0,
+     "signal": 0.7931034482758621,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 5,
+    "por_dia": 0.009140767824497258,
+    "acierto": 0.6,
+    "R_media": 0.6370916110538316,
+    "t_R": 1.5254112975045047,
+    "p_1s": 0.10092466052221272,
+    "retorno": 0.013445585762781986,
+    "caida_max": 0.005244251686027046,
+    "sharpe": 0.7580069981895694,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 34,
+    "por_dia": 0.02426837972876517,
+    "acierto": 0.38235294117647056,
+    "R_media": 0.13164198197661103,
+    "t_R": 0.9448231530405655,
+    "p_1s": 0.17580801971117488,
+    "retorno": 0.020335343041418596,
+    "caida_max": 0.016278201658079694,
+    "sharpe": 0.4265284184921412,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 5,
+    "por_dia": 0.009140767824497258,
+    "acierto": 1.0,
+    "R_media": 0.8301261367720245,
+    "t_R": 1.751376219855086,
+    "p_1s": 0.07738362467504001,
+    "retorno": 0.017077591869579578,
+    "caida_max": 0.004647963687761769,
+    "sharpe": 1.0189190846846456,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 120,
+    "por_dia": 0.08565310492505353,
+    "acierto": 0.30833333333333335,
+    "R_media": -0.15540096296502987,
+    "t_R": -1.227130752179142,
+    "p_1s": 0.8889021874755244,
+    "retorno": -0.11785851390295332,
+    "caida_max": 0.17294894545673511,
+    "sharpe": -0.8666415784363045,
+    "salidas": {
+     "stop": 0.6083333333333333,
+     "tp": 0.11666666666666667,
+     "signal": 0.0,
+     "time": 0.275,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 56,
+    "por_dia": 0.10237659963436929,
+    "acierto": 0.5,
+    "R_media": 0.2862771875701177,
+    "t_R": 1.365432232742934,
+    "p_1s": 0.08883801318476658,
+    "retorno": 0.05260611443522789,
+    "caida_max": 0.03399199461917579,
+    "sharpe": 0.7905504869922751,
+    "salidas": {
+     "stop": 0.48214285714285715,
+     "tp": 0.17857142857142858,
+     "signal": 0.0,
+     "time": 0.3392857142857143,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 124,
+    "por_dia": 0.08850820842255532,
+    "acierto": 0.24193548387096775,
+    "R_media": 0.13651005821837842,
+    "t_R": 0.8965050344827628,
+    "p_1s": 0.1858671841698465,
+    "retorno": 0.048245708762380435,
+    "caida_max": 0.09864985218110378,
+    "sharpe": 0.32431213125154834,
+    "salidas": {
+     "stop": 0.07258064516129033,
+     "tp": 0.0,
+     "signal": 0.9274193548387096,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 63,
+    "por_dia": 0.11517367458866545,
+    "acierto": 0.3492063492063492,
+    "R_media": 0.1490913523866894,
+    "t_R": 0.9178954398121989,
+    "p_1s": 0.18111532244724438,
+    "retorno": 0.03508983516561748,
+    "caida_max": 0.0543705304481672,
+    "sharpe": 0.562810612361548,
+    "salidas": {
+     "stop": 0.015873015873015872,
+     "tp": 0.0,
+     "signal": 0.9841269841269841,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 49,
+    "por_dia": 0.10792951541850221,
+    "acierto": 0.30612244897959184,
+    "R_media": 0.5802054426995468,
+    "t_R": 1.2654839168179945,
+    "p_1s": 0.10590321592884056,
+    "retorno": 0.1252878567821849,
+    "caida_max": 0.02780552820586113,
+    "sharpe": 1.8971104406928152,
+    "salidas": {
+     "stop": 0.04081632653061224,
+     "tp": 0.0,
+     "signal": 0.9591836734693877,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 49,
+    "por_dia": 0.10792951541850221,
+    "acierto": 0.30612244897959184,
+    "R_media": 0.5042635822092217,
+    "t_R": 1.1067827333224678,
+    "p_1s": 0.13695193095311586,
+    "retorno": 0.08485294733400317,
+    "caida_max": 0.0310331020746073,
+    "sharpe": 1.4501315077268846,
+    "salidas": {
+     "stop": 0.04081632653061224,
+     "tp": 0.0,
+     "signal": 0.9591836734693877,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0010312207163835514,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 131,
+    "por_dia": 0.09350463954318344,
+    "acierto": 0.26717557251908397,
+    "R_media": -0.00509868761608389,
+    "t_R": -0.05133640353581582,
+    "p_1s": 0.5204318711810769,
+    "retorno": -0.021516678417307644,
+    "caida_max": 0.08539775923449133,
+    "sharpe": -0.1844350883956628,
+    "salidas": {
+     "stop": 0.03816793893129771,
+     "tp": 0.0,
+     "signal": 0.9618320610687023,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 67,
+    "por_dia": 0.12248628884826325,
+    "acierto": 0.31343283582089554,
+    "R_media": 0.11397473027068926,
+    "t_R": 0.7233605064614618,
+    "p_1s": 0.23600718263377596,
+    "retorno": 0.027077447054826065,
+    "caida_max": 0.036068771829876334,
+    "sharpe": 0.48448885345840637,
+    "salidas": {
+     "stop": 0.014925373134328358,
+     "tp": 0.0,
+     "signal": 0.9850746268656716,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q5 RSI no extremo | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 192,
+    "por_dia": 0.13704496788008566,
+    "acierto": 0.34375,
+    "R_media": -0.017908558063495037,
+    "t_R": -0.1672375392310682,
+    "p_1s": 0.5663199621361548,
+    "retorno": -0.04491074919100135,
+    "caida_max": 0.18588164587979716,
+    "sharpe": -0.20865017772981712,
+    "salidas": {
+     "stop": 0.5885416666666666,
+     "tp": 0.14583333333333334,
+     "signal": 0.0,
+     "time": 0.265625,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 76,
+    "por_dia": 0.13893967093235832,
+    "acierto": 0.40789473684210525,
+    "R_media": 0.11974472596102541,
+    "t_R": 0.6672516143307191,
+    "p_1s": 0.2533296319750582,
+    "retorno": 0.021477177220049937,
+    "caida_max": 0.05070535741304827,
+    "sharpe": 0.30534365159366483,
+    "salidas": {
+     "stop": 0.5263157894736842,
+     "tp": 0.17105263157894737,
+     "signal": 0.0,
+     "time": 0.3026315789473684,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E02 Triple suelo/techo | Q5 RSI no extremo | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 223,
+    "por_dia": 0.15917201998572447,
+    "acierto": 0.273542600896861,
+    "R_media": 0.1883840271431432,
+    "t_R": 1.5090706491252361,
+    "p_1s": 0.06635130407910328,
+    "retorno": 0.17739128524874137,
+    "caida_max": 0.07023722793225529,
+    "sharpe": 0.6917437407423764,
+    "salidas": {
+     "stop": 0.07623318385650224,
+     "tp": 0.0,
+     "signal": 0.9237668161434978,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 99,
+    "por_dia": 0.1809872029250457,
+    "acierto": 0.29292929292929293,
+    "R_media": 0.039013078715518866,
+    "t_R": 0.33307094470262016,
+    "p_1s": 0.3698961189721658,
+    "retorno": 0.012024396744717336,
+    "caida_max": 0.058115996901188516,
+    "sharpe": 0.17915812331238348,
+    "salidas": {
+     "stop": 0.04040404040404041,
+     "tp": 0.0,
+     "signal": 0.9595959595959596,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 71,
+    "por_dia": 0.15638766519823788,
+    "acierto": 0.29577464788732394,
+    "R_media": 0.5075090956945801,
+    "t_R": 1.441479103886055,
+    "p_1s": 0.07695410955960547,
+    "retorno": 0.1517134751959459,
+    "caida_max": 0.029516799374344038,
+    "sharpe": 1.8713594340953708,
+    "salidas": {
+     "stop": 0.07042253521126761,
+     "tp": 0.0,
+     "signal": 0.9295774647887324,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 71,
+    "por_dia": 0.15638766519823788,
+    "acierto": 0.29577464788732394,
+    "R_media": 0.416782920790565,
+    "t_R": 1.190944720108927,
+    "p_1s": 0.11884903906139932,
+    "retorno": 0.09394761305293309,
+    "caida_max": 0.03463445534596343,
+    "sharpe": 1.3429300362194523,
+    "salidas": {
+     "stop": 0.07042253521126761,
+     "tp": 0.0,
+     "signal": 0.9295774647887324,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.003767684564366571,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E02 Triple suelo/techo | Q5 RSI no extremo | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 246,
+    "por_dia": 0.17558886509635974,
+    "acierto": 0.2926829268292683,
+    "R_media": 0.03237860776775079,
+    "t_R": 0.4420631209105783,
+    "p_1s": 0.3294167459963969,
+    "retorno": 0.013012367861447993,
+    "caida_max": 0.10477205808720258,
+    "sharpe": 0.1042186967496144,
+    "salidas": {
+     "stop": 0.032520325203252036,
+     "tp": 0.0,
+     "signal": 0.967479674796748,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 103,
+    "por_dia": 0.1882998171846435,
+    "acierto": 0.27184466019417475,
+    "R_media": 0.037900268682753604,
+    "t_R": 0.32801150783030697,
+    "p_1s": 0.37178765932588176,
+    "retorno": 0.014873081930555143,
+    "caida_max": 0.04564656230106068,
+    "sharpe": 0.2406529757746556,
+    "salidas": {
+     "stop": 0.02912621359223301,
+     "tp": 0.0,
+     "signal": 0.970873786407767,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 80,
+    "por_dia": 0.1762114537444934,
+    "acierto": 0.3125,
+    "R_media": 0.19526079544072555,
+    "t_R": 1.1239191194490725,
+    "p_1s": 0.13222549538200545,
+    "retorno": 0.06289313752541048,
+    "caida_max": 0.02453052113172982,
+    "sharpe": 1.2098844016134653,
+    "salidas": {
+     "stop": 0.05,
+     "tp": 0.0,
+     "signal": 0.95,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 80,
+    "por_dia": 0.1762114537444934,
+    "acierto": 0.2875,
+    "R_media": 0.10252486366534982,
+    "t_R": 0.591848909708603,
+    "p_1s": 0.27782088477693256,
+    "retorno": 0.03186698367826013,
+    "caida_max": 0.024288236418067655,
+    "sharpe": 0.6855407864406482,
+    "salidas": {
+     "stop": 0.05,
+     "tp": 0.0,
+     "signal": 0.95,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.0001937571961674172,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": true,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": true,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "1h | E03 Bandera / bander\u00edn | Q1 tendencia + volumen + funding | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 39,
+    "por_dia": 0.027837259100642397,
+    "acierto": 0.358974358974359,
+    "R_media": 0.1555310848611912,
+    "t_R": 0.5721950238153839,
+    "p_1s": 0.28527987104415586,
+    "retorno": 0.02932194836839952,
+    "caida_max": 0.057047780315263585,
+    "sharpe": 0.31217400731446454,
+    "salidas": {
+     "stop": 0.5897435897435898,
+     "tp": 0.23076923076923078,
+     "signal": 0.0,
+     "time": 0.1794871794871795,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.4444444444444444,
+    "R_media": 0.4739716671781269,
+    "t_R": 0.7319569104035375,
+    "p_1s": 0.24254114777754232,
+    "retorno": 0.025773975155126028,
+    "caida_max": 0.009575073481789875,
+    "sharpe": 0.9556611060213593,
+    "salidas": {
+     "stop": 0.4444444444444444,
+     "tp": 0.3333333333333333,
+     "signal": 0.0,
+     "time": 0.2222222222222222,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q1 tendencia + volumen + funding | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 39,
+    "por_dia": 0.027837259100642397,
+    "acierto": 0.358974358974359,
+    "R_media": 0.37572098495861683,
+    "t_R": 1.145878274252044,
+    "p_1s": 0.12950530026281393,
+    "retorno": 0.06695811761702353,
+    "caida_max": 0.06668495513601358,
+    "sharpe": 0.5396406942480722,
+    "salidas": {
+     "stop": 0.358974358974359,
+     "tp": 0.0,
+     "signal": 0.6410256410256411,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.4444444444444444,
+    "R_media": 0.9657003347782527,
+    "t_R": 1.081464623157111,
+    "p_1s": 0.15550472058183284,
+    "retorno": 0.04333810336207433,
+    "caida_max": 0.0230123850355356,
+    "sharpe": 1.1709230142035765,
+    "salidas": {
+     "stop": 0.2222222222222222,
+     "tp": 0.0,
+     "signal": 0.7777777777777778,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q1 tendencia + volumen + funding | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 40,
+    "por_dia": 0.028551034975017844,
+    "acierto": 0.4,
+    "R_media": 0.4204407120333709,
+    "t_R": 1.4611186806505514,
+    "p_1s": 0.07599676957096213,
+    "retorno": 0.08107303529673904,
+    "caida_max": 0.04378916974177449,
+    "sharpe": 0.7432260015186877,
+    "salidas": {
+     "stop": 0.1,
+     "tp": 0.0,
+     "signal": 0.9,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.3102273249179872,
+    "t_R": 0.5610598879216839,
+    "p_1s": 0.29506081902514114,
+    "retorno": 0.012272335511740673,
+    "caida_max": 0.01813551879574027,
+    "sharpe": 0.5815650751756215,
+    "salidas": {
+     "stop": 0.1111111111111111,
+     "tp": 0.0,
+     "signal": 0.8888888888888888,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q2 funding + volumen | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 68,
+    "por_dia": 0.04853675945753034,
+    "acierto": 0.35294117647058826,
+    "R_media": 0.0978599931160847,
+    "t_R": 0.49286899218693003,
+    "p_1s": 0.3118583114638661,
+    "retorno": 0.014254572630594486,
+    "caida_max": 0.06874091197664234,
+    "sharpe": 0.1368060753808376,
+    "salidas": {
+     "stop": 0.6029411764705882,
+     "tp": 0.19117647058823528,
+     "signal": 0.0,
+     "time": 0.20588235294117646,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 19,
+    "por_dia": 0.03473491773308958,
+    "acierto": 0.42105263157894735,
+    "R_media": 0.3656899801075614,
+    "t_R": 0.855198018307253,
+    "p_1s": 0.20184077040473125,
+    "retorno": 0.034407603837433465,
+    "caida_max": 0.0198757745133209,
+    "sharpe": 0.865591820746064,
+    "salidas": {
+     "stop": 0.5263157894736842,
+     "tp": 0.3157894736842105,
+     "signal": 0.0,
+     "time": 0.15789473684210525,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q2 funding + volumen | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 68,
+    "por_dia": 0.04853675945753034,
+    "acierto": 0.3235294117647059,
+    "R_media": 0.13774595997510747,
+    "t_R": 0.6572642176596142,
+    "p_1s": 0.25663132894886354,
+    "retorno": 0.027822040171797457,
+    "caida_max": 0.06766745237872662,
+    "sharpe": 0.2177984560084905,
+    "salidas": {
+     "stop": 0.3235294117647059,
+     "tp": 0.0,
+     "signal": 0.6764705882352942,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 18,
+    "por_dia": 0.03290676416819013,
+    "acierto": 0.3888888888888889,
+    "R_media": 0.656452301859716,
+    "t_R": 1.1125214959627245,
+    "p_1s": 0.1406996178835438,
+    "retorno": 0.05680216230920787,
+    "caida_max": 0.023228486070930865,
+    "sharpe": 1.1144920374571448,
+    "salidas": {
+     "stop": 0.2222222222222222,
+     "tp": 0.0,
+     "signal": 0.7777777777777778,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q2 funding + volumen | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 69,
+    "por_dia": 0.04925053533190578,
+    "acierto": 0.37681159420289856,
+    "R_media": 0.23034771159123632,
+    "t_R": 1.2521596467423322,
+    "p_1s": 0.10740070838962112,
+    "retorno": 0.06659207646104126,
+    "caida_max": 0.04402954322642094,
+    "sharpe": 0.5684227197745114,
+    "salidas": {
+     "stop": 0.11594202898550725,
+     "tp": 0.0,
+     "signal": 0.8840579710144928,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 19,
+    "por_dia": 0.03473491773308958,
+    "acierto": 0.3157894736842105,
+    "R_media": -0.04896163954928839,
+    "t_R": -0.17431575548801811,
+    "p_1s": 0.5682185459661383,
+    "retorno": -0.0023379202387415754,
+    "caida_max": 0.02579107721262608,
+    "sharpe": -0.08067747176613087,
+    "salidas": {
+     "stop": 0.10526315789473684,
+     "tp": 0.0,
+     "signal": 0.8947368421052632,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 64,
+    "por_dia": 0.04568165596002855,
+    "acierto": 0.390625,
+    "R_media": 0.13839959224354192,
+    "t_R": 0.6970143970404276,
+    "p_1s": 0.24417895263167733,
+    "retorno": 0.03768266607148707,
+    "caida_max": 0.07477846597275573,
+    "sharpe": 0.33060459193883013,
+    "salidas": {
+     "stop": 0.546875,
+     "tp": 0.1875,
+     "signal": 0.0,
+     "time": 0.265625,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 21,
+    "por_dia": 0.038391224862888484,
+    "acierto": 0.2857142857142857,
+    "R_media": -0.13621793072781405,
+    "t_R": -0.39197830209554846,
+    "p_1s": 0.6503900860387414,
+    "retorno": -0.014200983452162697,
+    "caida_max": 0.04473313518381372,
+    "sharpe": -0.37491389149206333,
+    "salidas": {
+     "stop": 0.6190476190476191,
+     "tp": 0.19047619047619047,
+     "signal": 0.0,
+     "time": 0.19047619047619047,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 60,
+    "por_dia": 0.042826552462526764,
+    "acierto": 0.36666666666666664,
+    "R_media": 0.30544781445386887,
+    "t_R": 0.9026096636920409,
+    "p_1s": 0.1852017156367486,
+    "retorno": 0.07685445285665282,
+    "caida_max": 0.08008885120527687,
+    "sharpe": 0.4933329507789159,
+    "salidas": {
+     "stop": 0.38333333333333336,
+     "tp": 0.0,
+     "signal": 0.6166666666666667,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 21,
+    "por_dia": 0.038391224862888484,
+    "acierto": 0.23809523809523808,
+    "R_media": 0.061491360348904574,
+    "t_R": 0.1412684978613859,
+    "p_1s": 0.44453553985955396,
+    "retorno": 0.014989174978641495,
+    "caida_max": 0.03449117887950315,
+    "sharpe": 0.3403097190201928,
+    "salidas": {
+     "stop": 0.3333333333333333,
+     "tp": 0.0,
+     "signal": 0.6666666666666666,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q3 patr\u00f3n dentro de patr\u00f3n (4 h) | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 61,
+    "por_dia": 0.04354032833690221,
+    "acierto": 0.4426229508196721,
+    "R_media": 0.24042444368320337,
+    "t_R": 1.1980585638668282,
+    "p_1s": 0.1178027064705468,
+    "retorno": 0.06397630578561486,
+    "caida_max": 0.04700904289255892,
+    "sharpe": 0.521276735218247,
+    "salidas": {
+     "stop": 0.18032786885245902,
+     "tp": 0.0,
+     "signal": 0.819672131147541,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 21,
+    "por_dia": 0.038391224862888484,
+    "acierto": 0.19047619047619047,
+    "R_media": -0.1303395446660455,
+    "t_R": -0.4841819377435458,
+    "p_1s": 0.6832417950665548,
+    "retorno": -0.011868475623782349,
+    "caida_max": 0.03794573304875959,
+    "sharpe": -0.3583144033858709,
+    "salidas": {
+     "stop": 0.19047619047619047,
+     "tp": 0.0,
+     "signal": 0.8095238095238095,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q4 ruptura en horario de Wall Street | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 86,
+    "por_dia": 0.06138472519628837,
+    "acierto": 0.36046511627906974,
+    "R_media": 0.0498514289654467,
+    "t_R": 0.2918437055662431,
+    "p_1s": 0.38555860828082567,
+    "retorno": 0.04055702577174669,
+    "caida_max": 0.05412282728136231,
+    "sharpe": 0.3241145342376037,
+    "salidas": {
+     "stop": 0.6046511627906976,
+     "tp": 0.1744186046511628,
+     "signal": 0.0,
+     "time": 0.22093023255813954,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 27,
+    "por_dia": 0.04936014625228519,
+    "acierto": 0.25925925925925924,
+    "R_media": -0.3439693778552251,
+    "t_R": -1.2142319010622655,
+    "p_1s": 0.8822134050921832,
+    "retorno": -0.03334134276393963,
+    "caida_max": 0.04827416124190842,
+    "sharpe": -0.8279590791821904,
+    "salidas": {
+     "stop": 0.7037037037037037,
+     "tp": 0.14814814814814814,
+     "signal": 0.0,
+     "time": 0.14814814814814814,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q4 ruptura en horario de Wall Street | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 85,
+    "por_dia": 0.06067094932191292,
+    "acierto": 0.32941176470588235,
+    "R_media": 0.06369100022884762,
+    "t_R": 0.34487171100834285,
+    "p_1s": 0.36552641960918264,
+    "retorno": 0.0157264193443436,
+    "caida_max": 0.08919315094429314,
+    "sharpe": 0.11499870614943684,
+    "salidas": {
+     "stop": 0.35294117647058826,
+     "tp": 0.0,
+     "signal": 0.6470588235294118,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 26,
+    "por_dia": 0.04753199268738574,
+    "acierto": 0.3076923076923077,
+    "R_media": -0.1802070035477749,
+    "t_R": -0.6533299660536316,
+    "p_1s": 0.7402461700557028,
+    "retorno": -0.0056067702870894465,
+    "caida_max": 0.03398814934276784,
+    "sharpe": -0.12195724382961125,
+    "salidas": {
+     "stop": 0.4230769230769231,
+     "tp": 0.0,
+     "signal": 0.5769230769230769,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q4 ruptura en horario de Wall Street | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 87,
+    "por_dia": 0.06209850107066381,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.07898075839155878,
+    "t_R": 0.534706617078783,
+    "p_1s": 0.2971162603116667,
+    "retorno": 0.03141569296644886,
+    "caida_max": 0.053278937004890836,
+    "sharpe": 0.24406805099430157,
+    "salidas": {
+     "stop": 0.13793103448275862,
+     "tp": 0.0,
+     "signal": 0.8620689655172413,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 27,
+    "por_dia": 0.04936014625228519,
+    "acierto": 0.18518518518518517,
+    "R_media": -0.4050420843202069,
+    "t_R": -2.2862186417119483,
+    "p_1s": 0.9846832446297639,
+    "retorno": -0.04451525178765203,
+    "caida_max": 0.05242612728791485,
+    "sharpe": -1.701148890161154,
+    "salidas": {
+     "stop": 0.25925925925925924,
+     "tp": 0.0,
+     "signal": 0.7407407407407407,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q5 RSI no extremo | TP3": {
+   "tf": "1h",
+   "construccion": {
+    "n": 113,
+    "por_dia": 0.08065667380442541,
+    "acierto": 0.3008849557522124,
+    "R_media": -0.04870008011510163,
+    "t_R": -0.31647171155296305,
+    "p_1s": 0.623883214078476,
+    "retorno": -0.031004857162637456,
+    "caida_max": 0.0916659019799988,
+    "sharpe": -0.1817843291492869,
+    "salidas": {
+     "stop": 0.672566371681416,
+     "tp": 0.18584070796460178,
+     "signal": 0.0,
+     "time": 0.1415929203539823,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 51,
+    "por_dia": 0.09323583180987204,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.1542208318580132,
+    "t_R": 0.6304346667930653,
+    "p_1s": 0.26564060818199176,
+    "retorno": 0.03969922538259785,
+    "caida_max": 0.0583694939648749,
+    "sharpe": 0.6388441771433694,
+    "salidas": {
+     "stop": 0.6078431372549019,
+     "tp": 0.23529411764705882,
+     "signal": 0.0,
+     "time": 0.1568627450980392,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q5 RSI no extremo | dejar_correr": {
+   "tf": "1h",
+   "construccion": {
+    "n": 115,
+    "por_dia": 0.08208422555317631,
+    "acierto": 0.26956521739130435,
+    "R_media": 0.23695111227728397,
+    "t_R": 0.9458059750588679,
+    "p_1s": 0.1731239769970072,
+    "retorno": 0.09963869698026762,
+    "caida_max": 0.09048610554381742,
+    "sharpe": 0.4590250797662467,
+    "salidas": {
+     "stop": 0.2956521739130435,
+     "tp": 0.0,
+     "signal": 0.7043478260869566,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 51,
+    "por_dia": 0.09323583180987204,
+    "acierto": 0.21568627450980393,
+    "R_media": -0.20892764478884604,
+    "t_R": -1.0598002286837518,
+    "p_1s": 0.852835806707863,
+    "retorno": -0.041891910618416905,
+    "caida_max": 0.07335750346692516,
+    "sharpe": -0.7394401454466973,
+    "salidas": {
+     "stop": 0.29411764705882354,
+     "tp": 0.0,
+     "signal": 0.7058823529411765,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "1h | E03 Bandera / bander\u00edn | Q5 RSI no extremo | dejar_correr_rapido": {
+   "tf": "1h",
+   "construccion": {
+    "n": 115,
+    "por_dia": 0.08208422555317631,
+    "acierto": 0.3130434782608696,
+    "R_media": 0.2239319518363058,
+    "t_R": 0.9947692528062752,
+    "p_1s": 0.16097765081479998,
+    "retorno": 0.09564766242389999,
+    "caida_max": 0.07832007947041175,
+    "sharpe": 0.48754780217720484,
+    "salidas": {
+     "stop": 0.17391304347826086,
+     "tp": 0.0,
+     "signal": 0.8260869565217391,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 52,
+    "por_dia": 0.09506398537477148,
+    "acierto": 0.23076923076923078,
+    "R_media": -0.05416593222591669,
+    "t_R": -0.26047091074474044,
+    "p_1s": 0.6022253168867595,
+    "retorno": -0.011842175224316742,
+    "caida_max": 0.05623938190119926,
+    "sharpe": -0.20206798108345347,
+    "salidas": {
+     "stop": 0.25,
+     "tp": 0.0,
+     "signal": 0.75,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q1 tendencia + volumen + funding | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 22,
+    "por_dia": 0.015703069236259814,
+    "acierto": 0.5909090909090909,
+    "R_media": 0.6052935551892605,
+    "t_R": 1.7849021595300203,
+    "p_1s": 0.044365658974353406,
+    "retorno": 0.0651557003830876,
+    "caida_max": 0.024774215335149008,
+    "sharpe": 0.8709011698728338,
+    "salidas": {
+     "stop": 0.36363636363636365,
+     "tp": 0.22727272727272727,
+     "signal": 0.0,
+     "time": 0.4090909090909091,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 12,
+    "por_dia": 0.021937842778793418,
+    "acierto": 0.5833333333333334,
+    "R_media": 0.49592256113981287,
+    "t_R": 1.2681947501270225,
+    "p_1s": 0.11545606272593412,
+    "retorno": 0.03979618235285409,
+    "caida_max": 0.012593326409779282,
+    "sharpe": 1.1394275734129888,
+    "salidas": {
+     "stop": 0.16666666666666666,
+     "tp": 0.16666666666666666,
+     "signal": 0.0,
+     "time": 0.6666666666666666,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 23,
+    "por_dia": 0.01641684511063526,
+    "acierto": 0.43478260869565216,
+    "R_media": 1.5039309326981098,
+    "t_R": 1.765839335706686,
+    "p_1s": 0.04564944961629136,
+    "retorno": 0.17697637576427483,
+    "caida_max": 0.046947085482451745,
+    "sharpe": 1.3276663512167333,
+    "salidas": {
+     "stop": 0.13043478260869565,
+     "tp": 0.0,
+     "signal": 0.8695652173913043,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 12,
+    "por_dia": 0.021937842778793418,
+    "acierto": 0.4166666666666667,
+    "R_media": 0.44987779721603904,
+    "t_R": 1.0016650697329863,
+    "p_1s": 0.16901540850807684,
+    "retorno": 0.05377057473293956,
+    "caida_max": 0.012854729996098158,
+    "sharpe": 1.297477173136202,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 24,
+    "por_dia": 0.017130620985010708,
+    "acierto": 0.5,
+    "R_media": 0.691414580770631,
+    "t_R": 1.6443563266067704,
+    "p_1s": 0.05685165840603201,
+    "retorno": 0.08096191500174132,
+    "caida_max": 0.018870431021459688,
+    "sharpe": 0.9082890738750735,
+    "salidas": {
+     "stop": 0.08333333333333333,
+     "tp": 0.0,
+     "signal": 0.9166666666666666,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 12,
+    "por_dia": 0.021937842778793418,
+    "acierto": 0.5833333333333334,
+    "R_media": 0.8289552678528528,
+    "t_R": 1.3766552026918644,
+    "p_1s": 0.0979959312010692,
+    "retorno": 0.056850812799566164,
+    "caida_max": 0.01257107565332194,
+    "sharpe": 1.5069202311043932,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q2 funding + volumen | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 33,
+    "por_dia": 0.023554603854389723,
+    "acierto": 0.48484848484848486,
+    "R_media": 0.32665594624372674,
+    "t_R": 1.225662763762458,
+    "p_1s": 0.11463497023504676,
+    "retorno": 0.0509956866701784,
+    "caida_max": 0.06360182877926568,
+    "sharpe": 0.5694037728336977,
+    "salidas": {
+     "stop": 0.42424242424242425,
+     "tp": 0.18181818181818182,
+     "signal": 0.0,
+     "time": 0.3939393939393939,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.5714285714285714,
+    "R_media": 0.42356642594043264,
+    "t_R": 1.205154251659732,
+    "p_1s": 0.1248119336468797,
+    "retorno": 0.04148664457859064,
+    "caida_max": 0.012573070456003754,
+    "sharpe": 1.146057752182192,
+    "salidas": {
+     "stop": 0.21428571428571427,
+     "tp": 0.14285714285714285,
+     "signal": 0.0,
+     "time": 0.6428571428571429,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q2 funding + volumen | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 34,
+    "por_dia": 0.02426837972876517,
+    "acierto": 0.38235294117647056,
+    "R_media": 1.0719866613563336,
+    "t_R": 1.7882612256497057,
+    "p_1s": 0.04145964492341081,
+    "retorno": 0.18978826162348694,
+    "caida_max": 0.06119689799575978,
+    "sharpe": 1.322308747615261,
+    "salidas": {
+     "stop": 0.14705882352941177,
+     "tp": 0.0,
+     "signal": 0.8529411764705882,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.42857142857142855,
+    "R_media": 0.4374166516407902,
+    "t_R": 1.1543992017774143,
+    "p_1s": 0.1345585240667838,
+    "retorno": 0.05783389223585256,
+    "caida_max": 0.013356139015935908,
+    "sharpe": 1.3875864293568076,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q2 funding + volumen | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 35,
+    "por_dia": 0.024982155603140613,
+    "acierto": 0.45714285714285713,
+    "R_media": 0.5456040506490641,
+    "t_R": 1.7177840152968251,
+    "p_1s": 0.047466217597769256,
+    "retorno": 0.09907647467411662,
+    "caida_max": 0.03652913372966138,
+    "sharpe": 0.965974945194783,
+    "salidas": {
+     "stop": 0.11428571428571428,
+     "tp": 0.0,
+     "signal": 0.8857142857142857,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.5714285714285714,
+    "R_media": 0.6986240268780648,
+    "t_R": 1.3233053047307275,
+    "p_1s": 0.10426825693981501,
+    "retorno": 0.05801711098080742,
+    "caida_max": 0.01298397169585963,
+    "sharpe": 1.492000094442912,
+    "salidas": {
+     "stop": 0.07142857142857142,
+     "tp": 0.0,
+     "signal": 0.9285714285714286,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 49,
+    "por_dia": 0.03497501784439686,
+    "acierto": 0.40816326530612246,
+    "R_media": 0.15859474922497935,
+    "t_R": 0.7858954369050289,
+    "p_1s": 0.2178956319331531,
+    "retorno": 0.06254998641569975,
+    "caida_max": 0.03900252174122887,
+    "sharpe": 0.5525954226412272,
+    "salidas": {
+     "stop": 0.40816326530612246,
+     "tp": 0.14285714285714285,
+     "signal": 0.0,
+     "time": 0.4489795918367347,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 20,
+    "por_dia": 0.03656307129798903,
+    "acierto": 0.5,
+    "R_media": 0.17699341028925925,
+    "t_R": 0.6361890943758867,
+    "p_1s": 0.26612143513083153,
+    "retorno": 0.028058438965979038,
+    "caida_max": 0.021674827390958606,
+    "sharpe": 0.6606811472285311,
+    "salidas": {
+     "stop": 0.3,
+     "tp": 0.1,
+     "signal": 0.0,
+     "time": 0.6,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 50,
+    "por_dia": 0.03568879371877231,
+    "acierto": 0.32,
+    "R_media": 0.3576456998808501,
+    "t_R": 1.2236978354620456,
+    "p_1s": 0.11345905236528464,
+    "retorno": 0.13375230113105707,
+    "caida_max": 0.043237847515002925,
+    "sharpe": 1.0187427819690387,
+    "salidas": {
+     "stop": 0.1,
+     "tp": 0.0,
+     "signal": 0.9,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 20,
+    "por_dia": 0.03656307129798903,
+    "acierto": 0.3,
+    "R_media": 0.03301180330874835,
+    "t_R": 0.12607146314674042,
+    "p_1s": 0.450499937953193,
+    "retorno": -0.0013717450279906451,
+    "caida_max": 0.025948147860284432,
+    "sharpe": -0.026983880200076218,
+    "salidas": {
+     "stop": 0.1,
+     "tp": 0.0,
+     "signal": 0.9,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q4 ruptura en horario de Wall Street | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 59,
+    "por_dia": 0.042112776588151324,
+    "acierto": 0.3050847457627119,
+    "R_media": 0.08097990706995344,
+    "t_R": 0.6424679289202366,
+    "p_1s": 0.2615504934453662,
+    "retorno": 0.04582839190552823,
+    "caida_max": 0.03865164281965572,
+    "sharpe": 0.4801388555466389,
+    "salidas": {
+     "stop": 0.06779661016949153,
+     "tp": 0.0,
+     "signal": 0.9322033898305084,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 21,
+    "por_dia": 0.038391224862888484,
+    "acierto": 0.47619047619047616,
+    "R_media": 0.4253742586638301,
+    "t_R": 1.1539816969010845,
+    "p_1s": 0.13105581280892897,
+    "retorno": 0.048063213767163715,
+    "caida_max": 0.021030508430401884,
+    "sharpe": 1.1676438381542722,
+    "salidas": {
+     "stop": 0.047619047619047616,
+     "tp": 0.0,
+     "signal": 0.9523809523809523,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q5 RSI no extremo | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 89,
+    "por_dia": 0.0635260528194147,
+    "acierto": 0.39325842696629215,
+    "R_media": 0.0892326583221515,
+    "t_R": 0.601905508721351,
+    "p_1s": 0.27439234661899903,
+    "retorno": 0.08589154089702578,
+    "caida_max": 0.08222299490899643,
+    "sharpe": 0.5675691677829785,
+    "salidas": {
+     "stop": 0.43820224719101125,
+     "tp": 0.14606741573033707,
+     "signal": 0.0,
+     "time": 0.4157303370786517,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 2
+   },
+   "validacion": {
+    "n": 30,
+    "por_dia": 0.054844606946983544,
+    "acierto": 0.4,
+    "R_media": -0.10424629037118109,
+    "t_R": -0.4779871485894118,
+    "p_1s": 0.6818785725458827,
+    "retorno": -0.00498121779710492,
+    "caida_max": 0.05221182832083071,
+    "sharpe": -0.07595622653177768,
+    "salidas": {
+     "stop": 0.4666666666666667,
+     "tp": 0.06666666666666667,
+     "signal": 0.0,
+     "time": 0.4666666666666667,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q5 RSI no extremo | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 103,
+    "por_dia": 0.07351891506067094,
+    "acierto": 0.2912621359223301,
+    "R_media": 0.48368113436434224,
+    "t_R": 1.989836755430676,
+    "p_1s": 0.024642796640992892,
+    "retorno": 0.32307351529572426,
+    "caida_max": 0.05565703420324808,
+    "sharpe": 1.4877012863505705,
+    "salidas": {
+     "stop": 0.05825242718446602,
+     "tp": 0.0,
+     "signal": 0.941747572815534,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 36,
+    "por_dia": 0.06581352833638025,
+    "acierto": 0.2777777777777778,
+    "R_media": -0.07863203859656011,
+    "t_R": -0.5035404046134674,
+    "p_1s": 0.691130466280075,
+    "retorno": -0.02333315788438084,
+    "caida_max": 0.049732742568306065,
+    "sharpe": -0.5391217316670717,
+    "salidas": {
+     "stop": 0.08333333333333333,
+     "tp": 0.0,
+     "signal": 0.9166666666666666,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E01 Doble suelo | Q5 RSI no extremo | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 118,
+    "por_dia": 0.08422555317630265,
+    "acierto": 0.3305084745762712,
+    "R_media": 0.24346407134061607,
+    "t_R": 1.607632345594428,
+    "p_1s": 0.05530553173648467,
+    "retorno": 0.17969914334921278,
+    "caida_max": 0.05657698687557389,
+    "sharpe": 1.1004905091500874,
+    "salidas": {
+     "stop": 0.05084745762711865,
+     "tp": 0.0,
+     "signal": 0.9491525423728814,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 2
+   },
+   "validacion": {
+    "n": 35,
+    "por_dia": 0.06398537477148081,
+    "acierto": 0.4,
+    "R_media": 0.21426723066813774,
+    "t_R": 0.9228301694232608,
+    "p_1s": 0.18129928173961574,
+    "retorno": 0.038586035118902684,
+    "caida_max": 0.03291386614495184,
+    "sharpe": 0.8199703003264378,
+    "salidas": {
+     "stop": 0.05714285714285714,
+     "tp": 0.0,
+     "signal": 0.9428571428571428,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen": {
+    "n": 38,
+    "por_dia": 0.08370044052863436,
+    "acierto": 0.2631578947368421,
+    "R_media": -0.02761583061012243,
+    "t_R": -0.15699422015444842,
+    "p_1s": 0.5619485119364847,
+    "retorno": -0.00884794552643442,
+    "caida_max": 0.026500778507826617,
+    "sharpe": -0.32667950370427107,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 0.9736842105263158,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.02631578947368421
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "examen_x2": {
+    "n": 38,
+    "por_dia": 0.08370044052863436,
+    "acierto": 0.23684210526315788,
+    "R_media": -0.07682242521082544,
+    "t_R": -0.4387837977121973,
+    "p_1s": 0.668315069401386,
+    "retorno": -0.016002682572156535,
+    "caida_max": 0.030851522381573182,
+    "sharpe": -0.5946012242217179,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 0.9736842105263158,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.02631578947368421
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "dsr": 0.05332406135290469,
+   "p_holm": 1.0,
+   "puertas": {
+    "G1 R>0 examen (\u226520 ops)": false,
+    "G2 p Holm<0,10": false,
+    "G3 R>0 costes \u00d72": false,
+    "G4 ca\u00edda examen<30 %": true,
+    "G5 DSR\u22650,80": false
+   },
+   "certificada": false
+  },
+  "4h | E02 Triple suelo/techo | Q1 tendencia + volumen + funding | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 12,
+    "por_dia": 0.008565310492505354,
+    "acierto": 0.8333333333333334,
+    "R_media": 0.9887615481751079,
+    "t_R": 2.4315726613964603,
+    "p_1s": 0.01665835495024126,
+    "retorno": 0.06711653576594512,
+    "caida_max": 0.011569248545717836,
+    "sharpe": 1.199435727663243,
+    "salidas": {
+     "stop": 0.16666666666666666,
+     "tp": 0.25,
+     "signal": 0.0,
+     "time": 0.5833333333333334,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.6666666666666666,
+    "R_media": 0.25391349392700885,
+    "t_R": 0.37152437487921663,
+    "p_1s": 0.3729571048022573,
+    "retorno": 0.013952770755626176,
+    "caida_max": 0.00821942139366083,
+    "sharpe": 0.7313536677683269,
+    "salidas": {
+     "stop": 0.3333333333333333,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.6666666666666666,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q1 tendencia + volumen + funding | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 13,
+    "por_dia": 0.009279086366880799,
+    "acierto": 0.5384615384615384,
+    "R_media": 0.817016537591107,
+    "t_R": 1.2057901583070187,
+    "p_1s": 0.12556795737381676,
+    "retorno": 0.0519343465460973,
+    "caida_max": 0.019127912902184074,
+    "sharpe": 0.6215778214228389,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.6666666666666666,
+    "R_media": 0.17917020882381307,
+    "t_R": 0.6495259276716966,
+    "p_1s": 0.29131567287199434,
+    "retorno": 0.008025779627069074,
+    "caida_max": 0.008554770354579189,
+    "sharpe": 0.4033545525179897,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q1 tendencia + volumen + funding | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 14,
+    "por_dia": 0.009992862241256246,
+    "acierto": 0.5,
+    "R_media": 0.9267060141748429,
+    "t_R": 1.4655318674194768,
+    "p_1s": 0.08327059679318238,
+    "retorno": 0.05973705756665759,
+    "caida_max": 0.020462537984484053,
+    "sharpe": 0.8260749592777287,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 3,
+    "por_dia": 0.005484460694698354,
+    "acierto": 0.6666666666666666,
+    "R_media": 0.1250439677026473,
+    "t_R": 0.4807152586963032,
+    "p_1s": 0.33908384622500265,
+    "retorno": 0.007235376127678883,
+    "caida_max": 0.006185201706767507,
+    "sharpe": 0.5399180194732899,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q2 funding + volumen | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 20,
+    "por_dia": 0.014275517487508922,
+    "acierto": 0.65,
+    "R_media": 0.7431744343767182,
+    "t_R": 2.357577943091572,
+    "p_1s": 0.014634903316821934,
+    "retorno": 0.08818220097889573,
+    "caida_max": 0.017592803265015666,
+    "sharpe": 1.166500640292443,
+    "salidas": {
+     "stop": 0.2,
+     "tp": 0.2,
+     "signal": 0.0,
+     "time": 0.6,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 4,
+    "por_dia": 0.007312614259597806,
+    "acierto": 0.75,
+    "R_media": 0.2903231124376105,
+    "t_R": 0.5990582201087538,
+    "p_1s": 0.2956766483922344,
+    "retorno": 0.018804368137224303,
+    "caida_max": 0.011759521203305812,
+    "sharpe": 0.6076839878086352,
+    "salidas": {
+     "stop": 0.25,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.75,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 22,
+    "por_dia": 0.015703069236259814,
+    "acierto": 0.36363636363636365,
+    "R_media": 0.3606523870446342,
+    "t_R": 0.8681655870404593,
+    "p_1s": 0.19755851564517923,
+    "retorno": 0.027749291397754172,
+    "caida_max": 0.03027661115244984,
+    "sharpe": 0.32480388672806904,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 4,
+    "por_dia": 0.007312614259597806,
+    "acierto": 0.5,
+    "R_media": 0.07856725401035225,
+    "t_R": 0.35798689781872756,
+    "p_1s": 0.3720297598021137,
+    "retorno": 0.00531504735829702,
+    "caida_max": 0.008577714928292401,
+    "sharpe": 0.2658672181442593,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 23,
+    "por_dia": 0.01641684511063526,
+    "acierto": 0.391304347826087,
+    "R_media": 0.4727936626036215,
+    "t_R": 1.1795422798397681,
+    "p_1s": 0.12539050248839112,
+    "retorno": 0.03948391607402213,
+    "caida_max": 0.028715765793611348,
+    "sharpe": 0.5244089998454623,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 4,
+    "por_dia": 0.007312614259597806,
+    "acierto": 0.5,
+    "R_media": 0.08099310231561259,
+    "t_R": 0.42823020448185495,
+    "p_1s": 0.34868354372311927,
+    "retorno": 0.006614167157926731,
+    "caida_max": 0.006450062249319877,
+    "sharpe": 0.3526067468599998,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 30,
+    "por_dia": 0.021413276231263382,
+    "acierto": 0.5333333333333333,
+    "R_media": 0.5303848133845631,
+    "t_R": 1.984042983872086,
+    "p_1s": 0.028393714545783766,
+    "retorno": 0.1118519748531217,
+    "caida_max": 0.023956478336727538,
+    "sharpe": 1.1139040716771265,
+    "salidas": {
+     "stop": 0.26666666666666666,
+     "tp": 0.16666666666666666,
+     "signal": 0.0,
+     "time": 0.5333333333333333,
+     "liq": 0.0,
+     "end": 0.03333333333333333
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.5555555555555556,
+    "R_media": 0.29112705888681006,
+    "t_R": 0.7353594515385278,
+    "p_1s": 0.24155957966869446,
+    "retorno": 0.014295207974284851,
+    "caida_max": 0.02184249113422221,
+    "sharpe": 0.5487514886428841,
+    "salidas": {
+     "stop": 0.3333333333333333,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.6666666666666666,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 31,
+    "por_dia": 0.02212705210563883,
+    "acierto": 0.3548387096774194,
+    "R_media": 0.11952338483970447,
+    "t_R": 0.6148426949148328,
+    "p_1s": 0.27164720895217065,
+    "retorno": 0.04419648908122764,
+    "caida_max": 0.041782550177954736,
+    "sharpe": 0.4490856167093673,
+    "salidas": {
+     "stop": 0.06451612903225806,
+     "tp": 0.0,
+     "signal": 0.9354838709677419,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 10,
+    "por_dia": 0.018281535648994516,
+    "acierto": 0.3,
+    "R_media": -0.06613008467956703,
+    "t_R": -0.4063804566609174,
+    "p_1s": 0.6530218151652498,
+    "retorno": -0.007765693313941058,
+    "caida_max": 0.022322965398689054,
+    "sharpe": -0.31969473014124095,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q4 ruptura en horario de Wall Street | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 31,
+    "por_dia": 0.02212705210563883,
+    "acierto": 0.45161290322580644,
+    "R_media": 0.27932107407157114,
+    "t_R": 1.4292684177118655,
+    "p_1s": 0.08162915970015194,
+    "retorno": 0.05762849986502161,
+    "caida_max": 0.019966801514767263,
+    "sharpe": 0.7525372899448396,
+    "salidas": {
+     "stop": 0.03225806451612903,
+     "tp": 0.0,
+     "signal": 0.967741935483871,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 11,
+    "por_dia": 0.02010968921389397,
+    "acierto": 0.36363636363636365,
+    "R_media": -0.040664189226290615,
+    "t_R": -0.2471316116255879,
+    "p_1s": 0.5950969610428427,
+    "retorno": -0.008486861767898812,
+    "caida_max": 0.016861991876745086,
+    "sharpe": -0.4705782778530408,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q5 RSI no extremo | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 41,
+    "por_dia": 0.02926481084939329,
+    "acierto": 0.5853658536585366,
+    "R_media": 0.6107866394242085,
+    "t_R": 2.6356405994738736,
+    "p_1s": 0.005946459959321415,
+    "retorno": 0.17171879548282276,
+    "caida_max": 0.024552854580060846,
+    "sharpe": 1.3888066256864444,
+    "salidas": {
+     "stop": 0.2926829268292683,
+     "tp": 0.1951219512195122,
+     "signal": 0.0,
+     "time": 0.4878048780487805,
+     "liq": 0.0,
+     "end": 0.024390243902439025
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.6428571428571429,
+    "R_media": 0.20907642996584608,
+    "t_R": 0.7995011999558155,
+    "p_1s": 0.21918240978375414,
+    "retorno": 0.020811163963711854,
+    "caida_max": 0.01621388351163633,
+    "sharpe": 0.5310997422051553,
+    "salidas": {
+     "stop": 0.2857142857142857,
+     "tp": 0.0,
+     "signal": 0.0,
+     "time": 0.7142857142857143,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q5 RSI no extremo | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 46,
+    "por_dia": 0.03283369022127052,
+    "acierto": 0.391304347826087,
+    "R_media": 0.39280197487877644,
+    "t_R": 1.6141929476558547,
+    "p_1s": 0.05673842947392693,
+    "retorno": 0.1364049777584151,
+    "caida_max": 0.029331653113592315,
+    "sharpe": 0.9489391219236903,
+    "salidas": {
+     "stop": 0.021739130434782608,
+     "tp": 0.0,
+     "signal": 0.9782608695652174,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 15,
+    "por_dia": 0.027422303473491772,
+    "acierto": 0.3333333333333333,
+    "R_media": -0.1367896186406692,
+    "t_R": -1.232103600242659,
+    "p_1s": 0.8808982433035379,
+    "retorno": -0.014498655832289375,
+    "caida_max": 0.02416039386758162,
+    "sharpe": -0.5828191797944409,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E02 Triple suelo/techo | Q5 RSI no extremo | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 49,
+    "por_dia": 0.03497501784439686,
+    "acierto": 0.5102040816326531,
+    "R_media": 0.491473415599718,
+    "t_R": 2.210121168367062,
+    "p_1s": 0.0159491098838751,
+    "retorno": 0.15269071763567021,
+    "caida_max": 0.018930490391302124,
+    "sharpe": 1.3004221995963654,
+    "salidas": {
+     "stop": 0.04081632653061224,
+     "tp": 0.0,
+     "signal": 0.9591836734693877,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 1
+   },
+   "validacion": {
+    "n": 17,
+    "por_dia": 0.031078610603290677,
+    "acierto": 0.35294117647058826,
+    "R_media": -0.03474601164191917,
+    "t_R": -0.287936705379949,
+    "p_1s": 0.6114542390874923,
+    "retorno": -0.006631579031499024,
+    "caida_max": 0.021342425737679194,
+    "sharpe": -0.2537395807095816,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q1 tendencia + volumen + funding | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 9,
+    "por_dia": 0.006423982869379015,
+    "acierto": 0.3333333333333333,
+    "R_media": 0.020845829962154387,
+    "t_R": 0.04145045335398431,
+    "p_1s": 0.4839763121545966,
+    "retorno": -0.003938855008941311,
+    "caida_max": 0.018012876591979365,
+    "sharpe": -0.0730632262644669,
+    "salidas": {
+     "stop": 0.5555555555555556,
+     "tp": 0.1111111111111111,
+     "signal": 0.0,
+     "time": 0.3333333333333333,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.5555555555555556,
+    "R_media": 0.37358440633037093,
+    "t_R": 0.6768924928472945,
+    "p_1s": 0.2587821845692152,
+    "retorno": 0.011250867589724711,
+    "caida_max": 0.014909256198712195,
+    "sharpe": 0.4046894448432263,
+    "salidas": {
+     "stop": 0.4444444444444444,
+     "tp": 0.2222222222222222,
+     "signal": 0.0,
+     "time": 0.3333333333333333,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q1 tendencia + volumen + funding | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 10,
+    "por_dia": 0.007137758743754461,
+    "acierto": 0.3,
+    "R_media": -0.35820498312324506,
+    "t_R": -1.654420736440714,
+    "p_1s": 0.9337856826087292,
+    "retorno": -0.01945563450580945,
+    "caida_max": 0.019801405713807174,
+    "sharpe": -0.42679519533325644,
+    "salidas": {
+     "stop": 0.3,
+     "tp": 0.0,
+     "signal": 0.7,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.2222222222222222,
+    "R_media": -0.43168795456066184,
+    "t_R": -1.9108072530032725,
+    "p_1s": 0.9537919307917224,
+    "retorno": -0.02325745915132904,
+    "caida_max": 0.029429463680532342,
+    "sharpe": -0.7337927307568379,
+    "salidas": {
+     "stop": 0.4444444444444444,
+     "tp": 0.0,
+     "signal": 0.5555555555555556,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q1 tendencia + volumen + funding | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 9,
+    "por_dia": 0.006423982869379015,
+    "acierto": 0.2222222222222222,
+    "R_media": -0.19378485413694918,
+    "t_R": -0.5332363152545734,
+    "p_1s": 0.6958195255554791,
+    "retorno": -0.011657382414625661,
+    "caida_max": 0.016123379088127998,
+    "sharpe": -0.29053203471265976,
+    "salidas": {
+     "stop": 0.3333333333333333,
+     "tp": 0.0,
+     "signal": 0.6666666666666666,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 9,
+    "por_dia": 0.016453382084095063,
+    "acierto": 0.4444444444444444,
+    "R_media": -0.0005128724640189134,
+    "t_R": -0.0018819198084026622,
+    "p_1s": 0.5007277360641811,
+    "retorno": -0.004500010149554257,
+    "caida_max": 0.019930309649320743,
+    "sharpe": -0.20369362394396456,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q2 funding + volumen | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 18,
+    "por_dia": 0.01284796573875803,
+    "acierto": 0.2777777777777778,
+    "R_media": -0.010151400234497739,
+    "t_R": -0.027344798624590414,
+    "p_1s": 0.5107484162479916,
+    "retorno": -0.022690812630716706,
+    "caida_max": 0.04440899191932557,
+    "sharpe": -0.30705452712865977,
+    "salidas": {
+     "stop": 0.6111111111111112,
+     "tp": 0.16666666666666666,
+     "signal": 0.0,
+     "time": 0.2222222222222222,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 12,
+    "por_dia": 0.021937842778793418,
+    "acierto": 0.4166666666666667,
+    "R_media": 0.02260286477942693,
+    "t_R": 0.050573659140466146,
+    "p_1s": 0.48028595847323596,
+    "retorno": -0.0027961347332977615,
+    "caida_max": 0.027219746958650926,
+    "sharpe": -0.058327555691748065,
+    "salidas": {
+     "stop": 0.5833333333333334,
+     "tp": 0.16666666666666666,
+     "signal": 0.0,
+     "time": 0.25,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q2 funding + volumen | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 19,
+    "por_dia": 0.013561741613133477,
+    "acierto": 0.3684210526315789,
+    "R_media": -0.14744278688259294,
+    "t_R": -0.6285822917930164,
+    "p_1s": 0.731240998402857,
+    "retorno": -0.024921607680678526,
+    "caida_max": 0.032991456741987446,
+    "sharpe": -0.3387853406289893,
+    "salidas": {
+     "stop": 0.3157894736842105,
+     "tp": 0.0,
+     "signal": 0.6842105263157895,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 11,
+    "por_dia": 0.02010968921389397,
+    "acierto": 0.18181818181818182,
+    "R_media": -0.4096528173205307,
+    "t_R": -2.202210557453635,
+    "p_1s": 0.9738773929688246,
+    "retorno": -0.025253278806037116,
+    "caida_max": 0.030956137673419537,
+    "sharpe": -0.7834683531812723,
+    "salidas": {
+     "stop": 0.36363636363636365,
+     "tp": 0.0,
+     "signal": 0.6363636363636364,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q2 funding + volumen | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 18,
+    "por_dia": 0.01284796573875803,
+    "acierto": 0.3888888888888889,
+    "R_media": 0.08302364044333499,
+    "t_R": 0.2978470337532321,
+    "p_1s": 0.3847146199192861,
+    "retorno": -0.0056833537847830184,
+    "caida_max": 0.027291577896442765,
+    "sharpe": -0.07835324821023605,
+    "salidas": {
+     "stop": 0.2222222222222222,
+     "tp": 0.0,
+     "signal": 0.7777777777777778,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 12,
+    "por_dia": 0.021937842778793418,
+    "acierto": 0.4166666666666667,
+    "R_media": -0.059899388313240924,
+    "t_R": -0.2777530470023479,
+    "p_1s": 0.606823543395266,
+    "retorno": -0.008883473173086132,
+    "caida_max": 0.02464372365646872,
+    "sharpe": -0.24530770586127412,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q4 ruptura en horario de Wall Street | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 40,
+    "por_dia": 0.028551034975017844,
+    "acierto": 0.35,
+    "R_media": 0.1324597021977646,
+    "t_R": 0.5048036937266637,
+    "p_1s": 0.3082686845676289,
+    "retorno": 0.026567954456240495,
+    "caida_max": 0.04959490208404238,
+    "sharpe": 0.2721550644590056,
+    "salidas": {
+     "stop": 0.575,
+     "tp": 0.2,
+     "signal": 0.0,
+     "time": 0.225,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 20,
+    "por_dia": 0.03656307129798903,
+    "acierto": 0.55,
+    "R_media": 0.5796412886107467,
+    "t_R": 1.4665649730211883,
+    "p_1s": 0.07942551350959881,
+    "retorno": 0.059409592240450504,
+    "caida_max": 0.023631641612331,
+    "sharpe": 1.155203632087299,
+    "salidas": {
+     "stop": 0.45,
+     "tp": 0.3,
+     "signal": 0.0,
+     "time": 0.25,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q4 ruptura en horario de Wall Street | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 39,
+    "por_dia": 0.027837259100642397,
+    "acierto": 0.358974358974359,
+    "R_media": 1.5603732479918906,
+    "t_R": 1.1436102451716892,
+    "p_1s": 0.1299693643503661,
+    "retorno": 0.27461106023347637,
+    "caida_max": 0.05967417832854005,
+    "sharpe": 1.0475343842515143,
+    "salidas": {
+     "stop": 0.4358974358974359,
+     "tp": 0.0,
+     "signal": 0.5641025641025641,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 16,
+    "por_dia": 0.029250457038391225,
+    "acierto": 0.3125,
+    "R_media": 0.45792485726541654,
+    "t_R": 0.9414828257030047,
+    "p_1s": 0.18068698815389217,
+    "retorno": 0.04196905870254297,
+    "caida_max": 0.03117670221692803,
+    "sharpe": 0.7790162390309912,
+    "salidas": {
+     "stop": 0.3125,
+     "tp": 0.0,
+     "signal": 0.6875,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q4 ruptura en horario de Wall Street | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 39,
+    "por_dia": 0.027837259100642397,
+    "acierto": 0.3333333333333333,
+    "R_media": 1.1314774960010956,
+    "t_R": 1.1957124054560295,
+    "p_1s": 0.1196086139483391,
+    "retorno": 0.19234612215246494,
+    "caida_max": 0.04674885617202118,
+    "sharpe": 0.9878030581868,
+    "salidas": {
+     "stop": 0.3076923076923077,
+     "tp": 0.0,
+     "signal": 0.6923076923076923,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 18,
+    "por_dia": 0.03290676416819013,
+    "acierto": 0.3888888888888889,
+    "R_media": 0.7133312309683818,
+    "t_R": 1.45919319103613,
+    "p_1s": 0.0813714339758721,
+    "retorno": 0.05341726663233981,
+    "caida_max": 0.020573697750645326,
+    "sharpe": 1.0608731952264936,
+    "salidas": {
+     "stop": 0.05555555555555555,
+     "tp": 0.0,
+     "signal": 0.9444444444444444,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q5 RSI no extremo | TP3": {
+   "tf": "4h",
+   "construccion": {
+    "n": 35,
+    "por_dia": 0.024982155603140613,
+    "acierto": 0.42857142857142855,
+    "R_media": 0.1328339761214755,
+    "t_R": 0.5098331628294639,
+    "p_1s": 0.306731037414651,
+    "retorno": -0.00029328270869732886,
+    "caida_max": 0.06038030013609519,
+    "sharpe": 0.009349899874765007,
+    "salidas": {
+     "stop": 0.5142857142857142,
+     "tp": 0.17142857142857143,
+     "signal": 0.0,
+     "time": 0.3142857142857143,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 16,
+    "por_dia": 0.029250457038391225,
+    "acierto": 0.3125,
+    "R_media": 0.11997880952943396,
+    "t_R": 0.26391347644952884,
+    "p_1s": 0.39771896582221644,
+    "retorno": 0.000384324984646911,
+    "caida_max": 0.030157149223331348,
+    "sharpe": 0.023190301455203455,
+    "salidas": {
+     "stop": 0.6875,
+     "tp": 0.25,
+     "signal": 0.0,
+     "time": 0.0625,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q5 RSI no extremo | dejar_correr": {
+   "tf": "4h",
+   "construccion": {
+    "n": 35,
+    "por_dia": 0.024982155603140613,
+    "acierto": 0.34285714285714286,
+    "R_media": 2.1514091658043983,
+    "t_R": 1.3183553154093308,
+    "p_1s": 0.09809872179709489,
+    "retorno": 0.3189431950539079,
+    "caida_max": 0.052254720999411974,
+    "sharpe": 1.210934597362518,
+    "salidas": {
+     "stop": 0.2857142857142857,
+     "tp": 0.0,
+     "signal": 0.7142857142857143,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 14,
+    "por_dia": 0.025594149908592323,
+    "acierto": 0.2857142857142857,
+    "R_media": 0.0495831097523559,
+    "t_R": 0.14582989872798188,
+    "p_1s": 0.44314631463402976,
+    "retorno": 0.0003089035607299895,
+    "caida_max": 0.03681254451997029,
+    "sharpe": 0.021720916626894567,
+    "salidas": {
+     "stop": 0.21428571428571427,
+     "tp": 0.0,
+     "signal": 0.7857142857142857,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  },
+  "4h | E03 Bandera / bander\u00edn | Q5 RSI no extremo | dejar_correr_rapido": {
+   "tf": "4h",
+   "construccion": {
+    "n": 35,
+    "por_dia": 0.024982155603140613,
+    "acierto": 0.3142857142857143,
+    "R_media": 1.2204083788233782,
+    "t_R": 1.1737842874002176,
+    "p_1s": 0.12431917495523304,
+    "retorno": 0.16357140400794035,
+    "caida_max": 0.0335242089282175,
+    "sharpe": 0.9682802080537934,
+    "salidas": {
+     "stop": 0.17142857142857143,
+     "tp": 0.0,
+     "signal": 0.8285714285714286,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   },
+   "validacion": {
+    "n": 16,
+    "por_dia": 0.029250457038391225,
+    "acierto": 0.375,
+    "R_media": 0.5440492891297897,
+    "t_R": 1.159613358935761,
+    "p_1s": 0.13216631226846942,
+    "retorno": 0.02821697479754004,
+    "caida_max": 0.022517870230148507,
+    "sharpe": 0.6558118335859527,
+    "salidas": {
+     "stop": 0.0,
+     "tp": 0.0,
+     "signal": 1.0,
+     "time": 0.0,
+     "liq": 0.0,
+     "end": 0.0
+    },
+    "liquidado": false,
+    "saltadas_lote_minimo": 0
+   }
+  }
+ }
+}

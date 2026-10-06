@@ -4,7 +4,7 @@ y de la v5 (Z) que ganaron en el examen 2025-07 → 2026-09. Misma maquinaria qu
 from __future__ import annotations
 import pandas as pd
 from . import forward as M
-from ..busqueda import v3, v4, v5, v6
+from ..busqueda import v3, v4, v5, v6, v7
 
 D = M.F.ROOT / "paper_state" / "mesapatrones"
 START = pd.Timestamp("2026-10-06T00:00:00Z")
@@ -22,6 +22,9 @@ TRADERS = {
     "W02 Triple suelo/techo 1 h + tendencia + volumen (dejar correr)": ("1h", "1h | D02 Triple suelo/techo | P1 tendencia + volumen | dejar_correr", v6),
     "W03 Bandera 1 h + funding a contrapié (dejar correr)": ("1h", "1h | D03 Bandera / banderín | P6 funding a contrapié | dejar_correr", v6),
     "W04 Cuatro velas seguidas 4 h + tendencia + volumen (TP 3R)": ("4h", "4h | D04 Cuatro velas seguidas | P1 tendencia + volumen | TP3", v6),
+    # búsqueda v7 (config/busqueda_v7_prerregistrada.md): empiezan el 2026-10-07 00:00 UTC
+    "U01 Doble suelo 1 h + tendencia + volumen + funding (dejar correr)": ("1h", "1h | E01 Doble suelo | Q1 tendencia + volumen + funding | dejar_correr", v7, "2026-10-07T00:00:00Z"),
+    "U02 Triple suelo/techo 1 h + funding + volumen (dejar correr)": ("1h", "1h | E02 Triple suelo/techo | Q2 funding + volumen | dejar_correr", v7, "2026-10-07T00:00:00Z"),
 }
 
 

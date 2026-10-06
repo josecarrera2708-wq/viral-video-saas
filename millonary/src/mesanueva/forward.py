@@ -44,11 +44,12 @@ def main(now: pd.Timestamp | None = None, traders: dict | None = None, D: Path =
     traders = traders or TRADERS; now = now or pd.Timestamp.now(tz="UTC"); D.mkdir(parents=True, exist_ok=True); b15, f15 = F.load_bars(now)
     data = {tf: resample(b15, f15, tf) for tf in IV}; specs = {}; summ, frames = {}, []
     days = max((now - START).total_seconds() / 86400, 1e-9)
-    for name, (tf, key, mod) in traders.items():
+    for name, (tf, key, mod, *opt) in traders.items():
+        t0 = max(START, pd.Timestamp(opt[0])) if opt else START                    # inicio propio del trader (si entró más tarde)
         bars, f = data[tf]
         if (tf, mod.__name__) not in specs:
             specs[(tf, mod.__name__)] = mod.variants(bars.assign(f=f), tf)          # funding por vela disponible (lo usa la v6; el resto lo ignora)
-        sp = specs[(tf, mod.__name__)][key]; ctx = context15(bars, *CTX[tf]); live = np.asarray(bars.index + IV[tf] >= START); i0 = int(np.argmax(live)) if live.any() else len(bars)
+        sp = specs[(tf, mod.__name__)][key]; ctx = context15(bars, *CTX[tf]); live = np.asarray(bars.index + IV[tf] >= t0); i0 = int(np.argmax(live)) if live.any() else len(bars)
         ent = np.where(live, sp.entry, 0).astype(np.int8); ex = None if sp.exit is None else np.where(live, sp.exit, 0).astype(np.int8)
         r = run(bars["open"], bars["high"], bars["low"], bars["close"], ent, np.nan_to_num(sp.stop, nan=0.0), Params(tp_mult=sp.tp_mult, max_bars=sp.max_bars), exit_sig=ex, funding=f)
         rows = [detail(bars, ctx, name, sp, r, i, sp.tp_mult, sp.max_bars) for i in range(int(r["n_trades"]))]

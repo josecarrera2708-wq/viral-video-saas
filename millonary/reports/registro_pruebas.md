@@ -168,3 +168,31 @@ Prerregistro: `config/busqueda_v6_prerregistrada.md` (commit 1581163, ANTES de e
 - Ninguna pasa Holm ni DSR.
 - Mesa de trading: entran W01-W04 por la regla prerregistrada. En la repetición con datos de Deribit desde 2025-07 ganan los cuatro, pero W01 (+0,08 R) y W03 (+0,22 R) ganan menos que con Binance: el funding y el volumen difieren entre bolsas.
 - Total acumulado del proyecto: 1.797 pruebas.
+
+## 2026-10-06 · Búsqueda v7: más combinaciones de patrones — pruebas 1798-1878 (81 variantes)
+Prerregistro: `config/busqueda_v7_prerregistrada.md` (commit 371968e, ANTES de ejecutar). Resultados: `reports/busqueda_v7_resultados.md`.
+- Variantes: 81. Elegibles: 13. Certificadas: **0**.
+- 10 de las 13 ganan en el examen (menos que en la v6, 18 de 20).
+- R media en validación por combinación:
+
+| Combinación | R en validación |
+|---|---|
+| Triple confirmación (tendencia + volumen + funding) | +0,34 (la mejor de todas las búsquedas) |
+| Patrón dentro de patrón (4 h) | +0,33 |
+| Funding + volumen | +0,19 |
+| Horario de Wall Street | +0,11 |
+| RSI no extremo | +0,05 |
+
+- La salida rápida (EMA20) no mejora a la EMA50.
+- Mejores del examen, las dos con triple suelo/techo 1 h:
+
+| Variante | Ops | R examen | Retorno |
+|---|---|---|---|
+| Horario de Wall Street | 49 | +0,58 | +12,5 % |
+| RSI no extremo | 71 | +0,51 | +15,2 % |
+
+- Mesa de trading: entran U01 (doble suelo + triple confirmación) y U02 (triple + funding + volumen). Empiezan el 2026-10-07 00:00 UTC.
+- Repetición con Deribit desde 2025-07:
+  - U01: 9 ops, +1,85 R. Con Binance fueron 17 ops y +0,11 R; el funding y el volumen de cada bolsa filtran distinto.
+  - U02: 23 ops, +0,41 R.
+- Total acumulado del proyecto: 1.878 pruebas.
