@@ -1,20 +1,20 @@
 # Todos Lo Vieron · Vídeo 1: Andrew Dawson, el gigante de Canoe Mountain
 
-Guion de narración, estilo documental de televisión: apertura en frío con lugar y fecha, narración en presente, cinco actos y un adelanto al final de cada acto.
-Español latino neutro (ustedes). Números y años escritos en letra para la voz.
+Guion de narración, versión 2: tono de conversación, como alguien que cuenta una historia de misterio a un amigo.
+Español latino neutro, hablando de "tú". Frases completas y fluidas, sin trozos sueltos sin verbo, para que la voz IA no suene entrecortada.
+Números y años en letra. Voz: Alejandro (Cartesia), velocidad 1.0.
 
-Objetivo: 40–43 min de voz. Referencia medida en "La Ciencia de la Salud": 3.471 palabras = 19:17 min (≈180 palabras/min con speed 1.05).
-Con una voz más lenta y grave (≈165–175 palabras/min), este guion debe dar 41–45 min. **Medir con el audio real antes de montar.**
+Objetivo: 41–44 min de voz. La muestra fluida de Alejandro dio ≈187 palabras/min. **Medir con el audio real antes de montar.**
 
-Estructura: intro de 40 s (sección 1), apertura documental con lugar y fecha (2), cinco actos (3–9, 10–14, 15–16, 17–19, 20–22) y cierre (23).
+Estructura: intro (1), apertura documental con lugar y fecha (2), cinco actos (3–10, 11–14, 15–17, 18–20, 21–23) y cierre (24).
 
 Zonas de retención (bucles abiertos que se cierran más tarde):
-1. El último vídeo, "eso no estaba ahí antes" (se abre en la 1 y se cierra en la 19).
-2. Lo que hay de verdad en la cima de la montaña (se abre en la 6 y se cierra en la 17).
-3. La luz del 13 de abril, "lo único que nadie explicó" (se abre en la 9 y se cierra en la 18).
-4. El hombre que juró ante la ley haber visto algo a veinte kilómetros de allí en 1955 (se abre en la 10 y se cierra en la 15).
-5. Si de verdad murió y por qué: lo que contó la persona que mejor lo conocía (se abre en la 3 y la 14 y se cierra en la 21).
-6. Pico emocional y "falso final" en la 14 ("aquí terminan casi todos los vídeos").
+1. El último video, "eso no estaba ahí antes" (se abre en la 1 y se cierra en la 20).
+2. Lo que hay de verdad en la cima (se abre en la 6 y se cierra en la 18).
+3. La luz del 13 de abril (se abre en la 9 y se cierra en la 19).
+4. El hombre que juró ante la ley haber visto algo en 1955 (se abre en la 10 y se cierra en la 15).
+5. Si de verdad murió y por qué (se abre en la 3 y la 14 y se cierra en la 22).
+6. Falso final en la 14 ("aquí terminan casi todos los videos").
 
 Normas: solo hechos documentados; lo que no se sabe se dice que no se sabe. Andrew fue una persona real que murió: nada de burlas, nada de detalles sobre su muerte que su familia no hizo públicos.
 
@@ -22,129 +22,111 @@ Normas: solo hechos documentados; lo que no se sabe se dice que no se sabe. Andr
 
 ## 1. INTRO
 
-Diecinueve segundos.
+Este es el último video que subió Andrew Dawson. Dura diecinueve segundos.
 
-Eso es lo que dura el último vídeo que subió Andrew Dawson.
+Se le ve dentro de su camioneta, apuntando con el teléfono a la cima de una montaña, donde hay un edificio. Y lo único que dice, casi en voz baja, es esto: "¿Qué es eso? Eso no estaba ahí antes."
 
-Un hombre dentro de una camioneta. Una montaña. Un edificio en la cima.
+Cinco semanas antes, este mismo hombre había grabado algo de pie en lo alto de una montaña de Canadá. Algo que, visto desde donde él estaba, tenía que medir lo mismo que un edificio.
 
-Y una sola frase: "Eso no estaba ahí antes."
+Lo que vino después lo vieron millones de personas. Un hombre que le corta el paso en un camino de noche, dos helicópteros que parecen llevarse algo, una luz quieta sobre los picos, y un auto parado delante de su casa.
 
-Cinco semanas antes, ese mismo hombre había grabado algo de pie, en lo alto de una montaña de Canadá. Algo que, para verse desde donde él estaba, tenía que medir lo que mide un edificio.
+Luego Andrew dijo que todo había sido mentira. Y diez días más tarde, asustado, dijo que no, que era verdad.
 
-Después vino un hombre que le cortó el paso en un camino de noche. Dos helicópteros que se llevaban algo. Una luz quieta sobre los picos. Un coche parado frente a su casa.
+Seis semanas después de ese último video, Andrew Dawson estaba muerto.
 
-Después dijo que todo era mentira.
-
-Diez días más tarde dijo que no lo era. Y que tenía miedo.
-
-Seis semanas después de su último vídeo, Andrew Dawson estaba muerto.
-
-Millones de personas vieron esos vídeos. Casi nadie sabe cómo termina de verdad esta historia.
-
-Hoy vamos a subir a esa montaña.
+Casi todo el mundo conoce el principio de esta historia. Muy poca gente sabe cómo termina de verdad. Así que hoy vamos a subir juntos a esa montaña, a ver qué hay allá arriba.
 
 ---
 
 ## 2. APERTURA
 
-Columbia Británica, Canadá. Un valle estrecho entre tres cordilleras: las Rocosas, las Monashee y las Cariboo.
+Imagínate un valle muy estrecho en el oeste de Canadá, en la provincia de Columbia Británica, encajado entre tres cordilleras: las Rocosas, las Monashee y las Cariboo.
 
-En el fondo del valle hay un pueblo de poco más de mil habitantes. Está a setecientos noventa y dos metros sobre el nivel del mar. Tiene una estación de tren, una gasolinera, un par de moteles, y una sola carretera que lo atraviesa de norte a sur: la autopista Yellowhead.
+Allí abajo, a setecientos noventa y dos metros sobre el nivel del mar, hay un pueblo de apenas mil habitantes. Tiene su estación de tren, una gasolinera, un par de moteles, y una sola carretera que lo cruza de norte a sur, la autopista Yellowhead. El pueblo se llama Valemount.
 
-El pueblo se llama Valemount.
+Si sales de Valemount hacia el sur, enseguida ves cómo una montaña se levanta de golpe a tu izquierda. Su cima está a dos mil seiscientos cincuenta y un metros, y en invierno, allá arriba, el viento te hace sentir más de treinta grados bajo cero. Casi nadie sube, porque en realidad no hay ningún motivo para subir. Esa montaña se llama Canoe Mountain.
 
-Al sur del pueblo, la montaña se levanta de golpe. Su cima está a dos mil seiscientos cincuenta y un metros. En invierno, el viento allá arriba baja de treinta grados bajo cero. Casi nadie sube. No hay motivo para subir.
+Ahora vamos al nueve de abril de dos mil veintidós. Por esa autopista baja una camioneta de trabajo, y en el asiento del copiloto va un hombre de treinta y cuatro años que se llama Andrew Dawson.
 
-Su nombre es Canoe Mountain.
+En un momento dado, Andrew levanta el teléfono, apunta hacia la montaña y hace zoom. Y en la cima, recortada contra el cielo, aparece una figura que parece estar de pie.
 
-Nueve de abril de dos mil veintidós. Por la autopista baja una camioneta de trabajo. En el asiento del copiloto va un hombre de treinta y cuatro años. Se llama Andrew Dawson.
+"Creo que es una persona", le dice al que conduce. "Hay alguien ahí parado."
 
-Andrew levanta su teléfono. Apunta a la montaña. Hace zoom. Y en la cima, recortada contra el cielo, ve una figura.
+Pero piensa una cosa. Desde esa distancia, una persona normal no se vería jamás. Para que algo parezca un hombre de pie a tantos kilómetros, tendría que ser del tamaño de un edificio.
 
-Una figura de pie.
+Esa misma noche, Andrew sube el video a TikTok y le pone encima un texto en mayúsculas, escrito con prisa: "ES UN GIGANTE".
 
-"Creo que es una persona", le dice al conductor. "Ahí parada."
-
-Pero ninguna persona puede verse desde esa distancia. A esa distancia, para que algo parezca un hombre de pie, tendría que medir lo que mide un edificio.
-
-Esa misma noche, Andrew sube el vídeo a TikTok. Escribe encima cuatro palabras, así, sin apóstrofo, con prisa: "ES UN GIGANTE".
-
-Lo que pasó en las cinco semanas siguientes convirtió ese vídeo en una de las historias más compartidas de internet.
-
-Y terminó en un periódico local de la isla de Vancouver. En la página de los obituarios.
+Lo que pasó en las cinco semanas siguientes convirtió ese video en una de las historias más compartidas de internet. Y la historia terminó en un periódico pequeño de la isla de Vancouver, en la página de los obituarios.
 
 ---
 
 ## 3. TODOS LO VIERON
 
-Millones de personas vieron esos vídeos. Su cuenta pasó de unos cincuenta y seis mil seguidores a más de quinientos mil. El primer vídeo superó los cuatro millones de reproducciones.
+Para que te hagas una idea de lo que fue esto, la cuenta de Andrew pasó de unos cincuenta y seis mil seguidores a más de quinientos mil. Solo el primer video superó los cuatro millones de reproducciones.
 
-Y casi todo el mundo se quedó con la misma versión: un hombre grabó a un gigante, el gobierno lo persiguió, y después murió.
+Y la mayoría de esa gente se quedó con la misma versión: que un hombre grabó a un gigante, que el gobierno empezó a perseguirlo, y que después murió.
 
-Esa versión sigue circulando hoy. En vídeos de un minuto. En publicaciones que se copian unas a otras. Cada vez con un detalle nuevo. Cada vez con menos fuentes.
+Esa versión sigue dando vueltas hoy en día, en videos de un minuto y en publicaciones que se copian unas a otras. Cada vez que alguien la cuenta, le añade un detalle nuevo, y cada vez tiene menos fuentes.
 
-Esto es Todos Lo Vieron. Aquí tomamos los casos que todo el mundo vio, y contamos lo que nadie te contó.
+Esto es Todos Lo Vieron, el canal donde tomamos los casos que todo el mundo vio y te contamos lo que nadie te contó.
 
-En este caso vamos a hacer algo que casi nadie hizo: ir vídeo por vídeo, en orden, con las fechas reales. Vamos a mirar qué hay de verdad en la cima de esa montaña. Vamos a buscar qué edificio "no estaba ahí antes". Y vamos a ver por qué a veinte kilómetros de ese mismo lugar, hace setenta años, un hombre firmó una declaración jurada sobre algo que vio en el bosque.
+Y en este caso vamos a hacer algo que casi nadie se tomó la molestia de hacer. Vamos a ir video por video, en orden y con las fechas reales. Vamos a mirar qué hay de verdad en la cima de esa montaña, y a buscar ese edificio que, según Andrew, "no estaba ahí antes". También te voy a contar por qué, a solo veinte kilómetros de ese lugar, hace setenta años, un hombre fue a una oficina oficial a declarar bajo juramento algo que había visto en el bosque.
 
-Y al final vamos a escuchar a la persona que mejor conocía a Andrew. Porque ella contó cómo terminó esta historia. Y casi nadie la escuchó.
+Y al final vamos a escuchar a la persona que mejor conocía a Andrew. Porque ella contó cómo terminó todo esto, y casi nadie quiso escucharla.
 
-Empecemos por el lugar. Porque en abril de dos mil veintidós, Valemount no era un pueblo tranquilo.
+Pero empecemos por el lugar, porque en la primavera de dos mil veintidós Valemount no era, para nada, un pueblo tranquilo.
 
 ---
 
 ## 4. EL PUEBLO QUE SE LLENÓ DE DESCONOCIDOS
 
-Para entender lo que vio Andrew hay que entender dónde estaba.
+Para entender lo que vio Andrew, primero tienes que entender dónde estaba.
 
-Valemount nació alrededor del ferrocarril. El nombre se lo pusieron en mil novecientos veintisiete a una estación de tren, juntando dos palabras inglesas: "vale", valle, y "mount", monte. Durante décadas vivió de la madera. El aserradero cerró en dos mil seis, y el pueblo se quedó con el turismo: nieve en invierno, montañas en verano, y gente de paso hacia el parque nacional de Jasper.
+Valemount nació alrededor del ferrocarril. El nombre se lo pusieron en mil novecientos veintisiete a una estación de tren, juntando dos palabras inglesas, "vale", que es valle, y "mount", que es monte. Durante décadas el pueblo vivió de la madera, hasta que el aserradero cerró en dos mil seis. Desde entonces vive sobre todo del turismo: nieve en invierno, montañas en verano, y gente que pasa de camino al parque nacional de Jasper.
 
-Pero en dos mil veintidós pasaba algo distinto. Por el valle se estaba construyendo la ampliación de un oleoducto enorme, el Trans Mountain, una tubería que cruza las montañas para llevar petróleo desde Alberta hasta la costa del Pacífico.
+Pero en dos mil veintidós estaba pasando algo muy distinto. Por ese valle se estaba construyendo la ampliación de un oleoducto enorme, el Trans Mountain, una tubería que cruza las montañas para llevar petróleo desde Alberta hasta la costa del Pacífico. Y para construirla llegó un auténtico ejército de trabajadores.
 
-Y para construirla llegó un ejército de trabajadores.
+A finales de enero de ese año, la prensa local contaba más de dos mil trabajadores en la zona. Imagínate lo que es eso para un pueblo de mil habitantes: de repente, hay el doble de gente que no es de allí. Había un campamento con sitio para seiscientos hombres, camiones a todas horas, maquinaria pesada en los caminos forestales, controles de seguridad, carreteras cortadas por las obras… y helicópteros.
 
-A finales de enero de dos mil veintidós, la prensa local contaba más de dos mil trabajadores en la zona de Valemount. Un pueblo de mil habitantes, de pronto, con el doble de gente que no era de allí. Había un campamento con capacidad para seiscientos hombres. Había camiones a todas horas, maquinaria pesada en los caminos forestales, controles de seguridad, carreteras cerradas por obras. Y helicópteros.
+Acuérdate de ese detalle, el de los helicópteros, porque más adelante va a ser importante.
 
-Recuerden ese detalle. Los helicópteros.
+Andrew Dawson era uno de esos hombres de fuera. Venía de Campbell River, una ciudad de la costa este de la isla de Vancouver, que se presenta a sí misma como la capital mundial del salmón. Una ciudad de pescadores y de aserraderos, a unos setecientos kilómetros de Valemount, al otro lado de la provincia.
 
-Andrew Dawson era uno de esos hombres de fuera. Venía de Campbell River, una ciudad de la costa este de la isla de Vancouver, frente al estrecho que la separa del continente. Una ciudad de pescadores y aserraderos que se presenta a sí misma como la capital mundial del salmón. Está a unos setecientos kilómetros de Valemount, al otro lado de la provincia, entre el mar y el bosque.
+Según varias fuentes, Andrew estaba allí trabajando en la obra del oleoducto, como tantos otros, lejos de casa, con turnos largos, en un pueblo donde apenas conocía a nadie.
 
-Según varias fuentes, Andrew estaba en Valemount trabajando en la obra del oleoducto. Como tantos otros, lejos de casa, en turnos largos, en un pueblo donde no conocía a casi nadie.
+Tenía pareja y tenía un hijo. Y tenía también una cuenta de TikTok, con el nombre de usuario "andykapt", donde subía videos cortos, como hacen millones de personas.
 
-Tenía pareja. Tenía un hijo. Y tenía una cuenta de TikTok, con el nombre de usuario "andykapt", donde subía vídeos cortos como hacen millones de personas.
-
-Hasta el nueve de abril, nada de eso le importaba a nadie.
+Hasta el nueve de abril, a nadie le importaba nada de eso.
 
 ---
 
 ## 5. EL PRIMER VÍDEO
 
-Vamos a mirar ese primer vídeo con calma, porque todo lo demás sale de aquí.
+Vamos a mirar ese primer video con calma, porque todo lo demás sale de aquí.
 
-Está grabado desde dentro de un vehículo en movimiento. Se oye el motor. La imagen tiembla. Andrew va de copiloto, en la autopista Yellowhead, al sur de Valemount, mirando hacia el sur, hacia Canoe Mountain.
+Está grabado desde dentro de un vehículo que va en marcha. Se oye el motor y la imagen tiembla todo el rato. Andrew va de copiloto por la autopista Yellowhead, al sur de Valemount, y está mirando hacia Canoe Mountain.
 
-Hace zoom al máximo. Con el zoom digital de un teléfono, la imagen se llena de ruido, los bordes se vuelven blandos, y la cima de la montaña se convierte en una mancha blanca con un punto oscuro encima.
+Cuando hace zoom al máximo pasa lo que pasa siempre con el zoom digital de un teléfono: la imagen se llena de ruido, los bordes se vuelven borrosos, y la cima de la montaña acaba convertida en una mancha blanca con un punto oscuro encima.
 
-Ese punto oscuro tiene forma vertical. Una parte más ancha arriba, más estrecha abajo. Con un poco de imaginación, unos hombros. Una cabeza. Unas piernas.
+Ese punto oscuro es alargado, más ancho arriba y más estrecho abajo. Y si le pones un poco de imaginación, ves unos hombros, una cabeza, unas piernas.
 
-El conductor, que va mirando la carretera, no parece convencido. Andrew insiste: cree que es una persona ahí parada.
+El que conduce, que va pendiente de la carretera, no parece muy convencido. Pero Andrew insiste en que ahí hay una persona.
 
-Y aquí está lo primero que casi nadie se detuvo a pensar.
+Y aquí viene lo primero en lo que casi nadie se paró a pensar.
 
-La cima está a unos dieciséis kilómetros del pueblo y a más de mil ochocientos metros por encima del valle. Si una persona normal estuviera de pie allá arriba, en ese vídeo no se vería. Ni con el mejor teléfono del mundo. Sería más pequeña que un solo píxel.
+La cima está a unos dieciséis kilómetros del pueblo y a más de mil ochocientos metros por encima del valle. Si una persona normal estuviera allí de pie, en ese video no se vería, ni con el mejor teléfono del mundo. Ocuparía menos que un solo píxel.
 
-Para que se hagan una idea: ver a una persona de pie a doce kilómetros es como intentar ver un grano de arroz al otro lado de una piscina olímpica. Y ver ese grano de arroz desde un coche en marcha, con la mano temblando y a través del cristal.
+Para que te hagas una idea, ver a una persona de pie a doce kilómetros es como intentar ver un grano de arroz al otro lado de una piscina olímpica. Y encima desde un auto en marcha, con la mano temblando y a través del cristal.
 
-Lo que se ve en el vídeo de Andrew no es un grano de arroz. Es una figura clara, con forma. Para verse así a esa distancia, tendría que medir decenas de metros.
+Lo que sale en el video de Andrew no es un grano de arroz. Es una figura clara, con forma. Para verse así a esa distancia, tendría que medir decenas de metros.
 
-Así que solo hay dos posibilidades. O lo que hay en la cima es algo muy, muy grande. O no es una persona.
+Así que, en realidad, solo hay dos opciones. O lo que hay en la cima es algo muy, muy grande, o no es una persona.
 
-Andrew eligió la primera. Y la escribió en la pantalla: "es un gigante".
+Andrew se quedó con la primera, y la escribió en la pantalla: "es un gigante".
 
-Ese vídeo empezó a moverse. Primero miles de vistas. Luego cientos de miles. En los comentarios, la gente pedía lo mismo: vuelve, acércate, sube.
+El video empezó a moverse. Primero fueron miles de vistas, después cientos de miles. Y en los comentarios casi todo el mundo pedía lo mismo: vuelve, acércate, sube a ver qué es.
 
-Y otros empezaron a criticarle. La imagen tiembla demasiado. No se ve nada. ¿Por qué no paraste el coche? ¿Por qué no subiste?
+Claro que también hubo quien lo criticó. Que la imagen tiembla demasiado, que no se ve nada, que por qué no paró el auto, que por qué no subió.
 
 Dos días después, Andrew contestó.
 
@@ -152,131 +134,119 @@ Dos días después, Andrew contestó.
 
 ## 6. LA MONTAÑA
 
-Antes de seguir con los vídeos, conozcamos la montaña. Porque la montaña es la protagonista silenciosa de esta historia.
+Pero antes de seguir con los videos, quiero que conozcas un poco la montaña, porque en esta historia ella es la protagonista silenciosa.
 
-Canoe Mountain no es la montaña más alta de la zona. Su vecina, el monte Robson, es el pico más alto de las Rocosas canadienses. Canoe es más discreta. Pero tiene algo que la hace especial: es brutalmente empinada por un lado.
+Canoe Mountain no es la montaña más alta de la zona. Muy cerca está el monte Robson, que es el pico más alto de todas las Rocosas canadienses. Canoe es más discreta, pero tiene algo que la hace especial: por uno de sus lados es brutalmente empinada.
 
-Por el lado este, la cima se levanta casi dos kilómetros por encima del embalse de Kinbasket en apenas cinco kilómetros de distancia. Hay un precipicio de cerca de mil metros que cae hacia el agua.
+Por el lado este, la cima se levanta casi dos kilómetros por encima del embalse de Kinbasket en apenas cinco kilómetros de distancia. Ahí hay un precipicio de cerca de mil metros que cae directo hacia el agua.
 
-Por el lado oeste, en cambio, la pendiente es más suave. Y por ese lado sube un camino de tierra. Un camino que existe desde hace décadas, que se considera uno de los caminos de montaña más altos de Canadá, y que los aficionados a los vehículos todoterreno conocen bien.
+Por el lado oeste, en cambio, la pendiente es mucho más suave. Y por ese lado sube un camino de tierra que existe desde hace décadas, que se considera uno de los caminos de montaña más altos de Canadá, y que los aficionados a los todoterreno conocen muy bien.
 
-Ahora, piensen en esto. Si hay un camino que sube hasta la cima de una montaña donde no vive nadie, alguien lo construyó. Y si alguien lo construyó, fue para llevar algo hasta arriba.
+Ahora piensa en esto conmigo. Si hay un camino que sube hasta la cima de una montaña donde no vive nadie, es porque alguien lo construyó. Y si alguien se tomó el trabajo de construirlo, es porque necesitaba llevar algo hasta arriba.
 
-¿Qué hay en la cima de Canoe Mountain?
+Entonces, ¿qué hay en la cima de Canoe Mountain?
 
-Lo vamos a ver. Pero no todavía. Porque primero quiero que vean la historia como la vio la gente en dos mil veintidós: sin saber la respuesta. Así es como funcionan estos casos. Cuando no sabes lo que hay en la cima, cualquier cosa puede estar en la cima.
+Te lo voy a contar, pero todavía no. Primero quiero que vivas la historia como la vivió la gente en dos mil veintidós, sin saber la respuesta. Porque así es como funcionan estos casos: mientras no sabes lo que hay en la cima, en la cima puede haber cualquier cosa.
 
 ---
 
 ## 7. VA Y VIENE
 
-Once de abril. Andrew sube dos vídeos para contestar a las críticas.
+El once de abril, Andrew sube dos videos para contestar a las críticas.
 
-En el primero explica por qué la imagen tiembla: iba en un vehículo en marcha por una autopista de montaña. En el segundo explica por qué no puede simplemente subir: la montaña está lejos, la cima está muy alta, y en abril todavía hay nieve allá arriba.
+En el primero explica por qué la imagen tiembla tanto: iba en un vehículo, por una autopista de montaña. En el segundo explica por qué no puede subir así sin más: la montaña está lejos, la cima está altísima, y en abril allá arriba todavía hay nieve.
 
-Son explicaciones razonables. Pero la gente no quiere explicaciones. Quiere más.
+Son explicaciones bastante razonables. Pero a esas alturas la gente ya no quiere explicaciones, quiere más.
 
-Doce de abril. Andrew publica un vídeo nuevo, grabado desde otro sitio, más cerca de la montaña. Según los que han rastreado las imágenes, desde la zona del campamento del oleoducto, al sureste del pueblo.
+Y al día siguiente, el doce de abril, Andrew publica un video nuevo, grabado desde otro sitio, más cerca de la montaña. Según los que han rastreado las imágenes, lo grabó desde la zona del campamento del oleoducto, al sureste del pueblo.
 
-Hace zoom otra vez a la cima.
+Vuelve a hacer zoom a la cima… y la figura ya no está.
 
-Y la figura no está.
+La cima se ve limpia, solo nieve, roca y cielo. No hay nada de pie.
 
-La cima se ve limpia. Nieve, roca y cielo. Nada de pie.
+Y entonces Andrew suelta una frase que lo cambia todo. Dice que ha estado hablando con gente del pueblo, y que, según le contaron, eso "va y viene".
 
-Y Andrew dice una frase que lo cambia todo. Dice que ha hablado con gente del pueblo. Y que, según le dijeron, eso "va y viene".
+Piensa en lo que provoca esa frase en alguien que está viendo esto en el celular a las dos de la mañana. Ya no se trata de un objeto raro en una montaña. Ahora es algo que aparece y desaparece, algo que se mueve, algo que a veces está y a veces no.
 
-Piensen en lo que provoca esa frase en alguien que está viendo esto en su móvil a las dos de la mañana. Ya no es un objeto en una montaña. Es algo que aparece y desaparece. Algo que se mueve. Algo que a veces está y a veces no.
+Las visitas se disparan. Ese video supera las setecientas cincuenta mil reproducciones.
 
-Las vistas se disparan. El segundo vídeo supera las setecientas cincuenta mil reproducciones.
-
-Pero ese mismo día, el doce de abril, Andrew publica otro vídeo. Y en ese ya no habla de la montaña.
-
-Habla de un hombre.
+Pero ese mismo día Andrew sube otro video más. Y en ese ya no habla de la montaña. Habla de un hombre.
 
 ---
 
 ## 8. EL HOMBRE DEL CAMINO
 
-El vídeo está grabado dentro de su casa. Andrew mira a la cámara y cuenta lo que le acaba de pasar.
+Este video está grabado dentro de su casa. Andrew mira a la cámara y te cuenta lo que le acaba de pasar.
 
-Dice que, siguiendo el consejo de alguien del pueblo, tomó un camino que sube hacia la montaña. Que quería acercarse. Y que en el camino le paró un hombre.
+Dice que, siguiendo el consejo de alguien del pueblo, tomó un camino que sube hacia la montaña, porque quería acercarse. Y que a mitad de camino le paró un hombre.
 
-El hombre le dijo que se diera la vuelta. Que estaba invadiendo una propiedad. Y cuando Andrew preguntó por qué estaba cerrado el camino, el hombre le contestó con algo vago: algún "problema ambiental".
+Ese hombre le dijo que se diera la vuelta, que estaba entrando en una propiedad privada. Y cuando Andrew le preguntó por qué estaba cerrado el camino, el hombre le contestó algo muy vago, algo sobre un "problema ambiental".
 
-Andrew no sabe quién es ese hombre. Pero tiene una teoría. Y la dice en voz alta.
+Andrew no sabe quién es ese hombre, pero tiene una teoría, y la dice en voz alta. Cree que es un agente de la CIA.
 
-Cree que es un agente de la CIA.
+A partir de ahí, la historia cambia por completo. Ya no es un video raro de una montaña. Ahora es una historia de conspiración: un hombre normal ve algo que no debía ver, intenta acercarse, y alguien del gobierno le cierra el paso.
 
-A partir de ese momento, la historia cambia de género. Ya no es un vídeo raro de una montaña. Ahora es una historia de conspiración. Un hombre normal ve algo que no debía ver, intenta acercarse, y alguien del gobierno le cierra el paso.
+Es la misma historia que hemos visto cientos de veces en el cine y en la tele. Y justamente por eso funciona tan bien, porque no hace falta explicar nada. Todo el mundo conoce ya ese guion, y todo el mundo sabe más o menos lo que viene después.
 
-Es exactamente la historia que hemos visto cientos de veces en el cine y la televisión. Y por eso funciona. No hace falta explicar nada. El público ya conoce el guion. Ya sabe lo que viene después.
-
-Andrew promete volver.
-
-Y vuelve a la mañana siguiente. Muy temprano.
+Andrew promete que va a volver. Y vuelve a la mañana siguiente, muy temprano.
 
 ---
 
 ## 9. EL DÍA DE LOS CUATRO VÍDEOS
 
-Trece de abril de dos mil veintidós. El día más intenso de toda la historia. Andrew publica cuatro vídeos.
+El trece de abril de dos mil veintidós es el día más intenso de toda esta historia. Ese día, Andrew publica cuatro videos.
 
-El primero, según él, está grabado a las cinco y media de la mañana. Todavía es de noche. Andrew explica que se ha levantado temprano para volver al camino donde le pararon. Se sube a su camioneta. Arranca el motor.
+El primero, según él, lo graba a las cinco y media de la mañana. Todavía es de noche. Andrew cuenta que se ha levantado temprano para volver al camino donde le pararon, se sube a la camioneta y arranca el motor.
 
-El segundo vídeo es el más extraño de todos. Andrew está parado en su camioneta y graba el cielo sobre las montañas. Hay una luz. Una luz brillante, quieta, suspendida sobre los picos.
+El segundo es el más extraño de todos. Andrew está parado dentro de la camioneta y graba el cielo por encima de las montañas. Y ahí, sobre los picos, hay una luz brillante, quieta, como suspendida en el aire.
 
-Y aquí hay un detalle que dice mucho. A ese vídeo, Andrew le pone de fondo la música de una famosa serie de televisión de los años noventa sobre agentes del FBI que investigan ovnis y fenómenos paranormales. Y escribe una pregunta: "¿La cosa de la montaña se fue a casa?"
+Pero fíjate en un detalle que dice mucho. A ese video, Andrew le pone de fondo la música de una serie muy famosa de los años noventa, la de los dos agentes del FBI que investigan ovnis y casos paranormales. Y escribe una pregunta: "¿La cosa de la montaña se fue a casa?"
 
-Es decir: el gigante, ahora, quizá venía de otro lugar. De otro planeta. Y esa luz sería su forma de irse.
+O sea, que ahora el gigante, a lo mejor, venía de otro sitio. De otro planeta, quizás. Y esa luz sería su manera de irse.
 
-Ese vídeo supera las seiscientas setenta mil reproducciones.
+Ese video pasa de las seiscientas setenta mil reproducciones.
 
-Guarden esta luz en la memoria. Porque de todos los elementos de esta historia, es el único que casi ningún investigador ha intentado explicar. Más adelante vamos a mirar el cielo de esa madrugada. Y lo que había en él.
+Guárdate esa luz en la memoria, porque de todo lo que aparece en esta historia, es lo único que casi ningún investigador ha intentado explicar. Más adelante vamos a mirar cómo estaba el cielo esa madrugada, y lo que había en él.
 
-El tercer vídeo está grabado desde la camioneta en marcha. En el cielo pasan dos helicópteros. De uno de ellos cuelga algo: una carga, atada con un cable largo, balanceándose bajo la máquina.
+El tercer video lo graba desde la camioneta en marcha. Por el cielo pasan dos helicópteros, y de uno de ellos cuelga algo, una carga atada a un cable largo, que se balancea por debajo.
 
-Andrew lo dice sin dudar: "Están sacando algo de aquí".
+Andrew lo tiene clarísimo: "Están sacando algo de aquí".
 
-Más de quinientas mil personas vieron ese vídeo.
+Más de quinientas mil personas vieron ese video.
 
-Y el cuarto vídeo es de noche. Andrew conduce por un camino forestal. Los faros iluminan un sedán negro parado. Delante del coche camina un hombre.
+Y el cuarto video es de noche. Andrew va conduciendo por un camino forestal, y los faros iluminan un sedán negro parado. Delante del auto, caminando, hay un hombre.
 
-Andrew dice que es el mismo hombre del día anterior. Deja el teléfono a un lado, como para que no se vea que está grabando. La imagen se vuelve casi negra. Pero el audio sigue.
+Andrew dice que es el mismo hombre del día anterior. Deja el teléfono a un lado, como si quisiera que no se notara que está grabando, y la imagen se queda casi negra. Pero el audio sigue.
 
-Andrew pregunta qué está pasando.
+Se oye a Andrew preguntar qué está pasando. Y una voz de hombre le contesta: "La carretera está cerrada. Date la vuelta."
 
-Una voz de hombre contesta: "Carretera cerrada. Date la vuelta."
+Y después, en un tono más suave: "Sí, hombre, date la vuelta, por favor."
 
-Y luego, más suave: "Sí, hombre. Date la vuelta, por favor."
+Andrew obedece, da la vuelta y se va.
 
-Andrew obedece. Da la vuelta. Se va.
-
-Si se fijan, en ese intercambio no hay nada amenazante. No hay un arma, no hay una placa, no hay un nombre. Hay un hombre que dice "por favor". Pero en la mente de quien ya ha visto los vídeos anteriores, esa voz no es la de un vigilante cualquiera. Es la voz de alguien que esconde algo.
+Si lo piensas bien, en esa conversación no hay nada amenazante. No hay un arma, no hay una placa, no hay ningún nombre. Hay un hombre que te dice "por favor". Pero en la cabeza de alguien que ya vio todos los videos anteriores, esa no es la voz de un vigilante cualquiera. Es la voz de alguien que está escondiendo algo.
 
 ---
 
 ## 10. ME ESTÁN SIGUIENDO
 
-Dieciséis de abril. Andrew publica otro vídeo. En la miniatura, en letras grandes: "ME ESTÁN ACECHANDO".
+El dieciséis de abril, Andrew sube otro video. Y esta vez, en la miniatura, se lee en letras enormes: "ME ESTÁN ACECHANDO".
 
-Está dentro de su casa. Se acerca a una ventana. Mira entre las láminas de la persiana. Afuera hay un coche. Andrew dice que es el mismo vehículo de la otra noche.
+Está dentro de su casa. Se acerca a la ventana y mira entre las láminas de la persiana. Fuera hay un auto, y Andrew dice que es el mismo de la otra noche.
 
-Sale de la casa. Grita "¡Eh!". Y el coche acelera y se va.
+Entonces sale de casa y grita "¡Eh!". Y el auto acelera y se va.
 
-Ese vídeo supera las setecientas ochenta mil reproducciones.
+Ese video supera las setecientas ochenta mil reproducciones.
 
-Fíjense en cómo ha cambiado todo en solo una semana. El nueve de abril, Andrew era un hombre que vio algo raro en una montaña. El dieciséis, es un hombre que se siente vigilado en su propia casa.
+Fíjate cómo ha cambiado todo en solo una semana. El nueve de abril, Andrew era un tipo que había visto algo raro en una montaña. El dieciséis, es un hombre que se siente vigilado en su propia casa. La historia ya no va de un gigante. Ahora va de Andrew.
 
-La historia ya no trata de un gigante. Trata de Andrew.
+Y eso es importante, porque en ese momento sus seguidores dejan de ser simples espectadores y empiezan a preocuparse por él. Le escriben que tenga cuidado, que no vuelva a la montaña, que guarde copias de todo, y que si le pasa algo, ellos se van a enterar.
 
-Y esto es importante, porque aquí los seguidores dejan de ser espectadores. Ahora se preocupan por él. Le escriben que tenga cuidado. Que no vuelva a la montaña. Que guarde copias de todo. Que si le pasa algo, ellos van a saberlo.
+Y justo entonces, Andrew deja de publicar.
 
-Y entonces, Andrew deja de publicar.
+Pero antes de contarte qué pasó en esos días de silencio, quiero que sepas una cosa que muy poca gente de la que siguió este caso sabía.
 
-Pero antes de contarles qué pasó en esos días de silencio, quiero que sepan algo que muy pocos de los que siguieron este caso sabían.
-
-Andrew grabó su gigante en un lugar muy concreto del mapa. Y a unos veinte kilómetros de ese lugar, en mil novecientos cincuenta y cinco, otro hombre vio algo en el bosque. Algo que le marcó tanto que, dos años después, fue a una oficina oficial y lo declaró bajo juramento.
+Andrew grabó su gigante en un punto muy concreto del mapa. Y a unos veinte kilómetros de ese punto, en mil novecientos cincuenta y cinco, otro hombre vio algo en el bosque. Algo que le marcó tanto que, dos años después, fue a una oficina oficial y lo declaró bajo juramento.
 
 Ya llegaremos a él.
 
@@ -284,93 +254,75 @@ Ya llegaremos a él.
 
 ## 11. INTERNET HACE LO SUYO
 
-Durante esos días, el caso se escapa de las manos de Andrew. Ya no es suyo. Es de internet.
+Durante esos días, el caso se le va de las manos a Andrew. Ya no es suyo. Ahora es de internet.
 
-Su cuenta pasa de unos cincuenta y seis mil seguidores a cientos de miles. Sus vídeos se copian, se recortan, se comentan en otras cuentas, en otras plataformas, en otros idiomas.
+Su cuenta pasa de unas decenas de miles de seguidores a cientos de miles. Sus videos se copian, se recortan y se comentan en otras cuentas, en otras plataformas y en otros idiomas.
 
 Y empiezan las teorías.
 
-Hay quien dice que es un sasquatch, el famoso hombre del bosque de Norteamérica. Hay quien dice que es un extraterrestre. Hay quien lo conecta con los nefilim, los gigantes de los que habla el libro del Génesis. Hay quien dice que es una prueba de tecnología militar, un holograma, un proyecto secreto. Hay quien dice que los gigantes vivieron en esas montañas hace miles de años y que el gobierno lo sabe.
+Hay quien dice que es un sasquatch, el famoso hombre del bosque de Norteamérica. Otros dicen que es un extraterrestre. Hay quien lo relaciona con los nefilim, los gigantes de los que habla el libro del Génesis. Hay quien habla de una prueba militar secreta, de un holograma, de un experimento. Y hay quien asegura que en esas montañas vivieron gigantes hace miles de años, y que el gobierno lo sabe y lo tapa.
 
-Cada teoría trae su propia "prueba". Una foto antigua. Un mapa. Una noticia de otro país. Un vídeo de otra montaña.
+Cada teoría trae su propia "prueba": una foto antigua, un mapa, una noticia de otro país, un video de otra montaña.
 
-Y todas tienen algo en común: ninguna empieza por la pregunta más simple de todas.
+Pero todas tienen algo en común. Ninguna empieza por la pregunta más sencilla de todas: ¿qué hay en la cima de esa montaña?
 
-¿Qué hay en la cima de esa montaña?
+Y si nadie se lo pregunta es porque la respuesta aburrida no se comparte. Una teoría sobre gigantes la comparte un millón de personas. La foto de una antena, nadie.
 
-Nadie lo pregunta, porque la respuesta aburrida no se comparte. Una teoría sobre gigantes se comparte un millón de veces. Una foto de una antena, no.
+Mientras tanto, los días pasan. Diez días, quince, veinte. Y Andrew no sube nada.
 
-Mientras tanto, pasan los días. Diez. Quince. Veinte.
+En los comentarios el miedo va creciendo. ¿Dónde está? ¿Por qué no publica? ¿Le habrá pasado algo?
 
-Y Andrew no publica nada.
-
-En los comentarios, el miedo crece. ¿Dónde está? ¿Por qué no sube nada? ¿Le ha pasado algo?
-
-Hasta que el seis de mayo, después de veinte días de silencio, Andrew aparece.
-
-Y lo que dice deja a todo el mundo helado.
+Hasta que el seis de mayo, después de veinte días de silencio, Andrew vuelve a aparecer. Y lo que dice deja a todo el mundo helado.
 
 ---
 
 ## 12. TODO ERA FALSO
 
-Seis de mayo de dos mil veintidós.
+Es el seis de mayo de dos mil veintidós. Andrew le habla a la cámara, y lo primero que dice es que no está muerto. Que mucha gente se lo ha preguntado, y que simplemente ha estado muy ocupado.
 
-Andrew habla a la cámara. Lo primero que dice es que no está muerto. Que mucha gente le ha preguntado. Que simplemente ha estado ocupado.
+Y entonces lo suelta: "Siento decepcionarlos, pero todos los videos que subí estaban guionizados. Eran falsos. Eran solo para entretener."
 
-Y luego lo dice.
+Y ya está. Se acabó el misterio. El gigante, el hombre del camino, los helicópteros, el auto en la puerta, todo inventado.
 
-"Siento decepcionarlos, pero todos los vídeos que publiqué estaban guionizados. Eran falsos. Eran solo para entretener."
+Eso tendría que haber sido el final. Pero no lo fue.
 
-Ya está. Fin del misterio. El gigante, el hombre del camino, los helicópteros, el coche en la puerta: todo inventado.
+Porque la gente que veía ese video no se fijaba en lo que Andrew decía. Se fijaba en cómo lo decía.
 
-Debería haber sido el final.
+Andrew se ve nervioso, habla deprisa, y una y otra vez, mientras habla, desvía la mirada hacia un lado, hacia algo, o hacia alguien, que queda fuera de la imagen.
 
-Pero no lo fue.
+Los comentarios se llenan de la misma idea: que está leyendo algo, que hay alguien con él, que le están obligando a decir eso.
 
-Porque la gente que veía ese vídeo no se fijaba en lo que decía. Se fijaba en cómo lo decía.
+Y fíjate en lo que acaba de pasar. Un hombre dice "esto era mentira", y para millones de personas esa frase no cierra el caso. Al revés, lo confirma. Porque en una historia de conspiración, una confesión es justo lo que le harían decir a alguien a quien quieren callar.
 
-Andrew parece nervioso. Habla rápido. Y una y otra vez, mientras habla, desvía la mirada hacia un lado. Hacia algo, o alguien, que está fuera de la imagen.
+A partir de ese momento, Andrew ya no podía decir nada que lo sacara de la historia que él mismo había empezado.
 
-Los comentarios se llenan de la misma idea. Está leyendo algo. Hay alguien con él. Le están obligando a decir esto.
-
-Fíjense en lo que acaba de pasar. Un hombre dice "esto era mentira". Y para millones de personas, esa frase no cierra el caso. Lo confirma. Porque en una historia de conspiración, una confesión es exactamente lo que harían decir a alguien a quien quieren callar.
-
-A partir de ese momento, ya no había nada que Andrew pudiera decir para salir de la historia que él mismo había empezado.
-
-Y diez días después, Andrew dijo lo contrario.
+Y diez días después, dijo justo lo contrario.
 
 ---
 
 ## 13. LOS DOS ÚLTIMOS VÍDEOS
 
-Dieciséis de mayo. Andrew publica un vídeo de nueve segundos.
+El dieciséis de mayo, Andrew publica un video de nueve segundos. En la miniatura se leen dos palabras: "TENGO MIEDO".
 
-En la miniatura, dos palabras: "TENGO MIEDO".
+Va caminando deprisa por su casa, con muy poca luz, grabándose a sí mismo. Y dice: "Puede que no me vean publicar nunca más. Mis videos no eran falsos."
 
-Camina deprisa por su casa, con poca luz. Se graba a sí mismo. Y dice:
+Son nueve segundos, y casi un millón de personas los vio.
 
-"Puede que no me vean publicar nunca más. Mis vídeos no eran falsos."
+Para los que seguían el caso, eso lo explicaba todo. La confesión del seis de mayo había sido forzada, la verdad era la del principio, y ahora Andrew tenía miedo de que le pasara algo.
 
-Nueve segundos. Casi un millón de reproducciones.
+Y al día siguiente, el diecisiete de mayo, llega el último video.
 
-Para quien seguía el caso, eso lo explicaba todo. La confesión del seis de mayo fue forzada. La verdad es la del principio. Y ahora, Andrew tiene miedo de que le pase algo.
-
-Diecisiete de mayo. El último vídeo.
-
-Diecinueve segundos, grabados desde su camioneta. Andrew apunta a la cima de una montaña y hace zoom. Sobre la roca hay un edificio. Una construcción con forma de caja, con ventanas, plantada en lo alto del pico.
+Son diecinueve segundos grabados desde la camioneta. Andrew apunta a la cima de una montaña y hace zoom. Sobre la roca hay un edificio con forma de caja, con ventanas, plantado en lo alto del pico.
 
 Y Andrew pregunta: "¿Qué es eso? Eso no estaba ahí antes."
 
-La gente lo entendió así: donde estaba el gigante, ahora hay un edificio. Algo se construyó allá arriba, de prisa, en secreto. Una base. Un laboratorio. Una forma de tapar lo que había.
+La gente lo entendió así: donde antes estaba el gigante, ahora hay un edificio. Alguien había construido algo allá arriba, deprisa y en secreto. Una base, un laboratorio, algo para tapar lo que había.
 
-Ese vídeo superó el millón y medio de reproducciones.
+Ese video pasó del millón y medio de reproducciones.
 
-Y después, silencio.
+Y después, silencio. Andrew no volvió a publicar, ni ese día, ni esa semana, ni ese mes. Su cuenta se quedó ahí, congelada, con un hombre asustado y una pregunta sin respuesta.
 
-Andrew no volvió a publicar. Ni ese día, ni esa semana, ni ese mes. Su cuenta se quedó ahí, congelada, con un hombre asustado y una pregunta sin respuesta.
-
-Más adelante vamos a buscar ese edificio. Y les adelanto algo: existe. Está exactamente donde él lo grabó. Y lleva allí mucho más tiempo que él.
+Más adelante vamos a ir a buscar ese edificio, y ya te adelanto una cosa: existe. Está exactamente donde él lo grabó, y lleva allí muchísimo más tiempo que él.
 
 Pero antes tenemos que llegar al uno de julio.
 
@@ -378,256 +330,262 @@ Pero antes tenemos que llegar al uno de julio.
 
 ## 14. UNO DE JULIO
 
-Uno de julio de dos mil veintidós. En Canadá es fiesta nacional, el día de Canadá. Desfiles, banderas, fuegos artificiales.
+El uno de julio es fiesta nacional en Canadá. Es el día de Canadá, con desfiles, banderas y fuegos artificiales por todo el país.
 
-Ese día muere Andrew Ryan Watchorn Dawson. Tenía treinta y cuatro años. Había nacido el cuatro de noviembre de mil novecientos ochenta y siete.
+Y ese uno de julio de dos mil veintidós muere Andrew Ryan Watchorn Dawson. Tenía treinta y cuatro años. Había nacido el cuatro de noviembre de mil novecientos ochenta y siete.
 
-La noticia apareció como aparecen estas noticias en los pueblos: un obituario. Unas pocas líneas en la prensa local de Campbell River, su ciudad, en la isla de Vancouver. Su nombre completo. Las fechas. Y la lista de las personas que dejaba: su pareja, a la que el texto llama su alma gemela. Su hijo. Sus padres. Su familia.
+La noticia salió como salen estas noticias en las ciudades pequeñas, en forma de obituario. Unas pocas líneas en la prensa local de Campbell River, su ciudad, con su nombre completo, las fechas, y la lista de las personas que dejaba atrás: su pareja, a la que el texto llama su alma gemela, su hijo, sus padres, su familia.
 
-El obituario no decía de qué murió.
+El obituario no decía de qué había muerto. Y tampoco tenía por qué decirlo. La mayoría de los obituarios no lo dicen, porque es una decisión de la familia, y es una decisión que hay que respetar.
 
-Y no tenía por qué decirlo. La mayoría de los obituarios no lo dicen. Es una decisión de la familia, y es una decisión que hay que respetar.
+Pero para los que seguían el caso, ese silencio fue una pieza más del rompecabezas. Un hombre graba algo que no debía, dice que lo persiguen, lo obligan a retractarse, dice que tiene miedo, desaparece… y seis semanas después muere sin que nadie explique por qué.
 
-Pero para los seguidores del caso, ese silencio fue una pieza más del rompecabezas. Un hombre graba algo que no debía. Dice que le persiguen. Le obligan a retractarse. Dice que tiene miedo. Desaparece. Y seis semanas después, muere sin explicación.
+Para muchos, ya no había ninguna duda.
 
-Para muchos, ya no había dudas.
+Y para otros, las dudas fueron justo en la dirección contraria. Empezó a circular una idea nueva: que el obituario era falso. Que publicar un obituario en un periódico es facilísimo, que nadie te pide un certificado de defunción. Que Andrew no había muerto, que todo era parte del mismo montaje, y que algún día volvería a aparecer para contar la verdad.
 
-Y para otros, las dudas fueron justo en la dirección contraria. Empezó a circular una idea nueva: que el obituario era falso. Que publicar un obituario en un periódico es fácil, que nadie pide un certificado de defunción para hacerlo. Que Andrew no había muerto, que todo formaba parte del mismo montaje, y que algún día volvería a aparecer con la verdad.
+Fíjate en lo que pasa aquí. Con la misma noticia, unos llegaron a la conclusión de que lo habían silenciado, y otros, de que estaba vivo y escondido. Dos teorías opuestas, nacidas del mismo silencio. Y lo único que no cabía en ninguna de las dos era lo más sencillo de todo: que había una familia de luto.
 
-Fíjense en lo que pasa aquí. Con la misma noticia, unos concluyeron que lo habían silenciado. Y otros, que seguía vivo y escondido. Dos teorías opuestas, nacidas del mismo silencio. Lo único que no cabía en ninguna de las dos era la posibilidad más sencilla: que una familia estuviera de luto.
+La pregunta de si de verdad murió, y por qué, tiene respuesta. La dio alguien que estaba allí, y la vamos a escuchar antes de terminar.
 
-Esa pregunta, si de verdad murió y por qué, tiene respuesta. La dio una persona que estaba allí. Y la vamos a escuchar antes de terminar.
+Pero déjame decirte una cosa. Si yo te hubiera contado esta historia hasta aquí y la cortara ahora mismo, lo más probable es que te fueras pensando lo mismo que casi todo el mundo: que algo estaban tapando, y que a Andrew lo silenciaron.
 
-Y les digo una cosa. Si yo les hubiera contado esta historia hasta aquí, y me detuviera ahora mismo, la mayoría de ustedes se iría pensando lo mismo. Que algo tapaban. Que a Andrew lo silenciaron.
-
-Por eso no me voy a detener aquí. Porque esta es justamente la parte de la historia donde casi todos los vídeos terminan. Y es justamente donde empieza lo que nadie contó.
+Por eso no voy a parar aquí. Porque esta es justo la parte donde terminan casi todos los videos sobre este caso. Y es justo donde empieza lo que nadie te contó.
 
 ---
 
 ## 15. A VEINTE KILÓMETROS, MIL NOVECIENTOS CINCUENTA Y CINCO
 
-Antes de subir a la cima de Canoe Mountain, les prometí un hombre. Aquí está.
+Antes de subir a la cima de Canoe Mountain, te prometí que te iba a hablar de un hombre. Aquí está.
 
-Octubre de mil novecientos cincuenta y cinco. Un hombre llamado William Roe trabaja en la zona de Tête Jaune Cache, un pequeño cruce de caminos muy cerca de Valemount. Es un hombre de monte: ha sido cazador y trampero durante buena parte de su vida. Conoce los animales del bosque. Sabe distinguir un oso a distancia.
+Estamos en octubre de mil novecientos cincuenta y cinco. Un hombre llamado William Roe está trabajando en la zona de Tête Jaune Cache, un pequeño cruce de caminos muy cerca de Valemount. Roe es un hombre de monte. Ha sido cazador y trampero durante buena parte de su vida, conoce a los animales del bosque, y sabe reconocer un oso a distancia.
 
 Un día sube por una montaña cercana, Mica Mountain, hacia una vieja mina abandonada. Mica Mountain está a unos veinte kilómetros de Canoe Mountain.
 
-Es una tarde soleada. Roe se acerca a un claro. Y entre los arbustos ve algo moverse. Lo primero que piensa es que es un oso pardo.
+Es una tarde de sol. Roe llega a un claro, y entre los arbustos ve que algo se mueve. Lo primero que piensa es que es un oso pardo.
 
 Y entonces, según su relato, la criatura se pone de pie. Sobre dos piernas.
 
-Roe se esconde. La observa. Describe una figura de casi dos metros, cubierta de pelo marrón con las puntas plateadas. Brazos largos, gruesos, que le llegan casi a las rodillas. Pies anchos. Y algo que, según él, le impidió disparar: le pareció demasiado humana.
+Roe se esconde y se queda mirándola. Describe una figura de casi dos metros, cubierta de pelo marrón con las puntas plateadas, con unos brazos largos y gruesos que le llegaban casi a las rodillas, y unos pies muy anchos. Y cuenta algo que, según él, le impidió disparar: que le pareció demasiado humana.
 
-La criatura se da cuenta de que está allí. Le mira. Y se aleja caminando hacia el bosque, de pie, sin prisa.
+La criatura se da cuenta de que la están mirando. Lo mira a él. Y se aleja hacia el bosque caminando de pie, sin ninguna prisa.
 
-Hasta aquí, podría ser una historia más de las muchas que se cuentan junto al fuego. Pero William Roe hizo algo que casi nadie hace.
+Hasta aquí, podría ser una más de las muchas historias que se cuentan alrededor del fuego. Pero William Roe hizo algo que casi nadie hace.
 
-El veintisiete de agosto de mil novecientos cincuenta y siete, en la ciudad de Edmonton, en la provincia vecina de Alberta, Roe firmó una declaración jurada ante un comisionado de juramentos. Un documento legal. Con su nombre. Contando lo que vio en Mica Mountain.
+El veintisiete de agosto de mil novecientos cincuenta y siete, en la ciudad de Edmonton, en la provincia vecina de Alberta, Roe firmó una declaración jurada ante un comisionado de juramentos. Un documento legal, con su nombre y su firma, contando lo que vio en Mica Mountain.
 
-Esa declaración se convirtió en uno de los testimonios más citados de la historia del sasquatch.
+Esa declaración acabó convirtiéndose en uno de los testimonios más citados de toda la historia del sasquatch.
 
-Ahora, sean prudentes con esto. Una declaración jurada demuestra que un hombre estaba convencido de lo que contaba. No demuestra que la criatura existiera. Nadie ha encontrado nunca, en ese bosque ni en ningún otro, un cuerpo, un hueso, una prueba que la ciencia pueda estudiar.
+Ahora, hay que ser prudentes con esto. Una declaración jurada demuestra que un hombre estaba convencido de lo que contaba, pero no demuestra que la criatura existiera. Nadie ha encontrado nunca, ni en ese bosque ni en ningún otro, un cuerpo, un hueso o una prueba que la ciencia pueda estudiar.
 
-Pero sí demuestra otra cosa. Que en esas montañas, mucho antes de TikTok, ya había una historia esperando. Una historia de figuras enormes, de pie, que se ven de lejos y desaparecen.
+Lo que sí demuestra es otra cosa. Que en esas montañas, mucho antes de que existiera TikTok, ya había una historia esperando. Una historia de figuras enormes, de pie, que se ven de lejos y luego desaparecen.
 
-De hecho, la propia palabra "sasquatch" nació en esta provincia. Viene de una palabra de los pueblos originarios de la costa de Columbia Británica, y en los años veinte un maestro la adaptó al inglés al recoger sus relatos sobre los hombres salvajes del bosque.
+De hecho, la propia palabra "sasquatch" nació en esta misma provincia. Viene de una palabra de los pueblos originarios de la costa de Columbia Británica, y en los años veinte un maestro la adaptó al inglés mientras recogía sus relatos sobre los hombres salvajes del bosque.
 
-Así que cuando Andrew escribió "es un gigante" sobre una montaña de Columbia Británica, no estaba inventando un monstruo de la nada. Estaba tocando una historia que la gente de esas montañas lleva un siglo contando.
+Así que cuando Andrew escribió "es un gigante" sobre una montaña de Columbia Británica, no se estaba inventando un monstruo de la nada. Estaba tocando una historia que la gente de esas montañas lleva un siglo contando.
 
-Y eso explica por qué tanta gente estaba preparada para creerle.
-
----
-
-## 16. UNA PELÍCULA EN UN RÍO DE CALIFORNIA
-
-Hay otra razón por la que el vídeo de Andrew nos resultó tan familiar. Ya habíamos visto algo parecido.
-
-Veinte de octubre de mil novecientos sesenta y siete. Bluff Creek, un riachuelo perdido en los bosques del norte de California. Dos hombres a caballo, Roger Patterson y Bob Gimlin, recorren el cauce con una cámara de cine de dieciséis milímetros. Buscan precisamente eso: pruebas del hombre del bosque.
-
-Y según su relato, la encuentran. En la orilla del riachuelo, una figura grande, oscura y peluda camina sobre dos piernas. Patterson baja del caballo y corre detrás con la cámara encendida. La imagen salta, se mueve, pierde el encuadre. Y en un momento, la figura gira la cabeza y el torso hacia la cámara, sin dejar de caminar, y sigue hacia los árboles.
-
-Menos de un minuto de película. Y más de medio siglo de discusiones.
-
-Para unos, es la prueba más importante que existe de una especie desconocida: la forma de caminar, las proporciones, los músculos que parecen moverse bajo el pelo. Para otros, es un hombre con un disfraz. En dos mil cuatro, un hombre llamado Bob Heironimus aseguró públicamente que él era quien llevaba el traje aquel día. Los defensores de la película respondieron que su relato no encajaba. Y la discusión sigue hasta hoy, sin que nadie haya podido cerrarla.
-
-¿Ven el patrón? Una grabación borrosa, hecha por alguien que buscaba algo. Una figura que parece humana pero demasiado grande. Un movimiento de cámara que impide ver bien. Y después, décadas de gente mirando los mismos fotogramas y viendo cosas distintas.
-
-El vídeo de Andrew tiene exactamente esa forma. Solo que, en lugar de una película de dieciséis milímetros proyectada en salas pequeñas, era un vídeo de teléfono que llegó a millones de pantallas en pocas horas. Lo que a la película de mil novecientos sesenta y siete le llevó años, a Andrew le llevó un fin de semana.
-
-Y hay una diferencia más. La película de Bluff Creek se puede estudiar: se ha medido, se ha estabilizado, se ha comparado con el terreno. El vídeo de Andrew también se puede estudiar. Solo hay que hacer lo que casi nadie hizo: ir a la montaña y mirar qué hay en la cima.
-
-Ahora sí. Vamos a subir.
+Y eso explica en parte por qué tanta gente estaba lista para creerle.
 
 ---
 
-## 17. LO QUE HAY EN LA CIMA
+## 16. LA FOTO QUE ALGUIEN ROBÓ
 
-Volvamos al camino de tierra que sube por el lado oeste de Canoe Mountain. El camino que alguien construyó para llevar algo hasta arriba.
+Hay otra historia de esta misma provincia que te ayuda a entender por qué la idea del "agente que lo tapa todo" prendió tan rápido.
 
-Ese algo existe. Y no es ningún secreto.
+En el año dos mil seis, un investigador de lo paranormal en Estados Unidos recibió una fotografía muy antigua. En ella se ve un animal peludo tendido en la nieve, en un claro de montaña, con una trampa enganchada en una de sus extremidades. Al lado hay unas raquetas de nieve clavadas de pie, como para que se vea el tamaño.
 
-En la cima de Canoe Mountain hay una antigua estación de telecomunicaciones. Una torre, y junto a ella un edificio pequeño de hormigón y metal.
+Según quien la entregó, la foto se había tomado en mil ochocientos noventa y cuatro, cerca de Lillooet, un pueblo del sur de Columbia Británica. Y detrás de la foto había una nota escrita a mano que contaba una historia increíble: que la compañía que controlaba aquella zona había confiscado las fotos para que nadie las viera, y que uno de los hombres que estuvo allí se había metido en la oficina donde las guardaban para sacarles una copia a escondidas.
 
-Para entender por qué está allí, hay que volver a los años cincuenta. En aquella época, Canadá tenía un problema: es un país enorme, y no había forma de llevar la señal de televisión y de teléfono de una costa a otra. La solución fue una cadena de torres de microondas. Cada torre recibía la señal de la anterior y la lanzaba a la siguiente, en línea recta, de colina en colina, de montaña en montaña.
+¿Te suena? Un hallazgo en las montañas, una organización poderosa que lo esconde, y un hombre corriente que se arriesga para que la verdad salga a la luz. Es exactamente la misma estructura que la historia de Andrew, solo que más de cien años antes.
 
-El uno de julio de mil novecientos cincuenta y ocho, la gran red de microondas transcanadiense se inauguró con una emisión de televisión en directo de costa a costa. Ciento treinta y nueve torres a lo largo de más de seis mil kilómetros. En su momento, fue la red de este tipo más larga del mundo.
+El investigador canadiense que analizó esa foto encontró varios problemas. La compañía a la que se culpaba nunca se dedicó a la explotación forestal en esa zona. Y el animal de la foto, a su juicio, se parece bastante a un felino salvaje. El hombre que la había difundido murió años después sin aportar ningún dato nuevo.
 
-Por eso las montañas de Canadá se llenaron de torres en sus cimas. Cuanto más alta la torre, más lejos llegaba la señal. Y Canoe Mountain, alta y aislada sobre el valle, era un lugar perfecto.
-
-La estación de Canoe Mountain perteneció a la red de microondas de los ferrocarriles nacionales, y años después pasó a manos privadas. Con la llegada de la fibra óptica, ese tipo de estaciones perdieron casi todo su valor. La de Canoe se quedó allí, abandonada.
-
-En dos mil diecisiete, el periódico local de Valemount publicó un reportaje sobre ella. Los vecinos la describían como un problema: puertas forzadas, ventanas abiertas, pintadas, basura, pájaros y animales metidos dentro. A unos quince metros de un precipicio de mil metros. Uno de los dueños llegó a decir que estarían dispuestos a donarla.
-
-Ahora volvamos al primer vídeo.
-
-Una figura oscura, vertical, en lo más alto de Canoe Mountain, vista a muchos kilómetros con el zoom de un teléfono desde un vehículo en marcha. Más ancha en la parte de arriba, como unos hombros.
-
-Una torre de telecomunicaciones, con sus antenas y su estructura en la parte superior, vista así, a esa distancia, con ese ruido digital, se parece mucho a eso.
-
-Por eso, en noviembre de dos mil veintidós, una cuenta de TikTok lo propuso abiertamente: el gigante era, muy probablemente, la torre. Un investigador canadiense de misterios, que ha escrito sobre este caso, llegó a la misma conclusión: la estructura de la cima es, casi con seguridad, lo que Andrew grabó.
-
-¿Y lo de que "va y viene"? Recuerden que el segundo vídeo se grabó desde otro lugar, más cerca de la montaña. Desde abajo y desde otro ángulo, el propio relieve de la montaña puede tapar la cima. Y en primavera, en esas montañas, las nubes bajas cubren y descubren los picos varias veces al día. Lo que hoy se ve, mañana no se ve. No porque se mueva. Porque se tapa.
-
-Así que el gigante de Canoe Mountain tiene, muy probablemente, una explicación. Y es la explicación más aburrida posible: una antena vieja que lleva más de medio siglo en el mismo sitio.
-
-Pero eso solo explica el primer vídeo. Quedan el hombre del camino, los helicópteros, el coche. Y la luz.
+Pero lo interesante no es si la foto es verdadera o falsa. Lo interesante es que la historia del encubrimiento ya existía, ya estaba en el aire, mucho antes de que Andrew subiera su primer video. Cuando él dijo "un agente me cortó el paso", millones de personas ya tenían el resto de la historia en la cabeza.
 
 ---
 
-## 18. EL HOMBRE, LOS HELICÓPTEROS Y LA LUZ
+## 17. UNA PELÍCULA EN UN RÍO DE CALIFORNIA
 
-Empecemos por el hombre del camino. El supuesto agente de la CIA.
+Y hay una razón más por la que el video de Andrew nos resultó tan familiar. Ya habíamos visto algo muy parecido.
 
-Hay un problema con esa idea desde el principio. La CIA es una agencia de Estados Unidos. No tiene autoridad para cerrar caminos en Canadá. Canadá tiene su propio servicio de inteligencia, y en algunos mensajes Andrew también lo mencionó. Pero el trabajo de ese servicio no consiste en poner a un hombre a pie en un camino forestal para pedir a la gente que se dé la vuelta. Y si alguien quisiera esconder algo en la cima de una montaña, lo último que haría es dejar que un desconocido con un teléfono lo grabara, lo publicara, y siguiera grabando durante cinco semanas más.
+El veinte de octubre de mil novecientos sesenta y siete, en Bluff Creek, un riachuelo perdido entre los bosques del norte de California, dos hombres a caballo, Roger Patterson y Bob Gimlin, van recorriendo el cauce con una cámara de cine de dieciséis milímetros. Están buscando justamente eso, pruebas del hombre del bosque.
 
-Ahora recuerden dónde estaba Andrew. En un valle con más de dos mil trabajadores de un oleoducto. Con maquinaria pesada en los caminos forestales. Con obras, voladuras, zonas restringidas. Que un vigilante de seguridad, o un encargado de obra, corte un camino y diga "por aquí no se puede pasar, date la vuelta, por favor", es probablemente lo más normal que podía ocurrir en Valemount en la primavera de dos mil veintidós.
+Y según su relato, la encuentran. En la orilla del riachuelo, una figura grande, oscura y peluda camina sobre dos piernas. Patterson se baja del caballo y corre detrás con la cámara encendida. La imagen salta, se mueve, pierde el encuadre… y en un momento dado, la figura gira la cabeza y el torso hacia la cámara, sin dejar de caminar, y sigue hacia los árboles.
 
-Y hay otra posibilidad, que mencionó el mismo investigador canadiense: que el hombre del camino fuera simplemente un conocido de Andrew, alguien que aceptó participar en los vídeos. No lo sabemos. Pero en ninguno de los vídeos se ve una placa, un uniforme oficial o un vehículo del gobierno.
+Menos de un minuto de película, y más de medio siglo de discusiones.
 
-Los helicópteros. Dos helicópteros, uno con una carga colgando de un cable largo. En las montañas de Columbia Británica, esa imagen es de lo más habitual. Los helicópteros con carga colgante se usan para llevar material a zonas sin carreteras, para trabajos forestales, para estudios del terreno, para combatir incendios con cubetas de agua. Y en un valle donde se estaba construyendo un oleoducto a través de las montañas, mover material por el aire era parte del trabajo.
+Para unos, es la prueba más importante que existe de una especie desconocida, por la forma de caminar, por las proporciones, por esos músculos que parecen moverse bajo el pelo. Para otros, es simplemente un hombre disfrazado. En dos mil cuatro, un hombre llamado Bob Heironimus aseguró públicamente que él era quien llevaba puesto el traje aquel día. Los defensores de la película respondieron que su relato no encajaba, y la discusión sigue hoy, sin que nadie haya podido cerrarla.
 
-"Están sacando algo de aquí", dijo Andrew. Lo más probable es que estuvieran llevando algo hacia allí. Tuberías, herramientas, equipo.
+¿Ves el patrón? Una grabación borrosa, hecha por alguien que estaba buscando algo. Una figura que parece humana pero demasiado grande. Una cámara que se mueve tanto que no deja ver bien. Y después, décadas de gente mirando los mismos fotogramas y viendo cosas distintas.
 
-Y ahora, la luz.
+El video de Andrew tiene exactamente esa forma. Solo que, en vez de una película de dieciséis milímetros que se proyectaba en salas pequeñas, era un video de celular que llegó a millones de pantallas en unas pocas horas. Lo que a la película de mil novecientos sesenta y siete le costó años, a Andrew le costó un fin de semana.
 
-Les dije que es el elemento que casi nadie intentó explicar. Incluso el investigador que resolvió la torre y el edificio reconoció que la luz no la sabía explicar.
+Pero hay una diferencia más. La película de Bluff Creek se puede estudiar: se ha medido, se ha estabilizado, se ha comparado con el terreno. Y el video de Andrew también se puede estudiar. Solo hace falta hacer lo que casi nadie hizo, ir a la montaña y mirar qué hay en la cima.
 
-Así que miremos el cielo de esa madrugada.
-
-Andrew dijo que se levantó a las cinco y media de la mañana del trece de abril. En abril de dos mil veintidós, antes del amanecer, el cielo del este tenía algo poco habitual: varios planetas alineados y muy brillantes. Marte, Saturno, Júpiter subiendo cada día un poco más. Tanto que, a final de ese mismo mes, Venus y Júpiter llegaron a verse casi pegados, uno de los acercamientos de planetas más comentados del año. Y entre todos ellos, el más brillante con diferencia: Venus. Venus estaba en uno de sus mejores momentos del año como "lucero del alba": el objeto más brillante del cielo después del sol y la luna. Una luz blanca, intensa, quieta, que sale por encima de las montañas antes de que amanezca.
-
-Una luz blanca, intensa y quieta sobre las montañas. Exactamente lo que se ve en el vídeo.
-
-Ahora, seamos honestos. No podemos demostrar que la luz de ese vídeo fuera Venus. No sabemos la hora exacta en que se grabó, ni hacia dónde apuntaba la cámara. Pero de todas las explicaciones posibles, la de un planeta brillante sobre el horizonte antes del amanecer es la más sencilla. Y Venus ha sido confundido con un ovni más veces que ningún otro objeto del cielo.
-
-Lo que sí sabemos con seguridad es esto: el que le puso música de una serie de ovnis a ese vídeo fue el propio Andrew. Eso no es algo que le pase a uno. Es algo que se decide en la edición.
-
-Y ese detalle nos lleva al último vídeo. Al edificio.
+Así que ahora sí, vamos a subir.
 
 ---
 
-## 19. EL EDIFICIO QUE NO ESTABA AHÍ
+## 18. LO QUE HAY EN LA CIMA
 
-Diecisiete de mayo. "¿Qué es eso? Eso no estaba ahí antes."
+Volvamos a ese camino de tierra que sube por el lado oeste de Canoe Mountain, el que alguien construyó para llevar algo hasta arriba.
 
-Un edificio con forma de caja, con ventanas, sobre la cima de una montaña.
+Ese algo existe, y no es ningún secreto. En la cima de Canoe Mountain hay una antigua estación de telecomunicaciones: una torre, y a su lado un edificio pequeño de concreto y metal.
 
-Durante meses se dio por hecho que esa montaña era Canoe Mountain. Que el edificio estaba donde antes estaba el gigante.
+Para entender qué hace eso ahí, tenemos que volver a los años cincuenta. En aquella época Canadá tenía un problema: es un país enorme, y no había forma de llevar la señal de televisión y de teléfono de una costa a la otra. La solución fue construir una cadena de torres de microondas. Cada torre recibía la señal de la anterior y la lanzaba a la siguiente, en línea recta, de colina en colina y de montaña en montaña.
 
-Pero cuando se compara el vídeo con las montañas de la zona, aparece otra candidata. A algo más de una hora en coche hacia el este, cruzando ya a la provincia de Alberta, está la ciudad de Jasper. Y sobre Jasper hay una montaña llamada The Whistlers.
+El uno de julio de mil novecientos cincuenta y ocho, esa gran red de microondas se inauguró con una transmisión de televisión en directo, de costa a costa. Eran ciento treinta y nueve torres repartidas a lo largo de más de seis mil kilómetros, y en su momento fue la red de ese tipo más larga del mundo.
 
-En la cima de The Whistlers hay un edificio. Una estación con forma de caja y grandes ventanas, plantada en lo alto de la roca, a dos mil doscientos sesenta y tres metros de altura.
+Por eso las montañas de Canadá se llenaron de torres en sus cimas. Cuanto más alta estaba la torre, más lejos llegaba la señal. Y Canoe Mountain, alta y aislada sobre el valle, era un sitio perfecto.
 
-Es la estación superior del teleférico de Jasper. El Jasper SkyTram. Uno de los atractivos turísticos más conocidos de la región. Funciona desde mil novecientos sesenta y cuatro. Es el teleférico guiado más alto y más largo de Canadá.
+La estación de Canoe Mountain perteneció a la red de microondas de los ferrocarriles nacionales, y años después pasó a manos privadas. Pero con la llegada de la fibra óptica, ese tipo de estaciones perdieron casi todo su valor, y la de Canoe se quedó ahí arriba, abandonada.
 
-Según el investigador canadiense que analizó el caso, el edificio del último vídeo es, casi con seguridad, esa estación, vista desde las calles de Jasper.
+En dos mil diecisiete, el periódico local de Valemount publicó un reportaje sobre ella, y los vecinos la describían como un auténtico problema: puertas forzadas, ventanas abiertas, grafitis, basura, y pájaros y animales metidos dentro, a unos quince metros de un precipicio de mil metros. Uno de los dueños llegó a decir que estarían dispuestos a regalarla.
 
-Así que el edificio que "no estaba ahí antes" llevaba allí cincuenta y ocho años. Miles de turistas suben a él cada verano. Y está, además, en otra montaña distinta a la del gigante.
+Y ahora, vuelve conmigo al primer video.
 
-Piénsenlo un momento. Andrew vivía y trabajaba en esa zona. Jasper está a una hora de Valemount. Es muy difícil que un hombre que pasa meses en ese valle no haya visto nunca el teleférico más famoso de la región.
+Una figura oscura y alargada, en lo más alto de Canoe Mountain, vista desde muchos kilómetros con el zoom de un teléfono, desde un vehículo en marcha. Más ancha por la parte de arriba, como si tuviera hombros.
 
-Y eso nos deja con una pregunta incómoda. Si el último vídeo muestra un edificio conocido, con una frase que da a entender que es nuevo, entonces ese vídeo, como la música de la luz, como el texto "es un gigante", como las miniaturas con letras grandes, se parece mucho a lo que Andrew dijo el seis de mayo.
+Pues una torre de telecomunicaciones, con sus antenas y su estructura arriba, vista así, a esa distancia y con todo ese ruido digital, se parece muchísimo a eso.
 
-A algo hecho para entretener.
+Por eso, en noviembre de dos mil veintidós, una cuenta de TikTok lo dijo abiertamente: que el gigante era, muy probablemente, la torre. Y un investigador canadiense de misterios que escribió sobre este caso llegó a la misma conclusión: que la estructura de la cima es, casi con seguridad, lo que grabó Andrew.
 
----
+Ese investigador, por cierto, hizo algo que me parece muy honesto. Como pasaba por la zona, se fue hasta la autopista, al punto desde donde se grabó el primer video, para comprobarlo con sus propios ojos. Y no pudo, porque ese día las nubes tapaban por completo la cima. Así que él mismo reconoce que, hasta que alguien lo compruebe sobre el terreno, la teoría de la torre es la explicación más probable, pero no una prueba definitiva.
 
-## 20. POR QUÉ TODOS LO CREÍMOS
+¿Y eso de que "va y viene"? Acuérdate de que el segundo video se grabó desde otro sitio, más cerca y más abajo. Desde ahí, el propio relieve de la montaña puede tapar la cima. Y en primavera, en esas montañas, las nubes bajas cubren y descubren los picos varias veces al día. Lo que hoy ves, mañana no lo ves. Pero no porque se mueva, sino porque se tapa.
 
-Si casi todo tiene una explicación tan sencilla, ¿por qué millones de personas creyeron lo contrario? ¿Por qué todavía hoy se repite la versión del gigante y la conspiración?
+Así que el gigante de Canoe Mountain tiene, muy probablemente, una explicación. Y es la explicación más aburrida que te puedas imaginar: una antena vieja que lleva más de medio siglo en el mismo sitio.
 
-Hay varias razones. Y ninguna tiene que ver con ser ingenuo.
-
-La primera es cómo funciona nuestro cerebro. Estamos hechos para ver figuras humanas en todas partes. Caras en las nubes. Personas en las sombras. Es un mecanismo que nos ayudó a sobrevivir durante miles de años: es mejor confundir una roca con un hombre que confundir a un hombre con una roca. Una mancha vertical en lo alto de una montaña, si alguien te dice "es una persona", se convierte en una persona.
-
-La segunda razón es el formato. Una serie de vídeos cortos, en primera persona, grabados con el móvil, con miedo creciente, con un protagonista que parece una persona normal. Ese formato tiene una larga tradición. En mil novecientos noventa y nueve, una película de terror sobre tres estudiantes perdidos en un bosque se promocionó con carteles de "desaparecidos" de sus actores, como si todo hubiera ocurrido de verdad. La campaña fue tan eficaz que, durante semanas, mucha gente salió del cine convencida de que había visto las grabaciones reales de tres jóvenes muertos. Los actores estaban vivos y en perfecto estado. Diez años después, una serie de vídeos en internet sobre un ser alto y sin rostro que perseguía a unos jóvenes hizo que miles de personas se preguntaran si era real. El caso de Andrew tiene la misma estructura: un hallazgo, una investigación, una persecución, un silencio.
-
-La tercera razón es que nunca hubo un cierre claro. Cuando Andrew dijo que era falso, parecía nervioso. Cuando dijo que no lo era, parecía asustado. Y luego, en lugar de una explicación, llegó una noticia terrible. Nuestro cerebro odia las historias sin final. Si no se lo damos, se lo inventa.
-
-Y la cuarta razón es la más humana de todas: las coincidencias.
-
-Les doy un ejemplo de este mismo caso. ¿Recuerdan cuándo se inauguró la gran red de torres de microondas que llenó de antenas las montañas de Canadá? El uno de julio de mil novecientos cincuenta y ocho.
-
-¿Y cuándo murió Andrew? El uno de julio de dos mil veintidós.
-
-Es la misma fecha. Y no significa absolutamente nada. Es el día nacional de Canadá, una fecha elegida para inauguraciones, y una fecha en la que, como en cualquier otro día del año, por desgracia muere gente. Pero si yo quisiera, podría construir un vídeo entero alrededor de esa coincidencia. Y estoy seguro de que mucha gente se lo creería.
-
-Así se fabrican las leyendas de internet. No hace falta mentir. Basta con poner juntas dos cosas verdaderas que no tienen nada que ver.
-
-Y hubo quien lo hizo. En septiembre de dos mil veintidós, una cuenta de TikTok difundió la noticia de la muerte de Andrew como prueba de la conspiración. En diciembre, otras cuentas volvieron a hacerlo, y uno de esos vídeos superó las seiscientas mil reproducciones en cuatro días. Medios de entretenimiento de varios países escribieron sobre ello. Y la historia volvió a empezar, con más miedo y con menos datos.
-
-Pero en medio de todo ese ruido, hubo una voz que casi nadie escuchó.
+Claro que eso solo explica el primer video. Todavía nos quedan el hombre del camino, los helicópteros, el auto en la puerta… y la luz.
 
 ---
 
-## 21. LO QUE CONTÓ QUIEN MEJOR LO CONOCÍA
+## 19. EL HOMBRE, LOS HELICÓPTEROS Y LA LUZ
 
-En octubre de dos mil veintidós, la pareja de Andrew, la mujer a la que su obituario llama su alma gemela, publicó un vídeo en su propia cuenta.
+Empecemos por el hombre del camino, el supuesto agente de la CIA.
 
-No habló de gigantes. No habló de agencias secretas.
+Esa idea tiene un problema desde el principio. La CIA es una agencia de Estados Unidos, y no tiene ninguna autoridad para cerrar caminos en Canadá. Canadá tiene su propio servicio de inteligencia, y en algunos mensajes Andrew también lo mencionó. Pero el trabajo de ese servicio no consiste en poner a un hombre a pie en un camino forestal para pedirle a la gente que se dé la vuelta. Y además, si alguien quisiera esconder algo en la cima de una montaña, lo último que haría sería dejar que un desconocido con un teléfono lo grabara, lo subiera a internet, y siguiera grabando cinco semanas más.
 
-Habló de Andrew.
+Ahora acuérdate de dónde estaba Andrew. En un valle con más de dos mil trabajadores de un oleoducto, con maquinaria pesada en los caminos forestales, con obras, voladuras y zonas restringidas. Que un guardia de seguridad o un encargado de obra cierre un camino y te diga "por aquí no se puede pasar, date la vuelta, por favor", es seguramente lo más normal que podía pasar en Valemount en la primavera de dos mil veintidós.
 
-Contó que Andrew llevaba mucho tiempo luchando contra la depresión. Y que esa lucha fue la que se lo llevó.
+Y hay otra posibilidad, que planteó el mismo investigador canadiense: que el hombre del camino fuera simplemente un conocido de Andrew que aceptó salir en los videos. No lo sabemos. Pero en ninguno de los videos se ve una placa, ni un uniforme oficial, ni un vehículo del gobierno.
 
-Contó también que los vídeos eran ficción, hechos para entretener. Y que su muerte no tuvo nada que ver con ellos.
+Vamos con los helicópteros. Dos helicópteros, uno de ellos con una carga colgando de un cable largo. En las montañas de Columbia Británica, esa imagen es de lo más normal. Los helicópteros con carga colgante se usan para llevar material a sitios donde no hay carreteras, para trabajos forestales, para estudios del terreno, y para apagar incendios con cubetas de agua. Y en un valle donde se estaba construyendo un oleoducto a través de las montañas, mover material por el aire era parte del trabajo de todos los días.
 
-Lo dijo con calma. Sin dramatismo. Como lo dice alguien que no está intentando convencer a nadie, sino simplemente contar lo que pasó en su casa.
+Andrew dijo: "Están sacando algo de aquí". Lo más probable es que lo estuvieran llevando hacia allí: tuberías, herramientas, equipo.
 
-Ese vídeo no tuvo cuatro millones de reproducciones. No se tradujo a diez idiomas. No lo copiaron cientos de cuentas. Porque no tenía gigantes. Solo tenía una verdad triste y sencilla.
+Y ahora sí, la luz.
 
-Y aun así, hubo quien no lo aceptó. Quien dijo que a ella también la estaban obligando. Que todo era parte del encubrimiento. Que nada de eso era cierto.
+Te dije que era lo único que casi nadie había intentado explicar. Hasta el investigador que resolvió lo de la torre y lo del edificio reconoció que la luz no sabía explicarla.
 
-Piensen en lo que eso significa. Una mujer pierde a la persona que ama. Le pide a internet que deje de inventar. Y parte de internet le responde que ella también miente.
+Así que vamos a mirar el cielo de esa madrugada.
 
-Ese es el verdadero final de esta historia. No hay gigante en la cima de Canoe Mountain. Hay una antena vieja. No hay un edificio secreto. Hay un teleférico para turistas. No hay agentes de la CIA. Probablemente hubo un camino cerrado por obras y un hombre que dijo "por favor".
+Andrew dijo que se levantó a las cinco y media de la mañana del trece de abril. Y en abril de dos mil veintidós, antes del amanecer, el cielo del este tenía algo poco habitual: varios planetas alineados y muy brillantes. Estaban Marte, Saturno, y Júpiter, que cada día subía un poco más. Tanto, que a finales de ese mismo mes Venus y Júpiter llegaron a verse casi pegados, en uno de los acercamientos de planetas más comentados del año. Y entre todos ellos, el más brillante con diferencia era Venus.
 
-Y hubo un hombre real, de treinta y cuatro años, con un hijo, con una familia, que hizo unos vídeos para entretener a la gente. Que vio cómo esos vídeos se le escapaban de las manos. Y que, mientras millones de desconocidos discutían sobre gigantes, estaba librando una batalla que nadie podía ver desde fuera.
+Venus estaba en uno de sus mejores momentos del año como lucero del alba, el objeto más brillante del cielo después del sol y de la luna. Una luz blanca, intensa y quieta, que asoma por encima de las montañas antes de que amanezca.
+
+Una luz blanca, intensa y quieta sobre las montañas. Que es exactamente lo que se ve en el video.
+
+Ahora, voy a ser honesto contigo. No podemos demostrar que la luz de ese video fuera Venus. No sabemos la hora exacta en que se grabó, ni hacia dónde apuntaba la cámara. Pero de todas las explicaciones posibles, la de un planeta brillante sobre el horizonte antes del amanecer es la más sencilla. Y Venus ha sido confundido con un ovni más veces que cualquier otra cosa en el cielo.
+
+Lo que sí sabemos con total seguridad es esto: el que le puso la música de una serie de ovnis a ese video fue el propio Andrew. Y eso no es algo que te pase sin querer. Eso se decide al editar.
+
+Y ese detalle nos lleva directo al último video, al del edificio.
 
 ---
 
-## 22. LO QUE NADIE TE CONTÓ
+## 20. EL EDIFICIO QUE NO ESTABA AHÍ
+
+Diecisiete de mayo. "¿Qué es eso? Eso no estaba ahí antes." Un edificio con forma de caja, con ventanas, encima de una montaña.
+
+Durante meses se dio por hecho que esa montaña era Canoe Mountain, y que el edificio estaba justo donde antes había estado el gigante.
+
+Pero cuando comparas el video con las montañas de la zona, aparece otra candidata. A algo más de una hora en auto hacia el este, ya en la provincia de Alberta, está la ciudad de Jasper. Y encima de Jasper hay una montaña que se llama The Whistlers.
+
+En la cima de The Whistlers hay un edificio, una estación con forma de caja y grandes ventanales, plantada en lo alto de la roca, a dos mil doscientos sesenta y tres metros de altura.
+
+Es la estación de arriba del teleférico de Jasper, el Jasper SkyTram, uno de los atractivos turísticos más conocidos de toda la región. Funciona desde mil novecientos sesenta y cuatro, y es el teleférico guiado más alto y más largo de Canadá.
+
+Según el investigador canadiense que analizó el caso, el edificio del último video es, casi con seguridad, esa estación, vista desde las calles de Jasper.
+
+O sea, que el edificio que "no estaba ahí antes" llevaba ahí cincuenta y ocho años. Miles de turistas suben cada verano. Y además está en una montaña distinta a la del gigante.
+
+Piénsalo un momento. Andrew vivía y trabajaba en esa zona, y Jasper está a una hora de Valemount. Es muy difícil que alguien que pasa meses en ese valle no haya visto nunca el teleférico más famoso de la región.
+
+Y eso nos deja con una pregunta incómoda. Si el último video muestra un edificio conocido, con una frase que da a entender que es nuevo, entonces ese video, igual que la música de la luz, igual que el texto de "es un gigante", igual que las miniaturas con letras enormes, se parece mucho a lo que Andrew dijo el seis de mayo. A algo hecho para entretener.
+
+---
+
+## 21. POR QUÉ TODOS LO CREÍMOS
+
+Si casi todo tiene una explicación tan sencilla, ¿por qué millones de personas creyeron justo lo contrario? ¿Y por qué todavía hoy se sigue contando la versión del gigante y la conspiración?
+
+Hay varias razones, y ninguna tiene que ver con ser ingenuo.
+
+La primera es cómo funciona nuestro cerebro. Estamos hechos para ver figuras humanas por todas partes: caras en las nubes, personas en las sombras. Es un mecanismo que nos ayudó a sobrevivir durante miles de años, porque es mucho mejor confundir una roca con un hombre que confundir a un hombre con una roca. Así que una mancha alargada en lo alto de una montaña, si alguien te dice "es una persona", se convierte en una persona.
+
+La segunda razón es el formato. Una serie de videos cortos, en primera persona, grabados con el celular, con un miedo que va creciendo, y con un protagonista que parece una persona normal. Ese formato tiene mucha historia. En mil novecientos noventa y nueve, una película de terror sobre tres estudiantes perdidos en un bosque se promocionó con carteles de "desaparecidos" de sus actores, como si todo hubiera pasado de verdad. Funcionó tan bien que, durante semanas, mucha gente salió del cine convencida de que había visto las grabaciones reales de tres jóvenes muertos. Y los actores estaban vivos y perfectamente bien. Diez años después, una serie de videos en internet sobre un ser alto y sin rostro que perseguía a unos jóvenes hizo que miles de personas se preguntaran si aquello era real. El caso de Andrew tiene la misma estructura: un hallazgo, una investigación, una persecución, y un silencio.
+
+La tercera razón es que nunca hubo un cierre claro. Cuando Andrew dijo que era falso, se le veía nervioso. Cuando dijo que no lo era, se le veía asustado. Y después, en vez de una explicación, llegó una noticia terrible. A nuestro cerebro no le gustan las historias sin final, y si no se lo damos, se lo inventa.
+
+Y la cuarta razón es la más humana de todas: las casualidades.
+
+Te pongo un ejemplo de este mismo caso. ¿Te acuerdas de cuándo se inauguró aquella gran red de torres de microondas que llenó de antenas las montañas de Canadá? El uno de julio de mil novecientos cincuenta y ocho. ¿Y cuándo murió Andrew? El uno de julio de dos mil veintidós.
+
+Es la misma fecha. Y no significa absolutamente nada. Es el día nacional de Canadá, una fecha que se elige mucho para inaugurar cosas, y un día en el que, como cualquier otro día del año, por desgracia muere gente. Pero si yo quisiera, podría hacer un video entero alrededor de esa casualidad, y estoy seguro de que mucha gente se lo creería.
+
+Así es como se fabrican las leyendas de internet. No hace falta mentir. Basta con juntar dos cosas que son verdad y que no tienen nada que ver entre sí.
+
+Y hubo quien lo hizo. En septiembre de dos mil veintidós, una cuenta de TikTok difundió la muerte de Andrew como prueba de la conspiración. En diciembre, otras cuentas volvieron a hacerlo, y uno de esos videos pasó de las seiscientas mil reproducciones en solo cuatro días. Varios medios de entretenimiento escribieron sobre ello, y la historia volvió a empezar, con más miedo y con menos datos.
+
+Pero en medio de todo ese ruido hubo una voz que casi nadie escuchó.
+
+---
+
+## 22. LO QUE CONTÓ QUIEN MEJOR LO CONOCÍA
+
+En octubre de dos mil veintidós, la pareja de Andrew, la mujer a la que su obituario llama su alma gemela, subió un video a su propia cuenta.
+
+No habló de gigantes, ni de agencias secretas. Habló de Andrew.
+
+Contó que Andrew llevaba mucho tiempo luchando contra la depresión, y que fue esa lucha la que se lo llevó. Contó también que los videos eran ficción, hechos para entretener, y que su muerte no tuvo nada que ver con ellos.
+
+Lo dijo con calma, sin dramatismo, como lo dice alguien que no está intentando convencer a nadie, sino simplemente contando lo que pasó en su casa.
+
+Ese video no tuvo cuatro millones de reproducciones. No se tradujo a diez idiomas, ni lo copiaron cientos de cuentas. Porque no tenía gigantes. Solo tenía una verdad triste y sencilla.
+
+Y aun así, hubo quien no lo aceptó. Hubo quien dijo que a ella también la estaban obligando, que todo era parte del encubrimiento, que nada de eso era verdad.
+
+Piensa por un momento en lo que significa eso. Una mujer pierde a la persona que quiere, le pide a internet que deje de inventar, y una parte de internet le contesta que ella también miente.
+
+Ese es el verdadero final de esta historia. En la cima de Canoe Mountain no hay ningún gigante, hay una antena vieja. No hay un edificio secreto, hay un teleférico para turistas. No hubo agentes de la CIA; lo más probable es que hubiera un camino cerrado por obras y un hombre que dijo "por favor".
+
+Y hubo un hombre real, de treinta y cuatro años, con un hijo y con una familia, que hizo unos videos para entretener a la gente. Que vio cómo esos videos se le iban de las manos. Y que, mientras millones de desconocidos discutían sobre gigantes, estaba librando una batalla que nadie podía ver desde fuera.
+
+---
+
+## 23. LO QUE NADIE TE CONTÓ
 
 Todos vieron el gigante. Muy pocos vieron a Andrew.
 
-Esa es la lección de este caso. Cuando una historia nos atrapa, nos olvidamos de que detrás hay personas. Pedimos más vídeos, más pruebas, más misterio. Y cuando la historia termina de la peor manera, preferimos una conspiración antes que aceptar algo tan simple y tan duro como la tristeza.
+Creo que esa es la lección de este caso. Cuando una historia nos atrapa, se nos olvida que detrás hay personas. Pedimos más videos, más pruebas, más misterio. Y cuando la historia termina de la peor manera posible, preferimos una conspiración antes que aceptar algo tan simple, y tan duro, como la tristeza.
 
-Si este caso te dejó algo, que sea esto. La próxima vez que veas un vídeo que parece imposible, haz la pregunta aburrida. ¿Qué hay realmente en la cima de esa montaña? Casi siempre, la respuesta está a la vista. Solo que no se comparte.
+Si este caso te deja algo, que sea esto. La próxima vez que veas un video que parece imposible, hazte la pregunta aburrida: ¿qué hay de verdad en la cima de esa montaña? Casi siempre, la respuesta está a la vista. Lo que pasa es que no se comparte.
 
-Y si tú, o alguien cerca de ti, está pasando por un momento difícil, no lo cargues solo. Habla con alguien. En España puedes llamar al cero veinticuatro, a cualquier hora. En la descripción de este vídeo vas a encontrar las líneas de ayuda de otros países.
+Y si tú, o alguien cercano, está pasando por un momento difícil, no lo cargues solo. Habla con alguien. En España puedes llamar al cero veinticuatro, a cualquier hora del día. Y en la descripción de este video tienes los teléfonos de ayuda de otros países.
 
-Este vídeo está dedicado a la memoria de Andrew Dawson.
+Este video está dedicado a la memoria de Andrew Dawson.
 
 ---
 
-## 23. CIERRE
+## 24. CIERRE
 
 Esto ha sido Todos Lo Vieron.
 
-Aquí cada semana subimos casos nuevos. Historias que todo el mundo vio en sus pantallas y que casi nadie investigó hasta el final. Vídeos virales, misterios de internet, sucesos que dieron la vuelta al mundo. Contados completos, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
+Aquí cada semana subimos casos nuevos: historias que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final. Videos virales, misterios de internet, sucesos que dieron la vuelta al mundo, contados completos, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
 
-Si quieres seguir conociendo lo que nadie te contó, suscríbete y activa la campanita. Así te avisamos cuando subamos el próximo caso.
+Si quieres seguir descubriendo lo que nadie te contó, suscríbete y activa la campanita, así te avisamos cuando subamos el próximo caso.
 
-Y déjanos en los comentarios qué caso viral quieres que investiguemos. Los leemos todos.
+Y déjame en los comentarios qué caso viral quieres que investiguemos. Los leemos todos.
 
 Nos vemos en el próximo caso.

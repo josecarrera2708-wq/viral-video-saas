@@ -20,3 +20,11 @@
 - **Corrección del caso:** los vídeos fueron ficción, según el propio Andrew (6-may) y su pareja (21-oct-2022). Murió el 1-jul-2022 y su pareja contó que llevaba tiempo luchando contra la depresión. No se dan más detalles sobre su muerte. Al final del vídeo aparece la línea de ayuda 024 (España) y las de otros países van en la descripción.
 - **Lección de La Ciencia de la Salud:** 3.471 palabras dieron 19:17 min (unas 180 palabras/min con speed 1.05). Hay que medir la voz real antes de montar.
 - Siguiente paso: muestras de voz latina grave de unos 20 s cada una, avisando antes del coste.
+
+## Guion v2 y voz (7-oct-2026)
+- `guiones/dawson-guion-01.md` v2: conversacional, hablando de "tú", frases completas y vocabulario latino ("video", "celular", "auto"). Tiene 24 secciones y 8.245 palabras, unos 44 min a 187 palabras/min.
+- Secciones nuevas: 16, "La foto que alguien robó" (Lillooet, 1894), y la visita del investigador a la autopista (en la 18).
+- Voz elegida: **Alejandro** 3a35daa1-ba81-451c-9b21-59332e9db2f3, velocidad 1.0. El usuario la quiere fluida y no demasiado grave.
+- Descartadas: Manuel, Jorge, Andrés, Agustín, Damon, Carl, Darius y Alejandro con el tono bajado.
+- Muestras de la intro: sonic-3 (189 palabras/min) y sonic-3.5 (178 palabras/min). Falta elegir el modelo.
+- Norma de escritura para TTS: nada de frases sueltas sin verbo ("Una montaña. Un edificio."), porque suenan robóticas.
