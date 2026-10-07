@@ -42,3 +42,9 @@
 - Whisper: se corrigieron las mayúsculas, que se deletreaban (en el guion las citas van siempre en minúscula), y "Jasper", que sonaba "Hásper" (va a `herramientas/pronuncia.json` como "Yásper").
 - Cierre nuevo: "suscríbete a este canal, porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo".
 - **Norma de mezcla:** la música sigue 3–4 s después de la última palabra con un fundido de salida. No se corta de golpe.
+
+## Estilo visual y clips (7-oct-2026)
+- Estilo propuesto: realismo de cine con grade frío (True Detective, Seven, Prisoners). Poca saturación, sombras en azul acero y verde azulado, negros profundos, grano y un único acento cálido ámbar. El prompt está en `video/dawson-01/estilos/ESTILO.txt`; las pruebas son E1 y E2.
+- **Sora ya no existe:** OpenAI cerró la API de vídeo el 24-sep-2026 y `/v1/videos` devuelve 404. No hubo cobro.
+- vidIQ tiene `generate_video` (Veo, Kling, Seedance, Minimax), pero solo quedan 10 créditos (oct-2026), que no llegan para un clip.
+- Alternativa gratis: "clips" locales con ffmpeg (acercamiento, temblor, grano y viñeta). Prueba en `estilos/clip-local-prueba.mp4`.
