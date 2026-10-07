@@ -1395,30 +1395,30 @@
   "seccion": 24,
   "texto": "Esto ha sido Todos Lo Vieron: la historia real detrás del misterio.",
   "inicio": 2940.22,
-  "fin": 2944.36
+  "fin": 2944.34
  },
  {
   "seccion": 24,
-  "texto": "Cada semana subimos casos nuevos. Historias que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final, contadas completas, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.",
-  "inicio": 2944.76,
-  "fin": 2958.89
+  "texto": "Cada semana subimos historias nuevas. Misterios que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final, contados completos, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.",
+  "inicio": 2944.74,
+  "fin": 2958.61
  },
  {
   "seccion": 24,
-  "texto": "Así que, si todavía no lo has hecho, suscríbete a este canal. Porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo. Y activa la campanita, para que no te pierdas el próximo caso.",
-  "inicio": 2959.29,
-  "fin": 2971.17
+  "texto": "Así que, si todavía no lo has hecho, suscríbete a este canal. Porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo. Y activa la campanita, para que no te pierdas lo que viene.",
+  "inicio": 2959.01,
+  "fin": 2971.97
  },
  {
   "seccion": 24,
-  "texto": "Y cuéntame en los comentarios qué misterio quieres que investiguemos. Los leemos todos.",
-  "inicio": 2971.57,
-  "fin": 2976.4
+  "texto": "Y ahora te toca a ti. Escríbeme en los comentarios qué misterio te gustaría conocer, o qué verdad quieres que descifremos juntos. Leemos todos tus comentarios, y los misterios más pedidos serán los próximos que vamos a investigar.",
+  "inicio": 2972.37,
+  "fin": 2986.0
  },
  {
   "seccion": 24,
-  "texto": "Nos vemos en el próximo caso.",
-  "inicio": 2976.8,
-  "fin": 2978.69
+  "texto": "Nos vemos en el próximo capítulo de misterio.",
+  "inicio": 2986.4,
+  "fin": 2988.99
  }
 ]

@@ -580,10 +580,10 @@ Este video está dedicado a la memoria de Andrew Dawson.
 
 Esto ha sido Todos Lo Vieron: la historia real detrás del misterio.
 
-Cada semana subimos casos nuevos. Historias que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final, contadas completas, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
+Cada semana subimos historias nuevas. Misterios que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final, contados completos, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
 
-Así que, si todavía no lo has hecho, suscríbete a este canal. Porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo. Y activa la campanita, para que no te pierdas el próximo caso.
+Así que, si todavía no lo has hecho, suscríbete a este canal. Porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo. Y activa la campanita, para que no te pierdas lo que viene.
 
-Y cuéntame en los comentarios qué misterio quieres que investiguemos. Los leemos todos.
+Y ahora te toca a ti. Escríbeme en los comentarios qué misterio te gustaría conocer, o qué verdad quieres que descifremos juntos. Leemos todos tus comentarios, y los misterios más pedidos serán los próximos que vamos a investigar.
 
-Nos vemos en el próximo caso.
+Nos vemos en el próximo capítulo de misterio.
