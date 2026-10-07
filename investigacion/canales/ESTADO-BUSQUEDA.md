@@ -1,8 +1,6 @@
-# Estado de la búsqueda de canales (7-oct-2026, 12:40 en Málaga)
+# Estado de la búsqueda de canales (terminada el 7-oct-2026)
 
-> **Si lees esto desde otra ventana:** la búsqueda **sigue en marcha en la sesión original**
-> (https://claude.ai/code/session_01D1GgcjSTcAeDSRXDqtsNTP). No la repitas: el resultado llegará allí
-> y se guardará en esta carpeta.
+> La búsqueda ya terminó. No hace falta repetirla.
 
 ## Usuario
 - DJ venezolano y trader con experiencia. Vive en **Málaga** y cobrará los canales **desde España**
@@ -24,26 +22,20 @@
 9. Referencias en muchos idiomas.
 10. Miniaturas y guiones se analizan después, solo de los finalistas.
 
-## Progreso
-**Ronda 1 (terminada):** 24 nichos explorados y 71 canales verificados. **6 temas con canal válido:**
+## Resultado (búsqueda terminada el 7-oct-2026)
+29 temas explorados en 2 rondas y 86 verificaciones. Informe completo en `INFORME-9-CANALES.md` y guía de creación en `PASOS-CREAR-CANALES.md`.
 
-| Tema | Canal de referencia | Nota |
-|---|---|---|
-| Crimen y estafas | NET CREATIVE (indonesio) | 13/18 |
-| Economía | 옳지경제학 / Olji Economics (coreano) | 12/18 |
-| Naturaleza | Wild Testament | 11/18 |
-| Historias de jubilación y vida real | 은빛시나리오 (coreano) | 13/18 |
-| Cultura asiática | Inner Court | 12/18 |
-| Misterios | The Eastham Foundation | 12/18 |
-
-**Ronda 2 (en marcha):** formatos difíciles de copiar que propuso el crítico:
-- Economía de la calle: por qué se hunde un sector cotidiano en España y LatAm (formato coreano).
-- Las cuentas de…: empresas y dinero público explicados con cifras.
-- Ciudades que el dinero levantó y hundió.
-- Reintento de finanzas: mercados con datos reales explicados sobre el gráfico por un trader.
-- Reintento de motor y aviación: ángulo de negocio.
-
-**Después:** un juez final elige los 9. Primero los verificados; si faltan, los "casi válidos", con advertencia.
+| # | Canal sugerido | Referencia | Estado |
+|---|---|---|---|
+| 1 | Expediente Ponzi (estafas financieras) | NET CREATIVE (indonesio) | verificado |
+| 2 | Años de Plata (jubilación y dinero, +50) | 은빛시나리오 (coreano) | verificado |
+| 3 | Madres Salvajes (naturaleza) | Wild Testament | verificado |
+| 4 | El Archivo Valdés (misterio y ovnis, ficción) | The Eastham Foundation | verificado |
+| 5 | La Razón del Colapso (geopolítica económica) | 옳지경제학 / Olji Economics (coreano) | verificado |
+| 6 | La Corte de Jade (cortes imperiales de Asia) | Inner Court | verificado |
+| 7 | Tus Ahorros Perdidos (crisis y ahorros) | Moss Garner (alemán) | casi válido |
+| 8 | Hecho a Pulso (megaproyectos) | Brasil Construído (portugués) | casi válido |
+| 9 | El Porqué de las Máquinas (tecnología) | ゆっくり情報科学ちゃんねる (japonés) | casi válido |
 
 ## Hallazgo clave: el español está saturado de clones hechos con IA
 En 2026, cualquier formato sin cara que funcione en inglés tiene copias en español hechas con IA en pocas
@@ -53,21 +45,14 @@ muchos originales al español. Por eso cayeron casi todos los candidatos.
 Implica salir rápido, superar en calidad a los clones y tener un ángulo propio: temas hispanos, audiencia
 de España o la experiencia de trader.
 
-## Pendiente al terminar
-1. Informe de los 9 canales en esta carpeta: verificados o casi válidos, reservas, advertencias y RPM estimado.
-2. Pasos para crear los canales de forma segura:
-   - cuentas de marca;
-   - un solo AdSense en España;
-   - W-8BEN (0 % de retención como residente en España);
-   - autónomo e IRPF en Andalucía;
-   - lanzamiento escalonado;
-   - estilo propio en cada canal (para evitar el "contenido inauténtico");
-   - nada de proxies.
-3. Opcional: validar los finalistas con vidIQ, avisando antes del coste.
+## Siguiente paso
+Lanzar primero los canales 1, 2 y 7 (ver `PASOS-CREAR-CANALES.md`). Opcional: validar los finalistas con vidIQ, avisando antes del coste.
 
 ## Archivos
-- `ronda1_exploracion.json`: los 24 nichos explorados (candidatos, hueco, RPM estimado e ideas).
-- `verificaciones_ronda1.json`: las 71 verificaciones (si sigue válido, problemas y datos).
+- `INFORME-9-CANALES.md` y `juez_final.json`: la selección final.
+- `PASOS-CREAR-CANALES.md`: cómo crear los canales de forma segura.
+- `ronda1_exploracion.json` y `ronda2_exploracion.json`: los 29 temas explorados.
+- `verificaciones_ronda1.json` y `verificaciones_ronda2.json`: las 86 verificaciones.
 - `critica_ronda1.json`: propuestas para la ronda 2.
 - `vidiq/outliers_en_6m.json`: datos de vidIQ.
 - `workflow/`:

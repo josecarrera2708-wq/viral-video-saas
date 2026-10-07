@@ -1,0 +1,2128 @@
+[
+ {
+  "nicho": "Economía de la calle: la verdadera razón por la que se hunde (o aguanta) un sector cotidiano. Es el formato coreano '경제학' («X의 몰락, 진짜 이유»: el hundimiento de X y su verdadera razón) adaptado a España y Latinoamérica.",
+  "consultas_realizadas": [
+   "[ko] filtrar \"몰락한 진짜 이유\" --periodo anio --orden relevancia (pasan 12)",
+   "[ko] filtrar \"안 팔리는 진짜 이유\" --periodo mes --orden relevancia (pasan 12)",
+   "[ja] filtrar \"なぜ潰れない ゆっくり解説\" --periodo anio --orden relevancia (pasan 10)",
+   "[de] filtrar \"Warum schließen immer mehr\" --periodo anio --orden relevancia (ruido, 1 irrelevante)",
+   "[de] filtrar \"das stille Sterben der wahre Grund\" --periodo anio --orden relevancia (ruido)",
+   "[en] filtrar \"the real reason pubs are closing\" --periodo anio --orden relevancia (pasan 17, casi todos coreanos con títulos traducidos al inglés)",
+   "[fr] filtrar \"pourquoi ils ferment tous le vrai problème\" --periodo anio --orden relevancia (ruido)",
+   "[pl] filtrar \"dlaczego upadają prawdziwy powód\" --periodo anio --orden relevancia (sin el formato)",
+   "[tr] filtrar \"neden batıyor gerçek sebep\" --periodo anio --orden relevancia (sin el formato)",
+   "[pt] filtrar \"o verdadeiro motivo por que estão fechando\" --periodo anio --orden relevancia (sin el formato)",
+   "[ko] filtrar \"사라지는 진짜 이유\" --periodo mes --orden relevancia (pasan 11)",
+   "[ja] filtrar \"店舗数が激減 チェーン 理由\" --periodo anio --orden relevancia (pasan 3)",
+   "[en] filtrar \"why nightclubs are dying the real reason\" --periodo anio --orden vistas (1 vídeo)",
+   "[en] filtrar \"why are nightclubs closing\" --periodo anio --orden relevancia (solo el clon español Rey Genio)",
+   "[it] filtrar \"perché stanno chiudendo tutti il vero motivo\" --periodo anio --orden relevancia (ruido)",
+   "[ru] filtrar \"почему массово закрываются настоящая причина\" --periodo anio --orden relevancia (sin el formato)",
+   "[ko] filtrar \"줄폐업 진짜 이유\" --periodo mes --orden relevancia (pasan 13)",
+   "[ko] filtrar \"클럽 나이트 몰락 진짜 이유\" --periodo anio --orden relevancia (pasan 12)",
+   "[ko] buscar \"나이트클럽 몰락\" --periodo anio --orden vistas (las discotecas rinden poco en Corea)",
+   "[ko] filtrar \"망하는 진짜 이유 자영업\" --periodo mes --orden relevancia (pasan 12; descubre 돈의 맥락 y 세상해설소)",
+   "canal x ~20 fichas: 경제야 고맙다, 무릎탁경제학, 투자한잔, 리얼이코노믹스, 돈의 맥락, 세상해설소, ゆっくりなるほど経済学, 원초적심리경제학, 아무튼경제, 하트야담, 경제학TV, Old American Empires, Persimmon Archive, 옳지경제학, Don Economía, Rey Genio del Conocimiento, Tiger House, Crea Y Transforma",
+   "comprobación de títulos en español (interfaz es) de 경제야 고맙다 y 돈의 맥락: salen en coreano, sin traducción al español",
+   "miniaturas y fotogramas (hq1-3) abiertos de: -KsQCrC_I_U, zga-ZGpU0o8, aXg1DAWYXWw, NsrqTXZB-mg, 72ofoWTbQwU, QI59KvwD_-s, vhEah9uttf8, rqT90Q5Gp9s, HQSiLjBoBs4, -N_kQkPwn1E"
+  ],
+  "idiomas_cubiertos": [
+   "coreano",
+   "japonés",
+   "inglés",
+   "alemán",
+   "francés",
+   "polaco",
+   "turco",
+   "portugués",
+   "italiano",
+   "ruso",
+   "español"
+  ],
+  "candidatos": [
+   {
+    "canal": "돈의 맥락 (@돈의맥락-n3r)",
+    "url": "https://www.youtube.com/channel/UCeFiKG5t8-yIRiXW4cMj6fA",
+    "idioma": "coreano",
+    "suscriptores": 5800,
+    "mediana_vistas": 16000,
+    "ratio_mediana_subs": 2.76,
+    "pct_videos_vistas_mayor_que_subs": 62,
+    "duracion_mediana_min": 28.9,
+    "pct_videos_25_45_min": 95,
+    "outliers": [
+     {
+      "titulo": "“The fishing population has grown, but fishing shops are closing”… The real reason they can’t sur... (hay más pescadores que nunca, pero cierran las tiendas de pesca)",
+      "vistas": 145000,
+      "duracion_min": 28.9,
+      "fecha": "2026-09-26"
+     },
+     {
+      "titulo": "\"The Era of 10 Million Dogs, Yet Pet Groomers Are Leaving\"... (10 millones de perros y las peluquerías caninas cierran)",
+      "vistas": 131000,
+      "duracion_min": 29.7,
+      "fecha": "2026-09-28"
+     },
+     {
+      "titulo": "502 (título no legible en la herramienta)",
+      "vistas": 94000,
+      "duracion_min": 27.4,
+      "fecha": "2026-09-25"
+     },
+     {
+      "titulo": "\"Bikes are popular again, but there's no one to fix them\"... The real reason local bike shops are... (talleres de bicis)",
+      "vistas": 73000,
+      "duracion_min": 30.8,
+      "fecha": "2026-09-24"
+     }
+    ],
+    "formato_visual": "Miniatura: fachada fotorrealista de IA de la tienda con carteles de «폐업» (cerrado), un muñeco blanco llorando con las manos en la cabeza y dos líneas de texto gigante (blanco más una palabra en rojo) con la paradoja. Vídeo: ilustración de IA a todo color con muñecos palo genéricos de cabeza blanca (fáciles de repetir, sin rasgos), escenas de tienda, móvil y apps, rótulos de costes («RISING BUSINESS COSTS»), subtítulos karaoke amarillos y voz de IA. Unos 29 min.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "La referencia más pura de «economía de la calle» por microsector. Canal creado hacia el 16-09-2026: 40 vídeos en 3 semanas (unos 2 al día) y ya tiene 5.800 subs. Fórmula de título paradójica que se traslada tal cual: «Hay más X que nunca, pero cierran las tiendas de X» (pesca, peluquería canina, talleres de bici, ferreterías, ropa infantil, arreglo de paraguas, lavanderías, coche eléctrico usado, restaurantes llenos con la cuenta vacía). Con la interfaz en español sus títulos salen en coreano: no tiene versión en español. Hay un canal gemelo con la misma fórmula y fecha de inicio: 세상해설소 (4.760 subs, mediana 5.400, 100% de vídeos de 25-45 min; talleres, taxis de pueblo, bares de taxistas). Fechas aproximadas (yt-dlp)."
+   },
+   {
+    "canal": "경제야 고맙다 (@경제야고맙다)",
+    "url": "https://www.youtube.com/channel/UCMUaLd3PpogS-v_NvroZV9A",
+    "idioma": "coreano",
+    "suscriptores": 3410,
+    "mediana_vistas": 13000,
+    "ratio_mediana_subs": 3.81,
+    "pct_videos_vistas_mayor_que_subs": 80,
+    "duracion_mediana_min": 32.2,
+    "pct_videos_25_45_min": 90,
+    "outliers": [
+     {
+      "titulo": "09/06 8 PM The Collapse of Day Labor (el hundimiento del peón jornalero)",
+      "vistas": 322000,
+      "duracion_min": 25.2,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "\"배민 끊었다\" 소리 나오는 이유... | 배달의 민족의 몰락 (el hundimiento de la app de reparto Baemin)",
+      "vistas": 262000,
+      "duracion_min": 32.5,
+      "fecha": "2026-09-28"
+     },
+     {
+      "titulo": "\"I thought a trade would provide for life..\" Why skilled workers are disappearing from the field...",
+      "vistas": 170000,
+      "duracion_min": 32.1,
+      "fecha": "2026-10-02"
+     },
+     {
+      "titulo": "\"Doesn't the government pay you even if you don't work?\" Why elderly bus drivers are disappearing...",
+      "vistas": 146000,
+      "duracion_min": 27.4,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "Selling an $80 bag for $4,000... The luxury market's fall...",
+      "vistas": 145000,
+      "duracion_min": 31.8,
+      "fecha": "2026-09-29"
+     }
+    ],
+    "formato_visual": "Miniatura: plantilla «antes y después» a pantalla partida con fotorrealismo de IA (un obrero mayor cargando ladrillos frente a un jubilado en el sofá; la mascota de Baemin cayendo de un edificio con una flecha roja), una cita entre comillas en blanco y «el hundimiento de X» en cian. Vídeo: metraje de stock cinematográfico (personas genéricas, ni siquiera coreanas) con color oscuro, marcador de capítulo arriba a la izquierda y subtítulos. Nosotros lo cambiaríamos por fotos realistas de IA con zoom.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Su descripción es literalmente el nicho: «investigamos por qué cierran una a una las cosas que ayer eran normales; cada cosa que desaparece tiene su razón económica». Activo desde abril de 2026, 39 vídeos en 6 meses. Temas que pasan 1:1 a España: oficios sin relevo (peones, electricistas, conductores de autobús, carretilleros), apps de reparto, tiendas de conveniencia, campos de golf, sillones de masaje. Su vídeo de discotecas solo hizo 7.934 (por debajo de su mediana): en Corea la noche no funciona. Sin títulos en español (comprobado). Aquí el stock cuenta como metraje con licencia; nosotros usaríamos IA."
+   },
+   {
+    "canal": "무릎탁경제학 (@무릎탁경제)",
+    "url": "https://www.youtube.com/channel/UCv8c3kIoZ6Z8HN_GfopbeCQ",
+    "idioma": "coreano",
+    "suscriptores": 6500,
+    "mediana_vistas": 33000,
+    "ratio_mediana_subs": 5.08,
+    "pct_videos_vistas_mayor_que_subs": 73,
+    "duracion_mediana_min": 34.7,
+    "pct_videos_25_45_min": 87,
+    "outliers": [
+     {
+      "titulo": "\"헌금 내는 사람이 없다\"... 텅 빈 예배당이 보여주는 대형 교회가 몰락한 진짜 이유 (la verdadera razón del hundimiento de las megaiglesias)",
+      "vistas": 453000,
+      "duracion_min": 35.2,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "\"내가 어려울 땐 한 푼도 안도와준다\" 60만명이 떠난 텅 빈 한국 교회... 몰락한 진짜 이유 (600.000 fieles se fueron)",
+      "vistas": 246000,
+      "duracion_min": 35.5,
+      "fecha": "2026-09-30"
+     },
+     {
+      "titulo": "\"더이상 제사 지내는 사람이 없다\"... 제사가 몰락한 진짜 이유 (el hundimiento de los ritos a los antepasados)",
+      "vistas": 132000,
+      "duracion_min": 34.4,
+      "fecha": "2026-09-25"
+     }
+    ],
+    "formato_visual": "Miniatura: la misma plantilla «antes y después» (megaiglesia iluminada frente a fieles saliendo de un templo ruinoso; familia haciendo el rito frente a una pareja cenando sola) con flecha azul descendente, cita entre comillas y «X의 몰락». Vídeo: ilustraciones de IA en acuarela tipo cuento (sacerdote con pala, niños en barca, agente inmobiliario con una maqueta de iglesia), personajes genéricos, subtítulos blancos grandes y logo arriba a la derecha. Unos 35 min.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Canal de 1 mes (15 vídeos) con mediana de 33.000: la mejor relación mediana/subs del nicho y el mejor paquete visual para copiar (acuarela de IA más plantilla de miniatura). Sus temas son más «instituciones» que «comercio» (iglesias, ritos, hogares del jubilado, tanatorios, televisiones, Temu). Se adaptan a España como iglesias vacías, bodas que ya no se celebran, hogares del pensionista, tanatorios o la televisión en abierto. Su descripción afirma que el guion lo decide una persona, no una herramienta automática."
+   },
+   {
+    "canal": "투자한잔 (@user-investcup)",
+    "url": "https://www.youtube.com/channel/UCH57TVMKyrp-gmEKQRr7d6Q",
+    "idioma": "coreano",
+    "suscriptores": 3850,
+    "mediana_vistas": 10000,
+    "ratio_mediana_subs": 2.6,
+    "pct_videos_vistas_mayor_que_subs": 62,
+    "duracion_mediana_min": 26.9,
+    "pct_videos_25_45_min": 59,
+    "outliers": [
+     {
+      "titulo": "The Fall of Motels: Why Hotels That Were Always Booked on Weekends Are Closing One After Another",
+      "vistas": 404000,
+      "duracion_min": 35,
+      "fecha": "2026-10-02"
+     },
+     {
+      "titulo": "Why Aren't Children Continuing the Ancestral Rites Their Parents Performed All Their Lives?",
+      "vistas": 278000,
+      "duracion_min": 18.2,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "More People Are Moving to the Country, So Why Can't These Vacation Homes Sell for Half-Price?",
+      "vistas": 239000,
+      "duracion_min": 28.3,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "\"Apartment security staff went from 36 to 15...\" The real reason why apartment security guards ar...",
+      "vistas": 235000,
+      "duracion_min": 30.2,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "\"Used to be impossible to get a tee time...\" The grim reality 3 years into the golf boom",
+      "vistas": 113000,
+      "duracion_min": 22.4,
+      "fecha": "2026-09-16"
+     }
+    ],
+    "formato_visual": "Miniatura: «antes y después» fotorrealista de IA (motel nuevo al atardecer, flecha roja, motel en ruinas) con dos líneas de texto amarillo y blanco: «Los moteles que antes sobraban, ¿por qué desaparecen?». Vídeo: ilustración plana tipo dibujos animados con muñecos sencillos, letreros de neón y escenas de recepción, subtítulos y voz de IA.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Canal de 1 mes con 40 vídeos (más de 1 al día). Temas directos para España: hostales y moteles de carretera, segundas residencias que no se venden ni a mitad de precio, porteros y conserjes de finca, la resaca del boom del golf y del pádel, «por qué se arrepienten los que compran autocaravana», restaurantes chinos de barrio."
+   },
+   {
+    "canal": "ゆっくりなるほど経済学 (@yukkuri_naruhodo_keizaigaku)",
+    "url": "https://www.youtube.com/channel/UC_7YUBpt13t30N_LL3g4aog",
+    "idioma": "japonés",
+    "suscriptores": 5770,
+    "mediana_vistas": 9400,
+    "ratio_mediana_subs": 1.63,
+    "pct_videos_vistas_mayor_que_subs": 78,
+    "duracion_mediana_min": 35.7,
+    "pct_videos_25_45_min": 70,
+    "outliers": [
+     {
+      "titulo": "かつや・松のやがあるのに、なぜ和幸は潰れない？高くても「得した」と感じる理由【ゆっくり解説】 (¿por qué no quiebra la cadena cara Wako si hay otras baratas?)",
+      "vistas": 108000,
+      "duracion_min": 27.5,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Why is there a 257-yen price gap for the same Nori-ben bento? [Yukkuri Commentary]",
+      "vistas": 63000,
+      "duracion_min": 22,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "なぜ古汚い看板の店ほど潰れない？昭和ラーメンチェーン生存の秘密 (recopilatorio: por qué no quiebran los ramen viejos)",
+      "vistas": 47000,
+      "duracion_min": 155.1,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "駅前から消えた天丼てんや、客を奪ったのは…？ (¿quién le robó los clientes a Tenya?)",
+      "vistas": 32000,
+      "duracion_min": 27.4,
+      "fecha": "2026-09-07"
+     }
+    ],
+    "formato_visual": "Miniatura: fachadas de tres cadenas recreadas con IA (con sus logos) y una pregunta gigante en amarillo y rojo. Vídeo: diálogo de los avatares Yukkuri (Reimu y Marisa, voz sintética) sobre fotos de stock y fotos oficiales de producto con la URL de la fuente, y subtítulos grandes.",
+    "replicable": "media",
+    "riesgo_copyright": "medio",
+    "notas": "Cubre la mitad «por qué AGUANTA / por qué no quiebra» del nicho y el análisis de precios y márgenes, ideal para el perfil trader del usuario. Canal de 1 mes con 40 vídeos. Para replicarlo hay que cambiar los Yukkuri por narrador único con IA y no usar fotos oficiales de las marcas. Japón confirma el patrón con ゆっくり台所研究所 (28.500 subs, mediana 38.000; «por qué las cadenas de gyudon abren de madrugada sin clientes», 314.000), aunque su duración mediana es de 21,4 min. Reservas coreanas si alguna falla: 리얼이코노믹스 (5.130 subs, mediana 7.650, 27,5 min; 407.000 Cheong Kwan Jang, 202.000 viviendas vacías), 원초적심리경제학 (6.940; coche usado 355.000, hobbies de clase media 299.000, golf 284.000) y 아무튼경제 (3.520; 82% de vídeos por encima de los subs, pero 21,8 min)."
+   }
+  ],
+  "cerca_del_limite": [
+   {
+    "canal": "무궁화경제 (@무궁화경제)",
+    "url": "https://www.youtube.com/channel/UCvm6lnP_tukv6GiBBXk-uQQ",
+    "suscriptores": 13500,
+    "motivo": "Valida una demanda masiva del género (1.700.000 con la quiebra de 딤채; 1.400.000 «por qué se hunden los campos de prácticas de golf»; 931.000 lujo; 771.000 monjes), pero falla en duración: mediana de 18,2 min, solo el 40% de vídeos pasa de 20 min y el 12% está entre 25 y 45."
+   },
+   {
+    "canal": "갑돌이의경제 (@갑돌이의경제)",
+    "url": "https://www.youtube.com/channel/UCuoHrWaD_l73MW3IoEUyZog",
+    "suscriptores": 3080,
+    "motivo": "Peluquerías (149.000) y empleados de banca (109.000) confirman el tema, pero la duración mediana es de 18,2 min (solo el 42% pasa de 20 min)."
+   },
+   {
+    "canal": "Old American Empires (@oldamericanempires)",
+    "url": "https://www.youtube.com/channel/UCHCHcGMkCZt0TbchB5umlnA",
+    "suscriptores": 4300,
+    "motivo": "Pasa los filtros 1-3 (mediana 13.000, 70% de vídeos por encima de los subs, 98% de 25-45 min; «Why Nobody Wants to Eat at Golden Corral Anymore» 412.000, Long John Silver's 238.000), pero falla el 4: su variante «auge y caída de la cadena X» choca con lo que ya está saturado en español («¿Qué pasó con X?», empresas españolas)."
+   },
+   {
+    "canal": "In Plain Bite",
+    "suscriptores": 119000,
+    "motivo": "Versión estadounidense de Plain Bite Britain (cadenas de tiendas). Supera los 80.000 subs y la herramienta lo marca como «visitas dependen de la audiencia»."
+   }
+  ],
+  "hueco_espanol": {
+   "consultas_es": [
+    "filtrar \"la verdadera razón por la que están desapareciendo\" --max-subs 100000000 --periodo anio --orden relevancia",
+    "buscar \"por qué están desapareciendo los bares de barrio\" --periodo any --orden relevancia",
+    "filtrar \"por qué cierran las discotecas en España\" --max-subs 100000000 --periodo anio --orden relevancia",
+    "filtrar \"cómo gana dinero un bar realmente\" --max-subs 100000000 --periodo anio --orden relevancia",
+    "filtrar \"por qué ya nadie quiere ser camionero\" --max-subs 100000000 --periodo anio --orden relevancia",
+    "buscar \"la verdadera razón por la que cierran\" --periodo mes --orden relevancia",
+    "buscar \"por qué desaparecen los quioscos\" --periodo any --orden relevancia",
+    "buscar \"por qué faltan albañiles en España\" --periodo any --orden relevancia",
+    "filtrar \"por qué están cerrando\" --max-subs 100000000 --periodo anio --orden vistas",
+    "buscar \"nunca habíamos visto una crisis así discotecas la verdadera razón\" --periodo any",
+    "(vacías por demasiado específicas: \"por qué están desapareciendo los quioscos peluquerías autoescuelas\", \"por qué cierran tantos negocios en España la verdadera razón\")"
+   ],
+   "competidores": [
+    {
+     "canal": "Rey Genio del Conocimiento (@ReyGeniodelConocimiento)",
+     "suscriptores": 1480,
+     "vistas_tipicas": 788,
+     "mismo_formato": true
+    },
+    {
+     "canal": "Don Economía (@DonEconomía) – «el negocio multimillonario detrás de X / ¿es rentable tener una discoteca?»",
+     "suscriptores": 5570,
+     "vistas_tipicas": 5900,
+     "mismo_formato": false
+    },
+    {
+     "canal": "EL GIGANTE SE AGRIETA – cadenas de EE. UU. que se desmoronan, en español (pico de 741.000)",
+     "suscriptores": 2920,
+     "vistas_tipicas": 578,
+     "mismo_formato": false
+    },
+    {
+     "canal": "España en los Estantes – marcas de supermercado que comprar o evitar",
+     "suscriptores": 13300,
+     "vistas_tipicas": 947,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Crea Y Transforma – generalista de negocios con foco México y EE. UU. («Why is ROSS so cheap?», 774.000)",
+     "suscriptores": 1210000,
+     "vistas_tipicas": 26000,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Oliver Crevillen – vlog con cara («Investigué centros comerciales que están cerrando»)",
+     "suscriptores": 47700,
+     "vistas_tipicas": 58000,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Rutas de Éxito – pódcast de entrevistas a trabajadores (conductor de autobús, instructor CAP)",
+     "suscriptores": 16500,
+     "vistas_tipicas": 86500,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Wololo Sound – pódcast de cultura de club en España",
+     "suscriptores": 6970,
+     "vistas_tipicas": 3600,
+     "mismo_formato": false
+    }
+   ],
+   "veredicto": "hueco parcial"
+  },
+  "rpm_estimado_es": "ESTIMACIÓN, no dato: un RPM combinado de 2-4,5 USD si al menos el 50% del público es de España. Por mercados: España 3-6 USD, y México, Colombia y Argentina 0,6-1,8 USD. Razón: son temas de consumo y negocio local (bares, coches, autónomos, vivienda), que atraen anunciantes de banca, seguros, automoción, franquicias y telecos, por encima del RPM medio de entretenimiento, aunque por debajo de las finanzas puras. Referencia secundaria de 2026 (upgrowth.in / creaticalc): RPM medio de unos 3,9 USD en España, 0,62 en México, 0,57 en Colombia y 0,56 en Argentina. Si el canal se va hacia temas latinoamericanos, el combinado bajaría a 1-2 USD. El último trimestre del año paga más.",
+  "ventaja_usuario": "1) Economía de la noche: es el único subtema donde el español ya ha demostrado demanda dentro de este formato. Rey Genio, con 1.480 subs y mediana de 788, sacó 52.753 vistas con el hundimiento de las discotecas y 40.182 con los bares de barrio. En Corea en cambio no funciona: los vídeos de discotecas de 아무튼경제 y 경제야 고맙다 hicieron 15.104 y 7.934, por debajo de su mediana. Es un ángulo propio de España y Latinoamérica (Ibiza, Ruta del Bakalao, discotecas de pueblo, cachés de DJ, festivales que quiebran, la copa a 15 €) que el usuario conoce desde dentro. 2) Como trader sabe desmontar la cuenta de resultados de cada negocio (ticket medio, margen, alquiler, coste laboral, deuda), que es el núcleo del «진짜 이유» coreano, y convertirla en gráficos sencillos. 3) Como venezolano puede abrir episodios para México, Colombia y Venezuela para ganar alcance, sabiendo que el RPM es menor.",
+  "ideas_doblez": [
+   "Serie fija «La economía de la noche» con la plantilla coreana (cita entre comillas más «el hundimiento de X»): discotecas de pueblo, festivales que quiebran, cachés de DJ, Ibiza, salas de conciertos, after-hours, botellón frente a copa a 15 €. Es el diferencial del usuario y el subtema con demanda verificada en español.",
+   "La fórmula paradójica de 돈의 맥락, «Hay más X que nunca, pero cierran las tiendas de X», aplicada a España: más perros que niños pero cierran las peluquerías caninas; más ciclistas pero cierran los talleres de bici; la burbuja del pádel (clubes que cierran con más jugadores que nunca); más coches pero cierran autoescuelas y gasolineras; más bodas civiles y menos tiendas de novia.",
+   "«Oficios sin relevo», de 경제야 고맙다 y 아무튼경제 (peón 322.000, oficios técnicos 170.000, conductores de autobús 146.000): camioneros, albañiles, fontaneros, pescadores, pastores, taxistas y panaderos, con datos de afiliación a la Seguridad Social e INE. En español solo existen pódcasts y noticias, no explicadores sin cara.",
+   "La mitad «por qué NO quiebra» (ゆっくりなるほど経済学, 경제학TV con 147.000 en «por qué no cierran las ferreterías sin clientes»): el bar vacío que nunca cierra, el bazar chino, el kebab, el estanco, la administración de lotería, el «compro oro» y las ópticas, con desglose de márgenes (ventaja del trader). Evitar las biografías de marcas («¿qué pasó con X?»), que ya están saturadas en español."
+  ],
+  "puntuacion_nicho": 15,
+  "veredicto": "RECOMENDABLE (15/18). Desglose: tamaño 2, demanda 2, recencia 2, duración 2, hueco ES 1, replicabilidad 2, copyright 2, RPM 1, potencial viral 1.\n\nEl formato existe casi solo en Corea y Japón. En alemán, francés, polaco, turco, portugués, italiano y ruso las consultas solo dieron ruido, y en inglés las búsquedas devuelven sobre todo canales coreanos con títulos traducidos. En Corea es una fiebre de 2026: decenas de canales nuevos (muchos con menos de 1.000 subs) y varios de 1 a 6 meses que pasan todos los filtros con outliers de 100.000 a 450.000. Los mejores: 돈의 맥락 (5.800 subs, mediana 16.000, 95% de vídeos de 25-45 min), 경제야 고맙다 (3.410, mediana 13.000, 80% de vídeos por encima de los subs, 32 min), 무릎탁경제학 (6.500, mediana 33.000, 35 min) y 투자한잔 (motel 404.000). Japón aporta la variante «por qué no quiebra». Es 100% replicable con la fábrica: ilustración de IA en acuarela, dibujos o fotorrealismo, voz de IA y subtítulos, sin metraje ajeno. El cuello de botella es el guion: cada vídeo necesita datos locales reales (INE, Seguridad Social, patronales como Hostelería de España, precios), lo que también protege el hueco.\n\nHueco en español PARCIAL: hay un solo clon del formato exacto, Rey Genio del Conocimiento (1.480 subs, mediana 788). Publica más de un vídeo al día con temas españoles (bares, discotecas, coche usado en España, Rota, Asturias, Rumasa), pero ejecuta mal. Aun así demuestra demanda: 52.753 con discotecas y 40.182 con bares. Alrededor hay formatos adyacentes pequeños: Don Economía con «¿es rentable X?» (mediana 5.900) y EL GIGANTE SE AGRIETA con cadenas de EE. UU. (mediana 578, pico de 741.000). Los canales coreanos no tienen títulos en español: con la interfaz en español, 경제야 고맙다 y 돈의 맥락 salen en coreano. No pude comprobar si tienen pista de audio doblada porque YouTube pidió verificación en la página del vídeo. En cualquier caso, sus temas son coreanos y no compiten con temas locales españoles.\n\nRiesgos: llegarán más clones (en Corea el formato se copió en semanas). Hay que ir rápido y diferenciarse con datos de España y con la noche. La variante «auge y caída de la marca X» (Old American Empires) está saturada en español: hay que quedarse en el SECTOR y el OFICIO, no en la marca. El potencial de millones no está demostrado en español: el máximo verificado del formato exacto es de 52.753, aunque el adyacente llegó a 741.000.",
+  "nicho_id": "economia_de_la_calle"
+ },
+ {
+  "nicho": "Las cuentas de…: empresas, megaproyectos y dinero público de actualidad en España y LatAm explicados con números (formato 'explicado con cifras' de un experto)",
+  "consultas_realizadas": [
+   "JA filtrar '決算 解説 赤字 いつまで持つ' (anio) -> 0 vídeos",
+   "JA filtrar '決算 赤字 解説' (anio)",
+   "JA filtrar '負債総額 破産 理由' (anio)",
+   "JA filtrar '税金 闇 解説' (anio)",
+   "JA filtrar '決算書 読み解く 会計士' (anio) -> 0",
+   "JA filtrar '決算 解説' (anio, relevancia)",
+   "JA filtrar 'ジャングリア 赤字' (anio)",
+   "JA filtrar '第三セクター 赤字 税金' (anio)",
+   "JA filtrar 'なぜ倒産 解説' (anio)",
+   "JA filtrar '会計士 決算 ヤバい' (anio)",
+   "JA filtrar 'いつまで持つ 資金' (anio)",
+   "JA filtrar '万博 赤字 税金 解説' (anio) -> 0",
+   "JA filtrar '経営危機 なぜ 数字' (anio, relevancia)",
+   "KO filtrar '적자 파산 진짜 이유' (anio)",
+   "KO filtrar '재무제표 적자 분석' (anio)",
+   "KO filtrar '혈세 낭비 적자 공항' (anio) -> 0",
+   "KO filtrar '혈세 낭비' (anio)",
+   "KO filtrar '매출 조 원 무너진 진짜 이유' (anio)",
+   "KO filtrar '언제까지 버틸까 적자' (anio, relevancia)",
+   "KO filtrar '세금 먹는 하마' (anio)",
+   "DE filtrar 'warum pleite Bilanz erklärt' (anio) -> 0",
+   "DE filtrar 'Steuergeld verschwendet' (anio)",
+   "DE filtrar 'Milliardengrab' (anio)",
+   "FR filtrar 'argent public gaspillé' (anio)",
+   "FR filtrar 'pourquoi faillite entreprise milliards' (anio) -> 0",
+   "FR filtrar 'faillite expliquée' (anio)",
+   "PT filtrar 'por que faliu dívida bilhões' (anio)",
+   "PT filtrar 'recuperação judicial explicada' (anio)",
+   "PT filtrar 'obra bilionária abandonada' (anio)",
+   "EN filtrar 'why is losing billions' (mes)",
+   "EN filtrar 'megaproject cost taxpayers billions' (anio, relevancia)",
+   "EN filtrar 'accountant reads annual report collapse' (anio, relevancia)",
+   "RU canal @ganzhagleb (semilla)",
+   "RU filtrar 'убыток миллиардов как зарабатывает' (anio) -> 0",
+   "RU filtrar 'как зарабатывает бизнес разбор' (anio)",
+   "RU filtrar 'сколько продержится долги убытки' (anio) -> 0",
+   "RU filtrar 'убытки млрд что происходит с компанией' (anio, relevancia)",
+   "IT filtrar 'bilancio perdite miliardi' (anio) -> 0",
+   "IT filtrar 'perché sta fallendo' (anio, relevancia)",
+   "PL filtrar 'dlaczego upadła firma miliardy' (anio, relevancia)",
+   "TR filtrar 'neden battı milyar zarar' (anio, relevancia)",
+   "ZH filtrar '虧損 財報 解讀' (anio)",
+   "Bola de nieve con 'canal': 元国税のシロクマくん, 경제학TV, 레몬경제학, Max Boyarskiy, Марк Куликов, China Scorecard, Plain Bite Britain, Rimembah, Company Data View, Juan Ramón Rallo, Así Está Montado, LA MÁQUINA DEL NEGOCIO, Impacto Argentino, Imperio S.A, El Último Turno",
+   "Miniaturas y fotogramas internos (hq1-hq3) revisados: シロクマくん (2 miniaturas + 3 fotogramas), Марк Куликов (2 + 3), Ganzha (2 + 3), Max Boyarskiy (2 + 3), 경제학TV (2 + 3), あっと驚く経済学, 地平線への道, Imperio S.A, Impacto Argentino",
+   "WebSearch: benchmark de RPM de finanzas en España"
+  ],
+  "idiomas_cubiertos": [
+   "japonés",
+   "coreano",
+   "ruso",
+   "alemán",
+   "francés",
+   "portugués",
+   "italiano",
+   "inglés",
+   "polaco",
+   "turco",
+   "chino",
+   "español (comprobación del hueco)"
+  ],
+  "candidatos": [
+   {
+    "canal": "元国税のシロクマくん (Shirokuma, exinspector de Hacienda)",
+    "url": "https://www.youtube.com/channel/UC4OhHGUo_pw1yFuoUYWasxQ",
+    "idioma": "japonés",
+    "suscriptores": 25300,
+    "mediana_vistas": 104500,
+    "ratio_mediana_subs": 4.13,
+    "pct_videos_vistas_mayor_que_subs": 80,
+    "duracion_mediana_min": 23.7,
+    "pct_videos_25_45_min": 42,
+    "outliers": [
+     {
+      "titulo": "公庫30億円つなぎ融資…新たなスポンサー探し、刀の退陣が出資の条件？【ジャングリア】 (préstamo puente público de 3.000 M de yenes a Junglia)",
+      "vistas": 398000,
+      "duracion_min": 16.4,
+      "fecha": "2026-09-26"
+     },
+     {
+      "titulo": "【福岡県議会の闇】ワンヘルスに県民の税金が吸い込まれている…？ (impuestos de la provincia de Fukuoka)",
+      "vistas": 393000,
+      "duracion_min": 32.5,
+      "fecha": "2026-08-07"
+     },
+     {
+      "titulo": "決算検証！数カ月で資金枯渇？計算したら厳しい結果に…【ジャングリア】 (revisión de cuentas: ¿sin caja en unos meses?)",
+      "vistas": 344000,
+      "duracion_min": 23.6,
+      "fecha": "2026-09-25"
+     },
+     {
+      "titulo": "【ニデック決算】減損6,321億円！1兆円規模の利益喪失。2年連続意見不表明…上場は維持できるのか？ (Nidec: deterioro de 632.100 M de yenes)",
+      "vistas": 315000,
+      "duracion_min": 22.6,
+      "fecha": "2026-10-02"
+     },
+     {
+      "titulo": "負債総額1,259億円！全東信が破産した３つの理由とは？ (deuda de 125.900 M de yenes: por qué quebró Zentoshin)",
+      "vistas": 314000,
+      "duracion_min": 21.7,
+      "fecha": "2026-08-07"
+     }
+    ],
+    "formato_visual": "MINIATURA (2 vistas): solo texto enorme sobre fondo negro, con la cifra en rojo ('減損6300億！', '89億円大赤字 年内もつか？' = 8.900 M de pérdidas, ¿llega a fin de año?), la etiqueta fija '数字で解説' (explicado con números), el logo de la empresa y la mascota (un oso polar con bufanda) con cara de susto. DENTRO (fotogramas hq1-hq3): plano fijo y desenfocado de un escritorio con un peluche de oso, y encima tarjetas blancas con la cifra clave y el cálculo ('visitantes necesarios para no perder dinero ≈1,92 millones', 'cálculo con supuestos optimistas', 'ni a fin de año: el dinero se acaba en otoño'), rótulo de sección arriba a la izquierda y 'NEXT…' con la siguiente sección. La voz es la del autor. Sin cara y sin metraje ajeno.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "La mejor referencia del nicho y la única que hace exactamente 'cuentas de actualidad'. Publica el mismo día del resultado o de la noticia, monta SERIES de varios vídeos sobre un caso que está vivo (5 sobre Junglia: cuentas, préstamo, flujo del dinero, nuevo patrocinador) y mezcla empresas cotizadas (Nidec), quiebras (Zentoshin) y dinero público (diputación de Fukuoka, Asian Games). Los 40 vídeos analizados son de los últimos 3 meses. La producción se replica con nuestra fábrica casi 1:1: un fondo fijo, tarjetas de cifras generadas con código, gráficos e imágenes IA del lugar, y una mascota que es un único recurso fijo, así que no hay que mantener personajes coherentes en 40 escenas. Lo difícil es el contenido: es YMYL y su gancho es la credibilidad del exinspector. En español habría que suplirla citando en pantalla las fuentes (CNMV, Registro Mercantil, presupuestos, BMV/CNV) y mostrando los supuestos del cálculo. La duración es algo corta: el 78% pasa de 20 min, pero solo el 42% está entre 25 y 45."
+   },
+   {
+    "canal": "Ганжа Глеб (Ganzha Gleb)",
+    "url": "https://www.youtube.com/channel/UCFZzfxJTAvT8J1BhDoRKTDA",
+    "idioma": "ruso",
+    "suscriptores": 47900,
+    "mediana_vistas": 82500,
+    "ratio_mediana_subs": 1.72,
+    "pct_videos_vistas_mayor_que_subs": 70,
+    "duracion_mediana_min": 18.9,
+    "pct_videos_25_45_min": 18,
+    "outliers": [
+     {
+      "titulo": "311 million ruble LOSS. How does Drinkit actually make money? (título traducido por YouTube)",
+      "vistas": 781000,
+      "duracion_min": 31.6,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "Что происходит с ВКУСВИЛЛ? История зеленого магазина у дома (¿qué le pasa a VkusVill?)",
+      "vistas": 560000,
+      "duracion_min": 21.1,
+      "fecha": "2026-06-07"
+     },
+     {
+      "titulo": "Why did Samokat lose its customers? The rise and fall of a legend.",
+      "vistas": 516000,
+      "duracion_min": 16.7,
+      "fecha": "2026-05-07"
+     },
+     {
+      "titulo": "The hype is over: how much longer will PIMS last?",
+      "vistas": 431000,
+      "duracion_min": 31.3,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "FRAMBINI ON THE BRINK OF COLLAPSE. Everyone COPIED the chocolate-covered raspberries…",
+      "vistas": 415000,
+      "duracion_min": 22.6,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Azbuka Vkusa — DONE FOR? The end of the premium grocery era.",
+      "vistas": 344000,
+      "duracion_min": 25.4,
+      "fecha": "2026-09-07"
+     }
+    ],
+    "formato_visual": "Presentador a cámara en un plató tipo despacho con estantería, con logos y rótulos superpuestos (McDonald's, KFC, Burger King) e insertos de entrevistas y clips de otros canales de YouTube con crédito en pantalla. Miniaturas de producción cuidada: foto del producto de la marca (el vaso de Drinkit, el vaso de PIMS con una silueta) o el presentador, más una pregunta gancho ('¿cuál es la trampa del negocio?', '¿se acabó el hype?').",
+    "replicable": "media",
+    "riesgo_copyright": "bajo",
+    "notas": "La referencia de DEMANDA más sólida: 8 outliers en 6 meses y una mediana de 82.500 con 47.900 suscriptores, todos sobre empresas LOCALES y ACTUALES con una cifra de pérdidas o deuda en el título y la pregunta '¿cuánto aguanta?'. Demuestra que la fórmula de Shirokuma funciona fuera de Japón y con marcas de consumo (cadenas, apps de reparto, cafeterías). Cara: los temas y la estructura se pueden copiar tal cual, pero la imagen hay que rehacerla con gráficos de cuentas e imágenes IA de producto y tienda. Ojo: él inserta clips ajenos; nosotros no debemos. Vídeos algo cortos (mediana de 18,9 min) y ritmo bajo (unos 14 vídeos en 6 meses), lo que apunta a mucha investigación por pieza. Equivalentes en español: '¿Cuánto aguanta Glovo/Dia/Telepizza?', 'Shein y Temu: ¿dónde está el negocio?'."
+   },
+   {
+    "canal": "경제학TV (Economía TV)",
+    "url": "https://www.youtube.com/channel/UCihfvDL8-2_laUcpdOrVozA",
+    "idioma": "coreano",
+    "suscriptores": 9310,
+    "mediana_vistas": 5900,
+    "ratio_mediana_subs": 0.63,
+    "pct_videos_vistas_mayor_que_subs": 30,
+    "duracion_mediana_min": 23.3,
+    "pct_videos_25_45_min": 25,
+    "outliers": [
+     {
+      "titulo": "\"80,000 won out of 200,000 won\": The real reason behind the downfall of Cheong Kwan Jang… (la caída de la marca líder de ginseng; título traducido por YouTube)",
+      "vistas": 547000,
+      "duracion_min": 21.6,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "\"Why don't they go out of business when there are no customers?\" The real reason neighborhood hair salons…",
+      "vistas": 147000,
+      "duracion_min": 21.5,
+      "fecha": "2026-09-27"
+     },
+     {
+      "titulo": "\"We Don't Sell 5,000 Won Worth of Fish Cakes\": The Price Gouging Controversy and the Real Reason…",
+      "vistas": 139000,
+      "duracion_min": 22.2,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "\"It wasn't like this at first...\" The Uncomfortable Truth About the Changed Taste of Shine Muscat",
+      "vistas": 117000,
+      "duracion_min": 20.8,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "\"It wasn't because business was bad\": The real reason behind the downfall of Lotte Hi-Mart…",
+      "vistas": 35000,
+      "duracion_min": 27.6,
+      "fecha": "2026-09-16"
+     }
+    ],
+    "formato_visual": "100% IA y sin cara. MINIATURA: foto realista (o IA fotorrealista) de la tienda de la marca, vacía o cerrada, a veces partida en antes y después (tienda llena frente a estanterías vacías), con una cita entre comillas ('¿adónde se fueron los electrodomésticos?') y 'La caída de X' en rojo. DENTRO (fotogramas): ilustraciones IA estilo webtoon o cómic (clientas en una tienda de regalos, un ejecutivo dibujando en una pizarra el gráfico de subida de precios, botas sobre tierra) con subtítulos quemados y el logo del canal en una esquina.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Es la plantilla de PRODUCCIÓN: lo mismo que haría nuestra fábrica (guion IA, voz IA, ilustración gpt-image y subtítulos) aplicado a marcas locales en caída con cifras (precio, ventas, pérdidas). Producción en serie: los 40 vídeos analizados son del último mes (las fechas de yt-dlp son aproximadas) y la demanda está concentrada en un gran éxito (547k), así que es una referencia de formato más que de constancia. Su ángulo es 'economía de la calle + empresas', fusionable con este nicho. En Corea hay todo un género así: 레몬경제학 (6.550 subs, mediana de 6.050, outlier de 172k; 'la verdadera razón por la que quebró Samlip pese a vender 190.000 M de wones'), y en Japón la versión 愉快な経済学 (31.000 subs, outliers de 184k y 177k). Riesgo leve de marca por usar logos y fachadas reales en imágenes IA."
+   },
+   {
+    "canal": "Марк Куликов финансист (Mark Kulikov, financiero)",
+    "url": "https://www.youtube.com/channel/UCh3FAHjrMTHxPjCZ-kb2b7Q",
+    "idioma": "ruso",
+    "suscriptores": 27200,
+    "mediana_vistas": 18500,
+    "ratio_mediana_subs": 0.68,
+    "pct_videos_vistas_mayor_que_subs": 40,
+    "duracion_mediana_min": 21.4,
+    "pct_videos_25_45_min": 20,
+    "outliers": [
+     {
+      "titulo": "HOW LONG WILL VK LAST?: NO MONEY / DEBTS / PRESSURE (título traducido por YouTube)",
+      "vistas": 148000,
+      "duracion_min": 30,
+      "fecha": "2026-07-07"
+     },
+     {
+      "titulo": "WB Can't Handle It! - 628 Billion / Loans / Fines / Extortion",
+      "vistas": 84000,
+      "duracion_min": 29.3,
+      "fecha": "2026-07-07"
+     },
+     {
+      "titulo": "Frank by Basta - Franchise Review: How much does BASTA earn and who runs the RESTAURANTS?",
+      "vistas": 77000,
+      "duracion_min": 20.4,
+      "fecha": "2026-06-07"
+     },
+     {
+      "titulo": "MAGNIT without Galitsky: The Collapse of an EMPIRE and a LOSS for the first time in 20 years",
+      "vistas": 72000,
+      "duracion_min": 22.4,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Империя WB РУШИТСЯ !? Денег НЕТ! / Склады ГОРЯТ / долги РАСТУТ! (el imperio Wildberries se hunde: sin dinero, deudas)",
+      "vistas": 71000,
+      "duracion_min": 26.2,
+      "fecha": "2026-09-27"
+     }
+    ],
+    "formato_visual": "Cuerpo del vídeo: presentador a cámara en un estudio con estantería. MINIATURAS (2 vistas): una escena dramática generada con IA (un funeral con el logo de VK; un tren de RZhD descarrilando en un cañón) con una cifra gigante en banda roja ('Pérdidas de 197.000 M', 'Deuda de 5.234.163.342.290 rublos') y la cara del presentador montada.",
+    "replicable": "media",
+    "riesgo_copyright": "bajo",
+    "notas": "Es el ángulo más parecido a Shirokuma fuera de Japón: '¿Cuánto aguantará X?' con la deuda o las pérdidas en el título, e incluye EMPRESAS PÚBLICAS (RZhD, los ferrocarriles estatales: 101k en marzo, fuera de la ventana de 6 meses; KAMAZ; Mechel). Traducción directa al español: '¿Cuánto aguanta Renfe/ADIF?', 'Pemex: la deuda de X', 'Correos pierde X millones'. Las miniaturas (escena IA y cifra enorme) se replican al 100% con gpt-image; el cuerpo habría que pasarlo a gráficos de cuentas. La demanda es moderada pero real: el 40% de sus vídeos supera a sus suscriptores."
+   },
+   {
+    "canal": "Max Boyarskiy • About marketing",
+    "url": "https://www.youtube.com/channel/UCTNH965HZLW3KLV3ODucATw",
+    "idioma": "ruso",
+    "suscriptores": 13000,
+    "mediana_vistas": 3950,
+    "ratio_mediana_subs": 0.3,
+    "pct_videos_vistas_mayor_que_subs": 30,
+    "duracion_mediana_min": 19.1,
+    "pct_videos_25_45_min": 22,
+    "outliers": [
+     {
+      "titulo": "М.Видео ПОТЕРЯЛА всё: миллиардные убытки и закрытые магазины (M.Video lo perdió todo: pérdidas milmillonarias y tiendas cerradas)",
+      "vistas": 575000,
+      "duracion_min": 19.1,
+      "fecha": "2026-06-07"
+     },
+     {
+      "titulo": "Что скрывает ЗОЛОТОЕ ЯБЛОКО? Почему они растут быстрее всех",
+      "vistas": 316000,
+      "duracion_min": 22.6,
+      "fecha": "2026-07-07"
+     },
+     {
+      "titulo": "На чём зарабатывает Aviasales. РЕАЛЬНАЯ цена дешёвых авиабилетов",
+      "vistas": 207000,
+      "duracion_min": 31,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "История самой успешной выдумки российского маркетинга",
+      "vistas": 104000,
+      "duracion_min": 28.6,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "САМОКАТ сам себя похоронил: как лидер рынка превратился в помойку за одно обновление",
+      "vistas": 96000,
+      "duracion_min": 25,
+      "fecha": "2026-06-07"
+     }
+    ],
+    "formato_visual": "Cuerpo del vídeo: presentador en estudio con logos y citas superpuestos (Wildberries, fotos de los dueños). MINIATURAS sin cara (2 vistas): escena IA de una tienda M.Video abandonada entre montañas de electrodomésticos rotos con el texto 'IMPERIO SIN DINERO', y un billete de avión de Aviasales diseñado con '¿Para qué este negocio?' y 'comisión de 200 ₽'.",
+    "replicable": "media",
+    "riesgo_copyright": "bajo",
+    "notas": "Confirma la demanda rusa de 'empresa local en crisis + cifra': 575k en un canal de 13.000 suscriptores. Las miniaturas son el modelo a copiar (escena IA de decadencia + 2-3 palabras), pero el vídeo es de presentador. Es el candidato más débil: su ratio de demanda (0,30) está justo en el límite, el 70% de sus vídeos no supera a los suscriptores y la mediana dura 19,1 min. Lo incluyo como referencia de temas y de miniatura, no de producción."
+   }
+  ],
+  "cerca_del_limite": [
+   {
+    "canal": "Rimembah",
+    "url": "https://www.youtube.com/channel/UCb_6gDAEEAetTmQNCy71oQQ",
+    "suscriptores": 311000,
+    "motivo": "Supera los 80.000 y es HISPANO con presentador (documental de cultura pop española). Valida la demanda del tema en español: 'El desastre detrás del Parque Warner' 622.000, 'Telepizza: el declive' 573.000, 'Auge y caída de PortAventura' 493.917, 'El boom del aeropuerto de Castellón' 213.318; mediana de 317.000. Compite en temas (empresas y megaproyectos españoles) pero en clave de nostalgia, sin cuentas ni actualidad."
+   },
+   {
+    "canal": "Imperio S.A (Brasil, portugués)",
+    "url": "https://www.youtube.com/channel/UCJe3mkzBB33DxZn-Br2gzxQ",
+    "suscriptores": 41300,
+    "motivo": "Tamaño correcto y outliers de ACTUALIDAD ('El fin de Will Bank' 271.000; 'Fraude del Banco Master' 211.000), pero solo el 12% de sus vídeos supera a sus suscriptores (ratio 0,13): las visitas dependen de la audiencia. Además mezcla política judicial e inserta anuncios y metraje ajenos (riesgo de copyright). Demuestra que un escándalo empresarial de actualidad dispara las vistas."
+   },
+   {
+    "canal": "ほしのん正直な旅チャンネル",
+    "url": "https://www.youtube.com/channel/UCGuB9zuRBVq3mQ-sTHz_frQ",
+    "suscriptores": 16800,
+    "motivo": "Mediana de 62.000, el 98% de sus vídeos supera a sus suscriptores y 1.000.000 de vistas con 'Junglia al borde de la quiebra', pero es un vlog que graba en el lugar (Junglia, ciudades fantasma chinas): no se puede replicar sin rodaje."
+   },
+   {
+    "canal": "地平線への道",
+    "url": "https://www.youtube.com/channel/UCiWtMYbniMQz3LUsyEYfnZg",
+    "suscriptores": 3340,
+    "motivo": "Micronicho de estadios pagados con impuestos ('税リーグ'): mediana de 45.000, ratio 13,47 y 100% de vídeos por encima de sus suscriptores (outliers de 248.000 y 192.000). Pero no publica desde 2026-06-07 y monta fotos de prensa y metraje de archivo (copyright medio-alto). La idea encaja con fútbol y dinero público en España."
+   },
+   {
+    "canal": "消滅図鑑",
+    "url": "https://www.youtube.com/channel/UC81ishsZW4PR_PE6A06hwFw",
+    "suscriptores": 6180,
+    "motivo": "Mediana de 32.000 y 100% de vídeos por encima de sus suscriptores (quiebra de Terumi Club 373.000, Sanyo 280.000), pero la mediana es de 17,9 min y el tema es histórico ('¿por qué desapareció X?'), un ángulo que en español ya copian decenas de canales IA nuevos."
+   },
+   {
+    "canal": "INV FINANCE — Инвестиции и Экономика",
+    "url": "https://www.youtube.com/channel/UCKKwdlsxVdiYYn0hLEsjnsQ",
+    "suscriptores": 15700,
+    "motivo": "Pasa los filtros 1-3 (mediana de 29.000, outliers de 1.500.000 'China: se acabó el milagro' y 171.000 'Arabia Saudí: el error más caro de la historia'), pero su tema es la macroeconomía de países, otro nicho y ya saturado en español."
+   },
+   {
+    "canal": "Podcast Biznesowy",
+    "url": "https://www.youtube.com/channel/UCLBZu25YWbtY1am2-zF1AKg",
+    "suscriptores": 20900,
+    "motivo": "Escándalos empresariales polacos de ACTUALIDAD (139.000, 73.000 '¿De dónde salen 50 M de zł de ventas raras en Buddy?'), pero es un pódcast de 56 min de mediana con presentadores."
+   },
+   {
+    "canal": "Restposten Markt",
+    "url": "https://www.youtube.com/channel/UCQIgnSbiyrrlUCuRVLRqU3A",
+    "suscriptores": 1120,
+    "motivo": "Ratio 3,3 y el 92% de sus vídeos supera a sus suscriptores con quiebras de cadenas alemanas (Real: 33.000), pero la mediana es de 66 min y no publica desde junio de 2026."
+   }
+  ],
+  "hueco_espanol": {
+   "consultas_es": [
+    "filtrar 'explicado con números pérdidas millones' (anio, sin tope de subs) -> 0 vídeos",
+    "filtrar 'pérdidas millones explicado' (anio) -> 0",
+    "filtrar 'por qué quebró' (anio)",
+    "buscar 'Port Aventura pérdidas' (any) -> 0; buscar 'PortAventura' (any)",
+    "buscar 'aeropuerto de Castellón' (any)",
+    "filtrar 'cuentas del Barça' (anio)",
+    "filtrar 'Tren Maya costo' (anio)",
+    "filtrar 'Pemex deuda quiebra' (anio)",
+    "buscar 'Pemex' (anio)",
+    "filtrar 'despilfarro dinero público obras' (anio) -> 0",
+    "filtrar 'aeropuertos fantasma' (any)",
+    "filtrar 'pierde millones cada año por qué' (mes, relevancia)",
+    "buscar 'Grifols' (any)",
+    "buscar 'cómo gana dinero Ryanair' (any)",
+    "filtrar 'concurso de acreedores deuda' (anio)",
+    "buscar 'Company Data View' (any)",
+    "filtrar 'cuánto nos cuesta dinero público' (anio, relevancia)",
+    "buscar 'quiebra deuda millones empresa' (mes, relevancia)",
+    "canal: Rimembah, Company Data View, Juan Ramón Rallo, Así Está Montado, LA MÁQUINA DEL NEGOCIO, Impacto Argentino, El Último Turno, El Colapso (caché)"
+   ],
+   "competidores": [
+    {
+     "canal": "Company Data View",
+     "mismo_formato": true,
+     "suscriptores": 4380,
+     "vistas_tipicas": 1600
+    },
+    {
+     "canal": "Impacto Argentino",
+     "mismo_formato": false,
+     "suscriptores": 3630,
+     "vistas_tipicas": 2200
+    },
+    {
+     "canal": "El Colapso",
+     "mismo_formato": false,
+     "suscriptores": 11,
+     "vistas_tipicas": 105
+    },
+    {
+     "canal": "El Último Turno",
+     "mismo_formato": false,
+     "suscriptores": 583,
+     "vistas_tipicas": 948
+    },
+    {
+     "canal": "Ruinas de un Imperio (y otros canales IA de colapsos nacidos en el último mes: El Gran Desfalco, Imperios Caídos, LA FABRICA VACIA, Colapso de la empresa)",
+     "mismo_formato": false,
+     "vistas_tipicas": 300
+    },
+    {
+     "canal": "Así Está Montado",
+     "mismo_formato": false,
+     "suscriptores": 134,
+     "vistas_tipicas": 274
+    },
+    {
+     "canal": "LA MÁQUINA DEL NEGOCIO",
+     "mismo_formato": false,
+     "suscriptores": 5,
+     "vistas_tipicas": 79
+    },
+    {
+     "canal": "Aiden Reed",
+     "mismo_formato": false,
+     "suscriptores": 3350,
+     "vistas_tipicas": 15000
+    },
+    {
+     "canal": "Rimembah",
+     "mismo_formato": false,
+     "suscriptores": 311000,
+     "vistas_tipicas": 317000
+    },
+    {
+     "canal": "Juan Ramón Rallo",
+     "mismo_formato": false,
+     "suscriptores": 962000,
+     "vistas_tipicas": 334000
+    },
+    {
+     "canal": "Capital Radio / Negocios TV (tertulias financieras)",
+     "mismo_formato": false,
+     "vistas_tipicas": 22000
+    }
+   ],
+   "veredicto": "hueco parcial"
+  },
+  "rpm_estimado_es": "ESTIMACIÓN, no dato: 3-7 USD de RPM con público mayoritario de España, y 1,5-3,5 USD si domina Latinoamérica (vídeos de Pemex, YPF, Tren Maya o PDVSA). Una mezcla realista quedaría en 2,5-5 USD. Razonamiento: el benchmark público de tubeanalytics para 'Finanzas e Inversión' en España ronda los 620 USD por 100.000 vistas, es decir, unos 6 USD de RPM (fuente: https://www.tubeanalytics.net/fr/benchmarks/spain). Este nicho es divulgación económica para público general, un escalón por debajo de las finanzas personales puras, pero atrae a los mismos anunciantes (banca, brókers, seguros, software para empresas). El cuarto trimestre suele subir un 30-50%. Para maximizarlo conviene que al menos la mitad de los temas sean españoles.",
+  "ideas_doblez": [
+   "'¿Cuánto aguanta?' (el esqueleto de Shirokuma en español): cifra gancho, lectura de las cuentas, supuestos explícitos, cálculo de hasta cuándo llega la caja y quién paga. Se aplicaría a casos VIVOS (PortAventura/Parques Reunidos, Pescanova, Grifols, Aerolíneas Argentinas, Pemex), en series de 3-5 capítulos por caso y publicando el mismo día de los resultados (CNMV, BMV, CNV). Es justo lo que no pueden hacer los clonadores, que trabajan con plantillas históricas.",
+   "'Dinero público con lupa' (el ángulo de Kulikov con empresas públicas): '¿Cuánto nos cuesta X por pasajero o por habitante?' para el AVE y ADIF, los aeropuertos de AENA con poco tráfico, Castellón, Ciudad Real, el Tren Maya, Dos Bocas, PDVSA, Citgo, YPF, Correos o RTVE. Tono neutral, solo cifras por ciudadano y nada de política, para diferenciarse de Rallo y de los canales partidistas de Pemex.",
+   "Fusión con 'economía de la calle' al estilo 경제학TV: caídas y crisis de marcas locales queridas (Telepizza, Dia, El Corte Inglés, Glovo, Grido, Coto, Oxxo) con ilustración IA y una cifra en la miniatura ('vendía X, hoy pierde Y'). Para no chocar con la ola de clones históricos (Impacto Argentino, El Último Turno, El Colapso), siempre con números del último ejercicio.",
+   "Fútbol y dinero, un '税リーグ' a la española: cuentas de clubes y estadios con dinero público (las palancas del Barça, el Bernabéu, el Nou Mestalla, los estadios del Mundial 2030, clubes en concurso de acreedores). Hoy en español solo lo cubren tertulianos y aficionados con presentador; la audiencia es enorme y vuelve cada temporada."
+  ],
+  "ventaja_usuario": "La barrera de entrada de este formato es justo la experiencia en trading: leer balances, cuentas de resultados y flujos de caja, seguir los hechos relevantes de la CNMV, la BMV y la CNV, y hacer el cálculo de 'cuánto aguanta' con supuestos explícitos. Eso es lo que no pueden hacer los clonadores con plantilla, que en español ya se lanzaron, pero todos con historias atemporales. Como venezolano tiene contexto propio y credibilidad para PDVSA, Citgo y Pemex ante el público latinoamericano. Además puede sacar los vídeos el mismo día de los resultados siguiendo el calendario del IBEX y la BMV, una ventaja de velocidad que la IA de plantilla no tiene.",
+  "puntuacion_nicho": 14,
+  "veredicto": "SÍ, con matices. Hay referencias que cumplen los filtros y el formato funciona en varios países. La fórmula 'caso de actualidad + cifra de pérdidas o deuda en el título + cálculo de cuánto aguanta' funciona en Japón (元国税のシロクマくん: 25.300 subs, mediana de 104.500, el 80% de sus vídeos supera a sus suscriptores, 5 outliers de 314k-398k en 2 meses) y en Rusia (Ganzha: 47.900 subs, mediana de 82.500 y 781k en 'pérdidas de 311 M de rublos: ¿cómo gana dinero Drinkit?'; Kulikov con '¿Cuánto aguantará VK?'; Boyarskiy con 575k en 'M.Video lo perdió todo'). Corea ya lo produce 100% con IA (경제학TV: 547k con 9.310 subs). El modelo a seguir es Shirokuma en lo editorial (actualidad, series por caso, cálculo propio, dinero público) con la producción de 경제학TV (ilustración IA y tarjetas de cifras). Los rusos sirven de banco de temas y de miniaturas, porque tienen presentador.\n\nHUECO EN ESPAÑOL: parcial. Nadie hace 'cuentas de actualidad' sin cara con tracción. Lo más parecido es Company Data View (4.380 subs, mediana de 1.600, 0% de vídeos por encima de sus suscriptores: cuentas del IBEX sin gancho). La actualidad económica la cubren presentadores con opinión política (Rallo: 962.000 subs, mediana de 334.000) y tertulias de radio. PERO en el último mes ha brotado una ola de canales hispanos con IA sobre colapsos empresariales (El Colapso, Ruinas de un Imperio, El Último Turno, El Gran Desfalco, Imperios Caídos, LA MÁQUINA DEL NEGOCIO...), casi todos con casos históricos o atemporales y menos de 1.000 vistas. Impacto Argentino (3.630 subs) ya hace marcas argentinas locales con un outlier de 61k. El ángulo histórico y el de 'cómo gana dinero X' se están saturando; el de actualidad con cifras, cálculo propio y dinero público sigue libre, pero la ventana se está cerrando.\n\nTECHO: las referencias rondan 0,3-0,8 M de vistas por vídeo, no 'muchos millones'. En español, Rimembah llega a 0,5-0,6 M con el Parque Warner o Telepizza, así que la demanda existe. Es un nicho de RPM alto (estimación: 3-7 USD con público de España) más que de viralidad masiva.\n\nRIESGOS: es contenido YMYL y hay riesgo de difamación. Hay que decir 'según sus cuentas depositadas', mostrar en pantalla la fuente (CNMV, Registro Mercantil, presupuestos) y no opinar de política. Exige investigación diaria; no se puede automatizar del todo con un guion de IA sin riesgo de errores.\n\nRecomendación: abrirlo como el canal de economía principal y absorber 'economía de la calle' con la línea de marcas locales. Puntuación: 14/18.",
+  "nicho_id": "cuentas_de_actualidad"
+ },
+ {
+  "nicho": "Ciudades y regiones hispanas que el dinero levantó y hundió (minas, petróleo, fábricas, puertos, turismo)",
+  "consultas_realizadas": [
+   "EN | filtrar 'The Rise and Fall of the steel city' (año, vistas)",
+   "EN | filtrar 'how oil money built a city and then lost it' (año) -> 2 vídeos",
+   "EN | filtrar 'the city that lost everything' (mes)",
+   "DE | filtrar 'Die Stadt, die reich wurde und jetzt zittert' (año) -> 1 vídeo",
+   "DE | filtrar 'Aufstieg und Fall der Stadt Doku' (año)",
+   "DE | filtrar 'Die Stadt die alles verlor Niedergang' (año, relevancia)",
+   "KO | filtrar '도시 몰락 진짜 이유' (año)",
+   "JA | filtrar '没落した街 理由 解説' (año)",
+   "JA | filtrar '企業城下町 炭鉱の町 衰退 理由' (año, relevancia)",
+   "IT | filtrar 'ascesa e declino della città industriale' (año, relevancia)",
+   "PT | filtrar 'a cidade que era a mais rica do Brasil e decaiu' (año, relevancia)",
+   "PT | filtrar 'ascensão e queda da cidade documentário' (año)",
+   "FR | filtrar 'la ville qui était la plus riche de France et a tout perdu' (año, relevancia)",
+   "FR | filtrar 'grandeur et décadence ville' (año)",
+   "PL | filtrar 'upadek miasta przemysłowego historia' (año, relevancia)",
+   "TR | filtrar 'bir zamanlar zengin olan şehir neden çöktü' (año, relevancia)",
+   "TR | filtrar 'şehrin yükselişi ve çöküşü' (año) -> 0 vídeos",
+   "TR | filtrar 'yükselişi ve çöküşü belgesel' (año)",
+   "RU | filtrar 'взлёт и падение города история' (año)",
+   "EN | filtrar 'rise and fall of Acapulco' (año)",
+   "KO | filtrar '부자 도시였는데 텅 빈 진짜 이유' (año) -> 0 vídeos",
+   "KO | filtrar '인구는 늘었는데 텅 빈 진짜 이유' (año) -> 1 vídeo",
+   "KO | filtrar '조선업 도시 몰락' (año, relevancia)",
+   "EN | filtrar 'the richest mining town in the world rise and fall' (año)",
+   "EN | filtrar 'why nobody wants to visit anymore' (mes)",
+   "EN | filtrar 'the rise and fall of the city' (mes, max-subs 300000)",
+   "JA | filtrar '夕張 財政破綻 なぜ 衰退' (año, relevancia)",
+   "KO | filtrar '도시의 몰락 인구' (año, max-subs 300000)",
+   "Comprobación con yt-dlp de las pistas de audio del vídeo 69oR1gd_e-w (The Texas Retiree): de-DE, en-US, es-US, fr-FR, hi, id, it, pt-BR (tiene doblaje al español). Un segundo vídeo dio 'Sign in to confirm' y se esperaron 60 s antes de seguir."
+  ],
+  "idiomas_cubiertos": [
+   "inglés",
+   "alemán",
+   "coreano",
+   "japonés",
+   "italiano",
+   "portugués",
+   "francés",
+   "polaco",
+   "turco",
+   "ruso",
+   "español (comprobación del hueco)"
+  ],
+  "candidatos": [
+   {
+    "canal": "The Texas Retiree",
+    "url": "https://www.youtube.com/@thetexasretiree",
+    "idioma": "inglés (EE. UU.), con doblaje automático a 7 idiomas, incluido es-US",
+    "suscriptores": 5130,
+    "mediana_vistas": 9800,
+    "duracion_mediana_min": 30.7,
+    "pct_videos_25_45_min": 73,
+    "pct_videos_vistas_mayor_que_subs": 67,
+    "ratio_mediana_subs": 1.91,
+    "outliers": [
+     {
+      "titulo": "How Houston's Oil Money Built a City of Mansions and Then Tore Them All Down: River Oaks",
+      "vistas": 245000,
+      "duracion_min": 32,
+      "fecha": "2026-08-31"
+     },
+     {
+      "titulo": "How Dallas's Old Money Built a City of Mansions and Then Walled Itself In: Highland Park",
+      "vistas": 205000,
+      "duracion_min": 32.3,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "How Houston's Old Money Built a Boulevard of Mansions and Never Tore One Down: Broadacres",
+      "vistas": 52000,
+      "duracion_min": 31.9,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "How San Antonio's Old Money Built a Hill of Mansions and Then Sold Them All Off: Alamo Heights",
+      "vistas": 41000,
+      "duracion_min": 32.2,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "How Fort Worth's Oil Kings Built a Ridge of Mansions and Then Sold Them All Off: Westover Hills",
+      "vistas": 40000,
+      "duracion_min": 31.1,
+      "fecha": "2026-09-16"
+     }
+    ],
+    "formato_visual": "Miniaturas (vi 2): foto fotorrealista hecha con IA de una mansión clásica a medio derribar por una excavadora amarilla, con el cartel del barrio (River Oaks, Highland Park) y el cielo gris. Encima, un título serif blanco con el nombre del barrio enorme en amarillo ('THE BILLIONAIRE FALL OF RIVER OAKS', 'THE SECRET WALL OF HIGHLAND PARK'). Narración con IA de unos 31-32 min. Todo se puede generar con gpt-image: mansiones, barrios de época, derribos, mapas.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Es el ángulo exacto del nicho ('el dinero construyó un barrio de mansiones y luego lo derribó'), con outliers de 25x sobre la mediana. Sus títulos siguen el mismo molde que The Sunburnt Ruins (1.430 subs, 45k) y Old Money Atlas (1.530 subs, 88k): parece el mismo operador o el mismo curso. OJO: el vídeo de River Oaks lleva pista es-US y sale en búsquedas en español con el título traducido, así que ya compite en español, pero solo con temas de EE. UU. Nadie lo hace con barrios hispanos (Bella Vista y Las Delicias en Maracaibo, la avenida Alvear en Buenos Aires, el paseo Baquedano en Iquique, el paseo de Montejo en Mérida). Lo más cercano en español es Reimaginando Pasados ('las 5 familias más poderosas de Maracaibo durante el boom petrolero', 122k): cuenta la riqueza, pero no el derribo. La mitad del canal son listas de Texas que no son del nicho (pueblos de montaña 123k, lugares de la mafia 92k). Fechas aproximadas, salvo River Oaks, comprobada con yt-dlp."
+   },
+   {
+    "canal": "경제한숟깔",
+    "url": "https://www.youtube.com/channel/UCRVgoiaJ8tCbSknBlyIr_SQ",
+    "idioma": "coreano",
+    "suscriptores": 7040,
+    "mediana_vistas": 16500,
+    "duracion_mediana_min": 22.4,
+    "pct_videos_25_45_min": 8,
+    "pct_videos_vistas_mayor_que_subs": 72,
+    "ratio_mediana_subs": 2.34,
+    "outliers": [
+     {
+      "titulo": "해저터널때매 폭망했다 보령의몰락 (Se hundió por el túnel submarino: la caída de Boryeong)",
+      "vistas": 1000000,
+      "duracion_min": 22.8,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "From 160,000 to 60,000: The Fall of Mungyeong",
+      "vistas": 94000,
+      "duracion_min": 20.4,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "More Deaths Than Births: The Fall of Yeongju",
+      "vistas": 75000,
+      "duracion_min": 23.4,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The Fall of Gimje: From a Population of 260,000 to 80,000",
+      "vistas": 69000,
+      "duracion_min": 19.6,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Population Hits Below 200,000: The Fall of Mokpo",
+      "vistas": 50000,
+      "duracion_min": 24.2,
+      "fecha": "2026-09-09"
+     }
+    ],
+    "formato_visual": "Miniaturas (vi 2): collage ilustrado con IA. Sale una mascota de dibujos recurrente (cabeza redonda gris, traje, cara de pánico) sobre una ciudad en ruinas y en llamas, con el cartel de la ciudad, el túnel submarino o un papel con '160.000 → 60.000', y un texto coreano gigante en amarillo y rojo ('보령의 몰락': la caída de Boryeong). Vídeos de unos 20-24 min de economía actual con datos de población y comercio. Se puede hacer con gpt-image; la mascota solo hace falta en la miniatura.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Es el mayor multiplicador del nicho: 1M sobre una mediana de 16.500 (60x), y el 72% de sus vídeos supera a los suscriptores. El formato es de declive actual con datos: 'la caída de [ciudad]: de X a Y habitantes' y su causa (túnel, fábrica, natalidad). Se queda algo corto de duración (solo el 8% entre 25 y 45 min; el 92% supera los 20). En el mismo género, 경제만 골라덕 (35.100 subs) sacó 700k con 'la verdadera razón por la que Gwangju se hunde'. En español solo encontré un clon pequeño para España: Rey Genio del Conocimiento (1.480 subs, mediana 788; 'la verdadera razón del declive de León'). Para ciudades latinoamericanas, nada. Fechas aproximadas."
+   },
+   {
+    "canal": "갓쓴경제학",
+    "url": "https://www.youtube.com/channel/UCPAmE3RTiezwarLX-41rfkg",
+    "idioma": "coreano",
+    "suscriptores": 12900,
+    "mediana_vistas": 16500,
+    "duracion_mediana_min": 43.6,
+    "pct_videos_25_45_min": 58,
+    "pct_videos_vistas_mayor_que_subs": 62,
+    "ratio_mediana_subs": 1.28,
+    "outliers": [
+     {
+      "titulo": "A Record-Breaking 3.06 Million People, Yet Dong-Incheon Is Empty… Why Incheon's Growth Is Leaving...",
+      "vistas": 139000,
+      "duracion_min": 41.4,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The Rip-offs Are Gone, So Why Aren't Customers Returning? Why Once-Bustling Sorae Port Lost Every...",
+      "vistas": 89000,
+      "duracion_min": 45.4,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The Dream of a 99-Story Landmark in Busan's Samick Beach Is Over...",
+      "vistas": 75000,
+      "duracion_min": 36.1,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Why is Busan's Top Commercial District Seomyeon Facing a Wave of Closures?",
+      "vistas": 71000,
+      "duracion_min": 43.8,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "What Happened to Jeju, Once Overrun with People?",
+      "vistas": 65000,
+      "duracion_min": 44.8,
+      "fecha": "2026-09-07"
+     }
+    ],
+    "formato_visual": "Miniatura (vi 1): foto fotorrealista con IA de una calle comercial con las persianas bajadas y rascacielos al fondo. Lleva texto coreano grande: '사람은 넘치는데 상가는 텅 비었다 / 동인천의 몰락' (sobra gente y los locales están vacíos / la caída de Dong-Incheon). Ensayo económico largo, de unos 44 min, sobre barrios, puertos y destinos que el dinero dejó vacíos.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Es la versión de duración ideal del formato coreano: 43,6 min de mediana y todo el canal por encima de 20 min. Hizo también 'Why Are People Leaving Geoje?', ciudad de astilleros, que es el equivalente directo de Ferrol. En español hay el mismo hueco que con 경제한숟깔; el clon español 'La verdadera razón del declive…' (Rey Genio) solo saca entre 119 y 7.700 vistas en sus vídeos de ciudades. Fechas aproximadas."
+   },
+   {
+    "canal": "Ungesagt",
+    "url": "https://www.youtube.com/@Ungesagt-p8b",
+    "idioma": "alemán (títulos en alemán e inglés)",
+    "suscriptores": 5220,
+    "mediana_vistas": 3350,
+    "duracion_mediana_min": 40.1,
+    "pct_videos_25_45_min": 85,
+    "pct_videos_vistas_mayor_que_subs": 45,
+    "ratio_mediana_subs": 0.64,
+    "outliers": [
+     {
+      "titulo": "The City That Made Audi Rich—and Is Now Shaken: Ingolstadt",
+      "vistas": 68000,
+      "duracion_min": 39.7,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The City That Bet Everything on the Car—and Is Now Trembling: Stuttgart",
+      "vistas": 40000,
+      "duracion_min": 28.4,
+      "fecha": "2026-08-07"
+     },
+     {
+      "titulo": "The City That Lived in Velvet and Silk—and Lost It All: Krefeld",
+      "vistas": 28000,
+      "duracion_min": 39.7,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The City That Traded Its Steel for a Shopping Mall: Oberhausen",
+      "vistas": 26000,
+      "duracion_min": 49.9,
+      "fecha": "2026-09-09"
+     },
+     {
+      "titulo": "How Prussia's Richest City Fell: Wuppertal",
+      "vistas": 26000,
+      "duracion_min": 37.2,
+      "fecha": "2026-09-07"
+     }
+    ],
+    "formato_visual": "Miniatura (vi 1): vista aérea fotorrealista, aparentemente hecha con IA, de la fábrica de Audi con la ciudad alrededor y el título serif 'DIE STADT, DIE AUDI REICH MACHTE / INGOLSTADT' en blanco y dorado. Es la misma plantilla de foto con aire de época y título serif que usa toda la familia 'Rise and Fall'. Vídeos de unos 40 min.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Ángulo de ciudad-empresa ('la ciudad que hizo rica a Audi o a BASF y ahora tiembla'). Los outliers son modestos (68k), aunque de 20x sobre su mediana. En español, el caso AHMSA/Monclova ya lo han probado unos 9 microcanales con IA con muy pocas vistas (El Último Turno 2.342, La Fábrica Olvidada 4.542, LEYENDA ROTA 1.037): el tema solo no basta. Sagunto, Ferrol, Avilés, Puertollano, Vigo, Ciudad Guayana o Cabimas siguen sin vídeo dedicado a la ciudad. Fechas aproximadas."
+   },
+   {
+    "canal": "The History Vault",
+    "url": "https://www.youtube.com/@HistoryVault05",
+    "idioma": "inglés (EE. UU.)",
+    "suscriptores": 5490,
+    "mediana_vistas": 17000,
+    "duracion_mediana_min": 39.5,
+    "pct_videos_25_45_min": 100,
+    "pct_videos_vistas_mayor_que_subs": 57,
+    "ratio_mediana_subs": 3.1,
+    "outliers": [
+     {
+      "titulo": "The Rise and Fall of America's Most Glamorous Island Getaway: Catalina Island, California",
+      "vistas": 327000,
+      "duracion_min": 36.1,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Why Nobody Wants to Visit Sanibel Island, Florida Anymore",
+      "vistas": 253000,
+      "duracion_min": 38.8,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The Rise and Fall of America's Most Famous Boardwalk: Seaside Heights, New Jersey",
+      "vistas": 88000,
+      "duracion_min": 38.6,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Why Nobody Wants to Visit Anna Maria Island, Florida Anymore",
+      "vistas": 65000,
+      "duracion_min": 40,
+      "fecha": "2026-09-07"
+     }
+    ],
+    "formato_visual": "Miniaturas (vi 2): foto tipo postal Kodachrome de los años 50 y 60 (la bahía de Avalon llena de yates; la playa de Sanibel con faro y bañistas) con 'THE TRAGIC FALL OF / CATALINA ISLAND' en serif blanco y amarillo. No sé si las fotos son de archivo o de IA; nosotros las generaríamos con IA. Vídeos de unos 39 min.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Es la plantilla 'trágica caída' con mejores cifras absolutas: 327k (19x) y ratio mediana/subs de 3,1. También hizo 'The Rise and Fall of the World's Most Glamorous City: Acapulco'. PERO es el formato más clonado en español: Tomás Beltrán usa la misma miniatura ('LA TRÁGICA CAÍDA DE PUERTO BANÚS', 152k), y además están Caminos de los Olvidados (México), Destino Olvidado (Argentina) y Kódigo Colombia. Solo quedan países libres: Venezuela (Margarita, Macuto, Puerto La Cruz), Chile (Viña, Cartagena), Uruguay y Cuba. Gemelos con la misma plantilla: Lost British Cities (18.200 subs; Tenerife 294k, Benidorm 127k) y Forgotten British Cities (2.150 subs; isla de Man 170k). Fechas aproximadas."
+   }
+  ],
+  "cerca_del_limite": [
+   {
+    "canal": "ZAZZA THE ITALIAN (Zazza el italiano)",
+    "url": "https://www.youtube.com/@zazzaelitaliano",
+    "suscriptores": 3450000,
+    "motivo": "Demuestra que en español hay demanda de millones: 'De patrimonio UNESCO a patrimonio del crimen organizado: la devastadora caída de Valparaíso' tiene 2.050.989 vistas (45 min). Pero es un canal de viajes con presentador y mediana de 1,1M: no se puede replicar."
+   },
+   {
+    "canal": "PlanetaJuan",
+    "url": "https://www.youtube.com/@PlanetaJuan",
+    "suscriptores": 3480000,
+    "motivo": "'La maldición del petróleo en Venezuela' tiene 2,3M y su vídeo en la mina de Potosí 1,2M. Es un canal de viajes con presentador, muy por encima del límite de suscriptores."
+   },
+   {
+    "canal": "Show Me the World",
+    "url": "https://www.youtube.com/@ShowMeTheWorld",
+    "suscriptores": 1520000,
+    "motivo": "'Venezuela: la caída de una nación petrolera' tiene 928k. Es documental de televisión con metraje propio y el canal es demasiado grande."
+   },
+   {
+    "canal": "ほしのん正直な旅チャンネル",
+    "url": "https://www.youtube.com/@hosinontravel",
+    "suscriptores": 16800,
+    "motivo": "Cumple los números (mediana 62k; 1M en el parque Junglia; ciudades fantasma chinas de 211k a 292k; 33 min), pero graba in situ: es voz yukkuri sobre vídeo real. No se puede replicar sin cámara."
+   },
+   {
+    "canal": "Old Money Lost",
+    "url": "https://www.youtube.com/@OldMoneyLost",
+    "suscriptores": 23000,
+    "motivo": "Ciudades-empresa mineras e industriales de EE. UU. (Anaconda Copper 204k, Bucyrus-Erie 220k), pero sus vídeos rondan los 59 min (solo el 2% entre 25 y 45) y no sube nada desde junio de 2026."
+   },
+   {
+    "canal": "Reimaginando Pasados",
+    "url": "https://www.youtube.com/@ReimaginandoPasados",
+    "suscriptores": 46800,
+    "motivo": "Ya está en español, así que es competencia y no referencia. Hace reconstrucciones con IA de los booms hispanos: Maracaibo y el petróleo 122k, Argentina 350k, Guayaquil y el cacao 200k, Iquitos y el caucho 82k. Se ha quedado el ángulo de 'las familias ricas del boom'."
+   }
+  ],
+  "hueco_espanol": {
+   "consultas_es": [
+    "filtrar 'auge y caída de la ciudad' (año, max-subs 100M)",
+    "filtrar 'por qué ya nadie quiere visitar' (año, max-subs 100M)",
+    "filtrar 'ya no es lo que era qué pasó con la ciudad' (año, max-subs 100M)",
+    "filtrar 'Maracaibo petróleo historia la Venezuela saudita' (año, relevancia, max-subs 100M)",
+    "filtrar 'auge y caída' (mes, max-subs 100M)",
+    "filtrar 'la ciudad que lo tuvo todo y lo perdió' (año, max-subs 100M)",
+    "filtrar 'ciudad petrolera abandonada historia' (año, max-subs 100M) -> 0 vídeos",
+    "filtrar 'fue la ciudad más rica' (año, max-subs 100M)",
+    "filtrar 'construyó una ciudad de mansiones y luego las derribó' (año, max-subs 100M)",
+    "filtrar 'la verdadera razón del declive de la ciudad' (año, max-subs 100M)",
+    "buscar 'Maracaibo petróleo historia' (any, relevancia)",
+    "buscar 'Ciudad Guayana Sidor' (any, relevancia)",
+    "buscar 'Potosí ciudad más rica' (any, relevancia)",
+    "buscar 'Humberstone salitreras' (any, relevancia)",
+    "buscar 'Altos Hornos Sagunto' (any, relevancia)",
+    "buscar 'Ferrol astilleros declive' (any, relevancia)",
+    "buscar 'Valparaíso canal de Panamá' (any, relevancia)",
+    "buscar 'Acapulco decadencia historia' (any, relevancia)",
+    "buscar 'Mar del Plata auge y decadencia' (any, relevancia)",
+    "buscar 'Monclova AHMSA crisis ciudad' (any, relevancia)",
+    "buscar 'Avilés Ensidesa historia ciudad' (any, relevancia)",
+    "buscar 'mansiones del petróleo barrio de ricos historia demolidas' (any) -> 0 vídeos",
+    "buscar 'así vivían las familias más ricas durante el boom' (any, relevancia)",
+    "buscar 'Mar del Plata qué pasó historia' (any, relevancia)",
+    "buscar 'auge y caída de Valparaíso' (any, relevancia)",
+    "buscar 'auge y caída de Maracaibo' (año, relevancia)",
+    "buscar 'qué pasó con Puerto La Cruz Cabimas Ciudad Guayana' (año, relevancia)"
+   ],
+   "competidores": [
+    {
+     "canal": "Tomás Beltrán (@TomasBeltrans). España y EE. UU., con la misma miniatura 'LA TRÁGICA CAÍDA DE…': Puerto Banús 152k, Marina d'Or 138k, Benidorm 86k, Torremolinos 65k, Riotinto 35k, Seseña, Portmán. Un documental al día.",
+     "mismo_formato": true,
+     "suscriptores": 2780,
+     "vistas_tipicas": 9500
+    },
+    {
+     "canal": "Caminos de los Olvidados (@CaminosdelosOlvidados100k). México: San José Purúa 91k, Mazatlán 70k, Acapulco 43k, Veracruz, Cuernavaca, Tijuana.",
+     "mismo_formato": true,
+     "suscriptores": 6230,
+     "vistas_tipicas": 3350
+    },
+    {
+     "canal": "Destino Olvidado (@DestinoOlvidado0). Argentina: Las Grutas 160k, Mar del Plata 107k, el mayor ingenio azucarero de Sudamérica 56k, Quequén, Cariló.",
+     "mismo_formato": true,
+     "suscriptores": 2240,
+     "vistas_tipicas": 566
+    },
+    {
+     "canal": "Kódigo Colombia (@KódigoColombia01). Colombia: 'Por qué nadie quiere visitar Taganga como antes' 49k, Santa Marta 45k, 'Barrancabermeja ya no es lo que era' 14k.",
+     "mismo_formato": true,
+     "suscriptores": 2890,
+     "vistas_tipicas": 2900
+    },
+    {
+     "canal": "Rey Genio del Conocimiento. Clon del formato coreano para España: 'la verdadera razón del declive' de León, Madrid, Canarias y las cuencas mineras de Asturias.",
+     "mismo_formato": true,
+     "suscriptores": 1480,
+     "vistas_tipicas": 788
+    },
+    {
+     "canal": "Archivos Sintéticos. Documentales con IA de Potosí (1.173) y Valparaíso (3.963).",
+     "mismo_formato": true,
+     "suscriptores": 5180
+    },
+    {
+     "canal": "The Texas Retiree, en inglés pero con doblaje es-US y títulos traducidos que salen en búsquedas en español. Lo mismo pasa con Grand City, Forgotten Canada, Lost Australian Cities, The History Vault y Empire Falls ('El auge y caída de Tulum').",
+     "mismo_formato": true,
+     "suscriptores": 5130,
+     "vistas_tipicas": 9800
+    },
+    {
+     "canal": "Fábricas de Venezuela (@FábricasdeVenezuela). Formato adyacente (fábricas, no ciudades): Encava 175k, Toyota Cumaná 100k, Ford Valencia, SIDOR.",
+     "mismo_formato": false,
+     "suscriptores": 2990,
+     "vistas_tipicas": 4800
+    },
+    {
+     "canal": "Reimaginando Pasados. Las familias ricas de los booms: Maracaibo 122k, Argentina 350k, Guayaquil 200k, Iquitos 82k.",
+     "mismo_formato": false,
+     "suscriptores": 46800,
+     "vistas_tipicas": 15000
+    },
+    {
+     "canal": "Mujeres olvidadas TV. 'Cómo era sobrevivir en Chile durante la gran crisis del salitre de 1920' 94k; colapso del cacao en Ecuador.",
+     "mismo_formato": false,
+     "suscriptores": 16000,
+     "vistas_tipicas": 10000
+    },
+    {
+     "canal": "Las Casas del Poder. Las élites mexicanas que perdieron todo: Casta Divina de Yucatán 485k.",
+     "mismo_formato": false,
+     "suscriptores": 20300,
+     "vistas_tipicas": 5250
+    },
+    {
+     "canal": "Cenizas de la Industria. Fábricas mexicanas: Pedro Domecq 376k, HYLSA Monterrey 180k. Vídeos de 56 min; se mudó a Industria Olvidada MX.",
+     "mismo_formato": false,
+     "suscriptores": 24900,
+     "vistas_tipicas": 36000
+    }
+   ],
+   "veredicto": "hueco parcial"
+  },
+  "rpm_estimado_es": "ESTIMACIÓN, no dato: entre 1 y 3 USD por mil vistas con un público hispano mixto; entre 2,5 y 5 USD si el tema atrae sobre todo a España y a hispanos de EE. UU. (ciudades industriales españolas, Benidorm, Ferrol, Sagunto); entre 0,5 y 1,5 USD si el público es sobre todo venezolano o andino, que la diáspora en España, EE. UU. y Chile sube algo. Por qué: la economía y la historia urbana atraen anunciantes de finanzas, inmobiliaria y viajes, y los vídeos de 25-40 min admiten varios anuncios a mitad de vídeo. Los datos públicos por país de Dynamoi (música, 2025) dan en Art Tracks 4,92 USD para España, 3,74 para México y 1,41 para Argentina, y en Content ID 2,35, 1,38 y 0,51: España rinde de 2 a 4 veces más que Sudamérica. No hay datos de Venezuela y suele estar entre los más bajos. Fuentes: https://dynamoi.com/es/learn/youtube-music-promotion/youtube-rpm-by-country y https://dynamoi.com/es/learn/youtube-music-promotion/youtube-rpm-spain",
+  "ideas_doblez": [
+   "'El dinero que construyó un barrio de mansiones y luego lo derribó' (molde de The Texas Retiree, 245k) llevado a barrios hispanos: Bella Vista y el campo petrolero Las Delicias en Maracaibo, La Florida y el Country Club en Caracas, el paseo Baquedano del salitre en Iquique, el cerro Alegre y la avenida Brasil en Valparaíso, los palacios demolidos de la avenida Alvear en Buenos Aires, el paseo de Montejo del henequén en Mérida y las casas del caucho en Iquitos. Nadie en español cuenta el arco completo de riqueza y derribo; Reimaginando Pasados solo cuenta la riqueza.",
+   "Formato coreano de declive actual con datos (경제한숟깔, 1M; 경제만 골라덕, 700k) para ciudades hispanas medianas: 'La caída de Ciudad Guayana: de capital del acero a cementerio de empresas', 'La caída de Ferrol: de 91.000 a 64.000 habitantes', 'La verdadera razón por la que Maracaibo se apaga', y también Cabimas, Puertollano, Linares, Lota y Bahía Blanca. Gráficos de población, PIB y empleo hechos por un ex-trader; el único clon español (Rey Genio) es pequeño y solo trata España.",
+   "Sub-nicho Venezuela, 'las ciudades que el petróleo y el hierro levantaron y apagaron': Maracaibo, Cabimas, Lagunillas (que literalmente se hundió bajo el lago), El Tigre, Punto Fijo y Amuay, Puerto La Cruz, Ciudad Guayana y Sidor, Margarita puerto libre, Macuto. Ningún canal con IA lo cuenta ciudad por ciudad, y la demanda está probada por los adyacentes (Fábricas de Venezuela: Encava 175k con 2.990 subs; Reimaginando Pasados: Maracaibo 122k) y por los presentadores (PlanetaJuan 2,3M). Se puede ampliar después a otros petroestados y booms (Trinidad, Ecuador, Bolivia y el estaño).",
+   "Molde Ungesagt ('la ciudad que hizo rica a [empresa] y ahora tiembla') para la España industrial de hoy, de RPM más alto: Vigo y Stellantis, Martorell y SEAT, Puertollano y Repsol, Sagunto y AHM, Ferrol y Navantia, Avilés y Arcelor, Almadén y el mercurio. Hay que evitar AHMSA/Monclova, ya quemada por unos 9 microclones con muy pocas vistas."
+  ],
+  "puntuacion_nicho": 15,
+  "ventaja_usuario": "Es venezolano, así que conoce de primera mano las ciudades del petróleo (Maracaibo, Cabimas, Lagunillas, Punto Fijo, Puerto La Cruz) y la Guayana de Sidor, con su jerga y sus referencias, y eso es justo el sub-hueco que queda libre. La diáspora venezolana en España, EE. UU., Chile y Colombia comparte mucho este contenido de nostalgia (Fábricas de Venezuela: 175k con 2.990 suscriptores) y sube el RPM frente a una audiencia solo local. Su experiencia en trading le permite contar 'el dinero' con datos: precio del crudo, petrodólares, devaluaciones, enfermedad holandesa y ciclos de materias primas, con gráficos. Es el ángulo económico que los clones turísticos ('la trágica caída de…') no tienen. Como DJ puede hacer la música de fondo original y evitar reclamaciones de Content ID.",
+  "veredicto": "HUECO PARCIAL Y CERRÁNDOSE. No conviene como 'auge y caída' genérico; solo tiene sentido con un sub-ángulo. Las referencias cumplen los filtros 1-3 con holgura: The Texas Retiree (5.130 subs, mediana 9.800, River Oaks 245k, 25x), 경제한숟깔 (7.040 subs, Boryeong 1M, 60x), 갓쓴경제학 (12.900 subs, 43,6 min, 139k), Ungesagt (68k, 20x) y The History Vault (327k, 19x). Todas usan imágenes de IA con título grande y sin metraje: muy replicables y con poco riesgo de copyright. El problema es el español. Entre agosto y septiembre de 2026 ha nacido un clon con IA casi por país: Tomás Beltrán en España (misma miniatura 'LA TRÁGICA CAÍDA DE…'; Puerto Banús 152k, Benidorm 86k), Caminos de los Olvidados en México (91k), Destino Olvidado en Argentina (Las Grutas 160k, Mar del Plata 107k), Kódigo Colombia (Taganga 49k, Barrancabermeja) y Rey Genio del Conocimiento, que copia el formato coreano para España. A eso se suman canales adyacentes con tracción (Fábricas de Venezuela, Reimaginando Pasados, Mujeres olvidadas TV, Las Casas del Poder) y el doblaje automático de las referencias inglesas: River Oaks tiene pista es-US. Siguen libres: (1) las ciudades venezolanas del petróleo y del hierro contadas como ciudad, donde solo hay vlogs y canales adyacentes; (2) 'el dinero que construyó mansiones y luego las derribó' en Hispanoamérica; (3) el declive actual con datos al estilo coreano para ciudades latinoamericanas. Hay un techo: sin cara, los outliers del formato van de 40k a 330k (1M solo en Corea); los millones en español los consiguen presentadores (Valparaíso de Zazza 2,05M, Venezuela de PlanetaJuan 2,3M). Recomendación: un canal tipo 'Venezuela y el dinero' (petróleo, hierro, puerto libre, devaluaciones) con mirada económica de trader, ampliable después a otros petroestados y a la España industrial, y no un séptimo clon de 'la trágica caída de'. Hay que moverse rápido, porque cualquiera de estos clones puede entrar en Venezuela en semanas. Puntuación 15/18: tamaño 2, demanda 2, recencia 2, duración 2, hueco ES 1, replicabilidad 2, copyright 2, RPM 1, potencial viral 1.",
+  "nicho_id": "ciudades_auge_caida_dinero"
+ },
+ {
+  "nicho": "Finanzas y trading con datos reales: la historia del dinero (hiperinflaciones, corralitos, reformas monetarias, quitas, rescates bancarios y crashes) explicada sobre el gráfico por un trader, sin cara",
+  "consultas_realizadas": [
+   "EN filtrar 'every bubble in history followed the same pattern' --periodo anio",
+   "KO filtrar '버블 붕괴 역사 경제' --periodo anio",
+   "KO filtrar '하이퍼인플레이션 진짜 이유' --periodo anio --orden relevancia",
+   "JA filtrar 'バブル崩壊 なぜ ゆっくり解説' --periodo anio",
+   "JA filtrar '株価 大暴落 歴史 解説' --periodo anio --orden relevancia",
+   "EN filtrar 'what happened to investors who bought the top history' --periodo anio --orden relevancia",
+   "DE filtrar 'Hyperinflation Doku warum' --periodo anio",
+   "TR filtrar 'hiperenflasyon nasıl oldu tarihi' --periodo anio --orden relevancia",
+   "PT filtrar 'a maior bolha financeira da história' --periodo anio --orden relevancia",
+   "EN filtrar 'I backtested 100 years of stock market data' --periodo anio --orden relevancia",
+   "DE filtrar 'verloren alles wer bezahlte das Mark Schulden' --periodo anio --orden relevancia (bola de nieve desde Spurensuche)",
+   "EN filtrar 'lost their savings overnight who got the money history' --periodo mes --orden relevancia",
+   "FR filtrar 'ils ont perdu toutes leurs économies qui a profité krach' --periodo anio --orden relevancia",
+   "IT filtrar 'italiani persero i risparmi chi ci guadagnò lira' (0 resultados) y 'risparmi degli italiani storia lira inflazione' --periodo anio --orden relevancia",
+   "IT filtrar 'crollo della borsa storia' --periodo anio",
+   "RU filtrar 'сгорели вклады 1991 куда делись деньги' --periodo anio --orden relevancia",
+   "RU filtrar 'гиперинфляция история' --periodo anio",
+   "DE filtrar 'Währungsreform 1948 Ersparnisse Lastenausgleich' --periodo anio --orden relevancia (bola de nieve desde Moss Garner)",
+   "EN filtrar 'what if you invested at the peak before every crash' --periodo anio --orden relevancia",
+   "KO filtrar '대공황 주식 폭락 진짜 이유 역사' --periodo anio --orden relevancia",
+   "JA filtrar 'ハイパーインフレ 国 末路 預金封鎖' (0) y '預金封鎖 新円切替 1946 財産税' --periodo anio --orden relevancia",
+   "EN filtrar 'savings wiped out who really got rich hyperinflation 1923' --periodo anio --orden relevancia",
+   "JA filtrar '暴落の歴史 積立投資 検証 何年で回復' --periodo anio --orden relevancia",
+   "PL filtrar 'Polacy stracili oszczędności kto na tym zarobił' --periodo anio --orden relevancia",
+   "PL filtrar 'hiperinflacja historia gospodarcza Polski PRL pieniądze' --periodo anio --orden relevancia",
+   "EN filtrar 'the real story of the crash explained with charts history of markets' --periodo mes --orden relevancia",
+   "IT filtrar 'prelievo forzoso 1992 conti correnti chi pagò davvero' (0) y 'gli italiani persero tutto chi si arricchì' (0)",
+   "PT filtrar 'confisco da poupança plano Collor' --periodo anio --orden relevancia",
+   "canal: Universal Resilience, Rote Zahlen, Hermann Kirschbaumer, The Sovereign Ledger, Finance Simplified, The Timeless Investor, Uncover History, Historias Innecesarias, VisualEconomik, México Bajo Lupa, La Nueva Enciclopedia (más Market Fault Lines, Hyperinflation Archiv, Akten der Macht y competidores ES desde la caché de la herramienta)",
+   "Escaneo de la caché compartida de la herramienta (unos 17.000 canales) con palabras clave de burbujas, crashes, hiperinflación, backtest y crisis en 10 idiomas",
+   "yt-dlp -J wpB6Xy7SBRg (Moss Garner): 500.435 vistas, subido el 2026-09-09, solo pista de audio en alemán",
+   "Miniaturas y fotogramas internos (hq1/hq2/hq3): wpB6Xy7SBRg, 4b3tchm9S5w, _bY89ogY0uU, SkrzL3ARV_w, OwF8UN4jV7g, Piv-KZomyuQ, AqZr9CRvfMI, 3Y_dFUtzv10, D-4Fw1SdBmU, 6hZ8ht-HvNg, 4bg3bjvjCjE, Jedd-rsUdDU, KJxfSIvv920, 9SU_6zeKtFc, MlqO_sc5DSc",
+   "WebSearch: RPM de YouTube por país (Dynamoi 2026)"
+  ],
+  "idiomas_cubiertos": [
+   "inglés",
+   "coreano",
+   "japonés",
+   "alemán",
+   "turco",
+   "portugués",
+   "francés",
+   "italiano",
+   "ruso",
+   "polaco",
+   "español (hueco)"
+  ],
+  "candidatos": [
+   {
+    "canal": "Moss Garner",
+    "url": "https://www.youtube.com/channel/UC9vaRNjS4JPAkGaoiVADS_g",
+    "idioma": "alemán",
+    "suscriptores": 3550,
+    "mediana_vistas": 6400,
+    "ratio_mediana_subs": 1.8,
+    "pct_videos_vistas_mayor_que_subs": 55,
+    "duracion_mediana_min": 28.6,
+    "pct_videos_25_45_min": 100,
+    "outliers": [
+     {
+      "titulo": "1948 verloren die Deutschen 93 % ihrer Ersparnisse — wer bekam sie? (En 1948 los alemanes perdieron el 93 % de sus ahorros: ¿quién se los quedó?)",
+      "vistas": 500000,
+      "duracion_min": 27.4,
+      "fecha": "2026-09-09 (fecha real, yt-dlp)"
+     },
+     {
+      "titulo": "1952 mussten die Deutschen 50 % ihres Vermögens abgeben — wer zahlte wirklich? (En 1952 los alemanes tuvieron que entregar el 50 % de su patrimonio: ¿quién pagó de verdad?)",
+      "vistas": 172000,
+      "duracion_min": 29.6,
+      "fecha": "2026-09-23 (aprox.)"
+     },
+     {
+      "titulo": "Der typische Italiener besitzt 60.000 Euro mehr als der Deutsche — warum? (El italiano típico tiene 60.000 euros más que el alemán: ¿por qué?)",
+      "vistas": 72000,
+      "duracion_min": 31.8,
+      "fecha": "2026-09-16 (aprox.)"
+     },
+     {
+      "titulo": "1919 verlangte der Staat bis zu 65 % jedes Vermögens — wer hat wirklich bezahlt? (En 1919 el Estado exigió hasta el 65 % de cada patrimonio: ¿quién pagó de verdad?)",
+      "vistas": 20000,
+      "duracion_min": 28.6,
+      "fecha": "2026-10-04 (aprox.)"
+     }
+    ],
+    "formato_visual": "Historia del dinero del propio país contada con cifras. MINIATURA: collage IA en sepia sobre fondo de pergamino, con una etiqueta negra con el suceso y el año ('WÄHRUNGSREFORM 1948', 'LASTENAUSGLEICH 1952') y una pregunta enorme en blanco sobre caja roja ('WER GEWANN WIRKLICH?', 'WER ZAHLTE WIRKLICH?'). Lleva una escena de época (tienda con el cartel 'Kopfgeld 40 DM', cola de gente, familia de refugiados ante barracones), billetes y libretas de ahorro antiguas, un mapa de Alemania en 1948 o un documento sellado '50 %', y el retrato de un personaje histórico a la derecha (Erhard, Adenauer). DENTRO: imágenes IA fotorrealistas en blanco y negro o sepia (estibadores, colas, una mujer en una tienda de telas) y alguna escena moderna (un político genérico en el atril del Bundestag), con bandas negras de cine y subtítulos amarillos. En los 4 fotogramas que vi no hay ningún gráfico. Comprobado en 2 miniaturas y 4 fotogramas.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Es la mejor referencia. Canal nacido a mediados de septiembre de 2026: 11 vídeos, 786.210 vistas en 6 meses, todos de 27 a 32 min. FÓRMULA: año + porcentaje perdido + '¿quién se lo quedó / quién pagó de verdad?'. Temas: reforma monetaria de 1948, Lastenausgleich de 1952, impuesto al patrimonio de 1919, hiperinflación de 1923, poder adquisitivo de 1975 frente a hoy, herencias y pensiones. La descripción cuenta la mecánica con números ('de 100 Reichsmark quedaron 6,50 marcos; quien tenía deudas quedó liberado al 90 %'), terreno natural de un trader. El vídeo de 500k solo tiene audio en alemán, así que no llega doblado al público hispano. Nuestra diferencia sería añadir gráficos con datos reales, que el original no usa. RIESGO: la misma plantilla la usan ya al menos 8 canales alemanes nacidos entre septiembre y octubre (Spurensuche, Rote Zahlen, Akte Wohlstand, Das Geld der Deutschen, Enteignet, Die Geldchronik...) y el 6-oct-2026 apareció un clon portugués (Quem Pagou a Conta, sobre el Plan Collor). En español, en cambio, no encontré ninguno con temas locales. Con políticos vivos hispanos hay que evitar los retratos realistas."
+   },
+   {
+    "canal": "Rote Zahlen",
+    "url": "https://www.youtube.com/channel/UCB52bNgiRCyy2KHa4IgikUA",
+    "idioma": "alemán",
+    "suscriptores": 1290,
+    "mediana_vistas": 6700,
+    "ratio_mediana_subs": 5.19,
+    "pct_videos_vistas_mayor_que_subs": 80,
+    "duracion_mediana_min": 30.9,
+    "pct_videos_25_45_min": 100,
+    "outliers": [
+     {
+      "titulo": "1990 verloren die Ostdeutschen 95 % ihrer Betriebe — wer bekam sie? (En 1990 los alemanes del Este perdieron el 95 % de sus empresas: ¿quién se las quedó?)",
+      "vistas": 118000,
+      "duracion_min": 30.9,
+      "fecha": "2026-09-25 (aprox.)"
+     },
+     {
+      "titulo": "1923: 164 Milliarden Mark Schulden wurden zu 16 Pfennig — wer bezahlte das? (1923: 164.000 millones de marcos de deuda se convirtieron en 16 peniques. ¿Quién lo pagó?)",
+      "vistas": 31000,
+      "duracion_min": 36.3,
+      "fecha": "2026-09-23 (aprox.)"
+     }
+    ],
+    "formato_visual": "Usa la misma plantilla de miniatura que Moss Garner: pergamino sepia, etiqueta 'TREUHAND 1990' o 'HYPERINFLATION 1923' y pregunta en caja roja ('WER BEKAM SIE?', 'STAAT: SCHULDENFREI'). Encima, un documento o un bono sellado en rojo ('1 DM', '16 PF'), una moneda, trabajadores ante una fábrica cerrada y el retrato de un personaje. Dentro: escenas IA fotorrealistas en color de los años 90 (obreros de la RDA cobrando, un baile en la fábrica) con subtítulos blancos. Comprobado en 2 miniaturas y 2 fotogramas.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Solo tiene 5 vídeos, así que la muestra es pequeña, pero tiene el mejor ratio del grupo: mediana igual a 5,19 veces los suscriptores y el 80 % de los vídeos por encima de ellos. Es la variante más contable: privatizaciones de la Treuhand, deuda pública borrada por la inflación, el crac de 1873 ('¿quién vendió antes?') y quién pagó las subidas de pensiones de 1957 y 1992. Encaja con el criterio de un trader. En español equivale a la pesificación asimétrica de 2002 (los ahorradores pierden y los deudores en dólares ganan), al Fobaproa, a Rumasa o al Banco Popular vendido por 1 euro."
+   },
+   {
+    "canal": "Spurensuche",
+    "url": "https://www.youtube.com/channel/UCNpE6q3KkKz_fq2jOYtSTMA",
+    "idioma": "alemán",
+    "suscriptores": 1200,
+    "mediana_vistas": 1300,
+    "ratio_mediana_subs": 1.08,
+    "pct_videos_vistas_mayor_que_subs": 56,
+    "duracion_mediana_min": 30.3,
+    "pct_videos_25_45_min": 100,
+    "outliers": [
+     {
+      "titulo": "1923 verloren Millionen Deutsche alles — einer kaufte damit halb Deutschland (En 1923 millones de alemanes lo perdieron todo y uno compró con ello media Alemania)",
+      "vistas": 161000,
+      "duracion_min": 30.1,
+      "fecha": "2026-09-23 (aprox.)"
+     },
+     {
+      "titulo": "1952 nahm der Staat die Hälfte allen Vermögens — wie konnte das legal sein? (En 1952 el Estado se quedó con la mitad de todo el patrimonio: ¿cómo pudo ser legal?)",
+      "vistas": 94000,
+      "duracion_min": 30.6,
+      "fecha": "2026-09-23 (aprox.)"
+     },
+     {
+      "titulo": "Ludwig Erhard hob 1948 eigenmächtig alle Preise auf — durfte er das überhaupt? (Erhard liberó todos los precios en 1948 por su cuenta: ¿podía hacerlo?)",
+      "vistas": 6100,
+      "duracion_min": 26.6,
+      "fecha": "2026-09-16 (aprox.)"
+     }
+    ],
+    "formato_visual": "Plantilla de miniatura casi idéntica a la de Moss Garner: 'DIE GROSSE INFLATION – DAS GELD WAR NICHT WEG' sobre pergamino, con fajos de billetes de 'Eine Million Mark', libreta de la Sparkasse, mapa del Ruhr y el retrato de un industrial de los años 20 (tipo Hugo Stinnes). Dentro: fotos IA en blanco y negro presentadas como paneles en 3D, y rótulos de capítulo sobre fondo negro y dorado ('TEIL 2 – DER SACHWERT…'). Comprobado en 2 miniaturas y 2 fotogramas.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "9 vídeos desde mediados de septiembre de 2026, todos de 26 a 31 min. Sus dos éxitos repiten temas que ya tiene Moss Garner (1923 y 1952), lo que indica que las vistas las trae el TEMA y la demanda, no la audiencia del canal. Otros temas: la 'Volksaktie' (las acciones populares en las que el pueblo perdió y uno ganó miles de millones), la prima por achatarrar coches y el origen de 'Made in Germany'."
+   },
+   {
+    "canal": "Hermann Kirschbaumer",
+    "url": "https://www.youtube.com/channel/UCHB6nO1ro3rNUKtHfs2f7Fw",
+    "idioma": "alemán",
+    "suscriptores": 1590,
+    "mediana_vistas": 2000,
+    "ratio_mediana_subs": 1.26,
+    "pct_videos_vistas_mayor_que_subs": 56,
+    "duracion_mediana_min": 32.2,
+    "pct_videos_25_45_min": 96,
+    "outliers": [
+     {
+      "titulo": "Reichstes Land, ärmste Bürger: Die verschwiegene Zahl aus Frankfurt (País más rico, ciudadanos más pobres: la cifra que Fráncfort calla)",
+      "vistas": 97000,
+      "duracion_min": 27.3,
+      "fecha": "2026-09-24 (aprox.)"
+     },
+     {
+      "titulo": "Warum zahlte Deutschland Reparationen bis 2010? (¿Por qué Alemania pagó reparaciones hasta 2010?)",
+      "vistas": 57000,
+      "duracion_min": 29.1,
+      "fecha": "2026-09-28 (aprox.)"
+     },
+     {
+      "titulo": "1953: Wie ein Bankier Deutschland vierzehn Milliarden Mark Schulden ersparte (1953: cómo un banquero le ahorró a Alemania 14.000 millones de marcos de deuda)",
+      "vistas": 54000,
+      "duracion_min": 33.6,
+      "fecha": "2026-09-07 (aprox.)"
+     },
+     {
+      "titulo": "Warum die Sowjetunion wirklich kollabierte: Nicht Gorbatschow, sondern Öl (Por qué cayó de verdad la URSS: no fue Gorbachov, fue el petróleo)",
+      "vistas": 29000,
+      "duracion_min": 32.5,
+      "fecha": "2026-09-09 (aprox.)"
+     }
+    ],
+    "formato_visual": "Plantilla propia: retrato en blanco y negro de un personaje serio, mapa rasgado con flechas rojas (Alemania, Italia, EE. UU.) y texto 'DER WAHRE GRUND…' en mayúsculas blancas y rojas, a veces con una franja blanca. Dentro: imágenes IA con marco de foto antigua (colas ante una ventanilla con fajos de billetes, una familia de los años 70 haciendo la mudanza), sin gráficos en los fotogramas vistos. Comprobado en 2 miniaturas y 2 fotogramas.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "25 vídeos desde septiembre de 2026, el 96 % entre 25 y 45 min. Es la variante más cercana a 'datos reales explicados'. El gancho es UNA cifra que nadie cuenta (la riqueza mediana de los alemanes según el Bundesbank de Fráncfort), junto con deuda, reparaciones, el acuerdo de Londres de 1953, el crash de la acción de Telekom y el petróleo como causa de la caída soviética. Encaja con gráficos reales: riqueza mediana por país, deuda/PIB y precio del crudo."
+   },
+   {
+    "canal": "The Sovereign Ledger",
+    "url": "https://www.youtube.com/channel/UCRtBhzcdNt6bo4kYdF3Xpzw",
+    "idioma": "inglés",
+    "suscriptores": 5820,
+    "mediana_vistas": 1900,
+    "ratio_mediana_subs": 0.33,
+    "pct_videos_vistas_mayor_que_subs": 19,
+    "duracion_mediana_min": 26.2,
+    "pct_videos_25_45_min": 62,
+    "outliers": [
+     {
+      "titulo": "Where The Rothschilds Moved Their Money Before The 1930s Collapse!",
+      "vistas": 255000,
+      "duracion_min": 22,
+      "fecha": "2026-05-07 (aprox., 'hace 5 meses')"
+     },
+     {
+      "titulo": "The 3 Investments That Survived Every Financial Crisis Since 1720",
+      "vistas": 37000,
+      "duracion_min": 23.3,
+      "fecha": "2026-05-07 (aprox.)"
+     },
+     {
+      "titulo": "How the 1% Kept Their Gold in 1933 Confiscation",
+      "vistas": 30000,
+      "duracion_min": 24,
+      "fecha": "2026-05-07 (aprox.)"
+     }
+    ],
+    "formato_visual": "Ilustración IA en acuarela y tinta: un banquero de los años 30 en su despacho con lámpara verde, lingotes y una ventana por la que se ve el pánico en la calle, con 2 palabras gigantes ('THEY KNEW', 'THEY SURVIVED'). Dentro: grabados estilo siglo XIX (manos echando monedas en un cuenco, lingote + globo terráqueo + banco) con subtítulos karaoke. Comprobado en 2 miniaturas y 2 fotogramas.",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Valida el otro ángulo del nicho: qué protegió el dinero en cada crisis (oro, activos reales, salir del banco). Ahí un trader puede aportar backtests con datos reales en vez de afirmaciones. OJO: las fechas son aproximaciones de yt-dlp y el canal parece inactivo desde mayo de 2026. En español ya hay clones flojos de este ángulo: 'Historia Financiera', con '5 principios que sobrevivieron a todos los colapsos' (184 vistas); 'Dinero en Crisis', con 305 subs y mediana de 19 vistas; y 'El Historiador Financiero'. Hay que diferenciarse con datos y gráficos verificables."
+   }
+  ],
+  "cerca_del_limite": [
+   {
+    "canal": "Akten der Macht",
+    "url": "https://www.youtube.com/channel/UCfXG06QV8Hlsm-D433YoZRQ",
+    "suscriptores": 3860,
+    "motivo": "Mismo tema y demanda ('The Winners of Hyperinflation: Who Made a Fortune in 1923', 175k; 'Deutschland hatte keine Rente bis 1889', 104k; 'Wie Amerika 1924 die deutsche Wirtschaft übernahm', 74k), pero falla la duración: mediana de 17,1 min y ningún vídeo entre 25 y 45."
+   },
+   {
+    "canal": "Hyperinflation Archiv",
+    "url": "https://www.youtube.com/channel/UCcH8jxVMCaayK9ZZvYyO4ww",
+    "suscriptores": 2130,
+    "motivo": "Valida el ángulo de trader '¿qué te habría salvado?' ('GOLD or HOUSE — What really saved fortunes in 1923', 79k; 'Silver OR Gold — What the Smartest Germans Really Bought in 1923', 40k), pero sus vídeos rondan los 10 min (mediana 10,4) y la mediana de vistas (641) es igual a 0,3 veces los suscriptores."
+   },
+   {
+    "canal": "Finance Simplified",
+    "url": "https://www.youtube.com/channel/UCogYxvdGc8i7qfjPct1c-Bg",
+    "suscriptores": 3230,
+    "motivo": "Simulaciones con datos ('Dividend Stocks vs. Growth Stocks: The Math Most Investors Ignore', 188k; 'S&P 500 vs. High-Dividend Portfolio: What 20 Years of Data Actually Proves', 28k). Falla por poco la duración: mediana de 20,3 min y solo el 2 % entre 25 y 45. Además usa una mascota de dibujos que se repite en todas las escenas, algo difícil de mantener con gpt-image."
+   },
+   {
+    "canal": "Universal Resilience with JT Yu",
+    "url": "https://www.youtube.com/channel/UCLbiNCUoy9sPqryF0hExm-Q",
+    "suscriptores": 34100,
+    "motivo": "Es la semilla de la bola de nieve ('Every Tech Bubble Obeyed the Same Rule. AI Is Next.', 572k). Mediana de 21,4 min y solo el 12 % entre 25 y 45. Usa metraje de stock y una cara en las miniaturas, y su tema es la IA, no los mercados. En español 'burbuja de la IA' está saturado de presentadores (Gustavo Entrala, 641.000 subs y mediana de 376.000) y de canales ingleses doblados automáticamente (Casey Simpson, Brendan Dell, GEN)."
+   },
+   {
+    "canal": "Market Fault Lines",
+    "url": "https://www.youtube.com/channel/UCrnFbgAXvsjfocHiYa2IjiQ",
+    "suscriptores": 84400,
+    "motivo": "Hace 'el dinero detrás de la historia' en inglés con el 98 % de los vídeos entre 25 y 45 min ('Britain Sold Palestine to Pay Its WWI Debt', 256k). Supera los 80k subs y depende de la audiencia (ratio 0,11). Además ya llega al español con doblaje automático: 'Cómo Estados Unidos está borrando secretamente 38 billones de dólares' tiene 60.834 vistas con título en español. Es competencia indirecta."
+   }
+  ],
+  "hueco_espanol": {
+   "consultas_es": [
+    "filtrar 'corralito explicado' --periodo anio --max-subs 100000000 (0 vídeos de más de 20 min)",
+    "filtrar 'corralito 2001 argentinos perdieron sus ahorros' --periodo anio --orden relevancia --max-subs 100000000 (0)",
+    "buscar 'corralito' --periodo any (todo noticias y tertulias; el único documental grande es 'Crisis 2001' de Historias Innecesarias, 2,97M)",
+    "filtrar 'hiperinflación historia ahorros' --periodo anio --orden relevancia --max-subs 100000000",
+    "buscar 'perdieron sus ahorros quién se quedó con el dinero' --periodo any --orden relevancia",
+    "buscar 'hiperinflación Venezuela explicada' --periodo any (el mayor tiene 14.122 vistas)",
+    "filtrar 'burbuja de la IA' --periodo anio --max-subs 100000000",
+    "filtrar + buscar 'crack del 29 explicado' --periodo anio (solo 2 vídeos: 4.817 y 631 vistas)",
+    "filtrar 'backtest estrategia trading resultados' --periodo anio --orden relevancia --max-subs 100000000",
+    "buscar 'devaluación de la peseta historia ahorros españoles' --periodo any (2 vídeos)",
+    "buscar 'perdieron el 93% de sus ahorros 1948 quién se los quedó' --periodo anio (0)",
+    "buscar 'reforma monetaria ahorros quién ganó realmente' --periodo anio --orden relevancia",
+    "filtrar 'historia económica de Argentina inflación devaluación' --periodo anio --orden relevancia --max-subs 100000000",
+    "buscar 'ahorros quién se quedó con el dinero realmente' --periodo mes --orden relevancia",
+    "buscar 'pesificación asimétrica quién ganó' --periodo any (2 vídeos: 21 y 15 vistas)",
+    "buscar 'Banco Popular accionistas perdieron todo quién se quedó con el banco' --periodo any (nada relevante)",
+    "filtrar 'los españoles perdieron sus ahorros peseta preferentes historia' --periodo anio (0)",
+    "filtrar 'historia económica de España explicada' --periodo anio --orden relevancia --max-subs 100000000",
+    "buscar 'hiperinflación 1923 Alemania' --periodo anio (más de 10 clones IA con menos de 5.000 vistas, más doblajes automáticos)",
+    "buscar 'historia del bolívar devaluación Venezuela' --periodo any"
+   ],
+   "competidores": [
+    {
+     "canal": "qash",
+     "mismo_formato": false,
+     "suscriptores": 18500,
+     "vistas_tipicas": 109000
+    },
+    {
+     "canal": "México Bajo Lupa (La Lupa MX)",
+     "mismo_formato": false,
+     "suscriptores": 4280,
+     "vistas_tipicas": 3950
+    },
+    {
+     "canal": "La Nueva Enciclopedia",
+     "mismo_formato": false,
+     "suscriptores": 540000,
+     "vistas_tipicas": 93500
+    },
+    {
+     "canal": "Historias Innecesarias",
+     "mismo_formato": false,
+     "suscriptores": 2550000,
+     "vistas_tipicas": 812000
+    },
+    {
+     "canal": "VisualEconomik",
+     "mismo_formato": false,
+     "suscriptores": 897000,
+     "vistas_tipicas": 138000
+    },
+    {
+     "canal": "Archivos Ocultos del Poder",
+     "mismo_formato": false,
+     "suscriptores": 9250,
+     "vistas_tipicas": 9000
+    },
+    {
+     "canal": "Letra pequeña",
+     "mismo_formato": false,
+     "suscriptores": 11100,
+     "vistas_tipicas": 15000
+    },
+    {
+     "canal": "Historia del Capital Oculto",
+     "mismo_formato": true,
+     "suscriptores": 29300,
+     "vistas_tipicas": 1700
+    },
+    {
+     "canal": "Imperio Financiero",
+     "mismo_formato": true,
+     "suscriptores": 2990,
+     "vistas_tipicas": 1450
+    },
+    {
+     "canal": "Historia Secreta del Capital",
+     "mismo_formato": false,
+     "suscriptores": 29300,
+     "vistas_tipicas": 4600
+    },
+    {
+     "canal": "El Gran Desfalco",
+     "mismo_formato": true,
+     "suscriptores": 31,
+     "vistas_tipicas": 20
+    },
+    {
+     "canal": "Dinero en Crisis",
+     "mismo_formato": true,
+     "suscriptores": 305,
+     "vistas_tipicas": 19
+    },
+    {
+     "canal": "Gustavo Entrala (con presentador)",
+     "mismo_formato": false,
+     "suscriptores": 641000,
+     "vistas_tipicas": 376000
+    },
+    {
+     "canal": "Iván Carrino (con presentador)",
+     "mismo_formato": false,
+     "suscriptores": 83900,
+     "vistas_tipicas": 25000
+    },
+    {
+     "canal": "El Presto (con presentador)",
+     "mismo_formato": false,
+     "suscriptores": 534000,
+     "vistas_tipicas": 43000
+    }
+   ],
+   "veredicto": "hueco parcial"
+  },
+  "rpm_estimado_es": "2,5-6 USD por cada 1.000 vistas. Es una ESTIMACIÓN, no un dato. Razonamiento: según Dynamoi, el RPM medio de AdSense en 2026 (todas las temáticas) es 6,21 USD en EE. UU., 2,10 en España, 0,44 en México y 0,26 en Argentina, y la historia económica y financiera suele pagar 2-3 veces la media de cada país. Con más de la mitad del público en España y EE. UU. (temas españoles y universales con gráficos) calculo 4-7 USD. Si domina Argentina, Venezuela o México, que son justo los temas con más demanda (corralito, bolívar, Fobaproa), bajaría a 0,8-2 USD. Por eso conviene alternar temas latinoamericanos, que traen vistas, con temas españoles (preferentes, Banco Popular, peseta, Rumasa, Fórum Filatélico), que suben el RPM. Los 5-12 USD de la ronda anterior me parecen optimistas. Fuentes: [Dynamoi, RPM por país](https://dynamoi.com/data/youtube-adsense-rpm), [España](https://dynamoi.com/data/youtube-adsense-rpm/es), [México](https://dynamoi.com/data/youtube-adsense-rpm/mx), [Argentina](https://dynamoi.com/data/youtube-adsense-rpm/ar), [EE. UU.](https://dynamoi.com/data/youtube-adsense-rpm/us).",
+  "ideas_doblez": [
+   "'¿Quién se quedó con tus ahorros?': la fórmula alemana (año + porcentaje perdido + '¿quién se lo quedó?') aplicada a la historia del dinero hispano. Temas: corralito y pesificación asimétrica (2001-02), Plan Bonex (1989), Viernes Negro (1983) y los 14 ceros que perdió el bolívar entre 2008 y 2021, nacionalización bancaria de México (1982) y Fobaproa (1995), feriado bancario y dolarización de Ecuador (1999-2000), Rumasa (1983), preferentes (2012), Banco Popular vendido por 1 euro (2017), Fórum Filatélico y Afinsa (2006), devaluaciones de la peseta (1959, 1967, 1977, 1992-93) y la quita de Chipre (2013). Los clonadores que traducen títulos alemanes no pueden copiar esto, porque exige investigar cada caso local.",
+   "'¿Qué te habría salvado?': un backtest con datos reales en cada crisis. 10.000 pesos, bolívares o pesetas en el banco frente a dólares, oro, vivienda o bolsa: cuánto quedaba 1, 5 y 20 años después, con el gráfico del tipo de cambio oficial frente al paralelo, el IPC y el oro en moneda local (BCRA, BCV, INE, Banco de España, FRED). Es el ángulo que validaron Hyperinflation Archiv ('GOLD or HOUSE', 79k) y The Sovereign Ledger (255k), contado con la credibilidad de un trader venezolano.",
+   "Crisis universales con lectura de trader y con 'quién ganó y quién pagó', para público de España y EE. UU. con RPM más alto: Japón 1990, burbuja puntocom, 2008, burbuja inmobiliaria española, y cuántos años tardó en recuperarse quien compró en el pico. Hay que evitar el 'Weimar 1923' genérico, que en español ya tiene más de 10 clones IA con menos de 5.000 vistas y doblajes automáticos de canales ingleses.",
+   "'Esto ya pasó en [año]': cuando haya noticia (bandas cambiarias en Argentina, dolarización venezolana, vivienda en España, récord del oro), se publica un vídeo histórico enlazado con la actualidad. Con este gancho La Lupa MX (4.280 subs) sacó 321k y 206k sobre el Fobaproa."
+  ],
+  "ventaja_usuario": "Es venezolano y trader. Como venezolano conoce de primera mano el control de cambios, las reconversiones del bolívar y la hiperinflación, así que puede contar las crisis hispanas con autoridad, algo que un canal de IA sin rostro no tiene. Como trader sabe construir y leer series reales (tipo de cambio oficial y paralelo, IPC, oro, índices) y hacer backtests de '¿qué te habría protegido?', justo lo que los canales alemanes de referencia NO hacen: usan solo imágenes IA y en sus fotogramas no aparece ni un gráfico. Vivir en Málaga le facilita los temas españoles, que atraen a la audiencia con el RPM más alto del mundo hispano.",
+  "puntuacion_nicho": 15,
+  "veredicto": "HAY REFERENCIAS VÁLIDAS, pero no del formato puro de 'backtest o burbuja sobre el gráfico'. En ningún idioma encontré canales pequeños con outliers de ese tipo: en inglés son day traders con cara y dependientes de la audiencia; en coreano y japonés, selección de acciones o 'yukkuri' antichino, sin vídeos de 25-40 min del tema; Universal Resilience usa stock y cara y se queda en 21 min. Lo que SÍ está explotando es un formato alemán nacido en septiembre de 2026: la historia del dinero del propio país contada con cifras, del tipo 'En 1948 los alemanes perdieron el 93 % de sus ahorros: ¿quién se los quedó?'. Moss Garner (3.550 subs) sacó 500k y 172k; Spurensuche (1.200) 161k y 94k; Rote Zahlen (1.290) 118k, con mediana igual a 5,19 veces los suscriptores; y Hermann Kirschbaumer (1.590) 97k. Todos con vídeos de 27-33 min, imágenes IA en sepia, voz y subtítulos, sin cara, sin metraje ajeno y sin gráficos. Funciona porque es LOCAL: es la historia de los ahorros del propio espectador. En español, los temas universales están saturados: Weimar 1923, el crac del 29 y la burbuja de la IA ya tienen más de 10 clones IA con menos de 5.000 vistas, doblajes automáticos de Market Fault Lines y Uncover History, y presentadores grandes. La versión hispana local casi no existe: 'corralito explicado' (último año, más de 20 min) da 0 vídeos, el mejor vídeo largo sobre la hiperinflación venezolana tiene 14k vistas y la pesificación asimétrica tiene 21 vistas. La demanda está probada: 'Crisis 2001' de Historias Innecesarias (2,97M), 'Viernes Negro' de La Nueva Enciclopedia (309k) y el Fobaproa de La Lupa MX (321k con 4.280 subs). PROPUESTA: un canal 'quién se quedó con tus ahorros' con la fórmula de Moss Garner más lo que nadie copia, que son gráficos con datos reales y el backtest '¿qué te habría salvado?' contado por un trader venezolano. RIESGOS: 1) la plantilla ya tiene más de 8 clones en alemán y uno en portugués desde el 6-oct-2026, así que el clon en español puede salir en semanas; hay que lanzar YA y con la diferencia de los datos; 2) los temas latinoamericanos traen vistas pero RPM bajo, por lo que conviene mezclarlos con temas españoles; 3) es contenido YMYL y político: cifras con fuente, tono no partidista y nada de retratos realistas de políticos vivos; 4) Rote Zahlen solo tiene 5 vídeos y las fechas de yt-dlp son aproximadas. Nota: 15/18 (tamaño 2, demanda 2, recencia 2, duración 2, hueco ES 1, replicabilidad 2, copyright 2, RPM 1, potencial viral 1).",
+  "nicho_id": "finanzas_mercados_con_datos_r2"
+ },
+ {
+  "nicho": "Motor y aviación, ángulo de negocio: por qué las marcas de coches y las aerolíneas ganan o pierden miles de millones (Porsche, Aston Martin, Stellantis, SEAT/Cupra, coches chinos frente a europeos, Boeing, low cost, aerolíneas latinoamericanas quebradas)",
+  "consultas_realizadas": [
+   "[EN · filtrar · año] car brand lost billions here's why: 9 vídeos, ninguno pasa",
+   "[EN · filtrar · año] car brands collapsing why: 40 vídeos, pasan The Sleeper List, Drive Standard, Luke Harrison, Torque Vision, Unseen History, Blick unter die Haube, Jack Thompson y Broken Canada",
+   "[EN · filtrar · año] why this airline is losing billions: 17 vídeos, nada del nicho",
+   "[EN · filtrar · año] airline collapse why it failed: Beyond Sky, Plane Curious y The Sky Digest caen por duración (15-19 min)",
+   "[KO · filtrar · año] 자동차 회사 몰락 진짜 이유: solo canales de economía general (지식발굴단, 똑똑해지는 경제학, 옳지경제학)",
+   "[JA · filtrar · año] 自動車メーカー 赤字 理由 ゆっくり解説: 1 vídeo",
+   "[JA · filtrar · año] 自動車メーカー 経営危機 なぜ: 1 vídeo",
+   "[JA · filtrar · año] 日産 ゆっくり解説: 日本の技術は模倣不可能だ, ニッポンすんだ村, ゆっくりクルマ研究部, TheCutie2332",
+   "[DE · filtrar · año] Autoindustrie Krise warum Doku: 7 vídeos, ninguno pasa",
+   "[DE · filtrar · año] Warum Porsche Absturz: 6 vídeos, ninguno pasa",
+   "[DE · filtrar · año · relevancia] deutsche Autobauer Untergang: Eisenwerk, Philipp Raasch, Blick unter die Haube, Vergessene Automobile, Alte Industrie, TechnikKern",
+   "[IT · filtrar · año] crisi Stellantis spiegata: 0 vídeos",
+   "[IT · filtrar · año · relevancia] Stellantis perché crisi: Banned Camping, Auto Aspect, L'Italia che Costruiva, Roy Stroud, Luxury Car Secrets",
+   "[FR · filtrar · año · relevancia] pourquoi Renault Stellantis s'effondre: 3 vídeos",
+   "[FR · filtrar · año] voitures chinoises constructeurs européens: Dragon Drive, Automanie, CAR LUST; The Sleeper List y Banned Camping aparecen con títulos doblados al francés",
+   "[RU · filtrar · año] крах автоконцерна убыток миллиардов: 0 vídeos",
+   "[RU · filtrar · año · relevancia] крах Porsche Nissan почему: Начало Пути",
+   "[PT · filtrar · año · relevancia] por que a montadora está falindo: kayley713, Diário do Consumidor, arquivos de industria",
+   "[PL · filtrar · año · relevancia] upadek koncernu samochodowego dlaczego: AutoZJajami, Zapomniane Pojazdy",
+   "[TR · filtrar · año · relevancia] otomobil devi neden çöktü: solo ruido (dramas cortos)",
+   "[EN · filtrar · mes] car giants collapsing 2026: solo The Sleeper List",
+   "[EN · filtrar · mes · relevancia] lost profit here's why carmaker: ruido",
+   "[EN · filtrar · año] why Ryanair makes so much money: 1 vídeo",
+   "[EN · filtrar · año · relevancia] Boeing losing billions why: toda la aviación por debajo de 20 min (Beyond Sky, Aviation Explained, Jetscribe)",
+   "[KO · filtrar · año] 항공사 적자 몰락 이유: 경제학TV (economía de consumo)",
+   "[JA · filtrar · año · relevancia] 航空会社 破綻 なぜ 解説: まるっと世界情勢, Empires of Rust, 消滅図鑑, 偉人の人生訓",
+   "[EN · filtrar · mes · relevancia] car brands collapsing you won't guess number one (bola de nieve): Luke Harrison, Jack Thompson, Canada Unlocked; descartados Kiwi Car Truth y British Garage (mismos clones)",
+   "[KO · filtrar · año · relevancia] 폭스바겐 몰락 진짜 이유: canales de economía general (똑똑해지는 인물과역사학, 경제만 골라덕, 이코랩)",
+   "[EN · filtrar · año] Stellantis collapse explained: 1 vídeo",
+   "[EN · filtrar · año] Nissan is collapsing: Drive Standard, Luke Harrison, The Sleeper List, Banned Camping, Dale Owens Garage",
+   "[PT · filtrar · año · relevancia] por que a companhia aérea faliu: ruido de dramas y Coroas Oxidadas (accidentes)",
+   "[EN · filtrar · año · max 300k] why carmakers are losing billions: 2 vídeos",
+   "[EN · filtrar · año · max 300k] car brands collapsing: en 80k-300k solo Untamed Motors (138k) y Finance Bureau (113k), ambos con vídeos cortos",
+   "[EN · filtrar · mes] carmaker in serious trouble profits collapse: 0 vídeos",
+   "[EN · filtrar · mes] Porsche profit collapse (bola de nieve): The Sleeper List y su clon Roy Stroud, que copia el título literal",
+   "[DE · filtrar · año · relevancia] warum Fluggesellschaft pleite Lufthansa Krise: NOTLANDUNG (accidentes aéreos, no negocio)",
+   "[canal] fichas de Modo Enfoque, Hora de Vuelo, IMPERIOS OLVIDADOS espanol, Mecánica del Cielo y carwow.es (competidores hispanos)",
+   "[miniaturas y fotogramas hq1-hq3] The Sleeper List, Luke Harrison, Banned Camping, まるっと世界情勢, Начало Пути, Empires of Rust, 日本の技術は模倣不可能だ"
+  ],
+  "idiomas_cubiertos": [
+   "inglés",
+   "coreano",
+   "japonés",
+   "alemán",
+   "italiano",
+   "francés",
+   "ruso",
+   "portugués",
+   "polaco",
+   "turco",
+   "español (comprobación del hueco)"
+  ],
+  "candidatos": [
+   {
+    "canal": "Luke Harrison",
+    "url": "https://www.youtube.com/channel/UCUdHwex5cwdMxrO6v5JGf_A",
+    "idioma": "inglés (Australia)",
+    "suscriptores": 7940,
+    "mediana_vistas": 8250,
+    "ratio_mediana_subs": 1.04,
+    "pct_videos_vistas_mayor_que_subs": 50,
+    "duracion_mediana_min": 30.2,
+    "pct_videos_25_45_min": 96,
+    "outliers": [
+     {
+      "titulo": "6 Car Brands Collapsing in Australia — And You Won’t Guess Number One (2026)",
+      "vistas": 246000,
+      "duracion_min": 36.3,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "I Investigated 8 Australian Petrol Brands (Only 3 Are Actually Worth Putting in Your Tank)",
+      "vistas": 201000,
+      "duracion_min": 33.7,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "Japanese Engineers Tore Down a Chinese Car in Australia — What They Found Inside",
+      "vistas": 163000,
+      "duracion_min": 32.5,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "China's $19,990 EV Has Hit Aussie Roads — Toyota & Tesla Panic!",
+      "vistas": 134000,
+      "duracion_min": 29.8,
+      "fecha": "2026-09-26"
+     },
+     {
+      "titulo": "10 Cars BANNED From Australian Roads in 2027 — Here’s Why",
+      "vistas": 78000,
+      "duracion_min": 38.6,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Thousands of Australian Are Returning Their EVs in 2026 — Here’s Why",
+      "vistas": 77000,
+      "duracion_min": 31.3,
+      "fecha": "2026-09-23"
+     }
+    ],
+    "formato_visual": "Informativo de la industria del automóvil con locución y sin cara. Dentro del vídeo: metraje de stock y de prensa de coches, rótulos de datos (p. ej. «CHINESE BRAND GROWTH (H1): BYD 52.335 (+124%)») y un cintillo «LIVE» de informativo. Miniaturas: presentador o presentadora de informativos que parece generado por IA delante de la Ópera de Sídney, coche realista en IA, flecha roja de caída, «WARNING» y titular gigante («6 BRANDS COLLAPSING», «AUSTRALIA DIDN'T EXPECT THIS»).",
+    "replicable": "alta",
+    "riesgo_copyright": "medio",
+    "notas": "Canal recién nacido: los 27 vídeos analizados son del último mes y suman 1,05 M de vistas, así que la demanda es de mercado. Es una versión localizada de The Sleeper List con las mismas plantillas de título y demuestra que el formato aguanta 30-38 min (96% de vídeos entre 25 y 45). Hay clones por país (Jack Thompson y Canada Unlocked en Canadá, Roy Stroud y British Garage en Reino Unido, Kiwi Car Truth en Nueva Zelanda): la plantilla se está extendiendo en inglés y en español aún nadie la ha localizado. Para replicarlo hay que cambiar el stock por imágenes IA, gráficos propios y el cintillo hecho con ffmpeg, cuidar que los modelos de coche salgan bien y no imitar el rótulo de ninguna cadena real. Fechas aproximadas (YouTube da «hace 1 mes»)."
+   },
+   {
+    "canal": "Начало Пути",
+    "url": "https://www.youtube.com/channel/UC_J-FqvIbLFw5zYxnBJFKDQ",
+    "idioma": "ruso (con títulos traducidos al inglés en algunos vídeos)",
+    "suscriptores": 1800,
+    "mediana_vistas": 10000,
+    "ratio_mediana_subs": 5.56,
+    "pct_videos_vistas_mayor_que_subs": 82,
+    "duracion_mediana_min": 21.2,
+    "pct_videos_25_45_min": 12,
+    "outliers": [
+     {
+      "titulo": "Прощай Intel: долг $50 млрд, 3 отказа от триллионов и похороны легенды",
+      "vistas": 106000,
+      "duracion_min": 20.1,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The Collapse of Volkswagen Group: Why Porsche and Audi Are Going Down Together",
+      "vistas": 93000,
+      "duracion_min": 22.2,
+      "fecha": "2026-08-07"
+     },
+     {
+      "titulo": "Крах Peugeot, Citroën и Opel убыток на $26 миллиардов",
+      "vistas": 68000,
+      "duracion_min": 19.9,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Gillette ошибка ценой в $17 миллиардов",
+      "vistas": 44000,
+      "duracion_min": 25.3,
+      "fecha": "2026-09-23"
+     },
+     {
+      "titulo": "Одно решение, которое погубило Nike: минус $155 миллиардов",
+      "vistas": 42000,
+      "duracion_min": 24,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Провал Nissan: убыток на $4,5 млрд и закрытие 7 заводов",
+      "vistas": 40000,
+      "duracion_min": 19.1,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "The Long-Awaited Collapse of the Most Overrated Tesla",
+      "vistas": 32000,
+      "duracion_min": 23.4,
+      "fecha": "2026-08-07"
+     }
+    ],
+    "formato_visual": "Miniaturas 100% IA: un ejecutivo trajeado con el logo de la marca en lugar de la cabeza (VW, Opel), logos de Porsche, Audi, Peugeot y Citroën, la sede corporativa agrietada, flechas rojas de caída y la cifra gigante («КРАХ НА $26 МЛРД», «ИМПЕРИЯ РУШИТСЯ»). Dentro: vídeo de stock (dinero, concesionarios, nave de fábrica) y fotos de prensa de directivos (Carlos Tavares) y de modelos.",
+    "replicable": "alta",
+    "riesgo_copyright": "medio",
+    "notas": "Es la señal de demanda más limpia de todo el nicho: 1.800 suscriptores, mediana de 10.000 y el 82% de los vídeos por encima de los suscriptores (33 vídeos en unos 3 meses). Es exactamente el ángulo pedido, «por qué la marca X perdió N mil millones», con la cifra en el título. Unos dos tercios de los últimos temas son de motor (VW, Porsche, Mercedes, Stellantis, Nissan, Honda, BYD, Tesla) y el resto de otras marcas (Intel, Nike, Gillette, HP, Philips). Pega: dura 19-25 min, así que la versión española debe alargarse a 25-30 min con más análisis financiero, justo lo que el usuario sabe hacer. Sus miniaturas son lo más fácil de copiar con gpt-image."
+   },
+   {
+    "canal": "Banned Camping",
+    "url": "https://www.youtube.com/channel/UCVUydAWdBkhLR2ndhI2eRyw",
+    "idioma": "inglés",
+    "suscriptores": 18300,
+    "mediana_vistas": 7000,
+    "ratio_mediana_subs": 0.38,
+    "pct_videos_vistas_mayor_que_subs": 22,
+    "duracion_mediana_min": 30.6,
+    "pct_videos_25_45_min": 100,
+    "outliers": [
+     {
+      "titulo": "Why Is Every Western Automaker Suddenly Copying BYD? (And Nobody Is Talking About It)",
+      "vistas": 105000,
+      "duracion_min": 29.4,
+      "fecha": "2026-08-07"
+     },
+     {
+      "titulo": "BYD Just Took Over the World's Shipping Lanes (And Nobody Is Talking About It)",
+      "vistas": 83000,
+      "duracion_min": 34.9,
+      "fecha": "2026-08-07"
+     },
+     {
+      "titulo": "7 German Factories China Is About to Take Over in 2027 And Nobody Knows",
+      "vistas": 79000,
+      "duracion_min": 29.6,
+      "fecha": "2026-09-09"
+     },
+     {
+      "titulo": "China Just Won the Middle East's Car War (And Nobody Is Talking About It)",
+      "vistas": 39000,
+      "duracion_min": 35.3,
+      "fecha": "2026-08-07"
+     },
+     {
+      "titulo": "BYD Just Changed the Car Industry Forever (And Nobody Is Talking About It)",
+      "vistas": 39000,
+      "duracion_min": 28.2,
+      "fecha": "2026-07-07"
+     },
+     {
+      "titulo": "BYD Got Tired of Waiting for Ships, So It Bought Its Own",
+      "vistas": 23000,
+      "duracion_min": 30,
+      "fecha": "2026-09-29"
+     }
+    ],
+    "formato_visual": "Sin presentador. Miniaturas fotorrealistas tipo IA (un coche desmontado con el paquete de baterías y el logo de Ford al fondo; un barco portacoches de BYD en alta mar) con 3-4 palabras gigantes en blanco y amarillo («FORD IS COPYING BYD», «THEY OWN THE OCEAN»). Dentro: stock de negocios (billetes, centro de datos) y fotos de prensa de CEOs (Jim Farley).",
+    "replicable": "alta",
+    "riesgo_copyright": "medio",
+    "notas": "Investigaciones de 28-35 min (100% en 25-45) sobre cómo la industria china (BYD, Chery, Geely, CATL) se está comiendo a Ford, VW o Nissan. Es el ángulo «coches chinos frente a europeos» como negocio, sin el hype de consumo. La demanda es moderada (ratio 0,38; 22% de vídeos por encima de los suscriptores; outliers de 80-105k). Ojo: ya tiene pistas en español y francés (sus títulos salen traducidos en las búsquedas, p. ej. «Nissan se está derrumbando: BYD ya está construyendo su reemplazo», 4.592 vistas), así que la versión española tiene que llevar temas locales (España, México, Brasil, Chile). Los barcos, fábricas, mapas de rutas y baterías se hacen muy bien con IA."
+   },
+   {
+    "canal": "まるっと世界情勢",
+    "url": "https://www.youtube.com/channel/UCOpnAWZZjVluEQB_kBKiN6g",
+    "idioma": "japonés",
+    "suscriptores": 44600,
+    "mediana_vistas": 110500,
+    "ratio_mediana_subs": 2.48,
+    "pct_videos_vistas_mayor_que_subs": 78,
+    "duracion_mediana_min": 27.6,
+    "pct_videos_25_45_min": 85,
+    "outliers": [
+     {
+      "titulo": "The Real Reason China Can't Steal YKK's Technology",
+      "vistas": 1000000,
+      "duracion_min": 35.3,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Toshiba's AI Transformation! How Did They Achieve Record-Breaking Profits?",
+      "vistas": 623000,
+      "duracion_min": 24.3,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Komatsu Crushed in China: Why Are Sales at an All-Time High?",
+      "vistas": 620000,
+      "duracion_min": 26.2,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Japan's Mightiest Behind-the-Scenes Powerhouse 'Murata Manufacturing': A Remarkable Defensive Bat...",
+      "vistas": 460000,
+      "duracion_min": 37.2,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "Sony Lost Badly to South Korea—So Why Are Its Profits at Record Highs?",
+      "vistas": 382000,
+      "duracion_min": 26.9,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Denso’s QR Code Dominates Chinese Payments: How Do They Make 7 Trillion Yen While Giving It Away ...",
+      "vistas": 369000,
+      "duracion_min": 37,
+      "fecha": "2026-09-16"
+     }
+    ],
+    "formato_visual": "Ilustración IA estilo manga (su descripción habla de «animación original con visualización de datos»): dos mascotas redondas recurrentes, un oficinista, fábricas, líneas de tiempo y cifras gigantes («40年», «1985»). Miniaturas con la caricatura sudorosa de un líder político chino frente a operarios de la empresa y titular en amarillo y rojo. Aparece algún plano de una persona real.",
+    "replicable": "media",
+    "riesgo_copyright": "bajo",
+    "notas": "Formato «por qué la empresa X tiene beneficios récord (o los perdió) pese a Y», con datos y a 25-37 min: es el más cercano a la ventaja del trader y tiene una demanda enorme (mediana 110.500; 6,8 M de vistas en los últimos 40 vídeos). Incluye motor y aviación (Suzuki con beneficios récord tras salir de China, el contraataque de Honda, el fracaso del avión de Mitsubishi, el rescate de JAL). Pero parte del tirón viene del orgullo nacional japonés, que no se traslada; usa personajes recurrentes (choca con la regla de no repetir personajes) y caricaturas de políticos reales (evitarlas). Los títulos que da la herramienta son traducciones; los originales están en japonés."
+   },
+   {
+    "canal": "Empires of Rust",
+    "url": "https://www.youtube.com/channel/UC_0VlBJao05MJFwCT0DITvQ",
+    "idioma": "inglés",
+    "suscriptores": 1470,
+    "mediana_vistas": 2100,
+    "ratio_mediana_subs": 1.43,
+    "pct_videos_vistas_mayor_que_subs": 56,
+    "duracion_mediana_min": 29.7,
+    "pct_videos_25_45_min": 100,
+    "outliers": [
+     {
+      "titulo": "How America's Oldest Car Empire Collapsed",
+      "vistas": 424000,
+      "duracion_min": 36.5,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Inside Oldsmobile: How General Motors Killed America's Oldest Car Brand",
+      "vistas": 105000,
+      "duracion_min": 30.2,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "How America's Greatest Luxury Car Bought Its Own Death",
+      "vistas": 31000,
+      "duracion_min": 31.1,
+      "fecha": "2026-09-07"
+     },
+     {
+      "titulo": "Inside Polaroid: The Invention That Built and Blinded an American Empire",
+      "vistas": 22000,
+      "duracion_min": 29.7,
+      "fecha": "2026-09-16"
+     },
+     {
+      "titulo": "The Silent Fall of A&P: How the World's Biggest Grocer Disappeared",
+      "vistas": 13000,
+      "duracion_min": 30.3,
+      "fecha": "2026-09-07"
+     }
+    ],
+    "formato_visual": "Miniaturas IA de fábricas de época con el letrero de la marca, coches clásicos aparcados, cielo dorado y titular serif amarillo («THE TRAGIC FALL OF STUDEBAKER», «THE TRAGIC FALL OF OLDSMOBILE»). Dentro: fotos de archivo en blanco y negro, coches clásicos y rótulos de capítulo («Chapter seven: Cutlass»).",
+    "replicable": "alta",
+    "riesgo_copyright": "bajo",
+    "notas": "Canal de un mes (25 vídeos, 637k vistas) sobre caídas históricas de marcas de coches e industria, Pan Am incluida. Duración ideal (100% entre 25 y 45 min). Las fotos de archivo se pueden sustituir por escenas IA de época. Sirve de modelo para la rama histórica, como las aerolíneas latinoamericanas quebradas. Es la rama con menos hueco en español: ya hay IMPERIOS OLVIDADOS espanol (34.100 subs), Modo Enfoque (31.800) y La Fábrica del Olvido (5.520). Unseen History (16.600 subs, mediana 10.000, 42 min) hace lo mismo con fábricas estadounidenses."
+   }
+  ],
+  "cerca_del_limite": [
+   {
+    "canal": "The Sleeper List",
+    "url": "https://www.youtube.com/channel/UC2QO03ybuQxPTSpgF4iGegA",
+    "suscriptores": 31000,
+    "motivo": "Es el formato exacto y la mayor demanda (mediana 34.500; Porsche 545k, Aston Martin 505k, Freelander 316k y McLaren 202k en septiembre de 2026; 3,17 M de vistas en sus últimos 40 vídeos, todos del último mes). Pero falla el filtro de copyright: las dos miniaturas revisadas usan a Jeremy Clarkson en un plató de BBC Question Time con el logo de la BBC, y dentro del vídeo hay clips de informativos de TV y fotos de prensa de directivos. Además ya tiene doblaje al español (sus títulos salen traducidos en las búsquedas en español) y dura 21-25 min (solo un 2% en 25-45). Úsalo como fuente de temas, no como modelo visual."
+   },
+   {
+    "canal": "Beyond Sky",
+    "url": "https://www.youtube.com/channel/UClBx-ExBwTFdHOxXL9v4t0A",
+    "suscriptores": 38700,
+    "motivo": "Aviación con ángulo de negocio y demanda enorme (mediana 247.000; «Why Airlines Are REJECTING Boeing’s Brand-New 777X» 1,9 M; «Why Etihad Is a FAILURE, While Emirates Is a Success» 853k), pero sus vídeos duran 15-19 min (mediana 18) y el formato ya existe en español: Beyond Sky Español (3.070 subs, mediana 16.000) y Mecánica del Cielo (9.670 subs)."
+   },
+   {
+    "canal": "Drive Standard",
+    "url": "https://www.youtube.com/channel/UChucrMG4lVp_T5JBWt8mBoA",
+    "suscriptores": 21600,
+    "motivo": "«10 Car Brands That Are Collapsing (Avoid them in 2026)» tiene 930k y valida la demanda, pero es un listado de consumo («no las compres») y en español ese formato está saturado: EL MEJOR AUTO tiene 325k y hay una decena de clones (Motor y Autos, CarsZone, MOTOR DIARIO, Todo Autos, Diesel Engines Español...)."
+   },
+   {
+    "canal": "Riccardo Elias",
+    "url": "https://www.youtube.com/channel/UCkr0n5F1t5t6NgF7Up77Brg",
+    "suscriptores": 21100,
+    "motivo": "Italiano de caídas de marcas: «How BYD CONQUERED the world. And now it’s COLLAPSING» tiene 432k a 36 min, pero la mediana del canal es de 18,1 min y la mayoría de sus temas no son de motor."
+   },
+   {
+    "canal": "ニッポンすんだ村",
+    "url": "https://www.youtube.com/channel/UC9Le1DkKHWTw2KVDtS7Y__g",
+    "suscriptores": 79800,
+    "motivo": "Al borde de los 80k, con mediana de 203.000 y temas de motor (Nissan y sus 670.000 millones de yenes de pérdidas, 1,2 M para Suzuki contra China, 908k para Mercedes). Pero es el formato yukkuri nacionalista de «reacciones del extranjero», no se traslada al español, dura 22 min y no tiene vídeos entre 25 y 45 min."
+   },
+   {
+    "canal": "Philipp Raasch",
+    "url": "https://www.youtube.com/channel/UCD3drbnogjch0Kkp2HhvrhA",
+    "suscriptores": 26900,
+    "motivo": "Valida la demanda del análisis de la industria alemana («Volkswagen is giving up on Germany» 265k, «Mercedes CEO declares war on his own workforce» 230k), pero es un analista que sale a cámara y la mediana es de 19,4 min."
+   }
+  ],
+  "hueco_espanol": {
+   "consultas_es": [
+    "[filtrar · año · sin tope de subs] decadencia de Porsche: solo Garaje Hermético",
+    "[buscar · siempre] Porsche perdió beneficios por qué: solo The Sleeper List doblado (545.366, 78.957 y 12.137 vistas)",
+    "[filtrar · año] coches chinos marcas europeas crisis: France 24 Español y una radio de Murcia",
+    "[filtrar · año] autos chinos están destruyendo a las marcas: FactorAuto, LUXURY ON WHEELS, AUTOTEC, Mundo Sin Occidente (hype de consumo)",
+    "[filtrar · año] por qué quebró Mexicana de Aviación: La Fábrica del Olvido, Último Vuelo, Marcas Caídas",
+    "[buscar · siempre] por qué quebró aerolínea: Javier Ledesma (Flybondi 714.098), Conhecimento Disruptivo (477.779), Hora de Vuelo, IMPERIOS OLVIDADOS espanol (Pan Am 206.374), Mecánica del Cielo, FlyCuriosities Español, Plane Curious Español",
+    "[filtrar · año] marcas de autos que van a desaparecer: EL MEJOR AUTO (325k)",
+    "[buscar · siempre] marcas de coches en quiebra por qué: una decena de listados clon (EL MEJOR AUTO, MISTER SUV, Motor y Autos, CarsZone, MOTOR DIARIO, Todo Autos, Diesel Engines Español...)",
+    "[filtrar · año] Stellantis crisis por qué: ningún canal hispano",
+    "[buscar · siempre] por qué Nissan está en crisis: Conhecimento Disruptivo doblado (23.857), podcast de coches.net, Banned Camping doblado (4.592) y canales con menos de 400 vistas",
+    "[filtrar · año] por qué Ryanair gana tanto dinero: un canal de 134 suscriptores",
+    "[buscar · siempre] por qué Ryanair gana tanto dinero: 1 vídeo con 324 vistas",
+    "[buscar · siempre] crisis de Volkswagen por qué está perdiendo: 2 vídeos (13.860 y 5 vistas)",
+    "[buscar · siempre] coches chinos en España por qué venden tanto: MotorVibes, Expedición Vital, carwow.es, De Pistones a Electrones",
+    "[buscar · siempre] por qué SEAT va a desaparecer Cupra: solo carwow.es (268.928, con presentador)",
+    "[buscar · siempre] Aston Martin pérdidas por qué: solo Imperios Olvidados (804 vistas, 88 min)",
+    "[filtrar · año] marcas de coches que se hunden en España: 0 vídeos",
+    "[filtrar · año] BYD conquista Europa por qué: 0 vídeos",
+    "[buscar · año] marcas de coches crisis España por qué: carwow.es (171.730), France 24 Español y un vídeo con 3 vistas"
+   ],
+   "competidores": [
+    {
+     "canal": "The Sleeper List (inglés con doblaje automático al español; sus títulos salen traducidos)",
+     "suscriptores": 31000,
+     "vistas_tipicas": 34500,
+     "mismo_formato": true
+    },
+    {
+     "canal": "carwow.es (presentador a cámara; noticias de industria como el plan de VW para SEAT, 268.928)",
+     "suscriptores": 1040000,
+     "vistas_tipicas": 137500,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Garaje Hermético (presentador; algún tema de negocio, p. ej. la postventa de las marcas chinas, 582.197)",
+     "suscriptores": 904000,
+     "vistas_tipicas": 75500,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Modo Enfoque (historia del motor con perspectiva empresarial; DAEWOO 308.000; no sube desde junio de 2026)",
+     "suscriptores": 31800,
+     "vistas_tipicas": 11000,
+     "mismo_formato": false
+    },
+    {
+     "canal": "IMPERIOS OLVIDADOS espanol (caídas históricas de marcas en general; Pan Am 206.374, VARIG 33.242)",
+     "suscriptores": 34100,
+     "vistas_tipicas": 6050,
+     "mismo_formato": false
+    },
+    {
+     "canal": "La Fábrica del Olvido (historia de marcas mexicanas, incluidas Mexicana de Aviación y Aeromar; 60 min)",
+     "suscriptores": 5520,
+     "vistas_tipicas": 2300,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Mecánica del Cielo (aviación con ángulo de negocio, estilo Beyond Sky; Emirates y el A380, 158.000)",
+     "suscriptores": 9670,
+     "vistas_tipicas": 2800,
+     "mismo_formato": true
+    },
+    {
+     "canal": "Beyond Sky Español (versión española de Beyond Sky)",
+     "suscriptores": 3070,
+     "vistas_tipicas": 16000,
+     "mismo_formato": true
+    },
+    {
+     "canal": "Hora de Vuelo (historia de la aviación y accidentes; El GRAN ascenso y CAIDA de Spirit Airlines, 76.000)",
+     "suscriptores": 64900,
+     "vistas_tipicas": 14000,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Conhecimento Disruptivo (brasileño doblado al español; Nissan 23.857, quiebra de aerolínea brasileña 477.779)",
+     "suscriptores": 374000,
+     "vistas_tipicas": 33000,
+     "mismo_formato": false
+    },
+    {
+     "canal": "EL MEJOR AUTO (listado de consumo «marcas que van a quebrar», 325.000)",
+     "suscriptores": 5580,
+     "vistas_tipicas": 2750,
+     "mismo_formato": false
+    },
+    {
+     "canal": "FactorAuto (hype de coches chinos, 876.000)",
+     "suscriptores": 10800,
+     "vistas_tipicas": 3350,
+     "mismo_formato": false
+    },
+    {
+     "canal": "AUTOTEC (SUV chinos, consumo)",
+     "suscriptores": 28900,
+     "vistas_tipicas": 8300,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Mundo Sin Occidente (China y coches eléctricos)",
+     "suscriptores": 12500,
+     "vistas_tipicas": 3500,
+     "mismo_formato": false
+    },
+    {
+     "canal": "Javier Ledesma (#BIZELANEAS, presentador; «El caso Flybondi» 714.098 vistas)",
+     "mismo_formato": false
+    }
+   ],
+   "veredicto": "hueco parcial"
+  },
+  "rpm_estimado_es": "2-5 USD por cada 1.000 vistas (ESTIMACIÓN, no dato). Razonamiento: las tablas publicadas para canales en inglés dan RPM de 2-5 USD en motor y de 6-16 USD en negocio y emprendimiento (vidIQ, 1of10, OutlierKit); este nicho queda entre ambos. En español, el CPM general por país ronda 2,8-5,6 USD en España y 0,9-1,8 USD en México (AIR Media-Tech), y el RPM suele ser un 35-55% del CPM. Con audiencia mezclada (España, México y EE. UU. hispano) y vídeos de 25-35 min con varios mid-rolls, 2-5 USD es razonable. Bajaría a 1-2 USD si el público es casi todo latinoamericano (por ejemplo, con temas de aerolíneas latinoamericanas) y subiría a 4-6 USD solo si España y EE. UU. superan la mitad (temas de SEAT, Cupra o coches chinos en España). El 3-7 USD de partida me parece optimista. Fuentes: https://vidiq.com/blog/post/most-profitable-youtube-niches/ , https://www.1of10.com/blog/youtube-cpm-rpm-by-niche/ , https://outlierkit.com/resources/youtube-rpm-benchmarks/ , https://air.io/en/what-are-the-most-popular-languages-on-youtube",
+  "ideas_doblez": [
+   "Resultados explicados por un trader (Начало Пути y los temas de The Sleeper List, en español): en cada temporada de resultados (enero-febrero, abril-mayo, julio-agosto, octubre-noviembre), un vídeo de 25-30 min por marca con la cifra en el título («Porsche perdió el 93% de su beneficio: lo que esconden sus cuentas», «Stellantis: cómo se evaporaron miles de millones») y gráficos propios de márgenes, deuda, caja y cotización. Ningún canal nativo lo hace en español y el doblaje automático no localiza los temas.",
+   "Localizar el formato de Luke Harrison a España y a México, los dos mercados hispanos con mejor RPM: «6 marcas de coches que se hunden en España (la primera te sorprenderá)», «La antigua fábrica de Nissan en Barcelona ya monta coches chinos: por qué», «El plan de VW que puede acabar con SEAT», «Por qué México se llenó de autos chinos», siempre con datos locales de matriculaciones y ventas. La búsqueda «marcas de coches que se hunden en España» devolvió 0 vídeos largos.",
+   "China contra Europa contada como negocio (Banned Camping en español), sin el hype de consumo que ya está saturado: «BYD se compró sus propios barcos», «Cómo entraron las marcas chinas en Europa por Barcelona», «Por qué los coches chinos son tan baratos: su cuenta de resultados», con mapas de fábricas y de rutas marítimas, que son lo más replicable con IA.",
+   "La rama de ganadores y aerolíneas, con números (まるっと世界情勢 y Empires of Rust): paradojas de beneficio como «Cómo gana Ryanair con billetes de 20 €» (cero vídeos largos en español) o «Por qué Ferrari gana tanto por coche y Maserati pierde dinero», y la anatomía financiera de quiebras latinoamericanas que no aparecieron en formato largo en las búsquedas (Viasa, Aeropostal, LAB), donde el usuario venezolano tiene ventaja. Evitar Pan Am, Varig, Mexicana e Interjet, que ya tienen vídeos en español."
+  ],
+  "puntuacion_nicho": 14,
+  "ventaja_usuario": "Como trader sabe leer cuentas de resultados, márgenes, deuda, caja y el gráfico de la acción, que es el núcleo de este formato («Porsche perdió el 93%: por qué»). Puede publicar en temporada de resultados con criterio propio y gráficos reales en lugar del stock y las fotos de prensa que usan las referencias, algo que el doblaje automático de canales ingleses no puede igualar en temas locales. Como venezolano conoce de primera mano las aerolíneas y marcas latinoamericanas hundidas (Viasa, Aeropostal, Conviasa, Avianca y su capítulo 11) y el mercado hispano. Como DJ tiene oído para el ritmo de la locución, la música y el montaje de audio, que en vídeos de 25-35 min decide la retención.",
+  "veredicto": "Nicho VIABLE con hueco PARCIAL. Hay que priorizar los coches y el ángulo de resultados financieros, y dejar la aviación como secundaria. La demanda está probada con canales nuevos que crecen por mercado y no por audiencia: Luke Harrison (27 vídeos en un mes, 1,05 M de vistas, 30 min de mediana), Начало Пути (1.800 subs, mediana 10.000, el 82% de los vídeos supera a los suscriptores), Empires of Rust (25 vídeos en un mes, outlier de 424k) y el líder del formato, The Sleeper List (Porsche 545k, Aston Martin 505k). El riesgo de duración que se temía queda resuelto: Luke Harrison, Banned Camping, Empires of Rust y まるっと世界情勢 trabajan a 27-36 min con outliers. The Sleeper List queda fuera como modelo por copyright (miniaturas con Jeremy Clarkson y la BBC, clips de informativos) y porque ya está doblado al español; sirve como fuente de temas. En español no hay ningún canal nativo que analice los resultados de las marcas de coches (Porsche, VW, Stellantis, Nissan, SEAT, Aston Martin, Ryanair): las búsquedas devuelven el doblaje de The Sleeper List, carwow.es y Garaje Hermético (con presentador y solo de vez en cuando), France 24 o canales con menos de 1.000 vistas. Sí están cubiertos: la aviación con ángulo de negocio estilo Beyond Sky (Mecánica del Cielo, Beyond Sky Español, Plane Curious Español, Hora de Vuelo), la historia de marcas caídas (IMPERIOS OLVIDADOS, Modo Enfoque, La Fábrica del Olvido) y los listados de consumo («marcas que van a quebrar», hype de coches chinos: EL MEJOR AUTO, FactorAuto, AUTOTEC y una decena de clones). Riesgos: (1) la plantilla se está clonando a toda velocidad en inglés (Roy Stroud copia títulos literales; hay clones en Canadá, Australia y Nueva Zelanda) y el doblaje automático ya mete a The Sleeper List y Banned Camping en las búsquedas en español, así que conviene entrar pronto y con temas locales; (2) los «muchos millones» no están probados en español: los mayores vídeos hispanos de esta área van de 300k a 900k; (3) en las referencias el relleno visual es stock y fotos de prensa, que hay que sustituir por imágenes IA y gráficos propios: los coches tienen que salir bien (el público del motor detecta los errores) y no hay que generar caras de directivos reales. Puntuación 14/18: tamaño 2, demanda 2, recencia 2, duración 2, hueco en español 1, replicabilidad 2, copyright 1, RPM 1, potencial viral 1.",
+  "nicho_id": "motor_aviacion_negocio_r2"
+ }
+]
