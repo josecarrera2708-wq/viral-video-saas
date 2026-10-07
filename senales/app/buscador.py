@@ -482,6 +482,20 @@ def entry_at(path, t, price):
 X2_MIN_VOL = 500          # $ negociados en un minuto para fiarse de un pico de un solo minuto
 
 
+def market_price(b):
+    """Precio de MERCADO de su compra: el de su propia transacción en la cinta de Jupiter (media ponderada por volumen
+    de los tramos de su txHash). Su `price` es su COSTE TOTAL (delta de SOL: comisión de red, prioridad, propina,
+    renta de la cuenta del token, comisión de su terminal), de mediana un 2,6% más caro que el mercado (hasta +18%);
+    el copiador ya paga aparte sus propios costes (ENTRY_SLIP, FEE, FIXED_USD): usar su coste los cuenta dos veces."""
+    rows = [x for x in chunk(b["mint"], b["t"] - 2, b["t"] + 3)
+            if x.get("txHash") == b.get("sig") and (x.get("usdPrice") or 0) > 0]
+    if not rows:
+        return b["price"]
+    vol = sum(x.get("usdVolume") or 0 for x in rows)
+    p = sum(x["usdPrice"] * (x.get("usdVolume") or 0) for x in rows) / vol if vol else rows[0]["usdPrice"]
+    return min(b["price"], p) if p > 0.5 * b["price"] else b["price"]   # nunca más caro que su coste; dato raro -> su coste
+
+
 def x2_hit(ks, e, t):
     """Primera vela en la que el x2 es de verdad: toca 2e y cierra por encima, o la siguiente vela también lo toca, o es
     una vela de 1 minuto con volumen real (un pico suelto de una operación pequeña o una mecha de 15 min no cuentan)."""
@@ -608,7 +622,8 @@ def score(trades, exclude):
         collections.defaultdict(list), 0, 0, [], []
     for b in buys:
         path = price_path(b["mint"], b["t"])
-        e, ks = entry_at(path, b["t"], b["price"]) if path and b["price"] else (None, [])
+        price = market_price(b) if path and b["price"] else b["price"]
+        e, ks = entry_at(path, b["t"], price) if path and b["price"] else (None, [])
         if not e or not ks:
             nomed += 1          # sin mercado medible al copiarla: no cuenta ni como acierto ni como fallo
             continue
@@ -621,7 +636,7 @@ def score(trades, exclude):
         rows.append((xmax, pexit / e, hit is not None))
         if hit is not None:
             mins.append((ks[hit][0] - b["t"]) / 60)
-        used.append([b["mint"], b["t"], b["price"]])
+        used.append([b["mint"], b["t"], price])   # precio de mercado: verifica/medir.py ponen ahí el suelo de la entrada a 1 s
         tm = [t for t in trades if t.get("mint") == b["mint"] and t["t"] >= b["t"]]
         # vende más de lo que le vimos comprar o rota memecoin→memecoin: el bot no ve esas compras -> fuera de «copiar»
         bad = b["mint"] in swapped or sum(t["amount"] for t in tm if t["side"] == "sell") > \
@@ -629,7 +644,7 @@ def score(trades, exclude):
         odd += bad
         for sl, tag in ((0, ""), (0.3, "_sl30"), (0.5, "_sl50")):
             if not bad:
-                g, i = copy_sim(path, trades, b["mint"], b["t"], pexit, sl)
+                g, i = copy_sim(path, trades, b["mint"], b["t"], pexit, sl, entry_mult=price / b["price"])
                 if i:
                     per["copiar" + tag].append(g / i)
                     per_t["copiar" + tag].append((b["t"], g / i))
@@ -734,12 +749,14 @@ def main():
         log(f"{tk['sym']} (recién nacido): {len(b)} compradores con MC < {EARLY_MC:,}")
 
     followed = {r["addr"] for r in db.q("select addr from wallets")}
-    skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or found > ?", (int(time.time()) - 14 * 86400,))}
+    skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or (found > ? and "
+                                    "json_extract(detail, '$.perfil.faltan') is null)", (int(time.time()) - 14 * 86400,))}
     hits_l = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from prelist where usd>=? and x>=? "
                   "group by addr having n>=? order by n desc, u desc", (MIN_BUY_USD, MIN_X, MIN_HITS))
     hits_n = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from early where x>=? "
                   "group by addr having n>=2 order by n desc, u desc", (EARLY_X,))
-    leads = db.q("select addr, src from leads where addr not in (select addr from candidates) order by prio desc")
+    leads = db.q("select addr, src from leads where addr not in (select addr from candidates where "
+                 "json_extract(detail, '$.perfil.faltan') is null) order by prio desc")   # las de historial incompleto se reintentan
     hits_k = [{"addr": r["addr"], "n": 0, "mints": "", "u": 0} for r in leads if r["src"] == "kol"]
     hits_f = [{"addr": r["addr"], "n": 1, "mints": "", "u": 0} for r in leads if r["src"] == "fund"]
     pend = [[dict(h, src=src) for h in hits if h["addr"] not in followed and h["addr"] not in skip]
@@ -783,7 +800,13 @@ def main():
         # fuera de muestra: TODOS sus tokens de las dos tablas (no solo los aciertos de una); score quita además los ganadores
         sel_mints = set(h["mints"].split(",")) | {r["mint"] for r in db.q(
             "select mint from prelist where addr=? union select mint from early where addr=?", (h["addr"], h["addr"]))}
-        st = score(trades, sel_mints) if trades and not (prof or {}).get("faltan") else None
+        if (prof or {}).get("faltan"):
+            # historial incompleto (el RPC no devolvió parte de sus transacciones): NO se guarda como «no pasa» con n=0;
+            # si se guardara, `skip` (found de menos de 14 días) y `leads` (addr not in candidates) la dejarían fuera dos
+            # semanas y `redo` tampoco la recoge (pct_x2 = 0). Las tx ya leídas quedan en caché: el reintento solo pide las que faltan.
+            log(f"{h['addr'][:8]} historial incompleto ({prof['faltan']} tx sin leer de {prof.get('leidas', 0) + prof['faltan']}): se reintenta en la próxima vuelta")
+            continue
+        st = score(trades, sel_mints) if trades else None
         ok = bool(st and st["n"] >= PASS["n"] and st["pct_x2"] > PASS["pct_x2"] and st["best"] >= PASS["best"]
                   and st["robust"] >= PASS["robust"] and st["won"] >= PASS["won"] and st["tokens_day"] <= MAX_TOKENS_DAY
                   and st["lcb"] >= PASS["lcb"] and st["mitad_nueva"] >= PASS["mitad_nueva"]
