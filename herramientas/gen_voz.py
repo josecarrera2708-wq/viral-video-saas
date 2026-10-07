@@ -18,13 +18,18 @@ for i in range(0, len(secciones), 2):
     for p in re.split(r"\n\s*\n", cuerpo.strip()):
         p = " ".join(l.strip() for l in p.strip().splitlines())
         if p: bloques.append((n, p))
+PRONUNCIA = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pronuncia.json"), encoding="utf-8")) if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pronuncia.json")) else {}
+def fonetica(t):
+    """Sustituye nombres extranjeros por su pronunciación (solo para la voz; el guion y los subtítulos no cambian)."""
+    for a, b in PRONUNCIA.items(): t = t.replace(a, b)
+    return t
 def tts(i, t):
     f = f"{TMP}/{i:03d}.mp3"
     if os.path.exists(f): return f
     for _ in range(4):
         r = requests.post("https://api.cartesia.ai/tts/bytes",
             headers={"Cartesia-Version": "2025-04-16"},
-            json={"model_id": MODEL, "transcript": t, "voice": {"mode": "id", "id": VOICE}, "language": "es",
+            json={"model_id": MODEL, "transcript": fonetica(t), "voice": {"mode": "id", "id": VOICE}, "language": "es",
                   "generation_config": {"speed": SPEED},
                   "output_format": {"container": "mp3", "sample_rate": 44100, "bit_rate": 128000}})
         if r.status_code == 200:

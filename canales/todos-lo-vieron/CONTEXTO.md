@@ -36,3 +36,9 @@
   Para regenerar bloques: `regen_bloques.py` con `MODEL=sonic-3.5 SPEEDS=1.0,0.98,1.02`.
 - Guion v3: la intro no desvela el final y va seguida de su vida (Campbell River y el valle). Son 8.526 palabras, unos 46 min, y el usuario aprobó esa duración.
 - Herramientas de voz copiadas de La Ciencia de la Salud a `herramientas/`. Añaden `MODEL`, `PAUSA_SECCION` y generación en paralelo.
+
+## Voz final del vídeo 1 (7-oct-2026)
+- `video/dawson-01/voz-final.mp3` dura 46:25. Se generó con Alejandro y sonic-3.5 (PAUSA 0.4, PAUSA_SECCION 0.6) y después se aceleró con atempo 1.07. Tiempos en `tiempos-final.json`.
+- Whisper: se corrigieron las mayúsculas, que se deletreaban (en el guion las citas van siempre en minúscula), y "Jasper", que sonaba "Hásper" (va a `herramientas/pronuncia.json` como "Yásper").
+- Cierre nuevo: "suscríbete a este canal, porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo".
+- **Norma de mezcla:** la música sigue 3–4 s después de la última palabra con un fundido de salida. No se corta de golpe.

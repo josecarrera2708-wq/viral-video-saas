@@ -88,7 +88,7 @@ En un momento dado, levanta el teléfono, apunta hacia la montaña y hace zoom. 
 
 Pero piensa una cosa. Desde esa distancia, una persona normal no se vería jamás. Para que algo parezca un hombre de pie a tantos kilómetros, tendría que ser del tamaño de un edificio.
 
-Esa misma noche, Andrew sube el video a TikTok y le pone encima un texto en mayúsculas, escrito con prisa: "ES UN GIGANTE".
+Esa misma noche, Andrew sube el video a TikTok y le pone encima un texto en mayúsculas, escrito con prisa: "Es un gigante".
 
 Lo que pasó después no se lo esperaba nadie, y él menos que nadie. Su cuenta pasó de unos cincuenta y seis mil seguidores a más de quinientos mil. Solo ese primer video superó los cuatro millones de reproducciones. Y la mayoría de esa gente se quedó con una misma versión de la historia, una versión que sigue dando vueltas hoy en día, en videos de un minuto y en publicaciones que se copian unas a otras, cada vez con un detalle nuevo y cada vez con menos fuentes.
 
@@ -228,7 +228,7 @@ Si lo piensas bien, en esa conversación no hay nada amenazante. No hay un arma,
 
 ## 10. ME ESTÁN SIGUIENDO
 
-El dieciséis de abril, Andrew sube otro video. Y esta vez, en la miniatura, se lee en letras enormes: "ME ESTÁN ACECHANDO".
+El dieciséis de abril, Andrew sube otro video. Y esta vez, en la miniatura, se lee en letras enormes: "Me están acechando".
 
 Está dentro de su casa. Se acerca a la ventana y mira entre las láminas de la persiana. Fuera hay un auto, y Andrew dice que es el mismo de la otra noche.
 
@@ -300,7 +300,7 @@ Y diez días después, dijo justo lo contrario.
 
 ## 13. LOS DOS ÚLTIMOS VIDEOS
 
-El dieciséis de mayo, Andrew publica un video de nueve segundos. En la miniatura se leen dos palabras: "TENGO MIEDO".
+El dieciséis de mayo, Andrew publica un video de nueve segundos. En la miniatura se leen dos palabras: "Tengo miedo".
 
 Va caminando deprisa por su casa, con muy poca luz, grabándose a sí mismo. Y dice: "Puede que no me vean publicar nunca más. Mis videos no eran falsos."
 
@@ -580,10 +580,10 @@ Este video está dedicado a la memoria de Andrew Dawson.
 
 Esto ha sido Todos Lo Vieron: la historia real detrás del misterio.
 
-Aquí cada semana subimos casos nuevos: historias que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final. Videos virales, misterios de internet, sucesos que dieron la vuelta al mundo, contados completos, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
+Cada semana subimos casos nuevos. Historias que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final, contadas completas, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
 
-Si quieres seguir conociendo la historia real detrás de cada misterio, suscríbete y activa la campanita, así te avisamos cuando subamos el próximo caso.
+Así que, si todavía no lo has hecho, suscríbete a este canal. Porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo. Y activa la campanita, para que no te pierdas el próximo caso.
 
-Y déjame en los comentarios qué caso viral quieres que investiguemos. Los leemos todos.
+Y cuéntame en los comentarios qué misterio quieres que investiguemos. Los leemos todos.
 
 Nos vemos en el próximo caso.
