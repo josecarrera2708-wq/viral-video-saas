@@ -1,13 +1,13 @@
 {
- "generado": "2026-10-06 04:20:10.298386+00:00",
+ "generado": "2026-10-07 04:20:16.392945+00:00",
  "inicio": "2026-10-03",
- "ultimo_dia": "2026-10-05",
+ "ultimo_dia": "2026-10-06",
  "estado": "SOMBRA (no certificadas)",
  "estrategias": {
   "B01 Basis trimestral hasta vencimiento": {
-   "dias": 3,
-   "equity": 1001.5928964174932,
-   "retorno": 0.0015928964174931615,
+   "dias": 4,
+   "equity": 1000.1893113919367,
+   "retorno": 0.00018931139193667512,
    "hist": {
     "sharpe": 1.2826047022359097,
     "cagr": 0.06814981517450391,
@@ -43,14 +43,14 @@
      "px_spot_salida": "nan",
      "px_fut_salida": "nan",
      "motivo": "abierta",
-     "ret": "7.976279444887879e-05"
+     "ret": "-0.0013217017970442724"
     }
    ]
   },
   "B02 Basis trimestral con salida anticipada": {
-   "dias": 3,
-   "equity": 1001.5589967767062,
-   "retorno": 0.001558996776706234,
+   "dias": 4,
+   "equity": 1000.1852825121471,
+   "retorno": 0.00018528251214711133,
    "hist": {
     "sharpe": 1.3231359838815022,
     "cagr": 0.06996515038013063,
@@ -86,14 +86,14 @@
      "px_spot_salida": "nan",
      "px_fut_salida": "nan",
      "motivo": "abierta",
-     "ret": "0.0007477035691119127"
+     "ret": "-0.0006248979451692893"
     }
    ]
   },
   "V01 Prima de volatilidad (venta de varianza 30 d)": {
-   "dias": 3,
-   "equity": 1002.5101737938127,
-   "retorno": 0.0025101737938126867,
+   "dias": 4,
+   "equity": 1004.151007875979,
+   "retorno": 0.004151007875978996,
    "hist": {
     "sharpe": 1.5774660030963739,
     "cagr": 0.09375484884977547,
@@ -102,7 +102,7 @@
     "puertas": "4/5"
    },
    "en_posicion": true,
-   "dvol_ultimo": 36.1
+   "dvol_ultimo": 36.13
   }
  },
  "nota": "Papel en sombra. 1.000 USDT por estrategia. No entran en la cartera. Sin dinero real."

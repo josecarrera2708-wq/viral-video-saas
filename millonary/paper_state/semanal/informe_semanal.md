@@ -1,11 +1,11 @@
-# Informe semanal de Millonary · 2026-10-06
+# Informe semanal de Millonary · 2026-10-07
 
 ## Resumen
 
-- Patrimonio: **1,019.62 USDT** (inicio 999.59) · retorno de la prueba +2.00% · **esta semana +2.00%**
-- Caída máxima de la prueba 1.45% · caída actual 0.00% · exposición actual 0.59×
-- Día 5 de la prueba · 32 velas de 4h procesadas (32 esta semana)
-- Órdenes: 1 en total, 1 esta semana · comisiones 0.29 USDT (0.29 esta semana)
+- Patrimonio: **1,014.26 USDT** (inicio 999.59) · retorno de la prueba +1.47% · **esta semana +1.68%**
+- Caída máxima de la prueba 1.45% · caída actual 0.53% · exposición actual 0.59×
+- Día 6 de la prueba · 38 velas de 4h procesadas (35 esta semana)
+- Órdenes: 1 en total, 0 esta semana · comisiones 0.29 USDT (0.00 esta semana)
 - Registro de entradas · posiciones cerradas 0: **ganan 0 / pierden 0** · abiertas 1
 - Lotes (cada compra) cerrados 0: ganan 0 / pierden 0 · abiertos 1
 
@@ -27,21 +27,21 @@ Certificadas en el examen: 0/15.
 
 | Trader | Retorno hacia delante | Caída | Ops | Posición |
 |---|---|---|---|---|
-| S14 Momentum 90 d | +3.35% | 2.4% | 1 | +1 |
-| S07 SMA 7-25 + filtro 200 (largo) | +2.99% | 2.4% | 1 | +1 |
-| S06 Cruce SMA 7-25 | +2.47% | 2.4% | 2 | +1 |
-| S13 Retroceso a EMA20 | +2.21% | 2.4% | 2 | +1 |
-| S15 RSI14 + EMA200 | +2.08% | 2.4% | 1 | +1 |
-| S10 MACD + EMA200 | +1.99% | 2.4% | 2 | +1 |
+| S14 Momentum 90 d | +2.44% | 2.4% | 1 | +1 |
+| S07 SMA 7-25 + filtro 200 (largo) | +2.08% | 2.4% | 1 | +1 |
+| S06 Cruce SMA 7-25 | +1.56% | 2.4% | 2 | +1 |
+| S13 Retroceso a EMA20 | +1.31% | 2.4% | 2 | +1 |
+| S15 RSI14 + EMA200 | +1.18% | 2.4% | 1 | +1 |
+| S03 Bollinger + RSI (reversión) | +1.18% | 2.6% | 1 | +0 |
+| S10 MACD + EMA200 | +1.09% | 2.4% | 2 | +1 |
 | S05 RSI(2) retroceso (largo) | +0.00% | 0.0% | 0 | +0 |
-| S02 Ichimoku | -0.19% | 2.4% | 1 | +1 |
-| S03 Bollinger + RSI (reversión) | -0.22% | 2.6% | 1 | -1 |
-| S11 Supertrend 10/3 | -1.32% | 4.1% | 2 | +1 |
-| S08 Canal 20 por tercios | -1.37% | 1.7% | 4 | +1 |
-| S01 Parabolic SAR + EMA200 | -1.43% | 2.4% | 2 | +0 |
+| S02 Ichimoku | -1.15% | 3.4% | 2 | +1 |
 | S12 Expansión de volatilidad | -1.81% | 2.4% | 3 | +0 |
-| S04 Keltner ruptura | -2.58% | 2.6% | 1 | +1 |
-| S09 Donchian 20/10 | -2.65% | 5.4% | 2 | +1 |
+| S01 Parabolic SAR + EMA200 | -1.88% | 3.0% | 3 | +1 |
+| S11 Supertrend 10/3 | -2.20% | 4.1% | 2 | +1 |
+| S08 Canal 20 por tercios | -3.27% | 3.6% | 6 | +0 |
+| S09 Donchian 20/10 | -3.51% | 5.4% | 2 | +1 |
+| S04 Keltner ruptura | -4.14% | 4.1% | 2 | +0 |
 
 ## Perfeccionamiento continuo (Laboratorio)
 
