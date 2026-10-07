@@ -4,7 +4,7 @@
  "cola": 4.5,
  "fundido_musica": 5,
  "duck_umbral": 0.05,
- "duck_ratio": 2,
+ "duck_ratio": 2.5,
  "musica": [
   {
    "desde_seccion": 1,
@@ -411,5 +411,7 @@
  "efectos_offset": -7,
  "efectos_offset_intro": -5,
  "fin_intro": 192.55,
- "musica_eq": "highpass=f=50,asplit[a][b];[b]lowpass=f=200,volume=22dB,asoftclip=type=tanh,highpass=f=220,lowpass=f=3000[h];[a][h]amix=inputs=2:normalize=0,equalizer=f=450:width_type=o:width=2:g=6"
+ "musica_eq": "highpass=f=50,asplit[a][b];[b]lowpass=f=200,volume=22dB,asoftclip=type=tanh,highpass=f=220,lowpass=f=3000[h];[a][h]amix=inputs=2:normalize=0,equalizer=f=450:width_type=o:width=2:g=6",
+ "musica_nivelado": "dynaudnorm=f=500:g=41:m=4:p=0.5",
+ "musica_lufs": -18
 }
