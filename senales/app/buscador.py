@@ -38,7 +38,8 @@ MIN_HITS = int(os.environ.get("SENALES_MIN_HITS", 2))        # aciertos mínimos
 MAX_TX_DAY = 300          # más que esto = bot
 SELECT_TX_DAY = 150       # más que esto = compra de todo (gana por volumen, no por elegir bien): se descarta sin medir
 MAX_TOKENS_DAY = 15       # selectiva: como mucho 15 tokens nuevos al día de media
-PASS = {"n": 15, "pct_x2": 40, "best": 15, "robust": 5, "won": 40, "lcb": 0, "mitad_nueva": 0, "dias": 7}
+PASS = {"n": 15, "pct_x2": 40, "best": 15, "robust": 5, "won": 40, "lcb": 0, "mitad_nueva": 0, "dias": 7,
+        "sin_mejor_semana": 0, "ult_21d": 0, "n_21d": 3}
 # corte: ≥15 compras medidas, más del 40% llegan a x2, su mejor estrategia da ≥ +15%, sigue dando ≥ +5% sin su mejor
 # token (que no dependa de un golpe de suerte), gana en ≥40% de los tokens, el límite inferior de la media por
 # remuestreo no pierde (que no sea ruido), la estrategia elegida con su mitad antigua gana en la reciente, ha operado
@@ -619,6 +620,12 @@ def swap_buys(trades, exclude):
     return out
 
 
+def last_own(trades):
+    """Su última operación PROPIA (compra, venta o swap que no pagó otra cuenta). La última firma de la dirección no vale:
+    a las wallets les llegan repartos de comisiones, airdrops y spam firmados por otros."""
+    return max((t["t"] for t in trades if t["side"] in ("buy", "sell", "swap") and not t.get("inferred")), default=0)
+
+
 def score(trades, exclude):
     """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad (en un VPS, ~1 s después
     que ella): entrada un 2% más cara, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
@@ -722,6 +729,17 @@ def score(trades, exclude):
     new = {k: [x for t, x in v2 if t >= cut] for k, v2 in per_t.items()}
     k_old = max(PLANS, key=lambda k: sum(old.get(k) or [0]) / max(1, len(old.get(k) or [])))
     st["mitad_nueva"] = round(100 * (sum(new[k_old]) / len(new[k_old]) - 1)) if new.get(k_old) else -100
+    # ...y que no dependa de UNA racha (la moda de un lanzador durante una semana): sin su mejor semana tiene que seguir
+    # ganando, y también en las últimas 3 semanas (con al menos PASS["n_21d"] tokens: si no, ya no opera o no se puede saber)
+    pt = per_t[st["plan"]]
+    weeks = collections.defaultdict(list)
+    for t, x in pt:
+        weeks[int(t // (7 * 86400))].append(x)
+    best_w = max(weeks, key=lambda w: sum(x - 1 for x in weeks[w])) if len(weeks) > 1 else None
+    rest = [x for w, xs in weeks.items() if w != best_w for x in xs] if best_w is not None else []
+    st["sin_mejor_semana"] = round(100 * (sum(rest) / len(rest) - 1)) if rest else -100
+    rec = [x for t, x in pt if t >= time.time() - 21 * 86400]
+    st["n_21d"], st["ult_21d"] = len(rec), round(100 * (sum(rec) / len(rec) - 1)) if rec else -100
     span = max(1.0, (max(t["t"] for t in trades) - min(t["t"] for t in trades)) / 86400)
     st["tokens_day"] = round(len(first) / span, 1)   # tokens nuevos al día: cuanto menos, más selectiva
     st["muestra"] = used                             # para que verifica.py mida exactamente lo mismo
@@ -840,7 +858,8 @@ def main():
                   and st["robust"] >= PASS["robust"] and st["won"] >= PASS["won"] and st["tokens_day"] <= MAX_TOKENS_DAY
                   and st["lcb"] >= PASS["lcb"] and st["mitad_nueva"] >= PASS["mitad_nueva"]
                   and st["no_medibles"] <= 0.2 * (st["n"] + st["no_medibles"]) and st["raras"] <= 0.2 * st["n"]
-                  and time.time() - (prof or {}).get("last", 0) <= PASS["dias"] * 86400)
+                  and st["sin_mejor_semana"] >= PASS["sin_mejor_semana"] and st["ult_21d"] >= PASS["ult_21d"]
+                  and st["n_21d"] >= PASS["n_21d"] and time.time() - last_own(trades) <= PASS["dias"] * 86400)
         status = "nueva" if ok else "bot" if tx_day > MAX_TX_DAY else "no selectiva" if tx_day > SELECT_TX_DAY else "no pasa"
         st = st or {"n": 0, "pct_x2": 0, "avg_xmax": 0, "ladder": 0, "all_x2": 0, "copy": 0, "copy_sl30": 0, "copy_sl50": 0,
                     "x2": 0, "x2_sl30": 0, "x2_sl50": 0, "plan": "", "best": 0, "robust": 0, "won": 0, "tokens_day": 0}
@@ -850,7 +869,8 @@ def main():
               st["ladder"], st["all_x2"], st["avg_xmax"], h["n"],
               json.dumps({"perfil": prof, "copia": {k: st.get(k) for k in ("copy", "copy_sl30", "copy_sl50", "x2", "x2_sl30", "x2_sl50", "plan", "best",
                                                             "robust", "robust3", "won", "tokens_day", "lcb", "mitad_nueva", "no_medibles",
-                                                            "raras", "no_copiables", "min_x2")},
+                                                            "raras", "no_copiables", "min_x2", "sin_mejor_semana",
+                                                            "ult_21d", "n_21d")},
                           "muestra": st.get("muestra"), "v": 5}), status))
         log(f"{h['addr'][:8]} aciertos {h['n']} -> {status} {({k: v for k, v in st.items() if k != 'muestra'})}")
         if ok:
