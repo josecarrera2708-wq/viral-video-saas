@@ -48,3 +48,9 @@
 - **Sora ya no existe:** OpenAI cerró la API de vídeo el 24-sep-2026 y `/v1/videos` devuelve 404. No hubo cobro.
 - vidIQ tiene `generate_video` (Veo, Kling, Seedance, Minimax), pero solo quedan 10 créditos (oct-2026), que no llegan para un clip.
 - Alternativa gratis: "clips" locales con ffmpeg (acercamiento, temblor, grano y viñeta). Prueba en `estilos/clip-local-prueba.mp4`.
+
+## Mezcla de audio (7-oct-2026)
+- Músicas elegidas por el usuario: 01 Tension Rising, 02 Dark Slow Drone y 09 Street Museum. Se reparten por escenas en `video/dawson-01/mezcla-plan.json`.
+- Herramienta: `herramientas/mezcla_v2.py <plan> <salida>`. Hace ducking con sidechain, coloca 45 efectos anclados a frases y deja 4,5 s de cola de música con fundido.
+- Niveles: la voz va a -16 LUFS antes del máster. La música queda unos 14 LU por debajo en las pausas y unos 18–20 bajo la voz (público de más de 40). Máster a -14 LUFS con TP -1,5 (medido: -13,6 LUFS, LRA 4,5).
+- Licencias en `video/dawson-01/LICENCIAS-AUDIO.md`.

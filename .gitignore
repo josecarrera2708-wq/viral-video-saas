@@ -109,3 +109,5 @@ video/*/voz.mp3
 # Candidatas de música (se descargan de nuevo con candidatas.json; solo se suben las elegidas)
 video/*/musica/*.mp3
 video/*/musica/escuchar/
+video/*/audio-mezcla.mp3
+!video/*/musica/0*-*.mp3
