@@ -261,5 +261,8 @@ Prerregistro: `config/busqueda_v11_prerregistrada.md` (commit ee4aeed, ANTES de 
 - Pruebas nº 2075-2086: 3 configuraciones (2R, 3R, 2R + protección) × 4 modelos (logística, boosting, bosque, media).
 - Eventos: todas las señales ya programadas (mesa 1 h, mesa 15 min, patrones v7, setups v11); el modelo decide cuáles tomar (EV ≥ +0,05 R).
 - Kelly/4 entre 0,25 % y 1 %; tope de apalancamiento 10x (5-15 min), 5x (1 h), 3x (≥2 h).
-- Protocolo: `config/busqueda_v12_prerregistrada.md`. Resultados: pendientes.
+- Protocolo: `config/busqueda_v12_prerregistrada.md`. Resultados (`reports/busqueda_v12_resultados.md`): **0 de 3 configuraciones pasan; no hay papel.**
+- Tomar todas las señales (10.704 fuera de muestra, 2022-10→2026-09) pierde: 2R −0,22 R (acierto 36 %), 3R −0,23 R, 2R + protección −0,09 R (acierto 43 %).
+- El filtro sí ordena: por deciles de probabilidad, el peor 10 % pierde −0,32 R y el mejor 10 % −0,06 R (2R). AUC 0,55-0,65. Pero ni el mejor 10 % gana tras costes, así que el filtro casi nunca da permiso (1-9 operaciones al año).
+- G0 marcado como fallo: con etiquetas barajadas el AUC es 0,502 (sin fuga); falla la segunda condición por las pocas operaciones tomadas (ruido), no por una fuga.
 - Total acumulado del proyecto: 2.086 pruebas.
