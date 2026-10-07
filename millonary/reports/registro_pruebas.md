@@ -269,5 +269,7 @@ Prerregistro: `config/busqueda_v11_prerregistrada.md` (commit ee4aeed, ANTES de 
 
 ## v13 · swing de 1 a 3 días con filtro estadístico — prerregistro 2026-10-07
 - Pruebas nº 2087-2098: 3 configuraciones (2R, 3R, 2R + protección) × 4 modelos. Stop ≥2 % (2·ATR de 4 h), barrera de 72 h, coste ≤0,07 R.
-- Protocolo: `config/busqueda_v13_prerregistrada.md`. Resultados: pendientes.
+- Protocolo: `config/busqueda_v13_prerregistrada.md`. Resultados (`reports/busqueda_v13_resultados.md`): **0 de 3 pasan; no hay papel.** G0 OK (AUC barajado 0,484).
+- Los costes dejan de ser el problema: tomar todas las señales (2.250 fuera de muestra) queda casi en empate: 2R −0,03 R (acierto 43 %), 3R −0,02 R, 2R + protección −0,01 R (acierto 63 %).
+- Pero el filtro no predice nada en swing (AUC 0,50-0,52): toma el 0-5 % de las señales y su resultado es ruido.
 - Total acumulado del proyecto: 2.098 pruebas.
