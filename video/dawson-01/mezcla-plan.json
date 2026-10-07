@@ -3,64 +3,64 @@
  "tiempos": "tiempos-final.json",
  "cola": 4.5,
  "fundido_musica": 5,
- "duck_umbral": 0.025,
- "duck_ratio": 4,
+ "duck_umbral": 0.05,
+ "duck_ratio": 2.5,
  "musica": [
   {
    "desde_seccion": 1,
    "archivo": "musica/01-tension-rising.mp3",
-   "gain": -7
+   "gain": -1
   },
   {
    "desde_seccion": 2,
    "archivo": "musica/09-street-museum.mp3",
-   "gain": -8
+   "gain": -2
   },
   {
    "desde_seccion": 5,
    "archivo": "musica/02-dark-slow-drone.mp3",
-   "gain": -6
+   "gain": 0
   },
   {
    "desde_seccion": 9,
    "archivo": "musica/01-tension-rising.mp3",
-   "gain": -7,
+   "gain": -1,
    "inicio": 60
   },
   {
    "desde_seccion": 14,
    "archivo": "musica/02-dark-slow-drone.mp3",
-   "gain": -7,
+   "gain": -1,
    "inicio": 200
   },
   {
    "desde_seccion": 15,
    "archivo": "musica/09-street-museum.mp3",
-   "gain": -8,
+   "gain": -2,
    "inicio": 80
   },
   {
    "desde_seccion": 18,
    "archivo": "musica/02-dark-slow-drone.mp3",
-   "gain": -6,
+   "gain": 0,
    "inicio": 400
   },
   {
    "desde_seccion": 21,
    "archivo": "musica/09-street-museum.mp3",
-   "gain": -8,
+   "gain": -2,
    "inicio": 150
   },
   {
    "desde_seccion": 22,
    "archivo": "musica/02-dark-slow-drone.mp3",
-   "gain": -7,
+   "gain": -1,
    "inicio": 550
   },
   {
    "desde_seccion": 24,
    "archivo": "musica/01-tension-rising.mp3",
-   "gain": -7,
+   "gain": -1,
    "inicio": 180
   }
  ],
@@ -68,17 +68,18 @@
   {
    "frase": "un hombre sube a TikTok",
    "archivo": "efectos/interior_auto.mp3",
-   "gain": -12,
-   "dur": 9,
-   "fade_in": 1.5,
-   "fade_out": 3
+   "gain": -18,
+   "dur": 10,
+   "fade_in": 4,
+   "fade_out": 4
   },
   {
    "frase": "Fue lo último que publicó.",
    "archivo": "efectos/impacto.mp3",
-   "gain": -9,
+   "gain": -11,
    "dur": 4,
-   "desfase": 1.2
+   "desfase": 1.2,
+   "fade_in": 0.3
   },
   {
    "frase": "un hombre le cortó el paso",
@@ -120,10 +121,11 @@
   {
    "frase": "Esta es la historia de Andrew Dawson",
    "archivo": "efectos/braam.mp3",
-   "gain": -8,
+   "gain": -10,
    "dur": 7,
    "desfase": -0.3,
-   "fade_out": 3
+   "fade_out": 3,
+   "fade_in": 0.3
   },
   {
    "frase": "El cuatro de noviembre de mil novecientos ochenta y siete",
@@ -164,9 +166,10 @@
   {
    "frase": "Es un gigante",
    "archivo": "efectos/impacto.mp3",
-   "gain": -9,
+   "gain": -11,
    "dur": 4,
-   "desfase": 0.8
+   "desfase": 0.8,
+   "fade_in": 0.3
   },
   {
    "frase": "Está grabado desde dentro de un vehículo",
@@ -187,9 +190,10 @@
   {
    "frase": "y la figura ya no está",
    "archivo": "efectos/impacto.mp3",
-   "gain": -12,
+   "gain": -14,
    "dur": 3,
-   "desfase": 0.6
+   "desfase": 0.6,
+   "fade_in": 0.3
   },
   {
    "frase": "a mitad de camino le paró un hombre",
@@ -200,10 +204,11 @@
   {
    "frase": "Cree que es un agente de la CIA",
    "archivo": "efectos/braam.mp3",
-   "gain": -12,
+   "gain": -14,
    "dur": 5,
    "desfase": 1.5,
-   "fade_out": 2.5
+   "fade_out": 2.5,
+   "fade_in": 0.3
   },
   {
    "frase": "se sube a la camioneta y arranca el motor",
@@ -244,9 +249,10 @@
   {
    "frase": "La carretera está cerrada. Date la vuelta.",
    "archivo": "efectos/impacto.mp3",
-   "gain": -13,
+   "gain": -15,
    "dur": 3,
-   "desfase": 2
+   "desfase": 2,
+   "fade_in": 0.3
   },
   {
    "frase": "mira entre las láminas de la persiana",
@@ -271,10 +277,11 @@
   {
    "frase": "fue a una oficina oficial y lo declaró bajo juramento",
    "archivo": "efectos/braam.mp3",
-   "gain": -12,
+   "gain": -14,
    "dur": 5,
    "desfase": 2,
-   "fade_out": 2.5
+   "fade_out": 2.5,
+   "fade_in": 0.3
   },
   {
    "frase": "Diez días, quince, veinte",
@@ -287,9 +294,10 @@
   {
    "frase": "deja a todo el mundo helado",
    "archivo": "efectos/impacto.mp3",
-   "gain": -10,
+   "gain": -12,
    "dur": 4,
-   "desfase": 1.5
+   "desfase": 1.5,
+   "fade_in": 0.3
   },
   {
    "frase": "Eso tendría que haber sido el final",
@@ -307,10 +315,11 @@
   {
    "frase": "La gente lo entendió así",
    "archivo": "efectos/braam.mp3",
-   "gain": -10,
+   "gain": -12,
    "dur": 6,
    "fade_out": 3,
-   "desfase": -1.5
+   "desfase": -1.5,
+   "fade_in": 0.3
   },
   {
    "frase": "Y después, silencio",
@@ -323,17 +332,19 @@
   {
    "frase": "Y es justo donde empieza lo que nadie te contó",
    "archivo": "efectos/braam.mp3",
-   "gain": -9,
+   "gain": -11,
    "dur": 7,
    "desfase": 1.5,
-   "fade_out": 3
+   "fade_out": 3,
+   "fade_in": 0.3
   },
   {
    "frase": "Y entonces, según su relato, la criatura se pone de pie",
    "archivo": "efectos/impacto.mp3",
-   "gain": -11,
+   "gain": -13,
    "dur": 4,
-   "desfase": 2.2
+   "desfase": 2.2,
+   "fade_in": 0.3
   },
   {
    "frase": "con una cámara de cine de dieciséis milímetros",
@@ -361,8 +372,9 @@
   {
    "frase": "Pues una torre de telecomunicaciones",
    "archivo": "efectos/impacto.mp3",
-   "gain": -12,
-   "dur": 4
+   "gain": -14,
+   "dur": 4,
+   "fade_in": 0.3
   },
   {
    "frase": "Vamos con los helicópteros",
@@ -375,8 +387,9 @@
   {
    "frase": "Es la estación de arriba del teleférico de Jasper",
    "archivo": "efectos/impacto.mp3",
-   "gain": -11,
-   "dur": 4
+   "gain": -13,
+   "dur": 4,
+   "fade_in": 0.3
   },
   {
    "frase": "Es la misma fecha. Y no significa absolutamente nada",
@@ -388,10 +401,14 @@
   {
    "frase": "Todos vieron el gigante. Muy pocos vieron a Andrew.",
    "archivo": "efectos/braam.mp3",
-   "gain": -13,
+   "gain": -15,
    "dur": 6,
    "desfase": -0.5,
-   "fade_out": 3
+   "fade_out": 3,
+   "fade_in": 0.3
   }
- ]
+ ],
+ "efectos_offset": -7,
+ "efectos_offset_intro": -5,
+ "fin_intro": 192.55
 }
