@@ -31,9 +31,9 @@ def bars(b5: pd.DataFrame, tf: str) -> pd.DataFrame:
 
 
 def metrics(index: pd.DatetimeIndex, tf: str) -> pd.DataFrame:
-    """Métricas de derivados de Binance (OI, ratios) conocidas AL CIERRE de cada vela: el dato con sello t se usa desde t + 5 min."""
+    """Métricas de derivados de Binance (OI, ratios) conocidas AL CIERRE de cada vela: el dato con sello t se usa desde t + 10 min (desde 2024-03-04 el sello marca el INICIO de su ventana de 5 min)."""
     m = pd.read_parquet(RAW / "perp_BTCUSDT_metrics_5m.parquet").sort_values("time")
-    m["known"] = (m["time"] + pd.Timedelta("5min")).astype("datetime64[ns, UTC]")
+    m["known"] = (m["time"] + pd.Timedelta("10min")).astype("datetime64[ns, UTC]")
     close_t = pd.DataFrame({"t": (index + pd.Timedelta(tf.replace("m", "min"))).astype("datetime64[ns, UTC]")})
     out = pd.merge_asof(close_t, m.drop(columns="time").rename(columns={"known": "t"}), on="t", direction="backward",
                         tolerance=pd.Timedelta("30min"))
