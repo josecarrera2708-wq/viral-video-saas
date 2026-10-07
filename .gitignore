@@ -106,3 +106,5 @@ investigacion/canales/cache/
 
 # Voz provisional (se guarda solo la versión final como voz-final.mp3)
 video/*/voz.mp3
+# Candidatas de música (se descargan de nuevo con candidatas.json; solo se suben las elegidas)
+video/*/musica/*.mp3
