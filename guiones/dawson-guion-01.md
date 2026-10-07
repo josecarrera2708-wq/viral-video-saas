@@ -6,14 +6,14 @@ Números y años en letra. Voz: Alejandro (Cartesia), velocidad 1.0.
 
 Objetivo: 41–44 min de voz. La muestra fluida de Alejandro dio ≈187 palabras/min. **Medir con el audio real antes de montar.**
 
-Estructura: intro (1), apertura documental con lugar y fecha (2), cinco actos (3–10, 11–14, 15–17, 18–20, 21–23) y cierre (24).
+Estructura: intro sin desvelar el final (1), su vida en Campbell River y en el valle (2–3), cinco actos (4–10, 11–14, 15–17, 18–20, 21–23) y cierre (24).
 
 Zonas de retención (bucles abiertos que se cierran más tarde):
 1. El último video, "eso no estaba ahí antes" (se abre en la 1 y se cierra en la 20).
-2. Lo que hay de verdad en la cima (se abre en la 6 y se cierra en la 18).
+2. Lo que hay de verdad en la cima (se abre en la 1 y la 6 y se cierra en la 18).
 3. La luz del 13 de abril (se abre en la 9 y se cierra en la 19).
 4. El hombre que juró ante la ley haber visto algo en 1955 (se abre en la 10 y se cierra en la 15).
-5. Si de verdad murió y por qué (se abre en la 3 y la 14 y se cierra en la 22).
+5. Si de verdad murió y por qué (se abre en la 1, la 4 y la 14 y se cierra en la 22).
 6. Falso final en la 14 ("aquí terminan casi todos los videos").
 
 Normas: solo hechos documentados; lo que no se sabe se dice que no se sabe. Andrew fue una persona real que murió: nada de burlas, nada de detalles sobre su muerte que su familia no hizo públicos.
@@ -22,33 +22,67 @@ Normas: solo hechos documentados; lo que no se sabe se dice que no se sabe. Andr
 
 ## 1. INTRO
 
-Este es el último video que subió Andrew Dawson. Dura diecinueve segundos.
+El diecisiete de mayo de dos mil veintidós, un hombre sube a TikTok un video de diecinueve segundos. Se le ve dentro de su camioneta, apuntando con el teléfono a la cima de una montaña donde hay un edificio. Y lo único que dice, casi en voz baja, es esto: "¿Qué es eso? Eso no estaba ahí antes."
 
-Se le ve dentro de su camioneta, apuntando con el teléfono a la cima de una montaña, donde hay un edificio. Y lo único que dice, casi en voz baja, es esto: "¿Qué es eso? Eso no estaba ahí antes."
+Fue lo último que publicó.
 
-Cinco semanas antes, este mismo hombre había grabado algo de pie en lo alto de una montaña de Canadá. Algo que, visto desde donde él estaba, tenía que medir lo mismo que un edificio.
+Cinco semanas antes, ese mismo hombre había grabado algo de pie en lo alto de una montaña de Canadá, algo que, visto desde donde él estaba, tenía que medir lo mismo que un edificio. Y desde ese día, todo a su alrededor empezó a volverse muy raro.
 
-Lo que vino después lo vieron millones de personas. Un hombre que le corta el paso en un camino de noche, dos helicópteros que parecen llevarse algo, una luz quieta sobre los picos, y un auto parado delante de su casa.
+Una noche, un hombre le cortó el paso en un camino de montaña y le pidió que se diera la vuelta. Al día siguiente, dos helicópteros pasaron por encima de él con algo colgando de un cable. Antes del amanecer, una luz se quedó quieta, flotando sobre los picos. Y una tarde, al asomarse a la ventana, vio un auto parado delante de su casa, que arrancó en cuanto él salió a la calle.
 
-Luego Andrew dijo que todo había sido mentira. Y diez días más tarde, asustado, dijo que no, que era verdad.
+Millones de personas siguieron cada uno de esos videos, casi en directo. Y seis semanas después del último, ese hombre estaba muerto.
 
-Seis semanas después de ese último video, Andrew Dawson estaba muerto.
+¿Qué había de verdad en la cima de esa montaña? ¿Quién era el hombre del camino? ¿Y qué le pasó realmente?
 
-Casi todo el mundo conoce el principio de esta historia. Muy poca gente sabe cómo termina de verdad. Así que hoy vamos a subir juntos a esa montaña, a ver qué hay allá arriba.
+Esta es la historia de Andrew Dawson. Y esto es Todos Lo Vieron, donde te contamos lo que nadie te contó.
 
 ---
 
-## 2. APERTURA
+## 2. UN CHICO DE LA ISLA
 
-Imagínate un valle muy estrecho en el oeste de Canadá, en la provincia de Columbia Británica, encajado entre tres cordilleras: las Rocosas, las Monashee y las Cariboo.
+El cuatro de noviembre de mil novecientos ochenta y siete nace un niño en la costa oeste de Canadá, en la provincia de Columbia Británica. Le ponen Andrew Ryan Watchorn Dawson, aunque para su familia y sus amigos siempre fue, simplemente, Andy.
 
-Allí abajo, a setecientos noventa y dos metros sobre el nivel del mar, hay un pueblo de apenas mil habitantes. Tiene su estación de tren, una gasolinera, un par de moteles, y una sola carretera que lo cruza de norte a sur, la autopista Yellowhead. El pueblo se llama Valemount.
+La ciudad a la que pertenecía, y donde su familia lo despidió años más tarde, se llama Campbell River. Está en la costa este de la isla de Vancouver, justo donde empieza un estrecho de corrientes muy fuertes que separa la isla del continente.
 
-Si sales de Valemount hacia el sur, enseguida ves cómo una montaña se levanta de golpe a tu izquierda. Su cima está a dos mil seiscientos cincuenta y un metros, y en invierno, allá arriba, el viento te hace sentir más de treinta grados bajo cero. Casi nadie sube, porque en realidad no hay ningún motivo para subir. Esa montaña se llama Canoe Mountain.
+Campbell River es una ciudad de unos treinta y cinco mil habitantes que se presenta a sí misma como la capital mundial del salmón. Por delante tiene el mar, con sus barcos de pesca y sus muelles. Y por detrás, el bosque: kilómetros y kilómetros de árboles enormes que suben hacia las montañas del parque Strathcona. Es un lugar de inviernos lluviosos, de pesca, de madera, y de gente acostumbrada a trabajar al aire libre.
 
-Ahora vamos al nueve de abril de dos mil veintidós. Por esa autopista baja una camioneta de trabajo, y en el asiento del copiloto va un hombre de treinta y cuatro años que se llama Andrew Dawson.
+De la infancia de Andy se sabe muy poco. Su familia nunca la hizo pública, y está en su derecho. Pero sí sabemos cómo era el mundo en el que creció.
 
-En un momento dado, Andrew levanta el teléfono, apunta hacia la montaña y hace zoom. Y en la cima, recortada contra el cielo, aparece una figura que parece estar de pie.
+Andy pertenece a una generación muy particular. Fue niño en los años noventa, cuando internet todavía era algo raro que sonaba a módem. Fue adolescente cuando las computadoras llegaron a todas las casas. Y ya era adulto cuando el teléfono inteligente nos puso una cámara en el bolsillo a todos. Es la generación que vio nacer las redes sociales, y que aprendió, casi sin darse cuenta, que cualquier persona con un celular podía contarle algo al mundo entero.
+
+En la zona donde vivía, además, el trabajo nunca fue fácil. Durante casi un siglo, la isla vivió de talar árboles y de pescar. Y en dos mil nueve cerró la gran fábrica de celulosa de la zona, que durante décadas había sido una de las que más empleo daba. Para muchos hombres de la isla, eso significó una cosa: si querías un buen sueldo, tenías que irte a buscarlo lejos de casa.
+
+Y eso fue exactamente lo que hizo Andy.
+
+---
+
+## 3. LA VIDA EN EL VALLE
+
+Ya de adulto, Andrew tenía pareja y tenía un hijo. Y en la primavera de dos mil veintidós, según varias fuentes, estaba trabajando a unos setecientos kilómetros de casa, al otro lado de la provincia, en un valle muy estrecho encajado entre tres cordilleras: las Rocosas, las Monashee y las Cariboo.
+
+En el fondo de ese valle, a setecientos noventa y dos metros sobre el nivel del mar, hay un pueblo de apenas mil habitantes. Tiene su estación de tren, una gasolinera, un par de moteles, y una sola carretera que lo cruza de norte a sur, la autopista Yellowhead. El pueblo se llama Valemount.
+
+El nombre se lo pusieron en mil novecientos veintisiete a una estación de tren, juntando dos palabras inglesas, "vale", que es valle, y "mount", que es monte. Durante décadas vivió de la madera, hasta que su aserradero también cerró, en dos mil seis. Desde entonces vive sobre todo del turismo: nieve en invierno, montañas en verano, y gente que pasa de camino al parque nacional de Jasper.
+
+Pero en dos mil veintidós, en Valemount estaba pasando algo muy distinto. Por ese valle se estaba construyendo la ampliación de un oleoducto enorme, el Trans Mountain, una tubería que cruza las montañas para llevar petróleo desde Alberta hasta la costa del Pacífico. Y para construirla había llegado un auténtico ejército de trabajadores.
+
+A finales de enero de ese año, la prensa local contaba más de dos mil trabajadores en la zona. Imagínate lo que es eso para un pueblo de mil habitantes: de repente, hay el doble de gente que no es de allí. Había un campamento con sitio para seiscientos hombres, camiones a todas horas, maquinaria pesada en los caminos forestales, controles de seguridad, carreteras cortadas por las obras… y helicópteros.
+
+Acuérdate de ese detalle, el de los helicópteros, porque más adelante va a ser importante.
+
+Andrew era uno de esos hombres que habían llegado de fuera para trabajar en la obra. Su vida allí se parecía a la de muchos otros: turnos largos, la camioneta de trabajo, y la autopista Yellowhead de ida y vuelta, día tras día, con las mismas montañas al lado de la carretera. En sus ratos libres tenía una cuenta de TikTok, con el nombre de usuario "andykapt", donde subía videos cortos, como hacen millones de personas.
+
+Una de esas montañas que veía todos los días desde la carretera, al sur del pueblo, se levanta de golpe sobre el valle. Su cima está a dos mil seiscientos cincuenta y un metros, y en invierno, allá arriba, el viento te hace sentir más de treinta grados bajo cero. Casi nadie sube, porque en realidad no hay ningún motivo para subir. Esa montaña se llama Canoe Mountain.
+
+Andrew seguramente había pasado por delante de ella decenas de veces sin fijarse. Hasta que un día, se fijó.
+
+---
+
+## 4. NUEVE DE ABRIL
+
+Es el nueve de abril de dos mil veintidós. Por la autopista baja una camioneta de trabajo, y Andrew va sentado en el asiento del copiloto.
+
+En un momento dado, levanta el teléfono, apunta hacia la montaña y hace zoom. Y en la cima, recortada contra el cielo, aparece una figura que parece estar de pie.
 
 "Creo que es una persona", le dice al que conduce. "Hay alguien ahí parado."
 
@@ -56,51 +90,15 @@ Pero piensa una cosa. Desde esa distancia, una persona normal no se vería jamá
 
 Esa misma noche, Andrew sube el video a TikTok y le pone encima un texto en mayúsculas, escrito con prisa: "ES UN GIGANTE".
 
-Lo que pasó en las cinco semanas siguientes convirtió ese video en una de las historias más compartidas de internet. Y la historia terminó en un periódico pequeño de la isla de Vancouver, en la página de los obituarios.
+Lo que pasó después no se lo esperaba nadie, y él menos que nadie. Su cuenta pasó de unos cincuenta y seis mil seguidores a más de quinientos mil. Solo ese primer video superó los cuatro millones de reproducciones. Y la mayoría de esa gente se quedó con una misma versión de la historia, una versión que sigue dando vueltas hoy en día, en videos de un minuto y en publicaciones que se copian unas a otras, cada vez con un detalle nuevo y cada vez con menos fuentes.
 
----
-
-## 3. TODOS LO VIERON
-
-Para que te hagas una idea de lo que fue esto, la cuenta de Andrew pasó de unos cincuenta y seis mil seguidores a más de quinientos mil. Solo el primer video superó los cuatro millones de reproducciones.
-
-Y la mayoría de esa gente se quedó con la misma versión: que un hombre grabó a un gigante, que el gobierno empezó a perseguirlo, y que después murió.
-
-Esa versión sigue dando vueltas hoy en día, en videos de un minuto y en publicaciones que se copian unas a otras. Cada vez que alguien la cuenta, le añade un detalle nuevo, y cada vez tiene menos fuentes.
-
-Esto es Todos Lo Vieron, el canal donde tomamos los casos que todo el mundo vio y te contamos lo que nadie te contó.
-
-Y en este caso vamos a hacer algo que casi nadie se tomó la molestia de hacer. Vamos a ir video por video, en orden y con las fechas reales. Vamos a mirar qué hay de verdad en la cima de esa montaña, y a buscar ese edificio que, según Andrew, "no estaba ahí antes". También te voy a contar por qué, a solo veinte kilómetros de ese lugar, hace setenta años, un hombre fue a una oficina oficial a declarar bajo juramento algo que había visto en el bosque.
+Por eso aquí vamos a hacer algo que casi nadie se tomó la molestia de hacer. Vamos a ir video por video, en orden y con las fechas reales. Vamos a mirar qué hay de verdad en la cima de esa montaña, y a buscar ese edificio que, según Andrew, "no estaba ahí antes". Te voy a contar también por qué, a solo veinte kilómetros de ese lugar, hace setenta años, otro hombre fue a una oficina oficial a declarar bajo juramento algo que había visto en el bosque.
 
 Y al final vamos a escuchar a la persona que mejor conocía a Andrew. Porque ella contó cómo terminó todo esto, y casi nadie quiso escucharla.
 
-Pero empecemos por el lugar, porque en la primavera de dos mil veintidós Valemount no era, para nada, un pueblo tranquilo.
-
 ---
 
-## 4. EL PUEBLO QUE SE LLENÓ DE DESCONOCIDOS
-
-Para entender lo que vio Andrew, primero tienes que entender dónde estaba.
-
-Valemount nació alrededor del ferrocarril. El nombre se lo pusieron en mil novecientos veintisiete a una estación de tren, juntando dos palabras inglesas, "vale", que es valle, y "mount", que es monte. Durante décadas el pueblo vivió de la madera, hasta que el aserradero cerró en dos mil seis. Desde entonces vive sobre todo del turismo: nieve en invierno, montañas en verano, y gente que pasa de camino al parque nacional de Jasper.
-
-Pero en dos mil veintidós estaba pasando algo muy distinto. Por ese valle se estaba construyendo la ampliación de un oleoducto enorme, el Trans Mountain, una tubería que cruza las montañas para llevar petróleo desde Alberta hasta la costa del Pacífico. Y para construirla llegó un auténtico ejército de trabajadores.
-
-A finales de enero de ese año, la prensa local contaba más de dos mil trabajadores en la zona. Imagínate lo que es eso para un pueblo de mil habitantes: de repente, hay el doble de gente que no es de allí. Había un campamento con sitio para seiscientos hombres, camiones a todas horas, maquinaria pesada en los caminos forestales, controles de seguridad, carreteras cortadas por las obras… y helicópteros.
-
-Acuérdate de ese detalle, el de los helicópteros, porque más adelante va a ser importante.
-
-Andrew Dawson era uno de esos hombres de fuera. Venía de Campbell River, una ciudad de la costa este de la isla de Vancouver, que se presenta a sí misma como la capital mundial del salmón. Una ciudad de pescadores y de aserraderos, a unos setecientos kilómetros de Valemount, al otro lado de la provincia.
-
-Según varias fuentes, Andrew estaba allí trabajando en la obra del oleoducto, como tantos otros, lejos de casa, con turnos largos, en un pueblo donde apenas conocía a nadie.
-
-Tenía pareja y tenía un hijo. Y tenía también una cuenta de TikTok, con el nombre de usuario "andykapt", donde subía videos cortos, como hacen millones de personas.
-
-Hasta el nueve de abril, a nadie le importaba nada de eso.
-
----
-
-## 5. EL PRIMER VÍDEO
+## 5. EL PRIMER VIDEO
 
 Vamos a mirar ese primer video con calma, porque todo lo demás sale de aquí.
 
@@ -192,7 +190,7 @@ Andrew promete que va a volver. Y vuelve a la mañana siguiente, muy temprano.
 
 ---
 
-## 9. EL DÍA DE LOS CUATRO VÍDEOS
+## 9. EL DÍA DE LOS CUATRO VIDEOS
 
 El trece de abril de dos mil veintidós es el día más intenso de toda esta historia. Ese día, Andrew publica cuatro videos.
 
@@ -300,7 +298,7 @@ Y diez días después, dijo justo lo contrario.
 
 ---
 
-## 13. LOS DOS ÚLTIMOS VÍDEOS
+## 13. LOS DOS ÚLTIMOS VIDEOS
 
 El dieciséis de mayo, Andrew publica un video de nueve segundos. En la miniatura se leen dos palabras: "TENGO MIEDO".
 
