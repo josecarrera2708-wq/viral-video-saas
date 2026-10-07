@@ -151,17 +151,19 @@ def youtube(q, pais):
 VACIAS = set('el la los las de del y o a en un una por que qué como cómo es se su sus lo al para con the of a an to in is was why how what did do does who and on for if'.split())
 
 
-def relevante(q, titulo):
+def relevante(q, titulo, umbral=0.6):
     pq = [w for w in re.findall(r'\w+', norm(q)) if w not in VACIAS and len(w) > 2]
     if not pq:
         return False
     pt = set(re.findall(r'\w+', norm(titulo)))
     acierto = sum(1 for w in pq if w in pt or any(t.startswith(w[:5]) for t in pt if len(w) > 5))
-    return acierto / len(pq) >= 0.6
+    return acierto / len(pq) >= umbral
 
 
-def oferta(max_consultas=1200):
+def oferta(max_consultas=1200, idioma=None):
     dem = json.load(open(os.path.join(OUT, 'demanda.json')))
+    if idioma:  # el español domina la demanda (5 mercados): el inglés se mira aparte
+        dem = [d for d in dem if d['idioma'] == idioma]
     ruta = os.path.join(OUT, 'oferta.json')
     hecho = json.load(open(ruta)) if os.path.exists(ruta) else {}
     pend = [d for d in dem[:max_consultas] if d['consulta'] not in hecho]
@@ -187,6 +189,11 @@ def oferta(max_consultas=1200):
     json.dump(hecho, open(ruta, 'w'), ensure_ascii=False)
 
 
+OBRA = re.compile(r'(?i)video oficial|official (music )?video|lyric|letra|visualizer|official audio|\baudio\b|'
+                  r'tr[aá]iler|karaoke|en vivo|live|canciones infantiles|para niños|kids|\(feat|ft\.')
+MIO = re.compile(r'\b(mi|my|me|mis)\b')
+
+
 def informe():
     dem = {d['consulta']: d for d in json.load(open(os.path.join(OUT, 'demanda.json')))}
     of = json.load(open(os.path.join(OUT, 'oferta.json')))
@@ -194,6 +201,13 @@ def informe():
     for q, vids in of.items():
         d = dem.get(q)
         if not d:
+            continue
+        top5 = ' '.join(v['titulo'] for v in vids[:5])
+        if len(OBRA.findall(top5)) >= 2 or MIO.search(norm(q)):
+            continue  # canción, película, tráiler o problema técnico personal: no es un tema de vídeo largo
+        # cubierto: un vídeo largo, reciente y con vistas que trata el tema (umbral flojo para no inventar huecos)
+        if any(v['min'] >= 8 and v['dias'] is not None and v['dias'] <= 730 and v['vistas'] >= 50000
+               and relevante(q, v['titulo'], 0.4) for v in vids):
             continue
         rel = [v for v in vids if relevante(q, v['titulo'])]
         largos = [v for v in rel if v['min'] >= 8]
@@ -226,4 +240,7 @@ def informe():
 
 
 if __name__ == '__main__':
-    {'expandir': expandir, 'oferta': oferta, 'informe': informe}[sys.argv[1]]()
+    if sys.argv[1] == 'oferta' and len(sys.argv) > 2:
+        oferta(int(sys.argv[3]) if len(sys.argv) > 3 else 400, sys.argv[2])
+    else:
+        {'expandir': expandir, 'oferta': oferta, 'informe': informe}[sys.argv[1]]()
