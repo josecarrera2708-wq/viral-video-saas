@@ -23,6 +23,14 @@ def run(args): subprocess.run(["ffmpeg", "-v", "error", "-y"] + args, check=True
 # 1. Lecho musical: un tramo por bloque de secciones, en bucle, con fundidos de entrada y salida que se solapan.
 XF = P.get("fundido_musica", 4.0)
 tramos = P["musica"]
+# Ecualización para altavoces pequeños (móvil/portátil): se aplica una vez por pista y se mide después
+_eq = {}
+for m in tramos:
+    a = ruta(m["archivo"])
+    if a not in _eq:
+        _eq[a] = f"{tmp}/eq{len(_eq)}.wav"
+        run(["-i", a, "-af", P.get("musica_eq", "anull"), "-ar", "44100", _eq[a]])
+    m["archivo"] = _eq[a]
 partes = []
 for k, m in enumerate(tramos):
     t0 = 0.0 if k == 0 else ini_sec[m["desde_seccion"]] - XF / 2
