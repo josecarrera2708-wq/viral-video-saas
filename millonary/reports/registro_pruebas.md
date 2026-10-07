@@ -237,3 +237,22 @@ Prerregistro: `config/busqueda_v10_prerregistrada.md` (commit 7177089, ANTES de 
 - Mesa de trading: entran R01 Vermeer y R02 Tintoretto. Empiezan el 2026-10-07 00:00 UTC. La mesa queda con 18 traders.
 - Medición del 30 % mensual: `reports/objetivo_mensual.md`.
 - Total acumulado del proyecto: 2.044 pruebas.
+
+## 2026-10-07 · Búsqueda v11: intradía 2R/3R en velas de 5 min + entrada de protección — pruebas 2045-2074 (30 variantes)
+Prerregistro: `config/busqueda_v11_prerregistrada.md` (commit ee4aeed, ANTES de ejecutar). Investigación de 5 agentes: `docs/investigacion_v11/`. Resultados: `reports/busqueda_v11_resultados.md`.
+- Variantes: 30. Elegibles: 3. Certificadas: **0**.
+- Media de todas las variantes, por gestión (construcción + validación + examen):
+
+| Gestión | Acierto | R media |
+|---|---|---|
+| 2R | 38 % | −0,15 |
+| 3R | 37 % | −0,14 |
+| Una entrada con stop doble (control) | 44 % | −0,08 |
+| Protección «promediar una vez» | **56 %** | −0,07 |
+| Protección «girar una vez» | 44 % | −0,14 |
+
+- La protección sube el acierto (hasta el 74 % en el rebote tras cascada) pero no la ganancia: rinde casi igual que el control de una sola entrada con stop más ancho. Lo predijo el agente protector.
+- La reversión tras saltos, el VWAP de Nueva York y el rebote tras cascada pierden en todos los periodos.
+- Solo el ORB de 60 min de Nueva York sale positivo en los cuatro periodos, pero por muy poco (+0,01 a +0,05 R) y negativo con costes ×2.
+- Paso a papel por la regla prerregistrada: **S01 = ORB 60 min Nueva York + promediar una vez** (acierto 45-55 %, R ≈ +0,02). Empieza el 2026-10-08 00:00 UTC.
+- Total acumulado del proyecto: 2.074 pruebas.
