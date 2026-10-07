@@ -34,7 +34,7 @@ Millones de personas siguieron cada uno de esos videos, casi en directo. Y seis 
 
 ¿Qué había de verdad en la cima de esa montaña? ¿Quién era el hombre del camino? ¿Y qué le pasó realmente?
 
-Esta es la historia de Andrew Dawson. Y esto es Todos Lo Vieron, donde te contamos lo que nadie te contó.
+Esta es la historia de Andrew Dawson. Y esto es Todos Lo Vieron: la historia real detrás del misterio.
 
 ---
 
@@ -578,11 +578,11 @@ Este video está dedicado a la memoria de Andrew Dawson.
 
 ## 24. CIERRE
 
-Esto ha sido Todos Lo Vieron.
+Esto ha sido Todos Lo Vieron: la historia real detrás del misterio.
 
 Aquí cada semana subimos casos nuevos: historias que todo el mundo vio en su pantalla y que casi nadie investigó hasta el final. Videos virales, misterios de internet, sucesos que dieron la vuelta al mundo, contados completos, con fechas, con fuentes, y con respeto por las personas reales que hay detrás.
 
-Si quieres seguir descubriendo lo que nadie te contó, suscríbete y activa la campanita, así te avisamos cuando subamos el próximo caso.
+Si quieres seguir conociendo la historia real detrás de cada misterio, suscríbete y activa la campanita, así te avisamos cuando subamos el próximo caso.
 
 Y déjame en los comentarios qué caso viral quieres que investiguemos. Los leemos todos.
 

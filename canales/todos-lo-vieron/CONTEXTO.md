@@ -28,3 +28,11 @@
 - Descartadas: Manuel, Jorge, Andrés, Agustín, Damon, Carl, Darius y Alejandro con el tono bajado.
 - Muestras de la intro: sonic-3 (189 palabras/min) y sonic-3.5 (178 palabras/min). Falta elegir el modelo.
 - Norma de escritura para TTS: nada de frases sueltas sin verbo ("Una montaña. Un edificio."), porque suenan robóticas.
+
+## Decisiones oficiales (7-oct-2026)
+- **Lema oficial: "Todos Lo Vieron: la historia real detrás del misterio."** Sustituye a "lo que nadie te contó" como eslogan; esa frase solo puede aparecer suelta dentro de la narración.
+- **Voz oficial del canal: Alejandro** (3a35daa1-ba81-451c-9b21-59332e9db2f3) con **sonic-3.5**. Generación: speed 1.0, PAUSA 0.55, PAUSA_MAX 0.6 y PAUSA_SECCION 0.6.
+  Comando: `MODEL=sonic-3.5 VOICE_ID=... GUION=... OUT_DIR=... VOZ_TMP=... python3 herramientas/gen_voz.py`.
+  Para regenerar bloques: `regen_bloques.py` con `MODEL=sonic-3.5 SPEEDS=1.0,0.98,1.02`.
+- Guion v3: la intro no desvela el final y va seguida de su vida (Campbell River y el valle). Son 8.526 palabras, unos 46 min, y el usuario aprobó esa duración.
+- Herramientas de voz copiadas de La Ciencia de la Salud a `herramientas/`. Añaden `MODEL`, `PAUSA_SECCION` y generación en paralelo.
