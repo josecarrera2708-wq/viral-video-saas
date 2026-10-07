@@ -103,3 +103,6 @@ tmp/
 temp/
 *.temp
 investigacion/canales/cache/
+
+# Voz provisional (se guarda solo la versión final como voz-final.mp3)
+video/*/voz.mp3
