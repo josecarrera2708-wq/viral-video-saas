@@ -256,3 +256,10 @@ Prerregistro: `config/busqueda_v11_prerregistrada.md` (commit ee4aeed, ANTES de 
 - Solo el ORB de 60 min de Nueva York sale positivo en los cuatro periodos, pero por muy poco (+0,01 a +0,05 R) y negativo con costes ×2.
 - Paso a papel por la regla prerregistrada: **S01 = ORB 60 min Nueva York + promediar una vez** (acierto 45-55 %, R ≈ +0,02). Empieza el 2026-10-08 00:00 UTC.
 - Total acumulado del proyecto: 2.074 pruebas.
+
+## v12 · filtro estadístico de entradas (meta-etiquetado) — prerregistro 2026-10-07
+- Pruebas nº 2075-2086: 3 configuraciones (2R, 3R, 2R + protección) × 4 modelos (logística, boosting, bosque, media).
+- Eventos: todas las señales ya programadas (mesa 1 h, mesa 15 min, patrones v7, setups v11); el modelo decide cuáles tomar (EV ≥ +0,05 R).
+- Kelly/4 entre 0,25 % y 1 %; tope de apalancamiento 10x (5-15 min), 5x (1 h), 3x (≥2 h).
+- Protocolo: `config/busqueda_v12_prerregistrada.md`. Resultados: pendientes.
+- Total acumulado del proyecto: 2.086 pruebas.
