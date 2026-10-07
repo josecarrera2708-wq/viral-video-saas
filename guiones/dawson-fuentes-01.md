@@ -2,7 +2,7 @@
 
 ## El caso
 - Know Your Meme, cronología de los vídeos de @andykapt, con fechas y vistas: https://knowyourmeme.com/memes/andrew-dawson-giant-on-mountain-sighting-tiktok-giant
-- Mysteries of Canada: análisis vídeo por vídeo; la torre de la cima; el SkyTram de Jasper como el "edificio"; las helicópteros; la luz sin explicar; la declaración de su pareja del 21-oct-2022: https://mysteriesofcanada.com/bc/conspiracy-to-suppress-evidence-of-sasquatch/
+- Mysteries of Canada: análisis vídeo por vídeo; la torre de la cima; el SkyTram de Jasper como el "edificio"; los helicópteros; la luz sin explicar; la declaración de su pareja del 21-oct-2022: https://mysteriesofcanada.com/bc/conspiracy-to-suppress-evidence-of-sasquatch/
 - Dexerto (seguidores de 56.000 a 521.000; obituario en el Campbell River Mirror): https://www.dexerto.com/entertainment/what-happened-to-andrew-dawson-from-tiktok-2005529/
 - Obituario (nació el 4-nov-1987, murió el 1-jul-2022, Campbell River): https://www.echovita.com/ca/obituaries/bc/campbell-river/andrew-ryan-watchorn-14965212 y https://www.findagrave.com/memorial/285313445/andrew_ryan_watchorn-dawson
 
