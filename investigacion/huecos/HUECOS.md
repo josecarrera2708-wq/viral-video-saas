@@ -39,3 +39,11 @@ Herramienta: `herramientas/buscar_huecos.py`. Sin APIs de pago.
 - `demanda.json`: todas las búsquedas con su puntuación de demanda.
 - `oferta.json`: los 20 primeros resultados de YouTube de cada búsqueda revisada.
 - `huecos.csv`: los 357 candidatos automáticos, sin filtrar a mano.
+
+## Canales de referencia pequeños para "El Caso Completo" (búsqueda en 11 idiomas, 7-oct-2026)
+No hay ningún canal pequeño que haga exactamente "un caso viral completo por vídeo". Los más cercanos (1.000–80.000 suscriptores):
+- **Chilling Scares Compilations** (inglés, 50.800 subs): mediana de 433.000 vistas, sin cara, recopilaciones de misterios de internet de unas 2 h. Es el canal secundario de un creador grande.
+- **ШЕРОН / @alexsheroon** (ruso, 57.700 subs): mediana de 100.500 vistas, vídeos de 25 min sobre casos ("El caso que sacudió Japón", 455.000).
+- **Sleepy Mystery Channel** (inglés, 14.400 subs): mediana de 27.000 vistas, misterios para dormir de 2,5 h.
+
+Descartados: Les Noticies (vlogs con cámara) y varios canales de cotilleos de famosos.
