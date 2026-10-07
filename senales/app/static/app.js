@@ -27,7 +27,7 @@ function price(p) {
   if (!p) return '?'; if (p >= 1) return '$' + p.toFixed(4);
   const dec = p.toFixed(15).split('.')[1]; const z = dec.length - dec.replace(/^0+/, '').length; return '$' + p.toFixed(z + 4);
 }
-function xs(v) { return v == null ? '' : `<span class="x ${v >= 1 ? 'up' : 'dn'}">x${v.toFixed(2)}</span>`; }
+function xs(v) { if (v == null) return ''; const t = v.toFixed(2); return `<span class="x ${t === '1.00' ? 'eq' : v > 1 ? 'up' : 'dn'}">x${t}</span>`; }  // x1.00 = lo mismo que pagó: gris
 function tagCls(o) { o = (o || '').toLowerCase(); return o.includes('nacid') ? 'new' : o.includes('list') ? 'list' : o.includes('unip') ? 'uni' : ''; }
 function copy(t) { (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => toast('Copiado'), () => toast(t)); }
 
