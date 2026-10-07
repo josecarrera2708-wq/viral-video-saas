@@ -780,6 +780,12 @@ def main():
         log(f"traders famosos en la lista: {fuentes.kols()} · lanzamientos de {fuentes.LAUNCH_DAYS} días: "
             f"{fuentes.lanzamientos()} tokens nuevos")
         db.put("fuentes_t", int(time.time()))
+    if time.time() - (db.get("fuentes_jup_t") or 0) > 6 * 3600:   # smart money y top traders x5 de Jupiter, cada 6 h
+        try:
+            log(f"Jupiter (smart money y top traders x5, cribadas sin RPC): {fuentes.jupiter_leads()} nuevas")
+        except Exception as e:   # un fallo de Jupiter no para la vuelta
+            log("jupiter_leads", type(e).__name__, e)
+        db.put("fuentes_jup_t", int(time.time()))
     log(f"financiadas por un exchange antes de un listado: {fuentes.financiadas()} nuevas")
     log("buscando tokens recién nacidos que despegaron…")
     for m, sym, t, sup in newborn_winners():
@@ -802,12 +808,19 @@ def main():
                   "group by addr having n>=? order by n desc, u desc", (MIN_BUY_USD, MIN_X, MIN_HITS))
     hits_n = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from early where x>=? "
                   "group by addr having n>=2 order by n desc, u desc", (EARLY_X,))
-    leads = db.q("select addr, src from leads where addr not in (select addr from candidates where "
+    leads = db.q("select addr, src, evidence from leads where addr not in (select addr from candidates where "
                  "json_extract(detail, '$.perfil.faltan') is null) order by prio desc")   # las de historial incompleto se reintentan
     hits_k = [{"addr": r["addr"], "n": 0, "mints": "", "u": 0} for r in leads if r["src"] == "kol"]
     hits_f = [{"addr": r["addr"], "n": 1, "mints": "", "u": 0} for r in leads if r["src"] == "fund"]
-    pend = [[dict(h, src=src) for h in hits if h["addr"] not in followed and h["addr"] not in skip]
-            for src, hits in (("list", hits_l), ("new", hits_n), ("kol", hits_k), ("fund", hits_f))]
+    hits_s = [{"addr": r["addr"], "n": 0, "mints": "", "u": 0} for r in leads if r["src"] == "smart"]
+    ev_x = [(r["addr"], json.loads(r["evidence"] or "{}")) for r in leads if r["src"] == "x5"]
+    hits_x = [{"addr": a, "n": e.get("tokens_x5") or 0, "mints": ",".join(e.get("mints") or []), "u": 0} for a, e in ev_x]
+    # por grupos, de más a menos wallets cercanas al corte por cada una mirada (pizarra/datos: smartMoney 8,1%, top traders
+    # x5 6,2%, antes de listados 5,5%; recién nacidas ~1%; traders famosos pasan a 0 s pero caen a 1 s): dentro de cada
+    # grupo, una de cada categoría por turnos; un grupo no empieza hasta que se acaba el anterior
+    tiers = [(("smart", hits_s), ("x5", hits_x), ("list", hits_l), ("fund", hits_f)), (("new", hits_n),), (("kol", hits_k),)]
+    tiers = [[[dict(h, src=src) for h in hits if h["addr"] not in followed and h["addr"] not in skip] for src, hits in tier]
+             for tier in tiers]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
     redo = []
     for c in db.q("select addr, origin, status from candidates where (status='no pasa' and pct_x2 > ? and detail not like '%\"v\": 5%') "
@@ -818,11 +831,12 @@ def main():
         ms = [r["mint"] for r in db.q(f"select mint from {table} where addr=?", (c["addr"],))]
         redo.append({"addr": c["addr"], "n": len(ms), "mints": ",".join(ms), "src": src, "slow": c["status"] == "no selectiva"})
     fresh, seen = [], {h["addr"] for h in redo}
-    for pair in itertools.zip_longest(*pend):   # una de cada categoría, por turnos
-        for h in pair:
-            if h and h["addr"] not in seen:
-                seen.add(h["addr"])
-                fresh.append(h)
+    for pend in tiers:
+        for pair in itertools.zip_longest(*pend):   # una de cada categoría del grupo, por turnos
+            for h in pair:
+                if h and h["addr"] not in seen:
+                    seen.add(h["addr"])
+                    fresh.append(h)
     # primero las de mucho acierto medidas con un corte anterior; las «no selectiva» (lentas) van intercaladas,
     # una de cada cuatro, para que no frenen la búsqueda de wallets nuevas
     slow = [h for h in redo if h["slow"]]
@@ -832,7 +846,8 @@ def main():
             pool.append(slow.pop(0))
         pool.append(h)
     log(f"antes de listados: {len(hits_l)} wallets con {MIN_HITS}+ aciertos · recién nacidas: {len(hits_n)} con 2+ aciertos x{EARLY_X} · "
-        f"traders famosos: {len(hits_k)} · financiadas por exchange: {len(hits_f)}; "
+        f"traders famosos: {len(hits_k)} · financiadas por exchange: {len(hits_f)} · smart money de Jupiter: {len(hits_s)} · "
+        f"top traders x5: {len(hits_x)}; "
         f"pendientes {len(pool)} ({len(redo)} se vuelven a medir); se miden hasta {WALLETS_PER_RUN} que no sean bots")
     passed = measured = checked = 0
     for h in pool:
