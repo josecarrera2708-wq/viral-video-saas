@@ -63,3 +63,8 @@
 - Orden de volúmenes que pide el usuario: voz > música > efectos.
 - Siguiente paso: que el usuario confirme la mezcla y luego el **video de prueba de 2,5 min** (intro y comienzo de la sección 2). Unas 15 imágenes en calidad baja (unos 0,15 $) con el estilo de `estilos/ESTILO.txt`, movimiento local (zoom, temblor y grano), subtítulos y la mezcla. **Preguntar antes de empezar.**
 - Después: el plan de unas 100 escenas, las imágenes en calidad media (unos 6–8 $), el montaje completo, la miniatura y el paquete de YouTube.
+
+## Estado al 7-oct-2026 (mezcla aprobada)
+- **Audio APROBADO**: `video/dawson-01/audio-mezcla.mp3` (46:38, -14.3 LUFS, pico -1.7). Plan: `mezcla-plan.json` con musica_lufs -20, duck_ratio 2.5, bucles sin huecos y nivelado dynaudnorm (`herramientas/mezcla_v2.py`). Variables de entorno HASTA y STEMS para pruebas rápidas.
+- Prompts de vídeo con los lugares reales (Valemount, Yellowhead, Canoe Mountain): `video/dawson-01/prompts-video-prueba.md`. El usuario los prueba en Muse (el primer clip salió con ciudad y semáforos: corregido en v2).
+- Siguiente: montaje completo (decidir la fuente de las imágenes antes de gastar).
