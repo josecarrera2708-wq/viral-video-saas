@@ -597,13 +597,35 @@ def winners():
         return set()
 
 
+SWAP_BUYS = os.environ.get("SENALES_SWAP_BUYS", "0") == "1"   # medir también las compras pagadas con otro token
+
+
+def swap_buys(trades, exclude):
+    """Compras pagadas con otro token (el parser las deja como side="swap", sin precio) convertidas en compras con el precio
+    de mercado de su propia transacción en la cinta de Jupiter. La app ya las copia así (server.value_swaps)."""
+    out, seen = [], set()
+    for x in sorted(trades, key=lambda t: t["t"]):
+        m = x.get("mint_in") if x["side"] == "swap" else x.get("mint")
+        if x["side"] != "swap" or m in exclude or m in seen:
+            seen.add(m)
+            continue
+        seen.add(m)
+        rows = [r for r in chunk(m, x["t"] - 2, x["t"] + 3) if r.get("txHash") == x["sig"] and (r.get("usdPrice") or 0) > 0]
+        if not rows:
+            continue
+        p = rows[0]["usdPrice"]
+        out.append({"sig": x["sig"], "t": x["t"], "wallet": x["wallet"], "mint": m, "side": "buy", "amount": x["amt_in"],
+                    "usd": round(p * x["amt_in"], 2), "sol": 0, "price": p, "inferred": False, "pre": 0, "paid_with": x["mint_out"]})
+    return out
+
+
 def score(trades, exclude):
     """Mide las primeras compras de cada token fuera de muestra como las copiaría un bot de verdad (en un VPS, ~1 s después
     que ella): entrada un 2% más cara, sin mirar velas anteriores, x2 confirmado, horizonte de 72 h y costes."""
     exclude = set(exclude) | winners()
     swapped = {x.get(k) for x in trades if x["side"] == "swap" for k in ("mint_in", "mint_out")}
     first = {}
-    for t in sorted(trades, key=lambda t: t["t"]):
+    for t in sorted(trades + (swap_buys(trades, exclude) if SWAP_BUYS else []), key=lambda t: t["t"]):
         if t["side"] == "buy" and t["usd"] >= 100 and t["mint"] not in exclude and t["mint"] not in first:
             first[t["mint"]] = t
     # compras que pagó otra cuenta (precio deducido) o de algo que ya tenía: la app no las copiaría así -> no se miden
@@ -637,13 +659,20 @@ def score(trades, exclude):
         if hit is not None:
             mins.append((ks[hit][0] - b["t"]) / 60)
         used.append([b["mint"], b["t"], price])   # precio de mercado: verifica/medir.py ponen ahí el suelo de la entrada a 1 s
-        tm = [t for t in trades if t.get("mint") == b["mint"] and t["t"] >= b["t"]]
-        # vende más de lo que le vimos comprar o rota memecoin→memecoin: el bot no ve esas compras -> fuera de «copiar»
-        bad = b["mint"] in swapped or sum(t["amount"] for t in tm if t["side"] == "sell") > \
-            1.05 * sum(t["amount"] for t in tm if t["side"] == "buy")
+        m, tm = b["mint"], [t for t in trades if t["t"] >= b["t"]]
+        # lo que le entra y le sale del token, también pagando o cobrando con OTRO token (side="swap": STONK, META, un
+        # memecoin...): esas compras SÍ las vemos (y la app las copia, server.value_swaps), no son compras mal leídas
+        got = sum(t["amount"] for t in tm if t["side"] == "buy" and t["mint"] == m) + \
+            sum(t["amt_in"] for t in tm if t["side"] == "swap" and t["mint_in"] == m)
+        gave = sum(t["amount"] for t in tm if t["side"] == "sell" and t["mint"] == m) + \
+            sum(t["amt_out"] for t in tm if t["side"] == "swap" and t["mint_out"] == m)
+        # rara: vende más de lo que le vimos entrar (compra no leída, transferencia de otra cuenta, reparto a holders)
+        bad = gave > 1.05 * got
         odd += bad
+        # «copiar» solo sigue sus compras/ventas en SOL o stablecoin: si cambia el token por otro, no se puede copiar
+        nocopy = bad or m in swapped
         for sl, tag in ((0, ""), (0.3, "_sl30"), (0.5, "_sl50")):
-            if not bad:
+            if not nocopy:
                 g, i = copy_sim(path, trades, b["mint"], b["t"], pexit, sl, entry_mult=price / b["price"])
                 if i:
                     per["copiar" + tag].append(g / i)
