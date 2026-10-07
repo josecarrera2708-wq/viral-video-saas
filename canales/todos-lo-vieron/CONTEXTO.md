@@ -54,3 +54,12 @@
 - Herramienta: `herramientas/mezcla_v2.py <plan> <salida>`. Hace ducking con sidechain, coloca 45 efectos anclados a frases y deja 4,5 s de cola de música con fundido.
 - Niveles: la voz va a -16 LUFS antes del máster. La música queda unos 14 LU por debajo en las pausas y unos 18–20 bajo la voz (público de más de 40). Máster a -14 LUFS con TP -1,5 (medido: -13,6 LUFS, LRA 4,5).
 - Licencias en `video/dawson-01/LICENCIAS-AUDIO.md`.
+
+## Estado al 7-oct-2026 (antes de compactar)
+- Voz final: hecha, 46:35 (`video/dawson-01/voz-final.mp3` y `tiempos-final.json`).
+- Mezcla de audio v3, pendiente de la aprobación del usuario. La música se ecualizó para el móvil (`musica/eq.txt`, armónicos de graves), con gain +1/+2 dB y duck_ratio 2. Los efectos van con offset -7 dB, y -12 dB en la intro.
+  Se regenera con `python3 herramientas/mezcla_v2.py video/dawson-01/mezcla-plan.json video/dawson-01/audio-mezcla.mp3` (unos 8 min; el resultado no se sube a git).
+- Quejas resueltas: el arranque ruidoso (máster en dos pasadas) y la música que no se oía en el móvil (ecualización).
+- Orden de volúmenes que pide el usuario: voz > música > efectos.
+- Siguiente paso: que el usuario confirme la mezcla y luego el **video de prueba de 2,5 min** (intro y comienzo de la sección 2). Unas 15 imágenes en calidad baja (unos 0,15 $) con el estilo de `estilos/ESTILO.txt`, movimiento local (zoom, temblor y grano), subtítulos y la mezcla. **Preguntar antes de empezar.**
+- Después: el plan de unas 100 escenas, las imágenes en calidad media (unos 6–8 $), el montaje completo, la miniatura y el paquete de YouTube.
