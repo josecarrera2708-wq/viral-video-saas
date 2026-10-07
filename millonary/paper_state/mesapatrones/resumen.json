@@ -1,15 +1,15 @@
 {
- "generado": "2026-10-07 02:13:45.642808+00:00",
- "ultima_vela_cerrada": "2026-10-07 02:00:00+00:00",
+ "generado": "2026-10-07 02:28:36.341511+00:00",
+ "ultima_vela_cerrada": "2026-10-07 02:15:00+00:00",
  "inicio": "2026-10-06 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL (1 h, 4 h y diario desde velas de 15 min cerradas)",
- "precio_actual": 84380.5,
+ "precio_actual": 83946.5,
  "traders": {
   "Y01 Doble suelo 1 h (a favor de tendencia, dejar correr)": {
    "temporalidad": "1h",
    "variante": "1h | B01 Doble suelo | a_favor_tendencia | dejar_correr",
    "cerradas": 1,
-   "por_dia": 0.9150056852213448,
+   "por_dia": 0.9064552691631474,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.42268680303452905,
@@ -123,7 +123,7 @@
    "temporalidad": "1h",
    "variante": "1h | C01 Doble suelo | K3 tendencia superior (EMA 50 d\u00edas) | dejar_correr",
    "cerradas": 1,
-   "por_dia": 0.9150056852213448,
+   "por_dia": 0.9064552691631474,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.42268680303452905,
@@ -343,5 +343,5 @@
   }
  },
  "trades_totales": 2,
- "por_dia_total": 1.8300113704426897
+ "por_dia_total": 1.812910538326295
 }

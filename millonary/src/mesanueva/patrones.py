@@ -39,6 +39,10 @@ def main(now: pd.Timestamp | None = None, start: pd.Timestamp = START, out=D) ->
 
 
 if __name__ == "__main__":
+    try:                                                    # S01 (v11, velas de 5 min de Binance Vision) se actualiza en la misma rutina
+        from . import s01; print("S01", s01.main())
+    except Exception as e:
+        print("S01 error:", e)
     o = main(); print({k: v for k, v in o.items() if k != "traders"})
     for k, v in o["traders"].items():
         print(f"{k:70s} {v['temporalidad']} ops {v['cerradas']:3d} R {v['R_total']:+.2f} ret {v['retorno']:+.2%} abierta {'sí' if v['abierta'] else 'no'}")
