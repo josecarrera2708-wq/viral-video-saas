@@ -59,3 +59,9 @@
 - Candidatas que se ofrecieron:  CC0 en tono mayor (OpenGameArt): Specular City, Space Cadet Training Montage, Electronic Outlaw, Aerobics Synth Wave, Motivation To Wake Up. Esperando su elección; luego mezclar con herramientas/mezcla_gym.py (plan en video/frecuencia-01/mezcla-plan.json, hay que cambiar pistas/BPM) sin tocar la voz.
 - Voces alternativas medidas (sin filtros): Diego "Hype Guy" es la más brillante y con más variación de tono; muestras enviadas, no elegidas.
 - Freesound sigue bloqueado (403) en este entorno.
+
+## Vídeo 3: escenas (8 oct 2026)
+- 39 de 40 escenas generadas (gpt-image-2 medium, 1536x864) en video/frecuencia-01/escenas con `herramientas/gen_escenas_v2.py` (usa /images/edits con imagen de referencia: protagonista = marca/pantalla_final_fondo.png; Mateo y Diego = escena 01). Prompts: guiones/frecuencia-escenas-01.md (cada escena con Ref, Plano e Imagen), mapa guiones/frecuencia-mapa-escenas.json. La escena 40 es la pantalla final (marca/pantalla_final_1920x1080.png, últimos 20 s).
+- FALTA la escena 7 (fábrica dentro del músculo): 502 del servidor en 4 intentos. Pedir permiso antes de reintentar.
+- Montaje preparado y sin ejecutar: `herramientas/montar_video_v4.py` (2-3 planos por escena con push/pull/pan/temblor suave, fundido a negro entre secciones, viñeta, subtítulos, sin subtítulos sobre la pantalla final). Falta plano_camara.json (movimientos por escena) y la aprobación del usuario sobre las escenas. Audio: video/frecuencia-01/audio_final_musica.mp3.
+- El usuario también recibió idea de vídeo 4 (quemar grasa con fuerza en casa, de YouTube Studio); la hará en otra sesión.

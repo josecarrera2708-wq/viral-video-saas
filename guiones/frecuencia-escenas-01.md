@@ -40,7 +40,7 @@ Imagen: Top-down bird's-eye shot of six drinking glasses lined up on a wooden gy
 Locución: sección 3
 Ref: none
 Plano: Plano general isométrico, corte anatómico
-Imagen: Wide isometric cutaway illustration of a giant cartoon factory built inside a muscle fiber: workers in orange helmets operating machines and conveyor belts that produce glowing orange protein blocks, steam, pipes and warm industrial lighting, teal shadows, lots of tiny charming details.
+Imagen: Wide isometric cartoon illustration of a busy factory inside a giant muscle: small workers in orange helmets, conveyor belts carrying glowing orange blocks, pipes and steam, warm industrial lighting with teal shadows, many charming details.
 
 **ESCENA 8**
 Locución: sección 3
