@@ -27,3 +27,15 @@ Certeza: **Alta** · **Media** · **Baja** · **No verificada**
 - "La sábana en la puerta": riesgo físico, sin fuente que lo recomiende.
 - "Tonificar": no hay definición fisiológica.
 - Cualquier cifra de "calorías extra" por EPOC más alta que la de F4.
+
+## Skills evaluados para este canal (2026-10-08)
+
+| Skill / repo | Decisión | Motivo |
+|---|---|---|
+| mohitagw15856/pm-claude-skills · youtube-script-writer | **Instalado** (copia literal, MIT) | Solo texto, sin código. |
+| JackKuo666/pubmed-search-skill | **Instalado bajo demanda** (commit y SHA-256 fijados) | Código leído entero: solo habla con NCBI. Sin LICENSE en el repo, por eso no se copia. |
+| Jakeschincariol/youtube-agent-skill | Descartado | Código limpio (MIT), pero su puntuación de ganchos usa listas de palabras en inglés: da resultados poco fiables en español. |
+| frankxai · health-nutrition-expert | Descartado | Afirma sin fuente que "el 70 % de la inmunidad vive en el intestino" y recomienda "1 g+ por libra" de proteína. |
+| frankxai · gym-training-expert | Descartado | Se apoya en "investigación de 2025" sin citar estudios; orientado a gimnasio con barra. |
+| cookjohn/pm-skills | Descartado | Exige Chrome con depuración remota y enlaza Sci-Hub. |
+| revfactory · fitness-program, ailabs-393 · nutritional-specialist | No instalados | Cubren planes personalizados, no verificación; sin fuentes. |
