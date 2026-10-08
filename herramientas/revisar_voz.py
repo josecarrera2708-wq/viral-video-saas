@@ -17,7 +17,7 @@ def norm(s):
     return [w for w in re.findall(r"[a-z]+", s) if w not in NUMW]
 def stt(f):
     for _ in range(2):
-        r = requests.post("https://api.openai.com/v1/audio/transcriptions", files={"file": open(f, "rb")}, data={"model": "whisper-1", "language": "es"}, timeout=120)
+        r = requests.post("https://api.openai.com/v1/audio/transcriptions", files={"file": (os.path.basename(f) if f.endswith((".mp3", ".wav", ".m4a")) else os.path.basename(f) + ".mp3", open(f, "rb"))}, data={"model": "whisper-1", "language": "es"}, timeout=120)
         if r.status_code == 200: return r.json()["text"]
     return ""
 def un(i):
