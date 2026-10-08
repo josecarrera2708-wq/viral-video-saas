@@ -1865,7 +1865,3 @@ Hoy.
 467
 00:16:27,440 --> 00:16:29,319
 Si quieres más ciencia del entrenamiento explicada fácil, suscríbete.
-
-468
-00:16:31,252 --> 00:16:29,319
-Subo un vídeo nuevo cada semana.

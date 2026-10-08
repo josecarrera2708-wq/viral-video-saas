@@ -79,6 +79,7 @@ def srt():
         tot = sum(len(t) for t in trozos); t0 = b["inicio"]; span = b["fin"] - b["inicio"]
         for t in trozos:
             d = span * len(t) / tot
+            if t0 >= fin_t - 0.3: break                 # nada de subtítulos sobre la pantalla final
             cues.append(f"{c}\n{ts(t0)} --> {ts(min(t0 + d, fin_t))}\n{t}\n"); c += 1; t0 += d
     open(f"{V}/subtitulos.srt", "w", encoding="utf-8").write("\n".join(cues))
 if __name__ == "__main__":
