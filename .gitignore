@@ -108,3 +108,4 @@ video/*/shorts/*.mp4
 video/*/voz_escucha.mp3
 video/*/mezcla_escucha.mp3
 *.tmp
+video/*/*_preview_480p.mp4
