@@ -1,0 +1,14 @@
+# Short A "90 días sin gimnasio" (promo del vídeo lagartijas-01). Una línea por subtítulo quemado en el short:
+#   inicio(s) | texto   = frase nueva        inicio(s) + texto   = sigue la misma frase (misma toma de voz, se corta en la pausa)
+# Textos = los de los subtítulos del short. Inicios = cambios de subtítulo detectados con `voz_short.py --subs`:
+# 0.17 2.27 4.37 6.10 8.87 11.10 12.57 15.67 18.13 21.53 (el último subtítulo desaparece en 24.67)
+0.00 | Quieres transformar tu cuerpo
+2.27 + en noventa días sin gimnasio,
+4.37 + pero cometes este error:
+6.10 | Entrenar todos los días sin descansar.
+8.87 | El músculo no crece entrenando,
+11.10 + crece recuperándose.
+12.57 | Tres o cuatro días por semana, bien hechos,
+15.67 + valen más que siete días a medias.
+18.13 | La constancia le gana a la intensidad. Siempre.
+21.53 | El plan completo de noventa días está en mi canal.

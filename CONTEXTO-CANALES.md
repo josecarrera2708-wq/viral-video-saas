@@ -22,6 +22,7 @@
 5. Montaje: herramientas/montar_video_v3.py <carpeta> <mapa.json> (3 tomas por escena con zoompan, xfade, subtítulos, yuv420p).
 6. Miniaturas: herramientas/gen_mini*.py + texto con fuente Anton (herramientas/Anton-Regular.ttf). Sin revelar el contenido del vídeo; usar curiosidad ("LO QUE NADIE TE DICE").
 7. Entrega del mp4: gofile (store1.gofile.io/uploadFile); litterbox falla; GitHub no admite mp4 >100 MB (está en .gitignore).
+8b. Shorts ya montados (subtítulos quemados): `python3 herramientas/voz_short.py <short.mp4> guiones/<guion_short>.txt <salida.mp4>` pone la voz Ramon sincronizada con los subtítulos (copia el vídeo, solo cambia el audio, comprueba con whisper). `--subs` detecta cuándo cambia cada subtítulo. Ejemplo: guiones/lagartijas-short-A.txt. Los mp4 de shorts no se suben a git.
 8. Subida: contenido sintético = Sí, no es para niños, hora sábado 10 am Venezuela, comentario fijado.
 
 ## Notas de mercado
