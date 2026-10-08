@@ -252,22 +252,27 @@ def early_buyers(mint, t0, supply):
 
 
 # ---------- 4-5. perfil e historial de una wallet ----------
-TX_RPC = "https://solana-rpc.publicnode.com"   # segundo RPC público: lee transacciones (no da historial de firmas)
+TX_RPC = "https://solana-rpc.publicnode.com"   # el más rápido, pero solo guarda unas 30 h de transacciones
+ARCHIVE_RPC = "https://solana.api.pocket.network"   # público con archivo completo (inestable: pocos reintentos)
 _rr = itertools.count()
 
 
 def rpc(method, params):
     urls = [chain.PUBLIC_RPC]
-    if method == "getTransaction":   # las transacciones se reparten entre los dos RPC públicos (el doble de rápido)
-        urls = [chain.PUBLIC_RPC, TX_RPC][::1 if next(_rr) % 2 else -1]
+    if method == "getTransaction":
+        # primero publicnode (lo reciente); si no la tiene (null: es de hace más de ~30 h) se pide a los dos públicos con
+        # archivo completo, por turnos. Antes un null de publicnode se daba por bueno y el historial salía incompleto
+        urls = [TX_RPC] + [chain.PUBLIC_RPC, ARCHIVE_RPC][::1 if next(_rr) % 2 else -1]
     key = db.get("helius_key")
     if key:  # con clave de Helius se usa primero (más rápido y sin límites tan bajos)
         urls.insert(0, f"https://mainnet.helius-rpc.com/?api-key={key}")
     for url in urls:
-        for i in range(4):
+        for i in range(2 if url in (TX_RPC, ARCHIVE_RPC) else 4):
             try:
                 j = C.post(url, json={"jsonrpc": "2.0", "id": 1, "method": method, "params": params}).json()
                 if "result" in j:
+                    if j["result"] is None and method == "getTransaction" and url != urls[-1]:
+                        break    # este RPC no la tiene: al siguiente
                     return j["result"]
             except Exception:
                 pass
@@ -380,7 +385,7 @@ def _history(addr, max_tx):
             return r
         except RuntimeError:
             return None
-    with ThreadPoolExecutor(6 if db.get("helius_key") else 4) as ex:   # 2 hilos por RPC público
+    with ThreadPoolExecutor(8 if db.get("helius_key") else 6) as ex:   # 2 hilos por RPC público (3 RPC)
         res = list(ex.map(one, sel))
     for i, r in enumerate(res):   # segundo intento, de una en una, de las que fallaron
         if r is None:
