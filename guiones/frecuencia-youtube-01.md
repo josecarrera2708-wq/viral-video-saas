@@ -45,9 +45,10 @@ cuántos días entrenar para ganar músculo, cuántos días a la semana entrenar
 Juego final: ¿cuántas de las 3 afirmaciones acertaste? (1: seis días dan el doble de músculo que tres. 2: con agujetas no se debe entrenar. 3: principiantes y avanzados necesitan las mismas series.) Escribe tu número de aciertos y cuántos días entrenas hoy 👇 Te respondo a los primeros. Y si conoces a ese amigo que entrena seis días y no cambia, mándale el vídeo 💪
 
 ## TARJETAS Y PANTALLA FINAL
-- Tarjeta (i) al vídeo 1 en 2:19, texto "Cómo crece el músculo" (máx. 30 caracteres).
-- Pantalla final: desde 16:29 (20 s), con marca/pantalla_final_1920x1080_guia.png: elemento 1 = vídeo 2, elemento 2 = vídeo 1 o "mejor vídeo para el espectador"; círculo de suscripción en su hueco.
-- Añadir a una lista de reproducción con los vídeos 1 y 2.
+- Tarjeta 1 en 2:19 -> vídeo 1 (texto "Cómo crece el músculo"): el guion dice justo ahí "en el vídeo sobre cómo crece el músculo...". Es contextual y cae antes de que la gente suela irse (duración media de tus vídeos: 4:48).
+- Tarjeta 2 en 5:55 -> vídeo 2 (texto "Reto de lagartijas"): el guion dice "En casa funciona exactamente igual. Si haces lagartijas...". Va después del giro (4:04-5:36), para no cortar el momento fuerte.
+- Pantalla final: desde 16:29 (20 s).
+- Ajustar con tu curva de retención real (Studio > Analítica > Interacción > Retención de la audiencia) cuando el vídeo lleve unos días: si hay una caída grande en un minuto concreto, mover ahí la tarjeta 2. Límite de texto de la tarjeta: 30 caracteres.
 
 ## AJUSTES AL SUBIR
 - Contenido alterado o sintético: Sí | Categoría: Deportes (o Educación) | Idioma: Español | No es para niños
