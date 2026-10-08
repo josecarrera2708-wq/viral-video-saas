@@ -55,6 +55,7 @@
 ## Vídeo 3: voz y música (8 oct 2026) — RECHAZADO v2, se usa la voz v1
 - El usuario RECHAZÓ la voz v2 y la mezcla ("se escucha sucio, la música es tormentosa"): el cambio de tono con rubberband + EQ fuerte ensucia, y OMW/Sunday Storm/Party Sector eran música de videojuego en tono menor (OMW = La menor). No repetir.
 - Decisión del usuario: usa la voz anterior (v1: Alejandro sonic-3.5, ATEMPO, sin cambio de tono ni EQ). Restaurada en video/frecuencia-01/voz.mp3 + tiempos.json (commit 975f72f). 16:45.
-- Música: el usuario elige entre 5 candidatas CC0 en tono mayor (OpenGameArt): Specular City, Space Cadet Training Montage, Electronic Outlaw, Aerobics Synth Wave, Motivation To Wake Up. Esperando su elección; luego mezclar con herramientas/mezcla_gym.py (plan en video/frecuencia-01/mezcla-plan.json, hay que cambiar pistas/BPM) sin tocar la voz.
+- ELEGIDA: la 5, Motivation To Wake Up (CC0), bajita de fondo/relleno. Audio: video/frecuencia-01/audio_final_musica.mp3 (voz v1 + música, herramientas/mezcla_fondo.py). Pendiente: visto bueno del audio -> 40 escenas.
+- Candidatas que se ofrecieron:  CC0 en tono mayor (OpenGameArt): Specular City, Space Cadet Training Montage, Electronic Outlaw, Aerobics Synth Wave, Motivation To Wake Up. Esperando su elección; luego mezclar con herramientas/mezcla_gym.py (plan en video/frecuencia-01/mezcla-plan.json, hay que cambiar pistas/BPM) sin tocar la voz.
 - Voces alternativas medidas (sin filtros): Diego "Hype Guy" es la más brillante y con más variación de tono; muestras enviadas, no elegidas.
 - Freesound sigue bloqueado (403) en este entorno.
