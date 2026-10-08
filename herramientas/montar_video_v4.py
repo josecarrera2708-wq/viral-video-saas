@@ -37,23 +37,29 @@ def por_defecto(e):
            [["pull", 1.25, 1.0, .5, .45], ["push", 1.15, 1.35, .6, .4], ["pan", 1.2, .7, .5, .3]],
            [["push", 1.0, 1.2, .4, .45], ["pull", 1.35, 1.1, .5, .4], ["pan", 1.2, .3, .55, .6]]]
     return ops[k]
+def ease(t): return 0.5 * t + 0.5 * (t * t * (3 - 2 * t))   # arranque y frenado suaves, sin perder del todo la velocidad constante
 def shot(e, idx, n, plano):
+    """Plano con movimiento de sub-píxel (cv2.warpAffine, interpolación bicúbica): sin la vibración por píxeles enteros de zoompan."""
+    import cv2, numpy as np
     out = f"{TMP}/{e:02d}_{idx}.mp4"
     if os.path.exists(out): return out
-    t = plano[0]
-    if t == "fijo": z, fx, fy = "1", .5, .5
-    if t in ("push", "pull"):
-        _, z0, z1, fx, fy = plano; z = f"{z0}+({z1}-{z0})*on/{n}"
-    elif t == "pan":
-        _, zz, fx0, fy, fx1 = plano; z = f"{zz}"; fx = f"({fx0}+({fx1}-{fx0})*on/{n})"
-    elif t == "fijo": pass
-    sh = sv = ""                                        # sin temblor de cámara (el usuario lo percibía como imagen que tiembla)
-    x = f"max(0,min(iw-iw/zoom,{fx}*iw-iw/zoom/2{sh}))"; y = f"max(0,min(ih-ih/zoom,{fy}*ih-ih/zoom/2{sv}))"
-    vf = (f"scale={SS}:{SS*9//16}:flags=lanczos,zoompan=z='{z}':x='{x}':y='{y}':d={n}:s=1920x1080:fps={FPS},"
-          f"vignette=PI/6,format=yuv420p")
-    img = f"{V}/escenas/{e:02d}.png" if e != ultima else f"{V}/marca/pantalla_final_1920x1080.png"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", img, "-vf", vf, "-frames:v", str(n),
-                    "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", out], check=True)
+    img = cv2.imread(f"{V}/escenas/{e:02d}.png" if e != ultima else f"{V}/marca/pantalla_final_1920x1080.png")
+    H, W = img.shape[:2]; t0 = plano[0]
+    if t0 == "fijo": z0 = z1 = 1.0; f0 = f1 = (.5, .5)
+    elif t0 == "push": _, z0, z1, fx, fy = plano; f0 = f1 = (fx, fy)
+    elif t0 == "pull": _, z0, z1, fx, fy = plano; f0 = f1 = (fx, fy)
+    else: _, zz, fx0, fy, fx1 = plano; z0 = z1 = zz; f0 = (fx0, fy); f1 = (fx1, fy)
+    p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", "1920x1080", "-r", str(FPS), "-i", "-",
+                          "-c:v", "libx264", "-preset", "veryfast", "-crf", "16", "-pix_fmt", "yuv420p", out], stdin=subprocess.PIPE)
+    for i in range(n):
+        u = ease(i / max(n - 1, 1)); z = z0 + (z1 - z0) * u
+        fx = f0[0] + (f1[0] - f0[0]) * u; fy = f0[1] + (f1[1] - f0[1]) * u
+        cw, ch = W / z, H / z
+        x0 = min(max(fx * W - cw / 2, 0), W - cw); y0 = min(max(fy * H - ch / 2, 0), H - ch)
+        sc = 1920 / cw
+        M = np.float64([[sc, 0, -x0 * sc], [0, sc, -y0 * sc]])
+        p.stdin.write(cv2.warpAffine(img, M, (1920, 1080), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE).tobytes())
+    p.stdin.close(); p.wait()
     return out
 def clip(k):
     e, d = durs[k]; L = d + ((XS if (k + 1) in cambio else X) if k < len(durs) - 1 else 0)
@@ -94,7 +100,7 @@ if __name__ == "__main__":
         S += durs[k][1]; lab = f"[x{k}]"
         tr, dd = ("fadeblack", XS) if (k + 1) in cambio else ("fade", X)
         fc.append(f"{prev}[{k + 1}:v]xfade=transition={tr}:duration={dd}:offset={S:.3f}{lab}"); prev = lab
-    fc.append(f"{prev}subtitles={V}/subtitulos.srt:force_style='FontName=DejaVu Sans,Bold=1,FontSize=17,Outline=2,Shadow=1,MarginV=36',format=yuv420p[v]")
+    fc.append(f"{prev}vignette=PI/6,subtitles={V}/subtitulos.srt:force_style='FontName=DejaVu Sans,Bold=1,FontSize=17,Outline=2,Shadow=1,MarginV=36',format=yuv420p[v]")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error"] + ins + ["-filter_complex", ";".join(fc), "-map", "[v]", "-map", f"{len(clips)}:a",
         "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:v", "libx264", "-preset", "veryfast", "-crf", os.environ.get("CRF", "26"),
         "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", SAL], check=True)
