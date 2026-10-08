@@ -1,162 +1,223 @@
-# Quemar grasa con fuerza en casa — guion v2 (≈ 14:30 máx.)
+# Quemar grasa con fuerza en casa — guion v3 (≈ 14:30 máx.)
 
 **Canal:** La Ciencia de la Salud
-**Formato:** YouTube horizontal. ≈ 1.450 palabras habladas (≈ 9,7 min a 150 ppm) + ≈ 4 min de demostraciones con poco texto = 13–14,5 min. Si sobra tiempo, amplía la Parte 4 o añade un segundo ejemplo de comida; no alargues el gancho.
-**Cada afirmación lleva un id (F1…)** que se explica en `fuentes.md`, con su nivel de certeza.
-**Estado:** borrador para revisar. Cambios respecto a la versión anterior al final del documento.
+**Formato:** YouTube horizontal. ≈ 1.570 palabras habladas (≈ 10,4 min a 150 ppm) + ≈ 3,5–4 min de demostraciones y tarjetas de fuente = 14–14,5 min. Si en la edición pasa de 15, recorta primero el segundo ejemplo de la Parte 1 (adultos mayores) y la Parte 4 "Cuatro".
+**Cada afirmación lleva un id (F1…)** que se explica en `fuentes.md`, con su PMID y su certeza. Los datos pesados (n, años, revistas) van en **tarjetas de pantalla**, no en la voz: así el texto hablado se mantiene ágil sin perder rigor.
+**Estado v3:** cifras contrastadas con el resumen original en PubMed (o el texto de la guía de la OMS) y pasada de retención aplicada. Cambios al final.
 
 ---
 
 ## Títulos (recomendado el primero)
 
 1. **Deja de hacer SOLO cardio: así se pierde grasa sin perder músculo (en casa, sin pesas)**
-2. Cardio o fuerza: qué dice la ciencia para perder grasa
+2. Pierdes peso… pero no la grasa: lo que dice la ciencia
 3. Perder grasa en casa con tu propio peso: guía basada en estudios
 
-**Miniatura recomendada:** mancuernas tachadas + texto "0 PESAS" + tú en una flexión con los pies elevados. Alternativa para A/B: pantalla dividida "SOLO CARDIO ❌ / CARDIO + FUERZA ✅". Que ninguna prometa "tonificar" ni un cambio en X días.
+**Miniatura recomendada:** mancuernas tachadas + "0 PESAS" + tú en una flexión con los pies elevados. Alternativa A/B: pantalla dividida "SOLO CARDIO ❌ / CARDIO + FUERZA ✅". Sin "tonificar" ni plazos del tipo "en 7 días".
 
 ---
 
-## [0:00–0:45] GANCHO
+## [0:00–0:50] GANCHO
 
-**PANTALLA:** tú de perfil en el salón. Pesa de baño con un número bajando. Corte a espejo, cara de duda.
+**Tres ganchos posibles (elige uno, grábalos si quieres hacer A/B con el Short):**
+- **A · Escena (recomendado):** el que sigue abajo.
+- **B · Contrario:** "Correr más no es la solución. Y te voy a enseñar el estudio que lo demuestra."
+- **C · Interrupción:** cuenta atrás de 3 segundos con la pesa de baño y "Esta báscula te va a mentir."
 
-> Imagina que llevas dos meses a dieta y corriendo. La báscula baja. Pero te miras al espejo y te ves… igual. O más blando.
+**PANTALLA:** primer plano de unos pies subiéndose a la báscula. El número baja. Sonrisa. Corte seco a un espejo: cara de duda.
+
+> Imagina que has bajado cinco kilos. Te subes a la báscula, sonríes… y entonces te miras al espejo.
 >
-> No es mala suerte. Cuando adelgazas solo con dieta y cardio, una parte de lo que pierdes no es grasa: es músculo. *(F2)*
->
-> Hoy vamos a ver qué dice la ciencia de verdad sobre cómo perder grasa conservando músculo, con ejercicios que puedes hacer en tu salón. Sin pesas, sin gimnasio.
->
-> Y al final te enseño por qué la báscula puede decirte que no avanzas cuando sí lo estás haciendo.
-
-*Técnica: problema concreto + bucle abierto (la báscula).*
-
-## [0:45–1:30] PROMESA Y REGLAS DEL JUEGO
-
-**PANTALLA:** tres textos que aparecen: "Qué dice la evidencia" · "Qué NO está claro" · "Qué hacer mañana".
-
-> Te prometo tres cosas. Una: te digo qué sale de los estudios y qué no. Dos: te cuento también lo que todavía no está tan claro, que lo hay. Y tres: te dejo una rutina de 40 minutos para empezar esta semana.
->
-> Una cosa antes: no soy tu médico. Si tienes una lesión, estás embarazada, tomas medicación o tienes una enfermedad del corazón, de los riñones o diabetes, habla antes con un profesional.
-
-## [1:30–4:00] PARTE 1 · QUÉ QUEMA GRASA DE VERDAD
-
-**PANTALLA:** esquema simple "Entra energía / Sale energía". Gráfico animado del meta-análisis.
-
-> Empecemos por lo básico, que nadie te dice sin rodeos. Perder grasa requiere un déficit de energía: gastar más de lo que comes. Y ese déficit sale de lo que comes y de lo que gastas. *(F11, consenso)*
->
-> Entonces, ¿para qué entrenar fuerza? Porque tu cuerpo no distingue entre "quiero perder grasa" y "quiero perder músculo". Si ve que come menos y que no usa el músculo, no tiene motivo para guardarlo.
->
-> Y aquí está lo que dicen los estudios. En 2025 se publicó un meta-análisis en *BMJ Open Sport & Exercise Medicine* con 25 ensayos y 1.608 personas con sobrepeso. Comparaba dieta sola contra dieta más ejercicio de fuerza. *(F1)*
->
-> ¿Resultado? Las personas que añadieron fuerza conservaron más masa magra y perdieron más grasa que las que solo hicieron dieta. Con un detalle importante, y es la sorpresa: el peso total en la báscula fue prácticamente el mismo en los dos grupos. *(F1)*
+> No ves a alguien más delgado. Ves a alguien más… blando.
 >
 > *[CORTE · golpe de sonido]*
 >
-> Es decir, la fuerza no te hace pesar menos. Te cambia de qué pierdes peso. Esto es lo que te prometí al principio: por eso la báscula engaña, y lo recupero al final.
+> Lo que pasó es que una parte de esos cinco kilos no era grasa. Era músculo. *(F2)*
 >
-> Otro ejemplo, esta vez con adultos mayores con obesidad. En un ensayo del *New England Journal of Medicine*, con 160 personas y seis meses de dieta, perdieron masa magra un 5 % con solo cardio, un 3 % con cardio más fuerza y un 2 % con solo fuerza. *(F2)* Ojo: eran personas mayores, así que no se puede aplicar tal cual a un joven de 25 años. Pero la dirección es la misma.
-
-*Honestidad como recurso: se dice qué grupo estudió cada trabajo.*
-
-## [4:00–5:45] PARTE 2 · DOS MITOS QUE SE REPITEN MUCHO
-
-**PANTALLA:** dos tarjetas "MITO" que se rompen.
-
-> Mito uno: "el músculo es un horno que quema calorías las 24 horas".
+> Hoy te enseño, con estudios, cómo evitarlo. En tu salón. Sin una sola pesa.
 >
-> La cifra clásica es que un kilo de músculo gasta unas 13 kilocalorías al día en reposo, y un kilo de grasa, unas 4,5. *(F3)* Es verdad, pero hagamos la cuenta: ganar dos kilos de músculo, que ya cuesta meses, te suma alrededor de 26 kilocalorías al día. Es una cantidad casi irrelevante.
->
-> Entonces, ¿para qué sirve conservar músculo? No es para "acelerar el metabolismo". Es para que lo que pierdas sea grasa, para mantener la fuerza y para que tu cuerpo funcione mejor al envejecer.
->
-> Mito dos: "después de entrenar fuerza sigues quemando mucho, el efecto EPOC".
->
-> Existe. Tras una sesión de fuerza el cuerpo gasta algo más durante unas horas. Pero la mayoría de las estimaciones lo sitúan en decenas de kilocalorías, y como mucho alrededor de cien o doscientas, y depende muchísimo de cómo se mida. *(F4, certeza baja-media)* No hace la diferencia. Si alguien te vende el EPOC como un truco para comer lo que quieras, te está engañando.
+> Y te adelanto algo raro: el mejor estudio que hay sobre esto dice que la fuerza **no** te hace pesar menos. Y aun así funciona. Te explico por qué dentro de unos minutos.
 
-## [5:45–7:00] PARTE 3 · ¿FUNCIONA SIN PESAS?
+*Técnicas: escena concreta + giro + bucle abierto (la paradoja del peso).*
 
-**PANTALLA:** flexión vs press de banca, lado a lado. Texto: "Lo que importa: cuánto te acercas al fallo".
+## [0:50–1:30] LA PROMESA
 
-> La duda lógica: "sin pesas, no hay estímulo". Lo que muestran los estudios es que lo que importa no es tanto el peso, sino lo cerca que llegues del límite de cada serie.
->
-> Cuando se entrena llegando al fallo, los estudios no ven diferencias claras en el crecimiento muscular entre cargas ligeras y pesadas. *(F5)* Y en un estudio de 8 semanas, hacer flexiones ajustadas a la misma carga que un press de banca al 40 % dio crecimiento y fuerza parecidos. *(F6)*
->
-> Pero ahora la parte que no te cuentan los vídeos de "sin material". Casi todos los estudios de fuerza durante la dieta son con entrenamiento **supervisado en un gimnasio**; muy pocos son en casa. De hecho, un ensayo piloto pequeño, de 12 semanas y 48 personas, con entrenamiento en casa, mejoró la fuerza pero no cambió la composición corporal frente a la dieta sola. *(F1, certeza media-baja para el entrenamiento solo en casa)*
->
-> No significa que no funcione. Significa que la evidencia para casa es más pobre y que necesitas hacerlo bien: series difíciles de verdad y progresión. Eso es lo que viene ahora.
+**PANTALLA:** tres textos que aparecen: "Qué dice la evidencia" · "Qué NO está claro" · "Qué hacer mañana".
 
-*Cambio importante: la versión anterior vendía "sin material" como equivalente; esta lo matiza.*
-
-## [7:00–10:30] PARTE 4 · LOS 4 MOVIMIENTOS
-
-**PANTALLA:** demostración de cada uno con técnica en primer plano. Rótulo "Fácil / Medio / Difícil".
-
-> Cuatro movimientos. Cada uno con tres niveles, para que sea difícil pero no imposible.
+> Esto es lo que vas a llevarte. Primero, qué dicen los estudios y qué no. Segundo, lo que todavía no está claro, que lo hay: te lo digo igual. Y tercero, una rutina de 40 minutos para empezar esta semana.
 >
-> **Uno · Empuje: flexiones.** Fácil: manos en una mesa firme. Medio: en el suelo. Difícil: pies elevados en una silla. Baja en tres segundos, pausa un segundo abajo, sube.
->
-> **Dos · Tracción: remo invertido.** Túmbate bajo una mesa **muy resistente**, agárrate al borde y llévate el pecho hacia ella. Antes de empezar, carga la mesa con tu peso poco a poco para comprobar que no se mueve. Si no tienes una mesa segura, haz el remo con una mochila cargada, inclinado hacia delante. Y no te recomiendo el truco de la sábana en la puerta: si se suelta, te la juegas.
->
-> **Tres · Piernas: sentadilla búlgara.** Pie trasero en el sofá, bajas en tres segundos. Para progresar, cuando te salgan 15 sin esfuerzo, carga una mochila con libros. Es la forma más barata de sobrecarga.
->
-> **Cuatro · Cadena posterior y core: puente de glúteo a una pierna y plancha.** En la plancha, aprieta glúteos y abdomen. Y aquí un mito: hacer abdominales no quema la grasa de la barriga. Un meta-análisis de 37 comparaciones de entrenar una zona frente a otra no encontró reducción localizada de grasa. *(F7)* La grasa se pierde de todo el cuerpo, en el orden que decida tu genética.
+> Y una cosa antes de seguir: no soy tu médico. Si tienes una lesión, estás embarazada, tomas medicación o tienes una enfermedad del corazón, de los riñones o diabetes, habla antes con un profesional.
 
-## [10:30–12:15] PARTE 5 · LA RUTINA
+## [1:30–4:00] PARTE 1 · LA BÁSCULA MIENTE
 
-**PANTALLA:** tabla semanal en pantalla. Cronómetro.
+**PANTALLA:** esquema "Entra energía / Sale energía".
 
-> La rutina, para 3 días a la semana, no consecutivos, de unos 40 minutos:
+> Empecemos por lo que nadie te dice claro. Perder grasa requiere un déficit: gastar más energía de la que comes. Eso lo decide lo que comes y lo que te mueves. *(F11)*
 >
-> Cada movimiento, 3 a 4 series de 8 a 15 repeticiones. Descansa de 1 a 2 minutos.
+> Hasta aquí, nada nuevo. Ahora viene lo importante: **tu cuerpo no sabe si quieres perder grasa o músculo.** Si comes menos y no le das un motivo para conservar el músculo, lo trata como un gasto más.
 >
-> ¿Cuánto te acercas al límite? Para el músculo, series que acaben a una a tres repeticiones de no poder más, funcionan casi igual que llegar al fallo; lo importante es que cuesten. *(F8, certeza media)* Y en cuanto al volumen, los estudios muestran más crecimiento con unas 10 series por músculo y semana que con menos de 5. *(F9, certeza media; la cifra exacta se discute)*
+> *[PANTALLA: tarjeta de fuente · "BMJ Open Sport & Exercise Medicine, 2025 · 25 ensayos · 1.608 personas con sobrepeso · dieta sola vs dieta + fuerza" · F1]*
 >
-> ¿Cómo progresas sin peso? Cuando hagas todas las series con 15 repeticiones limpias: uno, baja más lento; dos, pausa de dos segundos abajo; tres, una variante más difícil; cuatro, mochila con peso. Una cosa a la vez.
+> ¿Y qué pasó cuando lo probaron? Quienes añadieron fuerza protegieron mejor su músculo y perdieron más grasa.
 >
-> Un recordatorio honesto: si ves que tus piernas se hacen fáciles antes que tus brazos, es normal. Las piernas son más fuertes y el peso corporal les queda corto. Ahí la mochila hace falta.
+> Pero mira esto. *[PANTALLA: dos básculas, el mismo número]* El peso en la báscula fue prácticamente el mismo en los dos grupos. *(F1)*
+>
+> Lo repito, porque es la clave del vídeo. La fuerza no te hace pesar menos. Te cambia **de qué** pesas menos. Y por eso la báscula puede mentirte.
+>
+> *[PANTALLA: tarjeta de fuente · "New England Journal of Medicine, 2017 · 160 adultos mayores con obesidad · 6 meses · F2"]*
+>
+> ¿Otro ejemplo? Adultos mayores a dieta. Los que solo hicieron cardio perdieron un 5 % de masa magra. Los que hicieron cardio y fuerza, un 3 %. Los que solo hicieron fuerza, un 2 %. *(F2)* Ojo, eran personas mayores con obesidad, así que no vale tal cual para alguien de 25 años. Pero la dirección es la misma.
+>
+> Entonces, a entrenar fuerza y ya está, ¿no? No tan rápido. Hay dos mitos sobre esto que probablemente has oído esta semana.
 
-## [12:15–13:45] PARTE 6 · COMIDA, CARDIO Y LA BÁSCULA
+*Cliffhanger al siguiente bloque.*
 
-**PANTALLA:** calculadora con ejemplo para 80 kg. Después un mapa de pasos.
+## [4:00–5:45] PARTE 2 · DOS MITOS
+
+**PANTALLA:** dos tarjetas "MITO" que se rompen con sonido de cristal.
+
+> Mito uno: *"el músculo es un horno que quema calorías las 24 horas."*
+>
+> *[PANTALLA: "Músculo ≈ 13 kcal/kg/día · Grasa ≈ 4,5 kcal/kg/día · F3"]*
+>
+> Un kilo de músculo gasta unas 13 kilocalorías al día en reposo. Un kilo de grasa, unas 4,5. Esas cifras las comprobó un estudio de 2010 con 131 adultos sanos. *(F3)*
+>
+> Hagamos la cuenta. Ganar dos kilos de músculo, que te lleva meses, te suma unas **26 kilocalorías al día**. Casi nada.
+>
+> Entonces, ¿para qué conservar el músculo? No para "acelerar el metabolismo". Para que lo que pierdas sea grasa, para mantener la fuerza y para envejecer mejor.
+>
+> Mito dos: *"después de entrenar sigues quemando muchísimo, el efecto EPOC."*
+>
+> Existe. Pero es pequeño. Una revisión de 2006 calculó que supone entre un 6 y un 15 % del coste del propio ejercicio, y concluyó que la idea de que sirva para adelgazar es, en general, infundada. *(F4)* Esa revisión se centra sobre todo en ejercicio aeróbico; en fuerza hay pocos estudios.
+>
+> Si alguien te vende el EPOC como truco para comer lo que quieras, te está engañando.
+>
+> Pero queda la pregunta que seguro te estás haciendo: ¿todo esto vale sin pesas?
+
+## [5:45–7:15] PARTE 3 · ¿SIN PESAS?
+
+**PANTALLA:** flexión vs press de banca, lado a lado. Texto: "Lo que importa: cuánto te cuesta."
+
+> Respuesta corta: **sí, con una condición.** Que las series cuesten de verdad.
+>
+> *[PANTALLA: "21 estudios · series al fallo · cargas ligeras vs pesadas · F5"]*
+>
+> Un meta-análisis de 21 estudios comparó cargas ligeras y pesadas, siempre llevando las series al límite. El músculo creció de forma parecida. Lo único donde ganaron las cargas altas fue la fuerza máxima en una repetición. *(F5)*
+>
+> ¿Y con flexiones? Un ensayo con 18 hombres jóvenes comparó flexiones, ajustadas a la misma carga que un press de banca al 40 %, con el press. En ocho semanas, ganaron músculo y fuerza de forma parecida. *(F6)* Muestra pequeña, pero apunta en la misma dirección.
+>
+> Y ahora, **lo que no te cuentan los vídeos de "sin material".**
+>
+> Casi todos los estudios de fuerza durante una dieta se hacen con entrenamiento supervisado, en un gimnasio. Muy pocos, en casa. *(F1)*
+>
+> *[PANTALLA: tarjeta de fuente · "Nutrition & Metabolism, 2025 · ensayo piloto · 48 personas · 12 semanas en casa · F1b"]*
+>
+> De hecho, un ensayo piloto de 48 personas probó doce semanas de fuerza en casa durante una dieta. Mejoró la fuerza y la capacidad de levantarse de una silla… pero no cambió la masa magra ni la grasa. *(F1b)*
+>
+> ¿Significa que no funciona? No. Significa que la evidencia en casa es más pobre y que tienes que hacerlo bien. Y eso es justo lo que viene ahora.
+
+*Honestidad como recurso: se cuenta lo que el piloto en casa SÍ encontró y lo que no.*
+
+## [7:15–10:45] PARTE 4 · LOS 4 MOVIMIENTOS
+
+**PANTALLA:** demostración de cada uno, técnica en primer plano. Rótulo "Fácil / Medio / Difícil".
+
+> **Reto, ahora mismo.** Pausa el vídeo y haz diez flexiones con las manos en el borde de una mesa. Si las haces fácil, sigue leyendo; si no, ya sabes tu nivel. *[3 segundos de silencio con cuenta atrás en pantalla]*
+>
+> Vamos con los cuatro. Cada uno, con tres niveles, para que cueste pero sea posible.
+>
+> **Uno · Empuje: flexiones.** Fácil: manos en una mesa firme. Medio: en el suelo. Difícil: pies elevados en una silla. Baja en tres segundos, pausa uno abajo y sube.
+>
+> **Dos · Tracción: remo invertido.** Túmbate bajo una mesa **muy resistente**, agárrate al borde y llévate el pecho hacia ella. Antes, carga la mesa con tu peso poco a poco para comprobar que no se mueve. Si no tienes una mesa segura, haz el remo con una mochila cargada, inclinado hacia delante. Y olvida el truco de la sábana en la puerta: si se suelta, te la juegas.
+>
+> **Tres · Piernas: sentadilla búlgara.** Pie trasero en el sofá, bajas en tres segundos. Cuando te salgan quince sin esfuerzo, carga una mochila con libros. Sobrecarga gratis.
+>
+> **Cuatro · Cadena posterior y core: puente de glúteo a una pierna y plancha.** En la plancha, aprieta glúteos y abdomen.
+>
+> Y aquí va un mito que seguro has oído: *"las abdominales queman la grasa de la barriga."*
+>
+> *[PANTALLA: "13 estudios · 1.158 personas · 37 comparaciones · pierna entrenada vs no entrenada · F7"]*
+>
+> Un meta-análisis de 13 estudios no encontró reducción de grasa localizada al entrenar una zona. *(F7)* Algún ensayo pequeño dice lo contrario, pero el conjunto de la evidencia apunta a que la grasa sale de todo el cuerpo, no de donde tú aprietes.
+
+## [10:45–12:30] PARTE 5 · LA RUTINA
+
+**PANTALLA:** tabla semanal. Cronómetro.
+
+> Tres días a la semana, no consecutivos, unos 40 minutos.
+>
+> Cada movimiento: tres o cuatro series de ocho a quince repeticiones. Descansa uno o dos minutos. Con eso sumas unas nueve a doce series por semana en cada grupo muscular principal.
+>
+> ¿Cuántas series hacen falta? No hay una cifra mágica. Un meta-análisis vio que cada serie extra por músculo y semana se asociaba con algo más de crecimiento, en torno a un 0,4 %. Más volumen ayuda, hasta donde aguante tu recuperación. *(F9)*
+>
+> ¿Y hay que llegar al fallo? **No.** Un meta-análisis de 15 estudios en adultos jóvenes no vio diferencias significativas entre parar antes y llegar al límite. *(F8)* Por seguridad, detente una o dos repeticiones antes de fallar, con la técnica limpia.
+>
+> ¿Y cómo progresas sin peso? Cuando hagas todas las series con quince repeticiones limpias, cambia **una** cosa: baja más lento, pausa dos segundos abajo, pasa a una variante más difícil o añade una mochila.
+>
+> Un aviso honesto: si tus piernas se te hacen fáciles antes que tus brazos, es normal. El peso corporal les queda corto. Ahí la mochila hace falta.
+
+## [12:30–13:50] PARTE 6 · COMIDA, CARDIO Y LA BÁSCULA
+
+**PANTALLA:** calculadora con ejemplo para 80 kg. Después, mapa de pasos.
 
 > Sin comida, nada de esto funciona. Dos números.
 >
-> Uno, el ritmo. Una pérdida de entre el 0,5 y el 1 % de tu peso por semana es una recomendación común para conservar músculo. *(F10, certeza media: viene de revisiones y de un estudio con atletas, no de un ensayo con población general)* Si pesas 80 kg, eso es entre 400 y 800 gramos a la semana. Más rápido, no es mejor.
+> **Uno, el ritmo.** Una revisión de 2014 recomienda perder entre el 0,5 y el 1 % de tu peso por semana para conservar el músculo. *(F10)* Es una recomendación de expertos, no una norma probada en ensayos con población general. Si pesas 80 kilos, son entre 400 y 800 gramos a la semana. Más rápido no es mejor.
 >
-> Dos, la proteína. Los estudios apuntan a que alrededor de 1,6 gramos por kilo al día es el punto donde dejas de ganar más músculo con el entrenamiento, y que algo más, hasta unos 2,2, puede ser razonable cuando estás en déficit. *(F12)* Para 80 kg: entre 130 y 175 gramos al día. Si tienes enfermedad renal, consúltalo antes.
+> **Dos, la proteína.** Un meta-análisis de 49 estudios con personas que entrenaban vio que, por encima de unos 1,6 gramos por kilo al día, más proteína ya no añadía masa magra. *(F12)* Ojo: entrenaban, no estaban a dieta. En déficit, las revisiones suelen recomendar ir algo más arriba. Como orientación práctica: entre 1,6 y 2,2 gramos por kilo al día. Con 80 kilos, entre 130 y 175 gramos. Si tienes enfermedad renal, consúltalo antes.
 >
-> Y el cardio: no lo abandones. Caminar y moverse es bueno para la salud. La OMS recomienda entre 150 y 300 minutos de actividad moderada a la semana, además de fuerza. *(F13)* Y en un análisis de 47.000 adultos, más pasos se asociaban con menor mortalidad, pero la meta de 10.000 no tiene un respaldo tan claro. *(F14)* Mi mensaje no es "deja el cardio", sino "no dependas solo de él".
+> **Y el cardio, no lo abandones.** La OMS recomienda entre 150 y 300 minutos de actividad moderada a la semana y fuerza al menos dos días, con todos los grandes grupos musculares. *(F13)*
 >
-> Y ahora lo que te prometí. Durante las primeras semanas puedes ganar algo de músculo y perder grasa a la vez, y la báscula casi no se mueve. Mide la cintura, hazte una foto cada dos semanas y fíjate en cuánto levantas o cuántas repeticiones haces. Esa es la información real.
+> Y caminar cuenta. En un análisis de 47.000 adultos, quien más caminaba tenía casi la mitad de riesgo de morir durante el seguimiento. El beneficio se aplanaba hacia los 6.000–8.000 pasos al día a partir de los 60 años, y hacia los 8.000–10.000 en menores. Ojo: es un estudio observacional, muestra asociación, no causa. *(F14)* Mi mensaje no es "deja el cardio", sino "no dependas solo de él".
+>
+> **Y ahora, lo que te prometí al principio.** En las primeras semanas puedes ganar algo de músculo y perder grasa a la vez, y la báscula casi no se mueve. Por eso: mide tu cintura, hazte una foto cada dos semanas y apunta cuántas repeticiones haces. Esa es la información real.
 
-## [13:45–14:30] CIERRE
+## [13:50–14:30] CIERRE
 
 **PANTALLA:** texto "Fuerza 3×/semana · Déficit moderado · Proteína · Caminar".
 
-> Lo resumo en cuatro líneas. Fuerza tres días. Déficit moderado. Proteína suficiente. Y caminar.
+> Resumido: fuerza tres días, déficit moderado, proteína suficiente y caminar.
 >
-> Ni el músculo es un horno mágico ni el EPOC es un truco: la fuerza sirve para que lo que pierdas sea grasa y no músculo.
+> Ni el músculo es un horno mágico, ni el EPOC es un truco. La fuerza sirve para que lo que pierdas sea grasa y no músculo.
 >
-> Cuéntame en los comentarios qué movimiento se te hace más cuesta arriba y te preparo la variante para el próximo vídeo. Y si te sirvió, suscríbete, que cada semana miro un estudio y te digo qué vale y qué no.
+> Y volviendo a la báscula del principio: ahora ya sabes por qué a veces no se mueve cuando sí estás cambiando.
+>
+> Cuéntame en los comentarios qué movimiento se te hace más cuesta arriba y te preparo la variante para el próximo vídeo. Y si te sirvió, suscríbete: cada semana miro un estudio y te digo qué vale y qué no.
 
 ---
 
-## Qué cambié respecto a la versión anterior (y por qué)
+## Qué cambió respecto a v2 (cifras tras contrastar con PubMed)
 
-| Antes | Ahora | Motivo |
+| v2 | v3 | Qué se encontró |
 |---|---|---|
-| "Deja el cardio" | "Deja de hacer SOLO cardio" | El cardio es sano; el mensaje correcto es complementarlo. |
-| El músculo como horno | Se desmonta con cifras (F3) | La diferencia es de decenas de kcal. |
-| EPOC como pilar | Se presenta como efecto pequeño (F4) | Su magnitud es modesta y dependiente del método. |
-| "Sin material" equivalente al gimnasio | Se avisa de que la evidencia en casa es más débil (F1) | Casi todos los ensayos son supervisados. |
-| Remo con sábana en puerta | Mesa comprobada o mochila | Riesgo de caída/lesión. |
-| "Tonificar" | Eliminado | No tiene definición fisiológica. |
-| Sin gancho de retención | Bucle abierto de la báscula + giro del meta-análisis | Mejora la retención. |
-| Sin números para el espectador | Ejemplo para 80 kg | Más concreto. |
+| "Unas 10 series dan más crecimiento que menos de 5" | "Relación gradual: ~0,4 % más por serie extra; sin cifra mágica" | Schoenfeld 2017: con tres niveles (<5, 5–9, 10+) solo hubo **tendencia** (p = 0,074). El umbral de 10 no es firme. |
+| "Series a 1–3 repeticiones del fallo funcionan casi igual" | "No hace falta llegar al fallo (adultos jóvenes)" | 15 estudios: fuerza ES −0,09; hipertrofia ES 0,22 (IC −0,11 a 0,55), ambos no significativos. En entrenados, ligera ventaja del fallo (ES 0,15). |
+| EPOC: "decenas a 100–200 kcal" | EPOC = 6–15 % del coste de oxígeno del ejercicio | La cifra de kcal era de fuentes secundarias. La revisión de 2006 da el porcentaje. En fuerza hay pocos estudios. |
+| Piloto en casa (resumen de una tesis) | Datos del artículo publicado, *Nutr Metab* 2025 | n = 48, 12 semanas; mejora de función; composición sin cambios. |
+| Proteína: "1,6 g/kg es el punto de meseta" | Se aclara que eran personas entrenando, no a dieta; 1,6–2,2 como orientación | Morton 2018 estudió entrenamiento, no déficit. |
+| Pasos sin umbrales por edad | 6.000–8.000 (≥ 60) y 8.000–10.000 (< 60), con aviso observacional | Confirmado en Paluch 2022. |
+| OMS: frecuencia de fuerza sin confirmar | "Al menos dos días, todos los grandes grupos musculares" | Confirmado en el texto de la guía. |
+| Reducción localizada sin fuente directa | 13 estudios, 1.158 participantes, 37 comparaciones | Ramírez-Campillo et al., *Hum Mov* 2022. Hay ensayos pequeños que discrepan; se mencionan. |
+
+## Pasada de retención (nueva)
+
+- **Gancho con escena y giro** en vez de enunciado; tres variantes para A/B.
+- **Paradoja como bucle abierto:** "la fuerza no te hace pesar menos, y aun así funciona" se plantea a los 30 s y se resuelve en las Partes 1 y 6.
+- **Datos pesados fuera de la voz:** cada estudio sale en una tarjeta de pantalla (revista, año, n); la voz solo dice lo que cambia la conclusión y los avisos honestos.
+- **Cliffhangers entre bloques** al final de las Partes 1, 2 y 3.
+- **Reto a mitad** (diez flexiones) para romper el ritmo y comprobar el nivel.
+- **Callback final** a la báscula del principio.
+- **Frases más cortas**, segunda persona, preguntas retóricas, y un golpe de sonido en los dos giros clave.
 
 ## Pendiente de decidir (tuyo)
 
 1. ¿Quieres un aviso médico más largo en pantalla durante los primeros 10 segundos?
 2. ¿Llevas la rutina en una tabla descargable en la descripción?
-3. ¿Hacemos también un Short de 45 s con el giro "el peso no cambia"? Es el mejor gancho del vídeo.
-4. Antes de publicar: verificar en el texto completo las cifras marcadas en `fuentes.md` como "verificar texto completo".
+3. ¿Hacemos también un Short de 45 s con la paradoja de la báscula? Es el mejor gancho del vídeo.
+4. ¿Prefieres suavizar la proteína a solo "1,6 g/kg" (lo que tiene respaldo directo) y quitar el 2,2?
+
+## Lo que sigue sin estar 100 % cerrado (ver `fuentes.md`)
+
+- La proteína en déficit (1,6–2,2 g/kg) y el ritmo de pérdida de 0,5–1 % son orientaciones de expertos, no ensayos.
+- El estudio de flexiones es pequeño (18 hombres jóvenes) y su resumen repite valores idénticos de pectoral en ambos grupos: posible errata. Mira el texto completo antes de enseñar esas cifras en pantalla.
+- F11 (déficit calórico) no lleva fuente específica todavía.
