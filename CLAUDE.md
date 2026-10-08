@@ -18,3 +18,9 @@ las rutas relativas de cada skill se refieren a esa carpeta (cada skill lo indic
 - Comandos del kit 02: `/kit-agente-whatsapp-setup`, `/whatsapp-personaliza`, `/whatsapp-deploy`.
 - Cada kit tiene su `/kit-<nombre>-setup` para instalar dependencias.
 - Los permisos amplios de cada kit (`curl`, `python`, `powershell`) NO se activaron globalmente: Claude pedirá confirmación.
+
+# Guiones de vídeo (La Ciencia de la Salud)
+
+- Agente `guionista-viral`: escribe y mejora guiones que retienen (gancho, bucles abiertos, ritmo por minuto).
+- Agente `especialista-salud-fitness`: verifica con fuentes primarias cualquier afirmación de ejercicio, fisiología o alimentación y le pone nivel de certeza.
+- Los guiones viven en `guiones/<tema>/` con `guion.md` y `fuentes.md`. Ningún guion se da por bueno sin su tabla de fuentes.
