@@ -47,8 +47,7 @@ def shot(e, idx, n, plano):
     elif t == "pan":
         _, zz, fx0, fy, fx1 = plano; z = f"{zz}"; fx = f"({fx0}+({fx1}-{fx0})*on/{n})"
     elif t == "fijo": pass
-    sh = "+8*sin(on/17)" if t != "fijo" else ""        # temblor de cámara muy suave
-    sv = "+6*sin(on/23+1)" if t != "fijo" else ""
+    sh = sv = ""                                        # sin temblor de cámara (el usuario lo percibía como imagen que tiembla)
     x = f"max(0,min(iw-iw/zoom,{fx}*iw-iw/zoom/2{sh}))"; y = f"max(0,min(ih-ih/zoom,{fy}*ih-ih/zoom/2{sv}))"
     vf = (f"scale={SS}:{SS*9//16}:flags=lanczos,zoompan=z='{z}':x='{x}':y='{y}':d={n}:s=1920x1080:fps={FPS},"
           f"vignette=PI/6,format=yuv420p")
