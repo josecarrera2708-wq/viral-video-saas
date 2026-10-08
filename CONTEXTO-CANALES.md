@@ -39,3 +39,8 @@
 - Reglas para juzgar (referencias habituales, no oficiales; cada vídeo a los 7 días y con 1.000 impresiones): CTR <2 % cambiar miniatura, 2-5 % normal, >5 % muy bueno; mirar la caída en los primeros 30 s de la retención.
 - El 14 oct pedir al usuario capturas: retención de cada vídeo, fuentes de tráfico, impresiones y CTR por vídeo.
 - vidIQ: sin canal conectado y 10 créditos; no gastarlos en análisis.
+
+## Vídeo 3 en marcha (8 oct 2026): frecuencia de entrenamiento (3, 4 o 6 días)
+- Idea sugerida por la IA de YouTube Studio. Guion: guiones/frecuencia-guion-01.md (11 secciones, 99 bloques, ~17 min estimados), diseñado para retención: apuesta Mateo contra Diego, juego de verdadero o falso con respuestas repartidas, giro 2016 -> 2019 hacia el minuto 4, el error prometido a mitad del vídeo y "tu semana ideal" al final.
+- Ideas de miniatura de YouTube (4) guardadas en video/frecuencia-01/marca/idea_youtube_1..4.webp. Ojo: la 4 (3 días fuerte, 6 días agotado) y el título "el grave error de entrenar 6 días" prometen algo que la evidencia no dice; la 2 (escalera con "LA VERDAD") es la más honesta.
+- Siguiente: aprobar guion -> voz (gen_voz.py + revisar_voz.py) -> 40 escenas en calidad media -> montaje -> título, descripción y miniatura. Poner tarjeta al vídeo 1 cuando el guion lo nombra (sec 3) y los últimos 20 s con fondo limpio para la pantalla final.
