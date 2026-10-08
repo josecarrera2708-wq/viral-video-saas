@@ -39,8 +39,8 @@ Imagen: Top-down bird's-eye shot of six drinking glasses lined up on a wooden gy
 **ESCENA 7**
 Locución: sección 3
 Ref: none
-Plano: Plano general isométrico, corte anatómico
-Imagen: Wide isometric cartoon illustration of a busy factory inside a giant muscle: small workers in orange helmets, conveyor belts carrying glowing orange blocks, pipes and steam, warm industrial lighting with teal shadows, many charming details.
+Plano: Plano detalle, ligeramente picado
+Imagen: Close-up of a metal conveyor belt carrying glowing orange cubes toward the camera in a warm teal-lit factory, a worker in an orange helmet blurred in the background, shallow depth of field.
 
 **ESCENA 8**
 Locución: sección 3
