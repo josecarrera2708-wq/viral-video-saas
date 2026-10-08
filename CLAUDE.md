@@ -18,3 +18,11 @@ las rutas relativas de cada skill se refieren a esa carpeta (cada skill lo indic
 - Comandos del kit 02: `/kit-agente-whatsapp-setup`, `/whatsapp-personaliza`, `/whatsapp-deploy`.
 - Cada kit tiene su `/kit-<nombre>-setup` para instalar dependencias.
 - Los permisos amplios de cada kit (`curl`, `python`, `powershell`) NO se activaron globalmente: Claude pedirá confirmación.
+
+# Guiones de vídeo (La Ciencia de la Salud)
+
+- Agente `guionista-viral`: escribe y mejora guiones que retienen (gancho, bucles abiertos, ritmo por minuto).
+- Agente `especialista-salud-fitness`: verifica con fuentes primarias cualquier afirmación de ejercicio, fisiología o alimentación y le pone nivel de certeza.
+- Skills de apoyo (revisados, con origen y commit fijados en su `ORIGEN.md`): `youtube-script-writer` (estructura de guion que retiene) y `pubmed-search` (consulta de PubMed; ejecutar antes `bash .claude/skills/pubmed-search/instalar.sh`).
+- Los guiones viven en `guiones/<tema>/` con `guion.md` y `fuentes.md`. Ningún guion se da por bueno sin su tabla de fuentes.
+- Voz y música oficiales del canal (vídeo 3 en adelante): voz Alejandro (Cartesia `sonic-3.5`, `ATEMPO=1.08`, sin EQ ni cambio de tono) con `herramientas/gen_voz.py`; música CC0 "Motivation To Wake Up" bajita de fondo con `herramientas/mezcla_fondo.py`. Convertir un guion al formato de voz: `herramientas/guion_a_voz.py`. Detalle y comandos en `video/quemar-grasa-01/voz_cache/LEEME.md`.
