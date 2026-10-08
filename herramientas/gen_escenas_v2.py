@@ -41,7 +41,7 @@ for n in nums:
     ok = False
     for intento in range(2):
         try:
-            open(f, "wb").write(llamar(prompt, refs)); ok = True; hechas += 1; print(n, Q, "ok", "(ref)" if refs else "", flush=True); break
+            open(f + ".tmp", "wb").write(llamar(prompt, refs)); os.replace(f + ".tmp", f); ok = True; hechas += 1; print(n, Q, "ok", "(ref)" if refs else "", flush=True); break
         except Exception as e:
             print(n, "error", str(e)[:160], flush=True); time.sleep(10)
     fallos = 0 if ok else fallos + 1
