@@ -15,7 +15,7 @@ NO decidas cuántos días entrenar sin ver este vídeo
 MINIATURA HECHA: video/frecuencia-01/marca/miniatura_frecuencia_1280x720.jpg (texto "¿CUÁNTOS DÍAS DEBO ENTRENAR?", escena 18, herramientas/mini_frecuencia.py). Opción anterior: idea 2 de YouTube (escalera con "LA VERDAD") en video/frecuencia-01/marca/idea_youtube_2.webp, con texto grande en Anton: "¿3, 4 O 6?" (3-4 palabras como máximo, que no repita el título) y la cara pensativa del protagonista (escena 18, ya generada). Si se hace con nuestras imágenes: protagonista a la izquierda, números 3 / 4 / 6 a la derecha y el 4 resaltado en amarillo. Si Studio ofrece "Prueba y compara" para miniaturas, probar 2 versiones.
 
 ## DESCRIPCIÓN
-(Versión corta, ~1.700 caracteres. Lo que se ve sin desplegar son las 2 primeras líneas.)
+(Versión mínima pedida por el usuario: sin fuentes y sin nota de IA. Las fuentes siguen en guiones/frecuencia-guion-01.md. La marca de contenido sintético se activa en los ajustes de subida de Studio, no en la descripción.)
 
 ¿Entrenar 6 días te da el doble de músculo que entrenar 3? Con estudios, sin humo: cuántos días entrenar de verdad y el número que casi nadie cuenta.
 
@@ -38,15 +38,7 @@ Mateo entrena 3 días. Diego entrena 6. Seis meses después, ¿quién tiene más
 📌 Reto en casa, 50 lagartijas al día: [ENLACE VÍDEO 2]
 🔔 Suscríbete: un vídeo nuevo de ciencia del entrenamiento cada semana.
 
-📚 FUENTES (PubMed):
-• Schoenfeld et al., Sports Med 2016, frecuencia de entrenamiento (PMID 27102172)
-• Schoenfeld et al., J Sports Sci 2019, veces por semana por músculo (PMID 30558493)
-• Schoenfeld et al., J Sports Sci 2017, volumen semanal y masa muscular (PMID 27433992)
-• Iversen et al., Sports Med 2021, entrenar con poco tiempo (PMID 34125411)
-Cifras = promedios de estudios cortos en adultos jóvenes; mejor pista disponible, no una ley.
-
 ⚠️ Contenido educativo; no sustituye a un profesional de la salud. Si tienes una lesión o condición médica, consulta antes de cambiar tu rutina.
-🤖 Voz e imágenes generadas con IA. Música CC0: "Motivation To Wake Up".
 
 #entrenamiento #hipertrofia #ganarmusculo
 
