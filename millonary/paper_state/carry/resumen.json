@@ -1,17 +1,17 @@
 {
- "generado": "2026-10-08 06:26:02.109021+00:00",
+ "generado": "2026-10-08 07:22:24.684874+00:00",
  "inicio": "2026-10-03 00:00:00+00:00",
- "ultima_vela": "2026-10-06 20:00:00+00:00",
- "equity": 998.7644662487941,
- "retorno": -0.0012355337512058862,
- "caida_max": 0.0002139736487529742,
+ "ultima_vela": "2026-10-07 20:00:00+00:00",
+ "equity": 998.4144502551335,
+ "retorno": -0.0015855497448664657,
+ "caida_max": 0.0004168733174519934,
  "contado_btc": 0.011,
  "perpetuo_btc": -0.011,
- "nocional_usdt": 941.0492299999999,
+ "nocional_usdt": 916.53991,
  "dentro": true,
- "funding_cobrado_usdt": 0.4512945493359199,
- "marcas_funding": 12,
- "tasas_no_definitivas": 12,
+ "funding_cobrado_usdt": 0.12899855567519672,
+ "marcas_funding": 15,
+ "tasas_no_definitivas": 15,
  "ordenes": [
   {
    "bar": "2026-10-03 00:00:00+00:00",
@@ -31,12 +31,6 @@
   }
  ],
  "eventos": [
-  {
-   "id": 28,
-   "ts": "2026-10-06 04:01:00+00:00",
-   "level": "ERROR",
-   "msg": "datos incompletos en 2026-10-06 00:00:00+00:00: contado y perpetuo deben tener la misma vela"
-  },
   {
    "id": 29,
    "ts": "2026-10-06 04:01:00+00:00",
@@ -90,20 +84,21 @@
    "ts": "2026-10-07 04:01:00+00:00",
    "level": "ERROR",
    "msg": "datos incompletos en 2026-10-07 00:00:00+00:00: contado y perpetuo deben tener la misma vela"
+  },
+  {
+   "id": 38,
+   "ts": "2026-10-07 04:01:00+00:00",
+   "level": "INFO",
+   "msg": "AJUSTE_FUNDING +0.285211 USDT: tasa provisional sustituida por una mejor (real o estimada)"
   }
  ],
  "cartera": {
   "nucleo_usdt": 1012.7976480241741,
-  "carry_usdt": 998.7644662487941,
-  "total_usdt": 2011.5621142729683,
+  "carry_usdt": 998.4144502551335,
+  "total_usdt": 2011.2120982793076,
   "capital_inicial_usdt": 2000.0,
   "nota": "Dos subcuentas de 1.000 USDT: el núcleo (prueba oficial, sin tocar) y el carry. El núcleo empezó el 2026-09-29; el carry el 2026-10-03."
  },
- "velas_nuevas": 0,
- "problemas": [
-  {
-   "status": "datos_no_fiables",
-   "bar": "2026-10-07 00:00:00+00:00"
-  }
- ]
+ "velas_nuevas": 6,
+ "problemas": []
 }
