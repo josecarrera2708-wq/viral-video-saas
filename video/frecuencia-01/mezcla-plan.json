@@ -1,0 +1,86 @@
+{
+ "voz": "voz.mp3",
+ "tiempos": "tiempos.json",
+ "bpm": 120,
+ "compas": 4,
+ "cola": 4.0,
+ "fundido": 4.0,
+ "musica_lufs": -17.5,
+ "duck_umbral": 0.03,
+ "duck_ratio": 2.5,
+ "duck_ataque": 30,
+ "duck_suelta": 500,
+ "efectos_lufs": -26,
+ "musica": [
+  {
+   "archivo": "musica/omw-to-beat-the-big-bad.ogg",
+   "compases": 43,
+   "desde_seccion": 1
+  },
+  {
+   "archivo": "musica/sunday-storm.mp3",
+   "compases": 128,
+   "desde_seccion": 4
+  },
+  {
+   "archivo": "musica/party-sector.mp3",
+   "compases": 48,
+   "desde_seccion": 9
+  },
+  {
+   "archivo": "musica/omw-to-beat-the-big-bad.ogg",
+   "compases": 43,
+   "desde_seccion": 10
+  }
+ ],
+ "efectos": [
+  {
+   "seccion": 2,
+   "archivo": "../efectos/pop.mp3"
+  },
+  {
+   "seccion": 3,
+   "archivo": "../efectos/whoosh.mp3"
+  },
+  {
+   "seccion": 4,
+   "archivo": "../efectos/disco.mp3",
+   "gain": 2,
+   "alinear_pico": false
+  },
+  {
+   "seccion": 5,
+   "archivo": "../efectos/whoosh.mp3"
+  },
+  {
+   "seccion": 6,
+   "archivo": "../efectos/disco.mp3",
+   "gain": 0,
+   "alinear_pico": false
+  },
+  {
+   "seccion": 7,
+   "archivo": "../efectos/whoosh.mp3"
+  },
+  {
+   "seccion": 8,
+   "archivo": "../efectos/pop.mp3"
+  },
+  {
+   "seccion": 9,
+   "archivo": "../efectos/latido.mp3",
+   "gain": 3,
+   "alinear_pico": false
+  },
+  {
+   "seccion": 10,
+   "archivo": "../efectos/whoosh.mp3"
+  },
+  {
+   "seccion": 11,
+   "archivo": "../efectos/exito.mp3",
+   "gain": -1,
+   "alinear_pico": false
+  }
+ ]
+}

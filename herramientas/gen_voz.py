@@ -1,4 +1,4 @@
-import os, re, json, subprocess, requests, sys
+import os, re, json, math, subprocess, requests, sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.environ.get("GUION", f"{BASE}/guiones/musculo-guion-02.md")
 OUT = os.environ.get("OUT_DIR", f"{BASE}/video/musculo-01")
@@ -9,6 +9,11 @@ PAUSA_SECCION = float(os.environ.get("PAUSA_SECCION", "0"))  # pausa extra al ca
 SPEED = float(os.environ.get("VOICE_SPEED", "1.05"))
 PAUSA = float(os.environ.get("PAUSA", "0.55"))
 PAUSA_MAX = float(os.environ.get("PAUSA_MAX", "0.4"))  # tope de pausa interna (s)
+BEAT = float(os.environ.get("BEAT", "0"))  # periodo del pulso de la música (s, tiempo FINAL); con rejilla cada frase arranca en un pulso. 0 = sin rejilla
+BAR = int(os.environ.get("BAR", "4"))  # pulsos por compás: las secciones nuevas arrancan en el primer pulso de un compás
+PAUSA_MIN = float(os.environ.get("PAUSA_MIN", "0.2"))  # con rejilla: pausa mínima entre frases (s, tiempo final)
+PAUSA_SECCION_MIN = float(os.environ.get("PAUSA_SECCION_MIN", "0.5"))  # con rejilla: pausa mínima al cambiar de sección
+VOZ_AF = os.environ.get("VOZ_AF", "")  # filtros ffmpeg para la voz antes del atempo (tono, ecualización...)
 ATEMPO = float(os.environ.get("ATEMPO", "1.0"))  # aceleración final de toda la voz sin cambiar el tono (sonic-3.5 ignora speed); los tiempos se reescalan
 os.makedirs(TMP, exist_ok=True)
 txt = open(SRC, encoding="utf-8").read()
@@ -59,14 +64,29 @@ subprocess.run(["ffmpeg","-y","-loglevel","error","-f","lavfi","-i","anullsrc=r=
 silsec = f"{TMP}/silsec.wav"
 subprocess.run(["ffmpeg","-y","-loglevel","error","-f","lavfi","-i","anullsrc=r=44100:cl=mono","-t",str(max(PAUSA_SECCION,0.01)),"-ar","44100",silsec],check=True)
 t0, tiempos, lista = 0.0, [], []
+def silencio(seg):
+    f = f"{TMP}/s_{int(round(seg*1000)):06d}.wav"
+    if not os.path.exists(f):
+        subprocess.run(["ffmpeg","-y","-loglevel","error","-f","lavfi","-i","anullsrc=r=44100:cl=mono","-t",f"{seg:.4f}","-ar","44100",f],check=True)
+    return f
 for i, (n, t) in enumerate(bloques):
-    if PAUSA_SECCION and i and n != bloques[i-1][0]:
-        lista.append(silsec); t0 += PAUSA_SECCION
     f = limpiar(tts(i, t)); d = dur(f)
+    if BEAT:   # rejilla: la frase arranca en el siguiente pulso (o primer pulso de compás si abre sección), respetando la pausa mínima
+        nueva = i and n != bloques[i-1][0]
+        if i:
+            minimo = t0 / ATEMPO + (PAUSA_SECCION_MIN if nueva else PAUSA_MIN)
+            malla = BEAT * BAR if nueva else BEAT
+            ini_f = math.ceil(minimo / malla - 1e-9) * malla
+            hueco = ini_f * ATEMPO - t0
+            if hueco > 0.001: lista.append(silencio(hueco)); t0 += hueco
+    elif PAUSA_SECCION and i and n != bloques[i-1][0]:
+        lista.append(silsec); t0 += PAUSA_SECCION
     tiempos.append({"seccion": n, "texto": t, "inicio": round(t0, 2), "fin": round(t0 + d, 2)})
-    lista += [f, sil]; t0 += d + PAUSA
+    lista.append(f); t0 += d
+    if not BEAT: lista.append(sil); t0 += PAUSA
 open(f"{TMP}/lista.txt", "w").write("".join(f"file '{x}'\n" for x in lista))
-subprocess.run(["ffmpeg","-y","-loglevel","error","-f","concat","-safe","0","-i",f"{TMP}/lista.txt"] + (["-af", f"atempo={ATEMPO}"] if ATEMPO != 1.0 else []) + ["-c:a","libmp3lame","-b:a","128k",f"{OUT}/voz.mp3"],check=True)
+cadena = ",".join(x for x in [VOZ_AF, f"atempo={ATEMPO}" if ATEMPO != 1.0 else ""] if x)
+subprocess.run(["ffmpeg","-y","-loglevel","error","-f","concat","-safe","0","-i",f"{TMP}/lista.txt"] + (["-af", cadena] if cadena else []) + ["-c:a","libmp3lame","-b:a","128k",f"{OUT}/voz.mp3"],check=True)
 if ATEMPO != 1.0:
     for x in tiempos: x["inicio"] = round(x["inicio"] / ATEMPO, 2); x["fin"] = round(x["fin"] / ATEMPO, 2)
     t0 /= ATEMPO

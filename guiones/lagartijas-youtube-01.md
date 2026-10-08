@@ -45,7 +45,8 @@ video/lagartijas-01/marca/miniatura_lagartijas_C_1280x720.jpg
 #lagartijas #ejercicioencasa #fitness
 
 ## ETIQUETAS
-lagartijas, flexiones de pecho, 50 lagartijas al día, lagartijas 90 días, ejercicio en casa, entrenamiento sin equipo, rutina sin gimnasio, ganar músculo en casa, cuerpo con peso corporal, calistenia para principiantes, lagartijas para principiantes, cómo hacer lagartijas, resultados lagartijas, reto 90 días, ejercicio sin gimnasio
+(21 etiquetas, 498 de 500 caracteres; separadas por comas, pegar tal cual en Studio)
+lagartijas, flexiones de pecho, 50 lagartijas al día, lagartijas 90 días, reto 90 días, ejercicio en casa, ejercicio sin gimnasio, lagartijas para principiantes, cómo hacer lagartijas, cuántas lagartijas al día, ganar músculo en casa, entrenamiento sin equipo, rutina sin gimnasio, La Ciencia de la Salud, reto de lagartijas, resultados lagartijas, transformación corporal, calistenia para principiantes, calistenia en casa, entrenamiento con peso corporal, hipertrofia muscular
 
 ## COMENTARIO FIJADO
 💬 ¿Cuántas lagartijas haces hoy? Sé honesto, aquí nadie juzga 😉 Si estás empezando, escribe tu número y dentro de 30 días volvemos a este comentario para ver cuánto mejoraste. Y si el vídeo te sirvió, mándaselo a alguien que diga que no tiene tiempo ni gimnasio 💪
