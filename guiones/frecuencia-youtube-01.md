@@ -1,9 +1,9 @@
 # Paquete YouTube: frecuencia-01 (listo para copiar y pegar)
 
 ## TÍTULO (elegido)
-¿3, 4 o 6 días? Cuántos días entrenar para ganar músculo
+NO decidas cuántos días entrenar sin ver este vídeo
 
-(56 caracteres: se ve completo en móvil y en buscador). Por qué: la frase exacta que la gente escribe ("cuántos días entrenar para ganar músculo") va al principio; "3, 4 o 6" crea la duda de elegir, que es la misma duda del espectador; y es 100 % cierto con el contenido (el vídeo responde cuál elegir y por qué el número que importa no son los días). No promete resultados.
+(DECIDIDO por el usuario el 8 oct; antes se propuso "¿3, 4 o 6 días? Cuántos días entrenar para ganar músculo", que queda como alternativa para probar. El título elegido tiene 51 caracteres. Texto del análisis original, referido al título anterior: 56 caracteres: se ve completo en móvil y en buscador). Por qué: la frase exacta que la gente escribe ("cuántos días entrenar para ganar músculo") va al principio; "3, 4 o 6" crea la duda de elegir, que es la misma duda del espectador; y es 100 % cierto con el contenido (el vídeo responde cuál elegir y por qué el número que importa no son los días). No promete resultados.
 
 ### Alternativas (para probar si el CTR del primero es bajo, no antes de 1.000 impresiones)
 - Entrenar 6 días NO es el doble de músculo: esto sí importa (58): más polémico y también cierto: el vídeo dice que con el mismo trabajo semanal no hay doble.
@@ -12,7 +12,7 @@
 - Evitar: "El grave error de entrenar 6 días" (la evidencia no dice que sea un error) y cualquier "rápido" o "en X semanas".
 
 ## MINIATURA
-Opción recomendada: idea 2 de YouTube (escalera con "LA VERDAD") en video/frecuencia-01/marca/idea_youtube_2.webp, con texto grande en Anton: "¿3, 4 O 6?" (3-4 palabras como máximo, que no repita el título) y la cara pensativa del protagonista (escena 18, ya generada). Si se hace con nuestras imágenes: protagonista a la izquierda, números 3 / 4 / 6 a la derecha y el 4 resaltado en amarillo. Si Studio ofrece "Prueba y compara" para miniaturas, probar 2 versiones.
+MINIATURA HECHA: video/frecuencia-01/marca/miniatura_frecuencia_1280x720.jpg (texto "¿CUÁNTOS DÍAS DEBO ENTRENAR?", escena 18, herramientas/mini_frecuencia.py). Opción anterior: idea 2 de YouTube (escalera con "LA VERDAD") en video/frecuencia-01/marca/idea_youtube_2.webp, con texto grande en Anton: "¿3, 4 O 6?" (3-4 palabras como máximo, que no repita el título) y la cara pensativa del protagonista (escena 18, ya generada). Si se hace con nuestras imágenes: protagonista a la izquierda, números 3 / 4 / 6 a la derecha y el 4 resaltado en amarillo. Si Studio ofrece "Prueba y compara" para miniaturas, probar 2 versiones.
 
 ## DESCRIPCIÓN
 ¿Entrenar 6 días te da el doble de músculo que entrenar 3? Te lo explico con estudios, sin humo, y te digo cuál es el número que de verdad importa.
