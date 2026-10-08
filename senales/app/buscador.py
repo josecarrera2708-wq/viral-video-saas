@@ -50,7 +50,16 @@ NEW_MIN_MC = 1_000_000    # ...que ya valen al menos esto
 EARLY_MC = 100_000        # «MC muy bajo»: compras hechas antes de que el token valiera esto
 EARLY_X = 5               # acierto: después el token llegó a x5 desde su precio de compra
 NEW_PER_RUN = int(os.environ.get("SENALES_NEW", 8))           # tokens recién nacidos que se procesan en cada vuelta
-ORIGIN = {"list": "compra antes de los listados", "new": "compra recién nacidas a MC muy bajo"}
+# Tercera categoría (lo que recomiendan los estudios de copy trading: las copiables compran poco, a MC medio y aguantan):
+# compradores de esos mismos tokens YA MIGRADOS, con MC entre MID_MIN_MC y un tercio de su máximo, y compras pequeñas
+# (su compra casi no mueve el precio, así que el bot a 1 s entra a su precio). Acierto: el token hizo x3+ después.
+MID_MIN_MC = 300_000
+MID_X = 3
+MID_USD = (100, 3000)     # compra pequeña (en $)
+MID_WINDOWS = 6           # ventanas de 20 min de la cinta repartidas entre que pasa MID_MIN_MC y su máximo
+MID_PER_RUN = int(os.environ.get("SENALES_MID", 4))           # tokens que se procesan en cada vuelta
+ORIGIN = {"list": "compra antes de los listados", "new": "compra recién nacidas a MC muy bajo",
+          "mid": "compra pequeña a MC medio (ya migrados)"}
 C = httpx.Client(headers=UA, timeout=30, follow_redirects=True)
 CACHE = os.path.join(db.DATA, "cache")   # historiales y velas ya descargados: si la vuelta se corta, no se repiten
 os.makedirs(CACHE, exist_ok=True)
@@ -249,6 +258,35 @@ def early_buyers(mint, t0, supply):
         a[2] = ts(x) if a[2] is None else min(a[2], ts(x))
     return {o: {"usd": round(u), "x": round(ath / (u / q), 1), "mc": round(supply * u / q), "t": int(t1)}
             for o, (u, q, t1) in agg.items() if q > 0}
+
+
+def mid_buyers(mint, t0, supply):
+    """Quién compró con compra pequeña cuando el token ya valía ≥MID_MIN_MC y aún estaba a un tercio o menos de su
+    máximo (que llegó después). Muestra de MID_WINDOWS ventanas de 20 min de la cinta en ese tramo."""
+    path = launch_path(mint, t0)
+    if not path:
+        return {}
+    i_ath = max(range(len(path)), key=lambda i: path[i][4])   # máximo por cierre: un pico suelto (mecha) no cuenta
+    ath = path[i_ath][4]
+    ok = [k for k in path[:i_ath] if k[4] * supply >= MID_MIN_MC and k[4] * MID_X <= ath]
+    if not ok:
+        return {}
+    a, b = ok[0][0], min(ok[-1][0] + 900, ok[0][0] + 7 * 86400)
+    step = max(1200, (b - a) / MID_WINDOWS)
+    agg = {}
+    for i in range(MID_WINDOWS):
+        w0 = a + i * step
+        if w0 >= b:
+            break
+        for x in chunk(mint, w0, w0 + 1200):
+            p = x.get("usdPrice") or 0
+            if x.get("isMev") or x["type"] != "buy" or not p or not MID_USD[0] <= x["usdVolume"] <= MID_USD[1] \
+                    or p * supply < MID_MIN_MC or p * MID_X > ath or {"sniper", "bundler", "dev"} & set(x.get("holderTags") or []):
+                continue
+            o = x["traderAddress"]
+            if o not in agg or ts(x) < agg[o]["t"]:
+                agg[o] = {"usd": round(x["usdVolume"]), "x": round(ath / p, 1), "mc": round(p * supply), "t": int(ts(x))}
+    return agg
 
 
 # ---------- 4-5. perfil e historial de una wallet ----------
@@ -806,6 +844,19 @@ def main():
         db.x("update newborn set done=1, buyers=? where mint=?", (len(b), tk["mint"]))
         log(f"{tk['sym']} (recién nacido): {len(b)} compradores con MC < {EARLY_MC:,}")
 
+    db.x("create table if not exists mid(addr text, mint text, usd real, x real, mc real, t integer, primary key(addr, mint))")
+    db.x("create table if not exists mid_done(mint text primary key, buyers integer, t integer)")
+    for tk in db.q("select * from newborn where mint not in (select mint from mid_done) order by t0 desc limit ?", (MID_PER_RUN,)):
+        try:
+            b = mid_buyers(tk["mint"], tk["t0"], tk["supply"])
+        except Exception as e:
+            log(f"{tk['sym']} (MC medio) error {e}")
+            continue
+        db.xm("insert or replace into mid(addr, mint, usd, x, mc, t) values(?,?,?,?,?,?)",
+              [(o, tk["mint"], v["usd"], v["x"], v["mc"], v["t"]) for o, v in b.items()])
+        db.x("insert or replace into mid_done(mint, buyers, t) values(?,?,?)", (tk["mint"], len(b), int(time.time())))
+        log(f"{tk['sym']} (MC medio): {len(b)} compradores pequeños entre {MID_MIN_MC:,} y un tercio de su máximo")
+
     followed = {r["addr"] for r in db.q("select addr from wallets")}
     skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or (found > ? and "
                                     "json_extract(detail, '$.perfil.faltan') is null)", (int(time.time()) - 14 * 86400,))}
@@ -813,6 +864,8 @@ def main():
                   "group by addr having n>=? order by n desc, u desc", (MIN_BUY_USD, MIN_X, MIN_HITS))
     hits_n = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from early where x>=? "
                   "group by addr having n>=2 order by n desc, u desc", (EARLY_X,))
+    hits_m = db.q("select addr, count(*) n, group_concat(mint) mints, sum(usd) u from mid where x>=? "
+                  "group by addr having n>=2 order by n desc, u", (MID_X,))
     leads = db.q("select addr, src, evidence from leads where addr not in (select addr from candidates where "
                  "json_extract(detail, '$.perfil.faltan') is null) order by prio desc")   # las de historial incompleto se reintentan
     hits_k = [{"addr": r["addr"], "n": 0, "mints": "", "u": 0} for r in leads if r["src"] == "kol"]
@@ -823,7 +876,7 @@ def main():
     # por grupos, de más a menos wallets cercanas al corte por cada una mirada (pizarra/datos: smartMoney 8,1%, top traders
     # x5 6,2%, antes de listados 5,5%; recién nacidas ~1%; traders famosos pasan a 0 s pero caen a 1 s): dentro de cada
     # grupo, una de cada categoría por turnos; un grupo no empieza hasta que se acaba el anterior
-    tiers = [(("smart", hits_s), ("x5", hits_x), ("list", hits_l), ("fund", hits_f)), (("new", hits_n),), (("kol", hits_k),)]
+    tiers = [(("mid", hits_m), ("smart", hits_s), ("x5", hits_x), ("list", hits_l), ("fund", hits_f)), (("new", hits_n),), (("kol", hits_k),)]
     tiers = [[[dict(h, src=src) for h in hits if h["addr"] not in followed and h["addr"] not in skip] for src, hits in tier]
              for tier in tiers]
     # primero se vuelven a medir las de mucho acierto que se midieron con una versión anterior del corte
@@ -852,7 +905,7 @@ def main():
         pool.append(h)
     log(f"antes de listados: {len(hits_l)} wallets con {MIN_HITS}+ aciertos · recién nacidas: {len(hits_n)} con 2+ aciertos x{EARLY_X} · "
         f"traders famosos: {len(hits_k)} · financiadas por exchange: {len(hits_f)} · smart money de Jupiter: {len(hits_s)} · "
-        f"top traders x5: {len(hits_x)}; "
+        f"top traders x5: {len(hits_x)} · MC medio (compras pequeñas): {len(hits_m)}; "
         f"pendientes {len(pool)} ({len(redo)} se vuelven a medir); se miden hasta {WALLETS_PER_RUN} que no sean bots")
     passed = measured = checked = 0
     for h in pool:
