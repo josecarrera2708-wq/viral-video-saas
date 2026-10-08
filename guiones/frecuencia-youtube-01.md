@@ -15,21 +15,11 @@ NO decidas cuántos días entrenar sin ver este vídeo
 MINIATURA HECHA: video/frecuencia-01/marca/miniatura_frecuencia_1280x720.jpg (texto "¿CUÁNTOS DÍAS DEBO ENTRENAR?", escena 18, herramientas/mini_frecuencia.py). Opción anterior: idea 2 de YouTube (escalera con "LA VERDAD") en video/frecuencia-01/marca/idea_youtube_2.webp, con texto grande en Anton: "¿3, 4 O 6?" (3-4 palabras como máximo, que no repita el título) y la cara pensativa del protagonista (escena 18, ya generada). Si se hace con nuestras imágenes: protagonista a la izquierda, números 3 / 4 / 6 a la derecha y el 4 resaltado en amarillo. Si Studio ofrece "Prueba y compara" para miniaturas, probar 2 versiones.
 
 ## DESCRIPCIÓN
-¿Entrenar 6 días te da el doble de músculo que entrenar 3? Te lo explico con estudios, sin humo, y te digo cuál es el número que de verdad importa.
+(Versión corta, ~1.700 caracteres. Lo que se ve sin desplegar son las 2 primeras líneas.)
 
-💪 Mateo entrena 3 días. Diego entrena 6. Pasan seis meses: ¿quién tiene más músculo? La respuesta no es la que crees, y tiene que ver con un número que casi nadie cuenta.
+¿Entrenar 6 días te da el doble de músculo que entrenar 3? Con estudios, sin humo: cuántos días entrenar de verdad y el número que casi nadie cuenta.
 
-👇 En este vídeo vas a ver:
-✅ Por qué "entrenar seis días" es como decir "tomé seis vasos"
-✅ La historia de la regla "dos veces por semana" y por qué se revisó
-✅ Qué pasó cuando 25 estudios compararon el mismo trabajo semanal
-✅ El número que sí importa (series duras por músculo) y el rango práctico
-✅ El error más común: contar días en lugar de series
-✅ Los 3 casos en los que los días sí importan
-✅ Los planes de 3, 4 y 6 días por dentro (cuerpo completo, torso-pierna, empuje-tirón-pierna)
-✅ Señales de que te pasaste y cómo corregirlo
-✅ Tu semana ideal en 4 preguntas
-✅ Un juego de verdadero o falso con 3 afirmaciones: ¿cuántas aciertas?
+Mateo entrena 3 días. Diego entrena 6. Seis meses después, ¿quién tiene más músculo? Además: un juego de verdadero o falso con 3 afirmaciones, ¿cuántas aciertas?
 
 ⏱️ CAPÍTULOS
 0:00 Tres días contra seis: ¿quién gana?
@@ -44,21 +34,19 @@ MINIATURA HECHA: video/frecuencia-01/marca/miniatura_frecuencia_1280x720.jpg (te
 14:20 Tu semana ideal en un minuto
 15:21 La respuesta a Mateo y Diego
 
-📌 Antes de este vídeo, cómo crece el músculo: [PEGAR AQUÍ EL ENLACE DEL VÍDEO 1]
-📌 Reto en casa, 50 lagartijas al día: [PEGAR AQUÍ EL ENLACE DEL VÍDEO 2]
+📌 Cómo crece el músculo: [ENLACE VÍDEO 1]
+📌 Reto en casa, 50 lagartijas al día: [ENLACE VÍDEO 2]
+🔔 Suscríbete: un vídeo nuevo de ciencia del entrenamiento cada semana.
 
-🔔 SUSCRÍBETE para recibir un vídeo nuevo de ciencia del entrenamiento cada semana.
+📚 FUENTES (PubMed):
+• Schoenfeld et al., Sports Med 2016, frecuencia de entrenamiento (PMID 27102172)
+• Schoenfeld et al., J Sports Sci 2019, veces por semana por músculo (PMID 30558493)
+• Schoenfeld et al., J Sports Sci 2017, volumen semanal y masa muscular (PMID 27433992)
+• Iversen et al., Sports Med 2021, entrenar con poco tiempo (PMID 34125411)
+Cifras = promedios de estudios cortos en adultos jóvenes; mejor pista disponible, no una ley.
 
-📚 FUENTES (resúmenes en PubMed):
-• Schoenfeld BJ, Ogborn D, Krieger JW. Effects of Resistance Training Frequency on Measures of Muscle Hypertrophy: A Systematic Review and Meta-Analysis. Sports Medicine, 2016. PMID 27102172
-• Schoenfeld BJ, Grgic J, Krieger J. How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis. Journal of Sports Sciences, 2019. PMID 30558493
-• Schoenfeld BJ, Ogborn D, Krieger JW. Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis. Journal of Sports Sciences, 2017. PMID 27433992
-• Iversen VM, Norum M, Schoenfeld BJ, Fimland MS. No Time to Lift? Designing Time-Efficient Training Programs for Strength and Hypertrophy: A Narrative Review. Sports Medicine, 2021. PMID 34125411
-Las cifras son promedios de estudios de pocas semanas, hechos sobre todo con adultos jóvenes. Son la mejor pista disponible, no una ley.
-
-⚠️ AVISO: contenido educativo y general; no sustituye la opinión de un profesional de la salud. Si tienes una lesión o una condición médica, consulta a tu médico o a un entrenador calificado antes de cambiar tu rutina. Los resultados varían de una persona a otra.
-
-🤖 Voz generada con inteligencia artificial. Imágenes ilustradas con IA. Música de dominio público (CC0): "Motivation To Wake Up".
+⚠️ Contenido educativo; no sustituye a un profesional de la salud. Si tienes una lesión o condición médica, consulta antes de cambiar tu rutina.
+🤖 Voz e imágenes generadas con IA. Música CC0: "Motivation To Wake Up".
 
 #entrenamiento #hipertrofia #ganarmusculo
 
