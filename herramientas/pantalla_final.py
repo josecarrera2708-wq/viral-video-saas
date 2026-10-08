@@ -67,9 +67,22 @@ def componer(fondo, salida, guia=False):
         g += ["-pointsize", "34", "-annotate", f"+{cx-78}+{cy-24}", "SUSCRIBIRSE", salida.replace(".png", "_guia.png")]
         subprocess.run(g, check=True)
 
+def componer_limpia(fondo, salida):
+    """Pantalla final SIN huecos ni círculo (los elementos los coloca el usuario en Studio donde quiera): personaje a la derecha (fondo
+    volteado), SUSCRÍBETE al centro-izquierda y SIGUE VIENDO a la izquierda, con la zona izquierda y central libre."""
+    a = ["convert", fondo, "-resize", "1920x1080^", "-gravity", "center", "-extent", "1920x1080", "-flop",
+         "(", "-size", "1080x1920", "gradient:rgba(0,0,0,0.80)-rgba(0,0,0,0)", "-rotate", "-90", ")", "-compose", "over", "-composite",
+         "-gravity", "NorthWest"]
+    a += texto("black", "#FFD400", 215, 90, 70, TITULO, grosor=14)
+    a += texto("black", "white", 62, 100, 330, LEMA, grosor=8)
+    a += texto("black", "white", 72, 100, 640, ENCABEZADO, grosor=9)
+    a += [salida]
+    subprocess.run(a, check=True)
+
 if __name__ == "__main__":
     args = [x for x in sys.argv[1:] if not x.startswith("--")]
     fondo, salida = args[0], args[1]
     if "--generar" in sys.argv and not os.path.exists(fondo): generar_fondo(fondo)
-    componer(fondo, salida, "--guia" in sys.argv)
+    if "--limpia" in sys.argv: componer_limpia(fondo, salida)
+    else: componer(fondo, salida, "--guia" in sys.argv)
     print("listo", salida)
