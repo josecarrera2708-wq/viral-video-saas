@@ -40,3 +40,14 @@ Certeza: **Alta** · **Media** · **Baja**. "Verificado" significa que la cifra 
 | frankxai · gym-training-expert | Descartado | Se apoya en "investigación de 2025" sin citar estudios; orientado a gimnasio con barra. |
 | cookjohn/pm-skills | Descartado | Exige Chrome con depuración remota y enlaza Sci-Hub. |
 | revfactory · fitness-program, ailabs-393 · nutritional-specialist | No instalados | No se revisó su código; cubren planes personalizados, no verificación; sin fuentes. |
+
+## Contenido del guion sin cita científica específica (práctica general de entrenamiento)
+
+Estas partes no afirman cifras ni resultados de estudios; son recomendaciones prácticas. No hay que citarlas, pero conviene que lo sepas:
+- Calentamiento de 5 minutos y señales para parar (dolor agudo, mareo, dolor en el pecho).
+- Pautas de técnica de cada ejercicio (codos a ~45°, pelvis nivelada, etc.) y escalera de dificultad de cada movimiento.
+- Plan de 4 semanas (semana 1: 2-3 repeticiones en reserva; semana 2: más series; semana 3: tempo; semana 4: variante o mochila).
+- Reparto de proteína en 4 comidas (130-175 g ÷ 4 ≈ 35-40 g; cuenta aritmética a partir de F12) y la regla de la palma de la mano.
+- Cómo pesarse (media de 2-3 pesadas por semana) y medir cintura, fotos y repeticiones.
+- "Los estudios que vimos van de unas 8 semanas a 6 meses": F6 (8 semanas), F1b (12 semanas) y F2 (6 meses).
+- Preguntas rápidas (entrenar a diario, sobrepeso, sin dieta, sin mesa ni mochila, si ya haces cardio).
