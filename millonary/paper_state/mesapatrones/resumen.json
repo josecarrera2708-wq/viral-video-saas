@@ -1,15 +1,15 @@
 {
- "generado": "2026-10-08 18:14:04.200955+00:00",
- "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00",
+ "generado": "2026-10-08 19:13:14.841335+00:00",
+ "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00",
  "inicio": "2026-10-06 00:00:00+00:00",
  "fuente": "Deribit BTC-PERPETUAL (1 h, 4 h y diario desde velas de 15 min cerradas)",
- "precio_actual": 80708.0,
+ "precio_actual": 81462.0,
  "traders": {
   "Y01 Doble suelo 1 h (a favor de tendencia, dejar correr)": {
    "temporalidad": "1h",
    "variante": "1h | B01 Doble suelo | a_favor_tendencia | dejar_correr",
    "cerradas": 1,
-   "por_dia": 0.3623489254674963,
+   "por_dia": 0.3570324041758979,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.42268680303452905,
@@ -27,7 +27,7 @@
     "liq": 0
    },
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "Y02 Triple suelo/techo 1 h (TP 3R)": {
    "temporalidad": "1h",
@@ -39,9 +39,9 @@
    "R_media": 0.0,
    "R_total": 0.0,
    "pnl_usdt": 0.0,
-   "equity": 1002.6670755151142,
-   "retorno": 0.0026670755151141368,
-   "caida_max": 0.001148065678346022,
+   "equity": 1001.1600603033653,
+   "retorno": 0.0011600603033652401,
+   "caida_max": 0.001615531242636803,
    "p_R_positiva": null,
    "salidas": {},
    "abierta": {
@@ -56,13 +56,13 @@
     "nocional_usdt": 164.2701394,
     "riesgo_usdt": 3.2728616669549506,
     "stop_pct": 0.019923655503727846,
-    "px_salida": 80724.1416,
+    "px_salida": 81478.29239999999,
     "salida": "end",
-    "R": 0.8149062766822166,
-    "pnl_usdt": 2.667075515114212,
-    "comision_usdt": 0.16285921130000003,
-    "funding_usdt": 0.008078526414202515,
-    "barras": 4,
+    "R": 0.3544483150871051,
+    "pnl_usdt": 1.1600603033653565,
+    "comision_usdt": 0.1636133621,
+    "funding_usdt": 0.010119065465324366,
+    "barras": 5,
     "max_barras": 72,
     "mfe_R": 1.090525589894766,
     "mae_R": 0.38005290983082257,
@@ -72,9 +72,9 @@
     "hora_utc": 14,
     "abierta": true,
     "temporalidad": "1h",
-    "duracion_min": 240
+    "duracion_min": 300
    },
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "Y04 Bandera / bander\u00edn 4 h (TP 3R)": {
    "temporalidad": "4h",
@@ -152,7 +152,7 @@
    "temporalidad": "1h",
    "variante": "1h | C01 Doble suelo | K3 tendencia superior (EMA 50 d\u00edas) | dejar_correr",
    "cerradas": 1,
-   "por_dia": 0.3623489254674963,
+   "por_dia": 0.3570324041758979,
    "ganan": 0,
    "pierden": 1,
    "R_media": -0.42268680303452905,
@@ -170,7 +170,7 @@
     "liq": 0
    },
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "Z02 Triple suelo/techo 1 h + tendencia superior (dejar correr)": {
    "temporalidad": "1h",
@@ -188,7 +188,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "W01 Doble suelo 1 h + tendencia + funding (dejar correr)": {
    "temporalidad": "1h",
@@ -206,7 +206,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "W02 Triple suelo/techo 1 h + tendencia + volumen (dejar correr)": {
    "temporalidad": "1h",
@@ -224,7 +224,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "W03 Bandera 1 h + funding a contrapi\u00e9 (dejar correr)": {
    "temporalidad": "1h",
@@ -242,7 +242,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "W04 Cuatro velas seguidas 4 h + tendencia + volumen (TP 3R)": {
    "temporalidad": "4h",
@@ -278,7 +278,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "U02 Triple suelo/techo 1 h + funding + volumen (dejar correr)": {
    "temporalidad": "1h",
@@ -290,9 +290,9 @@
    "R_media": 0.0,
    "R_total": 0.0,
    "pnl_usdt": 0.0,
-   "equity": 1002.6670755151142,
-   "retorno": 0.0026670755151141368,
-   "caida_max": 0.001148065678346022,
+   "equity": 1001.1600603033653,
+   "retorno": 0.0011600603033652401,
+   "caida_max": 0.001615531242636803,
    "p_R_positiva": null,
    "salidas": {},
    "abierta": {
@@ -307,13 +307,13 @@
     "nocional_usdt": 164.2701394,
     "riesgo_usdt": 3.2728616669549506,
     "stop_pct": 0.019923655503727846,
-    "px_salida": 80724.1416,
+    "px_salida": 81478.29239999999,
     "salida": "end",
-    "R": 0.8149062766822166,
-    "pnl_usdt": 2.667075515114212,
-    "comision_usdt": 0.16285921130000003,
-    "funding_usdt": 0.008078526414202515,
-    "barras": 4,
+    "R": 0.3544483150871051,
+    "pnl_usdt": 1.1600603033653565,
+    "comision_usdt": 0.1636133621,
+    "funding_usdt": 0.010119065465324366,
+    "barras": 5,
     "max_barras": 0,
     "mfe_R": 1.090525589894766,
     "mae_R": 0.38005290983082257,
@@ -323,9 +323,9 @@
     "hora_utc": 14,
     "abierta": true,
     "temporalidad": "1h",
-    "duracion_min": 240
+    "duracion_min": 300
    },
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "T01 Doble suelo 1 h + horario Wall Street + RSI no extremo (dejar correr)": {
    "temporalidad": "1h",
@@ -343,7 +343,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "T02 Triple suelo/techo 1 h + horario Wall Street + RSI no extremo (dejar correr)": {
    "temporalidad": "1h",
@@ -361,7 +361,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "R01 Bandera 1 h + confluencia con otro patr\u00f3n (dejar correr)": {
    "temporalidad": "1h",
@@ -379,7 +379,7 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   },
   "R02 Triple suelo/techo 1 h + confluencia con otro patr\u00f3n (dejar correr)": {
    "temporalidad": "1h",
@@ -397,9 +397,9 @@
    "p_R_positiva": null,
    "salidas": {},
    "abierta": null,
-   "ultima_vela_cerrada": "2026-10-08 18:00:00+00:00"
+   "ultima_vela_cerrada": "2026-10-08 19:00:00+00:00"
   }
  },
  "trades_totales": 2,
- "por_dia_total": 0.7246978509349926
+ "por_dia_total": 0.7140648083517958
 }
