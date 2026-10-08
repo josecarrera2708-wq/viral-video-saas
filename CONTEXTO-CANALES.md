@@ -31,3 +31,11 @@
 
 ## Repo
 - Rama de trabajo: claude/eager-goldberg-g9gfdy, PR borrador #3.
+
+## Estado del canal 1 (8 oct 2026, últimos 28 días, capturas de Studio)
+- 258 suscriptores (sin ganancia neta en 28 días), 77 vistas, 5,3 h, 44 espectadores únicos, 1,4 mil impresiones, CTR 3,2 %, duración media 4:48. Vídeo 1 dura 10:26 (publicado 4 oct), vídeo 2 dura 19:17 (publicado 7 oct). Vídeo 2: 22 vistas en 48 h frente a 6 del vídeo 1.
+- Veredicto: arranque normal, sin señal de despegue. Cuellos de botella: distribución y suscripciones. Muestra muy pequeña: no cambiar nada por estos números.
+- Plan: no tocar títulos ni miniaturas hasta el 14 oct; Short A (ya con voz Ramon) + 1 Short diario con "Vídeo relacionado" al largo; marca de agua de suscripción; pedir suscripción hacia el min 2-3; 1 largo por semana con el mismo envoltorio de intriga; temas con búsqueda real. Pendiente: descripción y banner del canal.
+- Reglas para juzgar (referencias habituales, no oficiales; cada vídeo a los 7 días y con 1.000 impresiones): CTR <2 % cambiar miniatura, 2-5 % normal, >5 % muy bueno; mirar la caída en los primeros 30 s de la retención.
+- El 14 oct pedir al usuario capturas: retención de cada vídeo, fuentes de tráfico, impresiones y CTR por vídeo.
+- vidIQ: sin canal conectado y 10 créditos; no gastarlos en análisis.
