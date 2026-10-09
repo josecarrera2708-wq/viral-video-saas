@@ -17,6 +17,9 @@ for t in d["tomas"]:
             if t["ref"]:
                 r = requests.post("https://api.openai.com/v1/images/edits", files={"image[]": ("ref.png", open(REF, "rb"), "image/png")},
                                   data={"model": "gpt-image-2", "prompt": prompt, "size": SIZE, "quality": Q, "n": "1"}, timeout=240)
+            elif os.environ.get("STYLE_REF"):
+                r = requests.post("https://api.openai.com/v1/images/edits", files={"image[]": ("estilo.png", open(os.environ["STYLE_REF"], "rb"), "image/png")},
+                                  data={"model": "gpt-image-2", "prompt": "Use the attached image ONLY as a reference for color palette, lighting and illustration style. Do NOT include any person from it.\n\n" + prompt, "size": SIZE, "quality": Q, "n": "1"}, timeout=240)
             else:
                 r = requests.post("https://api.openai.com/v1/images/generations", json={"model": "gpt-image-2", "prompt": prompt, "size": SIZE, "quality": Q, "n": 1}, timeout=240)
             if r.status_code != 200: raise RuntimeError(f"{r.status_code} {r.text[:150]}")
