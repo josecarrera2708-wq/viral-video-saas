@@ -846,7 +846,11 @@ def main():
 
     db.x("create table if not exists mid(addr text, mint text, usd real, x real, mc real, t integer, primary key(addr, mint))")
     db.x("create table if not exists mid_done(mint text primary key, buyers integer, t integer)")
-    for tk in db.q("select * from newborn where mint not in (select mint from mid_done) order by t0 desc limit ?", (MID_PER_RUN,)):
+    got = 0
+    # los que nunca tuvieron tramo a MC medio (nacen ya grandes) se descartan al instante: se miran hasta 40 por vuelta
+    for tk in db.q("select * from newborn where mint not in (select mint from mid_done) order by t0 desc limit 40"):
+        if got >= MID_PER_RUN:
+            break
         try:
             b = mid_buyers(tk["mint"], tk["t0"], tk["supply"])
         except Exception as e:
@@ -855,7 +859,9 @@ def main():
         db.xm("insert or replace into mid(addr, mint, usd, x, mc, t) values(?,?,?,?,?,?)",
               [(o, tk["mint"], v["usd"], v["x"], v["mc"], v["t"]) for o, v in b.items()])
         db.x("insert or replace into mid_done(mint, buyers, t) values(?,?,?)", (tk["mint"], len(b), int(time.time())))
-        log(f"{tk['sym']} (MC medio): {len(b)} compradores pequeños entre {MID_MIN_MC:,} y un tercio de su máximo")
+        got += bool(b)
+        if b:
+            log(f"{tk['sym']} (MC medio): {len(b)} compradores pequeños entre {MID_MIN_MC:,} y un tercio de su máximo")
 
     followed = {r["addr"] for r in db.q("select addr from wallets")}
     skip = {r["addr"] for r in db.q("select addr from candidates where status='bot' or (found > ? and "
