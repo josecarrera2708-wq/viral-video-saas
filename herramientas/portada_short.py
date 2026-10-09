@@ -17,5 +17,10 @@ for ln in lines:
     col = (255, 138, 31) if ln == res else (255, 255, 255)
     d.text((W / 2 + 6, y + 8), ln, font=f, fill=(0, 0, 0), anchor="ma", stroke_width=16, stroke_fill=(0, 0, 0))
     d.text((W / 2, y), ln, font=f, fill=col, anchor="ma", stroke_width=14, stroke_fill=(0, 0, 0))
-    y += int(sz * 1.2)
+    ult = (y, sz, d.textlength(ln, font=f)); y += int(sz * 1.2)
+emo = os.environ.get("EMOJI")
+if emo:   # emoji de color (Noto) a la derecha de la última línea
+    e = Image.new("RGBA", (136, 128), (0, 0, 0, 0)); ImageDraw.Draw(e).text((0, 0), emo, font=ImageFont.truetype("/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf", 109), embedded_color=True)
+    e = e.resize((200, 188), Image.LANCZOS); y0, sz0, w0 = ult
+    im.paste(e, (int(min(W / 2 + w0 / 2 + 5, W - 205)), int(y0 + sz0 * 0.5 - 85)), e)
 im.save(out); print("ok", out)
