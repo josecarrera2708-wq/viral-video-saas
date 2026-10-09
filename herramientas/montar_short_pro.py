@@ -55,7 +55,7 @@ def sprite_lineas(lineas, sz, colores, y_gap=0.05, stroke=12):
 fix = m.get("palabras_fix", {}); pal = json.load(open(PAL, encoding="utf-8")); words = []
 for w_ in pal:
     t = w_["word"].strip().strip("¿¡"); t = fix.get(t.lower().strip(".,?!"), t) if t.lower().strip(".,?!") in fix else t
-    words.append({"t": t.upper(), "s": w_["start"], "e": w_["end"]})
+    words.append({"t": t.upper(), "s": max(w_["start"] - 0.12, 0), "e": w_["end"]})
 for i in range(len(words) - 1):    # whisper a veces da inicios repetidos: asegura orden y duración mínima
     if words[i + 1]["s"] < words[i]["s"] + 0.12: words[i + 1]["s"] = words[i]["s"] + 0.12
     words[i]["e"] = min(max(words[i]["e"], words[i]["s"] + 0.12), words[i + 1]["s"])
@@ -115,7 +115,7 @@ for n in range(N):
             ai = max([j for j, x in enumerate(g) if x["s"] <= t] or [0]); pop = 0.9 + 0.1 * ss((t - g[0]["s"]) / 0.1)
             overlay(fr, sub_sprite(gi, ai), 1290, 1.0, pop); break
     if t >= m["cta"]["ini"]:
-        a = ss((t - m["cta"]["ini"]) / 0.25); overlay(fr, BTN, 1530, a, (0.9 + 0.1 * a) * (1 + 0.035 * math.sin((t - m["cta"]["ini"]) * 6)))
+        a = ss((t - m["cta"]["ini"]) / 0.25); overlay(fr, BTN, 1440, a, (0.9 + 0.1 * a) * (1 + 0.035 * math.sin((t - m["cta"]["ini"]) * 6)))
     fr[:10, :int(W * t / DUR)] = ORA
     ff.stdin.write(fr.tobytes())
 ff.stdin.close(); ff.wait()
