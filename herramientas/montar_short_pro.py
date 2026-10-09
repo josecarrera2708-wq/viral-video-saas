@@ -121,7 +121,10 @@ for n in range(N):
 ff.stdin.close(); ff.wait()
 # ---- audio: voz + música (mezcla_fondo) y efectos
 env = dict(os.environ, COLA=str(round(DUR - float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", VOZ], capture_output=True, text=True).stdout), 2)), MUS_LUFS="-26")
-subprocess.run(["python3", f"{BASE}/herramientas/mezcla_fondo.py", VOZ, MUS, f"{tmp}/base.mp3"], check=True, env=env)
+if MUS == "none":   # sin música (para ponerla después desde la biblioteca de YouTube): solo voz a -16 LUFS + efectos
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", VOZ, "-af", f"loudnorm=I=-15:TP=-1.5:LRA=7,apad=whole_dur={DUR}", "-t", str(DUR), "-ar", "44100", f"{tmp}/base.mp3"], check=True)
+else:
+    subprocess.run(["python3", f"{BASE}/herramientas/mezcla_fondo.py", VOZ, MUS, f"{tmp}/base.mp3"], check=True, env=env)
 ins = ["-i", f"{tmp}/base.mp3"]; fl = []; mix = ["[0:a]"]; j = 1
 fx = [(p["ini"] - 0.12, p["sfx"]) for p in plano[1:] if p.get("sfx")] + [(m["cta"]["ini"], "pop.mp3")]
 for t0, nombre in fx:
