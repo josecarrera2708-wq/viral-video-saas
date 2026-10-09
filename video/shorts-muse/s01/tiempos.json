@@ -1,0 +1,44 @@
+[
+ {
+  "seccion": 1,
+  "texto": "¿Te dijeron que el músculo crece en el gimnasio? Es un mito.",
+  "inicio": 0.0,
+  "fin": 3.44
+ },
+ {
+  "seccion": 2,
+  "texto": "En el gimnasio solo mandas el pedido: le dices a tu cuerpo que necesita más músculo.",
+  "inicio": 4.0,
+  "fin": 8.71
+ },
+ {
+  "seccion": 3,
+  "texto": "Pero el músculo se fabrica después, durante las veinticuatro a cuarenta y ocho horas siguientes.",
+  "inicio": 9.27,
+  "fin": 13.99
+ },
+ {
+  "seccion": 4,
+  "texto": "Y la fábrica necesita dos cosas: proteína para construir y sueño para trabajar.",
+  "inicio": 14.55,
+  "fin": 19.18
+ },
+ {
+  "seccion": 5,
+  "texto": "Si entrenas fuerte y esa noche duermes cinco horas, mandaste el pedido y cerraste la fábrica.",
+  "inicio": 19.73,
+  "fin": 25.15
+ },
+ {
+  "seccion": 6,
+  "texto": "Duerme entre siete y nueve horas y come proteína en cada comida.",
+  "inicio": 25.7,
+  "fin": 29.31
+ },
+ {
+  "seccion": 7,
+  "texto": "¿Quieres las ocho reglas completas? El vídeo está en mi canal. Míralo ahora.",
+  "inicio": 29.86,
+  "fin": 34.12
+ }
+]
