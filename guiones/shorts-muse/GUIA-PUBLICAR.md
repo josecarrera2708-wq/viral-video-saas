@@ -23,7 +23,7 @@ El músculo no crece en el gimnasio: se fabrica después, en las 24-48 horas sig
 
 ▶ Las 8 reglas completas, en el vídeo: [ENLACE VÍDEO 1]
 
-#hipertrofia #entrenamiento #Shorts
+#entrenamiento #fitness #Shorts
 Comentario fijado: ¿Cuántas horas duermes cuando entrenas fuerte? Cuéntame 👇 Las 8 reglas completas: [ENLACE VÍDEO 1]
 
 ## Short 2 — Baja el peso en 2-3 segundos (mismo vídeo)
@@ -33,16 +33,16 @@ La bajada del peso (fase excéntrica) da más señal de crecimiento que la subid
 
 ▶ Las 8 reglas completas, en el vídeo: [ENLACE VÍDEO 1]
 
-#hipertrofia #entrenamiento #Shorts
+#entrenamiento #fitness #Shorts
 Comentario fijado: ¿Tú sueltas el peso de golpe o lo bajas controlando? Cuéntame 👇 Las 8 reglas completas: [ENLACE VÍDEO 1]
 
 ## Short 1 versión enérgica ("¡Stop! ¡Detente!") — textos definitivos
-Título: Por qué tu músculo NO crece (nadie te lo dice) #hipertrofia #entrenamiento
+Título: Por qué tu músculo NO crece (nadie te lo dice) #entrenamiento #fitness
 Alternativas: "Tu músculo NO crece en el gimnasio" / "Detente: así sí crece tu músculo"
 Descripción:
 ¿Por qué no crece tu músculo aunque entrenes? Porque el músculo no se construye en el gimnasio: se fabrica en las 24-48 horas siguientes. Lo que decide si crece es la recuperación muscular: proteína en cada comida y dormir 7-9 horas.
 
-▶ Las 8 reglas de la hipertrofia, en el vídeo completo: [ENLACE VÍDEO 1]
+▶ Las 8 reglas para que crezca tu músculo, en el vídeo completo: [ENLACE VÍDEO 1]
 
-#hipertrofia #entrenamiento #Shorts
+#entrenamiento #fitness #Shorts
 Comentario fijado: ¿Cuántas horas duermes los días que entrenas? 👇 Las 8 reglas completas: [ENLACE VÍDEO 1]
