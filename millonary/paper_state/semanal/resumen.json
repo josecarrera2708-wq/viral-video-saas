@@ -1,20 +1,20 @@
 {
- "generado": "2026-10-08 04:17:48.009895+00:00",
+ "generado": "2026-10-09 04:17:55.538927+00:00",
  "tiene_datos": true,
  "equity_inicial": 999.59048574632,
- "equity_actual": 1012.797648024174,
- "retorno_total": 0.013212573014831364,
- "retorno_semana": 0.012219999336812837,
- "caida_max": 0.014500746889439142,
- "caida_actual": 0.0066928004353247195,
- "dias": 7,
- "velas": 44,
- "exposicion_actual": 0.5909892278755701,
+ "equity_actual": 996.892290311375,
+ "retorno_total": -0.0026993008371128946,
+ "retorno_semana": -0.015689427759185248,
+ "caida_max": 0.022292072766373572,
+ "caida_actual": 0.022292072766373572,
+ "dias": 8,
+ "velas": 50,
+ "exposicion_actual": 0.7518737051982671,
  "velas_semana": 35,
- "ordenes_total": 1,
- "ordenes_semana": 0,
- "comisiones_total": 0.29252689368,
- "comisiones_semana": 0.0,
+ "ordenes_total": 2,
+ "ordenes_semana": 1,
+ "comisiones_total": 0.37594287354,
+ "comisiones_semana": 0.08341597986,
  "posiciones": {
   "cerradas": 0,
   "ganan": 0,
@@ -25,7 +25,7 @@
   "cerrados": 0,
   "ganan": 0,
   "pierden": 0,
-  "abiertos": 1
+  "abiertos": 2
  },
  "puertas": {
   "G1_replica": true,
@@ -35,35 +35,35 @@
   "G5_registro_cuadra": true
  },
  "posterior_sharpe": {
-  "dias": 8,
+  "dias": 9,
   "estado": "insuficiente"
  },
  "estado_comite": "OK",
- "decision": "Mantener el objetivo del n\u00facleo: 0.66\u00d7 de exposici\u00f3n.",
+ "decision": "Mantener el objetivo del n\u00facleo: 0.76\u00d7 de exposici\u00f3n.",
  "incubadora": {
   "certificadas": [],
   "forward": {
    "S01 Parabolic SAR + EMA200": {
-    "retorno": -0.021208204502223826,
-    "caida_max": 0.030221347464636117,
+    "retorno": -0.03793747623420063,
+    "caida_max": 0.04355546257514298,
     "ops": 3,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": 0.0
    },
    "S02 Ichimoku": {
-    "retorno": -0.013880228302163289,
-    "caida_max": 0.03405983944279534,
-    "ops": 2,
-    "dias": 8,
+    "retorno": -0.021916178968034106,
+    "caida_max": 0.04792737850644191,
+    "ops": 3,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": -1.0
    },
    "S03 Bollinger + RSI (reversi\u00f3n)": {
     "retorno": 0.011763122737633136,
     "caida_max": 0.025601434163612047,
     "ops": 1,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
     "posicion_actual": 0.0
    },
@@ -71,97 +71,97 @@
     "retorno": -0.041404541369365444,
     "caida_max": 0.041404541369365444,
     "ops": 2,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
     "posicion_actual": 0.0
    },
    "S05 RSI(2) retroceso (largo)": {
-    "retorno": 0.0,
-    "caida_max": 0.0,
-    "ops": 0,
-    "dias": 8,
+    "retorno": -0.01043889482683169,
+    "caida_max": 0.01043889482683169,
+    "ops": 1,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 0.0
+    "posicion_actual": 1.0
    },
    "S06 Cruce SMA 7-25": {
-    "retorno": 0.013110026589452373,
-    "caida_max": 0.024438765486139102,
-    "ops": 2,
-    "dias": 8,
+    "retorno": 0.004689473154794621,
+    "caida_max": 0.027573041067091464,
+    "ops": 3,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": -1.0
    },
    "S07 SMA 7-25 + filtro 200 (largo)": {
-    "retorno": 0.01827895370899535,
-    "caida_max": 0.02443876548613899,
+    "retorno": 0.0007896043088966298,
+    "caida_max": 0.028253739938344347,
     "ops": 1,
-    "dias": 8,
-    "sharpe": null,
-    "posicion_actual": 1.0
-   },
-   "S08 Canal 20 por tercios": {
-    "retorno": -0.04008285523508004,
-    "caida_max": 0.04338030729755338,
-    "ops": 7,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
     "posicion_actual": 0.0
    },
-   "S09 Donchian 20/10": {
-    "retorno": -0.03748016547649924,
-    "caida_max": 0.05407147927571376,
-    "ops": 2,
-    "dias": 8,
+   "S08 Canal 20 por tercios": {
+    "retorno": -0.031348919640936335,
+    "caida_max": 0.043968534368210466,
+    "ops": 8,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": -1.0
+   },
+   "S09 Donchian 20/10": {
+    "retorno": -0.045323798802941795,
+    "caida_max": 0.057341114654743675,
+    "ops": 3,
+    "dias": 9,
+    "sharpe": null,
+    "posicion_actual": -1.0
    },
    "S10 MACD + EMA200": {
     "retorno": 0.0073257834870295024,
     "caida_max": 0.024438765486139102,
     "ops": 2,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
     "posicion_actual": 0.0
    },
    "S11 Supertrend 10/3": {
-    "retorno": -0.024343698875659014,
-    "caida_max": 0.0411614508549194,
-    "ops": 2,
-    "dias": 8,
+    "retorno": -0.03229438207632351,
+    "caida_max": 0.04447571020367225,
+    "ops": 3,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": -1.0
    },
    "S12 Expansi\u00f3n de volatilidad": {
-    "retorno": -0.01814174437269811,
+    "retorno": -0.019432368835005986,
     "caida_max": 0.024438765486139102,
-    "ops": 3,
-    "dias": 8,
+    "ops": 4,
+    "dias": 9,
     "sharpe": null,
     "posicion_actual": 0.0
    },
    "S13 Retroceso a EMA20": {
-    "retorno": 0.010589949331175408,
-    "caida_max": 0.02443876548613899,
+    "retorno": -0.006682808725984146,
+    "caida_max": 0.02817103894115458,
     "ops": 2,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": 0.0
    },
    "S14 Momentum 90 d": {
-    "retorno": 0.02185982878057202,
-    "caida_max": 0.02443876548613899,
+    "retorno": -0.004697324033814176,
+    "caida_max": 0.03696802905025898,
     "ops": 1,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
     "posicion_actual": 1.0
    },
    "S15 RSI14 + EMA200": {
-    "retorno": 0.009306187460898618,
-    "caida_max": 0.024438765486139213,
+    "retorno": -0.007944628850053204,
+    "caida_max": 0.02817103894115447,
     "ops": 1,
-    "dias": 8,
+    "dias": 9,
     "sharpe": null,
-    "posicion_actual": 1.0
+    "posicion_actual": 0.0
    }
   }
  },
@@ -173,6 +173,6 @@
   },
   "adoptables": [],
   "top_forward": [],
-  "ultima_actualizacion": "2026-10-08 04:17:48.009895+00:00"
+  "ultima_actualizacion": "2026-10-09 04:17:55.538927+00:00"
  }
 }

@@ -65,12 +65,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.021175107701167928,
-    "caida_var": 0.015519373801358594,
-    "ret_base": -0.021208204502223937,
-    "ret_var": -0.015542628962816107,
+    "caida_base": 0.037904945115633026,
+    "caida_var": 0.028259133658147806,
+    "ret_base": -0.03793747623420074,
+    "ret_var": -0.028282087884102358,
     "p_boot": null
    }
   },
@@ -118,12 +118,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.013880228302163289,
-    "caida_var": 0.013880228302163289,
-    "ret_base": -0.013880228302163289,
-    "ret_var": -0.013880228302163289,
+    "caida_base": 0.021916178968034217,
+    "caida_var": 0.03073474802422349,
+    "ret_base": -0.021916178968034217,
+    "ret_var": -0.03073474802422349,
     "p_boot": null
    }
   },
@@ -138,12 +138,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.013880228302163289,
-    "caida_var": 0.010335178173002002,
-    "ret_base": -0.013880228302163289,
-    "ret_var": -0.010335178173002002,
+    "caida_base": 0.021916178968034217,
+    "caida_var": 0.0165006851857864,
+    "ret_base": -0.021916178968034217,
+    "ret_var": -0.0165006851857864,
     "p_boot": null
    }
   },
@@ -191,7 +191,7 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.02314550224080769,
     "caida_var": 0.0,
@@ -222,7 +222,7 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.02314550224080769,
     "caida_var": 0.02382930038923925,
@@ -264,7 +264,7 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.041404541369365555,
     "caida_var": 0.041404541369365555,
@@ -284,7 +284,7 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.041404541369365555,
     "caida_var": 0.030428792492744106,
@@ -392,12 +392,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.011271938971103346,
-    "caida_var": 0.011271938971103457,
-    "ret_base": 0.013110026589452595,
-    "ret_var": 0.01827895370899535,
+    "caida_base": 0.019489839546292353,
+    "caida_var": 0.02825373993834457,
+    "ret_base": 0.004689473154795065,
+    "ret_var": 0.0007896043088964078,
     "p_boot": null
    }
   },
@@ -467,12 +467,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.011271938971103457,
-    "caida_var": 0.00842542576711236,
-    "ret_base": 0.01827895370899535,
-    "ret_var": 0.01327595998603992,
+    "caida_base": 0.02825373993834457,
+    "caida_var": 0.021318943850879735,
+    "ret_base": 0.0007896043088964078,
+    "ret_var": 0.00010025716607398039,
     "p_boot": null
    }
   },
@@ -520,11 +520,11 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.04008285523508037,
     "caida_var": 0.026777019464429452,
-    "ret_base": -0.04008285523508037,
+    "ret_base": -0.03134891964093689,
     "ret_var": -0.02060164930491848,
     "p_boot": null
    }
@@ -540,12 +540,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.04008285523508037,
     "caida_var": 0.029523867371169077,
-    "ret_base": -0.04008285523508037,
-    "ret_var": -0.029523867371169077,
+    "ret_base": -0.03134891964093689,
+    "ret_var": -0.022925679004767274,
     "p_boot": null
    }
   },
@@ -593,12 +593,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.04810848142726609,
-    "caida_var": 0.01911838383958342,
-    "ret_base": -0.03748016547649902,
-    "ret_var": -0.0073944899639503125,
+    "caida_var": 0.02817103894115469,
+    "ret_base": -0.04532379880294157,
+    "ret_var": -0.024359862351042594,
     "p_boot": null
    }
   },
@@ -613,12 +613,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.04810848142726609,
     "caida_var": 0.03493381662852357,
-    "ret_base": -0.03748016547649902,
-    "ret_var": -0.027004761852743253,
+    "ret_base": -0.04532379880294157,
+    "ret_var": -0.03306641912487718,
     "p_boot": null
    }
   },
@@ -666,7 +666,7 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 0.629,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.012342491138434442,
     "caida_var": 0.012342491138434442,
@@ -686,7 +686,7 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.012342491138434442,
     "caida_var": 0.009233150667286916,
@@ -739,12 +739,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.03511707003724118,
-    "caida_var": 0.012470203764851973,
-    "ret_base": -0.024343698875659237,
-    "ret_var": -0.000666848151555266,
+    "caida_var": 0.02817103894115469,
+    "ret_base": -0.03229438207632396,
+    "ret_var": -0.017747207759129635,
     "p_boot": null
    }
   },
@@ -759,12 +759,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
     "caida_base": 0.03511707003724118,
     "caida_var": 0.025428418610842773,
-    "ret_base": -0.024343698875659237,
-    "ret_var": -0.01742126678550615,
+    "ret_base": -0.03229438207632396,
+    "ret_var": -0.02354262821680675,
     "p_boot": null
    }
   },
@@ -823,12 +823,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.01920596579843037,
-    "caida_var": 0.013802759042358947,
-    "ret_base": -0.01814174437269822,
-    "ret_var": -0.01303972245121443,
+    "caida_base": 0.019432368835006097,
+    "caida_var": 0.014004941635817558,
+    "ret_base": -0.019432368835006097,
+    "ret_var": -0.014004941635817558,
     "p_boot": null
    }
   },
@@ -931,12 +931,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.011271938971103568,
-    "caida_var": 0.011271938971103568,
-    "ret_base": 0.0218598287805718,
-    "ret_var": 0.0218598287805718,
+    "caida_base": 0.03696802905025953,
+    "caida_var": 0.03696802905025953,
+    "ret_base": -0.0046973240338147315,
+    "ret_var": -0.0046973240338147315,
     "p_boot": null
    }
   },
@@ -995,12 +995,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.011271938971103457,
-    "caida_var": 0.011271938971103457,
-    "ret_base": 0.009306187460898618,
-    "ret_var": 0.009306187460898618,
+    "caida_base": 0.02817103894115469,
+    "caida_var": 0.02817103894115469,
+    "ret_base": -0.007944628850053204,
+    "ret_var": -0.007944628850053204,
     "p_boot": null
    }
   },
@@ -1015,12 +1015,12 @@
    "etapa": "E3 sombra",
    "p_holm_exam": 1.0,
    "forward": {
-    "dias": 8,
+    "dias": 9,
     "delta_sharpe": null,
-    "caida_base": 0.011271938971103457,
-    "caida_var": 0.00842542576711236,
-    "ret_base": 0.009306187460898618,
-    "ret_var": 0.006850685413608559,
+    "caida_base": 0.02817103894115469,
+    "caida_var": 0.021256985494805924,
+    "ret_base": -0.007944628850053204,
+    "ret_var": -0.006178556201172469,
     "p_boot": null
    }
   },
@@ -1359,7 +1359,33 @@
     "S15 RSI14 + EMA200|O2 solo largos": "E3 sombra",
     "S15 RSI14 + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra"
    }
+  },
+  {
+   "fecha": "2026-10-09",
+   "etapas": {
+    "S01 Parabolic SAR + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S02 Ichimoku|O2 solo largos": "E3 sombra",
+    "S02 Ichimoku|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S03 Bollinger + RSI (reversi\u00f3n)|O2 solo largos": "E3 sombra",
+    "S03 Bollinger + RSI (reversi\u00f3n)|O4 stop 3\u00d7ATR": "E3 sombra",
+    "S04 Keltner ruptura|O2 solo largos": "E3 sombra",
+    "S04 Keltner ruptura|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S06 Cruce SMA 7-25|O2 solo largos": "E3 sombra",
+    "S07 SMA 7-25 + filtro 200 (largo)|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S08 Canal 20 por tercios|O2 solo largos": "E3 sombra",
+    "S08 Canal 20 por tercios|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S09 Donchian 20/10|O2 solo largos": "E3 sombra",
+    "S09 Donchian 20/10|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S10 MACD + EMA200|O2 solo largos": "E3 sombra",
+    "S10 MACD + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S11 Supertrend 10/3|O2 solo largos": "E3 sombra",
+    "S11 Supertrend 10/3|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S12 Expansi\u00f3n de volatilidad|O3 tama\u00f1o por volatilidad": "E3 sombra",
+    "S14 Momentum 90 d|O2 solo largos": "E3 sombra",
+    "S15 RSI14 + EMA200|O2 solo largos": "E3 sombra",
+    "S15 RSI14 + EMA200|O3 tama\u00f1o por volatilidad": "E3 sombra"
+   }
   }
  ],
- "ultima_actualizacion": "2026-10-08 04:17:48.009895+00:00"
+ "ultima_actualizacion": "2026-10-09 04:17:55.538927+00:00"
 }
