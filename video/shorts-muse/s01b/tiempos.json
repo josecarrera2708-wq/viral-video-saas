@@ -1,0 +1,44 @@
+[
+ {
+  "seccion": 1,
+  "texto": "¡Stop! ¡Detente! Te voy a decir por qué tu músculo no crece.",
+  "inicio": 0.0,
+  "fin": 3.54
+ },
+ {
+  "seccion": 2,
+  "texto": "El gimnasio no hace crecer tu músculo. Solo manda el pedido.",
+  "inicio": 3.85,
+  "fin": 7.16
+ },
+ {
+  "seccion": 3,
+  "texto": "El músculo se fabrica después, durante las siguientes veinticuatro a cuarenta y ocho horas.",
+  "inicio": 7.47,
+  "fin": 11.88
+ },
+ {
+  "seccion": 4,
+  "texto": "Y la fábrica necesita dos cosas: proteína y sueño.",
+  "inicio": 12.2,
+  "fin": 15.12
+ },
+ {
+  "seccion": 5,
+  "texto": "Si duermes cinco horas, mandaste el pedido y cerraste la fábrica.",
+  "inicio": 15.44,
+  "fin": 18.63
+ },
+ {
+  "seccion": 6,
+  "texto": "Duerme de siete a nueve horas y come proteína en cada comida.",
+  "inicio": 18.95,
+  "fin": 22.41
+ },
+ {
+  "seccion": 7,
+  "texto": "¿Quieres las ocho reglas? Mira el vídeo completo en mi canal. ¡Ahora!",
+  "inicio": 22.72,
+  "fin": 26.18
+ }
+]

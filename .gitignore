@@ -102,3 +102,10 @@ dmypy.json
 tmp/
 temp/
 *.temp
+video/musculo-01/*.mp4
+video/*/*.mp4
+video/*/shorts/*.mp4
+video/*/voz_escucha.mp3
+video/*/mezcla_escucha.mp3
+*.tmp
+video/*/*_preview_480p.mp4

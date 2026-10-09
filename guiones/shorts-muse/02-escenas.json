@@ -1,0 +1,48 @@
+{
+ "estilo": "Semi-realistic 2D cartoon illustration in a polished vector style: clean bold outlines, soft cel shading, expressive detailed human characters with realistic proportions and emotional faces, richly detailed environments with depth, cinematic lighting, saturated but harmonious palette with teal, orange and warm skin tones, vertical 9:16 composition with the main subject centered in the middle 60% of the frame (top and bottom left calmer for text). Absolutely no text, no letters, no numbers, no logos, no watermarks, no captions anywhere in the image.",
+ "host": "The channel host: a young Latino man around 25, short dark hair with a slight fade, warm brown eyes, friendly confident smile, athletic muscular build, plain black sleeveless tank top. Keep exactly the same face, hair and outfit as the reference image.",
+ "tomas": [
+  {
+   "id": 1,
+   "bloque": 1,
+   "ref": true,
+   "prompt": "Medium close-up of the host in a modern gym, holding a dumbbell at the top of a curl, looking at the camera with one raised skeptical eyebrow and a half smile, warm orange light through windows, teal shadows, gym equipment blurred behind."
+  },
+  {
+   "id": 2,
+   "bloque": 2,
+   "ref": false,
+   "prompt": "Anatomical cutaway of a muscular arm made translucent, muscle fibers glowing bright orange and thickening, with a large glowing orange arrow pointing DOWN along the arm and a thin faint teal arrow pointing up, dark background, centered vertical composition."
+  },
+  {
+   "id": 3,
+   "bloque": 3,
+   "ref": true,
+   "prompt": "The host in the gym dropping a dumbbell: the dumbbell is falling in mid-air after he let go, his arm hanging relaxed, a guilty wince on his face, chalk dust puffs, rubber gym floor below, dynamic low angle."
+  },
+  {
+   "id": 4,
+   "bloque": 4,
+   "ref": false,
+   "prompt": "The same translucent muscular arm cutaway but the muscle fibers are dark and dim, a dumbbell crashing down past it leaving a faint ghostly orange outline of a missed opportunity, small sparks fading, dark teal background, centered vertical composition."
+  },
+  {
+   "id": 5,
+   "bloque": 5,
+   "ref": true,
+   "prompt": "The host lowering a dumbbell slowly and under control at the bottom of a curl, tense forearm, focused calm expression, three faint glowing orange ghost-trails of the dumbbell showing slow motion, gym background, warm orange and teal light."
+  },
+  {
+   "id": 6,
+   "bloque": 6,
+   "ref": true,
+   "prompt": "The host smiling at the camera holding up three fingers of one hand, a light dumbbell resting in the other hand, gym background, warm confident mood, orange and teal light."
+  },
+  {
+   "id": 7,
+   "bloque": 7,
+   "ref": true,
+   "prompt": "The host sitting on a gym bench, leaning toward the camera and pointing down with one finger, friendly confident smile, dumbbell racks blurred behind, warm orange light and teal shadows."
+  }
+ ]
+}

@@ -1,0 +1,1867 @@
+1
+00:00:00,000 --> 00:00:01,864
+Tres días contra seis días.
+
+2
+00:00:01,864 --> 00:00:03,590
+¿Cuál te hace crecer más?
+
+3
+00:00:03,960 --> 00:00:07,159
+Imagina a dos amigos que empiezan a entrenar el
+
+4
+00:00:07,159 --> 00:00:07,976
+mismo lunes.
+
+5
+00:00:07,976 --> 00:00:10,018
+Mateo va tres días por semana.
+
+6
+00:00:10,018 --> 00:00:12,401
+Diego, que es más intenso, va seis.
+
+7
+00:00:12,401 --> 00:00:13,558
+Pasan seis meses.
+
+8
+00:00:13,558 --> 00:00:15,260
+¿Quién tiene más músculo?
+
+9
+00:00:15,630 --> 00:00:18,070
+Si pensaste en Diego, no te culpo.
+
+10
+00:00:18,070 --> 00:00:19,865
+Es lo que dice la lógica:
+
+11
+00:00:19,865 --> 00:00:22,377
+más días, más trabajo, más músculo.
+
+12
+00:00:22,377 --> 00:00:25,607
+Pero la ciencia tiene una respuesta que no se
+
+13
+00:00:25,607 --> 00:00:26,540
+parece a esa.
+
+14
+00:00:26,910 --> 00:00:29,793
+Porque la pregunta, tal como se hace, está mal
+
+15
+00:00:29,793 --> 00:00:30,419
+planteada.
+
+16
+00:00:30,419 --> 00:00:33,427
+Hay un número mucho más importante que los días,
+
+17
+00:00:33,427 --> 00:00:34,994
+del que casi nadie habla.
+
+18
+00:00:34,994 --> 00:00:37,876
+Y por no conocerlo, hay gente que entrena seis
+
+19
+00:00:37,876 --> 00:00:40,195
+días a la semana y crece lo mismo que
+
+20
+00:00:40,195 --> 00:00:41,260
+otra que va tres.
+
+21
+00:00:41,630 --> 00:00:44,275
+En este vídeo te lo explico con estudios, sin
+
+22
+00:00:44,275 --> 00:00:44,569
+humo.
+
+23
+00:00:44,569 --> 00:00:46,744
+Vas a ver cuál es ese número, cuál es
+
+24
+00:00:46,744 --> 00:00:48,977
+el error que más se repite, y al final
+
+25
+00:00:48,977 --> 00:00:51,446
+vas a armar tu semana ideal según tu caso.
+
+26
+00:00:51,446 --> 00:00:54,032
+Y sirve igual si entrenas en un gimnasio, en
+
+27
+00:00:54,032 --> 00:00:56,501
+tu casa con una mochila cargada o solo con
+
+28
+00:00:56,501 --> 00:00:57,500
+tu peso corporal.
+
+29
+00:00:58,430 --> 00:00:59,786
+Pero antes, un juego.
+
+30
+00:00:59,786 --> 00:01:02,240
+Para que no te quedes solo escuchando.
+
+31
+00:01:02,610 --> 00:01:04,512
+Te voy a dar tres afirmaciones.
+
+32
+00:01:04,512 --> 00:01:05,617
+Verdadero o falso.
+
+33
+00:01:05,617 --> 00:01:09,360
+Piensa tu respuesta ahora, porque las respuestas van llegando
+
+34
+00:01:09,360 --> 00:01:11,692
+durante el vídeo, una por una, y no en
+
+35
+00:01:11,692 --> 00:01:12,060
+orden.
+
+36
+00:01:12,430 --> 00:01:12,667
+Una:
+
+37
+00:01:12,667 --> 00:01:14,977
+entrenar seis días a la semana te da el
+
+38
+00:01:14,977 --> 00:01:17,050
+doble de músculo que entrenar tres.
+
+39
+00:01:17,420 --> 00:01:17,680
+Dos:
+
+40
+00:01:17,680 --> 00:01:21,060
+si todavía tienes agujetas, tu músculo no está listo
+
+41
+00:01:21,060 --> 00:01:22,490
+y no debes entrenarlo.
+
+42
+00:01:22,860 --> 00:01:23,155
+Tres:
+
+43
+00:01:23,155 --> 00:01:26,453
+un principiante y alguien con años de gimnasio necesitan
+
+44
+00:01:26,453 --> 00:01:28,220
+las mismas series para crecer.
+
+45
+00:01:28,590 --> 00:01:30,494
+¿Ya tienes tus respuestas?
+
+46
+00:01:30,494 --> 00:01:31,226
+Guárdalas.
+
+47
+00:01:31,226 --> 00:01:32,690
+Al final comparamos.
+
+48
+00:01:33,060 --> 00:01:35,940
+Ahora, ¿por qué te dije que la pregunta está
+
+49
+00:01:35,940 --> 00:01:36,857
+mal planteada?
+
+50
+00:01:36,857 --> 00:01:37,708
+Piénsalo así.
+
+51
+00:01:37,708 --> 00:01:40,981
+Decir "entreno seis días" es como decir "tomé seis
+
+52
+00:01:40,981 --> 00:01:41,439
+vasos".
+
+53
+00:01:41,439 --> 00:01:42,683
+¿Seis vasos de qué?
+
+54
+00:01:42,683 --> 00:01:44,450
+¿Llenos, o con un chorrito?
+
+55
+00:01:44,820 --> 00:01:46,528
+Contar días es contar vasos.
+
+56
+00:01:46,528 --> 00:01:49,456
+A tu músculo no le importa cuántos vasos tienes.
+
+57
+00:01:49,456 --> 00:01:51,530
+Le importa cuánta agua hay dentro.
+
+58
+00:01:51,900 --> 00:01:54,687
+Y esa agua, en el entrenamiento, es el trabajo
+
+59
+00:01:54,687 --> 00:01:57,111
+duro que recibe el músculo en la semana.
+
+60
+00:01:57,111 --> 00:01:59,050
+Los días son solo el recipiente.
+
+61
+00:01:59,420 --> 00:02:01,991
+Para entender por qué, hay que mirar primero qué
+
+62
+00:02:01,991 --> 00:02:04,670
+pasa dentro del músculo cuando sales del gimnasio.
+
+63
+00:02:04,670 --> 00:02:06,759
+Y de ahí sale una regla famosa, con una
+
+64
+00:02:06,759 --> 00:02:08,420
+historia que casi nadie conoce.
+
+65
+00:02:09,340 --> 00:02:12,315
+Cuando entrenas con esfuerzo real, tu músculo recibe un
+
+66
+00:02:12,315 --> 00:02:12,748
+mensaje:
+
+67
+00:02:12,748 --> 00:02:14,803
+lo que acabas de hacerle fue más de lo
+
+68
+00:02:14,803 --> 00:02:16,588
+que está acostumbrado a soportar.
+
+69
+00:02:16,588 --> 00:02:18,860
+Y entonces se prepara para la próxima vez.
+
+70
+00:02:19,230 --> 00:02:22,074
+Esa preparación se llama síntesis de proteína.
+
+71
+00:02:22,074 --> 00:02:25,412
+Tu cuerpo acelera la fabricación de proteína muscular.
+
+72
+00:02:25,412 --> 00:02:28,009
+En el vídeo sobre cómo crece el músculo lo
+
+73
+00:02:28,009 --> 00:02:30,358
+expliqué como un pedido a una fábrica:
+
+74
+00:02:30,358 --> 00:02:33,140
+entrenar es mandar el pedido, y el músculo se
+
+75
+00:02:33,140 --> 00:02:36,540
+construye después, mientras comes, descansas y duermes.
+
+76
+00:02:36,910 --> 00:02:38,844
+Y aquí está el dato clave de hoy.
+
+77
+00:02:38,844 --> 00:02:42,068
+Esa fábrica trabaja a ritmo acelerado durante las horas
+
+78
+00:02:42,068 --> 00:02:44,941
+siguientes a la sesión, y en muchos casos durante
+
+79
+00:02:44,941 --> 00:02:45,820
+uno o dos días.
+
+80
+00:02:46,190 --> 00:02:48,900
+En un principiante puede durar un poco más.
+
+81
+00:02:48,900 --> 00:02:52,302
+En alguien con años de entrenamiento, suele durar algo
+
+82
+00:02:52,302 --> 00:02:52,681
+menos.
+
+83
+00:02:52,681 --> 00:02:54,760
+Después vuelve a su ritmo normal.
+
+84
+00:02:55,130 --> 00:02:56,964
+Ahora piensa lo que eso sugiere.
+
+85
+00:02:56,964 --> 00:02:59,200
+Si entrenas un músculo el lunes y no lo
+
+86
+00:02:59,200 --> 00:03:02,180
+vuelves a tocar hasta el lunes siguiente, la fábrica
+
+87
+00:03:02,180 --> 00:03:04,244
+pasa varios días sin pedidos nuevos.
+
+88
+00:03:04,244 --> 00:03:06,250
+Suena como un desperdicio, ¿verdad?
+
+89
+00:03:06,620 --> 00:03:09,733
+Una aclaración rápida, porque la palabra importa:
+
+90
+00:03:09,733 --> 00:03:10,431
+frecuencia.
+
+91
+00:03:10,431 --> 00:03:13,481
+En este vídeo, frecuencia no es cuántos días vas
+
+92
+00:03:13,481 --> 00:03:14,243
+al gimnasio.
+
+93
+00:03:14,243 --> 00:03:17,165
+Es cuántas veces a la semana trabajas el mismo
+
+94
+00:03:17,165 --> 00:03:17,673
+músculo.
+
+95
+00:03:17,673 --> 00:03:19,579
+Parecen lo mismo, y no lo son.
+
+96
+00:03:19,579 --> 00:03:21,040
+Enseguida lo vas a ver.
+
+97
+00:03:21,410 --> 00:03:24,571
+Con esa teoría en la mano, los investigadores hicieron
+
+98
+00:03:24,571 --> 00:03:25,156
+lo lógico:
+
+99
+00:03:25,156 --> 00:03:25,683
+comparar.
+
+100
+00:03:25,683 --> 00:03:28,493
+En dos mil dieciséis se publicó una revisión que
+
+101
+00:03:28,493 --> 00:03:31,595
+juntó diez estudios en los que unos grupos trabajaban
+
+102
+00:03:31,595 --> 00:03:34,229
+cada músculo una vez por semana, y otros, más
+
+103
+00:03:34,229 --> 00:03:34,580
+veces.
+
+104
+00:03:34,950 --> 00:03:35,685
+El resultado:
+
+105
+00:03:35,685 --> 00:03:38,623
+los que lo trabajaban con más frecuencia ganaron más
+
+106
+00:03:38,623 --> 00:03:39,075
+músculo.
+
+107
+00:03:39,075 --> 00:03:42,408
+Y los autores concluyeron que los grandes grupos musculares
+
+108
+00:03:42,408 --> 00:03:45,290
+conviene trabajarlos al menos dos veces por semana.
+
+109
+00:03:45,660 --> 00:03:47,152
+De ahí nació el dogma.
+
+110
+00:03:47,152 --> 00:03:49,188
+Dos veces por semana, siempre.
+
+111
+00:03:49,188 --> 00:03:52,512
+Se repitió en revistas, en libros, en gimnasios y
+
+112
+00:03:52,512 --> 00:03:53,190
+en vídeos.
+
+113
+00:03:53,560 --> 00:03:56,355
+Hasta que, unos años después, se volvió a revisar
+
+114
+00:03:56,355 --> 00:03:58,009
+la evidencia con más cuidado.
+
+115
+00:03:58,009 --> 00:04:00,632
+Y lo curioso es que entre quienes la revisaron
+
+116
+00:04:00,632 --> 00:04:03,940
+había investigadores que habían firmado la regla original.
+
+117
+00:04:04,870 --> 00:04:07,724
+En dos mil diecinueve se repitió el análisis, pero
+
+118
+00:04:07,724 --> 00:04:09,094
+con muchos más estudios:
+
+119
+00:04:09,094 --> 00:04:09,779
+veinticinco.
+
+120
+00:04:09,779 --> 00:04:12,176
+Y se hizo una pregunta que lo cambia todo:
+
+121
+00:04:12,176 --> 00:04:15,144
+¿qué pasa cuando los dos grupos hacen exactamente el
+
+122
+00:04:15,144 --> 00:04:16,400
+mismo trabajo semanal?
+
+123
+00:04:16,770 --> 00:04:19,461
+Imagina que a Mateo y a Diego les mandan
+
+124
+00:04:19,461 --> 00:04:20,066
+lo mismo:
+
+125
+00:04:20,066 --> 00:04:22,286
+doce series de pecho a la semana.
+
+126
+00:04:22,286 --> 00:04:24,640
+Mateo las reparte en tres sesiones.
+
+127
+00:04:24,640 --> 00:04:25,649
+Diego, en seis.
+
+128
+00:04:25,649 --> 00:04:27,801
+Mismo trabajo, distinto reparto.
+
+129
+00:04:27,801 --> 00:04:29,550
+Eso fue lo que compararon.
+
+130
+00:04:29,920 --> 00:04:31,246
+Y el resultado fue este.
+
+131
+00:04:31,246 --> 00:04:34,285
+Cuando el trabajo semanal era igual, no hubo diferencia
+
+132
+00:04:34,285 --> 00:04:37,434
+significativa entre trabajar un músculo menos veces o más
+
+133
+00:04:37,434 --> 00:04:37,766
+veces.
+
+134
+00:04:37,766 --> 00:04:39,865
+Ni en los músculos de arriba ni en los
+
+135
+00:04:39,865 --> 00:04:42,462
+de abajo, ni en personas que ya llevaban tiempo
+
+136
+00:04:42,462 --> 00:04:43,070
+entrenando.
+
+137
+00:04:43,440 --> 00:04:45,285
+¿Y la ventaja que se veía antes?
+
+138
+00:04:45,285 --> 00:04:48,110
+Solo aparecía en los estudios donde los grupos no
+
+139
+00:04:48,110 --> 00:04:49,840
+hacían el mismo trabajo total.
+
+140
+00:04:49,840 --> 00:04:50,359
+Es decir:
+
+141
+00:04:50,359 --> 00:04:53,934
+cuando aparecía una ventaja, venía mezclada con diferencias en
+
+142
+00:04:53,934 --> 00:04:56,587
+el trabajo total, y no solo con la frecuencia.
+
+143
+00:04:56,587 --> 00:04:58,720
+Y aun así, la diferencia era modesta.
+
+144
+00:04:59,090 --> 00:05:01,207
+Los propios autores lo resumieron así:
+
+145
+00:05:01,207 --> 00:05:03,992
+con el mismo volumen, cada persona puede elegir su
+
+146
+00:05:03,992 --> 00:05:06,220
+frecuencia semanal según su preferencia.
+
+147
+00:05:06,590 --> 00:05:09,245
+Con esto respondemos la primera afirmación.
+
+148
+00:05:09,245 --> 00:05:12,023
+¿Entrenar seis días te da el doble de músculo
+
+149
+00:05:12,023 --> 00:05:13,134
+que entrenar tres?
+
+150
+00:05:13,134 --> 00:05:13,504
+Falso.
+
+151
+00:05:13,504 --> 00:05:16,530
+Con el mismo trabajo, la ciencia no encuentra ese
+
+152
+00:05:16,530 --> 00:05:16,900
+doble.
+
+153
+00:05:17,270 --> 00:05:17,914
+Pero espera.
+
+154
+00:05:17,914 --> 00:05:20,760
+Si ya ibas a quedarte tranquilo pensando que entonces
+
+155
+00:05:20,760 --> 00:05:22,800
+da igual cuántos días entrenes, frena.
+
+156
+00:05:23,170 --> 00:05:25,877
+Porque hay un número que sí cambia el resultado.
+
+157
+00:05:25,877 --> 00:05:28,414
+Hay un error que casi todos cometen al contar
+
+158
+00:05:28,414 --> 00:05:28,922
+los días.
+
+159
+00:05:28,922 --> 00:05:31,290
+Y hay tres situaciones en las que los días
+
+160
+00:05:31,290 --> 00:05:31,967
+sí importan.
+
+161
+00:05:31,967 --> 00:05:34,110
+Una de ellas probablemente es la tuya.
+
+162
+00:05:34,480 --> 00:05:35,830
+Empecemos por el número.
+
+163
+00:05:36,760 --> 00:05:38,995
+Ese número se llama volumen semanal.
+
+164
+00:05:38,995 --> 00:05:39,802
+Dicho simple:
+
+165
+00:05:39,802 --> 00:05:43,030
+cuántas series duras haces por músculo en la semana.
+
+166
+00:05:43,400 --> 00:05:44,894
+¿Y qué es una serie dura?
+
+167
+00:05:44,894 --> 00:05:47,343
+Una serie en la que terminas con una, dos
+
+168
+00:05:47,343 --> 00:05:49,076
+o tres repeticiones de sobra.
+
+169
+00:05:49,076 --> 00:05:51,108
+O sea, cuando ya cuesta de verdad.
+
+170
+00:05:51,108 --> 00:05:55,350
+Diez repeticiones tranquilas, mientras hablas por teléfono, no cuentan.
+
+171
+00:05:55,720 --> 00:05:57,784
+En casa funciona exactamente igual.
+
+172
+00:05:57,784 --> 00:06:01,087
+Si haces lagartijas y puedes hacer cincuenta sin sufrir,
+
+173
+00:06:01,087 --> 00:06:02,679
+esas series son de relleno.
+
+174
+00:06:02,679 --> 00:06:05,628
+Para que cuenten tienes que acercarte a tu límite:
+
+175
+00:06:05,628 --> 00:06:08,636
+hacerlas más lentas, pausar abajo, o poner los pies
+
+176
+00:06:08,636 --> 00:06:09,580
+sobre una silla.
+
+177
+00:06:09,950 --> 00:06:11,252
+Ahora, la evidencia.
+
+178
+00:06:11,252 --> 00:06:15,156
+Otra revisión, esta de quince estudios, relacionó las series
+
+179
+00:06:15,156 --> 00:06:18,475
+semanales por músculo con cuánto creció el músculo.
+
+180
+00:06:18,475 --> 00:06:20,558
+Y encontró una relación gradual:
+
+181
+00:06:20,558 --> 00:06:22,380
+más series, más crecimiento.
+
+182
+00:06:22,750 --> 00:06:25,743
+En promedio, cada serie semanal extra se asociaba con
+
+183
+00:06:25,743 --> 00:06:27,437
+un poquito más de crecimiento.
+
+184
+00:06:27,437 --> 00:06:30,091
+Y los grupos que hacían más series ganaron casi
+
+185
+00:06:30,091 --> 00:06:33,310
+cuatro puntos porcentuales más de tamaño muscular que los
+
+186
+00:06:33,310 --> 00:06:34,270
+que hacían menos.
+
+187
+00:06:34,640 --> 00:06:35,912
+Ojo con cómo leer eso.
+
+188
+00:06:35,912 --> 00:06:39,151
+Son promedios de estudios de pocas semanas, hechos sobre
+
+189
+00:06:39,151 --> 00:06:40,597
+todo con adultos jóvenes.
+
+190
+00:06:40,597 --> 00:06:42,969
+Es la mejor pista que tenemos, no una ley
+
+191
+00:06:42,969 --> 00:06:44,010
+escrita en piedra.
+
+192
+00:06:44,380 --> 00:06:46,072
+Y hay un matiz importante:
+
+193
+00:06:46,072 --> 00:06:48,740
+todo indica que la curva sube, pero se va
+
+194
+00:06:48,740 --> 00:06:49,391
+aplanando.
+
+195
+00:06:49,391 --> 00:06:51,473
+Las primeras series valen mucho.
+
+196
+00:06:51,473 --> 00:06:53,230
+Las siguientes, algo menos.
+
+197
+00:06:53,600 --> 00:06:57,045
+Por eso muchos entrenadores hablan de un rango práctico:
+
+198
+00:06:57,045 --> 00:06:59,874
+entre diez y veinte series duras por músculo a
+
+199
+00:06:59,874 --> 00:07:00,490
+la semana.
+
+200
+00:07:00,490 --> 00:07:02,273
+Con menos, avanzas más lento.
+
+201
+00:07:02,273 --> 00:07:04,980
+Con mucho más, el cansancio empieza a pesar.
+
+202
+00:07:05,350 --> 00:07:07,905
+Mientras sigo, haz una cuenta de cabeza:
+
+203
+00:07:07,905 --> 00:07:10,907
+¿cuántas series duras haces tú por músculo a la
+
+204
+00:07:10,907 --> 00:07:11,354
+semana?
+
+205
+00:07:11,354 --> 00:07:12,184
+Sin mentirte.
+
+206
+00:07:12,184 --> 00:07:14,931
+Ese número va a ser importante dentro de un
+
+207
+00:07:14,931 --> 00:07:15,250
+rato.
+
+208
+00:07:15,620 --> 00:07:17,860
+Y ahora sí, el error que te prometí al
+
+209
+00:07:17,860 --> 00:07:18,450
+principio.
+
+210
+00:07:19,380 --> 00:07:21,826
+El error se llama contar días en lugar de
+
+211
+00:07:21,826 --> 00:07:23,019
+contar series duras.
+
+212
+00:07:23,019 --> 00:07:24,690
+Y se presenta de dos formas.
+
+213
+00:07:25,060 --> 00:07:26,675
+La primera es la de Diego.
+
+214
+00:07:26,675 --> 00:07:29,283
+Va seis días, pero en cada sesión hace dos
+
+215
+00:07:29,283 --> 00:07:32,761
+ejercicios por músculo, dos series por ejercicio, y mira
+
+216
+00:07:32,761 --> 00:07:34,500
+el celular entre una y otra.
+
+217
+00:07:34,870 --> 00:07:37,221
+Sumando todo, parece mucho trabajo.
+
+218
+00:07:37,221 --> 00:07:39,639
+Contando series duras, es poquísimo.
+
+219
+00:07:39,639 --> 00:07:42,661
+Y lo peor es que se siente productivo, porque
+
+220
+00:07:42,661 --> 00:07:43,870
+va todos los días.
+
+221
+00:07:44,240 --> 00:07:47,559
+Mientras tanto, Mateo va tres días, y cada serie
+
+222
+00:07:47,559 --> 00:07:49,357
+la lleva cerca del límite.
+
+223
+00:07:49,357 --> 00:07:51,086
+Los otros días ve series.
+
+224
+00:07:51,086 --> 00:07:51,847
+De Netflix.
+
+225
+00:07:51,847 --> 00:07:54,060
+Esas no cuentan para el volumen.
+
+226
+00:07:54,430 --> 00:07:56,761
+Es como medir una dieta por el número de
+
+227
+00:07:56,761 --> 00:07:58,510
+comidas y no por lo que comes.
+
+228
+00:07:58,510 --> 00:08:01,191
+Seis comidas de nada no alimentan más que tres
+
+229
+00:08:01,191 --> 00:08:01,890
+bien hechas.
+
+230
+00:08:02,260 --> 00:08:04,362
+La segunda forma es la contraria.
+
+231
+00:08:04,362 --> 00:08:07,291
+Mateo se entusiasma, y como solo va tres días,
+
+232
+00:08:07,291 --> 00:08:10,093
+decide meter todo el trabajo de la semana en
+
+233
+00:08:10,093 --> 00:08:11,112
+una sola sesión.
+
+234
+00:08:11,112 --> 00:08:13,150
+Veinte series de pecho el lunes.
+
+235
+00:08:13,520 --> 00:08:16,596
+Dentro de una misma sesión, cada serie extra suele
+
+236
+00:08:16,596 --> 00:08:19,180
+aportar menos que la anterior y cansa más.
+
+237
+00:08:19,550 --> 00:08:22,797
+Se sospecha que por eso las sesiones larguísimas rinden
+
+238
+00:08:22,797 --> 00:08:24,214
+menos de lo que parecen:
+
+239
+00:08:24,214 --> 00:08:27,225
+llegas a las últimas series cansado, con la técnica
+
+240
+00:08:27,225 --> 00:08:28,701
+peor y el esfuerzo menor.
+
+241
+00:08:28,701 --> 00:08:29,410
+No es magia.
+
+242
+00:08:29,410 --> 00:08:30,000
+Es fatiga.
+
+243
+00:08:30,370 --> 00:08:32,395
+Y eso sí es un argumento a favor de
+
+244
+00:08:32,395 --> 00:08:33,552
+repartir el trabajo.
+
+245
+00:08:33,552 --> 00:08:36,271
+No porque más días activen más tu músculo, sino
+
+246
+00:08:36,271 --> 00:08:39,800
+porque repartir las series te permite hacerlas todas frescas.
+
+247
+00:08:40,170 --> 00:08:42,625
+Entonces, ¿para qué sirven los días?
+
+248
+00:08:42,625 --> 00:08:44,194
+Para algo muy concreto:
+
+249
+00:08:44,194 --> 00:08:47,741
+repartir tu trabajo duro para que cada serie cuente.
+
+250
+00:08:47,741 --> 00:08:48,900
+Ni más, ni menos.
+
+251
+00:08:49,270 --> 00:08:51,772
+Y según quién seas tú, ese reparto cambia.
+
+252
+00:08:51,772 --> 00:08:54,215
+Veamos los tres casos en los que los días
+
+253
+00:08:54,215 --> 00:08:54,930
+sí importan.
+
+254
+00:08:55,850 --> 00:08:56,467
+Caso uno:
+
+255
+00:08:56,467 --> 00:08:57,700
+eres principiante.
+
+256
+00:08:57,700 --> 00:09:00,510
+Y aquí respondemos la tercera afirmación:
+
+257
+00:09:00,510 --> 00:09:04,415
+¿un principiante y alguien con años de gimnasio necesitan
+
+258
+00:09:04,415 --> 00:09:05,649
+las mismas series?
+
+259
+00:09:05,649 --> 00:09:06,060
+Falso.
+
+260
+00:09:06,430 --> 00:09:09,690
+Quien empieza responde incluso con poco trabajo, porque su
+
+261
+00:09:09,690 --> 00:09:12,556
+cuerpo todavía no está acostumbrado a nada de esto.
+
+262
+00:09:12,556 --> 00:09:15,759
+Una revisión sobre cómo entrenar con poco tiempo propone,
+
+263
+00:09:15,759 --> 00:09:18,400
+como punto de partida, un mínimo de unas cuatro
+
+264
+00:09:18,400 --> 00:09:20,030
+series semanales por músculo.
+
+265
+00:09:20,400 --> 00:09:23,628
+Y practicar el movimiento a menudo también ayuda a
+
+266
+00:09:23,628 --> 00:09:24,855
+mejorar tu técnica.
+
+267
+00:09:24,855 --> 00:09:28,083
+Por eso, para un principiante, tres días de cuerpo
+
+268
+00:09:28,083 --> 00:09:29,697
+completo bastan de sobra.
+
+269
+00:09:29,697 --> 00:09:31,247
+No hacen falta más días.
+
+270
+00:09:31,247 --> 00:09:33,700
+Hace falta aprender a esforzarse bien.
+
+271
+00:09:34,070 --> 00:09:34,650
+Caso dos:
+
+272
+00:09:34,650 --> 00:09:36,197
+necesitas mucho volumen.
+
+273
+00:09:36,197 --> 00:09:39,162
+Después de años entrenando, tu cuerpo ya no se
+
+274
+00:09:39,162 --> 00:09:40,709
+sorprende con facilidad.
+
+275
+00:09:40,709 --> 00:09:43,610
+Para seguir progresando necesitas más series.
+
+276
+00:09:43,980 --> 00:09:46,374
+Y llega un punto en que meterlas todas en
+
+277
+00:09:46,374 --> 00:09:49,060
+tres sesiones las vuelve eternas y agotadoras.
+
+278
+00:09:49,060 --> 00:09:50,754
+Ahí, más días no son un lujo.
+
+279
+00:09:50,754 --> 00:09:51,571
+Son logística:
+
+280
+00:09:51,571 --> 00:09:54,900
+te permiten repartir el trabajo para hacerlo con calidad.
+
+281
+00:09:55,270 --> 00:09:56,012
+Caso tres:
+
+282
+00:09:56,012 --> 00:09:57,052
+tu vida manda.
+
+283
+00:09:57,052 --> 00:10:00,319
+Tu trabajo, tu sueño, tu estrés, tu edad, tu
+
+284
+00:10:00,319 --> 00:10:00,913
+familia.
+
+285
+00:10:00,913 --> 00:10:04,328
+La mejor distribución no es la más perfecta en
+
+286
+00:10:04,328 --> 00:10:04,996
+el papel.
+
+287
+00:10:04,996 --> 00:10:08,040
+Es la que sobrevive a tus semanas reales.
+
+288
+00:10:08,410 --> 00:10:10,716
+Hay semanas de cinco días y semanas de dos.
+
+289
+00:10:10,716 --> 00:10:12,700
+Un plan que cumples le gana a un plan
+
+290
+00:10:12,700 --> 00:10:15,060
+perfecto que abandonas en la tercera semana.
+
+291
+00:10:15,440 --> 00:10:18,380
+Si te reconociste en alguno de los tres, perfecto.
+
+292
+00:10:18,380 --> 00:10:21,026
+Ahora veamos cómo se ve cada plan por dentro.
+
+293
+00:10:21,026 --> 00:10:22,967
+Y te adelanto algo que sorprende:
+
+294
+00:10:22,967 --> 00:10:26,377
+entrenar seis días no significa trabajar cada músculo seis
+
+295
+00:10:26,377 --> 00:10:26,730
+veces.
+
+296
+00:10:27,660 --> 00:10:29,978
+Si sigues aquí, ya sabes más sobre esto que
+
+297
+00:10:29,978 --> 00:10:31,865
+la mayoría de la gente que entrena.
+
+298
+00:10:31,865 --> 00:10:33,320
+Así que vamos a los planes.
+
+299
+00:10:33,690 --> 00:10:34,370
+Plan uno:
+
+300
+00:10:34,370 --> 00:10:36,412
+tres días, cuerpo completo.
+
+301
+00:10:36,412 --> 00:10:39,436
+Por ejemplo, lunes, miércoles y viernes.
+
+302
+00:10:39,436 --> 00:10:41,629
+En cada sesión trabajas todo:
+
+303
+00:10:41,629 --> 00:10:44,804
+pecho, espalda, piernas, hombros y brazos.
+
+304
+00:10:44,804 --> 00:10:48,660
+Cada músculo entra tres veces por semana, con pocas
+
+305
+00:10:48,660 --> 00:10:49,870
+series cada vez.
+
+306
+00:10:50,240 --> 00:10:52,884
+Con tres o cuatro series duras por músculo en
+
+307
+00:10:52,884 --> 00:10:55,470
+cada sesión, llegas a entre nueve y doce por
+
+308
+00:10:55,470 --> 00:10:55,881
+semana.
+
+309
+00:10:55,881 --> 00:10:58,878
+Es ideal si estás empezando, si tienes poco tiempo,
+
+310
+00:10:58,878 --> 00:11:00,700
+o si quieres un horario simple.
+
+311
+00:11:00,700 --> 00:11:01,288
+El límite:
+
+312
+00:11:01,288 --> 00:11:04,285
+si más adelante quieres subir mucho el volumen, las
+
+313
+00:11:04,285 --> 00:11:05,460
+sesiones se alargan.
+
+314
+00:11:05,830 --> 00:11:06,494
+Plan dos:
+
+315
+00:11:06,494 --> 00:11:08,561
+cuatro días, torso y pierna.
+
+316
+00:11:08,561 --> 00:11:11,365
+Dos días de torso y dos de pierna, por
+
+317
+00:11:11,365 --> 00:11:14,318
+ejemplo lunes, martes, jueves y viernes.
+
+318
+00:11:14,318 --> 00:11:17,270
+Cada músculo entra dos veces por semana.
+
+319
+00:11:17,640 --> 00:11:20,505
+Con cinco o seis series duras por músculo en
+
+320
+00:11:20,505 --> 00:11:23,306
+cada sesión, llegas a entre diez y doce por
+
+321
+00:11:23,306 --> 00:11:25,259
+semana, o más si lo necesitas.
+
+322
+00:11:25,259 --> 00:11:27,539
+Para mucha gente es el punto dulce:
+
+323
+00:11:27,539 --> 00:11:30,990
+buen reparto, tres días libres y sesiones razonables.
+
+324
+00:11:31,360 --> 00:11:32,141
+Plan tres:
+
+325
+00:11:32,141 --> 00:11:34,797
+seis días, empuje, tirón y pierna.
+
+326
+00:11:34,797 --> 00:11:38,468
+Un día de empuje, con pecho, hombros y tríceps.
+
+327
+00:11:38,468 --> 00:11:41,203
+Uno de tirón, con espalda y bíceps.
+
+328
+00:11:41,203 --> 00:11:42,296
+Uno de pierna.
+
+329
+00:11:42,296 --> 00:11:43,234
+Y se repite.
+
+330
+00:11:43,234 --> 00:11:45,421
+Y aquí viene lo que te dije:
+
+331
+00:11:45,421 --> 00:11:48,545
+cada músculo entra dos veces por semana.
+
+332
+00:11:48,545 --> 00:11:48,858
+Dos.
+
+333
+00:11:48,858 --> 00:11:51,670
+Igual que en el plan de cuatro días.
+
+334
+00:11:52,040 --> 00:11:55,385
+La diferencia es que cada sesión trabaja menos músculos,
+
+335
+00:11:55,385 --> 00:11:58,192
+así que puedes meter más series por músculo sin
+
+336
+00:11:58,192 --> 00:11:59,685
+que la sesión sea eterna.
+
+337
+00:11:59,685 --> 00:12:02,194
+Con seis a ocho series por músculo en cada
+
+338
+00:12:02,194 --> 00:12:05,180
+sesión, subes a entre doce y dieciséis por semana.
+
+339
+00:12:05,550 --> 00:12:08,501
+Es una opción para quien necesita mucho volumen y
+
+340
+00:12:08,501 --> 00:12:11,511
+tiene el tiempo y la recuperación para sostenerlo.
+
+341
+00:12:11,511 --> 00:12:12,053
+El costo:
+
+342
+00:12:12,053 --> 00:12:14,522
+casi no tienes días libres, y si tu sueño
+
+343
+00:12:14,522 --> 00:12:16,690
+o tu vida fallan, se nota enseguida.
+
+344
+00:12:17,060 --> 00:12:19,025
+Fíjate en lo que acabamos de ver.
+
+345
+00:12:19,025 --> 00:12:22,120
+Tres, cuatro o seis días pueden darte una frecuencia
+
+346
+00:12:22,120 --> 00:12:25,335
+por músculo parecida, y volúmenes semanales parecidos.
+
+347
+00:12:25,335 --> 00:12:28,193
+Lo que cambia es el tiempo que pasas entrenando,
+
+348
+00:12:28,193 --> 00:12:29,860
+el cansancio y la logística.
+
+349
+00:12:30,230 --> 00:12:31,679
+Entonces, ¿cuál es mejor?
+
+350
+00:12:31,679 --> 00:12:34,055
+El que te deja hacer tus series duras con
+
+351
+00:12:34,055 --> 00:12:36,605
+calidad, y que puedas repetir durante meses.
+
+352
+00:12:36,605 --> 00:12:39,561
+Para saber cuál es el tuyo, primero necesitas saber
+
+353
+00:12:39,561 --> 00:12:40,952
+cuándo te estás pasando.
+
+354
+00:12:40,952 --> 00:12:42,980
+Y ahí hay una afirmación pendiente.
+
+355
+00:12:43,910 --> 00:12:45,723
+La segunda afirmación decía:
+
+356
+00:12:45,723 --> 00:12:49,479
+si todavía tienes agujetas, no debes entrenar ese músculo.
+
+357
+00:12:49,479 --> 00:12:51,810
+Es falso, o por lo menos incompleto.
+
+358
+00:12:52,190 --> 00:12:55,333
+Las agujetas son una molestia que aparece cuando haces
+
+359
+00:12:55,333 --> 00:12:56,614
+algo nuevo o muy duro.
+
+360
+00:12:56,614 --> 00:12:59,059
+Pero no miden cuánto creciste, ni si ya te
+
+361
+00:12:59,059 --> 00:12:59,758
+recuperaste.
+
+362
+00:12:59,758 --> 00:13:02,959
+Hay quien tiene agujetas durante días y rinde perfecto.
+
+363
+00:13:02,959 --> 00:13:05,404
+Y hay quien se siente agotado sin una sola
+
+364
+00:13:05,404 --> 00:13:05,870
+agujeta.
+
+365
+00:13:06,240 --> 00:13:08,766
+Un termómetro mucho mejor es tu rendimiento.
+
+366
+00:13:08,766 --> 00:13:11,637
+¿Puedes repetir lo que hiciste la semana pasada, o
+
+367
+00:13:11,637 --> 00:13:12,670
+hacer un poco más?
+
+368
+00:13:13,040 --> 00:13:15,107
+Estas son las señales de que tu cuerpo no
+
+369
+00:13:15,107 --> 00:13:16,770
+está recuperando lo que le pides.
+
+370
+00:13:17,140 --> 00:13:17,388
+Una:
+
+371
+00:13:17,388 --> 00:13:20,494
+tu rendimiento baja durante dos semanas o más, con
+
+372
+00:13:20,494 --> 00:13:23,040
+los mismos pesos o las mismas lagartijas.
+
+373
+00:13:23,410 --> 00:13:23,667
+Dos:
+
+374
+00:13:23,667 --> 00:13:26,558
+duermes peor, o te levantas más cansado de lo
+
+375
+00:13:26,558 --> 00:13:27,650
+que te acostaste.
+
+376
+00:13:28,020 --> 00:13:28,368
+Tres:
+
+377
+00:13:28,368 --> 00:13:29,968
+tu motivación se apaga.
+
+378
+00:13:29,968 --> 00:13:33,308
+Entrenar se siente como un castigo, no como algo
+
+379
+00:13:33,308 --> 00:13:34,560
+que quieres hacer.
+
+380
+00:13:34,930 --> 00:13:35,505
+Y cuatro:
+
+381
+00:13:35,505 --> 00:13:38,506
+un dolor en articulaciones o tendones que no se
+
+382
+00:13:38,506 --> 00:13:38,697
+va.
+
+383
+00:13:38,697 --> 00:13:41,252
+No hablo de la molestia muscular normal.
+
+384
+00:13:41,252 --> 00:13:43,231
+Hablo de un dolor que se queda.
+
+385
+00:13:43,231 --> 00:13:44,381
+Ese no se negocia:
+
+386
+00:13:44,381 --> 00:13:46,360
+se consulta con un profesional.
+
+387
+00:13:46,730 --> 00:13:47,676
+Pero tranquilo.
+
+388
+00:13:47,676 --> 00:13:51,080
+El sobreentrenamiento de verdad, el que dura meses, es
+
+389
+00:13:51,080 --> 00:13:54,044
+poco común en quien entrena para ganar músculo.
+
+390
+00:13:54,044 --> 00:13:55,998
+Lo habitual es algo más simple:
+
+391
+00:13:55,998 --> 00:13:57,070
+fatiga acumulada.
+
+392
+00:13:57,440 --> 00:13:58,474
+Y tiene arreglo.
+
+393
+00:13:58,474 --> 00:13:59,961
+Una semana de descarga:
+
+394
+00:13:59,961 --> 00:14:03,193
+los mismos ejercicios, la mitad de las series, sin
+
+395
+00:14:03,193 --> 00:14:04,292
+llegar al límite.
+
+396
+00:14:04,292 --> 00:14:07,200
+Y revisar las dos cosas que casi nadie cuida:
+
+397
+00:14:07,200 --> 00:14:08,170
+dormir y comer.
+
+398
+00:14:08,540 --> 00:14:12,416
+Muchos entrenadores programan esa semana cada cierto tiempo, aunque
+
+399
+00:14:12,416 --> 00:14:13,921
+la persona se sienta bien.
+
+400
+00:14:13,921 --> 00:14:16,640
+Es más fácil prevenir la fatiga que arreglarla.
+
+401
+00:14:17,010 --> 00:14:17,645
+Ahora sí.
+
+402
+00:14:17,645 --> 00:14:19,620
+Lo que te prometí hace rato.
+
+403
+00:14:20,550 --> 00:14:21,628
+Cuatro preguntas.
+
+404
+00:14:21,628 --> 00:14:25,052
+Respóndelas con sinceridad, pensando en tu vida real y
+
+405
+00:14:25,052 --> 00:14:26,510
+no en tu versión ideal.
+
+406
+00:14:26,880 --> 00:14:27,691
+Pregunta uno:
+
+407
+00:14:27,691 --> 00:14:30,312
+¿cuánto tiempo llevas entrenando en serio?
+
+408
+00:14:30,312 --> 00:14:32,745
+Si llevas menos de un año, tres días de
+
+409
+00:14:32,745 --> 00:14:34,991
+cuerpo completo y a esforzarte bien.
+
+410
+00:14:34,991 --> 00:14:37,050
+No necesitas nada más complicado.
+
+411
+00:14:37,420 --> 00:14:38,236
+Pregunta dos:
+
+412
+00:14:38,236 --> 00:14:41,248
+¿cuántas series duras por músculo haces hoy a la
+
+413
+00:14:41,248 --> 00:14:41,687
+semana?
+
+414
+00:14:41,687 --> 00:14:44,135
+Te pedí que lo calcularas hace un rato.
+
+415
+00:14:44,135 --> 00:14:46,331
+Si llevas más de un año y estás por
+
+416
+00:14:46,331 --> 00:14:48,716
+debajo de diez, no necesitas más días.
+
+417
+00:14:48,716 --> 00:14:51,790
+Necesitas más esfuerzo en cada serie, o una serie
+
+418
+00:14:51,790 --> 00:14:52,920
+más por ejercicio.
+
+419
+00:14:53,290 --> 00:14:54,204
+Pregunta tres:
+
+420
+00:14:54,204 --> 00:14:55,706
+¿cuánto dura tu sesión?
+
+421
+00:14:55,706 --> 00:14:57,992
+Si pasa de una hora y cuarto, y las
+
+422
+00:14:57,992 --> 00:15:01,453
+últimas series las haces solo por cumplir, reparte el
+
+423
+00:15:01,453 --> 00:15:02,890
+trabajo en un día más.
+
+424
+00:15:03,260 --> 00:15:04,414
+Pregunta cuatro:
+
+425
+00:15:04,414 --> 00:15:08,310
+¿qué plan podrías sostener seis meses, con tu trabajo,
+
+426
+00:15:08,310 --> 00:15:09,897
+tu sueño y tu familia?
+
+427
+00:15:09,897 --> 00:15:10,690
+Escoge ese.
+
+428
+00:15:11,060 --> 00:15:13,431
+Y si quieres una sola regla para recordar:
+
+429
+00:15:13,431 --> 00:15:15,915
+elige el menor número de días que te permita
+
+430
+00:15:15,915 --> 00:15:18,230
+hacer tus series duras con buena calidad.
+
+431
+00:15:18,230 --> 00:15:20,545
+Ni uno más por presumir, ni uno menos por
+
+432
+00:15:20,545 --> 00:15:20,940
+pereza.
+
+433
+00:15:21,870 --> 00:15:23,357
+Volvamos a Mateo y a Diego.
+
+434
+00:15:23,357 --> 00:15:25,670
+¿Quién tiene más músculo a los seis meses?
+
+435
+00:15:26,040 --> 00:15:27,330
+La respuesta honesta:
+
+436
+00:15:27,330 --> 00:15:30,279
+depende de cuántas series duras hizo cada uno, y
+
+437
+00:15:30,279 --> 00:15:31,631
+de cuánto se recuperó.
+
+438
+00:15:31,631 --> 00:15:34,948
+Si hicieron el mismo trabajo duro y descansaron igual,
+
+439
+00:15:34,948 --> 00:15:36,177
+llegan casi iguales.
+
+440
+00:15:36,177 --> 00:15:39,187
+La única diferencia es que Mateo tuvo cuatro días
+
+441
+00:15:39,187 --> 00:15:41,030
+libres para vivir, y Diego no.
+
+442
+00:15:41,400 --> 00:15:43,942
+Si Diego de verdad hizo más series duras y
+
+443
+00:15:43,942 --> 00:15:46,363
+se recuperó bien, puede sacarle ventaja.
+
+444
+00:15:46,363 --> 00:15:49,087
+Pero si Diego hizo relleno, o se quemó, Mateo
+
+445
+00:15:49,087 --> 00:15:49,692
+lo supera.
+
+446
+00:15:49,692 --> 00:15:51,811
+Los días nunca fueron la respuesta.
+
+447
+00:15:51,811 --> 00:15:52,900
+Solo eran el vaso.
+
+448
+00:15:53,270 --> 00:15:55,607
+Repasemos tus tres afirmaciones.
+
+449
+00:15:55,607 --> 00:15:55,899
+Una:
+
+450
+00:15:55,899 --> 00:15:59,039
+seis días dan el doble de músculo que tres.
+
+451
+00:15:59,039 --> 00:15:59,477
+Falso.
+
+452
+00:15:59,477 --> 00:15:59,769
+Dos:
+
+453
+00:15:59,769 --> 00:16:02,179
+con agujetas no se debe entrenar.
+
+454
+00:16:02,179 --> 00:16:04,589
+Falso, o por lo menos incompleto:
+
+455
+00:16:04,589 --> 00:16:06,926
+las agujetas no son el semáforo.
+
+456
+00:16:06,926 --> 00:16:07,291
+Tres:
+
+457
+00:16:07,291 --> 00:16:11,234
+principiantes y avanzados necesitan las mismas series.
+
+458
+00:16:11,234 --> 00:16:11,673
+Falso.
+
+459
+00:16:11,673 --> 00:16:13,060
+¿Cuántas acertaste?
+
+460
+00:16:13,440 --> 00:16:15,081
+Cuéntamelo en los comentarios:
+
+461
+00:16:15,081 --> 00:16:17,598
+cuántas acertaste y cuántos días entrenas hoy.
+
+462
+00:16:17,598 --> 00:16:20,060
+Me encanta leer qué divisiones les funcionan.
+
+463
+00:16:20,440 --> 00:16:23,088
+Y si este vídeo te sirvió, mándaselo a ese
+
+464
+00:16:23,088 --> 00:16:25,925
+amigo que entrena seis días y no entiende por
+
+465
+00:16:25,925 --> 00:16:26,808
+qué no cambia.
+
+466
+00:16:26,808 --> 00:16:27,060
+Hoy.
+
+467
+00:16:27,440 --> 00:16:29,319
+Si quieres más ciencia del entrenamiento explicada fácil, suscríbete.
