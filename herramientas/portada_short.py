@@ -10,7 +10,7 @@ for y in range(H): g.putpixel((0, y), int(60 * max(0, 1 - y / 700) + 215 * max(0
 im = Image.composite(Image.new("RGB", (W, H), (5, 8, 14)), im, g.resize((W, H)))
 d = ImageDraw.Draw(im); lines = txt.split("|"); y = int(os.environ.get("Y0", 190))
 for ln in lines:
-    sz = 190 if len(ln) <= 3 else (150 if len(ln) <= 12 else 118)
+    sz = 230 if len(ln) <= 6 else (150 if len(ln) <= 12 else 118)
     f = ImageFont.truetype(F, sz)
     # ajusta para que quepa
     while d.textlength(ln, font=f) > W - 110: sz -= 4; f = ImageFont.truetype(F, sz)
