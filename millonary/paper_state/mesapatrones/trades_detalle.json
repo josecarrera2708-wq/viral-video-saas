@@ -11,13 +11,13 @@
   "nocional_usdt": 164.2701394,
   "riesgo_usdt": 3.2728616669549506,
   "stop_pct": 0.019923655503727846,
-  "px_salida": 82820.56079999999,
+  "px_salida": 82720.0407,
   "salida": "end",
-  "R": -0.4534729046960445,
-  "pnl_usdt": -1.4841540867823997,
-  "comision_usdt": 0.1649556305,
-  "funding_usdt": 0.05178374371756974,
-  "barras": 40,
+  "R": -0.39175562153656585,
+  "pnl_usdt": -1.2821619565411377,
+  "comision_usdt": 0.1648551104,
+  "funding_usdt": 0.05263515385884329,
+  "barras": 41,
   "max_barras": 72,
   "mfe_R": 1.090525589894766,
   "mae_R": 0.8212570140493453,
@@ -28,7 +28,7 @@
   "abierta": true,
   "lecciones": [],
   "temporalidad": "1h",
-  "duracion_min": 2400
+  "duracion_min": 2460
  },
  {
   "trader": "U02 Triple suelo/techo 1 h + funding + volumen (dejar correr)",
