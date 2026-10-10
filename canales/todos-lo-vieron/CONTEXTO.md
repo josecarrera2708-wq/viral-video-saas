@@ -1,0 +1,80 @@
+# Canal "Todos Lo Vieron": contexto (7-oct-2026)
+
+## Decisiones del usuario
+- **Canal:** Todos Lo Vieron (@TodosLoVieron, libre a 7-oct-2026). Público de más de 40 años. Eslogan: "Todos lo vieron. Lo que nadie te contó."
+- **Formato:** un caso viral completo por vídeo, sin cara. "Lo que nadie te contó" va en los títulos, no en el nombre.
+- **Vídeo 1:** Andrew Dawson, el hombre que grabó a un "gigante" en Canadá y desapareció. Murió: tratarlo con respeto, sin morbo y sin presentar teorías como hechos.
+- **Duración:** 40–45 min REALES. Unas 6.000–6.600 palabras de guion; medir el audio antes de montar.
+- **Voz:** latina neutra, grave y cruda (estilo narrador de misterio). Probar voces de Cartesia en español (Andres, Alonso, Rodrigo, Mateo… y clonadas o de la biblioteca si hace falta) con una muestra corta antes de generar todo.
+- **Imagen:**
+  - opción A: imágenes fijas con movimiento de cámara y paralaje (ffmpeg);
+  - el usuario pidió además el precio de clips cortos animados con IA (pendiente de que decida).
+- **Material real SOLO sin copyright:** dominio público (Wikimedia Commons, archivos de gobiernos y organismos de EE. UU. y Canadá, NASA…) o Creative Commons con uso comercial; capturas breves de titulares como cita. **Nada** de telediarios, fotos de prensa ni el TikTok original: se recrea con IA. A Dawson nunca se le representa de forma fotorrealista (siluetas o ilustración).
+- **Pendiente de investigar:** el caso completo con fuentes; canales de misterio que funcionan (estilo de animación, tipografía, miniaturas, ritmo, música CC0); guion largo; plan de escenas.
+- **Reglas:** avisar del coste antes de usar APIs de pago; máximo 2 reintentos por imagen; parar tras 2 fallos seguidos; música solo CC0; commit y push al terminar cada turno que cree archivos.
+
+## Guion del vídeo 1 (7-oct-2026)
+- `guiones/dawson-guion-01.md`: 23 secciones y 7.283 palabras. Da unos 40,5 min a 180 palabras/min y unos 44 min a 165.
+- Las fuentes están en `guiones/dawson-fuentes-01.md`.
+- Estilo: documental de televisión. Intro de 40 s, apertura con lugar y fecha, narración en presente, 5 actos con un adelanto al final de cada uno y 6 zonas de retención.
+- **Corrección del caso:** los vídeos fueron ficción, según el propio Andrew (6-may) y su pareja (21-oct-2022). Murió el 1-jul-2022 y su pareja contó que llevaba tiempo luchando contra la depresión. No se dan más detalles sobre su muerte. Al final del vídeo aparece la línea de ayuda 024 (España) y las de otros países van en la descripción.
+- **Lección de La Ciencia de la Salud:** 3.471 palabras dieron 19:17 min (unas 180 palabras/min con speed 1.05). Hay que medir la voz real antes de montar.
+- Siguiente paso: muestras de voz latina grave de unos 20 s cada una, avisando antes del coste.
+
+## Guion v2 y voz (7-oct-2026)
+- `guiones/dawson-guion-01.md` v2: conversacional, hablando de "tú", frases completas y vocabulario latino ("video", "celular", "auto"). Tiene 24 secciones y 8.245 palabras, unos 44 min a 187 palabras/min.
+- Secciones nuevas: 16, "La foto que alguien robó" (Lillooet, 1894), y la visita del investigador a la autopista (en la 18).
+- Voz elegida: **Alejandro** 3a35daa1-ba81-451c-9b21-59332e9db2f3, velocidad 1.0. El usuario la quiere fluida y no demasiado grave.
+- Descartadas: Manuel, Jorge, Andrés, Agustín, Damon, Carl, Darius y Alejandro con el tono bajado.
+- Muestras de la intro: sonic-3 (189 palabras/min) y sonic-3.5 (178 palabras/min). Falta elegir el modelo.
+- Norma de escritura para TTS: nada de frases sueltas sin verbo ("Una montaña. Un edificio."), porque suenan robóticas.
+
+## Decisiones oficiales (7-oct-2026)
+- **Lema oficial: "Todos Lo Vieron: la historia real detrás del misterio."** Sustituye a "lo que nadie te contó" como eslogan; esa frase solo puede aparecer suelta dentro de la narración.
+- **Voz oficial del canal: Alejandro** (3a35daa1-ba81-451c-9b21-59332e9db2f3) con **sonic-3.5**. Generación: speed 1.0, PAUSA 0.55, PAUSA_MAX 0.6 y PAUSA_SECCION 0.6.
+  Comando: `MODEL=sonic-3.5 VOICE_ID=... GUION=... OUT_DIR=... VOZ_TMP=... python3 herramientas/gen_voz.py`.
+  Para regenerar bloques: `regen_bloques.py` con `MODEL=sonic-3.5 SPEEDS=1.0,0.98,1.02`.
+- Guion v3: la intro no desvela el final y va seguida de su vida (Campbell River y el valle). Son 8.526 palabras, unos 46 min, y el usuario aprobó esa duración.
+- Herramientas de voz copiadas de La Ciencia de la Salud a `herramientas/`. Añaden `MODEL`, `PAUSA_SECCION` y generación en paralelo.
+
+## Voz final del vídeo 1 (7-oct-2026)
+- `video/dawson-01/voz-final.mp3` dura 46:25. Se generó con Alejandro y sonic-3.5 (PAUSA 0.4, PAUSA_SECCION 0.6) y después se aceleró con atempo 1.07. Tiempos en `tiempos-final.json`.
+- Whisper: se corrigieron las mayúsculas, que se deletreaban (en el guion las citas van siempre en minúscula), y "Jasper", que sonaba "Hásper" (va a `herramientas/pronuncia.json` como "Yásper").
+- Cierre nuevo: "suscríbete a este canal, porque aquí vas a conocer las verdaderas historias detrás de los grandes misterios del mundo".
+- **Norma de mezcla:** la música sigue 3–4 s después de la última palabra con un fundido de salida. No se corta de golpe.
+
+## Estilo visual y clips (7-oct-2026)
+- Estilo propuesto: realismo de cine con grade frío (True Detective, Seven, Prisoners). Poca saturación, sombras en azul acero y verde azulado, negros profundos, grano y un único acento cálido ámbar. El prompt está en `video/dawson-01/estilos/ESTILO.txt`; las pruebas son E1 y E2.
+- **Sora ya no existe:** OpenAI cerró la API de vídeo el 24-sep-2026 y `/v1/videos` devuelve 404. No hubo cobro.
+- vidIQ tiene `generate_video` (Veo, Kling, Seedance, Minimax), pero solo quedan 10 créditos (oct-2026), que no llegan para un clip.
+- Alternativa gratis: "clips" locales con ffmpeg (acercamiento, temblor, grano y viñeta). Prueba en `estilos/clip-local-prueba.mp4`.
+
+## Mezcla de audio (7-oct-2026)
+- Músicas elegidas por el usuario: 01 Tension Rising, 02 Dark Slow Drone y 09 Street Museum. Se reparten por escenas en `video/dawson-01/mezcla-plan.json`.
+- Herramienta: `herramientas/mezcla_v2.py <plan> <salida>`. Hace ducking con sidechain, coloca 45 efectos anclados a frases y deja 4,5 s de cola de música con fundido.
+- Niveles: la voz va a -16 LUFS antes del máster. La música queda unos 14 LU por debajo en las pausas y unos 18–20 bajo la voz (público de más de 40). Máster a -14 LUFS con TP -1,5 (medido: -13,6 LUFS, LRA 4,5).
+- Licencias en `video/dawson-01/LICENCIAS-AUDIO.md`.
+
+## Estado al 7-oct-2026 (antes de compactar)
+- Voz final: hecha, 46:35 (`video/dawson-01/voz-final.mp3` y `tiempos-final.json`).
+- Mezcla de audio v3, pendiente de la aprobación del usuario. La música se ecualizó para el móvil (`musica/eq.txt`, armónicos de graves), con gain +1/+2 dB y duck_ratio 2. Los efectos van con offset -7 dB, y -12 dB en la intro.
+  Se regenera con `python3 herramientas/mezcla_v2.py video/dawson-01/mezcla-plan.json video/dawson-01/audio-mezcla.mp3` (unos 8 min; el resultado no se sube a git).
+- Quejas resueltas: el arranque ruidoso (máster en dos pasadas) y la música que no se oía en el móvil (ecualización).
+- Orden de volúmenes que pide el usuario: voz > música > efectos.
+- Siguiente paso: que el usuario confirme la mezcla y luego el **video de prueba de 2,5 min** (intro y comienzo de la sección 2). Unas 15 imágenes en calidad baja (unos 0,15 $) con el estilo de `estilos/ESTILO.txt`, movimiento local (zoom, temblor y grano), subtítulos y la mezcla. **Preguntar antes de empezar.**
+- Después: el plan de unas 100 escenas, las imágenes en calidad media (unos 6–8 $), el montaje completo, la miniatura y el paquete de YouTube.
+
+## Estado al 7-oct-2026 (mezcla aprobada)
+- **Audio APROBADO**: `video/dawson-01/audio-mezcla.mp3` (46:38, -14.3 LUFS, pico -1.7). Plan: `mezcla-plan.json` con musica_lufs -20, duck_ratio 2.5, bucles sin huecos y nivelado dynaudnorm (`herramientas/mezcla_v2.py`). Variables de entorno HASTA y STEMS para pruebas rápidas.
+- Prompts de vídeo con los lugares reales (Valemount, Yellowhead, Canoe Mountain): `video/dawson-01/prompts-video-prueba.md`. El usuario los prueba en Muse (el primer clip salió con ciudad y semáforos: corregido en v2).
+- Siguiente: montaje completo (decidir la fuente de las imágenes antes de gastar).
+
+## Estado al 10-oct-2026 (antes de compactar)
+- **Vídeo 1 (Andrew Dawson):** guion, voz y mezcla de audio aprobados. Planes en `video/dawson-01/plan-audio.md` y `plan-escenas.md` (194 escenas: 27 Muse, 133 imágenes, 34 gráficos). El usuario dice que ya tiene el vídeo listo. **Muse le bloquea en España**: los vídeos siguientes se hacen con imágenes mías, sin Muse (≈7–10 $ por vídeo con 120–150 imágenes en calidad media; avisar antes de gastar).
+- **Vídeos 2, 3 y 4 elegidos** de `investigacion/huecos/HUECOS.md`: 2 = Phineas Gage (`gage`), 3 = regalos de las cajas de cereales (`cereales`), 4 = faro y foto de La Jument (`jument`).
+- **Workflow en marcha** (lanzado el 10-oct, el usuario durmiendo): Task ID **`w3v3siu25`** (relanzado el 10-oct; el primero, `w7opgj10t`, se paró para corregir la duración), run `wf_8ccdfc16-39f`. Script: `/root/.claude/projects/-home-user-viral-video-saas/4fc25ed8-7367-56d4-8e53-4682774195e3/workflows/scripts/guiones-3-historias-wf_8ccdfc16-39f.js`. Reanudar: `Workflow({scriptPath: <esa ruta>, resumeFromRunId: "wf_8ccdfc16-39f"})`.
+  - Fases: oficio (web) → 4 investigadores + dossier por historia → 3 arquitectos + juez → escritura por actos → revisión (hechos, retención, oralidad, relleno, ética; 2 rondas) → final + commit.
+  - Salida: `guiones/<slug>-guion-NN.md`, `-fuentes-NN.md`, `-pronuncia-NN.json` (NN = 02, 03, 04) y el material de trabajo en `guiones/trabajo/<slug>/`. El último agente hace commit y push.
+- **Estructura fija de los guiones nuevos:** 1 = gancho de la historia (sin revelar la respuesta); 2 = INTRO DEL CANAL con suscripción y «ponte cómodo y disfruta esta nueva historia»; luego la historia; última = cierre (gancho final + el cierre fijo del vídeo 1). **Duración base: 45 min o más (hasta 60) siempre que no haya relleno que aburra** (orden del usuario). Para llegar a 45 se busca más material real; sólo se acorta si de verdad no hay, y se avisa. Nunca estirar.
+- **Al terminar el workflow:** leer el resultado, comprobar los archivos, informar al usuario de duración, calidad y advertencias (los pendientes), y enviarle los guiones. No tocar el guion del vídeo 1 sin que lo pida (aún no lleva la intro del canal nueva).
+- Siguientes pasos: voz de los guiones 2–4 (Alejandro, sonic-3.5, `herramientas/gen_voz.py`, con `pronuncia.json` fusionado), mezcla, plan de escenas e imágenes, miniaturas.

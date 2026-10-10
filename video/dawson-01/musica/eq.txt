@@ -1,0 +1,1 @@
+highpass=f=50,asplit[a][b];[b]lowpass=f=200,volume=22dB,asoftclip=type=tanh,highpass=f=220,lowpass=f=3000[h];[a][h]amix=inputs=2:normalize=0,equalizer=f=450:width_type=o:width=2:g=6
