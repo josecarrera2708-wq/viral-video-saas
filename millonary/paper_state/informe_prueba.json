@@ -1,10 +1,10 @@
 {
- "dias": 8,
- "velas": 50,
- "retorno": -0.00310770968862506,
- "caida_max": 0.022292072766373683,
- "exposicion_media": 0.5954022283835291,
- "ordenes": 2,
+ "dias": 9,
+ "velas": 56,
+ "retorno": -0.018472104549355328,
+ "caida_max": 0.03947605203802218,
+ "exposicion_media": 0.5762371282578549,
+ "ordenes": 4,
  "cono_30d": {
   "horizonte_usado_dias": 7,
   "ret": {
@@ -31,31 +31,43 @@
    "n": 0
   },
   "lotes_abiertos": 2,
-  "pnl_no_realizado": -3.1077096886248725
+  "pnl_no_realizado": -18.47210454935515
  },
  "cuadre": {
   "ok": true,
-  "diferencia": -1.7763568394002505e-13
+  "diferencia": -1.7053025658242404e-13
  },
  "replica_decisiones": {
-  "equity_trader": 999.5839390576552,
-  "equity_simulador": 999.5845095366816,
-  "diferencia_rel": -5.707161534473926e-07,
-  "ordenes_trader": 2,
-  "ordenes_simulador": 2
+  "equity_trader": 982.9330471581573,
+  "equity_simulador": 982.933568383399,
+  "diferencia_rel": -5.302751462377131e-07,
+  "ordenes_trader": 4,
+  "ordenes_simulador": 4
  },
  "replica_estado": {
-  "equity_replay": 996.892290311375,
-  "equity_cuenta": 996.892290311375,
+  "equity_replay": 981.5278954506447,
+  "equity_cuenta": 981.5278954506447,
   "diferencia_rel": 0.0,
-  "ordenes_replay": 2,
-  "ordenes_cuenta": 2,
-  "velas_replay": 50,
-  "velas_cuenta": 50
+  "ordenes_replay": 4,
+  "ordenes_cuenta": 4,
+  "velas_replay": 56,
+  "velas_cuenta": 56
  },
  "posterior_sharpe": {
-  "dias": 9,
-  "estado": "insuficiente"
+  "dias": 10,
+  "sharpe_observado": -4.355659519318118,
+  "error_estandar": 19.56360906709532,
+  "posterior_media": 0.396895660400446,
+  "posterior_sd": 0.4998367815044741,
+  "prob_sharpe_mayor_0": 0.7864169918071333,
+  "ic90": [
+   -0.4253358451744139,
+   1.2191271659753058
+  ],
+  "prior": {
+   "media": 0.4,
+   "sd": 0.5
+  }
  },
  "puertas": {
   "G1_replica": true,
