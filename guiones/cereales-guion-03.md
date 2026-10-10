@@ -26,9 +26,9 @@ Antes de empezar, una cosa. Si es la primera vez que pasas por aquí, esto es To
 
 Casi todos llevamos puesta la misma versión de esta historia, y lo más probable es que tú también. Dice que el regalo de la caja era un detalle de cariño de las marcas, que lo inventó Kellogg y que un día algo peligroso, o una ley, se lo llevó. Es una versión razonable, porque encaja con lo que recordamos: una mano de niño hundida hasta el fondo de la caja, buscando.
 
-Pero una cosa es lo que recordamos y otra lo que dicen los papeles. Para lo que pasó con el regalo hay tres sospechosos, la ley, el dinero y el marketing, y se va a colar un cuarto, el peligro, que parece el sospechoso perfecto. Y cuando digo la caja de cereales, hablo de una costumbre más grande, el regalo escondido en la comida de los niños, y cada vez te avisaré si es una caja, una bolsa de papas o un huevo de chocolate.
+Pero una cosa es lo que recordamos y otra lo que dicen los papeles. Para lo que pasó con el regalo hay tres sospechosos, la ley, el dinero y el marketing, y se va a colar un cuarto, el peligro, que parece el sospechoso perfecto.
 
-Empecemos por Kellogg, que algo de verdad tiene. Hacia mil novecientos nueve, la empresa tenía un libro infantil sobre la selva, que en inglés se llamaba The Funny Jungleland Moving Pictures Book. Al principio se regalaba en las tiendas a quien comprara dos paquetes de Corn Flakes, y después pasó a ser una oferta por correo, por diez centavos. Pero el libro no venía dentro de la caja. Según The Takeout, muchos le atribuyen a Kellogg el primer premio dentro de una caja, y la propia empresa no lo confirma, aunque sus notas dicen que ese libro fue su primer premio de cereal. Entonces, ¿quién metió de verdad el primer regalo dentro de una caja? Nadie ha podido confirmarlo. Lo que circula por ahí quizá no sea del todo cierto, y es probable que el misterio siga abierto por mucho tiempo, porque nadie lo sabe con certeza.
+Empecemos por Kellogg, que algo de verdad tiene. Hacia mil novecientos nueve, la empresa tenía un libro infantil sobre la selva, que en inglés se llamaba The Funny Jungleland Moving Pictures Book. Al principio se regalaba en las tiendas a quien comprara dos paquetes de Corn Flakes, y después pasó a ser una oferta por correo, por diez centavos. Pero el libro no venía dentro de la caja. Según The Takeout, muchos le atribuyen a Kellogg el primer premio dentro de una caja, y la propia empresa no lo confirma. Así que hay dos versiones, y nadie ha podido zanjarlas.
 
 La idea que todos recordamos, un premio en cada caja, es de otra empresa y de otra comida. En mil novecientos doce, según un artículo de televisión local, alguien en Cracker Jack propone poner un premio en cada caja. Esa pieza da incluso un día, el diecinueve de febrero, pero es la única que lo dice, y no he encontrado quién lo confirme. Son palomitas, no cereal. Antes ya había cupones y premios en algunas cajas, pero desde entonces el premio pasa a ser la regla.
 
@@ -110,9 +110,9 @@ El primer papel es del veintiocho de diciembre de mil novecientos ochenta y ocho
 
 Ahora la letra pequeña. Treinta millones es la cifra de la retirada, no la de incidentes: el aviso notifica un solo incidente de atragantamiento, sin gravedad, y ninguna queja de lesión por los binoculares. Es el primer aviso oficial que voy a leerte, y llega cuarenta y un años después del anillo que sus instrucciones llamaban perfectamente seguro. Así que ya había alguien vigilando la seguridad de lo que iba en la caja.
 
-El veintinueve de abril de mil novecientos noventa y tres, Quaker detiene las ventas de un juguete que venía en cajas de Cap Crunch, Crunchberries y Peanut Butter Crunch. Era una media esfera de plástico de unos cinco centímetros que saltaba al darle la vuelta, un popper. Quienes se la pegaban a la cara por succión terminaban con los ojos amoratados o enrojecidos, y el aviso cuenta treinta y seis lesiones. Eso sí fue daño, y no lo voy a achicar. Ocho millones trescientos mil paquetes llevaban el juguete, y unos seis millones ochocientos mil seguían en almacenes, tiendas o casas.
+El veintinueve de abril de mil novecientos noventa y tres, Quaker detiene las ventas de un juguete que venía en cajas de Cap Crunch, Crunchberries y Peanut Butter Crunch. Era una media esfera de plástico de unos cinco centímetros que saltaba al darle la vuelta, un popper. Quienes se la pegaban a la cara por succión terminaban con los ojos amoratados o enrojecidos, y el aviso cuenta treinta y seis lesiones. Eso sí fue daño, y no lo voy a achicar.
 
-El veintinueve de junio de dos mil, Kellogg y la agencia retiran ochocientos treinta y siete mil autos de juguete de carreras Nascar. Iban en cajas especialmente marcadas de Froot Loops, de Crispix y de otros dos productos. Los neumáticos podían soltarse y suponían un riesgo de atragantamiento para niños pequeños, pero el aviso habla de dos informes de neumáticos desprendidos y de ninguna lesión.
+Y en el año dos mil, otra retirada: autos de juguete de Nascar en cajas de Froot Loops, con neumáticos que podían soltarse. Sin una sola lesión.
 
 Son tres avisos en doce años, de dos empresas distintas, con la misma clase de objeto: un juguete pequeño, dentro de una caja de cereal, que podía hacer daño. Si fueras jurado, a estas alturas ya habrías decidido: con ojos amoratados y treinta millones de juguetes sobre la mesa, el sospechoso parece claro. Pero fíjate en las fechas. Siete años después del popper de Quaker, Kellogg seguía metiendo autos de juguete en sus cajas, de modo que la retirada de una empresa no cerró el regalo en las demás. Y, que conste, ninguna empresa dijo que esa fuera la razón del fin de los regalos.
 
@@ -144,13 +144,13 @@ Pero si no hay ley federal, sí hubo una ciudad de California, San Francisco, qu
 
 ## 11. LOS DIEZ CENTAVOS DE SAN FRANCISCO
 
-Se cuenta que California prohibió los juguetes de las comidas infantiles, y no es lo que dicen los textos. Te aclaro algo: esto no son cajas de cereal, son menús infantiles de restaurantes. Lo traigo porque aquí alguien legisló el regalo y luego midió lo que ocurría, y eso se encuentra pocas veces.
+Se cuenta que California prohibió los juguetes de las comidas infantiles, y no es lo que dicen los textos. Esto no son cajas de cereal, son menús de restaurantes, pero aquí alguien legisló el regalo y luego midió lo que ocurría, y eso se ve pocas veces.
 
-San Francisco aprobó una ordenanza que ataba el juguete a lo que llevaba el plato, y entró en vigor el uno de diciembre de dos mil once. Imagina ese día un mostrador de comida rápida de la ciudad. Alguien pide una comida infantil, y el juguete sigue ahí, con una diferencia: ahora cuesta diez centavos.
+San Francisco aprobó una ordenanza que ataba el juguete a lo que llevaba el plato, y entró en vigor el uno de diciembre de dos mil once. Desde ese día, el juguete seguía ahí, con una diferencia: costaba diez centavos.
 
-Un estudio de Jennifer Otten y colegas, publicado en dos mil catorce, midió lo que pasó en dos cadenas de comida rápida de la ciudad. El ochenta y ocho por ciento de quienes compraron una comida infantil compró también el juguete, es decir, casi nueve de cada diez. Ninguna comida infantil cumplió los criterios de la ordenanza.
+Un estudio de Jennifer Otten y colegas, publicado en dos mil catorce, midió lo que pasó en dos cadenas de comida rápida. Casi nueve de cada diez clientes pagaron los diez centavos por el juguete. El ochenta y ocho por ciento, para ser exactos.
 
-Así que en el país donde se hizo costumbre el regalo no existe la ley que todos suponen, y lo más parecido es una ciudad de California y los menús de los restaurantes. Para ver una ley que sí nombre el regalo hay que viajar al sur. Pero antes la historia cambia de forma, porque en nuestro idioma empieza con una bolsa de papas fritas.
+Para ver una ley que sí nombre el regalo hay que viajar al sur. Pero antes la historia cambia de forma, porque en nuestro idioma empieza con una bolsa de papas fritas.
 
 ## 12. EL REGALO EN NUESTRO IDIOMA
 
@@ -172,25 +172,25 @@ Una semana antes, según un comunicado que recogió la prensa especializada, Fer
 
 Ferrero presentó el huevo en mil novecientos setenta y cuatro, a partir de una idea de Michele Ferrero que William Salice llevó a la práctica. Salice siempre dijo ser solo el ejecutor. Hasta dos mil dieciséis se vendieron unos treinta mil millones de huevos, con unos doce mil juguetes distintos. Es el pariente más famoso de la caja: el regalo dentro de la comida.
 
-La ley se llama Ley veinte mil seiscientos seis, y esto es lo que decía cuando se publicó, el seis de julio de dos mil doce. Su artículo seis prohíbe ofrecer gratis a menores de catorce años los alimentos clasificados como altos en calorías, grasas, azúcares o sal, que el reglamento convirtió después en sellos. El artículo ocho añade que, en la promoción dirigida a menores de catorce años, en ningún caso podrán usarse como gancho juguetes, accesorios, adhesivos ni incentivos.
+Y lo que dice esa ley no es lo que repite internet. Es la ley chilena de etiquetado, la veinte mil seiscientos seis, publicada el seis de julio de dos mil doce. En resumen, prohíbe ofrecer gratis a menores de catorce años los alimentos altos en calorías, grasas, azúcares o sal, y prohíbe usar juguetes, adhesivos o incentivos como gancho para venderlos. El texto que te cito es el original, y la ley se modificó después.
 
-En internet se repite que Chile prohibió los regalos en dos mil dieciséis. Ni la fecha ni el alcance cuadran. La ley es de dos mil doce, y dos mil dieciséis es el año en que entró en vigor lo relativo a ganchos y sellos, el lunes veintisiete de junio. Además solo cubre los productos con sello, los que superan ciertos límites de nutrientes. El texto que te cito es el original, y la ley se modificó después.
+En internet se repite que Chile prohibió los regalos en dos mil dieciséis. Ni la fecha ni el alcance cuadran. La ley es de dos mil doce, y dos mil dieciséis es el año en que entró en vigor lo relativo a ganchos y sellos, el lunes veintisiete de junio. Además solo cubre los productos con sello.
 
-El huevo salió del mostrador porque era un alimento con sello de advertencia y llevaba un juguete dentro. En Estados Unidos, en cambio, la aduana lo retiene: en dos mil once decomisó más de sesenta mil huevos. La razón de fondo es una ley federal de mil novecientos treinta y ocho que, en términos generales, considera adulterado un dulce con un objeto sin valor nutritivo incrustado. Por eso el Kinder clásico no puede entrar. Un juguete suelto en una caja de cereales queda fuera de esa regla, y el riesgo de asfixia es el argumento oficial, no la base legal.
+Un detalle más, de otro país. En Estados Unidos la aduana retiene el huevo: en dos mil once decomisó más de sesenta mil, por una ley federal de mil novecientos treinta y ocho sobre objetos incrustados en dulces. Un juguete suelto en una caja de cereales queda fuera de esa regla.
 
 La ley es el primero de los tres sospechosos, y Chile es el mejor lugar para mirarlo, porque allí alguien fotografió cajas de cereal de antes de que la ley se aplicara y de después. Lo que muestran esas fotografías no es lo que esperas. Pero antes vamos con dos maneras de quitar un regalo: un texto y una promesa.
 
 ## 14. EL TEXTO Y LA PROMESA
 
-Empiezo por el texto, que es el que más sorprende. A finales de dos mil veintiuno, Argentina sancionó la ley veintisiete mil seiscientos cuarenta y dos, la del etiquetado frontal. Su artículo noveno dice que los productos con sello de advertencia no pueden llevar en el envase personajes infantiles ni obsequios, premios o regalos que inciten o fomenten el consumo. Está en el texto que publica el propio gobierno argentino.
+Empiezo por el texto, que es el que más sorprende. A finales de dos mil veintiuno, Argentina sancionó su ley de etiquetado frontal. Uno de sus artículos dice que los productos con sello de advertencia no pueden llevar en el envase personajes infantiles ni obsequios, premios o regalos que inciten o fomenten el consumo. Está en el texto que publica el propio gobierno argentino.
 
 Fíjate en esto, porque lo vamos a necesitar: el texto nombra el regalo con todas las letras. No dice juguetes, pero la palabra obsequio está escrita. Eso sí, la prohibición queda atada a que el elemento incite o fomente el consumo.
 
 Esa ley argentina hoy no vive tranquila. A finales de dos mil veinticuatro la agencia sanitaria ANMAT eliminó varios artículos de su disposición de aplicación y fijó nuevas reglas de publicidad. Si eso la debilitó o no, no encontré a nadie que lo demuestre, y esa pregunta queda abierta. Según una nota actualizada el veintisiete de mayo de dos mil veintiséis, el Ejecutivo habría enviado al Senado un proyecto para derogarla, y más de trescientas organizaciones la defendieron. En qué quedó, no se sabe.
 
-Brasil lo escribió en dos mil catorce, aunque no como ley: un consejo nacional de derechos del niño declaró abusiva la publicidad infantil que use promociones con premios o regalos coleccionables, y no he podido confirmar qué fuerza jurídica tiene esa resolución. La segunda manera de quitar un regalo es una promesa, y es la de España. En dos mil cinco entró en vigor allí un código de autorregulación de la publicidad de alimentos dirigida a menores.
+Brasil, en dos mil catorce, declaró abusiva la publicidad infantil con premios coleccionables, aunque no he podido confirmar qué fuerza jurídica tiene esa resolución. Y la segunda manera de quitar un regalo es una promesa: la de España, un código de autorregulación de dos mil cinco.
 
-Hasta aquí tienes un país que escribe la palabra y otro que promete. Pero en México circula la idea de que el país prohibió los regalos de las cajas. El texto de la norma dice otra cosa, y para entenderlo hay que mirar la cola de un tigre.
+Pero en México circula la idea de que el país prohibió los regalos de las cajas. El texto de la norma dice otra cosa, y para entenderlo hay que mirar la cola de un tigre.
 
 ## 15. LA COLA DEL TIGRE
 
@@ -199,8 +199,6 @@ A finales de octubre de dos mil veinticuatro, la revista Expansión publicó un 
 Hay otra salida, la de cambiar la receta. Según la revista, Kellogg y Nestlé reformularon cereales para recuperar a sus personajes, Tigre Toño y Melvin, el elefante de los Choco Krispis. Nesquik Letritas vuelve con su conejo.
 
 El abogado Rodrigo Escartín, citado por Expansión, dice que esas alusiones son una manera ingeniosa de insinuar al personaje sin ponerlo propiamente en la caja. Uno de los expertos que cita la revista afirma que son productos sin sellos, y los abogados que cita no ven un incumplimiento, porque el personaje no aparece entero. Otra voz de la misma nota opina que, para los niños de hoy, esos personajes ya se perciben como parte de un pasado lejano.
-
-¿Por qué importa tanto un personaje en una caja? Un estudio publicado en dos mil diez en la revista Pediatrics puso a cuarenta niños de cuatro a seis años a probar alimentos idénticos, en envases con y sin personaje, y la mayoría eligió el que llevaba al personaje. Ten en cuenta que es un estudio de personajes, no de regalos.
 
 Ahora vamos con México. El veintisiete de marzo de dos mil veinte, el Diario Oficial de la Federación publicó la modificación de la norma oficial de etiquetado. Uno de sus puntos se refiere a los productos con sellos de advertencia. En su etiqueta ya no pueden aparecer personajes infantiles, animaciones, celebridades, deportistas ni mascotas, ni juegos o descargas digitales pensados para niños. Esa regla rige desde abril de dos mil veintiuno.
 
@@ -216,11 +214,11 @@ Antes de darte un solo porcentaje, te hago una pregunta. ¿Cuántas de esas caja
 
 Los regalos físicos, es decir, las calcomanías y los juguetes dentro o sobre el envase, eran poco más del uno por ciento de las cajas en dos mil quince, y en dos mil diecisiete seguían igual, sin cambio importante. Y ahora escucha esto, porque es lo central: el regalo físico ya casi no estaba en la caja. No sabemos si alguna vez fue común en las cajas chilenas, porque no hay una medición anterior, y los autores no explican la cifra.
 
-Lo que sí cambió fue otra cosa. Entre los cereales con sello, las estrategias dirigidas a niños bajaron de cuarenta y tres a quince por ciento. Pero entre los cereales sin sello subieron de ocho a treinta. Hasta aquí tienes un gancho que sale por una puerta y entra por otra: lo que se movió fueron los personajes y las estrategias, hacia los cereales sin sello.
+Lo que sí cambió fue otra cosa. Entre los cereales con sello, las estrategias dirigidas a niños bajaron de cuarenta y tres a quince por ciento. Pero entre los cereales sin sello subieron de ocho a treinta: casi se cuadruplicaron. Es un gancho que sale por una puerta y entra por otra, y lo que se movió fueron los personajes y las estrategias.
 
-La ley sí prohíbe el regalo en los cereales con sello, y sí se cumplió. Seis o siete meses después de entrar en vigor, la cumplía el ochenta y cinco por ciento de los cereales con sello, y el resto incumplía sobre todo por usar personajes. Para México, España o Argentina no existe un dato así, y extenderlo sería inventar.
+La ley sí prohíbe el regalo en los cereales con sello, y la gran mayoría la cumplió, a los pocos meses de entrar en vigor. Para México, España o Argentina no existe un dato así, y extenderlo sería inventar.
 
-Otro estudio, publicado en dos mil veintiuno en la revista Lancet Planetary Health, siguió las compras de más de dos mil hogares chilenos. En los productos con sello, las calorías compradas bajaron veinticuatro por ciento, y la proporción de hogares que compraban cereales de desayuno con sello bajó once por ciento. Tras el conjunto de medidas, las compras cambiaron, aunque el estudio no prueba que la causa fuera una sola.
+Otro estudio, publicado en dos mil veintiuno en la revista Lancet Planetary Health, siguió las compras de más de dos mil hogares chilenos, y las calorías compradas en productos con sello bajaron veinticuatro por ciento. Aunque el estudio no prueba que la causa fuera una sola.
 
 Si el regalo ya casi no estaba antes de aplicarse la ley, y el gancho se mudó de sitio, ¿está muerto el juguete de la caja? En abril de dos mil veintiséis alguien dijo que no. Pero primero hay que ver por dónde se fue.
 
@@ -246,9 +244,9 @@ Ahora sí, te devuelvo la pregunta del principio: quién apagó el regalo de la 
 
 Empiezo por la ley, que es la que casi todos señalan. Chile habla de ganchos comerciales, Argentina de obsequios y México solo de lo que aparece en la etiqueta, y las tres normas existen. Pero en Estados Unidos, donde se hizo costumbre, no hay ninguna ley federal que prohíba el regalo en la caja, aunque sí hay reglas de seguridad para los juguetes. Y en Chile, cuando se fotografiaron las cajas, el regalo físico ya casi no estaba.
 
-Del dinero tengo historias y alguna cifra suelta, pero no la cuenta que querría. Hay un tercio de centavo por premio en un artículo de mil novecientos setenta y siete, unos discos que pagó America Online, diez centavos en San Francisco y una bolsa de papas que quería que los niños compraran más. Y hay un dato de restaurantes. Entre dos mil seis y dos mil nueve cayó el gasto en marketing de alimentos para jóvenes, y según un resumen de la fundación médica Robert Wood Johnson, casi el treinta y nueve por ciento de esa caída se debió al menor costo y la menor distribución de los juguetes de los menús infantiles. Ninguna de esas historias prueba que el dinero apagara el regalo de los cereales. Muestran que el regalo tenía un precio y alguien que lo pagaba.
+Del dinero tengo historias y alguna cifra suelta, pero no la cuenta que querría. Hay un tercio de centavo por premio en un artículo de mil novecientos setenta y siete, unos discos que pagó America Online, diez centavos en San Francisco y una bolsa de papas que quería que los niños compraran más. Ninguna de esas historias prueba que el dinero apagara el regalo de los cereales. Muestran que el regalo tenía un precio y alguien que lo pagaba.
 
-Del marketing sí hay mediciones, aunque son de personajes y no de regalos: la mayoría de los niños del estudio de Pediatrics eligió el envase con personaje. Y según una columna de dos mil doce del medio chileno Ciper, una investigadora del instituto de nutrición recogió en dos mil once otro dato. Entre el cuarenta y el cincuenta y cinco por ciento de los niños dicen elegir alimentos que ofrecen premios o regalos cuando compran con su dinero. Fíjate en el verbo: dicen. Es un testimonio, no una medición.
+Del marketing sí hay mediciones, aunque son de personajes y no de regalos. Un estudio de dos mil diez en la revista Pediatrics puso a cuarenta niños de cuatro a seis años a probar alimentos idénticos, en envases con y sin personaje, y la mayoría eligió el que llevaba al personaje. Y según una columna del medio chileno Ciper, una investigadora recogió que muchos niños dicen elegir alimentos con premios o regalos cuando compran con su dinero. Fíjate en el verbo: dicen. Es un testimonio, no una medición.
 
 Y ahora viene lo que cambia el reparto. En dos mil veintiséis, la empresa doble u ka Kellogg volvió a meter juguetes en cajas de cereal, en un país donde ninguna ley federal se lo impide (se entiende que Estados Unidos), y justo cuando llegaba una película que vender. Lo que sigue es conclusión mía, no un dato de la empresa: el regalo de la caja no estaba muerto, estaba apagado, y lo enciende quien tiene algo que vender. Lo que el niño buscaba al fondo de la caja no era el plástico, era una razón para llegar hasta el fondo y volver a abrirla.
 
