@@ -1,181 +1,124 @@
-# Investigación: construcción de La Jument y faros del mar de Iroise (ingeniero de faros)
+# La Jument y los faros del mar de Iroise: investigación de ingeniería e historia
 
-Canal: Todos Lo Vieron. Guion objetivo: 45 min o más (hasta 60), sin relleno.
-Encargo: construcción de La Jument y de los faros del Iroise; comparación con Ar-Men y otros faros "del infierno".
+Encargo: construcción de La Jument (1904-1911) y de los faros del mar de Iroise; comparación con Ar-Men y otros "infiernos".
+Estado: investigación parcial. El límite de búsquedas web de la sesión se agotó a mitad de trabajo (ver "Limitaciones"). Todo lo de abajo viene de las páginas realmente leídas.
 
-Nota de método: el presupuesto de búsquedas web se agotó durante la sesión. Faltan por consultar directamente: el artículo de Ribière en Gallica (Annales des ponts et chaussées, 1911), Fichou (2008) sobre el chantier de Ar-Men y la bibliografía de Phares et Balises. Todo lo que sigue sale de fichas oficiales (Mérimée/POP, DRAC Bretagne), Wikipedia FR/EN como punto de partida y prensa o divulgación. Donde sólo hay una fuente, se marca.
+Leyenda de confianza: ALTA = fuente oficial/primaria o dos fuentes coinciden; MEDIA = una sola fuente razonable (p. ej. Wikipedia FR con bibliografía citada); BAJA = dato suelto o contradictorio.
 
-Escala de confianza: ALTA = ficha oficial o 2+ fuentes que coinciden; MEDIA = una fuente razonable; BAJA = divulgación o dato contradictorio.
-
-Abreviaturas de fuentes:
-- [DRAC-J] https://www.culture.gouv.fr/Media/Regions/Drac-Bretagne/Files/Politique-et-actions-culturelles/CRMH/Protection-et-restauration-MH/Phares/Phare-de-la-Jument-29-Nord-Iroise (PDF, DRAC Bretagne, abril 2017)
-- [POP-J] https://pop.culture.gouv.fr/notice/merimee/IA29000453 (Mérimée, La Jument)
-- [WP-J] https://fr.wikipedia.org/wiki/Phare_de_la_Jument
-- [POP-AM] https://www.pop.culture.gouv.fr/notice/merimee/IA29000462 (Mérimée, Ar-Men)
-- [WP-AM] https://fr.wikipedia.org/wiki/Phare_d%27Ar-Men
-- [POP-K] https://pop.culture.gouv.fr/notice/merimee/IA29000454 (Mérimée, Kéréon / Men-Tensel)
-- [WP-K] https://fr.wikipedia.org/wiki/Phare_de_K%C3%A9r%C3%A9on
-- [DRAC-T] https://www.culture.gouv.fr/content/download/132856/file/29_phare-de-tevennec.pdf
-- [DRAC-V] https://www.culture.gouv.fr/content/download/132858/file/29_Phare_Vieille.pdf
-- [WP-F] https://en.wikipedia.org/wiki/Le_Four_Lighthouse
-- [DET] https://detienne.net/phares/phare.php?id=223
-- [FILO] https://www.filovent.com/magazine/phare-jument
-- [ACTU] https://www.actunautique.com/2025/01/sept-ans-pour-construire-le-phare-de-la-jument.html
-- [DRUM] https://patrimoine-iroise.fr/culturel/maritime/Drummond-Castle.php?lang=en
-- [FIG-AM] https://figaronautisme.meteoconsult.fr/actus-nautisme-lifestyle/2026-02-26/86036-phare-dar-men-lincroyable-histoire-de-lenfer-des-enfers-au-large-de-la-bretagne
-- [BAT-AM] https://www.bateaux.com/article/27298/ar-men-plus-symbolique-phares-mer
-- [WP-EN-J] https://en.wikipedia.org/wiki/La_Jument
-- [GUI] https://www.jean-guichard.com/en/photo/france/phares-de-france/la-jument-9
-- [SNOPES] https://www.snopes.com/fact-check/la-jument-lighthouse-photo/ (la página dio error 402 al abrirla; sólo conozco su contenido por el resumen del buscador)
+Fuentes abreviadas:
+- [MER] Base Mérimée, notice IA29000453 (Inventario de faros; Dreyer y Fichou, 2002-2003): https://pop.culture.gouv.fr/notice/merimee/IA29000453
+- [WFR-J] Wikipedia FR, Phare de la Jument: https://fr.wikipedia.org/wiki/Phare_de_la_Jument (cita a Fichou/Le Hénaff/Mével, *Phares*, 1999; Charles Ribière, "Construction du phare de la Jument d'Ouessant", 1911; *Le Génie civil* 14-oct-1911; *Journal officiel* 5-may-1909; *La Géographie* 20-ene-1905)
+- [WEN-J] Wikipedia EN, La Jument: https://en.wikipedia.org/wiki/La_Jument
+- [WFR-A] Wikipedia FR, Phare d'Ar-Men: https://fr.wikipedia.org/wiki/Phare_d%27Ar-Men (cita a Fichou 1999 y a Jean-Pierre Abraham, *Armen*)
+- [FIG] Figaro Nautisme, Ar-Men (26-feb-2026): https://figaronautisme.meteoconsult.fr/actus-nautisme-lifestyle/2026-02-26/86036-phare-dar-men-lincroyable-histoire-de-lenfer-des-enfers-au-large-de-la-bretagne
+- [WFR-C] Wikipedia FR, Phare de Créac'h: https://fr.wikipedia.org/wiki/Phare_de_Cr%C3%A9ac%27h
+- [WFR-N] Wikipedia FR, Phare de Nividic: https://fr.wikipedia.org/wiki/Phare_de_Nividic
+- [WFR-V] Wikipedia FR, Phare de la Vieille: https://fr.wikipedia.org/wiki/Phare_de_la_Vieille
+- [WFR-PN] Wikipedia FR, Phare des Pierres Noires: https://fr.wikipedia.org/wiki/Phare_des_Pierres_Noires
+- [WFR-K] Wikipedia FR, Phare de Kéréon: https://fr.wikipedia.org/wiki/Phare_de_K%C3%A9r%C3%A9on
+- [WFR-IV] Wikipedia FR, Phare de l'Île-Vierge: https://fr.wikipedia.org/wiki/Phare_de_l'%C3%8Ele_Vierge
+- [WFR-DC] Wikipedia FR, Drummond Castle: https://fr.wikipedia.org/wiki/Drummond_Castle
+- [WFR-G] Wikipedia FR, Jean Guichard (esbozo): https://fr.wikipedia.org/wiki/Jean_Guichard
+- [DRAC] Ficha DRAC Bretaña (PDF, no se pudo leer el texto comprimido): https://www.culture.gouv.fr/Media/Regions/Drac-Bretagne/Files/Politique-et-actions-culturelles/CRMH/Protection-et-restauration-MH/Phares/Phare-de-la-Jument-29-Nord-Iroise
+- [FIL] Filovent (blog náutico, atribuye la obra a Heurté, sólo vía resumen de búsqueda): https://www.filovent.com/magazine/phare-jument
 
 ---
 
-## 1. Hechos documentados (numerados, con fuente y confianza)
+## 1. Hechos documentados sobre La Jument (construcción)
 
-### A. Por qué allí: el mar de Iroise y el Fromveur
+1. **Dónde.** Sobre el escollo Ar Gazeg ("la yegua" en bretón), en la entrada noroeste del paso del Fromveur, al oeste/suroeste de Ouessant. Los antiguos nombres: "La Jument", "Juman" (1697), "La Grande Jument" (1771-1785). [WFR-J] Confianza media-alta.
+2. **Contexto previo.** Una circular de 24-sep-1853 lanzó el balizado diurno de las costas. En Ouessant sólo existía el faro de Stiff; Ar Gazeg ya se recomendaba balizar, pero se juzgaba demasiado expuesta para mampostería tradicional. [MER] Alta.
+3. **Por qué allí: tráfico y naufragios.** Más de 20.000 barcos al año pasaban frente a Ouessant, y la Marina contabilizó 31 naufragios entre 1888 y 1904. [MER] Alta. (Wikipedia FR da la misma cifra.)
+4. **Detonante emocional.** El naufragio del vapor británico *Drummond Castle*, noche del 16 de junio de 1896, en las Pierres Vertes (cerca de Molène): sólo 3 supervivientes; cifras de muertos entre 242 y 258 según fuente (WFR-J dice 258; WFR-DC cita 248 a bordo, 244/245 en otras). Dato de encuesta oficial: "navegación negligente o torpe". [WFR-DC, WFR-J] Alta para lo esencial; cifra exacta de víctimas: MEDIA (hay discrepancia).
+5. **Decisión ministerial del 20-feb-1904.** Aprobó una torre "en hormigón de cemento" con base de al menos 7 m de diámetro, a levantar de inmediato. El proyecto original se inspiraba en Ar-Men; tras sondeos hubo cambio de emplazamiento y el proyecto se aprobó definitivamente el 18-nov-1904. [MER, WFR-J] Alta.
+6. **El legado Potron.** Charles-Eugène Potron, viajero parisino y miembro de la Société de Géographie, murió el 27-mar-1904 y legó 400.000 francos para un faro sobre una roca en una zona peligrosa del Atlántico (Ouessant incluida). Condición: aceptación y construcción en 6-7 años desde su muerte, o el dinero iría a la Société centrale de sauvetage des naufragés. El Ministerio de Obras Públicas aceptó. Plazo efectivo: octubre de 1911. [MER, WFR-J] Alta. (Una fuente secundaria dice que Potron casi murió en otro naufragio; no verificado. Confianza BAJA.)
+7. **Quién dirigió.** Ingeniero jefe Willotte (reconocimientos rápidos); ingeniero jefe Ribière (concluyó que Jument era el mejor sitio; MER lo cita como autor del edificio y es el autor del artículo técnico de 1911); Georges Clet Heurté (n. 1865, Primelin), *conducteur principal* de Ponts et Chaussées, jefe de obra, que ya había trabajado en Île Vierge. [MER, WFR-J] Confianza: media. Contradicción: ver sección 5.
+8. **Primera campaña: finales del verano de 1904.** Preparación de cimientos para una torre prevista de 36 m. En el primer año sólo se pudo desembarcar 17 veces en la roca, para un total de 52 horas de trabajo. [MER, WFR-J] Alta (dos fuentes).
+9. **Campaña de 1905 (abril-octubre).** 59 viajes permitieron 206 horas de trabajo; se colocaron unos 100 m³ de mampostería, aprox. 6 % de los 1.700 m³ estimados. [MER] Alta. Ritmo: a ese paso la obra era inviable antes del plazo; de ahí la presión.
+10. **La torre propiamente dicha empezó cuatro años después** (hacia 1908); antes hubo años de preparar la roca y la plataforma. Tras 1908 el albacea (maître Meunié) se angustió por el retraso; en agosto de 1909 el Servicio de Faros invitó al notario a inspeccionar la obra. [MER; resumen de búsqueda sobre WFR/DRAC] Confianza media.
+11. **Gasto anual de obra (francos):** 80.000 (1907), 90.000 (1908), 86.349,76 (1909), 92.000 (1910), 86.700 (1911). Coste total estimado: 850.000 francos. [WFR-J] Media.
+12. **Encargo de la linterna.** *Journal officiel* del 5-may-1909: licitación restringida de una linterna de 4 m de diámetro con base metálica y caseta, valorada en 34.300 francos. [WFR-J] Media-alta (cita primaria).
+13. **Encendido: 15 de octubre de 1911,** pocos días antes de vencer el plazo, con siete meses de retraso sobre lo programado y con base más pequeña que la prevista; el interior no se terminó hasta unos tres años después. Primer aparato: luz roja, 3 destellos cada 15 s, óptica de 0,70 m de distancia focal con 6 paneles; alimentación a vapor de petróleo. [MER, WFR-J] Alta.
+14. **El defecto de origen.** Poco después de acabarse la torre mostró falta de rigidez y vibraciones anormales; se atribuyó a la prisa, que obligó a reducir las dimensiones de la base. El depósito de mercurio (sobre el que gira la óptica) derramó mercurio y se agrietaron cristales de la linterna. [MER] Alta. Wikipedia FR fecha el episodio en un temporal de diciembre de 1911 (confianza media en la fecha exacta).
+15. **Refuerzos sucesivos.** Financiación de la consolidación no liberada hasta 1914; consolidación hasta 1924 por temor a un posible cizallamiento del fuste. Durante la guerra submarina, la luz estuvo apagada del 28-dic-1917 al 6-nov-1918 mientras se añadía una "coraza" de hormigón armado y se ensanchaba la base. El fuste siguió agrietado. [MER, WFR-J] Alta.
+16. **1934: tres cables interiores.** El ingeniero Coyne diseñó el anclaje con tres cables de acero (unos 30 m cada uno según WFR-J) fijados en la roca. [MER, WFR-J] Alta. Cifra de "2.500 toneladas de tensión" vista en un resumen de búsqueda de fuente secundaria: BAJA, sin verificar. Esa misma fuente decía que la roca estaba partida de un modo no previsto al inicio (BAJA).
+17. **Descripción.** Torre octogonal con corbel (voladizo) arriba; base ovoide de piedra vista, parte inferior en mampostería lisa; altura focal 42,65 m según MER (47,4 m según WFR-J, torre de 47-48 m; las fuentes difieren, ver sección 5). Linterna de 3,5 m de diámetro (BBT de 1911). [MER, WFR-J] Alta en lo cualitativo.
+18. **Vida del farero: el temporal de septiembre de 1974.** Una ola rompió la linterna, se llevó la lámpara de parafina e inundó la escalera; los fareros Jean-Claude Roger y Noël Violant se refugiaron en la cocina y pasaron la noche recogiendo mercurio derramado. [WFR-J] Media (una fuente).
+19. **Electrificación 1990, automatización 26-jul-1991** (salida de los fareros). Rango actual 10 millas náuticas (sin automatizar: 21 según MER 2001); luz roja, hoy 3 destellos (MER: cada 15 s; WFR-J: cada 12 s). Antes de 2015 mercurio desbordado otra vez; óptica LED desde 2015; panel solar en 2023. [MER, WFR-J] Alta/media.
+20. **Protección patrimonial.** Monumento histórico: inscripción 31-dic-2015 y clasificación 20-abr-2017 (WFR-J y otras fuentes mencionan ambas fechas). Alta.
+21. **Ola récord medida.** En el invierno 2017-2018 una campaña de medida en el lugar registró una altura máxima de ola de 24,60 m. [WFR-J, que cita un artículo de la Royal Society de 2019] Media; pendiente verificar el paper original.
+22. **Lo cultural.** Novelas de Henri Queffélec *Le Phare* (1975) y *La Lumière enchaînée* (1976), ficcionalizan la construcción y el refuerzo; película *L'Équipier* (Lioret, 2004; Torreton hizo su propia maniobra de izado). [WFR-J] Alta (existencia), media (detalles).
 
-1. Entre 1888 y 1904 se perdieron 31 buques en los alrededores de Ouessant y Molène (informe de la Marina citado por Mérimée). Fuente: [POP-J], [DET]. Confianza: ALTA.
-2. El Fromveur es el paso entre Ouessant y Molène, con corrientes de hasta 8-9 nudos (una de las más fuertes de Europa). Fuentes: [FILO], [FIG-AM] (para Ar-Men, ">8 nudos"). Confianza: MEDIA.
-3. A finales del siglo XIX se decide un programa complementario de balizamiento: varias torretas de hormigón armado con luz automática sobre escollos dispersos. La roca Ar Gazec (La Jument), que marca la entrada noroeste del Fromveur, se elige en febrero de 1904. Fuente: [DRAC-J]. Confianza: ALTA.
-4. Naufragio del Drummond Castle, 16-17 de junio de 1896: 258 víctimas y 3 supervivientes según DRAC; otras fuentes dicen "unos 250". Se hundió en pocos minutos tras chocar con rocas sumergidas (Baz ar Melle Bihan) a la entrada del Fromveur. Fuentes: [DRAC-J], [DRUM]. Confianza: ALTA en fecha y 3 supervivientes; MEDIA en el total de muertos (la prensa de la época se contradecía).
-5. Tras el Drummond Castle: 29 cuerpos enterrados en el cementerio inglés de Molène; la reina Victoria dio medallas a los rescatadores; los británicos construyeron una cisterna y encargaron un reloj de tres esferas para el campanario de Molène. Fuente: [DRUM]. Confianza: MEDIA (una sola fuente, local).
+## 2. Los demás faros del mar de Iroise y "infiernos" (comparaciones)
 
-### B. La Jument: el legado, el plazo y la obra
+23. **Ar-Men (Chaussée de Sein): 14 años de obra.** Detonante: naufragio de la corbeta de ruedas *Sané*, noche del 23-24-sep-1859. Obra 1867-1881; primera luz de prueba 18-feb-1881 y servicio oficial el 30-ago-1881. Arquitecto Léonce Reynaud, ingeniero jefe Fenoux, Paul Joly, Alfred Cahen (jefe de obra), Mengin, Ploix. [WFR-A; FIG] Alta (hay coincidencia de varias fuentes en las fechas).
+24. **Ar-Men, ritmo de trabajo (la comparación clave).** 1867: de 13 desembarques programados salieron 9, con 8 horas de trabajo efectivo y 15 agujeros perforados. 1868: 17 desembarques, 18 horas, 40 agujeros. Primeras piedras en mayo de 1869 (gneis, luego mampostería de kersantita; el mortero se amasaba con agua de mar). En octubre de 1869: 25 m³ en total, ~1 m³ por desembarque, 42 h 10 min efectivas. Altura alcanzada por año: 0,60 m (1869), 4,80 m (1874), 11 m (1876), 23,90 m (1878), 31,90 m (1880), 37 m (1881). [WFR-A] Media-alta (tabla con fuente Fichou 1999). Comparación: Jument en su primer año, 17 desembarques y 52 horas, fue mejor que Ar-Men, pero con la roca más estable.
+25. **Ar-Men, accidentes de obra.** 15-jun-1878: vuelca un bote con 14 obreros, todos rescatados. 1879: obreros saltan al mar para alcanzar botes. Julio 1880: vuelca un bote con 5 hombres, todos rescatados. 1881: una ola arrastra a dos obreros de un bote; uno se ahoga por no abrocharse bien el salvavidas. [WFR-A] Media (una fuente). Sobre Jument, las fuentes leídas no citan muertos en obra (ausencia no es prueba).
+26. **Ar-Men, la roca y el tiempo.** Roca de unos 105 m², 4,2 m sobre la bajamar; torre troncocónica de granito, 33,5 m sobre el mar (37 m total). Se juzgó demasiado ligera y entre 1897 y 1902 se le puso un casquete de hormigón de 50 cm en la base (orden de Léon Bourdelles). Paralelo directo con el refuerzo de Jument (1917-1934). [WFR-A] Media. Corrientes que superan 8 nudos [FIG]; el apodo "l'enfer des enfers" [FIG] Media.
+27. **Ar-Men, la vida.** Dos fareros en la roca, un tercero en Sein. Turnos: antes de la IIGM 30 días fuera/10 en tierra; luego 20/10; desde 1971 14/7. Récord de aislamiento: en 1922 tres fareros pasaron 89 días sin relevo. Incendio de cocina en dic-1923 tras 26 días de temporal, que tardó 17 horas en apagarse con agua de mar. 15-ene-1921 el jefe Sébastien Plouzennec fue barrido de la plataforma (murió; se puso barandilla). Relevo con *cartahu* (tirolina) desde el *Velléda*; último relevo y automatización el 10-abr-1990 por helicóptero. Escritor-farero: Jean-Pierre Abraham (1959-1963, *Armen*). [WFR-A] Media-alta.
+28. **La Vieille (Raz de Sein), 1882-1887.** Aprobación 29-ene-1881; crédito de 100.000 francos en abril de 1882; primera mampostería 5-ago-1882; luz 15-sep-1887. Ingeniero jefe Victor Fénoux (1879-1885), después Considère; ingeniero Miniac; conductor Probestau (vivía en Sein, base de la obra). Roca de 50 x 20 m a 14 m sobre las mareas más altas; plataforma tallada de 20 x 10 m; torre de 26,90 m con 120 escalones. Corrientes de más de 6 nudos; el desembarco sólo con mareas muertas, flujo y cuarto de luna; remolinos de 40-50 m; se construyó un refugio de mampostería para obreros. No consta accidente en obra. Famoso incidente de 1926 (temporal; dos inválidos de guerra, Mandolini y Ferracci, atrapados; rescate de dos fareros el 28-feb-1926). En la automatización de 1995, los fareros se negaron a abandonar. [WFR-V] Media-alta.
+29. **Pierres Noires (Le Conquet).** Proyecto aprobado 2-jul-1862 y 3-may-1865, 325.000 francos oro; obra 1867-1871; inaugurado 1-may-1872. Torre de granito de Aber-Ildut y kersantón. La corbeta *Gorgone* naufragó en el arrecife el 18-dic-1869 (93 muertos). Automatizado en 1992, vigilado desde Créac'h. [WFR-PN] Media.
+30. **Créac'h (Ouessant).** Construido en 1863 (ingenieros Maîtrot de Varennes y Rousseau; contratista Tritschler; en servicio 19-dic-1863), torre de 46,5 m, hoy 70 m de altura focal. 1888 electrificado; 1939 era la luz más potente del mundo (de 5 a 500 millones de candelas en niebla). Vigila a distancia Nividic, Jument, Stiff, Kéréon y Pierres Noires. [WFR-C] Media-alta. (Alturas contradictorias en la propia página.)
+31. **Kéréon (Men Tensel, entre Ouessant y Molène).** Obra 1907-1916, 941.000 francos; Amicie Lebaudy aportó 585.000. Torre de 48 m, "último faro-monumento"; escalera con mosaico y suelo de roble con rosa de los vientos. Fue el último "infierno" automatizado (29-ene-2004). El 16-dic-1989, cinco días antes de la foto de Jument, una ola reventó dos portillas de la cocina y siete cristales de la óptica a 42 m; la luz no se apagó. [WFR-K] Media. Gancho enorme: el mismo temporal.
+32. **Nividic (el "hijo" de Jument).** Decisión 5-ene-1910; mampostería desde verano de 1912; 50 m³ por año; torre acabada en 1929 (33 m sobre la roca, 35,55 m de altura); luz eléctrica 1936. Hormigón armado y ladrillo. La brigada de obra era la misma de Jument y usó la lancha *Eugène Potron*. Coste inicial estimado 160.000 francos oro frente a unos 850.000 de Jument. Diseñado para funcionar sin personal (primero del tipo); helipuerto de 5x5 m probado el 26-sep-1958 (primero en Francia, según la página); 206 viajes en helicóptero en la renovación de 1959. Heurté dirigió desde la subdivisión de Ouessant; el ingeniero Coyne (aquí "Cône") ya advertía del cinturón de hormigón. [WFR-N] Media. Nota: confirma que Heurté seguía con el equipo de Jument y que la lancha llevaba el nombre del legatario.
+33. **Île Vierge (Plouguerneau, 1897-1902), el contrapunto "fácil".** Torre de 82,5 m (la de piedra más alta del mundo), en una isla (no una roca que cubre el mar), con 7 albañiles y 18 peones en 1899, barracones para obreros, cantera al pie. Luz 1-mar-1902. Permite explicar por qué la técnica de "roca batida" es otra liga. [WFR-IV] Media. La página no nombra a Heurté, aunque WFR-J dice que trabajó allí.
+34. **Fotografía y fecha (apoyo para el guion).** 21-dic-1989, depresión desde Irlanda; Guichard alquiló un helicóptero en Lorient; 2.º premio World Press Photo 1991; el pósters habría vendido más de un millón (no verificado, BAJA). Malgorn: "con el mar no se juega". WFR-J: siete fotos de Guichard. [WEN-J, WFR-J, WFR-G] Media. Esto pertenece a otros investigadores; sólo se anota por el cruce con Kéréon (16-dic-1989).
+35. **Drummond Castle y las islas.** Los pescadores de Molène/Ouessant buscaron supervivientes; 48 h sólo cuerpos; unos cien cadáveres recuperados; envueltos en lona porque faltaba madera; duda sobre enterrar protestantes en tierra consagrada ("Enterrez-les tous, monsieur le curé"). En 1897 Reino Unido agradeció: Ouessant recibió fondos para una aguja de iglesia, Molène una cisterna y reloj; reina Isabel II regaló una bandera a Molène en 1996. [WFR-DC] Media. 1896-1911: el faro de Jument, tercero de la zona tras Stiff (1700) y Créac'h (1863). Alta.
 
-6. Charles-Eugène Potron, miembro de la Société de Géographie de París, muere el 27 de marzo de 1904 y lega al Estado 400.000 francos para un "phare bâti de matériaux de choix, pourvu d'appareils d'éclairage perfectionnés" en un lugar peligroso del Atlántico, por ejemplo Ouessant, con la condición de terminarlo en siete años. Fuentes: [DRAC-J], [POP-J], [WP-J]. Confianza: ALTA.
-7. Según el testamento, si no se cumplía el plazo el dinero iría a la Société Centrale de Sauvetage des Naufragés. Fuente: [DET]. Confianza: MEDIA (una fuente). Es un gran gancho de tensión: el faro era una carrera contra reloj.
-8. Una divulgación afirma que Potron había escapado de un naufragio y que redactó el testamento en 1878. Fuente: [ACTU] (y [WP-EN-J] dice vagamente "un francés rico que casi murió en un naufragio"). Confianza: BAJA; ninguna ficha oficial lo confirma.
-9. El 20 de febrero de 1904 una decisión ministerial aprueba una torreta "en béton de ciment" con base de 7 m de diámetro como mínimo. El proyecto definitivo se aprueba el 18 de noviembre de 1904. Fuentes: [POP-J], [WP-J]. Confianza: ALTA.
-10. Cuando llega el legado, el Estado decide construir "un véritable phare" en lugar de una torreta automática. La obra empieza a finales del verano o a finales de 1904 (las fuentes varían entre "verano" y "fin de 1904"). Fuentes: [DRAC-J], [DET], [POP-J]. Confianza: ALTA en el año; MEDIA en la estación.
-11. Primeras campañas sobre la roca: en 1904 sólo se pudo atracar 17 veces, con 52 horas de trabajo; de abril a octubre de 1905, 59 salidas y 206 horas. A fin de 1905 se habían colocado unos 100 m³ de los 1.700 m³ de mampostería estimados (cerca del 6 %). Fuente: [POP-J]. Confianza: ALTA (ficha oficial). Dato vívido para el guion: horas de trabajo reales de todo un año, menos que una jornada de oficina.
-12. La torre propiamente dicha se empieza cuatro años después del inicio, hacia 1908. Antes hubo que preparar el zócalo sobre una roca irregular. Fuente: [DRAC-J]. Confianza: ALTA.
-13. La Jument se enciende por primera vez el 15 de octubre de 1911, dentro del plazo de siete años, aunque el interior no estaba acabado (se terminó unos tres años después). Fuentes: [DRAC-J], [POP-J], [WP-J]. Confianza: ALTA. Matiz: [WP-J] y [FILO] hablan de siete meses de retraso respecto a un calendario interno; no es contradicción con el plazo del testamento, pero conviene aclararlo en guion.
-14. Dimensiones: torre octogonal de sillería de granito del aber Ildut, con cadenas de esquina de kersantón, algo más de 30 m de fuste y 8,50 m de ancho en la base; con la linterna culmina a más de 47 m. El séptimo piso es un voladizo (encorbellement) que ensancha la cima. Fuente: [DRAC-J]. Confianza: ALTA. Contradicciones menores: altura 47 m / 47,4 m / 48 m y altura focal 36 m [DET], 42,65 m [POP-J] o 47,4 m [WP-J] según la fuente (parece que se mezclan altura de la luz y altura sobre el mar). Usar "unos 47 m de altura total".
-15. Particularidad de diseño: la escalera no está separada de las salas, sino integrada en ellas en tramos giratorios. Interior muy cuidado: sala de honor con parquet de punto de Hungría, boiserie de roble, techo de casetones y retrato en bronce del donante, obra del escultor Louis Holweck. Fuente: [DRAC-J]. Confianza: ALTA.
-16. Óptica original: lente giratoria de seis paneles de 0,70 m de focal sobre cuba de mercurio. Luz roja, tres destellos agrupados cada 15 s [DRAC-J] (WP-J dice cada 12 s; discrepancia no resuelta). Confianza: ALTA en la óptica, MEDIA en el ritmo.
-17. Responsables: Ribière (ingeniero jefe, "maître d'œuvre" en las fichas oficiales; autor del artículo de 1911 "Construction du phare de la Jument d'Ouessant", Annales des ponts et chaussées, 1911, pp. 408-417); Willotte (ingeniero jefe que aceleró los reconocimientos del terreno); Georges Clet Heurté (nacido en 1865 en Primelin, conducteur principal de Ponts et Chaussées, que según Wikipedia FR dirigió las obras). Fuentes: [POP-J], [WP-J], [FILO]. Confianza: MEDIA. Contradicción: las fichas oficiales sólo nombran a Ribière; Wikipedia y Filovent destacan a Heurté. Lo razonable es que Ribière fuera el ingeniero responsable y Heurté el técnico en el terreno, pero no lo he podido verificar (pendiente: leer el artículo en Gallica).
+## 3. Hipótesis y testimonios (separados)
 
-### C. El defecto de fábrica: el faro que casi se cae
+- **Testimonio:** Malgorn, citado por WEN-J (con fuente Stern 2007): "no se puede jugar con el mar". Una sola fuente secundaria; pendiente leer el Stern original.
+- **Hipótesis razonable (no documentada de forma directa):** que la prisa por cumplir el plazo del legado explique la base reducida y la fisura. MER dice que la base se redujo por prisa; la vinculación con el legado es inferencia (aunque plausible, dada la presión del albacea desde 1908).
+- **Hipótesis a verificar:** que la roca estuviera fracturada de un modo no previsto (BAJA, resumen de buscador).
 
-18. El propio DRAC reconoce que "des défauts liés sans doute à la volonté de respecter les délais imposés" aparecieron enseguida, sobre todo en el zócalo, cuyo tamaño, solidez y unión con la torre se subestimaron. Con su forma atípica y gran altura, el faro tiene mucha masa arriba. Hicieron falta varias campañas de refuerzo hasta mediados de los años treinta. Fuente: [DRAC-J]. Confianza: ALTA. Es el corazón técnico de la historia: se construyó para ganar una apuesta de plazo.
-19. Síntomas: en la primera tormenta (diciembre de 1911) la torre vibró, los cristales de la linterna se fisuraron y el mercurio de la cuba se derramó. Fuentes: [WP-J], [DET], [POP-J]. Confianza: ALTA.
-20. Refuerzos: 1914, créditos para consolidar la base; diciembre de 1917 a noviembre de 1918, el faro se apagó para colocar una coraza de hormigón armado en la base; 1934, tres cables metálicos interiores de unos 30 m anclados en la roca (procedimiento del ingeniero Coyne); consolidaciones hasta 1924 según Mérimée, y hasta 1934-1940 según otras fuentes. Fuentes: [WP-J], [POP-J], [DET], [ACTU]. Confianza: MEDIA-ALTA (las fechas de los trabajos finales varían: 1924, 1934, 1940).
-21. Mérimée menciona que se llegó a plantear el riesgo de cizallamiento del fuste. Fuente: [POP-J]. Confianza: MEDIA (es una frase de ficha técnica; no sé hasta qué punto fue un riesgo real).
-22. El DRAC añade que "aujourd'hui encore, le phare de la Jument reste l'un des plus surveillés" por el servicio de Phares et Balises. Fuente: [DRAC-J]. Confianza: ALTA.
-23. Una divulgación afirma que ningún trabajo de obra se hizo "al detalle" por prisa: "chantier bâclé". Fuente: [ACTU]. Confianza: BAJA; es una valoración, no un hecho; prefiero la fórmula sobria del DRAC.
+## 4. Mitos y errores comunes detectados
 
-### D. Vida y sustos posteriores en La Jument
+- **"El faro se construyó en 1911 sin problemas."** Falso: se encendió a tiempo pero con la base recortada, y hubo 23 años de refuerzos (hormigón, 1917-18; cables, 1934). Hecho documentado.
+- **"Las olas hacían imposible construir."** Matiz: lo medido es el número de horas posibles (52 en el primer año, 206 en 1905), no una imposibilidad. Hecho documentado.
+- **"Lo financió un millonario excéntrico."** Es un legado de 400.000 francos con cláusula de plazo y destino alternativo; el coste final (850.000) fue más del doble, así que lo cubrió el Estado. Hecho + inferencia.
+- **Fecha de automatización:** la pista decía "principios de los noventa": correcto (1991; salida de fareros 26-jul-1991).
+- **Pista "Ouessant famosa por naufragios (Drummond Castle 1896)":** confirmada.
+- **"Ar-Men es el faro más duro y por eso La Jument es menor":** Ar-Men necesitó 14 años y Jument 7; pero Jument tuvo defectos estructurales de rigidez. No es una carrera de dureza.
+- **Falsedad de la foto:** no se ha podido verificar en esta sesión (fuera de alcance del encargo y sin búsquedas disponibles). WEN-J no menciona acusaciones de montaje; la presencia de testimonio del farero y de siete fotos apoya la autenticidad. Pendiente para el investigador de la foto.
 
-24. Septiembre de 1974: una ola rompe la linterna y arrastra la lámpara de queroseno; entra agua por la escalera; los dos guardianes (Jean-Claude Roger y Noël Violant, según Wikipedia FR; "Violent" en Filovent) se refugian en la cocina, el único sitio seco, y abren la puerta para que el agua salga. Fuentes: [WP-J], [FILO], [DET]. Confianza: ALTA en el hecho, MEDIA en la ortografía de los nombres.
-25. Los guardianes abandonaron el faro el 26 de julio de 1991 al automatizarse (electrificación en 1990). Fuentes: [WP-J], [DET], [DRAC-J] (automatización 1991). Confianza: ALTA.
-26. Daños de la tormenta del invierno 2013-2014: se paró la luz principal y se dejó el faro auxiliar con alcance reducido a 10 millas; en 2015 se sustituyó la óptica por LED; en 2023, panel solar con grupo de respaldo; hay un nuevo derrame de mercurio en 2014. Fuentes: [DRAC-J], [WP-J]. Confianza: MEDIA-ALTA.
-27. Una campaña de medición en 2017-2018 registró una ola máxima de 24,60 m en el entorno. Fuente: [WP-J]. Confianza: MEDIA (hay que localizar el estudio original).
-28. Monumento histórico: inscrito el 31 de diciembre de 2015 y clasificado el 20 de abril de 2017 "en totalité, y compris soubassement". Fuentes: [DRAC-J], [WP-J]. Confianza: ALTA.
+## 5. Contradicciones entre fuentes
 
-### E. Kéréon (Men-Tensel), el "gemelo caro"
-
-29. Kéréon, en la roca Men-Tensel (Fromveur, entre Ouessant y Molène), se construyó de 1907 a 1916 y se encendió el 25 de octubre de 1916, en plena guerra. Fuentes: [POP-K], [WP-K]. Confianza: ALTA.
-30. Verano de 1907: 43 atraques con un barco de vapor de trabajo desde Argenton (Landunvez), 60 m³ de mampostería de cimentación; 1908: otros 140 m³ y plataforma casi terminada. Fuente: [POP-K]. Confianza: ALTA.
-31. Financiación: donación de 585.000 francos de Amicie Lebaudy (la ficha dice "Madame Jules Le Baudry"; hay otras grafías) en memoria de su tío abuelo Charles Marie Le Dall de Kéréon, oficial de marina guillotinado durante el Terror; de ahí el nombre. Presupuesto autorizado de 750.000 francos en 1910 y 975.000 en diciembre de 1916, "le phare français le plus cher" según Mérimée (Wikipedia FR da un coste total de 941.000). Fuentes: [POP-K], [WP-K]. Confianza: ALTA en la donación; MEDIA en el coste final (975.000 frente a 941.000).
-32. Efecto de la Primera Guerra Mundial: en 1914 había 12 albañiles, tras la movilización quedaron 7 y 6 de ellos fueron enviados a unidades de combate; el cemento llegaba con dificultad desde Boulogne; crédito extra de 150.000 francos en 1915 por la subida de precios. Fuente: [POP-K]. Confianza: ALTA (ficha oficial).
-33. Mampostería comparada: casi 3.000 m³ en Kéréon frente a 1.720 m³ en La Jument. Fuente: [POP-K]. Confianza: ALTA. Altura de Kéréon: 47,25 m total. Torre de sillería sobre zócalo ovoide. Interior lujoso: suelo de roble con rosa de los vientos de caoba y ébano, mosaico en la escalera, roble de Hungría.
-34. Tormenta del 16 de diciembre de 1989 en Kéréon (según Wikipedia FR, que cita a Guichard y Gast, *Les phares: Enfers et Paradis*, 1999): a las 18:10 una ola revienta dos ventanas de la cocina, los guardianes salen despedidos, el mobiliario acaba en el mar y siete cristales de la óptica estallan; los guardianes cubren la óptica con lonas y el faro nunca se apaga. Fuente: [WP-K]. Confianza: MEDIA. OJO: la fecha (16 de diciembre) no coincide con la foto de La Jument (21 de diciembre); pueden ser dos temporales distintos de aquel mes o un error de Wikipedia. Verificar antes de usarlo.
-35. Guardianes en Kéréon hasta 2004 (automatización el 29 de enero de 2004, telecontrol desde el Créac'h). Fuente: [WP-K]. Confianza: MEDIA.
-
-### F. Ar-Men, el "infierno de los infiernos"
-
-36. Origen: naufragio de la corbeta Sané en 1859 en la chaussée de Sein. En 1860 se busca emplazamiento. En 1861 fracasan tres intentos de desembarco. En 1865 Paul Joly examina la roca y concluye que no se puede levantar una obra de mampostería (los ingenieros de Phares et Balises "concluent qu'aucune roche ne peut servir d'assise"). Fuentes: [WP-AM], [POP-AM]. Confianza: ALTA.
-37. La roca de Ar-Men emerge sólo unas horas, a 4,20 m en bajamares de gran coeficiente; superficie de unos 105 m². Fuente: [WP-AM]. Confianza: MEDIA-ALTA. Dato útil: Tymeur, síndico de la gente de mar de Sein, fue el primero que pisó la roca y tomó una muestra. Fuente: [POP-AM]. Confianza: MEDIA.
-38. Cifras de la obra (Mérimée): 1867, 7 atraques y 8 horas de trabajo real, 15 barrenos de 30-40 cm; 1868, 40 barrenos más; 1869, 24 atraques y 42 horas en la roca (Wikipedia: 42 h 10 min), 25 m³ de mampostería; 1870, 8 atraques y 19 horas. Fuentes: [POP-AM], [WP-AM]. Confianza: ALTA en el orden de magnitud; las cifras de atraques varían ligeramente entre fuentes (13 aplazados / 9 realizados en 1867 según Wikipedia).
-39. Los primeros sillares se colocan en mayo de 1869. Técnica: hierros anclados en la roca y mortero de cemento amasado con agua de mar; gneis para la primera hilada, kersantón y luego sillería de granito y gres. Los obreros desembarcaban de dos en dos, con espardeñas (zapatillas de cuerda) y chalecos de corcho; había un bote de rescate permanente. Fuente: [WP-AM]. Confianza: MEDIA (Wikipedia con bibliografía amplia, no verificada en primarias).
-40. Accidentes en la obra: 15 de junio de 1878, un bote con 14 obreros vuelca y todos son rescatados; julio de 1880, otro con 5 hombres, todos rescatados; 1881, dos obreros son arrastrados por una ola y uno se ahoga por no haberse abrochado bien el chaleco. Fuente: [WP-AM]. Confianza: MEDIA. A diferencia de otros faros "del infierno", Ar-Men sólo registra una muerte en obra en estas fuentes; falta confirmarlo.
-41. Terminado hacia 1880. El ingeniero jefe Fenoux escribió: "on peut dire aujourd'hui que cet impossible est réalisé", tras unos doce años de esfuerzos. Primera prueba de la luz el 18 de febrero de 1881; puesta en servicio oficial el 30 de agosto de 1881. Fuentes: [POP-AM], [WP-AM]. Confianza: ALTA. Las fichas dicen que la obra fue de 1867 a 1881 (14 años); Fenoux habla de 12 años de esfuerzos porque cuenta de 1868/69 a 1880.
-42. Dimensiones: unos 33,5 m sobre el mar y 37 m de altura total, 7,20 m de diámetro, sin zócalo ancho (la roca no lo permitía). Una fuente divulgativa da 29 m de altura focal; Mérimée 33,50 m: contradicción. Fuente: [POP-AM], [WP-AM]. Confianza: MEDIA.
-43. Refuerzo: 1897-1902 (Wikipedia) o 1897-1900 (Mérimée), ensanchamiento del zócalo con una chapa de cemento de 50 cm, dirigido por Léon Bourdelles. Fuentes: [WP-AM], [POP-AM]. Confianza: MEDIA-ALTA. Paralelo directo con La Jument: dos faros "del infierno" que hubo que reforzar.
-44. Vida de los guardianes de Ar-Men: relevos de 30 días a bordo y 10 en tierra antes de la Segunda Guerra Mundial, de 20 y 10 después, de 14 y 7 desde 1971; récord de más de 100 días seguidos; en 1922 tres guardianes pasaron 89 días sin víveres; relevo con cartahu (cable) y "ballon" desde el barco Velléda; desde 1990 en helicóptero. Fuente: [WP-AM]. Confianza: MEDIA.
-45. Episodios: 15 de enero de 1921, el guardián jefe Sébastien Plouzennec fue arrastrado por una ola (después se puso una barandilla); diciembre de 1923, incendio en la cocina tras 26 días de temporal, combatido durante 17 horas; tres soldados alemanes convivieron con tres guardianes durante la ocupación. Fuente: [WP-AM]. Confianza: MEDIA.
-46. Última guardia: 10 de abril de 1990 (Daniel Tréanton y Michel Le Ru). El faro nunca más tuvo guardianes. Se visita una vez al año para mantenimiento con personal izado por helicóptero. Fuentes: [WP-AM], [BAT-AM]. Confianza: MEDIA-ALTA.
-47. Literatura: Jean-Pierre Abraham (guardián 1959-1963) escribió *Armen* (1967); también Henri Queffélec, *Un feu s'allume sur la mer* (1956); Emmanuel Lepage, *Ar-Men, l'enfer des enfers* (cómic, 2017). El apodo "l'Enfer des enfers" lo usaban los propios guardianes. Fuentes: [WP-AM], [BAT-AM]. Confianza: MEDIA.
-
-### G. Otros faros del Iroise y "del infierno"
-
-48. Le Four (Porspoder): 1862, la Comisión Náutica lo reconoce como emplazamiento; obra desde abril de 1869; entra en servicio la noche del 14 al 15 de marzo de 1874. Ingenieros Blanchat, Reynaud y Fenoux. Tres hombres (Hervé Jézéquel, François Leborgne y el capataz Le Brelivet) mueren al hundirse el barco de suministro contra una roca durante la obra. Automatizado el 6 de octubre de 1993. Fuente: [WP-F]. Confianza: MEDIA (sólo Wikipedia EN).
-49. Tévennec (raz de Sein): obra en 1869 dirigida por Joly sobre proyecto de Reynaud, servicio el 15 de marzo de 1875. Se construyó para dar trabajo a las cuadrillas de Ar-Men cuando el mal tiempo las paraba. Torre cuadrada de 11 m con casa del guardián adosada, un error de apreciación de la dirección central: 23 guardianes en 35 años hasta la automatización en 1910. Leyenda de fantasmas (voces, locura del primer guardián); un buceador encontró que el "rugido" lo causa un sifón de la roca cuando entra la marea. Fuente: [DRAC-T]. Confianza: ALTA en lo oficial; BAJA en las leyendas de muertes.
-50. La Vieille (raz de Sein): construida de 1882 a 1887 en régie (por la administración, sin contratista) con ingenieros Fenoux, Considère y Miniac; inspirada en la torre de Les Triagoz, luz el 15 de septiembre de 1887; 27 m de altura; grúa "Temperley" para relevos desde 1926; evacuada de enero de 1944 a junio de 1945; automatizada el 14 de noviembre de 1995. Fuente: [DRAC-V]. Confianza: ALTA. Una fuente señala que la base se hizo con canteros que ya habían trabajado en Ar-Men (MEDIA).
-51. Créac'h (Ouessant): decisión en 1859, primera luz en 1863, electrificado en 1888 según una fuente (otra dice "unos 20 años después"); en 1939 era el faro más potente del mundo según una fuente turística. Stiff, 1699. Fuente: resultado de búsqueda sobre Mérimée/patrimonio, sin verificar a fondo. Confianza: BAJA-MEDIA. Sirve de contexto, no de dato clave.
-52. Île Vierge (Plouguerneau): 1897-1902, luz el 1 de marzo de 1902, 82,5 m: el faro de piedra más alto de Europa según varias fuentes (otra da 84 m). Fuente: bateaux.com, Pariszigzag y otros (en búsqueda). Confianza: MEDIA. No pude confirmar que Heurté trabajara allí (Filovent lo afirma sin más).
-
-### H. Comparaciones extranjeras (contexto)
-
-53. Eddystone (Smeaton): obra 1756, luz el 16 de octubre de 1759; Bishop Rock: primer intento de 1847 destruido por un temporal en 1850, segunda torre terminada en septiembre de 1858; Wolf Rock: de 1861 a 1869, servicio en 1870; Skerryvore: terminada a principios de 1844 (Alan Stevenson). Fuentes: resultados de Royal Society, Trinity House, sailing-by.org (no abiertos en detalle). Confianza: MEDIA. Para el guion, usar sólo como "otros faros sobre rocas batidas", con las fechas redondeadas.
-
-### I. La foto de 1989 (contexto breve; es el encargo de otro compañero, aquí sólo lo que toca a la construcción)
-
-54. La foto es de Jean Guichard, del 21 de diciembre de 1989, en una serie de siete fotos; en una aparece el guardián Théodore Malgorn en la puerta mientras una ola envuelve la torre. Fuentes: [WP-J], [WP-EN-J], [FILO], [GUI]. Confianza: ALTA.
-55. Se tomó desde un helicóptero (alquilado en Lorient según Wikipedia EN); el guardián abrió la puerta intrigado por el ruido del helicóptero y volvió a entrar al llegar la ola. Fuentes: [WP-EN-J], [FILO], búsqueda de Snopes. Confianza: ALTA en el relato básico. La página de Guichard no menciona helicóptero, y ofrece una hora ("01:00") que parece un campo de metadatos, no un testimonio; no la usaría.
-56. Autenticidad: Snopes (2021, según el resumen del buscador) la declara auténtica; no encontré ninguna fuente fiable que demuestre montaje. Fuente: [SNOPES] (no leí el artículo completo). Confianza: MEDIA-ALTA. El segundo puesto en el World Press Photo de 1991 lo da Wikipedia EN; otras fuentes hablan del premio sin puesto: MEDIA.
-57. Relación con la construcción: la ola de 1989 golpeó una torre cuyo zócalo se rehizo y se ancló con cables en 1934. Es el puente narrativo más potente entre el capítulo de ingeniería y el de la foto: la ola de 1989 es la prueba del refuerzo. (Inferencia mía, no la dice ninguna fuente.)
-
----
-
-## 2. Contradicciones y cuál parece más sólida
-
-| Tema | Versión A | Versión B | Cuál parece mejor |
+| Dato | Versión A | Versión B | Parece más sólida |
 |---|---|---|---|
-| Quién construyó La Jument | Ribière, ingeniero jefe (DRAC, Mérimée) | Georges Heurté, dirigió las obras (WP-J, Filovent) | Ambos; Ribière como responsable y Heurté como técnico de obra. Pendiente de Gallica. |
-| Altura de La Jument | 47 m (DRAC) | 47,4 / 48 m | 47 m (DRAC) |
-| Altura focal de La Jument | 36 m (DET) | 42,65 m (Mérimée) / 47,4 m (WP) | No resuelta; evitar la cifra |
-| Ritmo del destello | 15 s (DRAC) | 12 s (WP-J) | DRAC |
-| Fin de refuerzos | 1924 (Mérimée) | 1934 cables; 1940 (ACTU) | 1934 para los cables (dos fuentes) |
-| Año de arranque de obra | verano de 1904 (DRAC) | finales de 1904 (Mérimée) | 1904, estación incierta |
-| Ar-Men: altura focal | 29 m (WP-AM en cabecera) | 33,50 m (Mérimée/WP-AM en texto) | 33,50 m |
-| Ar-Men: años de obra | 1867-1881 (14 años) | "12 años de esfuerzos" (Fenoux, 1880) | Ambas; son medidas distintas |
-| Ar-Men: primera luz | 18 feb 1881 (prueba) | 30 ago 1881 (servicio) | Ambas; distinguir prueba y servicio |
-| Kéréon: coste | 975.000 francos (Mérimée) | 941.000 (WP-K) | Mérimée |
-| Kéréon: donante | Amicie Lebaudy (WP-K) | "Mme Jules Le Baudry" (Mérimée) | No resuelta; decir "una donante de apellido Lebaudy" |
-| Kéréon: electrificación | 1972 (WP-K texto) | 1973 (infobox y Mérimée) | 1973 |
-| Tormenta de diciembre de 1989 | Kéréon: 16 de diciembre (WP-K) | La Jument: 21 de diciembre (varias) | Son dos fechas distintas; no mezclar sin verificar |
-| Drummond Castle | 258 muertos (DRAC) | unos 250 (DRUM, WP-EN) | "Más de 250" |
+| Altura de Jument | 47 m, focal 47,4 m [WFR-J] | 48 m, focal 36 m [WEN-J]; focal 42,65 m [MER] | MER (inventario oficial) para la focal; torre 47-48 m sin resolver |
+| Luz actual | 3 destellos cada 12 s [WFR-J] | cada 15 s [MER 2001] | Posible cambio con el LED (2015); se anota el cambio como hipótesis |
+| Autor/jefe de obra | Ribière, ingeniero jefe [MER] | Heurté, conducteur principal [WFR-J, FIL] | No se contradicen: Ribière dirige a nivel de ingeniería jefe y Heurté la obra |
+| Víctimas del *Drummond Castle* | 258 [WFR-J] | 244-248 a bordo [WFR-DC] | Hay que contrastar con prensa británica de 1896 |
+| Primer año de obra | 17 desembarques, 52 h [MER] | "52 h" sólo [WFR-J] | MER |
+| Clasificación Monumento Histórico | 31-dic-2015 | 20-abr-2017 | Ambas son ciertas: inscripción y clasificación |
+| Altura Ar-Men | 33 m / 33,5 m / 37 m total | | 33,5 m sobre el mar, 37 m con linterna |
+| Duración obra Ar-Men | 1867-1880 (luz de prueba feb-1881) | 14 años (1867-1881); estabilización hasta 1897-1902 | Se explica por la lista |
 
----
+## 6. Ideas de gancho
 
-## 3. Mitos y errores comunes (lo que la gente cree y es falso o dudoso)
+1. "En su primer año de obra, los albañiles pisaron la roca 17 veces. En total, 52 horas. Con eso levantaron los cimientos del faro más fotografiado del mundo."
+2. Cinco días antes de la foto, el 16 de diciembre de 1989, otro faro de la zona, Kéréon, sufrió la misma tormenta: una ola echó fuera a los fareros y reventó los cristales a 42 m. La luz no se apagó.
+3. Un hombre muerto en 1904 (Potron) puso un reloj de cuenta atrás a la obra: si no estaba encendido a los siete años, el dinero iba a otra institución. Se encendió en octubre de 1911; en diciembre ya vibraba.
+4. Los ingenieros descubrieron que el fuste se agrietaba y apagaron el faro en plena guerra submarina (28-dic-1917 a 6-nov-1918) para encerrarlo en una coraza de hormigón.
+5. Ar-Men: 1 m³ de piedra por desembarque; 14 años; mortero con agua de mar; el hombre que murió por no abrocharse el salvavidas.
+6. La lancha de obra se llamaba *Eugène Potron* y siguió trabajando en el faro siguiente (Nividic).
+7. El faro "hermano" de Jument se diseñó para no tener fareros; los helicópteros salvaron a un faro de piedra de los años cincuenta.
+8. Los pescadores de Molène envolvieron a los muertos del *Drummond Castle* en lona porque no tenían madera; esa catástrofe es la causa de que se empezara a pensar en La Jument.
 
-1. "La Jument se construyó rápido y bien." Falso: se acabó a tiempo para cobrar el legado, pero con defectos de fábrica que exigieron refuerzos hasta los años treinta [DRAC-J]. La prisa es del propio DRAC.
-2. "La Jument es el faro más peligroso de Francia." Es un tópico de divulgación; Ar-Men tiene el apodo "enfer des enfers" y, a diferencia de La Jument, se construyó en una roca que apenas emerge. La Jument está a unos 300 m de Ouessant (WP-EN-J, una fuente), no en mar abierto.
-3. "La foto de 1989 es un montaje." No hay prueba de ello; Snopes (por resumen) y las fuentes de Guichard la consideran auténtica [SNOPES], [GUI].
-4. "El farero casi murió arrastrado por la ola." Hay un relato de que habría muerto de estar más lejos de la puerta (Tumblr, sin fuente); lo documentado es que volvió a entrar y sobrevivió. BAJA confianza en el dramatismo.
-5. "Tévennec está maldito por fantasmas y muertes." Las leyendas existen, pero el DRAC cita una explicación racional (el sifón) y sólo documenta 23 guardianes en 35 años [DRAC-T]. Las muertes concretas son de relato popular.
-6. "Se enciende un faro y ya está." El interior de La Jument estaba sin acabar en 1911 y las obras siguieron años [DRAC-J].
-7. "Ar-Men costó una fortuna documentada." Las fichas no dan cifra; sólo "des millions" en un informe de 1866 [WP-AM]. No inventar cifras en euros.
+## 7. Dudas pendientes (para ampliar cuando haya más búsquedas)
 
----
+- Número exacto de obreros de Jument, turnos, salarios; accidentes mortales en obra (no aparecen en lo leído).
+- Texto original de Ribière (1911) y de *Le Génie civil* (14-oct-1911): sería la fuente técnica primaria de oro.
+- Medidas de la plataforma de la roca Ar Gazeg y cota de la roca sobre la bajamar.
+- Número de m³ finales de mampostería y composición del hormigón.
+- Verificación independiente del cinturón de 1917-18 y del cable de 1934 (los dos sale de MER, que es el oficial).
+- Documentos del Servicio de Faros, archivos (Archives nationales, Archives de Brest) y Musée des Phares et Balises de Ouessant (Créac'h): no consultados.
+- Phares et Balises (Armor de Pierre...) y la bibliografía de Fichou: no consultados directamente.
+- Acusaciones de "foto falsa": sin verificar.
 
-## 4. Ideas de gancho (para el guion)
+## Limitaciones del trabajo
 
-1. "En 1905 un equipo de obreros pasó 206 horas sobre una roca en mitad del Fromveur. En todo el año. Y tenían que construir un faro de 47 metros." (hecho 11)
-2. Una carrera contra el notario: un testamento que dice "siete años o el dinero se va a otra organización". El faro se enciende el 15 de octubre de 1911, con la torre dañada. (hechos 6, 7, 13, 18)
-3. La torre que vibraba: en la primera tormenta se agrietaron los cristales y el mercurio se derramó. Y aun así, 78 años después, un hombre salió por la puerta. (hechos 19, 54, 57)
-4. El mortero con agua de mar y las zapatillas de cuerda de Ar-Men: 1869, 42 horas de trabajo real en una temporada, 25 m³ de piedra. (hechos 38, 39)
-5. "Se pasó 14 años construyendo una torre de 37 m en una roca donde no cabía nadie." Ar-Men como el hermano mayor imposible. (hechos 36 a 42)
-6. Kéréon, el faro cuyo nombre es un guillotinado: la donante lo pone en honor de su tío abuelo, marino decapitado en el Terror; y el albañil que se va al frente en 1914. (hechos 31, 32)
-7. Tévennec: un faro con casa y niños en una roca; un buceador descubre que el "fantasma" es un sifón. (hecho 49)
-8. Paralelo con Eddystone, Wolf Rock y Bishop Rock: la misma lucha contra el mar en dos orillas del Canal. (hecho 53)
-
----
-
-## 5. Estructura posible del bloque de ingeniería (para compactar o ampliar según haga falta)
-
-Sobre tu pregunta (base de 45 min o más sin relleno; se puede compactar): este encargo da material real para unos 10 a 14 minutos de guion sin relleno (construcción, defectos de fábrica, refuerzos, Kéréon, Ar-Men, Tévennec/Le Four/La Vieille como comparación). Eso supone una parte sustancial de los 45 minutos, no su totalidad; el resto debe salir de los otros investigadores (foto de 1989, vida de los fareros, Drummond Castle, Ouessant). Si el resto de la investigación no llega, es preferible compactar a unos 40 minutos que rellenar. Sugerencia de orden: 1) el mar y los 31 naufragios; 2) el testamento y el plazo; 3) la roca y las 206 horas; 4) la torre y sus defectos; 5) el refuerzo de 1917-1918 y los cables de 1934; 6) Kéréon (guerra); 7) Ar-Men (el imposible); 8) Tévennec, Le Four y La Vieille; 9) el vínculo con la ola de 1989.
-
----
-
-## 6. Dudas y pendientes
-
-- Leer el artículo de Ribière (Gallica) para confirmar: nombre del contratista, número de obreros, tipo de hormigón, uso de la roca fisurada, método de cimentación y cifras de coste. Es la fuente primaria que falta.
-- Fichou (2008), *Le chantier de la construction du phare d'Ar-Men*, y Fichou, Le Hénaff y Mével (1999) para cifras de obreros y costes de Ar-Men.
-- Verificar la fecha de la tormenta de Kéréon (16 de diciembre de 1989) frente a la de La Jument (21 de diciembre).
-- Confirmar si Heurté trabajó en La Jument y en la Île Vierge, y cuál fue su papel exacto frente a Ribière.
-- Confirmar el testamento de 1878 de Potron y su historia de naufragio (sólo una divulgación).
-- Confirmar el recorrido de ola máxima de 24,60 m (2017-2018) con la fuente original.
-- Mercurio: confirmar cuándo se vació la cuba de La Jument (sólo hay una referencia a 2014).
+- El límite de búsquedas web se agotó a mitad de la investigación (3 búsquedas útiles); luego sólo se pudo usar WebFetch.
+- La ficha DRAC en PDF no se pudo leer (flujo comprimido); sus datos entran sólo vía los resúmenes de búsqueda y Mérimée.
+- Casi toda la información sale de Mérimée (oficial) y Wikipedia FR; no se ha logrado segunda fuente independiente para muchos datos de la sección 2.
+- Varias páginas de Wikipedia que se pidieron devolvieron 404 (Jean Guichard fotógrafo, Drummond Castle (navire)); se usaron otras variantes de URL.

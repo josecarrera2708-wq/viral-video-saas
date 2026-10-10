@@ -1,87 +1,87 @@
-## 7. CINCUENTA Y DOS HORAS
+## 6. CINCUENTA Y DOS HORAS
 
-El número de horas es cincuenta y dos, y no hay ningún error de imprenta. Durante todo mil novecientos cuatro, el primer año de obra, los barcos solo lograron atracar diecisiete veces en la roca. Si sumas el tiempo que los hombres trabajaron de verdad sobre ella, salen esas cincuenta y dos horas. Son poco más de dos días enteros repartidos en doce meses.
+El número que te prometí al principio es cincuenta y dos horas, y no es ningún error de imprenta. Lo dice la ficha oficial de patrimonio, la misma que documenta el origen de la torre: en el primer año de obra, los hombres solo pudieron acercarse a la roca diecisiete veces, y en total trabajaron allí cincuenta y dos horas.
 
-Haz la cuenta conmigo. Repartidas entre las diecisiete visitas, tocan unas tres horas de trabajo cada vez que el mar lo permitió. Esa división es aritmética mía y no un dato de ninguna ficha, pero te da la medida de aquella obra.
+Piensa en lo que significa. Cincuenta y dos horas son poco más de dos días, y estaban repartidas a lo largo de un año entero. Si haces la cuenta, y esta cuenta es mía y no de la ficha, salen unas tres horas por desembarco. El resto del año no hubo manera de pisar la roca.
 
-El año siguiente fue mejor, aunque mejor es una palabra muy relativa. De abril a octubre de mil novecientos cinco se acumularon doscientas seis horas de trabajo, casi cuatro veces más. Con ellas se colocó alrededor del seis por ciento del volumen total que pedía el proyecto. Repito la cifra a propósito, alrededor del seis por ciento, porque va a volver.
+Ahí tienes lo que prometía el principio. Un testamento exigía terminar en seis o siete años, y una roca dejaba trabajar cincuenta y dos horas en el primero. El mar decidía cuándo se trabajaba, y casi nunca decidía que sí.
 
-Piensa en lo que eso significa. Aquellos hombres levantaban una torre de granito robándole ratos al mar. No era una obra con horario, era una obra que dependía de las horas que el mar quisiera prestar.
+La misma ficha da el balance de otra temporada, la de abril a octubre de mil novecientos cinco. Hubo cincuenta y nueve salidas, doscientas seis horas sobre la roca y unos cien metros cúbicos de mampostería, que es más o menos lo que cabe en una piscina grande de jardín. Era apenas el seis por ciento del total que calculaba el proyecto. Ese seis por ciento no se queda aquí.
 
-¿Y quiénes eran esos hombres? De los obreros que subían a la roca no se conoce el número ni los nombres, al menos en lo que se ha podido consultar. Los nombres que sí constan son los de quienes dirigían la obra.
+¿Y quién dirigía a los hombres? Según la Wikipedia francesa, Georges Clet Heurté, nacido en Primelin, en la costa bretona, en la Nochebuena de mil ochocientos sesenta y cinco. Su grado oficial era conductor principal del servicio estatal de obras públicas, y ya había trabajado en el faro de Île Vierge. Esa misma fuente dice que ocupó el puesto de mil novecientos cinco a mil novecientos once. Lo que sabemos de él cabe en esas líneas, y no voy a rellenarlas.
 
-El ingeniero jefe se llamaba Willotte. El jefe de la obra fue, según las fuentes, Georges Clet Heurté. Nació el veinticuatro de diciembre de mil ochocientos sesenta y cinco en Primelin y era técnico del cuerpo estatal de Puentes y Calzadas. Y hay un tercer nombre, Ribière, que firmó en mil novecientos once el artículo técnico donde se explica cómo se levantó la torre.
+La ficha de patrimonio atribuye lo que se logró a cuatro cosas: una organización rigurosa, un equipo entregado, un encargado emprendedor y unos medios marinos y mecánicos adecuados. Es una explicación seca, de documento oficial. Detrás hay hombres que embarcaban cada vez que el mar lo permitía, para trabajar unas pocas horas sobre la roca.
 
-Según la ficha francesa, Heurté venía de la Île Vierge, el faro de piedra más alto de Europa. Ese faro permite asomarse a cómo era el oficio, aunque no sean los obreros de La Jument. El escritor Charles Le Goffic contó en mil ochocientos noventa y nueve que en aquella obra trabajaban siete albañiles de Cap Sizun y dieciocho peones de Plouguerneau, y que cada noche los devolvían a tierra. Eran hombres con un jornal diario, y de ellos dependía cada piedra.
+Mientras tanto, el reloj del testamento seguía corriendo. La ficha dice que el plazo de siete años se hacía cada vez más pesado. Después de mil novecientos ocho, el albacea, el notario Meunié, que era el encargado de ejecutar el testamento, empieza a inquietarse, y en agosto de mil novecientos nueve el Servicio de Faros lo invita a ir a ver la obra por sí mismo.
 
-El reparto de papeles es un lío. Según qué ficha leas, a Heurté lo llaman jefe de obra o capataz, y en algunas fichas oficiales la dirección figura a nombre de Ribière. Quién mandaba de verdad no se ha podido resolver con lo que hay a mano.
+De todo lo demás no hay datos. No sabemos cuántos obreros eran, qué cobraban ni cómo se repartían los turnos. Tampoco consta que muriera alguien en la obra, aunque que no conste no prueba que no ocurriera. Y existe un artículo técnico firmado por Ribière en mil novecientos once que no hemos podido leer.
 
-Tampoco constan qué empresa hizo el trabajo, cuántos obreros eran, qué hormigón usaron, cómo cimentaron la torre ni cuánto costó de verdad. Buena parte de eso quizá esté en el artículo de Ribière, que no se ha podido consultar, así que esos detalles quedan en blanco.
+Con lo que sí está documentado, mi lectura es esta, y es una lectura, no un dato: construyeron una torre robándole ratos al mar. Cada visita a la roca era un préstamo de unas pocas horas, y el mar siempre acababa reclamándolo.
 
-Cincuenta y dos horas en un año parece poco. ¿Era poco, o era lo normal? Para saberlo hay que mirar otro faro, levantado casi cuarenta años antes sobre otra roca bretona, donde los obreros a veces trabajaban tumbados para que el mar no se los llevara.
+Cincuenta y dos horas parece poco. ¿Lo era? Para saberlo hay que mirar otras rocas, en Escocia y en la propia Bretaña.
 
-## 8. EL PRECEDENTE DE AR-MEN
+## 7. OTRAS ROCAS, LAS MISMAS HORAS
 
-Se llama Ar-Men, y su apodo es famoso: el infierno de los infiernos. Es el apodo de Ar-Men y no el de La Jument, y conviene dejarlo claro porque a veces se le pega al faro equivocado. La roca mide ciento cinco metros cuadrados, como un departamento grande, y asoma poco más de cuatro metros sobre la marea baja.
+Para saber si cincuenta y dos horas eran poco, hace falta una vara de medir. Te aviso desde ya de que nada de lo que sigue es La Jument. Son otras torres, y las traigo para contestar una sola pregunta: si lo de aquí era una excepción o lo normal en una roca así.
 
-Antes de poner una sola piedra hubo que averiguar si se podía. En mil ochocientos cincuenta y nueve la corbeta Sané naufragó en esa zona y empezó la búsqueda de un sitio para una luz. En mil ochocientos sesenta y uno fracasaron tres salidas. En mil ochocientos sesenta y cinco, un hombre llamado Paul Joly concluyó que la roca casi siempre estaba cubierta por el mar y que no cabía mampostería. Al año siguiente volvió con unos croquis que, por fin, permitieron planificar.
+Empecemos por Escocia, por una roca llamada Bell Rock. Allí levantó su torre el ingeniero Robert Stevenson entre mil ochocientos siete y mil ochocientos diez, y la roca quedaba cubierta por el mar unas veinte horas al día. Según la Wikipedia en inglés, en la segunda temporada de obra solo hubo ochenta horas de trabajo sobre ella. Ochenta horas en una temporada están en la misma escala que cincuenta y dos en un año.
 
-Y ahora las horas. En mil ochocientos sesenta y siete lograron desembarcar nueve veces y sumaron ocho horas efectivas de trabajo. En mil ochocientos sesenta y nueve, con los primeros sillares colocados en mayo y el mortero amasado con agua de mar, toda la temporada dio unas cuarenta y dos horas. Las cincuenta y dos de La Jument ya no suenan tan raras, porque son del mismo orden.
+Ahora, una roca de Bretaña que tampoco es La Jument, Ar-Men. Los fareros la apodaron el infierno de los infiernos, y sirve para contestar la otra mitad de la pregunta: cuánto tiempo podía llevar una torre así. La obra duró catorce años, hasta que la luz se probó en mil ochocientos ochenta y uno. Según la Wikipedia francesa, en la temporada de mil ochocientos sesenta y siete hubo ocho horas de trabajo efectivo sobre la roca, y en la de mil ochocientos sesenta y nueve el promedio fue de un metro cúbico de mampostería por desembarco. En La Jument, las cuentas de mil novecientos cinco dan algo menos de dos metros cúbicos por salida, el mismo orden de magnitud.
 
-Los obreros eran de la isla de Sein. Desembarcaban de dos en dos, con alpargatas y chalecos de corcho, y a veces trabajaban tumbados en la roca para que una ola no se los llevara. El quince de junio de mil ochocientos setenta y ocho volcó un bote con catorce obreros, y los rescataron a todos. En mil ochocientos ochenta y uno el mar barrió a dos de ellos y uno se ahogó. Según la fuente, llevaba el chaleco mal abrochado, y lo cuento tal como lo anota, sin reproche alguno hacia él.
+También allí hubo un precio humano. En mil ochocientos ochenta y uno, dos obreros fueron arrastrados desde un barco y uno de ellos murió ahogado; la fuente añade que su salvavidas no estaba bien abrochado.
 
-La luz de prueba se encendió el dieciocho de febrero de mil ochocientos ochenta y uno, y el servicio oficial empezó el treinta de agosto. La torre medía treinta y siete metros. Entre los primeros desembarcos de mil ochocientos sesenta y siete y esa luz habían pasado catorce años.
+Hay un detalle de Ar-Men que me interesa para lo que viene. Dieciséis años después de encenderse su luz, empezaron a reforzarle la base con una capa de cemento de unos cincuenta centímetros, y las obras duraron de mil ochocientos noventa y siete a mil novecientos dos. Una torre con la luz encendida no siempre es una torre terminada.
 
-Otros dos faros de la misma época cuentan algo parecido. Le Four se levantó de mil ochocientos sesenta y nueve a mil ochocientos setenta y cuatro. En esa obra se hundió el barco de suministro y murieron tres hombres: Hervé Jézéquel, François Leborgne y el capataz Le Brelivet. La Vieille tardó de mil ochocientos ochenta y dos a mil ochocientos ochenta y siete.
+Una más, en Inglaterra, solo para completar el cuadro. En Eddystone, Henry Winstanley encendió su torre de madera en mil seiscientos noventa y ocho y murió con ella en la gran tormenta de mil setecientos tres. John Smeaton la rehízo en mil setecientos cincuenta y nueve con piedra trabada. Con las rocas del mar, acertar a la primera nunca fue lo habitual.
 
-Queda un último detalle de Ar-Men, y es pequeño. Entre mil ochocientos noventa y siete y mil novecientos dos le añadieron a la base una capa de cemento de cincuenta centímetros, porque los cálculos habían mostrado que la torre pesaba poco. Parece un detalle para ingenieros, y por ahora puedes dejarlo ahí.
+Ya tienes la vara de medir. Hay ochenta horas en una temporada, ocho en otra, cincuenta y dos en el primer año de La Jument y doscientas seis en la de mil novecientos cinco. No, cincuenta y dos horas no eran anormales. Eran lo que daban esas rocas.
 
-Volvamos a la pregunta. ¿Eran normales las cincuenta y dos horas del primer año? Lo eran. Lo anormal no era el mar, era el calendario: a Ar-Men le dieron catorce años, y a La Jument la cláusula del legado le daba seis o siete para una torre diez metros más alta.
+Lo que sí me parece raro, y esto es lectura mía, es el calendario. A Ar-Men le llevó catorce años. A La Jument, entre los primeros cimientos y la luz, le tocaron unos siete, con un testamento mirando por encima del hombro. Que ese plazo fuera la razón de la prisa es una hipótesis mía, y no un dato que nadie haya demostrado.
 
-El calendario apretaba más que el mar. La luz se encendió el quince de octubre de mil novecientos once. Faltaba el primer invierno.
+El calendario ganó la partida. La luz se encendió en octubre de mil novecientos once. Falta saber qué pasó con el reloj del testamento y con el primer invierno.
 
-## 9. LA LUZ ROJA
+## 8. LA LUZ ROJA
 
-La torre propiamente dicha empezó a subir hacia mil novecientos ocho, y desde entonces la obra cambió de ritmo. Según los archivos que se citan, ante el plazo la administración aceleró y fletó más material. De mil novecientos siete a mil novecientos once se gastaron en la obra gruesa alrededor de noventa mil francos cada año.
+El quince de octubre de mil novecientos once, La Jument se enciende por primera vez. Es una luz roja, con tres destellos seguidos, que sale de una óptica pequeña, de setenta centímetros de distancia focal, y que quema vapor de petróleo. Por fin hay una torre con una luz sobre el mar que acabas de conocer, y no una roca con obreros.
 
-Lo que salió de ahí era una torre octogonal de sillería de granito del aber Ildut, con las esquinas reforzadas con una piedra llamada kersantón. Medía unos cuarenta y siete metros y ocho y medio de ancho en la base, o sea, más de cinco veces más alta que ancha. El séptimo piso salía hacia fuera, en voladizo. Por dentro tenía parquet de punto de Hungría, paneles de roble y un retrato en bronce del donante, obra del escultor Louis Holweck.
+Detrás quedan siete años de obra. Según la Wikipedia francesa, de mil novecientos siete a mil novecientos once el gasto fue casi siempre el mismo, unos noventa mil francos al año. En mayo de mil novecientos nueve, el diario oficial había publicado el concurso para fabricar la linterna, la caja de cristal de cuatro metros de diámetro que corona la torre.
 
-Charles-Eugène Potron había muerto antes de que empezara la obra y nunca vio la torre. Su retrato sí llegó a estar dentro.
+Charles-Eugène Potron llevaba más de siete años muerto y nunca vio su faro. Su testamento, según esa misma Wikipedia, pedía que en la torre se grabara que se había construido gracias a un legado suyo, el de un viajero miembro de la Sociedad de Geografía de París. La fuente no confirma que la inscripción se grabara, y yo no he podido comprobarlo.
 
-El quince de octubre de mil novecientos once, la torre dio su primera luz: tres destellos rojos agrupados sobre el mar de Ouessant. Los interiores todavía no estaban terminados, y se acabaron tres años después. Ese mismo año la isla alcanzó su máximo de población, dos mil ochocientos cincuenta y tres habitantes, y hoy viven allí unos ochocientos sesenta.
+Ahora sí, el reloj del testamento. ¿Llegó a tiempo el faro? La ficha de patrimonio dice que sí: una organización rigurosa, un equipo entregado y los medios adecuados permitieron cumplir el famoso plazo, y la luz se encendió ese día. Pero hay una cuenta que no sale tan limpia.
 
-Y queda por cerrar la cuenta del plazo. ¿Llegó el faro a tiempo para cobrar el legado? Según la ficha oficial, la luz se encendió dentro del plazo. Otra ficha habla de siete meses de retraso y de una base más pequeña de lo previsto.
+Si los siete años contaban desde la muerte de Potron, el veintisiete de marzo de mil novecientos cuatro, el plazo vencía en marzo de mil novecientos once, meses antes de encender la luz. Lo razonable es pensar que el reloj corría desde que el Estado aceptó el legado, pero eso es una suposición mía, y no consta en nada de lo que he leído. De modo que la respuesta honesta es esta. Según la ficha, el plazo se cumplió, el legado quedó a salvo, y no se sabe desde cuándo contaba el reloj del testamento.
 
-Mira los números. Entre la muerte de Potron, en marzo de mil novecientos cuatro, y esa luz pasan siete años y medio, y la cláusula daba como mucho siete. Eso solo cuadra si el plazo se contaba desde otra fecha, quizá desde que se aceptó el legado, pero eso es una suposición mía y no se ha podido comprobar. Lo honrado es dejarlo así: el Estado dice que sí, otra ficha dice que no tanto, y en lo que se ha podido consultar no consta el día en que empezó a correr el plazo.
+Si pararas aquí, tendrías el final que cuentan muchas versiones. Tendrías una luz roja encendida, un plazo cumplido, el dinero de Potron convertido en un faro y la Sociedad Central de Salvamento de Náufragos sin cobrar su alternativa. Es un final redondo.
 
-Aquí es donde muchas versiones ponen el punto final. La luz encendida, el legado a salvo y el bronce del donante dentro de la torre. Es una historia redonda, con un naufragio, un testamento y una carrera contra el calendario que termina bien.
+Acuérdate de lo que quedó por el camino: el seis por ciento de mil novecientos cinco, la base más pequeña de lo previsto, los siete meses de retraso sobre el programa y un interior que, según la Wikipedia francesa, no se terminó hasta tres años después de encenderse la luz.
 
-Pero tienes sobre la mesa otras piezas. Una obra que en su mejor temporada conocida colocó alrededor del seis por ciento de lo previsto. Una administración que aceleró y fletó más material para llegar a tiempo. Una base más pequeña de lo previsto, según una ficha, y unos interiores a medio hacer.
+Cada una de esas cosas, por separado, parece un detalle de obra. Juntas son otra cosa. Y quien termina la historia en la inauguración no está mintiendo; simplemente se baja del tren una estación antes.
 
-Aquí terminan muchas versiones. Pero una luz no se mide en inauguraciones, se mide en noches. Y la primera noche de verdad llegó dos meses después.
+Aquí terminan muchas versiones. Pero una luz no se mide en inauguraciones, se mide en noches, y el primer invierno de esa torre estaba a punto de empezar.
 
-## 10. LA TORRE QUE TEMBLÓ
+## 9. LA TORRE QUE TEMBLÓ
 
-En diciembre de mil novecientos once, la torre se enfrentó a su primera tormenta. Lo que cuenta la ficha oficial del patrimonio de Bretaña es corto y no deja mucho margen. La torre vibró, el mercurio de la cuba se desbordó y se agrietaron cristales de la linterna.
+El primer invierno de La Jument no fue tranquilo. La ficha de patrimonio solo dice que los defectos de rigidez aparecieron rápidamente. La Wikipedia francesa afina más, y los sitúa en un temporal de diciembre de mil novecientos once: la torre se puso a vibrar.
 
-La misma ficha explica de dónde venía el problema. Habla de «defectos debidos sin duda a la voluntad de respetar los plazos», y los sitúa sobre todo en el zócalo, que es la base sobre la que se asienta la torre. Según la ficha, se había subestimado tanto su tamaño como la forma en que se unía al resto del edificio.
+El mercurio sobre el que descansaba la óptica, ese baño de metal líquido que permite a las lentes girar sin esfuerzo, se desbordó de su cuba. Y los cristales de la linterna se agrietaron. Las fuentes hablan de vibraciones anormales y de falta de rigidez.
 
-Las piezas que te fui dejando encajan con esa explicación: el seis por ciento de mil novecientos cinco, el plazo que apretaba, la base más pequeña de lo previsto. Y si recuerdas lo que hicieron en Ar-Men, la base es justo donde un faro de mar bravo se refuerza. Entonces la versión que dice que La Jument se hizo rápido y bien se cae con su propia ficha, que atribuye los defectos a las prisas por cumplir un plazo.
+La ficha de patrimonio da la causa, y no es el mar. Es la prisa. Según ella, la ejecución había sido demasiado rápida, y eso había llevado a los ingenieros a reducir las dimensiones de la base. La decisión de mil novecientos cuatro hablaba de al menos siete metros de diámetro en la base. Cuánto se redujo después, la ficha no lo dice.
 
-Pero no hace falta fiarse solo de esa ficha. Hay otra, la de un faro distinto, que cuenta lo mismo por su cuenta. Se llama Nividic, y se decidió construirlo el cinco de enero de mil novecientos diez, con un presupuesto de ciento sesenta mil francos, menos de una quinta parte de lo calculado para La Jument.
+Y la misma ficha resume el precio con una frase que se entiende sin ayuda: la luz se encendió, pero a costa de la solidez de la obra. Así que ya puedes contestar la pregunta que te dejé. ¿Se hizo a tiempo y sin problemas? A tiempo, según la ficha, se hizo. Sin problemas, no.
 
-Para hacerlo se reutilizó el equipo de La Jument, con Heurté otra vez en la obra. Y según la ficha de Nividic, un defecto de construcción de La Jument obligó a detener los trabajos para consolidar.
+Y entonces empieza lo largo. Los fondos para consolidar la torre no se liberaron hasta mil novecientos catorce. Según la ficha, el trabajo no dejó de crecer y se prolongó hasta mil novecientos veinticuatro, porque seguían preguntándose si el fuste, el cuerpo de la torre, no estaría empezando a cizallarse. Es lo que le pasa a una pieza cuando dos fuerzas opuestas la cortan como unas tijeras.
 
-Esa misma ficha cuenta algo más, y merece una pausa. Nividic era una torre de treinta y cinco metros y medio diseñada, según la ficha francesa, para no tener fareros, con control desde Créac'h. Un faro sin fareros en mil novecientos diez. ¿Qué hacía alguien pensando entonces en un faro sin fareros? Esa pregunta se queda abierta, y se cierra mucho más adelante.
+En plena guerra submarina, la luz de La Jument estuvo apagada del veintiocho de diciembre de mil novecientos diecisiete al seis de noviembre de mil novecientos dieciocho, unos diez meses, según la Wikipedia francesa. Los ingenieros aprovecharon la guerra y ese apagón para intentar corregir los defectos de origen, dice la ficha. Forraron las piedras agrietadas con una camisa de hormigón armado y ensancharon la base.
 
-Volvamos a La Jument. Los créditos para consolidarla no se desbloquearon hasta mil novecientos catorce, tres años después de la primera tormenta. Ese año, en Kéréon, había doce albañiles, y con la movilización de la guerra quedaron siete.
+Todavía no bastó. En mil novecientos treinta y cuatro se tomó otra decisión: sujetar la torre a la roca con tres cables interiores, de unos treinta metros de largo, anclados en la roca, según el método que ideó el ingeniero Coyne. Haz la cuenta. De mil novecientos once a mil novecientos treinta y cuatro pasaron veintitrés años de remiendos.
 
-Del veintiocho de diciembre de mil novecientos diecisiete al seis de noviembre de mil novecientos dieciocho, la luz de La Jument estuvo apagada por la guerra submarina. Se aprovechó ese parón para colocar una coraza de hormigón armado en la base. Era otro remiendo, y no sería el último.
+Hay un detalle que muestra hasta dónde llegó el problema, y está en otro faro. En mil novecientos doce empezaron a levantar Nividic, también en las aguas de Ouessant, con el mismo equipo de obra de La Jument y con una lancha llamada Eugène Potron, el nombre del donante de La Jument. Según la Wikipedia francesa, un defecto de construcción de La Jument obligó a ese equipo a ir más despacio con Nividic. La obra no terminó hasta mil novecientos treinta y seis.
 
-En mil novecientos treinta y cuatro, el ingeniero Coyne reforzó la torre por dentro con tres cables metálicos de unos treinta metros, anclados en la roca. Los refuerzos se fueron escalonando hasta mediados de los años treinta, aunque una fuente los sitúa en mil novecientos veinticuatro y otra en mil novecientos cuarenta. Si cuentas desde la primera tormenta hasta los cables, son veintitrés años de remiendos.
+Esa misma fuente dice que Nividic sería el primer faro sin fareros. Y en septiembre de mil novecientos cincuenta y ocho se probó en lo alto de su torre una plataforma de madera de cinco metros de lado, pensada para que aterrizara un helicóptero. Deja ese dato en un rincón de la memoria, porque parece un adorno y no lo es.
 
-La obra y el refuerzo de la base dieron incluso para novelas. Henri Queffélec publicó Le Phare en mil novecientos setenta y cinco y, un año después, La Lumière enchaînée, que significa la luz encadenada.
+Queda otra pregunta en el aire. Más de un siglo después, un organismo público francés dirá algo sobre los cálculos con los que se diseñó esta torre, y esa frase cambia la forma de leer todo lo anterior. Te lo cuento más adelante.
 
-Con todo esto delante, vuelve a la frase con que empezó este video. La ficha oficial dice que la torre, encendida en mil novecientos once, sigue siendo hoy «una de las más vigiladas». Ahora sabes qué hay detrás: una torre hecha con prisa que vibró en su primera tormenta y tardó veintitrés años en quedar asegurada.
+Mientras tanto, esta es mi lectura, marcada como tal. La torre que hoy sale en las fotos no es exactamente la que se encendió en mil novecientos once. Es una torre cosida: con la base ensanchada, con una camisa de hormigón por fuera y con cables por dentro que la sujetan a la roca.
 
-Con los cables, la torre estaba por fin cosida a la roca. Pero los cables no cuentan lo que pasa en una noche mala, y hay una noche de septiembre de mil novecientos setenta y cuatro que no cuadra con una torre a salvo.
+La torre por fin quedó atada a la roca. Pero queda la otra mitad de la historia: los hombres que vivían dentro, y cómo se vive en un lugar al que nadie puede subir ni bajar.

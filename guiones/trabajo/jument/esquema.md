@@ -1,392 +1,362 @@
-# Esquema final: el faro de La Jument y la foto de 1989
+# Esquema final: el faro de La Jument y la foto de la puerta
 
 Canal: Todos Lo Vieron. Juez jefe de guion. Fecha: 2026-10-10.
-Base: dossier.md, GUIA-GUION.md y dawson-guion-01.md (tono de referencia). Tres propuestas puntuadas y una síntesis. En este esquema las cifras van en dígitos solo para contar; en el guion leído todo número, año, fecha y medida va en letra.
+Base: dossier.md, GUIA-GUION.md y dawson-guion-01.md (tono de referencia, secciones 1, 4 y 12). Tres propuestas puntuadas y una síntesis. En este esquema las cifras van en dígitos solo para contar; en el guion leído todo número, año, fecha y medida va en letra.
 
-## 0. Respuesta a tu pregunta (duración y compactar)
+Etiquetas: [H] hecho documentado, [T] testimonio atribuido, [L] leyenda o versión que se repite, [NS] no se sabe, [Lectura] opinión del narrador marcada como tal. Entre paréntesis, la confianza del dossier cuando importa.
 
-Sí, se puede compactar, pero solo si el material no aguanta. Lo he comprobado contra el dossier y aguanta 45 minutos, justo y sin sobrar, así que el esquema mide 8.235 palabras: 45 minutos exactos a 183 palabras por minuto, con la suma de las 17 secciones verificada.
+## 0. Aviso de duración (léelo primero)
 
-Lo que sostiene esa cifra no es relleno: son 24 bloques sólidos del dossier (unos 44 a 46 minutos después del descuento por fuentes de confianza media) y un colchón de 6 a 8 minutos de bloques finos que se pueden sacrificar. Para 60 minutos no hay material y no hay que intentarlo.
+Este esquema mide 42 minutos (7.686 palabras a 183 palabras por minuto), no 45. Se acorta con aviso, como manda la regla 1, por este motivo concreto tomado del dossier (sección 8):
 
-Tres avisos honestos.
+1. Hay 27 unidades de material verificado, pero solo 16 son sobre La Jument y 5 de ellas son de fuente única o confianza media. Las otras 11 son faros vecinos.
+2. El momento que da título al video, el día de la foto, sostiene entre 3 y 4,5 minutos verificados. Descansa en una entrevista de 2001 (Lighthouse Digest), en Wikipedia y en un Stern de 2007 que nadie ha podido leer.
+3. Llegar a 45 exigiría usar a pleno rendimiento los 11 paralelos, y cerca del 45 % del video dejaría de tratar de La Jument. Eso es estirar.
 
-1. El bloque de la foto es fino. Las secciones 13 a 15 (unos 11 minutos) descansan en la Wikipedia inglesa y en una cita indirecta del Stern, sin la voz de Guichard ni la de Malgorn. Se ha limitado su peso y no se estira. Si se sube el límite de búsqueda y se consiguen el relato de Guichard, el Stern de 2007 o la verificación de Snopes, ese bloque gana material real; si no, sigue como está.
-2. Los faros hermanos suman unos 11 minutos (24 por ciento). Cada uno responde una pregunta sobre La Jument; el que no la responda se corta (orden en la sección 6).
-3. Plan B de 40 minutos (unas 7.300 palabras, recorte de unas 900): orden de recorte en la sección 6. Por debajo de 38 minutos habría que renunciar a los faros hermanos y se perdería la comparación más fuerte.
+Lo que sí se hizo para no quedarse corto: se buscó material real en las cuatro investigaciones y se aprovechó todo lo sólido. El material de otros faros ocupa unas 1.260 palabras (16 %: bloque de la 7, de la 10, Nividic en la 9 y Kéréon en la 11) y cada trozo está atado a una pregunta sobre La Jument.
+
+Camino a 45 o 50 minutos (solo con una segunda pasada que consiga las fuentes de oro): el Stern de 2007, la web archivada «The story of the La Jument photos», el artículo de 1911 de Ribière y Le Génie civil en Gallica, Guichard y Gast (1999) y Le Télégramme. Ganarían peso la 6 (obreros y método reales), la 11 (Kéréon contado de primera mano) y sobre todo la 13 y la 14. Techo realista: 48 a 50 minutos. Con lo que hay hoy no se debe estirar.
+
+Descartado como bloque propio por falta de datos o por desviar: Tillamook, Flannan, Amoco Cadiz y Olympic Bravery, cultura (Queffélec, Lioret), museo del Créac'h, Kéréon de lujo, la aparición en Los infiltrados, la cifra del millón de pósteres, la acusación de montaje como tramo y la cronología viral.
 
 ## 1. Tabla de puntuaciones (1 a 10)
 
 | Criterio | P1 Investigación en tiempo real | P2 Mito frente a realidad | P3 Cronología con cortes |
 |---|---|---|---|
 | Gancho inicial (intriga sin revelar) | 8 | 7 | 7 |
-| Bucles y zonas de retención | 9 | 8 | 7 |
-| Giro central (falso final, revelación mayor) | 8 | 9 | 8 |
-| Interés de principio a fin sin relleno | 8 | 7 | 7 |
-| Fidelidad a los hechos del dossier | 9 | 8 | 7 |
-| Final (cierre de bucles, idea que se queda) | 9 | 8 | 7 |
-| Total sobre 60 | 51 | 47 | 43 |
+| Bucles y zonas de retención | 9 | 7 | 7 |
+| Giro central (falso final, revelación) | 8 | 7 | 7 |
+| Interés de principio a fin sin relleno | 8 | 6 | 7 |
+| Fidelidad a los hechos del dossier | 8 | 7 | 6 |
+| Final (bucles cerrados, idea que se queda) | 9 | 8 | 7 |
+| Total sobre 60 | 50 | 42 | 41 |
 
-Razones breves.
+Por qué gana P1.
 
-- P1 gana. Su motor (cada sección responde algo y abre una pregunta mayor) da una razón para seguir en los once primeros minutos, que son los más lentos (mar, isla, naufragio). Es la que mejor justifica cada faro hermano con una pregunta sobre La Jument, la más cuidadosa con las atribuciones (no afirma nada sobre el estado de la puerta, no usa «caso», no dice «por los pelos») y la que tiene el mejor final (la cruz de cera de la sección 3 vuelve en el cierre). Defectos: el gancho mide 300 palabras (tope de la guía, 270) y entrega la vibración de 1911, que es el giro de mitad, antes de tiempo; las secciones 8 y 9 están sobrecargadas (nueve y diez temas); la revelación mayor empieza en el 76 por ciento, antes del 80; el mini giro de 1974 descansa en una sola fuente; el cierre dice «durante siglos» para la cruz de cera, y lo documentado es 1734 a 1792; y «tres capas de miedo» es una frase que ninguna fuente respalda.
-- P2 tiene la mejor colocación del giro (falso final en la 9 al 47 por ciento, giro en la 10, revelación del 81 al 90 por ciento) y la idea de cierre más humana (los anónimos que no salen en la foto). Defectos: la sección 3 enumera cinco mitos de golpe, lo que adelanta y desinfla los desmentidos y vuelve predecible el formato «mito y dato que lo mueve» durante 14 secciones; la 12 mete cuatro faros en 770 palabras; la 13 mezcla 1974 con diciembre de 1989; cuenta el rumor de la bebida de Gruyer (confianza baja); y supone un texto fijo de 110 palabras cuando el cierre del video 1 mide 135.
-- P3 tiene el mejor uso de pistas de juego limpio (el corte al presente que planta «incluido el zócalo», los 55 años de los cables) y buenas voces añadidas (Abraham, Queffélec, Stern). Defectos: la sección 3 es un bloque de datos sin tensión; la 7 y la 10 son listas de 800 palabras; mete a Kéréon como decoración dentro del falso final; el gancho tiene cuatro preguntas y presenta la puerta como un desafío («nadie abre una puerta al mar»), que es justo la lectura sin base que luego se desmiente; la sección 11 afirma que las olas «arrancan una puerta», lo que choca con la foto; y el final termina en una pregunta al oyente que suena a moraleja.
+- Su motor (cada sección contesta una pregunta pequeña y abre otra mayor) da una razón para seguir justo en los primeros trece minutos, que son los más flojos por naturaleza (mar, isla, naufragio, obra). Tiene la mejor red de bucles y anclas («la puerta», «cincuenta y dos horas», «el reloj del testamento», «nadie viene a relevarte»), solo dos pistas falsas bien corregidas con pistas verdaderas previas, y la revelación cae en el tramo que pide la guía.
+- Es la que mejor justifica cada faro vecino atándolo a una pregunta sobre La Jument, y la más cuidadosa con las atribuciones.
 
-## 2. Qué se injerta en la propuesta ganadora
+Defectos de P1 que se corrigen aquí.
 
-De P1 (base): el método de investigación («los archivos dicen», «esto no cuadra», «hasta aquí lo que se sabe y aquí lo que no», con moderación); el orden de las secciones 3 a 8; cada faro hermano atado a una pregunta; el falso final y la torre que tembló; la sección de la noche en la cocina; La Vieille y Tévennec antes de la foto con la regla «cada leyenda tiene una falla debajo»; la cruz de cera de la sección 3 que vuelve en el cierre; no afirmar nada de la puerta salvo lo visible.
+- El gancho llega a 300 palabras (tope de la guía, 270) y dice «torre de granito», «siete imágenes del mismo encuadre» y «el hombre sale en una sola». Nada de eso consta en el dossier. También afirma que la fecha «no tiene ninguna fuente detrás», cuando el dossier solo dice que no se ha visto ninguna fuente primaria.
+- El bucle de Tévennec se abría al final de la 10 y se cerraba al arrancar la 11: no llegaba a los 90 segundos. Se reubica entero en la 10.
+- La revelación caía hacia el 79 %, no en el 82-85 % que se declaraba. Se reordena la 13 para que caiga hacia el 81 %.
+- Las pistas previas de la revelación (vibración, olas, medida) preparaban «la ola», no «esperaban un rescate». Se añaden pistas que sí preparan eso (relevos que dependen del mar, helicóptero de Nividic, La Vieille con la bandera negra).
+- El cierre pesaba poco y pedía mucho; la idea de P2 lo mejora.
 
-De P2: falso final y giro en dos secciones separadas (9 y 10); la revelación colocada entre el 80 y el 90 por ciento; el bucle del faro sin fareros (se abre en la 10 con Nividic y se cierra en la 16); la idea humana de cierre (obreros de las 52 horas, isleños de la lona de velas, ingenieros de los 23 años, fareros que se fueron en 1991); Gorgone como ejemplo de «los isleños no se enteraron»; «era razonable creerlo» para los naufragadores; Rose Héré en dos frases.
+Por qué pierden P2 y P3.
 
-De P3: el bucle del plazo del legado (se abre en la 6, se cierra honestamente en la 9); el corte al presente («una de las más vigiladas», «incluido el zócalo»), que aquí se usa también en el gancho; las voces añadidas (Abraham, Queffélec, Stern); la nota «1934 más 55 años es 1989»; Créac'h y Stiff como «ya había luces y aun así se perdían barcos».
+- P2: la sección 3 enumera seis mitos de golpe (es una lista, rompe el máximo de dos pistas falsas y repite el mito más de lo necesario). Su bloque sobre la isla y el Drummond Castle es contexto en bloque (650 palabras seguidas). Mete Flannan, que no responde ninguna pregunta sobre La Jument. Afirma «dos meses después de encendida» como hecho (la fecha es MEDIA). Pero tiene el mejor final de las tres.
+- P3: el gancho promete «una historia más difícil de creer que la foto» (promesa de relleno, sin base) y el cierre habla de «millones de personas» sin dato. La sección 12 concentra 850 palabras. Mete la torre Temperley (irrelevante) y una conexión confusa entre Kéréon y la fecha. Aporta buenas ideas de corte y aritmética.
 
-Cambios propios.
+## 2. Qué se injerta de las otras dos
 
-- Gancho nuevo en su tercera pregunta: en vez de «tembló la primera vez que el mar la tocó» (que gasta el giro de la mitad) se usa un dato real y raro: la ficha oficial del patrimonio de Bretaña dice que la torre sigue siendo hoy «una de las más vigiladas». La pregunta es qué tiene una torre de granito de más de un siglo para que la vigilen así, y se cierra en la 10. Se queda en 275 palabras y termina en la pregunta de la puerta.
-- La sección 9 de P1 se parte en dos (la luz roja y la torre que tembló) y la 8 y la 11 se aligeran.
-- El mini giro de 1974 pasa al arranque de la sección 11 como «el susto» y deja de ser giro de mitad.
-- Se retira «tres capas de miedo» y «durante siglos». El cierre usa solo lo documentado de la proella (1734 a 1792) y marca como lectura del narrador la idea de que ese segundo descansa en la prisa y en la tozudez de quienes levantaron la torre.
-- La sección 16 (cierre) lleva unas 100 palabras propias y 135 del texto fijo, que es lo que mide de verdad el cierre del video 1. El de P1 dejaba 55 propias, muy pocas para una idea que se quede.
+De P2.
 
-## 3. Pregunta dramática, giros y curva de retención
+1. Dato previo del gancho: el segundo premio de World Press Photo (categoría Naturaleza, concurso de 1991). Es dato real que da confianza antes del hueco y planta la pista que paga la 14 (la ficha del premio trae otra fecha).
+2. El eco del cierre: Potron escribió que prevenir naufragios era «mejor aún» que socorrer, y un siglo después un hombre abre la puerta de esa torre esperando que lo socorran. Se siembra en la 5 y se cobra en la 16 como observación del narrador, no como moraleja.
+3. Títulos «CUANDO EL MAR ENTRA» (11) y «LA FUERZA QUE NADIE CALCULÓ» (12).
+4. La cautela explícita de que no consta si Potron sabía de la decisión ministerial de 1904.
+5. Tono de «era razonable creerlo» en cada corrección.
 
-Pregunta dramática: ¿qué ocurrió de verdad el 21 de diciembre de 1989 en La Jument, por qué estaba abierta la puerta y qué clase de torre, levantada con prisa para no perder un legado, aguantó ese segundo? Frase ancla: «la puerta».
+De P3.
 
-Falso final: sección 9 (minuto 21:05, 47 por ciento). La luz roja se enciende, el donante tiene su retrato en bronce y el plazo queda a salvo. Se presenta como lo que muchas versiones cuentan y se rompe con pistas ya plantadas (el 6 por ciento de 1905, la base más pequeña, los interiores sin terminar).
+1. La aritmética de los cables: en 1934 se ataron con tres cables; cuando se abrió la puerta de la foto llevaban más de medio siglo en su sitio (se usa «más de medio siglo» para no depender de la fecha discutida).
+2. El helicóptero de Nividic (1958) como semilla en la 9, y la idea de «cortes» con vuelta explícita a la puerta al final de la 12 («volvamos a la puerta»).
+3. La frase de anomalía «nadie abre una puerta hacia un mar así» en el gancho.
+4. La aclaración de que Nividic nació con la brigada de La Jument y la lancha Eugène Potron (se mantiene).
 
-Giro central: sección 10 (minutos 21:05 a 24:48, 47 a 55 por ciento). La torre vibra en su primera tormenta, dos meses después de encenderse, y pasa 23 años reparándose. Cierra el bucle del gancho «una de las más vigiladas».
+## 3. Esquema por secciones
 
-Revelación mayor: secciones 14 y 15 (minutos 34:41 a 41:15, 77 a 92 por ciento), con el núcleo («bajó al oír el helicóptero, la ola se alzó, volvió a entrar a tiempo») hacia el 80 por ciento (minuto 36:00) y la lectura propia hacia el 85 por ciento. La lectura (la foto como el momento en que aguanta la torre remendada) se dice como lectura del narrador, nunca como hecho de una fuente.
+Marcas de tiempo a 183 palabras por minuto, acumuladas.
 
-Cuenta de pistas falsas: dos, nombradas como lo que la gente cree, cada una con pista verdadera previa. 1) «La Jument nace de un naufragio y un testamento» (se abre en la 3, la pista verdadera aparece al final de la 5, se corrige en la 6). 2) «Se hizo rápido y bien» (el falso final de la 9, con tres pistas previas en las secciones 7, 8 y 9).
+### 1. LA PUERTA (270 palabras, 0:00 a 1:28)
 
-Preparación de la revelación con dos pistas previas: la torre remendada (sección 10) y la ola sobre la linterna en 1974 más el golpe en Kéréon cinco días antes (secciones 11 y 13).
+Objetivo: gancho. Escena concreta y extraña, tres preguntas, promesa. No informa ni revela. Anclas: «la puerta», «el reloj del testamento» no (todavía), «cincuenta y dos horas» (como número que parece un error de imprenta).
 
-Función de cada tormenta (para que no se parezcan): 1911 el fallo; 1923 el aislamiento; 1925 la ley; 1974 el susto; 1989 la foto; 2014 el mercurio.
+- [H] Invierno de 1989 a 1990, sin día. Un helicóptero que, según se cuenta, se alquiló en Lorient da vueltas en pleno temporal frente a una torre de piedra de unos 47 metros (47,40 en la ficha oficial) que sale del mar sobre una roca a unos 2 km de Ouessant, en Bretaña. Decir «piedra», no «granito» ni «hormigón».
+- [T] Dentro va Jean Guichard, un fotógrafo que iba a fotografiar olas.
+- [H] Solo lo visible de la imagen: una puerta al pie de la torre abierta, un hombre en el umbral, una ola enorme que rompe alrededor. Sin altura de la ola. Sin «mismo encuadre» ni «sale en una sola» (no constan).
+- Anomalía: nadie abre una puerta hacia un mar así.
+- Dos o tres datos reales antes del hueco: la torre se encendió por primera vez en 1911; son una serie de siete fotos (MEDIA, decir «según las fichas»); la imagen ganó el segundo premio de World Press Photo, categoría Naturaleza, en el concurso de 1991 (ALTA).
+- Tres preguntas, en este orden: por qué abre alguien una puerta al mar en plena tormenta; qué le pasó a ese hombre en el segundo siguiente, el que la foto no enseña; de dónde sale la fecha que casi todos repiten (sin decir cuál es y sin decir que «no tiene fuente»).
+- Promesa específica que se paga después: la respuesta empieza más de ochenta años antes, con el testamento de un hombre que ya estaba muerto y un número de horas que parece un error de imprenta.
+- NO se dice: que el farero creyó que era un helicóptero de rescate, que cerró la puerta, que sobrevivió, el nombre de Malgorn, la cita de 2007, el Drummond Castle, la vibración de 1911, la altura de la ola, la palabra «mito», «21 de diciembre», «1 de febrero», la acusación de montaje. Sin saludo ni «en este video». Sin «caso».
+- Lista de la guía: momento concreto, anomalía, datos previos, tres preguntas, promesa, sin desenlace; corta antes de la información útil.
 
-| Sección | Fin (palabras) | Fin (min) | % |
-|---|---|---|---|
-| 1 Gancho | 275 | 1:30 | 3 |
-| 2 Intro canal | 360 | 1:58 | 4 |
-| 3 | 800 | 4:22 | 10 |
-| 4 | 1.320 | 7:12 | 16 |
-| 5 | 1.770 | 9:40 | 21 |
-| 6 | 2.270 | 12:24 | 28 |
-| 7 | 2.810 | 15:21 | 34 |
-| 8 | 3.390 | 18:31 | 41 |
-| 9 (falso final) | 3.860 | 21:05 | 47 |
-| 10 (giro) | 4.540 | 24:48 | 55 |
-| 11 | 5.060 | 27:39 | 61 |
-| 12 | 5.760 | 31:28 | 70 |
-| 13 | 6.350 | 34:41 | 77 |
-| 14 (revelación) | 7.050 | 38:31 | 86 |
-| 15 | 7.550 | 41:15 | 92 |
-| 16 | 8.000 | 43:42 | 97 |
-| 17 Cierre | 8.235 | 45:00 | 100 |
+Salida: termina en la pregunta de la puerta, sin respuesta, para que la intro funcione como respiro que aumenta la espera.
 
-Re-ganchos estructurales cada cinco o seis minutos: 4 (7:12), 6 (12:24), 8 (18:31), 9 (21:05), 10 (24:48), 12 (31:28), 14 (38:31).
+### 2. INTRO DEL CANAL (77 palabras, 1:28 a 1:54)
+
+Texto fijo literal de guiones/trabajo/jument/borrador/parte-01.md, línea 15 («Antes de empezar, una cosa...» hasta «...disfruta esta nueva historia»). Mide 77 palabras (comprobado), no 85. Sin contenido propio.
+
+Salida: la sección 3 arranca con una frase que remite a la puerta: para entender esa puerta hay que empezar por la roca y el mar que la rodea.
+
+### 3. LA YEGUA DEL FROMVEUR (450 palabras, 1:54 a 4:21)
+
+Objetivo: mundo normal y grieta. El mar y la roca como obstáculo de quien vive allí, no como contexto en bloque. Planta la pista verdadera de 1853. Abre la pista falsa 1.
+
+- [H] La roca se llama Ar Gazeg, «la yegua» (La Jument). La circular de 1853 que lanza el balizado de las costas recomienda balizarla, pero se juzga demasiado hostil para la mampostería tradicional; durante décadas no se hace nada (Mérimée, ALTA).
+- [H] En Ouessant existía el Stiff (Vauban decide hacia 1699, luz hacia 1702, MEDIA) y desde 1863 el Créac'h. Aun así, 31 naufragios entre 1888 y 1904 y más de 20.000 barcos al año por delante (ALTA).
+- [H] El Fromveur, el paso entre Ouessant y Molène: corrientes de 8 a 10 nudos sobre una falla; mareas de 3 a 7 metros; unos 860 habitantes frente a 1.814 en 1968; la comuna más ventosa de Francia. Redondear y dentro de la acción; no más de tres cifras seguidas.
+- [H] La isla de las mujeres: hombres en la Marina, mujeres cabezas de familia; 298 proëlla (funerales simbólicos sin cuerpo) por 2.074 muertos entre 1734 y 1792; el rito pudo durar hasta 1962. Se dice una sola vez y vuelve en el cierre.
+- [L] La versión repetida: La Jument nace del naufragio de un vapor y del dinero de un millonario. Se anuncia que se va a comprobar pieza por pieza. Sin ridiculizar: es razonable creerlo, porque el naufragio y el faro aparecen juntos en varias enciclopedias.
+- Dato que se guarda: el origen oficial está en un papel de 1853, no en el naufragio.
+
+Salida: «Todos cuentan la misma versión, un naufragio y un testamento. Empecemos por la noche del naufragio, que no tuvo ni tormenta ni viento.»
+
+### 4. UNA NOCHE SIN VIENTO (520 palabras, 4:21 a 7:12)
+
+Objetivo: el Drummond Castle como pista y como misterio náutico (¿cómo se pierde un vapor en calma?), con respeto y sin estirar: el dossier lo limita a unos 3 minutos y sus cifras no son fiables.
+
+- [H] 16-jun-1896, hacia las 23:00: el vapor británico Drummond Castle, salido de Ciudad del Cabo el 28 de mayo con 143 pasajeros y 102 tripulantes, choca con las rocas de la entrada sur del Fromveur, con mar en calma y niebla.
+- [H, fuentes discrepantes] Se hunde en minutos (cuatro según una fuente, unos quince según otra). Mueren «más de doscientos cuarenta»; se dice que las cifras no cuadran. Sobreviven tres: dos tripulantes recogidos por pescadores y un pasajero que llega nadando a Molène. Sin nombres de supervivientes («Macquar» no se usa).
+- [H] Investigación en Westminster, julio: «navegación negligente o torpe». [NS] Por qué pasó entre Ouessant y Molène en vez de por el norte. Según la versión francesa, el capitán Pierce decidió que ya había pasado Ouessant: se atribuye.
+- [H] Los isleños recuperan unos 100 cuerpos en 48 horas y los envuelven en lona porque falta madera. Discusión con el cura sobre enterrar protestantes en tierra consagrada; frase atribuida a Paul Gruyer (MEDIA), una sola cita corta o paráfrasis si no se verifica el original.
+- [H] 1897: un ministro británico visita las islas. Ouessant recibe fondos para una aguja de iglesia; Molène, una cisterna y un reloj. Sin detalles gráficos ni morbo.
+
+Salida: «Londres respondió con una aguja, una cisterna y un reloj. Pero ¿de verdad de aquí nace La Jument? Hay una decisión ministerial del veinte de febrero de mil novecientos cuatro que no encaja en esa versión.»
+
+### 5. EL TESTAMENTO CON RELOJ (600 palabras, 7:12 a 10:28)
+
+Objetivo: cerrar la pista falsa 1 con corrección honesta; presentar al donante y la cláusula del plazo (abre el bucle del reloj).
+
+- [H] 1903: se elige la roca como primer proyecto de mar del programa de balizado de Ouessant (MEDIA). 20-feb-1904: decisión ministerial de una torre «en béton de ciment» de al menos 7 metros de diámetro en la base (ALTA). Se cuenta con las palabras de la fuente; no describir la torre final como «de hormigón».
+- [H] 27-mar-1904, unas cinco semanas después: muere Charles-Eugène Potron, miembro de la Société de Géographie de París. Lega 400.000 francos para un faro en una roca peligrosa del Atlántico (se citaban las de Ouessant). Condición: construirlo en 6 o 7 años o el dinero pasa a la Société centrale de sauvetage des naufragés. El Estado acepta. Se dice lo que muestran las fechas: el faro ya estaba decidido antes de su muerte, y no consta si el donante lo sabía.
+- [T, MEDIA] En el testamento escribe que prevenir naufragios es «mejor aún» que socorrer (Wikipedia FR). Paráfrasis o cita de dos palabras. Se siembra aquí; se cobra en la 16.
+- [H] Willotte hace los reconocimientos; Ribière concluye que La Jument es el mejor sitio. 18-nov-1904: proyecto aprobado, presupuesto de unos 850.000 francos, más del doble del legado (lo cubre el Estado).
+- [H, corrección de la pista falsa 1] Mérimée documenta el origen en el balizado de 1853, el informe de los 31 naufragios y el legado. El Drummond Castle es contexto de peligro: las páginas en inglés y en francés del naufragio lo enlazan, pero no hay prueba causal. Se dice «no hay prueba», no «es falso». Lo del millonario que casi muere en un naufragio solo está en la Wikipedia inglesa, sin fuente: relato que no se puede comprobar.
+- [NS] De Potron se sabe poco más. No inventar carácter ni biografía.
+- Abre el bucle del reloj. Frase ancla «el reloj del testamento». Aquí se planta la pista verdadera de que el reloj tuvo un problema de fechas (se cobra en la 8).
+- No comparar los 36 metros previstos con los 47,40 actuales: el dossier no los concilia.
+
+Salida: «Ya hay dinero, plano y reloj. Faltaba saber si el mar iba a dejar trabajar, y el primer año de obra deja un número que parece un error de imprenta.»
+
+### 6. CINCUENTA Y DOS HORAS (540 palabras, 10:28 a 13:26)
+
+Objetivo: el obstáculo físico y los hombres. Cierra la promesa del gancho y abre la pregunta de si eso era normal. Planta la primera pista verdadera del falso final (el 6 %).
+
+- [H] Primer año de obra (sin atarlo a un año natural): 17 desembarcos en la roca y 52 horas de trabajo en total (Mérimée, ALTA). Frase ancla «cincuenta y dos horas». Se paga la promesa del gancho. Cuenta del narrador, marcada: unas tres horas por desembarco.
+- [H] Abril a octubre de 1905: 59 viajes, 206 horas, unos 100 m³ de mampostería, alrededor del 6 % de los 1.700 previstos. Máximo tres cifras en el bloque.
+- [H] Dirige la obra Georges Clet Heurté, nacido el 24-dic-1865 en Primelin, conducteur principal de Ponts et Chaussées; viene de Île Vierge; en el puesto de 1905 a 1911 (MEDIA). Si sobra espacio: existe un expediente suyo de la Legión de Honor que no se ha leído.
+- [H] Mérimée atribuye que la obra se terminara a «una organización rigurosa, un equipo dedicado, un capataz emprendedor, barcos y medios mecánicos adecuados». Cita corta, atribuida.
+- [H] Tras 1908 el albacea, el notario Meunié, se inquieta; en agosto de 1909 el Servicio de Faros lo invita a ver la obra. Siembra el reloj sin cerrarlo.
+- [NS, sin lamento] Número de obreros, salarios, turnos; si murió alguien (la Wikipedia FR dice que no hay constancia, y ausencia de constancia no es prueba); el artículo técnico de Ribière de 1911 no se ha podido leer.
+- [Lectura] Construyeron una torre robándole ratos al mar.
+
+Salida: «Cincuenta y dos horas parece poco. ¿Lo era? Para saberlo hay que mirar otras rocas, empezando por la que está a unos pocos kilómetros.»
+
+### 7. OTRAS ROCAS, LAS MISMAS HORAS (500 palabras, 13:26 a 16:09)
+
+Objetivo: responder si 52 horas era normal con paralelos usados como puente, no como bloques. Cada uno avisa de que no es La Jument y de qué pregunta sobre La Jument ayuda a contestar.
+
+- [H] Bell Rock (Escocia, Robert Stevenson, 1807 a 1810): roca cubierta unas 20 horas al día, solo 80 horas de obra en su segunda temporada, 2.500 bloques de granito, luz el 1-feb-1811. Comparación directa con las 52 horas.
+- [H] Ar-Men, la roca vecina, «el infierno de los infiernos», de 1859 a 1881, 14 años de obra: 1 m³ por desembarco; en 1867, 9 de 13 desembarcos y 8 horas útiles (cifra de Wikipedia FR, comprobar); en 1881 un obrero se ahoga por no abrocharse bien el salvavidas (con respeto, una frase). Refuerzo de hormigón de 1897 a 1902: pista para la torre que se refuerza.
+- [H] Eddystone, una sola frase como eco de «torres que se caen»: Winstanley enciende su torre de madera el 14-nov-1698 y muere con ella en la tormenta de 1703; Smeaton la rehace en 1759 con granito trabado. La Vieille sale de esta sección (aparece en la 10).
+- Respuesta al bucle de las 52 horas, en el último tercio: no era anormal; lo anormal era el calendario. A Ar-Men le dieron 14 años; a La Jument, 6 o 7 con la cláusula del testamento [Lectura marcada].
+- [Lectura marcada] La prisa del reloj del testamento es una hipótesis; Mérimée atribuye a la prisa la base reducida y los defectos.
+
+Salida: «El calendario ganó la partida. La luz se encendió en octubre de mil novecientos once. Falta saber qué pasó con el reloj del testamento y con el primer invierno.»
+
+### 8. LA LUZ ROJA (490 palabras, 16:09 a 18:50)
+
+Objetivo: falso final al 45 % (minuto 19). Cierra el bucle del plazo con honestidad y planta la última pista verdadera.
+
+- [H] Gasto anual de obra de unos 90.000 francos de 1907 a 1911 (un solo importe en el guion). Opcional: 5-may-1909, licitación de la linterna (4 m de diámetro, 34.300 francos).
+- [H] 15-oct-1911: se enciende la luz. Primera luz roja, 3 destellos, óptica de 0,70 m, vapor de petróleo. Siete meses más tarde de lo programado y con una base más pequeña que la prevista; el interior no se acaba hasta hacia 1914. Potron murió siete años antes y nunca vio su faro.
+- [Opcional, no está en el dossier, MEDIA] Una inscripción en la torre recuerda que se construyó en virtud de un legado de Potron (historiador-mar.md, hecho 3, de Wikipedia FR). Solo si se verifica.
+- [H + NS] El plazo: Mérimée dice que pudo cumplirse. Pero siete años desde la muerte de Potron vencían en marzo de 1911, antes del encendido. Probablemente el reloj corría desde la aceptación del legado, pero no consta. Se cierra con «no se sabe desde cuándo contaba». NO decir «a pocos días de vencer el plazo».
+- [Falso final, nombrado como versión repetida] Luz encendida, legado a salvo, plazo cumplido: así terminan muchas versiones. Con una frase que recuerda las pistas ya dadas: el 6 % de 1905, la base más pequeña, el interior sin terminar.
+- Se reutiliza «el reloj del testamento» al cerrarlo.
+
+Salida: «Aquí terminan muchas versiones. Pero una luz no se mide en inauguraciones, se mide en noches, y el primer invierno de esa torre estaba a punto de empezar.»
+
+### 9. LA TORRE QUE TEMBLÓ (680 palabras, 18:50 a 22:33)
+
+Objetivo: giro central (46 a 54 %). Rompe «se hizo a tiempo y sin problemas» con el fallo documentado y un siglo de remiendos. Cierra el falso final. Abre la pregunta del cálculo.
+
+- [H] Pronto la torre muestra falta de rigidez y vibraciones anormales, atribuidas a la prisa y a la base reducida; la cuba de mercurio derrama y se agrietan cristales de la linterna. La Wikipedia FR lo fecha en un temporal de diciembre de 1911 (fecha MEDIA): decir «en su primer invierno; según una fuente, en diciembre». No decir «dos meses después».
+- [H] Fondos de consolidación liberados en 1914; obras hasta 1924 por temor a un cizallamiento del fuste.
+- [H] Luz apagada del 28-dic-1917 al 6-nov-1918 (guerra submarina) para encamisarla con hormigón armado y ensanchar la base (fechas del apagón MEDIA).
+- [H] 1934: tres cables interiores anclados en la roca, método del ingeniero Coyne. De 1911 a 1934, 23 años de remiendos.
+- [H, testigo paralelo, pista previa de la revelación] Nividic, construido de 1912 a 1936 con la misma brigada de La Jument y la lancha Eugène Potron; un defecto de construcción de La Jument lo frena (MEDIA). Primer faro francés concebido sin fareros; plataforma de helicóptero probada en septiembre de 1958. Se dice sin explicar para qué servirá el helicóptero.
+- Abre el bucle del cálculo: más de un siglo después, un organismo francés dirá algo sobre los cálculos de esta torre que explica todo esto.
+- [Lectura marcada] La torre de la foto no es la de 1911: es una torre cosida, con la base ensanchada y cables dentro. Todavía no se dice qué pasa con la foto.
+
+Salida: «La torre por fin quedó atada a la roca. Pero queda la otra mitad de la historia: los hombres que vivían dentro, y cómo se vive en un lugar al que nadie puede subir ni bajar.»
+
+### 10. DOS HOMBRES EN UNA ROCA (640 palabras, 22:33 a 26:03)
+
+Objetivo: la vida del farero. Avisar con claridad de que casi todo viene de faros vecinos porque de La Jument no hay datos publicados. Pistas previas 1 y 3 de la revelación: quien vive en la roca depende de que alguien llegue. Abre «qué fue de los fareros» y abre y cierra Tévennec.
+
+- [NS, dicho de entrada] No hay datos publicados de la rutina diaria de La Jument: número de fareros, turnos, relevo. Lo que viene es de Ar-Men y La Vieille. Cada vez que aparece otro faro se dice «esto pasaba en el faro vecino».
+- [Abre Tévennec, en las primeras 120 palabras] De uno de esos faros se decía que volvía locos a los hombres; se promete volver a él al final.
+- [H] Ar-Men: dos fareros siempre; guardias nocturnas de 9 a 10 horas; sin calefacción ni baño; turnos de 30 días dentro y 10 fuera, luego 20 y 10, desde 1971 14 y 7. En 1922, 89 días sin relevo. En diciembre de 1923, tras 26 días de temporal, un incendio que se apaga durante 17 horas con agua de mar. Una cifra por episodio.
+- [H] El cartahu (cable entre barco y torre) y el «ballon» (asiento colgante izado a torno); barcos Velléda y Blodwen. Jean-Pierre Abraham, farero de Ar-Men de 1959 a 1963, autor de Armen: una frase atribuida, «el agua está menos fría de lo que se cree».
+- [H] La Vieille, 1925-26: dos mutilados de guerra, Mandolini y Ferracci, aislados; 120 escalones; izan la bandera negra. 19-feb-1926: se pierde la goleta La Surprise con diez hombres, según los relatos con la luz sin encender; sin acusar a los dos hombres, que llevaban días aislados. 28-feb-1926: rescate por Clet Henri Coquet, su hijo y Nicolas Kerninon. Escena central de la sección. Un decreto de 1927 excluye los faros de mar de los empleos reservados. Opcionales: Servicio de Faros de 1806, Plouzennec arrastrado por una ola en 1921.
+- [Pista previa] Último relevo de Ar-Men el 10-abr-1990, en helicóptero. Existe una filmación de abril de 1983 del relevo de La Jument con el Blodwen; no se ha podido abrir: se dice, es el único trozo de La Jument.
+- [Cierra Tévennec, pasada la palabra 400 de la sección] 23 fareros en 35 años; varios enloquecieron y tres murieron, según el servicio; los ruidos se explican por aire comprimido en una falla bajo el islote (buzos en los años noventa, MEDIA). Regla del narrador: cada leyenda tiene una falla debajo; era razonable creerla. Sin la historia del cuerpo en sal. Opcional: matrimonios desde 1897, con la esposa como auxiliar a 50 francos al mes.
+- Abre y mantiene el bucle de los fareros. Frase ancla «nadie viene a relevarte».
+
+Salida: «En septiembre de mil novecientos setenta y cuatro una ola entró en la torre de La Jument por un sitio por el que no debía entrar ninguna.»
+
+### 11. CUANDO EL MAR ENTRA (570 palabras, 26:03 a 29:10)
+
+Objetivo: mini giro al 66-70 %: reforzada no significa intacta. Dos pistas previas: 1974 en La Jument y Kéréon 1989.
+
+- [T, fuente única] Septiembre de 1974: una ola rompe la linterna de La Jument, se lleva la lámpara y baja por la escalera; los fareros Jean-Claude Roger y Noël Violant se refugian en la cocina y pasan la noche recogiendo mercurio. Decir «según una sola fuente» (Wikipedia FR).
+- [T, MEDIA] Kéréon, a pocos kilómetros, 16-dic-1989, 18:10: una ola revienta dos portillos de la cocina, el mobiliario sale por la escalera y acaba en el mar, estallan siete cristales de la óptica a 42 metros; los fareros cubren la óptica con lonas y la luz no se apaga. Fuente: Guichard y Gast, Les phares: Enfers et Paradis (1999), vía Wikipedia FR. Une a Kéréon con Guichard, que escribe sobre faros. Prohibido «cinco días antes de la foto» y «ese mismo invierno».
+- [Lectura marcada] Reforzar una torre no significa que el mar deje de golpearla. Pista previa 2 de 3.
+- Abre: ¿qué clase de ola puede hacer esto y qué fuerza lleva? Se responde en la 12.
+
+Salida: «Dos torres, dos olas y ningún instrumento midiendo. Hoy hay respuesta con instrumentos, y descoloca las cifras que se repiten.»
+
+### 12. LA FUERZA QUE NADIE CALCULÓ (520 palabras, 29:10 a 32:00)
+
+Objetivo: responder al bucle del cálculo y preparar la revelación con la medida científica. Cerrar «las olas de treinta metros» sin burla.
+
+- [H] Un organismo público francés de ingeniería (decir su nombre, Cerema, una sola vez, después de describirlo): el faro se diseñó sin calcular fuerzas de oleaje y su estabilidad es incierta desde que se terminó («de experiencia y masa», paráfrasis). Califica el estudio de «primicia mundial». Cierra el bucle del cálculo de la 9.
+- [H] Modelo de una universidad suiza en 2013; después, una campaña con sensores y una boya (sin siglas).
+- [H] Invierno de 2017-2018: olas individuales de hasta unos 24 metros (24,60 en la Wikipedia FR). Las «olas de treinta metros» que se repiten no tienen respaldo (se nombra el número una sola vez, para desmentirlo).
+- [H] Filipot y 15 coautores, Philosophical Transactions de la Royal Society A, 19-ago-2019: una tormenta produce un pico de aceleración dentro del faro; con video estéreo identifican la ola responsable, de unos 19 metros, con cresta suficiente para golpear la torre justo encima del zócalo. Proponen usar los faros como laboratorios en el mar. Cerema admite que no se pudo estimar con precisión la fuerza sobre la torre.
+- [H] Contexto, dos frases: la ola Draupner, 1-ene-1995, Mar del Norte, 25,6 metros; se creyó error del instrumento; fue la primera ola «anómala» medida.
+- [Lectura marcada, sin afirmar que sea el mismo punto] El golpe cae cerca de la base, la parte que se reforzó. Pista previa de la revelación.
+- [Límite] La ola de la foto no tiene medida: ni altura ni día seguro. Cierra el bucle «qué fuerza y cuánto medía la de la foto».
+
+Salida: «Esas olas tienen medida. La de la foto no. Solo tiene una puerta abierta y un hombre. Volvamos a la puerta.»
+
+### 13. LA PUERTA (720 palabras, 32:00 a 35:56)
+
+Objetivo: revelación mayor, hacia el 81 % (minuto 34). Contar lo que se sabe del día con tres piezas (entrevista de 2001, cita de 2007, imagen) sin inventar diálogo ni pensamiento. Cierra el bucle mayor. Orden fijo para que la revelación caiga en el 80,6 % a 82,2 % (minuto 33:52 a 34:31).
+
+1. (70) Quién disparaba. [H] Jean Guichard: París, 28-abr-1952; mili en 1971 en el Commandant Bourdais; primera Nikon comprada en Godthab (Groenlandia) con fotos vendidas a la tripulación; Sygma 1977, Gamma 1984; en 1989 cofunda su agencia y empieza su trabajo de fondo sobre faros. Entra como paso de investigación: por qué un fotógrafo de faros está en ese helicóptero.
+2. (70) [H/T] Helicóptero alquilado en Lorient; iba a fotografiar olas; su helicóptero no era de rescate (Wikipedia EN; Lighthouse Digest lo confirma en lo esencial). Bomba bajo la mesa: el oyente lo sabe y los de abajo, todavía no.
+3. (130) [T] Según Guichard en una entrevista de Lighthouse Digest (julio de 2001, en Wells, Maine): las olas de la noche anterior habían roto las ventanas bajas, inundado la torre y llevado muebles, electrodomésticos y la nevera; los fareros temían por su vida y se habían refugiado en la linterna.
+4. (70) Callback de pistas previas, sin contar la revelación: quien vive en la roca depende de que alguien llegue (relevo con el cartahu, 89 días de Ar-Men, la bandera negra de La Vieille, el helicóptero de Nividic).
+5. (120) [T, revelación mayor] Esperaban un helicóptero de rescate. Al oír el aparato, uno abrió la puerta de abajo, vio venir la ola y cerró de golpe, lo que probablemente le salvó la vida; Guichard disparaba sin parar. Atribuir «según Guichard»: dos fuentes no del todo independientes (Lighthouse Digest y Wikipedia EN, que lo dice en una línea). Sin juicio ni burla; sin culpar a nadie del helicóptero.
+6. (50) [H] La serie de siete fotos titulada La Jument; solo lo visible en la que sale el hombre.
+7. (60) [T, MEDIA] Según la Wikipedia inglesa, el hombre es Théodore Malgorn; cita atribuida a Stern del 4-dic-2007 («¿qué hace ahora Théodore Malgorn?»), no leída en origen: «si hubiera estado un poco más lejos de la puerta, no habría conseguido volver a entrar en la torre». Una sola frase.
+8. (80) [NS, como parte de la pesquisa] Su rango, cuántos fareros había dentro (Lighthouse Digest dice «fareros», en plural), quién era el piloto, a qué distancia estaba el helicóptero. Sin «salió a posar» ni «a desafiar al mar»: no tiene base. Sin diálogos ni pensamientos.
+9. (70) [Lectura marcada] Esos hombres estaban dentro de una torre atada a la roca con tres cables desde hacía más de medio siglo. Cierra el bucle mayor con la frase ancla «la puerta», con las mismas palabras que en el gancho.
+
+Salida: «Ya sabes qué pasó en la puerta. Pero queda un detalle que no cuadra con nada de lo anterior: la fecha que todos repiten.»
+
+### 14. LA FECHA QUE NO CUADRA (500 palabras, 35:56 a 38:40)
+
+Objetivo: remate al 86-92 %: hallazgo de la fecha discutida, vida de la imagen, respuesta honesta a si sobrevivió. Sin construir minutos sobre el montaje ni sobre la cronología viral, de los que no hay datos.
+
+- [H] Wikipedia FR y EN dan el 21-dic-1989 y una borrasca desde Irlanda; no se ha visto ninguna fuente primaria detrás. Se nombra solo como «la fecha que repiten», nunca como hecho.
+- [H] World Press Photo, concurso de 1991, Naturaleza, fotos sueltas, segundo premio, Jean Guichard. La ficha lleva la fecha 01-feb-1990 (la página no la etiqueta, va bajo la agencia) y el pie dice, en paráfrasis: el farero echa un vistazo vigilante a las olas; el temporal de febrero que cruzó Europa occidental dejó inundaciones y restos en tierra. La ficha no nombra La Jument, Ouessant ni Francia. La web de Guichard dice 1990: es el año en que se tomó, no el del concurso.
+- [NS, tres lecturas no verificadas] a) la foto premiada es de febrero de 1990 y el 21 de diciembre es un error repetido; b) son dos jornadas distintas de la misma serie; c) la fecha es de envío o de archivo. Hipótesis adicional del dossier, marcada: el 21 de diciembre podría venir de mezclar con la tormenta de Kéréon del 16. Se dice «en el invierno de 1989 a 1990».
+- [T, MEDIA] Lighthouse Digest dice que muchos espectadores creen que el farero murió. Sobrevivió. En 2007, el Stern le dedicó un «qué fue de...»; no se conoce nada más de su vida posterior (una frase y un artículo). No repetir la cita de la 13.
+- [NS] Ninguna fuente leída sostiene que la foto sea un montaje y no hay peritaje; la mejor prueba indirecta es el segundo premio con jurado, la serie de siete fotos y el testimonio cruzado. Dos o tres frases.
+- [Hipótesis marcada, máximo 90 segundos] Lectura del narrador sobre por qué sigue viva: la escala de un hombre frente a la ola, la puerta abierta, y que la imagen no dice qué pasó después. Sin cifra de pósteres. No se menciona Los infiltrados.
+- Cierra el bucle de la fecha con honestidad: no se sabe.
+
+Salida: «La imagen sigue dando vueltas. Falta saber qué pasó con la torre y con los hombres que vivían en ella.»
+
+### 15. LO QUE QUEDA (374 palabras, 38:40 a 40:43)
+
+Objetivo: legado y qué se sabe hoy. Cierra el bucle de los fareros («nadie viene a relevarte») y prepara la idea final sin resumir.
+
+- [H] 1990: electrificación. 26-jul-1991: automatización; salen los fareros.
+- [H] Eco: Ar-Men tuvo su último relevo el 10-abr-1990, en helicóptero; La Vieille, el 14-nov-1995, con cuatro hombres en la torre esa última noche porque dos fareros rechazaron irse. Máximo cuatro datos.
+- [H] 2009 a 2011: se refuerza el hormigón de la base tras daños y se renueva el sistema de seguridad de los cabrestantes. 11-jun-2011: procesión náutica por el centenario.
+- [H] Septiembre de 2014: el mercurio vuelve a desbordar; limpieza hasta 2015. 2015: óptica de LED y se retira el baño de mercurio. A 1-ene-2017, 84 faros franceses tenían ópticas sobre cuba de mercurio; el Estado reconoce «riesgos probados». Una cifra.
+- [H] 31-dic-2015: inscripción y 20-abr-2017: clasificación como Monumento Histórico. Estado actual: torre octogonal de piedra con voladizo y base redondeada; 47,40 metros de altura total; luz roja de LED, 3 destellos cada 12 segundos; alcance de 10 millas; Brest la vigila a distancia. NO se dan los valores de antes de 2015.
+- [H] 1-sept-2019: Cap Fréhel cierra el último puesto de farero de Francia (Henri Richard).
+- Fuera por defecto: 2023 (paneles solares), noviembre de 2025 (ministra y Créac'h), museo del Créac'h, cultura, Kéréon de lujo, Draupner, reedición y exposición de Guichard (la exposición caduca el 1-nov-2026 y solo consta en su web).
+
+Salida: «Nadie vive ya en esa torre. Y queda la última pregunta: qué se quedó dentro de la imagen.»
+
+### 16. CIERRE (235 palabras: 100 propias y 135 del texto fijo, 40:43 a 42:00)
+
+Objetivo: gancho final propio de uno o dos párrafos y después el texto fijo, literal.
+
+- Primer párrafo propio (unas 30 palabras): el hombre volvió a entrar; de su vida posterior se conserva una frase y un artículo de 2007; la fecha sigue sin fijarse. Todos los bucles cerrados de un golpe de vista.
+- Segundo párrafo propio (unas 70 palabras), [Lectura marcada del narrador, no hecho de ninguna fuente]: Potron escribió que prevenir era mejor aún que socorrer; la torre se levantó para que nadie tuviera que ser rescatado y, un siglo después, un hombre abre su puerta esperando un rescate. Ese segundo descansa en gente que no sale en la foto: los obreros de las cincuenta y dos horas, los ingenieros de los veintitrés años de remiendos, los fareros que se fueron en 1991, y en una isla donde, cuando el mar no devolvía a un marino, se hacía un funeral sin cuerpo.
+- Frase final que devuelve la imagen de la puerta. Sin resumen, sin moraleja pegada, sin pregunta nueva, sin línea de ayuda.
+- Las 100 palabras propias son un tope: si la idea cabe en menos, mejor; el sobrante se devuelve a la 14 o a la 15.
+- Texto fijo literal de guiones/dawson-guion-01.md, líneas 581 a 589 (135 palabras, comprobado): desde «Esto ha sido Todos Lo Vieron: la historia real detrás del misterio.» hasta «Nos vemos en el próximo capítulo de misterio.»
+
+Suma comprobada: 270 + 77 + 450 + 520 + 600 + 540 + 500 + 490 + 680 + 640 + 570 + 520 + 720 + 500 + 374 + 235 = 7.686.
 
 ## 4. Tabla de bucles
 
-Un bucle mayor y once menores (la guía pide al menos cinco menores a partir de 45 minutos). Todo bucle se cierra, ninguno en menos de 90 segundos (unas 275 palabras entre apertura y cierre). La frase ancla se dice con las mismas palabras al abrir y al cerrar.
-
-| Id | Pregunta | Abre | Cierra | Frase ancla | Tipo |
+| Id | Tipo | Pregunta (frase ancla) | Abre | Cierra | Cómo se cierra |
 |---|---|---|---|---|---|
-| B1 | ¿Por qué estaba abierta la puerta y qué pasó en el segundo siguiente a la foto? | 1 | 14 | «la puerta» | mayor |
-| B2 | ¿Cuánto medía la ola y es real la foto? | 1 | 15 | «la ola de la foto» | menor |
-| B3 | ¿Qué tiene una torre de más de un siglo para que sea una de las más vigiladas? | 1 | 10 | «una de las más vigiladas» | menor |
-| B4 | Promesa del gancho: una noche de niebla, un testamento y un número de horas que parece un error de imprenta | 1 | 7 | «el número de horas» | menor |
-| B5 | ¿Es cierta la versión de que el faro existe por un naufragio y un millonario con testamento? | 3 | 6 | «un naufragio y un testamento» | menor, pista falsa 1 |
-| B6 | ¿Para qué quería una isla de pescadores un reloj de tres esferas? | 4 | 5 (pasadas unas 300 palabras) | «un reloj de tres esferas» | menor |
-| B7 | ¿Llegó el faro a tiempo para cobrar el legado? Cierre honesto: no se sabe desde cuándo contaba el plazo | 6 | 9 | «el plazo» | menor |
-| B8 | ¿Eran normales las 52 horas del primer año? Respuesta con Ar-Men: lo anormal era el calendario | 7 | 8 (al final) | «cincuenta y dos horas» | menor |
-| B9 | ¿Por qué pensar en 1910 un faro sin fareros? | 10 | 16 | «un faro sin fareros» | menor |
-| B10 | ¿Qué pasa dentro de un faro cuando nadie puede ir a relevarte? | 11 | 12 | «nadie viene a relevarte» | menor |
-| B11 | ¿Estaba maldito Tévennec? | 11 | 12 (segunda mitad) | «el faro maldito» | menor |
-| B12 | ¿Qué fue del hombre de la puerta? Cierre honesto: no se sabe | 14 | 17 | «el hombre de la puerta» | menor |
-
-Zonas de retención (más de cuatro): 3 (el origen), 4 y 5 (el reloj), 7 y 8 (las horas y Ar-Men), 9 y 10 (falso final y giro), 11 y 12 (relevo y Tévennec), 13 y 14 (la puerta).
-
-## 5. Esquema completo por secciones
-
-Marcas: [H] hecho documentado, [T] testimonio o fuente única que se atribuye, [No se sabe] se dice en voz alta y se integra en la pesquisa, [Lectura] interpretación del narrador marcada como tal, [Leyenda] se presenta como relato.
-
-### 1. LA PUERTA ABIERTA (gancho, 275 palabras; tope 285)
-
-Objetivo: abrir con la escena del 21 de diciembre de 1989 y dejar tres preguntas sin respuesta. Pasa la lista del gancho: momento concreto, anomalía, dos o tres datos reales, tres preguntas, promesa específica, sin resumen ni cifras en bloque, termina en pregunta.
-
-- [H] 21 de diciembre de 1989, en pleno temporal: Jean Guichard, fotoperiodista parisino, hace siete fotos con el mismo encuadre de una torre de granito de unos 47 m sobre una roca frente a la costa de Ouessant, en Bretaña (hecho 64, ALTA en fecha y nombre; la distancia a la costa, 300 m, es MEDIA: decir «frente a la costa»).
-- [T] Según la versión inglesa del relato, alquiló un helicóptero en Lorient y voló en condiciones muy peligrosas (hecho 65, atribuir).
-- [H] En una foto hay una ola rompiendo sobre la torre y, en el umbral de una puerta abierta, un hombre: Théodore Malgorn. Solo lo visible; sin altura de la ola, sin decir que se salvó.
-- [H] Dato real raro (la anomalía): la ficha oficial del patrimonio de Bretaña dice que esa torre, encendida en 1911, sigue siendo hoy «una de las más vigiladas» (hecho 48, ALTA). Cita corta y atribuida.
-- Tres preguntas, en este orden: ¿cuánto medía esa ola y es de verdad lo que parece?; ¿qué tiene una torre de granito de más de un siglo para que la vigilen así?; y, la última, ¿por qué estaba abierta esa puerta y qué pasó en el segundo que no sale en la foto?
-- Promesa específica que se paga después: la respuesta empieza mucho antes de la foto, con una noche de niebla, un testamento y un número de horas de trabajo que parece un error de imprenta.
-- NO se dice: que volvió a entrar, la cita de 2007, que la torre tembló en 1911, los refuerzos, «Drummond Castle», ni la acusación de montaje. No se usa «caso» ni «mito». Sin saludo.
-
-Gancho de salida: termina en la pregunta de la puerta para que la intro del canal funcione como respiro que aumenta la espera.
-
-### 2. INTRO DEL CANAL (85 palabras, texto fijo)
-
-Texto fijo literal: lema, suscripción, campanita y «ponte cómodo y disfruta esta nueva historia». El literal no está en los archivos del repositorio (CONTEXTO.md y retencion.md solo lo describen): lo inserta el ensamblador y no se escribe ni se inventa aquí. Si el texto real es más corto de 85 palabras, el total baja esa diferencia (retencion.md pide 15 a 25 segundos, unas 46 a 76 palabras).
-
-Gancho de salida: la sección 3 arranca con una frase que remite a la puerta.
-
-### 3. LA YEGUA DEL FROMVEUR (440)
-
-Objetivo: el mundo y la grieta. Dar el mar y la isla como obstáculo de quien vive ahí, no como contexto en bloque. Abrir la versión que se repite sobre el origen del faro (B5).
-
-- [H] A comienzos del siglo XX pasaban más de 20.000 barcos al año por el oeste de la isla y entre 1888 y 1904 se perdieron 31 buques en torno a Ouessant y Molène, casi dos al año (hecho 12, ALTA; «casi dos» es aritmética). Máximo dos cifras.
-- [H] El Fromveur, el paso entre Ouessant y Molène: corrientes de hasta unos nueve nudos, peligrosísimo cuando el viento va contra la corriente (hecho 13).
-- [H] Ya había luces (Créac'h desde 1863, Stiff hacia 1700) y aun así se perdían barcos (hechos 3 y 5, decir «hacia 1700»).
-- [H] Gorgone, 19 de diciembre de 1869: una corbeta se hunde cerca de Molène con 93 hombres y los isleños no se enteran en el momento (hecho 7). Una frase.
-- [H] La roca: en bretón Ar Gazeg, «la yegua»; formas antiguas «Juman» (1697) y «La Grande Jument» (1771 a 1785). La traducción «yegua azul» es una hipótesis poética sin respaldo. Decir una vez.
-- [H] La isla de las mujeres: los hombres, marinos desde unos 15 años; ellas llevan casa y campo (hecho 9; paráfrasis de Gruyer, 1899).
-- [H] La proella: cruz de cera que representa a un marino desaparecido cuyo cuerpo no vuelve; entre 1734 y 1792, de 2.074 defunciones, 298 con proella; se velaba, se sacaba en procesión y se guardaba en una urna (hecho 10). Es el eco emocional que se paga en la 17.
-- [Leyenda] Se anuncia la versión que se repite: el faro existe por un naufragio y por un millonario con testamento. Se va a comprobar pieza por pieza.
-- Se omiten el cortejo del plato (testigo único), Cordelière, Catarina Stockholm y la población máxima de 1911 (pasa a la 9).
-
-Gancho de salida: «todos cuentan la misma versión, un naufragio y un testamento; empecemos por la noche del naufragio, que no tuvo ni viento ni tormenta».
-
-### 4. UNA NOCHE SIN VIENTO (520)
-
-Objetivo: primera pista. Contar el Drummond Castle como misterio náutico (¿cómo se pierde un vapor en calma?) con respeto a las víctimas, sin acusar y marcando lo que no se sabe.
-
-- [H] Vapor de la Castle Line, construido en 1881 en Govan; zarpa de Ciudad del Cabo el 28 de mayo de 1896 hacia Londres, escala en Canarias el 12 de junio; 143 pasajeros y unos 102 tripulantes; capitán Walter William Pierce, primer viaje con ese barco según la ficha francesa (hecho 25).
-- [H] 16 de junio de 1896: niebla y mar en calma. Hacia las 19:00 Pierce para máquinas para sondar y cree haber pasado Ouessant; casi colisiona con el Werfa y mantiene rumbo; hacia las 23:00 choca con rocas en la entrada sur del Fromveur; no se bota ningún bote (hecho 26). Hundimiento en unos cuatro minutos según una fuente y unos quince según otra: decir que las fuentes discrepan.
-- [H] Tres supervivientes: dos tripulantes recogidos por pescadores y un pasajero que llegó nadando a Molène; la ficha francesa lo llama Macquar y dice que lo hallaron agarrado a una viga (hecho 27, ALTA en los tres).
-- [H] Muertos: decir «más de doscientos cuarenta» (The Times da 242 de 245 a bordo; otras fuentes, unos 250 o 258). Nunca 258 como cifra cierta.
-- [H] Investigación del Board of Trade, julio de 1896: «navegación negligente o inhábil». No se sabe por qué pasó entre Ouessant y Molène (hecho 29). Decir «no se sabe».
-- Fuera: el rumor de la bebida y los relojes parados a las once y cuarto (Gruyer, opinión y relato literario, confianza baja). Nombres de víctimas solo si aportan; nada de morbo.
-
-Gancho de salida (abre B6): «al amanecer los isleños descubrieron lo que había pasado; y un año después Londres les pagó dos cosas, una cisterna y un reloj de tres esferas. Cuando sepas para qué sirve el reloj, entenderás quién vivía allí».
-
-### 5. DIOS RECONOCERÁ A LOS SUYOS (450)
-
-Objetivo: mostrar a los isleños, desmontar sin burla la fama de naufragadores, cerrar B6 y dejar la pista verdadera que corrige la pista falsa 1.
-
-- [H] Los isleños se enteran al amanecer. Cuerpos velados en un almacén con una vela y un crucifijo cada uno, amortajados con lona de velas por falta de madera; unos 100 recuperados; 29 enterrados en el cementerio inglés de Molène (hecho 28).
-- [T] Dilema del abate Lejeune sobre enterrar a protestantes; frase atribuida a un aldeano en el relato de Gruyer de 1899: que los enterraran, que Dios reconocería a los suyos. Una sola frase corta, atribuida, traducida.
-- [H] Fama de naufragadores con luces falsas: según la fuente «no parece fundada»; el derecho de saqueo se abolió en 1681; sí hubo saqueos puntuales (Atlas, 1739). Lo documentado es salvamento desde 1866: Lampaul, 86 salidas y 140 salvados (una sola serie). Era razonable creerlo; no se ridiculiza a nadie (hecho 8).
-- [T] Vesper, noche del 1 al 2 de noviembre de 1903: 14 marinos salvados por Rose Héré, que se echó al agua (hecho 32, fuente única, atribuir). Dos frases, recortable.
-- [H] 1897: un ministro de la reina Victoria agradece y reparte medallas; Ouessant recibe fondos para la aguja de su iglesia; Molène, una cisterna de agua de lluvia y un reloj de tres esferas en el campanario para que los pescadores cuadraran la vuelta con la marea; el arzobispo de Canterbury regala un cáliz y una patena (hecho 30). Aquí se cierra B6, pasadas unas 300 palabras de la sección.
-- Pista verdadera previa para la pista falsa 1: las enciclopedias dicen que el naufragio empuja un programa de mejor balizamiento; la ficha oficial no cita el barco por su nombre (mitos, MEDIA). Y hay un papel de febrero de 1904.
-
-Gancho de salida: «todos dicen que de este naufragio nace La Jument. Pero hay un papel fechado el veinte de febrero de mil novecientos cuatro. Es anterior a la muerte del hombre que supuestamente pagó el faro».
-
-### 6. CINCO SEMANAS DE DIFERENCIA (500)
-
-Objetivo: cerrar B5 con corrección honesta (la torreta barata ya estaba aprobada antes del testamento), presentar la cláusula del plazo (abre B7) y presentar a Kéréon como faro espejo.
-
-- [H] 20 de febrero de 1904: decisión ministerial que aprueba una torreta de hormigón (base mínima de 7 m) sobre Ar Gazeg, parte de un programa de balizamiento complementario (hecho 33, ALTA).
-- [H] 27 de marzo de 1904, cinco semanas después: muere Charles-Eugène Potron, de la Sociedad de Geografía de París, y lega 400.000 francos para un faro «de materiales escogidos y aparatos perfeccionados» (hecho 34, ALTA).
-- [H] Cláusula del plazo: de seis a siete años, o el dinero iría a la Sociedad Central de Salvamento de Náufragos; «según las fichas» (MEDIA). El Estado decide hacer «un verdadero faro»; 18 de noviembre de 1904, proyecto definitivo con el emplazamiento modificado (hechos 34 y 35). Aquí se abre B7.
-- [H] Coste estimado de unos 850.000 francos; el legado cubría menos de la mitad (hecho 39).
-- [Leyenda] Se cuenta que Potron casi muere en un naufragio y que por eso legó el dinero; ninguna ficha oficial lo confirma (BAJA). Se dice como relato que no se puede comprobar.
-- [H] Respuesta: el naufragio empuja el programa; el testamento convierte una baliza barata en faro. Se cierra B5.
-- [H] Kéréon, el espejo rico (roca Men-Tensel, también en el Fromveur, obra de 1907 a 1916): donación de 585.000 francos de Amicie Lebaudy en memoria de su tío abuelo Charles-Marie Le Dall de Kéréon, condenado el 9 de febrero de 1794 y guillotinado al día siguiente, el primero de Finistère; la ficha lo llama el faro francés más caro, 941.000 o 975.000 francos según la fuente (hecho 50). Una sola cifra.
-- Cuidado: el plazo se presenta como «siete años» sin fecha de arranque comprobada.
-
-Gancho de salida: «ya hay dinero, un plano y un calendario. Falta saber si el mar va a dejar trabajar. Y el primer año de obra deja un número que parece un error de imprenta».
-
-### 7. CINCUENTA Y DOS HORAS (540)
-
-Objetivo: el obstáculo físico de la obra y quiénes eran los hombres. Abrir B8 y cerrar B4. Plantar la primera pista verdadera del falso final (el 6 por ciento).
-
-- [H] 1904, primer año de obra: 17 atraques y solo 52 horas de trabajo en la roca, poco más de dos días en un año entero (hecho 36, ALTA). Aquí se cierra B4.
-- [H] 1905, de abril a octubre: 59 salidas, 206 horas y unos 100 m³ colocados de 1.700 previstos, alrededor del 6 por ciento (hecho 38, ALTA). Dos cifras como máximo en el bloque.
-- Idea fuerte: construyeron un faro de 47 m robándole ratos al mar.
-- [H] Responsables: Willotte, ingeniero jefe; Georges Clet Heurté, nacido el 24 de diciembre de 1865 en Primelin, jefe de la obra, que venía de la Île Vierge (82,5 m, el faro de piedra más alto de Europa); Ribière, autor del artículo técnico de 1911. El reparto de papeles sigue sin resolverse según la fuente. Hilo de pesquisa: «¿quién mandaba de verdad?» (hechos 23 y 41).
-- [No se sabe] Contratista, número de obreros, tipo de hormigón, método de cimentación y coste real no constan, porque el artículo de Ribière no se ha podido consultar. Se dice sin lamentos.
-- Opcional, recortable: aviso del Journal officiel del 5 de mayo de 1909 para la linterna de 4 m de diámetro (hecho 40).
-
-Gancho de salida: «cincuenta y dos horas en un año parece poco. ¿Lo era? Para saberlo hay que mirar el faro vecino que se construyó cuarenta años antes sobre una roca todavía peor».
-
-### 8. EL PRECEDENTE DE AR-MEN (580)
-
-Objetivo: responder B8 con el faro precedente, mostrar a los obreros con respeto y sembrar el eco del refuerzo de la base (segunda pista verdadera del falso final).
-
-- [H] Ar-Men: roca de 105 m², a 4,2 m sobre el nivel de bajamar; el apodo «el infierno de los infiernos» es de Ar-Men y no de La Jument (mitos).
-- [H] 1859, naufragio de la corbeta Sané; 1865 y 1866, Paul Joly concluye que la roca casi siempre está cubierta y vuelve con croquis que permiten planificar (hechos 15 y 16). Breve.
-- [H] 1867: 9 desembarcos y 8 horas efectivas; 1869: 25 m³ y 42 horas y 10 minutos de trabajo efectivo en toda la temporada, con mortero amasado con agua de mar (hecho 17, ALTA en el orden de magnitud). Dos cifras.
-- [H] Obreros de Sein, de dos en dos, con espardeñas y chalecos de corcho, a veces tumbados para no ser barridos.
-- [H] Accidentes: 15 de junio de 1878 vuelca un bote con 14 obreros, todos rescatados; en 1881 dos obreros barridos, uno se ahoga por no abrocharse bien el chaleco (hecho 20). Con respeto, sin morbo.
-- [H] Luz de prueba el 18 de febrero de 1881 y servicio oficial el 30 de agosto; torre de 37 m, catorce años de obra (la resta 1867 a 1881) (hecho 21).
-- [T] Del ingeniero Victor Fénoux se atribuye la frase «hoy se puede decir que ese imposible está hecho». Recortable.
-- [H] Le Four, de 1869 a 1874: al hundirse el barco de suministro mueren tres hombres, Hervé Jézéquel, François Leborgne y el capataz Le Brelivet (hecho 18). La Vieille se levanta de 1882 a 1887 (hecho 22). Una frase cada una, recortables.
-- [H] Eco: entre 1897 y 1902 Ar-Men recibió una chapa de cemento de 50 cm en la base porque los cálculos mostraron que la torre pesaba poco (hecho 24). Es la pista que se cobra en la 10, donde el defecto de La Jument está en el zócalo.
-- Respuesta a B8 (al final): no era raro; el mar de La Jument no era un caso aparte, lo anormal era el calendario: a Ar-Men le dieron catorce años y a La Jument, siete con la cláusula.
-
-Gancho de salida: «el calendario ganó la partida. La luz se encendió el quince de octubre de mil novecientos once. Faltaba el primer invierno».
-
-### 9. LA LUZ ROJA (470)
-
-Objetivo: falso final hacia la mitad (47 por ciento). La torre se termina, se enciende y parece que todo acaba bien. Cierra B7 con honestidad. Planta la tercera pista verdadera (base más pequeña, interiores sin terminar).
-
-- [H] De 1907 a 1911 el gasto anual en obra gruesa ronda los 90.000 francos; la torre propiamente dicha arranca hacia 1908; ante el plazo, la administración acelera y fleta más material (hecho 39). Un solo importe.
-- [H] Torre octogonal de sillería de granito del aber Ildut, cadenas de esquina de kersantón, unos 47 m y 8,50 m de ancho en la base; séptimo piso en voladizo (hecho 43).
-- [H] Interior cuidado: parquet de punto de Hungría, boiserie de roble y un retrato en bronce de Potron, obra del escultor Louis Holweck. Potron murió antes de que se empezara y nunca vio la torre.
-- [H] 15 de octubre de 1911: primera luz, tres destellos rojos agrupados; los interiores sin terminar, que se acaban tres años después (hecho 42, ALTA en la fecha).
-- [No se sabe] El Estado dice que se encendió dentro del plazo; otra ficha habla de siete meses de retraso y de una base más pequeña de lo previsto. Entre la muerte de Potron y la luz pasan siete años y medio, así que el plazo tuvo que contarse desde otra fecha, pero no se ha podido comprobar (aritmética del narrador, marcada). No decir «por los pelos» ni «el último día». Aquí se cierra B7.
-- [H] 1911 es también el año de máxima población de Ouessant, 2.853 habitantes; hoy son unos 860 (hecho 2). Una cifra.
-- Falso final con voz de lo que cuentan muchas versiones («la luz encendida, el legado a salvo, el bronce del donante en el salón»), no como cierto; con una frase que recuerda la base más pequeña y los interiores sin terminar.
-
-Gancho de salida: «aquí terminan muchas versiones. Pero una luz no se mide en inauguraciones, se mide en noches. Y la primera noche de verdad llegó dos meses después».
-
-### 10. LA TORRE QUE TEMBLÓ (680)
-
-Objetivo: giro. Cierra B3 y desmonta «se hizo rápido y bien» con la causa documentada, el testigo independiente (Nividic) y 23 años de remiendos. Abre B9. Voz añadida: Queffélec. Función de la tormenta: el fallo.
-
-- [H] Diciembre de 1911, primera tormenta: la torre vibra, el mercurio de la cuba se desborda y se agrietan los cristales de la linterna (hecho 44, ALTA).
-- [H] La ficha oficial reconoce «defectos debidos sin duda a la voluntad de respetar los plazos», sobre todo en el zócalo, subestimado en tamaño y en unión con la torre (hecho 44). Cita corta y atribuida.
-- [H] Testigo independiente: Nividic, decidido el 5 de enero de 1910, con 160.000 francos frente a los 850.000 de La Jument; reutiliza el equipo de La Jument, con Heurté en la obra, y un defecto de construcción de La Jument obliga a parar para consolidar. Torre de 35,5 m diseñada para no tener fareros, con telecontrol desde Créac'h (hecho 49, MEDIA). Se abre B9 con una frase: ¿por qué pensar en 1910 un faro sin fareros?
-- [H] 1914: los créditos de consolidación solo se desbloquean entonces; ese año en Kéréon había 12 albañiles y tras la movilización quedaron 7, seis de ellos al frente (hechos 45 y 50). Recortable.
-- [H] Del 28 de diciembre de 1917 al 6 de noviembre de 1918 el faro está apagado por la guerra submarina; se aprovecha para colocar una coraza de hormigón armado en la base (hecho 46).
-- [H] 1934: el ingeniero Coyne refuerza con tres cables metálicos interiores de unos 30 m anclados en la roca; refuerzos escalonados hasta mediados de los años treinta (Mérimée dice 1924 y una divulgación 1940: «hacia mediados de los años treinta, según la ficha oficial») (hecho 47). De 1911 a 1934, 23 años de remiendos.
-- [H] Otra voz: Henri Queffélec publica Le Phare (1975) y La Lumière enchaînée (1976), novelas sobre la obra y el refuerzo de la base (hecho 62). Una frase.
-- Corte al presente y cierre de B3: la ficha oficial dice que «hoy todavía» es uno de los faros más vigilados. Se dice con la frase ancla del gancho.
-- No se anticipa todavía la lectura de la foto como examen de la torre.
-
-Gancho de salida: «la torre estaba por fin cosida a la roca. Pero un faro no se mide en cables, se mide en noches, y hay una noche de septiembre de mil novecientos setenta y cuatro que no cuadra con una torre a salvo».
-
-### 11. LA NOCHE EN LA COCINA (520)
-
-Objetivo: mini giro (reforzada no significa intacta) y paso de la torre a las personas. Presentar el oficio con honestidad: de los fareros de La Jument se sabe poco, y se avisa cada vez de qué faro se habla. Abre B10 y B11. Función de la tormenta: el susto (1974) y el aislamiento (1923).
-
-- [T] Septiembre de 1974, según la ficha francesa (fuente única): una ola rompe la linterna y se lleva la lámpara; entra agua por la escalera; los fareros Jean-Claude Roger y Noël Violant se refugian en la cocina y pasan la noche recogiendo el mercurio derramado (hecho 61, MEDIA). No se conoce la fecha exacta; decir «la lámpara» sin «petróleo».
-- [H] Oficio: encender, vigilar y apagar la luz, vigilar el horizonte, sirena de niebla, mantener óptica y torre; el Servicio de Faros y Balizas nace por decreto de Napoleón el 7 de marzo de 1806; desde 1848 los fareros son funcionarios; reclutamiento entre ex marinos y soldados; oficios paralelos como pintor o cerrajero (hechos 14 y 51). Sin datos de alcoholismo.
-- [No se sabe] De La Jument se desconocen turnos, comida, sueldos, cuántos fareros por turno y desde cuándo hubo helicóptero. Los turnos de 14 días en el faro y 7 en tierra desde 1971 son de Ar-Men (hecho 59). Se dice sin rodeos.
-- [H] Ar-Men, 15 de enero de 1921: el jefe Sébastien Plouzennec, mirando un barco con prismáticos, es arrastrado por una ola; después se instala una barandilla (hecho 52). Sin añadir su destino.
-- [H] Ar-Men, 1922: tres fareros pasan 89 días sin víveres. Diciembre de 1923: tras 26 días de temporal, incendio en la cocina combatido 17 horas con agua de mar (hechos 53 y 54). Una cifra por episodio.
-- [T] Voz añadida: Jean-Pierre Abraham, farero de Ar-Men de 1959 a 1963, autor de Armen (1967); su frase sobre querer ir a «esa vela que sale del agua» y que le parecía aberrante (hecho 58, verificable; una frase atribuida o parafraseada).
-
-Gancho de salida (doble): «pregúntate qué pasa si nadie viene a relevarte. En diciembre de mil novecientos veinticinco dos hombres lo comprobaron en otra roca. Y hay un faro de esa costa del que se decía que volvía locos a quienes vivían en él».
-
-### 12. LA BANDERA NEGRA (700)
-
-Objetivo: cerrar B10 y B11 y enseñar el método de separar leyenda y mecanismo antes de llegar a la foto. Función de la tormenta: la ley.
-
-- [H] La Vieille, diciembre de 1925: dos mutilados de guerra, Mandolini y Ferracci, colocados por la ley de 1924 de empleos reservados, quedan solos semanas en las tormentas e izan la bandera negra (hecho 55, MEDIA; prensa de 1926).
-- [T] 19 de febrero de 1926: se pierde la goleta La Surprise, con diez muertos; según testigos, la luz no estaba encendida y la sirena sonaba a ratos. Versión de testigos; no se acusa a los dos hombres, que estaban aislados.
-- [H] 28 de febrero de 1926: Nicolas Kerninon, jefe de Ar-Men, y un pescador joven los rescatan a nado, atados a una cuerda. Llega al Parlamento; en 1927 un decreto saca los faros en mar de los empleos reservados. Se cierra B10.
-- [H] L'Équipier (Philippe Lioret, estreno en Francia el 3 de noviembre de 2004): ficción ambientada en 1963 en La Jument, rodada allí, con un mutilado de la guerra de Argelia como segundo farero; tres nominaciones a los César (hecho 70). Que recuerde a La Vieille es lectura del narrador, no hecho.
-- [H] Tévennec, luz el 15 de marzo de 1875, torre de 11 m con casa adosada: unos 23 guardianes en 35 años, con locura o muerte documentadas en varios por el propio servicio (Guézennec, 1876 a 1879; Menou, 1885; otros tres fallecidos) (hecho 19). Tono respetuoso, sin detalles morbosos; sin el cuerpo guardado en sal.
-- [Leyenda frente a mecanismo] Leyenda de lugar maldito recogida por Le Carguet (1891), Le Braz y Le Goffic; explicación geológica: una falla submarina en la que la marea comprime aire y suena como estallidos, hallada por buzos en los años noventa (mitos, MEDIA-ALTA). Contraste humano: Marie-Jacquette y Louis Quéméré, en Tévennec de 1900 a 1905, lo recuerdan como «el mejor periodo de su vida». Se cierra B11.
-- Regla del narrador que prepara la foto: cada leyenda tiene una falla debajo, y hay que mirar qué hay en el fondo antes de creer o desmentir.
-- Recortable: el sistema Temperley de 1926.
-
-Gancho de salida: «ya sabes cómo se construye la torre, cómo se refuerza y cómo se vive dentro. Falta la fecha. Y empieza cinco días antes, con otro faro y el mismo fotógrafo».
-
-### 13. DOS FAROS Y UN HELICÓPTERO (590)
-
-Objetivo: entrar en la semana de diciembre de 1989 sin dar todavía lo que ocurrió en la puerta. Escalada y proximidad. Función de la tormenta: la foto.
-
-- [H] 16 de diciembre de 1989, Kéréon, 18:10: una ola revienta dos ojos de buey de la cocina, lanza a los fareros, el mobiliario acaba en el mar y estallan siete cristales de la óptica a 42 m; taparon la óptica con lonas y no se apagó. Fuente citada en la ficha francesa: Guichard y Gast, «Les phares: Enfers et Paradis» (1999) (hecho 63, MEDIA).
-- [H] Jean Guichard: nacido en París el 28 de abril de 1952, fotoperiodista (Sygma, Gamma), cofundó la agencia GLMR en 1989 y se especializó en faros; autor de «Tous les phares de France» y, con René Gast, del libro que cita lo de Kéréon. No se usa su reportaje «Chasseur de tempêtes» (no leído).
-- [H] 21 de diciembre de 1989: siete fotos de La Jument con el mismo encuadre (hecho 64).
-- [T] Según la versión inglesa: un frente de bajas desde Irlanda trajo vendavales; las olas rompieron ventanas bajas, inundaron la torre y se llevaron muebles (hecho 65). Esa versión añade que las olas arrancaron una puerta pero no cuándo ni cuál: no se afirma nada sobre el estado de la puerta salvo lo visible en la foto («abierta, con un hombre en el umbral»).
-- [T] Guichard alquiló un helicóptero en Lorient y voló en condiciones muy peligrosas; el helicóptero llegó y se quedó cerca (hecho 65).
-- [No se sabe] Quién encargó o avisó del helicóptero, la hora real y la primera publicación. Tampoco se sabe si el 16 y el 21 fueron el mismo sistema de temporales (hay cinco días entre uno y otro y no se ha podido comprobar con datos meteorológicos): decir «dos faros golpeados en la misma quincena», con cautela.
-- Se da a Kéréon la función de espejo del Fromveur; no se repite su historia de la 6.
-- Pista previa para la revelación: la torre ya había aguantado una ola sobre la linterna en 1974 (sección 11).
-
-Gancho de salida (no revela): «el helicóptero está quieto frente a la torre, con el mar subiendo. Y en una de las siete fotos, la puerta ya está abierta. Esto es lo que se sabe de lo que pasó antes de que el obturador sonara».
-
-### 14. EL UMBRAL (700)
-
-Objetivo: revelación mayor (77 a 86 por ciento, núcleo hacia el 80). Responder B1 con lo documentado, sin inventar diálogo ni reconstruir pensamientos de Malgorn. Cerrar con la lectura marcada del narrador y abrir B12.
-
-- [T] Según la versión inglesa, que cita «Celtic Countries» (enero de 2001) y «Der Stern» (4 de diciembre de 2007): Malgorn bajó al oír el helicóptero; una ola gigante se alzó por detrás del faro; volvió a entrar a tiempo (hecho 65, MEDIA). La Wikipedia inglesa lleva una etiqueta de falta de citas desde agosto de 2022: decir «una sola versión, con fuentes que no se han podido abrir».
-- [T] Cita atribuida a Malgorn por la revista alemana de 2007: «si hubiera estado un poco más lejos de la puerta, no habría podido volver a entrar en la torre». Añade que habría muerto y que con el mar no se juega (hecho 66, BAJA-MEDIA). Una sola frase corta, atribuida y de segunda mano. «Casi muere» es condicional, de su propia cita: sobrevivió.
-- [H] El pie de foto de Guichard, en inglés: «the keeper has survived to the wave» (parafrasear: el farero ha sobrevivido a la ola). El pie ya traía el desenlace.
-- [No se sabe] Por qué abrió: ni su rango, ni cuántos fareros había esa semana, ni quién avisó del helicóptero. Que creyera que era un helicóptero de rescate aparece en un informe sin fuente directa: no se afirma. «Salió a posar» o «a desafiar al mar» no tienen base (hecho 66, mitos, BAJA).
-- [Lectura propia, marcada] La torre que vibró en 1911 y se reforzó en 1914, 1917 y 1918 y 1934 es la que aparece en la foto 78 años después, con unos cables que llevaban 55 años dentro. La foto no prueba el coraje de un hombre; si prueba algo, es que el refuerzo funcionó. Ninguna fuente lo dice así: decir expresamente que es una lectura del narrador.
-- Eco de la proella (sección 3): en esa isla se hacía una cruz de cera cuando el cuerpo no volvía. Una frase; se paga en la 17.
-- Respeto absoluto a Malgorn y a Guichard: sin morbo, sin culpar a nadie del helicóptero, sin dramatizar la escena.
-- Se cierra B1. Se abre B12.
-
-Gancho de salida: «sabemos su apellido y una frase. Y hay quien afirma que nada de esto ocurrió así. Vamos con esa duda».
-
-### 15. ¿ES REAL LA FOTO? (500)
-
-Objetivo: cerrar B2 con lo que se puede y no se puede decir y contar la vida posterior de la imagen. La hipótesis sobre la viralidad ocupa menos de 90 segundos.
-
-- [No se sabe] No se ha encontrado ninguna fuente que sostenga que sea un montaje; la acusación circula pero no se ha podido localizar su origen ni consultar la verificación de Snopes. Se dice «no hay prueba de montaje en lo que se ha podido leer», no «es verdadera» (mitos, MEDIA).
-- [H] A favor de que sea auténtica: la serie de siete fotos con el mismo encuadre; la cita de Malgorn recogida por prensa alemana; otro faro, Kéréon, dañado por un temporal en la misma quincena; y una ola máxima de 24,60 m medida entre 2017 y 2018 en el entorno de La Jument (hecho 74).
-- [No se sabe] Ninguna fuente da la altura de la ola de la foto; la versión inglesa habla de olas de 20 a 30 m sin fuente directa. La foto muestra espuma sobre la torre, no una pared de agua de 47 m. Se cierra B2.
-- [Límite] Existe un estudio en «Philosophical Transactions of the Royal Society A» sobre ese mar; no se explica su física porque no se ha leído. Decirlo una vez, sin lamento.
-- [H] Después de la foto: segundo premio del World Press Photo; las fuentes dudan entre 1990 y 1991 y no se conoce la categoría: decir «a comienzos de los años noventa» (hecho 67). No dar cifra de pósters. En 2006 aparece en «Los infiltrados», de Scorsese, en el piso del personaje de Matt Damon (hecho 71, MEDIA).
-- [Hipótesis marcada] Por qué sigue viva hoy no hay datos de plataformas ni fechas. Hipótesis del narrador, máximo 90 segundos: la escala de un hombre frente a la ola, la puerta abierta, la duda de si es real y su reutilización en cine y pósters.
-- Competencia: comprobar antes de grabar un video de 73 minutos de Amixem fechado el 4 de octubre de 2026 citado en la ficha de Kéréon; no se menciona en el guion.
-
-Gancho de salida: «hasta aquí hemos hablado de la imagen. Falta lo que pasó con el faro después de la foto, y con quienes vivían en él».
-
-### 16. EL ÚLTIMO TURNO (450)
-
-Objetivo: legado y qué se sabe hoy. Cerrar B9. Dejar a la vista que la protección oficial incluye el zócalo, el mismo punto débil de 1911. Preparar la pregunta final sobre el hombre.
-
-- [H] La Jument se electrifica en 1990; el 26 de julio de 1991 se automatiza y los fareros se van (hecho 68, ALTA).
-- [H] Cadena de automatizaciones, tres datos como máximo: última guardia en Ar-Men el 10 de abril de 1990 (Daniel Tréanton y Michel Le Ru, izados en helicóptero); La Vieille, el 14 de noviembre de 1995, con cuatro fareros esa última noche porque dos se habían negado a relevarse en protesta; Kéréon, el 29 de enero de 2004, «el último infierno» (hecho 69).
-- [H] Se cierra B9: Nividic nació sin fareros (torre de 35,5 m con telecontrol desde Créac'h) y fue el primer faro de Francia con plataforma de helicóptero sobre la linterna (pruebas el 26 de septiembre de 1958) (hecho 49). Lo que se pensó en 1910 se cumplió.
-- [Mito] El último farero de Francia no era de La Jument: fue Henri Richard, en Cap Fréhel, el 1 de septiembre de 2019 (hecho 75).
-- [H] 2014: nuevo derrame de mercurio en un temporal; evacuación el 25 de marzo de 2015 y linterna sustituida por LED (hecho 72). 2023: panel solar con grupo electrógeno de respaldo y control a distancia desde Créac'h (hecho 76).
-- [H] Corte al presente: clasificación como monumento histórico el 20 de abril de 2017 «en totalité, y compris soubassement», es decir, en su totalidad, incluido el zócalo; propiedad del Estado (hecho 73, ALTA). Observación del narrador: el zócalo es justo el punto subestimado en 1911.
-- Fuera por defecto: Créac'h 2025, Sabella, UNESCO, ovejas, Amoco Cadiz, Napoleón en 1815 (tangentes del dossier, sección 6.6).
-
-Gancho de salida: «hemos recorrido la torre, el mar y la foto. Queda una pregunta que no es sobre piedra ni sobre olas, sino sobre un hombre».
-
-### 17. CIERRE (235 palabras: unas 100 propias y 135 del texto fijo)
-
-Objetivo: gancho final propio (uno o dos párrafos) que cierra el último bucle, deja una idea que se queda y devuelve la puerta; después el texto fijo, literal.
-
-- Cierra B12 con honestidad: no se sabe nada de la vida posterior de Théodore Malgorn; en 2007 una revista alemana se preguntó qué había sido de él, y lo que se conserva es una sola frase suya.
-- Cruz de cera: en esa isla, entre 1734 y 1792, cuando el mar no devolvía el cuerpo de un marino se hacía una cruz de cera (dato de la 3; decir el periodo documentado, no «durante siglos»). Esta vez el hombre volvió a entrar.
-- Idea que se queda (Lectura del narrador, marcada): ese segundo descansa en gente que no sale en la foto, los obreros que le robaron 52 horas al mar en un año, los isleños que amortajaron a desconocidos con lona de velas, los ingenieros de los 23 años de refuerzos, los fareros que se fueron en 1991. Sin resumen, sin moraleja pegada, sin pregunta nueva. Una frase final que devuelve la imagen de la puerta.
-- Texto fijo del canal, literal e intocable: el cierre del video 1, «Esto ha sido Todos Lo Vieron…» hasta «Nos vemos en el próximo capítulo de misterio» (135 palabras contadas en guiones/dawson-guion-01.md). Sin línea de ayuda: esta historia no la requiere.
-
-Gancho de salida: el cierre fijo del canal.
-
-## 6. Compactar (orden de recorte, de lo periférico a lo central)
-
-Si al escribir o al leer en voz alta una sección suena a relleno, se recorta en este orden y se avisa de qué se quitó y por qué. Cada paso indica palabras aproximadas ahorradas. Con los pasos 1 a 9 se ahorran unas 900 palabras y se llega a unos 40 minutos (unas 7.330 palabras).
-
-1. Vesper y Rose Héré (5), 60 palabras.
-2. Le Four y la obra de La Vieille (8), 80.
-3. Fénoux (8), el aviso del Journal officiel (7), Île Vierge dentro de la presentación de Heurté (7), unas 80 entre los tres.
-4. Los doce albañiles de Kéréon (10), 45.
-5. Plouzennec y 1922 en Ar-Men (11), y Abraham, 130.
-6. Tévennec (12), de 260 a unas 100 palabras, 160.
-7. L'Équipier (12), 70.
-8. Queffélec (10) y Gorgone (3), 75.
-9. De la 15 y la 16: la hipótesis de la viralidad, el estudio de la Royal Society y el detalle de 2014 a 2023, 200.
-10. Nividic como descripción técnica (10) y la bio de Guichard (13), 130, solo si hiciera falta bajar de 40 minutos.
-
-Los ocho momentos fuertes del dossier no se tocan nunca: las 52 horas, el testamento que llegó después del plano, la torre que tembló, el Drummond Castle y el reloj, Ar-Men, la bandera negra, Tévennec (solo en su versión corta) y la puerta.
-
-## 7. Pendientes de verificar antes de grabar
-
-En el guion irán atribuidos o como «no se sabe».
-
-1. Subir el límite de búsqueda y resolver: Snopes y el debate de autenticidad, el relato de Guichard, el Stern de 2007, el año y la categoría del World Press Photo.
-2. Distancia de La Jument a la costa de Ouessant (el dossier da unos 300 m con confianza media, sin ficha oficial): si no se confirma, decir «frente a la costa».
-3. Ribière en Gallica y la fecha desde la que contaba el plazo de siete años.
-4. Estudio de la Royal Society (doi 10.1098/rsta.2019.0008).
-5. Consulta a Météo-France sobre el 16 y el 21 de diciembre de 1989.
-6. El video de 73 minutos de Amixem (4 de octubre de 2026): puede ser competencia directa en el mismo tema o la señal de que el formato largo funciona.
-7. Intro y cierre fijos: el texto de la intro no está en los archivos; lo inserta el ensamblador. El cierre es el del video 1.
+| B1 | Mayor | ¿Por qué abrió la puerta el hombre de la foto y qué pasó en el segundo siguiente? («la puerta») | 1 | 13 | Esperaban un helicóptero de rescate; abrió, vio la ola y cerró de golpe (según Guichard) |
+| B2 | Menor | ¿Sobrevivió y qué se sabe de él? | 1 | 14 | Sí (la esencia en la 13); de su vida posterior solo una frase y un artículo de 2007 |
+| B3 | Menor | ¿De dónde sale la fecha que todos repiten? | 1 | 14 | La ficha del premio dice 1-feb-1990; no se sabe cuál es |
+| B4 | Menor | ¿Qué tienen que ver un testamento y un número de horas que parece un error de imprenta? («cincuenta y dos horas») | 1 | 6 | Potron, el plazo y las 52 horas del primer año |
+| B5 | Pista falsa 1 | ¿Nace La Jument del Drummond Castle y de un millonario? | 3 | 5 | No hay prueba causal; Mérimée documenta 1853, los 31 naufragios y el legado; la decisión de 1904 es anterior a la muerte de Potron |
+| B6 | Menor | ¿Llegó a tiempo el faro? («el reloj del testamento») | 5 | 8 | Mérimée dice que pudo cumplirse; no consta desde cuándo contaba el reloj |
+| B7 | Micro | ¿Eran normales las 52 horas? | 6 | 7 | Con Bell Rock y Ar-Men: lo anormal era el calendario |
+| B8 | Pista falsa 2 | ¿Se hizo a tiempo y sin problemas? | 8 | 9 | Vibró, se remendó durante 23 años y se ató a la roca en 1934 |
+| B9 | Menor | ¿Qué dirá un siglo después un organismo oficial sobre los cálculos de esta torre? | 9 | 12 | Se diseñó sin calcular fuerzas de oleaje |
+| B10 | Menor | ¿Qué fue de los fareros? («nadie viene a relevarte») | 10 | 15 | 26-jul-1991 se automatiza y salen; el oficio acaba en Cap Fréhel en 2019 |
+| B11 | Micro | ¿Estaba maldito Tévennec? | 10 (primeras 120 palabras) | 10 (tras la palabra 400) | Falla bajo el islote y aire comprimido; cada leyenda tiene una falla |
+| B12 | Micro | ¿Qué clase de ola hace esto y cuánto medía la de la foto? | 11 | 12 | Hasta 24 m medidos, 19 m la que golpeó la torre; la de la foto no tiene medida |
+| B13 | Eco | «Mejor aún prevenir que socorrer» | 5 | 16 | Se cobra en el cierre como lectura del narrador |
+
+Todos se cierran y ninguno tarda menos de unas 275 palabras (90 segundos). B7, B11 y B12 son ganchos menores de minuto y medio, no bucles estructurales; los estructurales son una pregunta mayor y seis menores (B2, B3, B4, B6, B9, B10), más dos pistas falsas y un eco.
+
+## 5. Calendario de retención
+
+| Minuto | Porcentaje | Función |
+|---|---|---|
+| 0:00 a 1:28 | 0 a 3 | Gancho |
+| 1:28 a 1:54 | 3 a 4 | Intro del canal |
+| 1:54 a 7:12 | 4 a 17 | Mundo y grieta; re-gancho al 4:21 («la noche del naufragio») y al 7:12 (la fecha de 1904 que no encaja) |
+| 7:12 a 13:26 | 17 a 31 | Testamento y obra; re-ganchos al 10:28 (el número de horas) y al 13:26 (¿era normal?) |
+| 16:09 a 18:50 | 38 a 45 | Falso final (luz roja), al 45 % |
+| 18:50 a 22:33 | 45 a 54 | Giro: la torre tembló y se ató con cables |
+| 22:33 a 29:10 | 54 a 69 | Vida del farero y mar que entra; mini giro al 66-70 % |
+| 29:10 a 32:00 | 69 a 76 | La fuerza que nadie calculó |
+| 33:52 a 34:31 | 80,6 a 82,2 | Revelación mayor: la puerta |
+| 35:56 a 38:40 | 86 a 92 | Remate: la fecha |
+| 38:40 a 42:00 | 92 a 100 | Legado, eco y cierre |
+
+Un re-gancho estructural cada 3 a 4 minutos y un gancho menor cada minuto y medio aproximadamente.
+
+## 6. Reglas de juego limpio
+
+Dos pistas falsas, nombradas como lo que la gente cree y corregidas con pistas verdaderas ya dadas.
+
+1. «La Jument nace del Drummond Castle y de un millonario». Se abre en la 3 y se corrige en la 5 con el balizado de 1853, los 31 naufragios y la decisión ministerial del 20-feb-1904.
+2. «Se hizo a tiempo y sin problemas». Falso final de la 8, con tres pistas previas: el 6 % de 1905, la base más pequeña y el interior sin acabar.
+
+La revelación mayor se prepara con tres pistas previas, repartidas: (1) quien vive en la roca depende de que alguien llegue (relevos, 89 días, bandera negra de La Vieille; sección 10); (2) el mar ya había entrado en estas torres (1974 y Kéréon; sección 11); (3) un helicóptero es la forma de llegar a una roca cuando el barco no puede (Nividic 1958 y el último relevo de Ar-Men; secciones 9 y 10); y la medida científica de la ola que golpea cerca de la base (sección 12).
+
+Cada vez que se habla de otro faro (Ar-Men, La Vieille, Tévennec, Bell Rock, Eddystone, Nividic, Kéréon) se avisa de que no es La Jument y se explica qué pregunta ayuda a contestar. Anclas repetidas con las mismas palabras al abrir y cerrar: «la puerta», «cincuenta y dos horas», «el reloj del testamento», «nadie viene a relevarte».
+
+## 7. Frases y datos prohibidos
+
+- «A pocos días de vencer el plazo». «Olas de treinta metros» salvo para desmentirlas una sola vez. «Un millón de pósteres». «El 21 de diciembre de 1989» como hecho: solo como la fecha que repiten, en la 14. «Aparece en Los infiltrados». «Cinco días antes de la foto» y «ese mismo invierno» (Kéréon). «Dos meses después de encendida».
+- «Torre de granito» (el dossier dice piedra), «torre de hormigón» para la actual, «mismo encuadre», «sale en una sola», «no tiene ninguna fuente detrás» (el dossier dice que no se ha visto ninguna fuente primaria).
+- Que el farero salió a posar o a desafiar al mar, que fuera el jefe, el número de fareros, el nombre del piloto, ningún diálogo ni pensamiento de nadie. La altura focal de la torre (solo la total, 47,40). La cifra exacta de muertos del Drummond Castle (decir «más de doscientos cuarenta»). Los nombres de los supervivientes.
+- «Caso» solo dos o tres veces como mucho. Sin «mito» en el gancho. Sin clichés («nadie podía imaginar»).
+- Respeto: Malgorn, Guichard, los muertos del Drummond Castle, el obrero ahogado de Ar-Men, Plouzennec, los de La Surprise. Sin morbo ni acusaciones. De los dos hombres de La Vieille, sin culpa.
 
 ## 8. Alertas de escritura para voz IA
 
-1. Todo número, año, fecha y medida va en letra; «por ciento» en palabras; ninguna palabra en mayúsculas, ni en las citas ni en los títulos de segmento dentro del texto leído; sin paréntesis, comillas de dirección, viñetas ni líneas «---».
-2. Máximo una o dos cifras por bloque. Las series de números (horas, francos, metros cúbicos) van ligadas a la acción de alguien, nunca en cadena.
-3. Citas textuales de otros, solo cinco o seis frases cortas y atribuidas en todo el video: el aldeano de Gruyer (5), la ficha oficial del patrimonio (dos, 10 y 1), Malgorn (14), el pie de foto de Guichard (14) y, si se mantienen, Fénoux y Abraham. Todo lo demás, paráfrasis.
-4. Voz del narrador: una voz de amigo que investiga. «Los archivos dicen», «esto no cuadra», «hasta aquí lo que se sabe y aquí lo que no» como máximo tres o cuatro veces en todo el video, para que no se vuelva muletilla. Sin anécdotas personales del narrador y sin quejarse de las herramientas de búsqueda: lo que no se pudo abrir se dice en impersonal («no se ha podido consultar»).
-5. Marcar siempre qué es hecho, testimonio, hipótesis o leyenda. Las tres lecturas del narrador (la foto como examen de la torre, que L'Équipier recuerda a La Vieille, que el zócalo es el mismo punto débil) se dicen como lectura propia.
-6. Respeto a Malgorn, Guichard, las víctimas del Drummond Castle y los obreros: sin morbo, sin reconstruir pensamientos ni diálogos, sin culpar a nadie del helicóptero ni de La Surprise.
-7. «Caso» solo cuando haga falta. Sin «nadie podía imaginar» ni «lo que ocurrió después te dejará sin palabras».
-8. No mezclar el 16 y el 21 de diciembre: «dos faros golpeados en la misma quincena». No afirmar nada sobre el estado de la puerta salvo lo visible en la foto. No decir «petróleo» en 1974. No decir «por los pelos» del plazo. No dar altura a la ola de la foto ni explicar la física de las olas.
-9. Cada faro hermano debe avisar de qué faro habla cada vez que se cambia de roca; los turnos y la vida a bordo que se cuentan son de Ar-Men, no de La Jument.
+- Todo número, año, fecha y medida en letra. No más de tres cifras seguidas: redondear. Sin paréntesis, símbolos ni mayúsculas (citas en minúscula).
+- Sin siglas. Cerema: describirlo primero («un organismo público francés de ingeniería») y decir el nombre una sola vez. Evitar EPFL, AWAC, GLMR, DIRM, GRT. «World Press Photo» se escribe tal cual y se anota su pronunciación.
+- Una cita corta por tema, atribuida (Gruyer, Abraham, Malgorn, Potron). Frases con verbo; nada de «Una montaña. Un edificio.».
+- Un cartel de bloque por sección como máximo. Muletillas («fíjate», «acuérdate») una vez cada tres o cuatro minutos.
 
-## 9. Lista de pronunciación (se apunta aparte y se comprueba con la voz real)
+## 9. Si al leer en voz alta algo suena a relleno
 
-Ouessant, Fromveur, Molène, Ar Gazeg, La Jument, Kéréon, Men-Tensel, Ar-Men, Tévennec, La Vieille, Le Four, Nividic, Créac'h, Stiff, Lorient, Guichard, Malgorn, Gruyer, Potron, Willotte, Heurté, Ribière, Coyne, Holweck, Lejeune, Drummond Castle, Werfa, Pierce, Macquar, Fénoux, Joly, Sein, Plouzennec, Kerninon, Mandolini, Ferracci, Quéméré, Guézennec, Menou, Le Dall, Lebaudy, Queffélec, Lioret, Primelin, Île Vierge, Rose Héré, Tréanton, Le Ru, Abraham, Violant, Gast, Sygma, Gamma, Cap Fréhel, Henri Richard.
+Se recorta en este orden (unas 900 palabras, hasta unos 37 minutos): Eddystone en la 7; opcionales de la 8 (licitación de la linterna, inscripción de Potron); Plouzennec, Servicio de Faros de 1806 y Abraham en la 10; matrimonios de Tévennec y detalles de Kéréon en la 11; Draupner en la 12; la biografía de Guichard en la 13; el expediente de Heurté en la 6; los opcionales de la 15. Por debajo de 38 minutos habría que renunciar a los faros vecinos y se perdería la mejor comparación.
+
+## 10. Verificar antes de grabar
+
+Fuente única o sin leer: la ola de 1974; Kéréon 1989 (Guichard y Gast 1999 vía Wikipedia FR); la escena de la puerta (Lighthouse Digest 2001 y Wikipedia EN, no del todo independientes); la cita de Malgorn (Stern 2007 sin leer); la frase de Gruyer; la cita de Abraham; el cuadro de turnos de Ar-Men; el pie del premio. Toda cifra que viene de WebFetch se comprueba en la página original. Fechas MEDIA: el apagón de 1917 a 1918 y el temporal de diciembre de 1911. Plazo del legado: no consta desde cuándo contaba. La inscripción de Potron en la torre no está en el dossier. La exposición de Guichard hasta el 1-nov-2026 caduca en semanas.
+
+## 11. Pronunciación (anotar aparte y comprobar con la voz real)
+
+Ouessant (uesán), La Jument (la yumán), Ar Gazeg (ar gásek), Fromveur (fromvér), Molène (molén), Créac'h (kreák), Stiff (stif), Ar-Men (ar-mén), La Vieille (la viéi), Tévennec (tevenék), Nividic (nividík), Kéréon (kereón), Potron (potrón), Willotte (uilót), Ribière (ribiér), Heurté (erté), Meunié (menié), Coyne (cuán), Guichard (guishár), Malgorn (malgórn), Lorient (lorián), Godthab (gódthab), Plouzennec (pluzenék), Kerninon (kerninón), Mandolini y Ferracci (a la italiana), proëlla (proélla), cartahu (kartaú), Blodwen, Velléda, Cerema (serema), Filipot (filipó), Draupner (en noruego), Eddystone, Winstanley, Smeaton, Stevenson (en inglés), Fresnel (frenél), Vauban (vobán), Brest (brest), Cap Fréhel (cap frehél), Henri Richard (anrí rishár), Drummond Castle (drámond kásl), World Press Photo (uorld prés fóto), Stern (shtérn).
+
+## 12. Estado de los borradores previos
+
+Este esquema sustituye a uno anterior de 45 minutos y 8.235 palabras en 17 secciones (copia guardada fuera del repositorio). Los borradores borrador/parte-01.md a parte-03.md se escribieron contra ese esquema y deben rehacerse. En parte-01.md, por ejemplo: abre dando «21 de diciembre de 1989» como hecho y nombrando a Malgorn en el gancho, dice «torre de granito», usa el nombre «Macquar» y sitúa la corbeta Gorgone cerca de Molène (la investigación la sitúa en los Pierres Noires, frente a Le Conquet). La intro de 77 palabras de ese archivo sí es válida y es la que se reutiliza.

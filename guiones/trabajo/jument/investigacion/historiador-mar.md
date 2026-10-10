@@ -1,199 +1,151 @@
-# Investigación: Ouessant y el mar de Iroise (encargo historiador del mar)
+# Investigación: Ouessant y el mar de Iroise (encargo del historiador del mar)
 
-Proyecto: guion «Todos Lo Vieron» sobre el faro de La Jument. Duración objetivo: 45 min o más (hasta 60), sin relleno.
+Guion: «El faro de La Jument» — canal Todos Lo Vieron. Fecha de la investigación: 2026-10-10.
 
-AVISO DE ALCANCE: el presupuesto de WebSearch se agotó tras 5 búsquedas. El resto del material sale de WebFetch sobre páginas concretas (sobre todo Wikipedia FR/EN, Base Mérimée/POP, un PDF oficial, bateaux.com y un texto de 1899 en Wikisource). Faltan fuentes primarias francesas de prensa y testimonios. Está marcado en «Lagunas». Escala de confianza: ALTA, MEDIA, BAJA.
+## Aviso de método y límites (leer primero)
 
-Fuentes abreviadas:
-- [WP-EN-Jument] https://en.wikipedia.org/wiki/La_Jument
-- [WP-FR-Jument] https://fr.wikipedia.org/wiki/Phare_de_la_Jument
-- [POP] https://pop.culture.gouv.fr/notice/merimee/IA29000453 (notice histórica oficial, Base Mérimée)
-- [WP-FR-Ouessant] https://fr.wikipedia.org/wiki/Ouessant
-- [WP-EN-Drummond] https://en.wikipedia.org/wiki/SS_Drummond_Castle
-- [WP-FR-Drummond] https://fr.wikipedia.org/wiki/Drummond_Castle
-- [Gruyer1899] https://fr.wikisource.org/wiki/OUESSANT (Paul Gruyer, «Ouessant», Le Tour du monde, 1899)
-- [Bateaux-Rail] https://www.bateaux.com/article/43436/rail-d-ouessant-comment-le-naufrage-de-l-amoco-cadiz-a-change-la-circulation-maritime-dans-la-manc
-- [CROSS-60] https://www.ecologie.gouv.fr/sites/default/files/documents/03062026_DP_60_ans_CROSS.pdf (dossier de prensa oficial, 60 años de los CROSS)
-- [WP-FR-Fromveur] https://fr.wikipedia.org/wiki/Passage_du_Fromveur
-- [WP-FR-Kéréon] https://fr.wikipedia.org/wiki/Phare_de_K%C3%A9r%C3%A9on
-- [WP-FR-Créac'h] https://fr.wikipedia.org/wiki/Phare_du_Cr%C3%A9ac%27h
-- [WP-FR-Stiff] https://fr.wikipedia.org/wiki/Phare_du_Stiff
-- [WP-FR-OlympicBravery] https://fr.wikipedia.org/wiki/Olympic_Bravery
-- [Guichard-web] https://www.jean-guichard.com/en/propos
-- [WP-EN-Guichard] https://en.wikipedia.org/wiki/Jean_Guichard
+- El presupuesto de WebSearch se agotó tras 5 búsquedas (la 5.ª, sobre el Drummond Castle, no se ejecutó). El resto se hizo con WebFetch sobre páginas concretas (Wikipedia FR/EN, base Mérimée/POP del Ministerio de Cultura, Cerema, bateaux.com, web del fotógrafo).
+- Casi todo el material viene de Wikipedia o de resúmenes de ella, más Mérimée y Cerema (fuentes más sólidas). Por eso muchos datos están en confianza MEDIA aunque coincidan entre varias páginas: dependen de la misma base.
+- NO se ha podido verificar: la polémica de «foto falsa/montaje», la versión del farero con voz propia (entrevista Stern 2007 citada pero no leída), ni el relato del fotógrafo más allá de lo que resumen las wikis. No se ha buscado en francés con motor de búsqueda, sólo con páginas FR cargadas directamente.
+- Varias URL previstas dieron 404 (Wikipedia FR del Drummond Castle (navire), Proëlla, Jean Guichard (photographe), Tempête de décembre 1989, CROSS Corsen).
+- Se recomienda una segunda pasada (con presupuesto de búsqueda) para: Stern 2007, entrevistas Ouest-France/Le Télégramme sobre Malgorn y Guichard, testimonios de fareros de La Jument, y la acusación de montaje.
+
+Escala de confianza: alta / media / baja.
 
 ---
 
-## 1. El lugar: Ouessant y el mar de Iroise
+## 1. Hechos sobre La Jument (contexto necesario para mi tema)
 
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 1 | Ouessant (Enez Eusa en bretón, Ushant en inglés) está a unos 20 km de la costa oeste de Finistère. Isla de ~8 km x 4 km y 15,58 km². Es la tierra más occidental de la Francia metropolitana, salvo el roquedal de Nividic. | Documentado | [WP-FR-Ouessant] | Alta |
-| 2 | Población: 1.285 habitantes en 1685, máximo de 2.853 en 1911 (el año en que se enciende La Jument), 860 en 2023. | Documentado | [WP-FR-Ouessant] | Media-alta (Wikipedia citando censos) |
-| 3 | Es «la comuna más ventosa de Francia» (media de 27 km/h). Casi no hiela: unos 4 días al año frente a 15 en Brest. Récord de frío -7,7 °C (13/1/1987). | Documentado | [WP-FR-Ouessant] | Media |
-| 4 | El paso del Fromveur separa Ouessant del archipiélago de Molène. Corrientes locales de hasta ~9 nudos (8-10 según otra versión) sobre una falla de unos 60 m. Es peligrosísimo cuando el viento va contra la corriente. | Documentado | [WP-FR-Fromveur], [WP-FR-Ouessant] | Media-alta |
-| 5 | Dicho local: «Nadie pasa el Fromveur sin conocer el miedo». La propia Wikipedia avisa de que no tiene fuente. | Leyenda/dicho | [WP-FR-Fromveur] | Baja |
-| 6 | Proverbio bretón recogido en 1899: «Qui voit Ouessant voit son sang» («Quien ve Ouessant ve su sangre»). Gruyer lo cita en el texto. | Dicho recogido por testigo | [Gruyer1899] | Media |
-| 7 | Más de 20.000 barcos pasaban cada año por el oeste de Ouessant a principios del siglo XX, según el ministerio. Entre 1888 y 1904 se perdieron 31 navíos en la zona. | Documentado (notice oficial) | [POP] | Alta |
-| 8 | Medición de oleaje invernal 2017-2018 junto a La Jument: ola máxima de 24,60 m. Sirve para calibrar lo que muestra la foto. | Documentado (medición) | [WP-FR-Jument] | Media (falta la fuente primaria) |
-| 9 | Ouessant es la primera víctima de las mareas negras de la zona, aunque son relativamente raras. Hay municiones químicas arrojadas cerca (tabún, sarín) según la fuente. | Afirmación enciclopédica | [WP-FR-Ouessant] | Baja-media (verificar antes de usarlo) |
-| 10 | Reserva de la Biosfera del Mar de Iroise (UNESCO, 1988). Colonia de foca gris del Cabo Cadoran, la más meridional de Europa. | Documentado | [WP-FR-Ouessant] | Media |
+1. **Construcción 1904-1911, luz encendida el 15 de octubre de 1911** (el interior no estaba terminado; se tardó unos tres años más en acabar el equipamiento). Confianza ALTA (Mérimée + FR Wikipedia + EN Wikipedia coinciden en 1904-1911 y 1911).
+   Fuentes: https://pop.culture.gouv.fr/notice/merimee/IA29000453 · https://fr.wikipedia.org/wiki/Phare_de_la_Jument
+2. **Legado Potron:** Charles-Eugène Potron, miembro de la Société de Géographie de París, murió el 27 de marzo de 1904 y legó 400.000 francos para un faro en una roca peligrosa del Atlántico (se citaban las de Ouessant). Condición: si no se construía en 6-7 años, el dinero iría a la Société centrale de sauvetage des naufragés. Esto explica la prisa. Confianza ALTA (Mérimée + FR Wikipedia). Un detalle de EN Wikipedia («un rico francés que casi murió en otro naufragio») NO aparece en las fuentes francesas: tratarlo como leyenda/dato dudoso (BAJA).
+   Fuente: https://pop.culture.gouv.fr/notice/merimee/IA29000453
+3. **Inscripción obligatoria en el granito:** «Phare construit en vertu d'un legs de Charles-E. Potron». Confianza MEDIA (FR Wikipedia). https://fr.wikipedia.org/wiki/Phare_de_la_Jument
+4. **Por qué se eligió esta roca:** entre 1888 y 1904 se contaron 31 naufragios en la zona; se estimaban más de 20.000 buques al año frente a Ouessant. Una decisión ministerial del 20-feb-1904 ordenó una torre de hormigón de al menos 7 m de base, luego la obra cambió. Confianza ALTA (Mérimée). https://pop.culture.gouv.fr/notice/merimee/IA29000453
+5. **Obra casi imposible:** el primer año sólo se pudo pisar la roca 17 veces, 52 horas de trabajo. Entre abril y octubre de 1905: 59 viajes, 206 horas, unos 100 m³ de mampostería (≈6 % de los 1.700 m³ previstos). Confianza ALTA (Mérimée). Gancho: «52 horas de trabajo en un año».
+6. **Presión del plazo:** el notario albacea, Maître Meunié, se inquietó desde 1908; en agosto de 1909 el Servicio de Faros lo invitó a visitar la obra. Se cumplió el plazo gracias a organización, capataz y equipos. Confianza ALTA (Mérimée).
+7. **Responsables:** Mérimée cita como autor al ingeniero jefe Ribière (que concluyó que La Jument era el mejor emplazamiento; antes, el ingeniero jefe Willotte). FR Wikipedia atribuye la dirección de obra a Georges Clet Heurté (n. 24-12-1865, Primelin, «conducteur principal» de Ponts et Chaussées). EN/otros hablan de Heurté como ingeniero. CONTRADICCIÓN: Ribière = autor del proyecto (Mérimée, más sólida); Heurté = jefe de obra. Presupuesto estimado total 850.000 francos; proyecto aprobado el 18-nov-1904. Confianza MEDIA.
+8. **Se terminó con la base más pequeña de lo previsto y siete meses tarde** (FR Wikipedia, MEDIA); Mérimée dice que la prisa obligó a reducir las dimensiones de la base (ALTA). Pista «verificada»: construido en 1911, sí.
+9. **Torre mal nacida:** defectos de rigidez y vibraciones anormales; el depósito de mercurio perdía mercurio y se agrietaron cristales de la linterna. En diciembre de 1911 un temporal hizo vibrar la torre y desbordó el mercurio (FR Wikipedia). Refuerzos hasta 1924; durante la guerra submarina (luz apagada del 28-dic-1917 al 6-nov-1918) se encamisó la mampostería con hormigón armado y se ensanchó la base; en 1934 tres cables interiores anclados en la roca (método del ingeniero Coyne). Confianza ALTA (Mérimée) / MEDIA (fechas exactas del apagón, FR Wikipedia).
+10. **Datos técnicos:** torre octogonal con cornisa en voladizo; altura focal citada como 42,65 m (Mérimée) frente a 36 m (EN infobox) y 47,4 m (FR infobox): CONTRADICCIÓN, no dar cifra sin verificar. Luz roja de tres destellos (cada 15 s según EN/Mérimée; 12 s según FR infobox: CONTRADICCIÓN). Señal sonora: 3 pitidos cada 60 s. Electrificado en 1990, automatizado 26-jul-1991 (FR Wikipedia; Mérimée y EN dicen 1990/1991). Pista «principios de los noventa»: CONFIRMADA (1991). Confianza ALTA.
+11. **Sólo 300 m de la costa y fuera del alcance de nadie:** EN Wikipedia habla de una roca a unos 300 m de la costa; FR Wikipedia la sitúa en el arrecife Ar Gazeg («la yegua» en bretón), en la entrada del paso del Fromveur. Confianza MEDIA.
+12. **Septiembre de 1974: una ola rompe la linterna.** Los fareros Jean-Claude Roger y Noël Violant se refugiaron en la cocina y pasaron la noche recogiendo mercurio derramado. Confianza MEDIA (sólo FR Wikipedia). Excelente caso previo a 1989.
+13. **Medición moderna de olas:** campaña invierno 2017-2018 midió una ola máxima de 24,60 m (FR Wikipedia y página de Mer d'Iroise). Cerema (2018) dice que los faros se diseñaron sin calcular fuerzas de oleaje: se fiaban de la experiencia y la masa, y aún no se conocen bien las fuerzas reales. Estudio EPFL 2013, sensores piezométricos, radar en banda X y boyas de France Energies Marines. Confianza ALTA para Cerema. https://www.cerema.fr/en/node/5136
+14. **Protección patrimonial:** inscrito en 2015, clasificado monumento histórico el 20-abr-2017 (FR Wikipedia: contradice entre intro e infobox; EN dice sólo 2017). Mercurio desbordado otra vez en 2014, limpieza hasta 2015 y óptica LED; placa solar en 2023. Confianza MEDIA.
+15. **Cultura pop:** la foto aparece en «Los infiltrados» (Scorsese, 2006); novela «Le Phare» de Henri Queffélec (1975) inspirada en la construcción; película «L'Équipier» (Lioret, 2004) sobre fareros. Canto bretón (gwerz) «Catarina Stockholm» que ayudó a localizar el pecio de un tres palos perdido cerca del arrecife en 1896. Confianza MEDIA (FR Wikipedia); la coincidencia del gwerz con el Drummond Castle NO está confirmada.
 
-## 2. Faros alrededor de Ouessant (la «isla de los faros»)
+## 2. La foto de 1989 (sólo lo imprescindible; lo hará otro investigador)
 
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 11 | Stiff: proyecto de Vauban, dos torres tronco-cónicas adosadas en el punto más alto de la isla. Fecha de encendido: 1700 según la ficha, 1702 según el texto de la misma página (contradicción interna). 104 escalones. Al principio solo se encendía en invierno, con leña y carbón. Automatizado en 1993. | Documentado | [WP-FR-Stiff] | Media |
-| 12 | En 1717 el fuego del Stiff funcionaba «de forma precaria» por falta de combustible. | Documentado | [WP-FR-Ouessant] | Media |
-| 13 | Créac'h: encendido el 19/12/1863, electrificado en 1888, bocina de niebla de 1867. En 1939 tuvo la linterna más potente del mundo. Alcance ~30 millas. Hoy alberga el Museo de Faros y Balizas, con una de las mejores colecciones de lentes Fresnel de Europa. Desde ahí se telecontrolan Nividic, La Jument, Stiff, Kéréon y Pierres Noires. | Documentado | [WP-FR-Créac'h] | Media-alta |
-| 14 | Dato de actualidad: en noviembre 2025 la ministra del mar suspendió la modernización del Créac'h para no perder la óptica histórica de baño de mercurio. | Documentado (una fuente) | [WP-FR-Créac'h] | Media (verificar) |
-| 15 | Kéréon («el Palace»): obra de 1907 a 1916, pagada en parte con 585.000 francos de Amicie Lebaudy (coste total ~941.000 F). Interior de lujo: mosaicos, parqué de roble con rosa de los vientos de caoba y ébano. Automatizado el 29/1/2004, el último «infierno» en serlo. | Documentado | [WP-FR-Kéréon] | Media-alta |
-| 16 | Kéréon también sufrió el temporal de diciembre de 1989: el 16/12 hacia las 18:10 una ola reventó los dos ojos de buey de la cocina, lanzó a los fareros, se llevó el mobiliario y rompió 7 cristales de la óptica. Taparon la óptica y no se apagó nunca. | Documentado (una fuente) | [WP-FR-Kéréon] | Media |
-| 17 | Torre de Men Korn: 29 m, terminada en 1926. Campana submarina de señalización: desde 1909 hasta 1919. | Documentado | [WP-FR-Ouessant] | Media |
-| 18 | Torre radar del Stiff (1978 según la ficha del faro, 1982 según otra fuente; ver contradicciones). Controla el rail de Ouessant a ~50 km. | Documentado | [WP-FR-Stiff], [WP-FR-Ouessant] | Media |
+16. **Fecha:** 21 de diciembre de 1989, siete fotos de Jean Guichard. Confianza MEDIA-ALTA (FR/EN Wikipedia y BoatNews coinciden en el 21 dic.). Un detalle distinto: la tempestad que casi apaga Kéréon fue el **16 de diciembre de 1989** (FR Wikipedia Kéréon): no confundir fechas. https://fr.wikipedia.org/wiki/Phare_de_K%C3%A9r%C3%A9on
+17. **Cómo:** Guichard alquiló un helicóptero en Lorient (EN Wikipedia). El farero creyó que era el helicóptero de rescate y abrió la puerta (EN Wikipedia sobre Guichard: «thought Guichard's was the rescue helicopter»). Confianza MEDIA.
+18. **Farero:** Théodore Malgorn: la pista es CONFIRMADA en el nombre (FR y EN Wikipedia, y la ficha citan entrevista Der Stern 2007). Cita atribuida: «Si hubiera estado un poco más lejos de la puerta, no habría conseguido volver a entrar en la torre». Confianza MEDIA. Mi lectura: EN Wikipedia lo describe como alguien que bajó a ver qué pasaba y volvió corriendo; no lo llama explícitamente farero en ese pasaje.
+19. **Premio:** segundo puesto World Press Photo. EN Wikipedia dice 1991; la web del fotógrafo dice 1990. CONTRADICCIÓN probable de convención (concurso 1990 para fotos de 1989, ceremonia/edición citada como 1991). Preferir la web del propio fotógrafo (1990) pero pedir verificación. https://www.jean-guichard.com/en/propos
+20. **Fotógrafo:** Jean Guichard, n. 28-abr-1952 en París; vacaciones con abuelos en Morbihan; mili en 1971 a bordo del Commandant Bourdais; Sygma (1977), Gamma (1984), cofundó GLMR en 1989 «cuando empezó su trabajo a fondo sobre faros»; GLMR cerró en 1995; libro «Phares» premiado (Concarneau, Academia de Marina); Caballero del Mérito Marítimo 20-jul-2010. Confianza ALTA (web oficial).
+21. **Póster:** más de un millón de copias vendidas (EN Wikipedia, MEDIA).
+22. **Polémica «es falsa/montaje»:** NO se encontró nada en las fuentes cargadas. Ni FR ni EN Wikipedia hablan de ello. Pendiente.
 
-## 3. Naufragios documentados (cronología)
+## 3. Mar de Iroise y Ouessant: el mar y su peligro
 
-| # | Fecha | Barco | Dato | Fuente | Conf. |
-|---|---|---|---|---|---|
-| 19 | 10/8/1513 | La Cordelière | Hundimiento tras combate con el Regent inglés | [WP-FR-Ouessant] | Media |
-| 20 | 2/12/1739 | Atlas | Llegaba de Luisiana con tripulación diezmada por fiebre amarilla; 16 muertos. Fue saqueado | [WP-FR-Ouessant] | Media |
-| 21 | 17/1/1865 | Columbian | 33 tripulantes y 2 pasajeros, en dos horas | [WP-FR-Ouessant] | Media |
-| 22 | 3/12/1874 | La Plata | 60 ahogados, 15 supervivientes | [WP-FR-Ouessant] | Media |
-| 23 | 13/5/1875 | Cadix-London | 29 tripulantes y 35 pasajeros ahogados, 5 supervivientes | [WP-FR-Ouessant] | Media |
-| 24 | 27/4/1876 | Chalupa-correo | 21 víctimas ouessantinas al volver de la feria de Landéda (tragedia local) | [WP-FR-Ouessant] | Media |
-| 25 | 14/3/1877 | Marie-Hortense | 8 pasajeros, toda la tripulación y 125 reses ahogados | [WP-FR-Ouessant] | Media |
-| 26 | 19/12/1869 | Corbeta Gorgone | Se hundió cerca de Molène con 93 hombres, comandante incluido, sin que los isleños se enteraran en el momento | [WP-FR-Ouessant] | Media |
-| 27 | 16/6/1896 | Drummond Castle | Ver sección 4 | varias | Alta |
-| 28 | 1-2/11/1903 | Vesper | 14 marinos salvados por Rose Héré, que se echó al agua; Le Figaro abrió suscripción que recaudó 1.992 francos. Tras el naufragio hubo saqueo de vino y ron | [WP-FR-Ouessant] | Media |
-| 29 | 16/9/1906 | Coat-Coal | 11 ahogados, 1 superviviente | [WP-FR-Ouessant] | Media |
-| 30 | 10/12/1907 | Regina | Sin supervivientes | [WP-FR-Ouessant] | Media |
-| 31 | 12/1/1924 | Temporal | Destruyó 15 barcos de pesca y dañó 7 | [WP-FR-Ouessant] | Media |
-| 32 | 12/1/1930 | Saint-Genny | 23 muertos | [WP-FR-Ouessant] | Media |
-| 33 | 3-4/1/1933 | L'Atlantique | Incendio; 19 muertos | [WP-FR-Ouessant] | Media |
-| 34 | 5/8/1935 | Enez-Eussa | 250 excursionistas, todos salvados | [WP-FR-Ouessant] | Media |
-| 35 | 24/1/1976 | Olympic Bravery | Petrolero nuevo encallado en bahía de Youc'h (norte de Ouessant). ~30 tripulantes rescatados; murieron 4 hombres de un helicóptero Super Frelon en vuelo de reconocimiento. Se partió en dos el 13/3/1976. ~800 t de combustible. Pecio de ~350 m, hoy buceable. Sospechas de saqueo contra los ouessantinos que enfadaron a los alcaldes. Se acusó al armador de provocar la pérdida | [WP-FR-OlympicBravery] | Media |
-| 36 | 16-17/8/2007 | Sokalique | Abordado por un carguero; el capitán murió, seis hombres salvados | [WP-FR-Ouessant] | Media |
+23. **Geografía:** Ouessant (bretón Eusa, «la más alta»), ~20 km de la costa, ~8 km por 4, 15,58 km², ~860 habitantes (2023), frente a 1.814 en 1968; capital Lampaul. Último punto de Francia metropolitana salvo la roca de Nividic. Confianza ALTA (FR/EN Wikipedia concordantes).
+24. **Fromveur:** paso entre Ouessant y Molène, corrientes de 8-10 nudos sobre una falla de ~60 m de profundidad; alberga La Jument y Kéréon. Refrán bretón recogido en EN Wikipedia sobre aguas peligrosas con corrientes de más de diez nudos. Confianza ALTA. https://fr.wikipedia.org/wiki/Mer_d%27Iroise
+25. **Mareas:** régimen semidiurno macromareal; marea de 3 m (coef. 45) a 7 m (coef. 120). Corrientes de 8-10 nudos también en el Four, el Goulet de Brest y el Raz de Sein. Confianza ALTA.
+26. **Tormentas:** el Iroise sufre frecuentes temporales invernales intensos con mar cruzado peligroso. Ouessant es el municipio más ventoso de Francia (media 27,26 km/h, FR Wikipedia). Pocas heladas: ~4 días al año frente a 15 en Brest. Confianza MEDIA.
+27. **Concentración de faros:** el Iroise se presenta (turismo oficial) como la mayor concentración de faros del mundo; faros aislados en el mar: La Jument, Kéréon, Les Pierres Noires, La Vieille, Ar-Men; Tévennec «maldito». Afirmación de promoción turística: confianza BAJA-MEDIA como superlativo. https://fr.wikipedia.org/wiki/Mer_d%27Iroise
+28. **Reserva de biosfera UNESCO desde 1988** (islas y mar de Iroise) y Parque natural marino de Iroise desde 2007. ALTA.
+29. **Refrán marino:** «Qui voit Ouessant voit son sang» (quien ve Ouessant ve su sangre). Citado vía página turística (BAJA-MEDIA, sin fuente primaria). Gancho. Fuente de la búsqueda: https://figaronautisme.meteoconsult.fr/actus-nautisme-escales/2018-08-22/33924-a-ouessant-le-bout-du-monde-attire-tous-les-regards
 
-Nota de guion: la lista muestra que el patrón no cambia en 450 años. Lo que cambia es qué había en la costa para evitarlo: nada, luego faros, luego radar.
+## 4. Naufragios documentados
 
-## 4. Drummond Castle (16 de junio de 1896): el naufragio que empuja a construir La Jument
+30. **Drummond Castle (junio de 1896).** Vapor de la Castle Line/Donald Currie, botado el 17-feb-1881 (Govan, Glasgow), 3.706 GRT, 111 m. Salió de Ciudad del Cabo el 28-may-1896 con destino Londres vía Natal y Las Palmas. Choca de noche (~23:00) con rocas (Pierres Vertes) en la entrada sur del Fromveur con mar en calma y niebla, y se hunde en pocos minutos (EN: 4 min; FR: unos 15 min: CONTRADICCIÓN). Fecha: 16 de junio de 1896 (EN y FR; la lista de naufragios de EN dice 5 de junio y otra página dice 28 de mayo, que es la salida de Ciudad del Cabo: error). Confianza ALTA para 16-jun.
+    Fuentes: https://en.wikipedia.org/wiki/SS_Drummond_Castle · https://fr.wikipedia.org/wiki/Drummond_Castle
+31. **Cifras Drummond Castle:** pasajeros 143 + tripulación 102 (245 en EN) o 105 (248 según Tangi Quéméner) o 244: las cifras varían. Murieron unos 242; sobrevivieron TRES (dos tripulantes recogidos por pescadores; un pasajero llegó nadando a Molène). Unos cien cuerpos recuperados, enterrados en Ouessant y Molène. Carga: 1.943 fardos de lana, pieles, cuernos (~450 t) y ~250 t de carbón. EN Wikipedia en otro artículo (Ushant) y FR Wikipedia de Phare de la Jument dicen 258 muertos o «250»: CONTRADICCIÓN; usar «unos 240, sólo tres supervivientes» (MEDIA-ALTA). Los nombres de los supervivientes NO se obtuvieron.
+32. **Causa y debate:** la investigación de la Board of Trade (julio de 1896, Westminster) concluyó «navegación negligente o torpe». Se desconoce por qué pasó entre Ouessant y Molène en vez de al norte. (Un dato que suelo ver como hipótesis: error de situación por niebla; no verificado en estas fuentes.) Confianza ALTA para el veredicto.
+33. **Gratitud británica:** en 1897 un ministro británico visitó las islas; medallas; el almirante Barrera recibió la Real Orden Victoriana; Ouessant recibió dinero para la aguja de la iglesia, Molène una cisterna y un reloj para el campanario. Molène tiene museo y placa. Confianza MEDIA (FR Wikipedia). Cómo conecta con los faros: el naufragio de 1896 empezó la planificación de La Jument según EN Wikipedia («Planning began soon after...»), pero Mérimée no lo dice así: lo seguro es el informe de 31 naufragios 1888-1904 y el legado Potron. Distinguir.
+34. **Olympic Bravery (1976).** Superpetrolero liberiano del grupo Onassis, botado en 1975 en Saint-Nazaire y nunca fletado; encalló vacío el 24-ene-1976 en la bahía de Yuzin (norte de Ouessant); se partió el 13-mar-1976. Los ~30 tripulantes se salvaron; murieron 4 militares de un helicóptero Super Frelon en vuelo de reconocimiento. Unos 800 t de fuel derramadas, ~4 km de costa. El pecio (más de 350 m, 10-35 m de profundidad) se bucea. Hubo sospechas de que el armador lo perdió a propósito; saqueo del pecio con sospechas sobre isleños, lo que enfadó a los alcaldes. Confianza MEDIA (FR Wikipedia). https://fr.wikipedia.org/wiki/Olympic_Bravery
+35. **Amoco Cadiz (16-mar-1978).** Pasó Ouessant a las 08:00 UTC; a las 09:45 UTC falló el servo del timón a ~7,5 millas de Ouessant; el remolcador alemán Pacific (Bugsier) llegó pero hubo discusión de contrato (Lloyd's Open Form) y los cabos de remolque se rompieron; encalló en Portsall a las 21:04 y 21:39; la tripulación (44) fue evacuada por helicópteros Super Frelon (42 hasta la 01:45; el capitán Pasquale Bardari y un oficial hacia las 05:00). Se partió el 24 de marzo. Vertido: 227.000 t / 360 km (bateaux.com) frente a 50-60.000 t? (el resumen del FR dice 50.000-60.000 t sobre ~375 km: probablemente un error de resumen, pues la cifra clásica es ~220.000 t) CONTRADICCIÓN: usar «más de 220.000 toneladas de crudo» (MEDIA-ALTA tras cruzar bateaux.com, Défense y otras). Consecuencias: radares en el Stiff y Corsen operativos en 1982; remolcadores Abeille desde sept-1979; creación del CEDRE; juicio en Chicago (1982), responsabilidad de Amoco y de Astilleros (1984), apelación en 1992 (~1.260 millones de francos). Confianza MEDIA-ALTA.
+    Fuentes: https://fr.wikipedia.org/wiki/Amoco_Cadiz · https://www.bateaux.com/article/43436/rail-d-ouessant-comment-le-naufrage-de-l-amoco-cadiz-a-change-la-circulation-maritime-dans-la-manc
+36. **Erika (1999)**: petrolero con 30.000 t de fuel pesado, partido en dos al sur de Bretaña. Sólo mencionado de pasada; sin verificar con fuente primaria (BAJA-MEDIA). Prestige: no se obtuvo información.
+37. **Nota de los naufragios en el Iroise:** Boehlen (Sein), Olympic Bravery y Drummond Castle (Ouessant-Molène), Amoco Cadiz (Portsall). ALTA (página Mer d'Iroise).
 
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 37 | Vapor construido en 1881 por John Elder & Co. (Glasgow), de Donald Currie. Salió de Ciudad del Cabo el 28/5/1896 rumbo a Londres. Llevaba 143 pasajeros y ~102 tripulantes. Capitán: Walter William Pierce, en su primer viaje con el barco (según FR). | Documentado | [WP-EN-Drummond], [WP-FR-Drummond] | Media-alta |
-| 38 | Hacia las 23:00, con niebla, chocó con rocas (Chaussée des Pierres Vertes) al sur de Ouessant. Se hundió en 4 minutos (EN) o ~15 (FR). Sin tiempo de botar botes. | Documentado, con discrepancia | [WP-EN-Drummond], [WP-FR-Drummond] | Media |
-| 39 | Murieron unos 242-248 (otras fuentes 244, 250, 258); sólo 3 sobrevivieron: dos tripulantes recogidos por pescadores y un pasajero que llegó nadando a Molène. | Documentado, cifras discrepantes | varias | Alta en lo de 3; media en el total |
-| 40 | Cargamento: 1.943 fardos de lana, pieles y cuernos (~450 t) y 250 t de carbón. | Documentado | [WP-EN-Drummond] | Media |
-| 41 | Investigación del Board of Trade (julio de 1896): «navegación descuidada o inhábil». Por una razón desconocida pasó entre Ouessant y Molène en vez de por el norte. Gruyer insinúa bebida a bordo, pero lo presenta como rumor, no como hecho. | Documentado / rumor | [WP-EN-Drummond], [WP-FR-Drummond] | Media |
-| 42 | Imagen vívida: los relojes de los cadáveres se pararon todos a las 11:15 (Gruyer, que dice que bailaban los pasajeros). Es relato de 1899, no un dato verificado. | Testimonio literario | [Gruyer1899] | Baja-media |
-| 43 | Los cuerpos se envolvieron en lona de velas porque la madera escaseaba, se velaron en un almacén con vela y crucifijo cada uno, y se enterraron en Ouessant y Molène (~100 recuperados). Dilema: ¿enterrar protestantes en tierra consagrada? Frase atribuida a un aldeano: «Enterrez-les toujours, monsieur le curé… Dieu reconnaîtra les siens». | Testimonio | [WP-FR-Drummond], [Gruyer1899] | Media |
-| 44 | Gratitud británica: en 1897 un ministro en nombre de la reina Victoria repartió medallas. El prefecto marítimo Barrera recibió una orden real victoriana. Ouessant recibió fondos para el campanario de Saint-Pol-Aurélien; Molène, una cisterna y un reloj. En 1996 Isabel II regaló una bandera británica a Molène. | Documentado | [WP-FR-Drummond], [WP-FR-Ouessant] | Media |
-| 45 | Consecuencia directa: la Comisión de Faros mejora el balizamiento de la zona y nace el proyecto de La Jument. La conexión causa-efecto la repiten fuentes enciclopédicas; la notice oficial de la POP no cita el Drummond Castle por su nombre en el fragmento leído. | Documentado/interpretación | [WP-FR-Drummond], [WP-EN-Jument] | Media |
+## 5. Faros de la isla y su relación con el mar
 
-## 5. Costumbres: la isla de las mujeres
+38. **Stiff:** proyecto de 1695; en 1699 Vauban decide dos torres adosadas troncocónicas en el acantilado del Stiff, el punto más alto; «uno de los seis primeros faros de Vauban». Primera luz en 1702 (sólo en invierno). Óptica de Fresnel en 1831, edificios de fareros en 1884, electrificación 1957, automatizado en 1993, monumento histórico 2011. Torre de 32,4 m, altura focal 85 m, 104 escalones, alcance 24 millas. 1902: Camille Tissot probó la radio desde el Stiff. Confianza MEDIA-ALTA (FR Wikipedia). https://fr.wikipedia.org/wiki/Phare_du_Stiff
+39. **Créac'h:** construido en 1863 (ingenieros Maîtrot de Varennes y Rousseau; luz encendida el 19-dic-1863); sirena de niebla 1867; electrificado en 1888; radiofaro 1912; en 1939 linterna nueva presentada en la Exposición de 1937, la más potente del mundo en su momento; 4 lámparas de 2.000 W (1995); alcance 30 millas (55 km). Cifras de altura contradictorias (47 / 54,85 / 70 m focal). Alberga el Museo de Faros y Balizas (colección de lentes Fresnel; recibió el depósito del Trocadéro en 1988). Plan de 2024 de sustituir la óptica de mercurio por una luz industrial que reduciría el alcance de 30 a 19 millas generó oposición; en noviembre de 2025 el ministro suspendió las obras (MEDIA, sólo FR Wikipedia). https://fr.wikipedia.org/wiki/Phare_du_Cr%C3%A9ac%27h
+40. **Kéréon (1907-1916):** donativo de Amicie Lebaudy (585.000 de 941.000 francos); 48 m; automatizado el 29-ene-2004; «faro-monumento» de lujo (escalera de mosaico, suelo con rosa de los vientos de roble, caoba y ébano). Nombre por Charles-Marie Le Dall de Kéréon, oficial guillotinado en 1794. Durante el temporal del 16-dic-1989, una ola reventó dos portillos de la cocina y los fareros taparon la óptica con lonas para que la luz no se apagara pese a siete cristales rotos. Gran paralelo con La Jument. Confianza MEDIA. https://fr.wikipedia.org/wiki/Phare_de_K%C3%A9r%C3%A9on
+41. **Ouessant y la primera señalización:** el artículo de Créac'h menciona que Ouessant fue sede del primer faro automático en servicio (MEDIA-BAJA, sin detalle).
 
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 46 | Se llamó «la isla de las mujeres» porque los hombres servían como marinos de altura o en la Marina Real. Con unos 15 años partían como grumetes. Las mujeres llevaban casa, campo, hijos y la vida comunitaria. Gruyer: «Ce sont elles qui sont les mâles». | Documentado + testimonio | [WP-FR-Ouessant], [Gruyer1899] | Media-alta |
-| 47 | Sociedad de rasgos matriarcales: las mujeres proponían matrimonio, conservaban su apellido y el marido iba a vivir con la esposa. Edad media del primer matrimonio 1776-1785: 25 años ellas, 21 ellos. Endogamia: 97,5 % de bodas entre ouessantinos (1736-1785). | Documentado (demografía histórica) | [WP-FR-Ouessant] | Media |
-| 48 | Cortejo invertido (Gruyer 1899): la joven invitaba a la familia del chico, le llevaba un plato (un trozo de tocino) mientras él seguía en la cama; si lo comía, la aceptaba. Gruyer dice que la costumbre ya había desaparecido. Compromiso «de prueba»: convivían «como hermanos» para juzgarse. | Testimonio de viajero | [Gruyer1899] | Media (fuente única, siglo XIX) |
-| 49 | La proella: cruz pequeña de cera que representaba el cuerpo de un marino desaparecido y al que se negaba el entierro cristiano. Se velaba, se llevaba en procesión y se guardaba en una urna de madera. Sólo iba al cementerio en una visita del obispo o una misión. Gruyer describe cruces enterradas juntas en un solo ataúd ante toda la población. | Documentado | [WP-FR-Ouessant], [Gruyer1899] | Media-alta |
-| 50 | Registro de proellas 1734-1792: de 2.074 defunciones, 298 con proella, 266 de marinos reales. Posiblemente duró hasta 1962. | Documentado (investigación académica citada en WP) | [WP-FR-Ouessant] | Media |
-| 51 | Cómo se avisaba de una muerte: se colocaba por la noche una pequeña cruz sobre la mesa de la familia (práctica descrita por un cura). | Testimonio | [WP-FR-Ouessant] | Media |
-| 52 | Traje tradicional negro/sobrio. Gruyer: faldas cortas, pelo corto (descripción de 1899). | Documentado/testimonio | [WP-FR-Ouessant], [Gruyer1899] | Media |
-| 53 | Entierro de niños: llevados con ropa buena, flores y cara descubierta; el ataúd se cerraba tras bajarlo a la fosa. | Testimonio | [Gruyer1899] | Media |
-| 54 | Honores subastados: llevar un santo o un estandarte en procesión se subastaba, a veces por 15-20 francos incluso por familias pobres. | Testimonio | [Gruyer1899] | Media |
-| 55 | Ovejas: ~6.000 en 1785; pastaban en común, cada dueño reconocía las suyas por marca, y se ataban de dos en dos de abril a septiembre. Hoy la oveja de Ouessant es una de las razas más pequeñas del mundo. | Documentado | [WP-FR-Ouessant], [WP-EN Ushant https://en.wikipedia.org/wiki/Ushant] | Media |
-| 56 | Contrabando con las islas británicas, tradición del XIX. | Documentado | [WP-FR-Ouessant] | Media |
-| 57 | Los hombres pescaban y recogían y quemaban algas para yodo y sosa. | Testimonio | [Gruyer1899] | Media |
-| 58 | Salvamento: estación de Lampaul desde 1866; Stiff 1878-1953. Hasta cierta fecha, Lampaul 86 salidas (140 salvados) y Stiff 41 salidas (60 salvados) según el comandante Cogniet. En 1938 se inauguraron dos lanchas a motor. | Documentado | [WP-FR-Ouessant] | Media |
-| 59 | Mito de los «naufragadores»: el derecho de recoger restos se abolió en 1681, pero se siguió recuperando objetos. Según la fuente, la fama de falsos señalizadores de costa «no parece fundada». Sí hubo saqueos puntuales (Atlas 1739, Triomphant 1768, Vesper 1903, Olympic Bravery 1976 en sospecha). | Mito vs documentado | [WP-FR-Ouessant], [WP-FR-OlympicBravery] | Media |
+## 6. Centro de Salvamento (CROSS Corsen) y tráfico
 
-## 6. Tráfico marítimo, CROSS y por qué sigue siendo peligroso
+42. **Rail de Ouessant:** dispositivo de separación del tráfico (DST) en vigor en 1980, modificado en 2003 por la OMI; tres corredores: el más cercano a Ouessant a 24 millas (43 km) para entrada al Canal, el más alejado a 43 millas; cada vía de 5 millas separada por zona de la misma anchura. Confianza ALTA (bateaux.com).
+43. **Tráfico:** unos 120 cargueros diarios de 89 banderas (bateaux.com, 2023). Mérimée habló de >20.000 buques/año a principios del siglo XX. Comparar cifras: pregunta abierta. Confianza MEDIA.
+44. **CROSS Corsen / Ouessant Trafic:** compartido entre Marina nacional y Asuntos Marítimos. Radar primero en el semáforo de Ouessant, después en la torre radar del Stiff (72 m de altura, 130 m de altitud). Abierto en 1982 (resúmenes). Remolcador de alta mar Abeille Bourbon: en Brest con tiempo en calma, se acerca a Camaret si el viento pasa de 25 nudos. Balance 2022: 38 situaciones anormales, 33 situaciones cercanas, 433 anticipadas, 178 averías o paradas; el remolcador intervino 7 veces; 9 infracciones. Confianza ALTA para 2022 (un solo origen). https://www.bateaux.com/article/43436/...
+45. **Lecciones de 1978:** la Marina supo la posición del Amoco Cadiz sólo hacia las 20:40, por un vigía de Saint-Mathieu; algunos semáforos (Aber-Wrac'h, Molène) no tenían radar; de tres remolcadores de la Marina sólo uno estaba disponible, a unas diez horas. Excelente argumento para «por qué existe el CROSS». Confianza MEDIA-ALTA (FR Wikipedia Amoco Cadiz).
 
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 60 | Amoco Cadiz: 16/3/1978, petrolero liberiano encallado en Portsall. ~227.000 t de crudo, ~360 km de costa bretona contaminada. | Documentado | [Bateaux-Rail], [CROSS-60] | Alta |
-| 61 | El CROSS Corsen se crea en 1982 tras el Amoco Cadiz (y según la web del ministerio, para reforzar la vigilancia frente a Ouessant y Molène). Cronología oficial de CROSS: Étel 1968, La Garde 1968, Jobourg 1971, Gris-Nez 1977, Corsen 1982. | Documentado (fuente oficial) | [CROSS-60] | Alta |
-| 62 | Rail (DST) de Ouessant: tres carriles; entró en vigor en 1980 (una fuente dice 1973, y se modificó a inicios de 1979 para alejar la carga peligrosa). En 2003, con la OMI, se reordenó: carril interior a 24 millas (43 km) y exterior a 43 millas, cada carril de 5 millas, con zona de separación. | Documentado, con discrepancia de fecha inicial | [Bateaux-Rail] | Media-alta |
-| 63 | ~120 cargueros al día cruzan la zona, de 89 banderas distintas. | Documentado (cifra de artículo) | [Bateaux-Rail] | Media |
-| 64 | Remolcador de alta mar basado en Brest asignado a la zona desde julio de 1978. Hoy el Abeille Bourbon; con viento > 25 nudos se adelanta a Camaret. En 2022 intervino 7 veces. | Documentado | [Bateaux-Rail] | Media-alta |
-| 65 | Cifras 2022 de Ouessant Trafic: 38 situaciones anormales, 33 de proximidad peligrosa, 433 anticipadas, 178 averías o paradas, 9 infracciones. | Documentado | [Bateaux-Rail] | Media |
-| 66 | Torre radar del Stiff: 72 m de torre, 130 m sobre el nivel del mar (otra fuente: 136 m). Vigila a 40 millas. Radio de acción del CROSS: 40 millas. | Documentado | [Bateaux-Rail], [WP-FR-Ouessant] | Media |
-| 67 | Proyecto actual: renovación de la torre del Stiff. | Documentado | [CROSS-60] | Alta |
-| 68 | Caso real de multa: un navegante de recreo fue condenado en Brest (8/6/2022) a 3.000 euros (1.500 en suspenso) por no seguir instrucciones del CROSS Corsen en el rail. | Documentado | enlaces de búsqueda boatnews | Media |
-| 69 | Energía de las corrientes: turbina mareomotriz Sabella D10 instalada en el Fromveur desde 2015; suministra electricidad a la isla desde abril 2022. | Documentado | [WP-FR-Fromveur] | Media |
+## 7. Costumbres de Ouessant y las mujeres
 
-## 7. El faro de La Jument (contexto necesario para ordenar mi parte)
+46. **«Isla de las mujeres»:** apodo porque los hombres, marinos de altura o de la Marina de Estado, estaban ausentes la mayor parte del año. Sociedad con rasgos matriarcales hasta mediados del siglo XX. Confianza MEDIA-ALTA. https://fr.wikipedia.org/wiki/Ouessant
+47. **Detalles sociales:** las mujeres conservaban su apellido; el marido al volver se instalaba en casa de la esposa; en 1772 el almirante Thévenard anotó que las propuestas de matrimonio venían de las jóvenes; 1776-1785: edad media de matrimonio 25 años ellas, 21 ellos; 97,5 % de los matrimonios (1736-1785) entre isleños. Confianza MEDIA (FR Wikipedia, que cita autores antiguos).
+48. **Trabajo de las mujeres:** cultivaban los campos (mezadou, parcelas estrechas) de cebada y patatas, recogían algas, dirigían el hogar; los hombres, en tierra, remendaban ropa y tejían. Descripción de Paul Gruyer (1898): mujeres altas, pelo corto, faldas cortas de lana gruesa, cofia blanca los domingos. MEDIA.
+49. **Mortalidad:** 1774: 106 viudas de marinos perdidos en el mar, 152 mendigos y ~300 «pobres vergonzantes». Entre 1734 y 1792, 298 ceremonias de **proëlla** (funeral simbólico sin cuerpo) sobre 2.074 muertes. Confianza MEDIA (FR Wikipedia; ritual no verificado en fuente aparte; cifras citadas del artículo).
+50. **Mito a revisar:** «matrimonio a prueba». Un libro de viajes antiguo (en archive.org, «Les filles de la pluie», Savignon) menciona prometidos que a veces convivían antes; no se pudo confirmar: LEYENDA/TESTIMONIO antiguo, confianza BAJA.
+51. **Bailes:** Julien Maunoir prohibió en 1641 bailar en fiestas religiosas; la costumbre de no bailar en bodas de Ouessant se atribuye a eso. Confianza MEDIA-BAJA.
+52. **Ovejas:** 1785: unas 6.000 ovejas que dañaban cultivos; pastoreo comunal con marcas de propietario; en 1934 atadas por parejas. La oveja de Ouessant es una raza diminuta, de origen local, normalmente negra o parda. Confianza MEDIA. También abeja negra y colonia más meridional de focas grises de Europa (Pointe de Cadoran).
+53. **Población y marinería:** 1879: unos 2.400 habitantes y más de 400 marinos; ~1794: 1.400-1.500. Molinos: 9 grandes (catastro de 1844), restos de 24 y unos 60 pequeños a principios del siglo XX. 1915: 80 t de carragenina recogida. 1898: unos 800 obreros y soldados ocuparon la isla en la crisis de Fachoda. Monumento: 130 nombres de guerra (84 de la I GM). Confianza MEDIA.
+54. **Salvamento histórico:** lancha de Lampaul desde 1866; estación del Stiff 1878-1953; en 1938 dos lanchas a motor, «Amiral Rigault de Genouilly» y «Ville-de-Paris»; en 1938 Lampaul había hecho 86 salvamentos con 140 personas salvadas, el Stiff 41 con 60. Confianza MEDIA.
 
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 70 | Legado de Charles-Eugène Potron (socio de la Société de Géographie, muerto el 27/3/1904): 400.000 F para un faro sobre una roca peligrosa. Si no se construía en 6-7 años, el dinero iría a la Sociedad Central de Salvamento de Náufragos. | Documentado | [POP], [WP-FR-Jument] | Alta |
-| 71 | Obra: decreto ministerial 20/2/1904; proyecto aprobado 18/11/1904. Jefe de obra: Georges Clet Heurté (n. 24/12/1865 en Primelin), ya experto de la Île Vierge. Coste total estimado ~850.000 F. | Documentado | [WP-FR-Jument], [POP] | Alta/media |
-| 72 | El primer año sólo se pudo atracar 17 veces: 52 horas de trabajo. De abril a octubre de 1905: 59 salidas, 206 horas, ~100 m3 de mampostería, ~6 % de los 1.700 m3 previstos. | Documentado | [POP] | Alta |
-| 73 | Se encendió el 15/10/1911 (a tiempo de cumplir el plazo del legado) pero con la base reducida; el interior se acabó tres años después. Óptica: 3 destellos rojos cada 15 s. | Documentado | [POP], [WP-FR-Jument] | Alta |
-| 74 | Diciembre de 1911: una tormenta hace vibrar la torre, el mercurio de la cubeta se desborda y se agrietan cristales. Refuerzos hasta 1924; en la guerra submarina (apagado 28/12/1917 a 6/11/1918) se recubrió con hormigón armado; en 1934, tres cables interiores anclados en la roca (ingeniero Coyne). | Documentado | [POP], [WP-FR-Jument] | Alta |
-| 75 | Septiembre de 1974: una ola rompió la linterna y se llevó la lámpara de petróleo. Los fareros Jean-Claude Roger y Noël Violant se refugiaron en la cocina. | Documentado | [WP-FR-Jument] | Media |
-| 76 | Electrificado 1990, automatizado y fareros fuera el 26/7/1991. Hoy: solar desde 2023; LED desde 2015. Monumento histórico inscrito 31/12/2015, clasificado 20/4/2017. | Documentado | [WP-FR-Jument], [WP-EN-Jument] | Alta |
-| 77 | Altura: 47-48 m; altura focal 36-47 m según fuente (ver contradicciones). | Documentado | varias | Media |
-| 78 | Henri Queffélec escribió «Le phare» (1975) y «La Lumière enchaînée» (1976) sobre la obra. «L'Équipier» (2004, Philippe Lioret). | Documentado | [WP-FR-Jument] | Alta |
+## 8. Historia militar y marítima de Ouessant
 
-## 8. La foto de 1989 (lo que encontré; el resto lo debe cubrir otro investigador)
-
-| # | Hecho | Tipo | Fuente | Conf. |
-|---|---|---|---|---|
-| 79 | Jean Guichard (n. París 28/4/1952), fotoperiodista de Sygma y Gamma; cofundó la agencia GLMR en 1989 y empezó su trabajo en profundidad sobre faros por entonces. | Documentado | [Guichard-web] | Media-alta |
-| 80 | Serie de 7 fotos de La Jument tomadas el 21/12/1989. Guichard alquiló un helicóptero en Lorient. Malgorn bajó al oír el helicóptero (se dice que creyó que era el de rescate) y abrió la puerta; llegó la ola. | Documentado/testimonio | [WP-EN-Jument], [WP-FR-Jument], [WP-EN-Guichard] | Media (detalles vienen de Wikipedia con citas a Stern 2007 y World Press Photo) |
-| 81 | Cita de Malgorn en entrevista: «Si hubiera estado un poco más lejos de la puerta, no habría conseguido volver a la torre.» | Testimonio (cita atribuida) | [WP-EN-Jument] | Media (original sin comprobar) |
-| 82 | Segundo premio de World Press Photo: 1990 según la web de Guichard; 1991 según Wikipedia EN. | Discrepancia | [Guichard-web], [WP-EN-Jument] | Media |
-| 83 | El póster de La Jument habría vendido más de un millón de copias. | Cifra de WP | [WP-EN-Jument] | Baja-media |
-| 84 | Aparece en «Los infiltrados» (Scorsese, 2006) según WP-FR. | Documentado | [WP-FR-Jument] | Media |
-| 85 | Olas estimadas de 20-30 m en el temporal (estimación de Wikipedia EN, no medición). | Estimación | [WP-EN-Jument] | Baja |
+55. Ataques ingleses en 1388, 1462 y 1520; corsarios 1454; marquesado desde Enrique IV (1597); en 1764 la Corona compra la isla a los Rieux y la pone bajo la Marina. En 1756 una balandra británica fondeó una semana bloqueando Brest y se enviaron 200 soldados. Confianza MEDIA.
+56. 1815: Napoleón, a bordo del HMS Bellerophon, vio Ouessant durante horas: lo último que vio de Francia (EN Wikipedia). MEDIA. Batallas navales en las aguas de Ouessant (1778 y 1794): no verificadas aquí, sólo mencionadas en general.
+57. WWII: comandos británicos y Rangers de EE.UU. atacaron un radar alemán en la isla (EN Wikipedia). MEDIA.
+58. Arqueología: Mez Notariou, poblado de unos 4.000 años; fuentes antiguas (Estrabón, Plinio, Piteas) hablan de la isla en rutas del estaño (FR Wikipedia). MEDIA-BAJA como identificación.
 
 ---
 
-## Contradicciones y cómo resolverlas
+## Contradicciones registradas (resumen)
 
-1. Muertos del Drummond Castle: 242 (EN), 248 (FR/Ouessant), 250 (otro), 258 (WP-FR Jument). Se aconseja decir «unos 240-250, con sólo 3 supervivientes». La fecha 28 de mayo que aparece en Ushant-EN es la de salida del Cabo, no del naufragio.
-2. Hundimiento: 4 minutos (EN) o ~15 (FR). Decir «en minutos».
-3. Altura del faro: 47 m (FR), 48 m (EN); altura focal 36 m (EN), 42,65 m (POP), 47,4 m (FR). Más sólida: la ficha oficial POP. Se aconseja «unos 47-48 m de altura total».
-4. Alcance: 22 millas (EN) / 21 (POP) / 10 (FR actual con LED). Hay cambio de óptica en 2015; no mezclarlas.
-5. Rail de Ouessant: 1973 vs 1980 (con ajuste en 1979). Más sólida: 1980 en fuente específica; confirmar con CROSS.
-6. Torre radar del Stiff: 1978 (ficha del faro) vs 1982 (otra fuente, junto con el CROSS). Evitar fecha exacta.
-7. Stiff encendido: 1700 vs 1702.
-8. World Press Photo: 1990 vs 1991.
-9. Fecha del temporal de la foto vs temporal del Kéréon: la foto es del 21/12/1989; el Kéréon cuenta una ola destructiva el 16/12/1989. Pueden ser dos días de un mismo periodo de tormentas o un error de la ficha. Verificar con la hemeroteca de Météo-France; no afirmar que es el mismo día.
-10. Cronología de la lente: «Créac'h, la más potente del mundo» es un superlativo con fecha (1939) y con matiz; no decir que lo sea hoy.
-
-## Mitos y leyendas
-
-- Mito: «los ouessantinos provocaban naufragios con luces falsas». La fuente indica que esa reputación no parece fundada; sí hubo saqueos de pecios tras el naufragio, algo distinto.
-- Mito/rumor: «el Drummond Castle naufragó porque estaban bebiendo». Es opinión de un autor de 1899, no hallazgo de la investigación oficial.
-- Dato literario: los «relojes parados a las 11:15» provienen de un relato de 1899.
-- Leyenda: el nombre «La Jument» como «yegua azul» (poética, mar en calma) es sólo hipótesis de WP-FR. En bretón es «Ar Gazeg» (la yegua).
-- Dicho sin fuente: «nadie pasa el Fromveur sin conocer el miedo».
-- Cuidado: la foto no está probada como falsa en lo que leí. No encontré ninguna fuente que la tilde de montaje (la búsqueda sobre esa polémica no se pudo hacer, por el límite). Lo documentado: foto aérea de Guichard con helicóptero, con un testimonio de Malgorn recogido por prensa alemana.
+| Tema | Versión A | Versión B | Cuál parece más sólida |
+|---|---|---|---|
+| Autor del proyecto | Ribière (Mérimée) | Heurté (FR Wikipedia, dirigió la obra) | Ribière para el proyecto, Heurté como jefe de obra |
+| Altura focal Jument | 42,65 m (Mérimée) | 36 m (EN) / 47,4 m (FR) | Mérimée, pero no usar cifra sin comprobar |
+| Cadencia luz | 3 destellos/15 s | 3/12 s | sin resolver |
+| Hundimiento Drummond Castle | 4 min (EN) | ~15 min (FR) | sin resolver |
+| Muertos Drummond Castle | 242 | 250-258 | 242 con 3 supervivientes (EN+FR coinciden) |
+| Fecha Drummond Castle | 16-jun-1896 | 5-jun / 28-may | 16-jun |
+| Vertido Amoco Cadiz | ~227.000 t | 50-60.000 t (resumen FR) | ~220.000 t |
+| World Press de la foto | 1990 (web del fotógrafo) | 1991 (EN) | 1990 como año del concurso; verificar |
+| Legado Potron | 6-7 años de plazo | EN: mecenas «casi murió en otro naufragio» | FR/Mérimée |
+| Protección Jument | inscrito 2015 + clasificado 2017 | sólo 2017 | ambas, aclarando |
 
 ## Ideas de gancho
 
-1. «En 1989, un hombre abrió la puerta de un faro creyendo que venía a rescatarlo… y el mar lo rodeó.» (Malgorn creyó que el helicóptero era el de rescate.)
-2. Cifra pura: en su primer año de obra los albañiles de La Jument sólo pudieron pisar la roca 52 horas.
-3. Un legado de 400.000 francos con cláusula: si el faro no se acababa en 7 años, el dinero iba a los salvadores de náufragos. Se encendió con meses de tolerancia y con la base más pequeña, y tembló en su primer invierno (el mercurio rebosó).
-4. 248 muertos, 3 supervivientes, 4 minutos (o 15): el Drummond Castle y el pasajero que llegó nadando a Molène.
-5. La isla donde la mujer te pide matrimonio, no se cambia el apellido y entierra una cruz de cera en lugar del cuerpo: la proella.
-6. La cruz sobre la mesa: así se enteraba una familia de que había muerto un marino.
-7. Un petrolero nuevo que salía a desguazarse y acabó partido en dos en Ouessant (Olympic Bravery, 1976); cuatro hombres de un helicóptero de rescate murieron.
-8. Tras el Amoco Cadiz, nace el centro que escucha el mar: 120 cargueros diarios y una torre radar que ve a 40 millas.
-9. Kéréon, el «Palace»: un faro con parqué de ébano y caoba, en una roca en medio del mar, y una ola lanzando a los fareros por la cocina en diciembre de 1989.
-10. 24,60 m: la mayor ola medida cerca de La Jument en el invierno 2017-2018, para comparar con la ola de la foto.
+1. «Una roca en la que sólo se podía trabajar 52 horas al año» (primer año de obra) y un testamento que exigía acabar el faro en siete años o el dinero iba a otros náufragos.
+2. Un faro construido con prisa y con la base recortada que vibraba y derramaba mercurio desde su primer invierno: la torre de «La Jument» necesitó refuerzos durante décadas, incluso cables en 1934. La torre más famosa del mar se aguantó con cables.
+3. 1974: otra ola rompió su linterna y dos fareros pasaron la noche recogiendo mercurio. La foto de 1989 no fue un hecho aislado.
+4. Drummond Castle: 242 muertos, tres supervivientes, mar en calma, niebla, y un barco que pasó por donde no debía. La isla enterró a unos cien cuerpos y Londres respondió con una cisterna, un reloj y la aguja de una iglesia.
+5. «La isla de las mujeres»: el marido se iba a vivir a casa de la esposa, ellas conservaban su apellido, proponían matrimonio y 298 funerales sin cuerpo (proëlla) en 58 años.
+6. 16 de marzo de 1978, 09:45: se rompe el timón del Amoco Cadiz a 7,5 millas de Ouessant. Pasan once horas entre el fallo y el desastre, con un contrato de remolque en discusión. Sin esa discusión quizá hoy no existiría el CROSS.
+7. 120 cargueros al día pasan por un «rail» invisible frente a una isla de 860 habitantes.
+8. 24,60 m: la ola máxima medida en 2017-2018 en La Jument; los ingenieros reconocen aún hoy que no saben exactamente qué fuerza soporta la torre cuando rompe una ola.
+9. Mismo diciembre de 1989: en Kéréon, los fareros cubrieron con lonas la óptica para que la luz no se apagase.
+10. Un refrán: «Qui voit Ouessant voit son sang».
 
-## Lagunas y dudas para la siguiente fase
+## Mitos y leyendas (separados de los hechos)
 
-- Agotado el presupuesto de búsquedas web: no pude buscar en francés la polémica «¿foto falsa?», ni testimonios directos de Malgorn, ni prensa de época (Ouest-France, Le Télégramme) ni documentos de INA.
-- Falta verificar: nombre completo y rol exacto de Malgorn (WP-EN no dice si era farero o ayudante), cuántos fareros había esa semana, quién llamó al helicóptero, la hora y si Guichard avisó.
-- Falta comprobar el origen de «el póster vendió más de un millón» y los «20-30 m» de ola.
-- Falta una fuente primaria sobre el testimonio de Rose Héré (Vesper, 1903) y sobre el rescate del Drummond Castle (Légion d'honneur, tanques, nombres de pescadores).
-- No se cubrió: vida cotidiana de los fareros de La Jument (turnos, relevos en helicóptero, comida), con fuentes tipo documental «Il était un phare» (2000, 52 min, citado en WP-FR-Kéréon) y vídeos recientes de creadores.
-- Revisar con Météo-France si el 21/12/1989 hubo temporal extremo y el estado de mar.
-- Falta Chateaubriand en 1791 cerca de Ouessant (citado por Gruyer, sin verificar aquí).
+- Mito/leyenda: «el faro se construyó por un rico que sobrevivió a un naufragio» (sólo EN Wikipedia). Hecho: legado testamentario de Potron, miembro de la Société de Géographie.
+- Mito: «La Jument se construyó tras el Drummond Castle». Hecho: el Drummond Castle (1896) es parte del contexto de peligro, pero Mérimée documenta el origen en el informe de naufragios 1888-1904, el programa de balizas y el legado de 1904.
+- Leyenda a verificar: matrimonio a prueba en Ouessant (fuente antigua, sin confirmar).
+- Posible confusión: la tormenta de La Jument (21-dic-1989) y la de Kéréon (16-dic-1989) son fechas distintas.
+- Leyenda a contrastar: «faro más potente de Europa» (Créac'h): se repite en wikis, y EN lo marca como sin cita.
+- Leyenda a verificar: «el faro con más ola del mundo» o «el farero casi muere»: la cita de Malgorn es suya (vía Wikipedia/Stern), pero no se ha comprobado el original.
+- Acusación de «foto falsa»: sin evidencia hallada, pendiente.
+
+## Dudas abiertas
+
+- Polémica de montaje: quién la dijo y con qué argumentos.
+- Versión íntegra de Malgorn (Stern 2007) y si era farero titular.
+- Cómo se tomó la foto: helicóptero de Lorient, dato de EN Wikipedia sin más fuente.
+- Nombres de los tres supervivientes del Drummond Castle y relato de los isleños (no obtenidos).
+- Prestige y datos del Erika.
+- Fecha exacta de apertura de CROSS Corsen y cifras de rescates actuales.
+- Altura exacta, destellos, y quién diseñó realmente La Jument.

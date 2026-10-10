@@ -1,0 +1,8 @@
+# Pronunciación aparte (para el guion de voz, aproximada; probar con Alejandro)
+
+Phineas Gage (Fínias Guéich), Cavendish (Cávendish), Proctorsville (Próctorsvil), Harlow (Járlou), Bigelow (Bíguelou), Macmillan (Macmílan), Lebanon (Lébanon), Woburn (Uóbern), Hanover (Jánover), Currier (Cúrier), Barnum (Bárnum), Montpelier (Montpílier), Woodstock (Udstok), Vermont (Vermónt), New Hampshire (Niu Jámpshir), Grafton (Gráfton), Jefferson (Yéfferson), Lister (Lístar), Paré (Paré), Warren (Uóren), Morton (Mórton), Abbott (Ábot), Gall (Gal), Spurzheim (Spúrsjaim), Sweetland (Suítland), Trevitt (Trévit), Lena (Lena), Countway (Káuntuei), Jackson (Yáckson), Jewett (Yúet), Lenn (Len), Barker (Bárker), Coon (Cun), Stillman (Stílman), Shattuck (Shátuk), Slate (Sleit), Griggs (Grigs), Schleim (Chlaim), Ferrier (Férier), Dupuy (Dupüí), Bowditch (Báuditch), Leborgne (Leborñ), Bicêtre (Bisétr), Broca (Bróka), Molaison (Molesón), Damasio (Damásio), Hanna (Jana), Kotowicz (Kotóvich), Ratiu (Rátiu), Talos (Tálos), Van Horn (Van Jorn), Cato (Keito), Fulton (Fúlton), Jacobsen (Yákobsen), Becky y Lucy (Béki y Lúsi), Moniz (Moníz), Egas Moniz (Égas Moníz), Almeida Lima (Almeida Lima), Burckhardt (Búrkart), Freeman (Frimán), Watts (Uots), Wilgus (Uílgus), Spurlock (Spérlok), Flickr (Flíker), Smithsonian (Smitsónian), Science (Sáiens), Leahy (Lei), Jeffords (Yéfords), Dean (Din).
+
+Notas para la grabación:
+- La sigla del medio digital de Vermont va escrita como se pronuncia en el texto: Vi Ti Díguer.
+- «tan» (el hombre de la sílaba) va entre comillas en el texto.
+- La revista de frenología se dice en español: la revista americana de frenología.

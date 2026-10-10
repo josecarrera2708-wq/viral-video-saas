@@ -1,49 +1,51 @@
-# La Jument 1989: la fotografía de Jean Guichard (investigación)
+# La Jument 1989: la fotografía de Jean Guichard (investigación INCOMPLETA)
 
-**Estado: INCOMPLETO.** El presupuesto de WebSearch de la sesión se agotó (límite 200 por turno, compartido) tras las primeras llamadas. Sólo se pudo usar WebFetch sobre páginas concretas. Faltan entrevistas originales en francés, la prensa de 1989-91, el relato propio de Guichard y el de Malgorn, y el debate de autenticidad. Hay MENOS de 25 hechos verificados. No dar este material por suficiente para 45 min.
+AVISO DE ALCANCE: la cuota de WebSearch se agotó (límite 200/turno compartido) antes de la primera búsqueda útil.
+Sólo se pudo leer UNA fuente: Wikipedia FR "Phare de la Jument". Fallaron (404) en.wikipedia La_Jument_Lighthouse y fr.wikipedia Jean_Guichard_(photographe).
+Un redirect de jeanguichard.com a un dominio ajeno no se siguió. NO se alcanzaron los 25 hechos pedidos ni entrevistas originales en francés.
+Pendiente: nueva ronda de búsqueda (o subir CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION).
 
-## Hechos verificados (con fuente y confianza)
-1. Obra del faro 1904-1911; entró en servicio el 15-oct-1911. Fin con 7 meses de retraso y base más pequeña de lo previsto. Fuente: https://fr.wikipedia.org/wiki/Phare_de_la_Jument (cita Gallica, Journal officiel 1909, etc.). Confianza media-alta (Wikipedia; fuentes primarias citadas sin abrir).
-2. Financiación: legado de 400.000 francos de Charles-Eugène Potron (Société de géographie); coste estimado total 850.000 francos. Misma fuente. Media.
-3. Ingenieros: Henri-Louis-Émile Willotte (reconocimientos) y Georges Clet Heurté (dirección de obras). Misma fuente. Media.
-4. Interiores terminados unos tres años después de la puesta en servicio. Misma fuente. Media.
-5. 1974: tras un gran temporal, los fareros Jean-Claude Roger y Noël Violant pasaron la noche en la cocina recogiendo el mercurio derramado. Misma fuente. Media.
-6. Foto: 21-dic-1989, serie de siete imágenes del faro batido por una ola con el farero Théodore Malgorn en el umbral. Misma fuente (fr.wikipedia). Media-alta; fecha y nombre coinciden en en.wikipedia.
-7. Guichard alquiló un helicóptero en Lorient y fotografió desde el aire; temporal de frente de bajas presiones. Fuente: https://en.wikipedia.org/wiki/Phare_de_la_Jument. Media (sólo Wikipedia; falta fuente primaria).
-8. Segundo puesto en World Press Photo 1991 y póster con más de un millón de copias (según en.wikipedia). Baja-media: NO verificado en worldpressphoto.org (la URL probada dio 404). Comprobar categoría exacta.
-9. Cita atribuida a Malgorn: "Si hubiera estado un poco más lejos de la puerta, no habría podido volver a entrar en la torre" (en.wikipedia; origen: Der Stern, «Was macht eigentlich... Théodore Malgorn?», dic-2007, no abierto). Baja-media.
-10. Plan del faro tras el naufragio del Drummond Castle (1896, unas 250 víctimas); mecenas rico que casi muere en otro naufragio (en.wikipedia). Media. Cuidado: la relación causal exacta con Potron hay que contrastarla.
-11. Automatización: electrificado en 1990; automatizado y fareros se van el 26-jul-1991. Wikipedia fr/en. Media-alta.
-12. Una de las fotos aparece en «Los infiltrados» (Scorsese, 2006), en escenas interiores. fr.wikipedia. Media.
-13. 2014-2015: nuevo derrame de la cuba de mercurio en temporal; 2015 linterna sustituida por óptica LED. Fuentes citadas: Le Télégramme 5-sep-2014 y 25-mar-2015 (URLs en fr.wikipedia). Media.
-14. Protección: clasificado monumento histórico el 20-abr-2017 (inscripción de 2015 anulada). Base Mérimée PA29000084: https://www.pop.culture.gouv.fr/notice/merimee/PA29000084. Alta (fuente oficial).
-15. Mérimée sitúa el faro en la roca de la Jument (Men Ar Gazec), mar de Iroise, dominio público marítimo, propiedad del Estado. Alta.
-16. 2023: panel solar con grupo electrógeno de respaldo (fr.wikipedia). Media.
-17. Guichard tiene web propia («la mayor colección de fotografías de faros del mundo») y un reportaje "Chasseur de tempêtes" sobre trabajar con el piloto Thierry Leygnac en el Iroise: https://www.jean-guichard.com. Alta como existencia; no se leyó su relato de la foto.
-18. Existe un estudio científico sobre olas extremas en La Jument (Royal Society, doi 10.1098/rsta.2019.0008; actu.fr). No se pudo leer (403 / bloqueado). Pendiente.
-19. Literatura: Henri Queffélec, «Le phare» (1975) y «La Lumière enchaînée» (1976), novelas sobre la construcción. en.wikipedia. Media.
+## A. Hechos con fuente (única fuente: https://fr.wikipedia.org/wiki/Phare_de_la_Jument ; confianza MEDIA, sin contraste externo)
+1. Torre construida 1904-1911; luz encendida el 15 oct 1911; siete meses de retraso. (media)
+2. Coste aprox. 850.000 francos, buena parte del legado de 400.000 francos de Charles-Eugène Potron. (media)
+3. Altura 47 m, altura focal 47,4 m, elevación 41 m, alcance 10 millas náuticas. (media)
+4. Jean Guichard tomó SIETE imágenes el 21 de diciembre de 1989 (según el artículo): tormenta, ola rompiendo sobre la torre, el gardien Théodore Malgorn en la puerta. (media; fecha a verificar con Guichard/prensa)
+5. El artículo no menciona helicóptero (la pista queda sin confirmar ni desmentir aquí).
+6. Una de las fotos aparece en escenas interiores de "Infiltrados" (Scorsese, 2006). (media)
+7. Automatizado, sin guardianes, el 26 jul 1991. (media; la pista decía "principios de los 90": coherente)
+8. En 2015 la linterna se cambió por óptica LED. (media)
+9. Monumento histórico: inscrito por decreto 31 dic 2015, clasificado 20 abril 2017. (media)
+10. Medición 2017-2018: ola máxima registrada 24,60 m. (media; verificar cómo y dónde se midió)
+11. Entre 1888 y 1904, 31 barcos perdidos en la zona (justificó la obra). (media)
+12. Bibliografía citada por la wiki para seguir: Fichou, Le Hénaff, Mével (1999) "Phares"; Le Télégramme (2014, 2015); Ouest-France; DIRM NAMO; sitio oficial de Guichard; Royal Society (olas).
 
-## Contradicciones detectadas
-- en.wikipedia dice que Malgorn estaba "dentro de la torre"; las imágenes y fr.wikipedia lo sitúan en el umbral de la puerta. Probablemente descuido de redacción, pero hay que aclarar cómo y por qué salió (¿curiosidad, ver el helicóptero?). SIN FUENTE todavía.
-- Mérimée dice "construcción en 1904" y no nombra ingenieros; fr.wikipedia sí los nombra. No es contradicción real.
+## B. Pistas del encargo: estado
+- Años de obra e inauguración: CONFIRMADO (A1).
+- Foto de Guichard, dic 1989: CONFIRMADO en el año; fecha 21 dic según wiki FR.
+- Farero Théodore Malgorn: CONFIRMADO en el nombre por la wiki; relato propio SIN VERIFICAR.
+- Helicóptero: SIN VERIFICAR (la wiki no lo dice). Recuerdo de memoria, sin fuente: Guichard habría estado en el lugar con un helicóptero de Marine/Sécurité civile o en barco; NO usar sin fuente.
+- Automatización 1991: CONFIRMADO.
+- Foto "falsa": SIN VERIFICAR (la wiki no trata la polémica).
+- Drummond Castle 1896: SIN VERIFICAR en esta ronda (es hecho conocido, pero falta fuente).
 
-## Ganchos posibles (hipótesis de trabajo, a verificar)
-- Un hombre sale a mirar el mar y en segundos la ola cubre un faro de 47 m (altura no verificada aquí).
-- El fotógrafo no estaba allí por casualidad: alquiló un helicóptero a propósito.
-- La imagen terminó en una película de Scorsese y en un póster de un millón de copias.
-- El mismo faro cuya obra tardó siete años casi no se terminó por el mar.
+## C. Contradicciones
+- Ninguna comprobada aún. Vigilar: fecha de la foto (21 dic vs. otras fechas que circulen), y versión de cómo se tomó.
 
-## Mitos y leyenda (a desmontar con fuente)
-- "La foto es un montaje/falsa": NO se halló ninguna fuente en esta sesión ni a favor ni en contra. Pendiente de búsqueda.
-- "El farero estuvo a punto de morir": sólo apoyado en una cita de 2007 no verificada.
-- "Malgorn salió a propósito para la foto": no documentado; no afirmar.
+## D. Ideas de gancho (condicionadas a verificación)
+- "Siete fotos, una sola puerta, una ola de 24 metros medida décadas después."
+- Una foto del faro acaba decorando una película de Scorsese: de la prensa al cine.
+- Un faro financiado por un legado y terminado con siete meses de retraso, a la espera de que el mar le diera su momento.
 
-## Dudas / pendientes críticos
-1. Relato de Guichard (¿desde qué altura/distancia, cuántos pases, qué sabía de que había alguien en la puerta?).
-2. Relato de Malgorn en francés (Ouest-France, Le Télégramme, entrevistas de TV, Der Stern 2007).
-3. Primera publicación en prensa (Paris Match u otra), fecha y derechos.
-4. World Press Photo 1991: categoría y puesto exactos.
-5. Debate de autenticidad y qué se comprobó (estudio de olas, Royal Society).
-6. Por qué es viral hoy: cuentas, fechas de difusión, fotos falsas asociadas.
-7. Casos paralelos (Eckmühl, Ar-Men, Four, Kéréon, etc.) y naufragios de Ouessant (Drummond Castle, 1896: verificar).
-Para continuar: enviar un mensaje de seguimiento o subir CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.
+## E. Mitos a investigar (sin evidencia aún)
+- "La foto es un montaje/fotomontaje."
+- "El farero estuvo a punto de morir / fue arrastrado" (no consta).
+- Que se tomó desde helicóptero (sin confirmar).
+- Que muestra el momento exacto de un rescate o de la última salida del farero.
+
+## F. Plan de búsqueda pendiente (prioridad)
+1. Sitio oficial de Guichard y entrevistas en francés (Ouest-France, Le Télégramme, Le Figaro, Paris Match, France 3 Bretagne, INA).
+2. Testimonio de Théodore Malgorn y su familia; qué hacía en la puerta.
+3. Publicación original (Paris Match u otra), premios (p. ej. World Press Photo, Prix Nadar: sólo hipótesis).
+4. Verificación de autenticidad (negativos, serie de 7 fotos, análisis de peritos).
+5. Contexto: Drummond Castle 1896, Ouessant, Criée/Phares et Balises, vida de fareros, casos paralelos (Tillamook, Eddystone, Flannan).
+6. Cronología viral en redes.

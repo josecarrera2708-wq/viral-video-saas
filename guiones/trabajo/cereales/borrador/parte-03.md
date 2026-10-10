@@ -1,77 +1,77 @@
-## 11. NADIE ANUNCIÓ EL FINAL
+## 10. EL CULPABLE QUE NO ESTABA EN LA LEY
 
-Ese alguien fue el Congreso de Estados Unidos. Entre mil novecientos setenta y ocho y mil novecientos ochenta y uno, la Comisión Federal de Comercio, la agencia que vigila la publicidad, propuso restringir los anuncios de televisión dirigidos a niños pequeños y los de alimentos azucarados. Según un documento de la propia comisión, en mil novecientos ochenta el Congreso le retiró la base legal para hacerlo, y en mil novecientos ochenta y uno el proceso se cerró.
+Vamos con el documento, del catorce de junio de dos mil siete. Según el comunicado de una de las organizaciones que habían amenazado con demandarla, Kellogg's se compromete por escrito a fijar estándares nutricionales para lo que anuncia a los niños. También se compromete a no anunciar a menores de seis años y a limitar los personajes con licencia. Y hay una promesa más, la que nos interesa: no usar juguetes de marca con alimentos que no cumplan esos estándares.
 
-Una aclaración: aquello trataba de anuncios y no de juguetes dentro de las cajas, pero explica el terreno donde ocurrió todo lo demás. Desde entonces, la publicidad infantil de cereales quedó en manos de la autorregulación, que es lo que las propias empresas deciden prometer.
+Antes de emocionarte con la palabra juguete, mira de dónde viene. En enero de dos mil seis, dos organizaciones y dos padres de Massachusetts habían anunciado que demandarían a Kellogg's y a Viacom, la empresa de Nickelodeon. Los demandantes desistieron y la demanda nunca llegó a presentarse.
 
-Y esa promesa llegó en dos mil cinco. Ese año se anunció una iniciativa voluntaria de la industria sobre la publicidad de alimentos dirigida a niños, con Kellogg's, General Mills y Post entre los participantes. Es una promesa de las empresas, no una ley. Ahí tienes la palabra que te pedí que guardaras: las retiradas de los juguetes fueron voluntarias, y esta iniciativa también.
+Ahora, lo que el documento no dice. Habla de juguetes de marca, los que llevan la licencia de un personaje, y no de todo premio. Es un acuerdo, no una ley que obligue a las demás empresas. Aun así, un fabricante de cereales renuncia por escrito a una parte del regalo.
 
-Mientras tanto, los regalos seguían apareciendo. En dos mil cinco, los cereales Reese's Puffs regalaron un tono de celular, y en dos mil seis los Lucky Charms ofrecieron una descarga de iTunes, la tienda de música de Apple. Son hechos, sin moraleja.
+Todavía te debo el viernes de Santiago, el del subsecretario que anuncia que un huevo de chocolate ya no podrá venderse. Esa historia sí tiene una ley detrás, pero no es una ley de Estados Unidos.
 
-El sitio de comida The Takeout llama a dos mil seis el golpe final. Es su lectura. Lo demás que se dice son hipótesis de prensa: se sospecha que los juguetes se volvieron un riesgo, que costaban demasiado, que el plástico cayó en desgracia, que la imagen ambiental de las marcas empezó a pesar o que los hábitos de los niños cambiaron. No hay una estadística pública que mida cuánto pesó cada una. Es lo que se sospecha, y no lo que se sabe.
+El acuerdo no estaba solo. En dos mil cinco, la industria había anunciado una iniciativa voluntaria sobre la publicidad de alimentos para niños, con Kellogg's, General Mills y Post entre los participantes. El sitio de comida The Takeout llama a dos mil seis el golpe final del regalo, pero es una opinión periodística, y ninguna compañía confirmó ese motivo.
 
-Lo que sí se sabe cabe en una frase. En Estados Unidos no hay una ley federal que prohíba el regalo dentro de la caja de cereales. Hay normas de seguridad para juguetes que no he revisado a fondo, pero una ley que prohíba el regalo en la caja no la he encontrado, y ninguna fuente que leí la cita.
+¿Por qué todo quedó en manos de la industria? Hace casi medio siglo, según un documento de la comisión federal de comercio, la agencia quiso restringir los anuncios de televisión para niños. El Congreso le quitó la base legal. Desde entonces, la publicidad infantil de cereales quedó en la autorregulación. El informe de seguimiento de la comisión, de diciembre de dos mil doce, mide el marketing de alimentos a jóvenes y no menciona juguetes ni premios.
 
-Eso responde, al menos en parte, a por qué nadie lo anunció. Sin ley no hay fecha, ni boletín oficial, ni un día en que el regalo deje de ser legal. Esto ya es deducción mía: un regalo así pudo irse caja por caja, sin que nadie tuviera que decirlo.
+En Estados Unidos, que yo haya podido encontrar, no existe una ley federal que prohíba el regalo dentro de la caja. El segundo sospechoso llega al expediente sin la prueba que todos esperaban.
 
-Pero en Estados Unidos sí hubo un condado de California que probó otra cosa. No prohibir el juguete, sino atarlo a lo que lleva la comida. Y el resultado cabe en diez centavos.
+¿De dónde sale entonces la idea de que algo se llevó el regalo? De hipótesis: la seguridad, los costes, el plástico, la imagen ambiental, los cambios de hábito de las familias. Son sospechas de prensa y, que yo sepa, nadie las ha medido. Lo que se sospecha no es lo que se sabe.
 
-## 12. LOS DIEZ CENTAVOS DE SAN FRANCISCO
+Pero si no hay ley donde nació el regalo, sí hubo un condado de California que probó otra cosa. No prohibir el juguete, sino atarlo a lo que lleva la comida. El resultado cabe en diez centavos.
 
-Empecemos por lo que no pasó. Se cuenta a menudo que California prohibió los juguetes de las comidas infantiles. Lo que hicieron fue condicionarlos, y la diferencia es todo el asunto.
+## 11. LOS DIEZ CENTAVOS DE SAN FRANCISCO
 
-En abril de dos mil diez, el condado de Santa Clara aprobó por tres votos contra dos una ordenanza que ataba el juguete de una comida infantil a unos límites nutricionales. Uno de ellos, por ejemplo, eran cuatrocientas ochenta y cinco calorías. Si la comida pasaba de esos límites, el juguete no podía acompañarla. Valía solo para las zonas no incorporadas, que son las que no pertenecen a ninguna ciudad, y la multa podía llegar a mil dólares.
+Se cuenta mucho que California prohibió los juguetes de las comidas infantiles. Suena a titular, y no es lo que dicen los textos de esas ordenanzas. Lo que hizo fue más sutil, y por eso lo que pasó después vale la pena.
 
-En noviembre de ese año, San Francisco aprobó la suya por ocho votos contra tres. El alcalde, Gavin Newsom, la vetó, y los concejales superaron el veto. Entró en vigor el primero de diciembre de dos mil once.
+Una aclaración antes de seguir: esto no son cajas de cereal, son menús infantiles de restaurantes. Lo traigo porque alguien legisló el regalo y luego midió lo que ocurría, y eso se encuentra pocas veces.
 
-Las cadenas de comida rápida tenían, en teoría, dos caminos: cambiar la comida o cambiar la manera de entregar el juguete. Y aquí viene la escena. Para quien llegaba a pedir una comida infantil, el cambio se resumía en una línea más en la cuenta. Las cadenas añadieron un cargo de diez centavos por el juguete. Y un juguete que tiene precio ya no se regala, se vende.
+Santa Clara llegó primero. En abril de dos mil diez, el condado aprobó, por tres votos contra dos, una ordenanza que impedía regalar juguetes con las comidas que superaran ciertos umbrales nutricionales. Solo valía en las zonas del condado que no pertenecen a ninguna ciudad, y la multa podía llegar a mil dólares. El detalle importa: no prohibía el juguete, lo ataba a lo que había en el plato.
 
-Los números salen de un estudio que midió lo que ocurrió después. El ochenta y ocho por ciento de quienes compraron una comida infantil compró también el juguete. Ninguna de esas comidas cumplía los criterios de la ordenanza. Y las calorías medias bajaron de quinientas ochenta y seis a unas quinientas treinta, aunque parte de esa bajada no parece causada por la ley.
+San Francisco fue por su cuenta. Su ordenanza se aprobó por ocho votos contra tres, superando el veto del alcalde, Gavin Newsom, y entró en vigor el uno de diciembre de dos mil once.
 
-Los autores señalan algo más. La ordenanza de Santa Clara no usaba la palabra gratis, y fue la que produjo cambios más reales. Qué pasó con ella después de dos mil doce, no lo sé, porque no he encontrado datos. Tampoco hay en el estudio una cifra de lo que ganaron o perdieron las cadenas con aquellos diez centavos, y no voy a inventarla.
+Imagina ese día un mostrador de comida rápida de la ciudad. Alguien pide una comida infantil, y el juguete sigue ahí, con una diferencia: ahora cuesta diez centavos. Las cadenas añadieron ese cargo al juguete.
 
-Lo que queda es una ley que quería separar el juguete de la comida y una cuenta que lo volvió a juntar por diez centavos. La ley y el dinero cupieron en la misma línea de un recibo.
+Un estudio midió lo que pasó. El ochenta y ocho por ciento de quienes compraron una comida infantil compró también el juguete, es decir, casi nueve de cada diez. Ninguna comida infantil cumplió los criterios de la ordenanza. Las calorías medias bajaron de quinientas ochenta y seis a unas quinientas treinta, y los autores señalan que parte de esa bajada no parece causada por la ley.
 
-Y eso nos deja con un cabo suelto. La ley que todos suponen no está en el país donde nació el regalo. Para encontrarla hay que viajar al sur, a donde el regalo tuvo otro destino. Y allí, un viernes de junio de dos mil dieciséis, un funcionario chileno dijo que un huevo de chocolate no podría venderse el lunes.
+Según esos mismos autores, la ordenanza de Santa Clara, que no usaba la palabra gratis, produjo cambios más reales. Qué pasó con ella después, no se sabe, y no voy a inventarlo: no encontré su rastro tras el estudio que leí.
 
-## 13. EL REGALO EN ESPAÑOL
+Con esto, el segundo sospechoso queda así. En el país donde nació el regalo, la ley que todos suponen no existe. Lo más parecido que encontré son dos condados de California y los menús de los restaurantes. Para ver una ley que sí nombre el regalo, hay que viajar al sur.
 
-Te avisé de que, al llegar esta historia a nuestro idioma, íbamos a tener que reconocer un hueco. Ha llegado el momento. En los informes que consulté y en lo que leí por mi cuenta no aparece una crónica fiable de regalos concretos dentro de cajas de cereal en España y Latinoamérica antes del año dos mil, con marca, fecha y juguete.
+Y antes de llegar a ella, te debo una confesión. Busqué el regalo en las cajas de nuestro idioma, y no lo encontré.
 
-Lo que sí circula son anuncios de coleccionistas, videos de hallazgos y, sobre todo, el recuerdo. Ese recuerdo existe, y no voy a fingir lo contrario. Quizá tú tengas el tuyo. Lo que no puedo es ponerle marca o fecha sin una fuente, porque ya no sería tu memoria, sino un dato inventado por mí. Si lo tienes, cuéntalo en los comentarios, que eso sí es un testimonio.
+## 12. EL REGALO QUE NO ENCONTRÉ
 
-Lo que sí consta es que las cajas estaban allí: Kellogg's llegó a Venezuela en mil novecientos sesenta y uno y a España en mil novecientos setenta y siete. Qué traían dentro no consta, y la búsqueda se enfría.
+Te lo digo sin rodeos. Busqué cajas de cereal con regalo en España y en Latinoamérica antes del año dos mil, y no encontré una sola crónica fiable que diga qué juguete venía. Tampoco decía en qué marca ni en qué fecha. Es el hueco que te anuncié, y no pienso taparlo.
 
-Hay una pista débil: en mil novecientos ochenta y cinco, según anuncios de coleccionistas y la reseña de un libro, la empresa española Panrico lanzó unos cromos con su pastelito Bollycao. No es un cereal y la fuente es floja.
+Lo que sí circula son anuncios de coleccionistas, videos de gente que enseña sus tesoros y, sobre todo, el recuerdo. Hay quien asegura que en su caja venía algo, y no voy a discutírselo. Pero no puedo ponerle marca, fecha ni juguete a esos recuerdos, porque no hay con qué comprobarlos, y tampoco voy a fingir que no existieron. Un recuerdo es un testimonio, y un testimonio se respeta.
 
-La buena llega a finales de mil novecientos noventa y cuatro, en México, y es un objeto. Nacen los tazos, unas fichas redondas que se regalaban dentro de las bolsas de la marca de frituras Sabritas, de PepsiCo. La primera colección, de los Looney Tunes, llegaba hasta el número cincuenta y cada tazo valía un punto. Se atribuye la idea a dos ejecutivos, Pedro Padierna y Fabián de la Paz. El origen del juego se discute.
+Los cereales sí estaban. Según lo que encontré, Kellogg's llegó a Argentina en mil novecientos sesenta y nueve y a España en mil novecientos setenta y siete. Lo que no encontré es qué traían las cajas.
 
-En España llegaron ese mismo año con Matutano, y hubo unos Chiqui Tazos con la imagen del humorista Chiquito de la Calzada, diez piezas que desaparecieron a los pocos meses. A mí todo esto me recuerda al decodificador del año: algo que completar y una razón para volver a la bolsa. Es una comparación mía, sin cifras de ventas que la respalden.
+La búsqueda se enfriaba, hasta que apareció un objeto que muchos de nosotros tuvimos en la mano: un tazo. Nacieron en México a finales de mil novecientos noventa y cuatro, y venían de regalo en bolsas de Sabritas, de PepsiCo. Eran bolsas de papas, no de cereal, y no te lo escondo. Los traigo porque eran un regalo dentro del paquete.
 
-Queda un pariente más, el que nos devuelve a Santiago. El diecisiete de febrero de mil novecientos setenta y cuatro, Ferrero presentó el Kinder Sorpresa, un huevo de chocolate con una sorpresa dentro. La idea era de Michele Ferrero, de mil novecientos sesenta y ocho, y William Salice la materializó, aunque siempre dijo ser solo el ejecutor. Hasta dos mil dieciséis se vendieron unos treinta mil millones de huevos.
+La primera colección fue de Looney Tunes, numerada hasta el cincuenta, y cada tazo valía un punto. Después llegaron los Super Tazos de Taz-Mania, del setenta y uno al cien, que valían dos. La idea se atribuye a dos ejecutivos, Pedro Padierna y Fabián de la Paz. El origen del juego es discutido, así que no te digo de dónde sale; lo único seguro es que su mecánica es anterior a los tazos.
 
-Esa es la respuesta honesta a dónde está el regalo de la caja en español: no tiene crónica propia, tiene parentesco. Un cromo con un pastelito, un tazo en una bolsa, una sorpresa en un huevo.
+En España llegaron casi a la vez, de la mano de Matutano, con los Matutazos y unos de los Tiny Toons. Hubo también unos Chiqui Tazos de Chiquito de la Calzada, diez piezas en total, que desaparecieron meses después.
 
-En junio de dos mil dieciséis un funcionario chileno dijo que un huevo de chocolate no podría venderse el lunes siguiente. Y ese huevo ya era contrabando en otro país por una razón distinta.
+Esa es la respuesta a la pregunta que te dejé abierta. Lo documentado en nuestro idioma es un parentesco: tazos que venían dentro de paquetes, leyes que llegarían después y un huevo de chocolate. De la caja de cereal en sí, lo que puedo probar es poco, y prefiero que sepas dónde pisas.
 
-## 14. EL LUNES EN QUE UN HUEVO DEJÓ DE VENDERSE
+Piensa en un cajón de tu casa de entonces. Si en tu caja venía algo, lo recuerdas tú, y no hace falta que ningún papel te dé la razón. Lo que yo no puedo hacer es poner su nombre en este video sin una fuente.
 
-Vamos primero con ese otro país. En Estados Unidos, una ley federal de alimentos, medicamentos y cosméticos de mil novecientos treinta y ocho considera adulteración que un dulce lleve incrustado un objeto que no es alimento. Dicho en términos generales, esa es la base por la que el Kinder clásico es ilegal allí. La agencia de alimentos y medicamentos habla además de riesgo de asfixia, que es su argumento oficial, aunque no la base legal.
+La pregunta grande sigue en pie: quién apagó el regalo de la caja. En español, además, ni siquiera tengo la fecha de su llegada. Y el pariente más famoso de la caja de cereales llegó a nuestro idioma con nombre y apellido. En junio de dos mil dieciséis, una autoridad chilena lo sacó del mostrador.
 
-Un juguete suelto dentro de una caja de cereales no cae en esa regla. Es una ley hecha para un huevo y no para un regalo.
+## 13. EL LUNES EN QUE UN HUEVO DEJÓ DE VENDERSE
 
-En dos mil once la aduana decomisó más de sesenta mil huevos, frente a unos veinticinco mil el año anterior, y según la Wikipedia, en dos mil doce dos hombres de Seattle fueron retenidos unas dos horas y media por seis huevos. El riesgo tampoco es una abstracción: en el año dos mil, tres familias británicas cuyos hijos se atragantaron hicieron campaña por retirarlo.
+Volvamos al viernes veinticuatro de junio de dos mil dieciséis, en Santiago de Chile. El subsecretario de Salud Pública, Jaime Burrows, dice que desde el lunes el Kinder Sorpresa no podrá venderse, porque es un alimento alto en ciertos nutrientes y lleva un juguete. Según la radio Cooperativa, los representantes de Ferrero respondieron que el exministro Jaime Mañalich les había prometido que la ley no les afectaría. Burrows dijo que no tenía constancia de esa promesa.
 
-Ahora, a Chile. Se suele decir que Chile prohibió los regalos en dos mil dieciséis, pero la ley es anterior. El seis de julio de dos mil doce se publicó la ley veinte mil seiscientos seis, que regula los alimentos y su publicidad. El artículo seis prohíbe ofrecer gratis a menores de catorce años los alimentos que la norma llama altos en, los que superan sus límites y llevan un sello de advertencia, y venderlos mediante lo que llama ganchos comerciales, como regalos, concursos o juegos. El artículo ocho añade que nunca pueden usarse como gancho juguetes, accesorios, adhesivos ni incentivos parecidos.
+Ferrero habló de consternación y se reservó acciones legales. Burrows añadió que cerca del veinte por ciento de los productos que habrían llevado sello ya se habían reformulado. Si Ferrero llegó a los tribunales, y cómo terminó aquello, no lo pude comprobar.
 
-Esa es la redacción original: se modificó en dos mil veintiuno y, según un resumen que leí, otra vez en dos mil veinticinco, y no he podido cotejar el texto vigente. Y hay un límite que importa: la ley alcanza solo a los productos altos en. Lo que no lleva sello queda fuera.
+Ferrero presentó el huevo en mil novecientos setenta y cuatro, a partir de una idea de Michele Ferrero que William Salice llevó a la práctica. Salice siempre dijo ser solo el ejecutor. Hasta dos mil dieciséis se vendieron unos treinta mil millones de huevos, con unos doce mil juguetes distintos. No es cereal, pero es el pariente más famoso de la caja: el regalo dentro de la comida.
 
-Cuatro años después, el lunes veintisiete de junio de dos mil dieciséis, entró en plena vigencia lo relativo a ganchos y sellos. Esa es la fecha que se recuerda.
+La ley que lo sacó del mostrador no se aprobó ese viernes. Se publicó el seis de julio de dos mil doce, como Ley veinte mil seiscientos seis. Su artículo seis prohíbe entregar gratis a menores de catorce años los alimentos altos en. También prohíbe venderlos con lo que la ley llama ganchos comerciales, como regalos, concursos o juegos. El artículo ocho añade que jamás podrán usarse como gancho juguetes, accesorios, adhesivos ni incentivos.
 
-Tres días antes, el viernes veinticuatro, el subsecretario de Salud Pública, Jaime Burrows, dijo que el Kinder Sorpresa no podría venderse desde el lunes, porque era un producto alto en con un juguete dentro. Según la nota de Cooperativa, los representantes de Ferrero respondieron que el exministro Jaime Mañalich les había prometido que la norma no los afectaría; Burrows dijo no tener constancia. Ferrero habló de consternación y se reservó acciones legales. El subsecretario añadió que cerca del veinte por ciento de los productos que habrían llevado sello ya se habían reformulado, o sea, con la receta cambiada.
+En internet se repite que Chile prohibió los regalos en dos mil dieciséis. Fíjate en que ni la fecha ni el alcance cuadran. La ley es de dos mil doce. Dos mil dieciséis es el año en que entró en plena vigencia lo relativo a ganchos y sellos, el lunes veintisiete de junio. Además solo cubre los productos altos en, los que superan ciertos límites de nutrientes y llevan sello. El texto que te cito es el original: la ley se modificó después, y no pude comprobar cómo queda hoy.
 
-El desenlace judicial no lo he encontrado. Según la Wikipedia en español, el Kinder Sorpresa no está disponible en Chile desde junio de dos mil dieciséis.
+Así se cierra el viernes de Santiago. El huevo salió del mostrador porque era un alimento alto en que llevaba un juguete dentro. En Estados Unidos, en cambio, es contrabando, y en dos mil once su aduana decomisó más de sesenta mil. Según lo que leí, y en términos generales, una ley federal de mil novecientos treinta y ocho considera adulteración un objeto sin valor nutritivo incrustado en un dulce. De ahí sale que el Kinder clásico no pueda entrar, y un juguete suelto en una caja de cereales queda fuera de esa regla. El riesgo de asfixia es el argumento oficial, no la base legal.
 
-Con eso respondo a lo que te preguntaba desde el principio: por qué un funcionario chileno sacó del mostrador un huevo de chocolate. Es el mismo huevo en dos países, por dos razones: en Estados Unidos, por el objeto incrustado en el dulce; en Chile, por ser alto en y usar un juguete como gancho.
+El mismo huevo es contrabando en un país por una razón y desaparece del mostrador en otro por una distinta. Ahí tienes la respuesta a la tercera pregunta del principio: el funcionario chileno lo retira porque una ley prohíbe el gancho en los alimentos altos en.
 
-Pero queda una pregunta mejor, la que se hace con cualquier ley: ¿funcionó? Chile tiene una manera de responderla: mirar cajas. Alguien fotografió cereales, por cientos, antes y después de dos mil dieciséis. Lo que muestran esas fotografías no es lo que se esperaba. Pero antes, tres maneras de quitar un regalo: un texto, una promesa y una fábrica vacía.
+La pregunta grande sigue en pie, quién apagó el regalo de la caja, y la ley es el segundo sospechoso. Chile es el mejor lugar para mirarlo, porque allí alguien fotografió cajas de cereal de antes de la ley y de después. Lo que muestran esas fotografías no es lo que esperas. Pero antes, tres maneras de quitar un regalo: un texto, una promesa y una fábrica vacía.

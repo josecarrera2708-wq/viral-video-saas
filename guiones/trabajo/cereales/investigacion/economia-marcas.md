@@ -1,127 +1,280 @@
-# Economía del regalo en la caja de cereales: dinero, marketing y regulación
+# Economía del regalo en la caja de cereales: dinero, marcas y regulación
 
-Investigación para «Todos Lo Vieron». Encargo: economía del regalo (coste, efecto en ventas, por qué se dejó o transformó, presión de salud pública, paso a digital y colecciones, casos con cifras, silbato de Cap'n Crunch).
-Fecha de la investigación: 2026-10-10. Escala de confianza: alta / media / baja. Etiquetas: [HECHO] documentado, [TESTIMONIO], [HIPÓTESIS], [LEYENDA].
+Investigación para «Todos Lo Vieron». Encargo: economía del regalo (coste, efecto en ventas, por qué se abandonó o transformó, presión de salud pública, paso a lo digital y colecciones, casos con cifras, silbato de Cap'n Crunch).
+Fecha de la investigación: 10 de octubre de 2026.
 
-## Nota honesta sobre los huecos (importante para el guion)
+Leyenda de confianza: **Alta** = fuente primaria u oficial, o varias fuentes independientes. **Media** = una fuente seria o varias secundarias que discrepan en detalles. **Baja** = fuente única débil, coleccionista, blog o dato sin metodología.
+Etiquetas: **[HECHO]** documentado, **[TESTIMONIO]** voz de un protagonista, **[HIPÓTESIS]** interpretación razonada, **[LEYENDA]** historia popular no verificada.
 
-- NO encontré cifras publicadas y fiables de coste por caja del premio en cereales ni de efecto causal en ventas (ni de Kellogg's, Post, General Mills ni Quaker). Lo que hay son anécdotas de prensa de consumo y colecciones. Habrá que decirlo en el vídeo con transparencia, o buscar en archivos (Hagley, trade press como Advertising Age) o en el libro de Scott Bruce.
-- Sí hay buenas cifras de: premios por correo (anillo atómico, Funny Jungleland), Cracker Jack (coste del premio), Chex Quest, ordenanzas de San Francisco / Santa Clara, y estudios de marketing infantil tras la ley chilena.
-- La parte de regulación hispana está bien documentada para Chile y Argentina, pero para México NO pude confirmar que el texto de la NOM-051 mencione «regalos» o «juguetes» (ver sección de contradicciones).
-- Varias herramientas devolvieron resúmenes, no el texto original. Marcado como confianza media donde dependo de un resumen.
+## 0. Resumen honesto (lo que hay y lo que NO hay)
 
-## 1. Orígenes: premios y «box tops» (contexto histórico)
+- **Lo sólido:** textos legales primarios (Chile, Argentina, México, EE. UU.), el recall de Kellogg's de 1988, el caso Chex Quest, las cifras de la FTC y la historia del silbato (con matices).
+- **Lo que no existe públicamente:** el coste unitario real de un premio de cereal y estudios publicados que midan cuánto subían las ventas por premio. Lo único con cifra de ventas atribuida es Chex Quest (dato publicado por la propia marca/agencia, no auditado). Para el resto («las ventas se dispararon») hay que decir que es afirmación de marketing o de divulgación, no medición.
+- **Corrección importante a las pistas:** ver sección 6 («Pistas corregidas»). Chile no aprobó en 2016 sino en 2012; México NO menciona «regalos» ni «juguetes» en su norma; el condado de Santa Clara regula comidas de restaurante, no cereales.
 
-| # | Hecho | Etiqueta | Fuente | Confianza |
-|---|---|---|---|---|
-| 1 | Cracker Jack puso «un premio en cada caja» desde el 19 de febrero de 1912. Antes los premios o cupones iban solo en algunas cajas (y hacia 1907 ya había postales y hacia 1910-11 cupones canjeables por catálogo). Tras 1912, según fuentes de prensa, las ventas se dispararon (no hay cifra verificada). | HECHO (fecha); ventas: afirmación sin cifra | https://fox32chicago.com/news/on-this-day-in-history-feb-19-1912-cracker-jacks-prize-in-every-box-debuts ; https://clickamericana.com/topics/food-drink/cracker-jack-prizes | Alta fecha, media ventas |
-| 2 | Cronología Cracker Jack: 1872 Rueckheim llega a Chicago con 200 dólares; 1893 exposición de Chicago; 1896 nombre «Cracker Jack»; 1908 la canción «Take Me Out to the Ball Game» lo menciona; 1912 premio; 1916 aparecen Sailor Jack y Bingo. Adweek lo llama «el emplazamiento de producto más longevo de EE. UU.». | HECHO | https://clickamericana.com/topics/food-drink/cracker-jack-prizes ; https://www.adweek.com/?p=926722 (de pago, solo titular) | Media-alta |
-| 3 | Dato de coste: un artículo de 1977 (recogido por Click Americana) dice que cada premio de Cracker Jack costaba aproximadamente un tercio de céntimo de dólar, con unos 600 premios distintos. En 1977 es un dato de época, no de 1912. Y el precio de la caja fue 5 centavos durante más de cinco décadas. | HECHO (citado) | https://clickamericana.com/topics/food-drink/cracker-jack-prizes ; https://www.saturdayeveningpost.com/2017/01/vintage-advertising-toys/ | Media |
-| 4 | Total de premios de Cracker Jack: las fuentes discrepan (17, 18 o más de 23 mil millones en un siglo). Usar «decenas de miles de millones» o «más de 17 mil millones» con cautela. | HECHO con contradicción | https://www.saturdayeveningpost.com/2017/01/vintage-advertising-toys/ | Baja en la cifra exacta |
-| 5 | Cereales: Quaker Oats ofreció en 1901 un calendario adivinatorio por una etiqueta y cinco centavos. Kellogg's: «The Funny Jungleland Moving Pictures Book», regalo por comprar dos cajas de Corn Flakes (1909-1910), luego premio por correo por 10 centavos. En 1912 se habían distribuido 2,5 millones de copias; se ofreció por última vez en 1937. Kellogg's no confirma ser el primero. | HECHO | https://en.wikipedia.org/wiki/Cereal_box_prize ; https://thetakeout.com/cereal-box-prizes-history-general-mills-post-kellogg-1848133426 | Media (Wikipedia + otra fuente; cifra 2,5 M solo Wikipedia) |
-| 6 | Año de la fecha del libro: 1909 (Wikipedia, otras) frente a 1910 (The Takeout). Contradicción menor de fechas. | CONTRADICCIÓN | ídem | Media |
-| 7 | Era de radio y «box tops» (1930s-60s): Wheaties patrocinó «Jack Armstrong» (1933-1950, General Mills); Cheerios y Kix «The Lone Ranger»; Kellogg's Pep «Superman»; Ralston «Tom Mix». La caja entera o su parte superior era la prueba de compra. El UPC (años 70) sustituyó después ese papel. | HECHO | https://en.wikipedia.org/wiki/Boxtop ; https://worldradiohistory.com/GOLDTIME-RADIO/serials-cereals-and-premiums-129020.html | Media-alta |
-| 8 | Anillo de la bomba atómica del Llanero Solitario (1947): 15 centavos más una tapa de Kix. Se vendieron en torno a 1,3 millones (tres tiradas); otro titular de la misma página dice 1,6 millones. La página lo llama «el premio más exitoso de la edad de oro de la radio». Es la mejor cifra de respuesta que encontré. | HECHO con contradicción | https://worldradiohistory.com/GOLDTIME-RADIO/serials-cereals-and-premiums-129020.html | Media |
-| 9 | La promoción «Frontier Town» del Llanero atrajo más de 2 millones de respuestas; en junio de 1948 Cheyenne (Wyoming) cambió de nombre por un día. Little Orphan Annie ofreció más de 60 premios distintos en once años (Ovaltine, no cereal). La FTC acusó a Ovaltine de publicidad engañosa en mayo de 1945. | HECHO | ídem | Media |
-| 10 | Pasar de premio por correo a premio dentro de la caja: según una fuente de coleccionismo, el primer premio dentro de la caja sería un globo en 1955; canicas en Corn Flakes en 1956, chapas en Wheaties 1957, plásticos desde finales de los 50. Esa cronología es de tienda de coleccionismo, no verificada. | HECHO dudoso | https://www.mrbreakfast.com/list.asp?id=6 (vía búsqueda) | Baja |
-| 11 | Tecnología que abarató el premio: en 1946 James Watson Hendry inventó la inyectora de husillo; en los 70 la inyección asistida por gas permitió piezas huecas. Resultado: plástico barato en grandes tiradas. Es explicación causal plausible, no demostrada para cereales. | HECHO (invento) + HIPÓTESIS (efecto) | https://en.wikipedia.org/wiki/Cereal_box_prize | Media |
-| 12 | Otros casos con fecha: Kellogg's Pep, avión de modelo en 1943; chapas de Pep 1945 (90 chapas por colección); cartas 3D de béisbol y fútbol 1970-1983; wall walker de Apple Jacks (principios de los 80). | HECHO | https://thetakeout.com/cereal-box-prizes-history-general-mills-post-kellogg-1848133426 ; https://en.wikipedia.org/wiki/Cereal_box_prize | Media |
+---
 
-## 2. El caso del silbato de Cap'n Crunch (qué se verifica y qué no)
+## 1. Orígenes del premio: de Cracker Jack a Kellogg's
 
-| # | Hecho | Etiqueta | Fuente | Confianza |
-|---|---|---|---|---|
-| 13 | Cap'n Crunch lo lanzó Quaker Oats en 1963 (campaña de Jay Ward Productions; sabor de Pamela Low). Quaker pertenece a PepsiCo desde 2001. | HECHO | https://en.wikipedia.org/wiki/Cap'n_Crunch | Media-alta |
-| 14 | Una pieza clave de la leyenda: Wikipedia sobre John Draper dice que el silbato estaba en cajas «en 1963». Otras fuentes lo sitúan a mediados/finales de los años 60 (alguna dice 1966). El año 1963 es el del cereal, no necesariamente del silbato. NO afirmar 1963 para el silbato. | CONTRADICCIÓN | https://en.wikipedia.org/wiki/John_Draper ; búsqueda sobre Wikipedia de Cap'n Crunch | Baja en el año del silbato |
-| 15 | La red telefónica de larga distancia de AT&T usaba un tono de 2600 Hz para señalar una línea libre (señalización en banda). Quien emitía 2600 Hz con la línea abierta podía mandar señales de control y hacer llamadas sin facturación. Con el tiempo la red digital con señalización fuera de banda lo hizo inútil (finales de los 80). | HECHO | https://en.wikipedia.org/wiki/Blue_box | Media-alta |
-| 16 | El silbato de bosun (de contramaestre) de plástico, con un orificio tapado, daba un 2600 Hz limpio según Lapsley (Exploding the Phone) vía un blog. Una fuente dice que fue «coincidencia». Algunas fuentes dicen «alrededor de 2600», otras «exacto»: la afinación exacta no se midió en ninguna fuente que vi. | HECHO (que funcionaba) / dato de precisión sin verificar | https://jericho.blog/2015/04/28/john-thomas-draper-setting-the-record-straight/ ; https://en.wikipedia.org/wiki/Blue_box ; https://klier.us/the-2600-hertz-symphony-the-whistle-that-cracked-the-network/ | Media |
-| 17 | La leyenda dice que Draper lo descubrió. Según Lapsley (vía blog), el descubridor fue Sid Bernay, un phreaker de Los Ángeles, años antes. Draper se unió después («con Draper en el club, las excursiones del silbato aumentaron»). Wikipedia dice que Draper se enteró por Denny Teresi (adolescente ciego). | CONTRADICCIÓN sobre quién | https://jericho.blog/2015/04/28/john-thomas-draper-setting-the-record-straight/ ; https://en.wikipedia.org/wiki/John_Draper | Media |
-| 18 | Joe Engressia («Joybubbles»), ciego con oído absoluto, silbaba el tono sin ayuda (el dato de que lo descubrió a los siete años no lleva fuente en Wikipedia: «citation needed»). Wikipedia lo cita como 2637 Hz (el cuarto mi por encima del do central), no exactamente 2600: es un detalle bonito de contradicción para el guion, bajo verificación. | TESTIMONIO + HECHO | https://en.wikipedia.org/wiki/Joybubbles (vía búsqueda); https://en.wikipedia.org/wiki/Blue_box | Media-baja |
-| 19 | El apodo «Captain Crunch»: Draper habría dicho en el verano tardío de 1970 «creo que me llamaré Captain Crunch», según recuerdo de Engressia citado en el blog. | TESTIMONIO | https://jericho.blog/2015/04/28/john-thomas-draper-setting-the-record-straight/ | Media-baja |
-| 20 | Artículo de Esquire: Ron Rosenbaum, «Secrets of the Little Blue Box», octubre de 1971, basado mucho en Draper. FBI lo arrestó en mayo de 1972 (siete cargos de fraude telefónico). Como parte de un acuerdo, se le impidió revelar métodos (fuente secundaria). | HECHO | https://en.wikipedia.org/wiki/John_Draper ; https://en.wikipedia.org/wiki/Blue_box | Media-alta |
-| 21 | Wozniak leyó Esquire y contactó con Draper; Wozniak construyó cajas azules y Jobs las vendió. Jobs dijo (a su biógrafo) que sin ellas «no habría habido Apple». Cajas azules ilegales: unos 800-1.000 dólares, a veces hasta 3.500. | HECHO / TESTIMONIO (cita de Jobs) | https://en.wikipedia.org/wiki/John_Draper ; https://en.wikipedia.org/wiki/Blue_box | Media |
-| 22 | No encontré ninguna declaración de Quaker Oats sobre el silbato, ni demanda. El premio costaba «prácticamente nada»: sin cifras. Para el vídeo: «no sabemos cómo reaccionó la empresa». | VACÍO | búsquedas varias | Alta de que no hay en lo consultado |
+### H1. Kellogg's y «The Funny Jungleland Moving Picture Book» (1907-1937)
+- [HECHO] Libro de tiras móviles en verso. Se regalaba en tiendas al comprar dos cajas de Corn Flakes; hacia 1909 pasó a ser premio por correo por 10 centavos. Se ofreció hasta 1937 con muchas ediciones.
+- La afirmación de que Kellogg's distribuyó 2,5 millones de ejemplares hacia 1912 viene de Wikipedia citando revistas promocionales; no la he confirmado en fuente independiente.
+- Fuentes: https://en.wikipedia.org/wiki/Cereal_box_prize ; https://pams-pictorama.com/2019/08/03/funny-jungleland/ ; https://digitalarchive.tpl.ca/objects/329054/kelloggs-funny-jungleland-movingpictures
+- Confianza: **media** (existencia y mecánica: alta; cifra de 2,5 millones: baja-media).
+- **Contradicción:** año del primer premio: 1909 (Wikipedia, catálogos), 1910 (The Takeout, Timelines). Patente del libro 1907. Que sea «el primer premio de cereal de la historia» es afirmación de coleccionistas, y Kellogg's misma no lo confirma (The Takeout). https://thetakeout.com/cereal-box-prizes-history-general-mills-post-kellogg-1848133426
 
-Conclusión sobre «si se verifica»: la historia del silbato SE VERIFICA en lo esencial (hubo silbato, hubo tono de 2600 Hz, hubo Draper, hubo Esquire 1971, hubo vínculo con Apple), pero se desinfla en tres puntos: no fue Draper el descubridor, el año 1963 es del cereal, y la afinación exacta y su coste son datos flojos. Recomendar enmarcar como «la versión famosa» frente a «lo que dicen los historiadores».
+### H2. Cracker Jack: «premio en cada caja» desde 1912 (la pista se confirma)
+- [HECHO] El 19 de febrero de 1912 se lanza el «prize in every box». Antes los premios o cupones iban solo en cajas al azar. Según Fox 32 Chicago, las ventas «se dispararon» (sin cifra). Unas 700 personas trabajaban en la fábrica de Chicago en 1912.
+- Fin del premio físico en 2016 (Frito-Lay lo sustituye por una app y un pegatina con código). Cifra de premios entregados: «unos 17.000 millones» (Fox 32) frente a «más de 23.000 millones» (un editorial): **no coinciden**, usar «más de 17.000 millones» con cautela.
+- Nota: Cracker Jack es palomitas caramelizadas, no cereal. Sirve como precedente del modelo.
+- Fuentes: https://fox32chicago.com/news/on-this-day-in-history-feb-19-1912-cracker-jacks-prize-in-every-box-debuts ; https://www.wgbh.org/news/2016-04-29/cracker-jacks-prize-in-the-box-will-now-be-digitized ; https://vnews.com/2016/05/03/no-prizes-in-cracker-jack-editorial-1899027/
+- Confianza: fecha 1912 **media-alta**; efecto en ventas **baja** (sin cifra); cifra de premios **baja**.
+- Matiz: Country Roads dice que hacia 1910 probaron cupones canjeables por objetos grandes y en 1912 pasaron a baratijas pensadas para niños. https://countryroadsmagazine.com/api/amp/art-and-culture/people-places/a-cracker-jack-collection/
 
-## 3. Evidencia sobre el efecto en niños y ventas (lo que sí hay)
+### H3. Era radiofónica: premios por correo, caja y moneda (años 1930-1940)
+- [HECHO] Los premios requerían una prueba de compra (tapa de caja, sello de lata) y a menudo una pequeña suma (por ejemplo, 10 centavos). Programas: Tom Mix (Ralston), Jack Armstrong (Wheaties, 1933-1950 según una fuente), Little Orphan Annie y Captain Midnight (Ovaltine, decodificadores).
+- General Mills entra en el negocio de las tapas con los cupones Betty Crocker en 1929, con catálogo hasta 2006 (según artículo de referencia sobre «boxtop»).
+- Durante la Segunda Guerra Mundial, la escasez de cobre y latón obligó a hacer premios de madera, papel y tela.
+- Modelo económico (importante para el guion): en esta etapa **el niño pagaba o aportaba pruebas de compra**; el premio financiaba recompra, no era un regalo gratis. Es [HIPÓTESIS] razonable, no hay cifras de beneficio.
+- Fuentes: https://en.wikipedia.org/wiki/Radio_premium ; https://www.colorado.edu/asmagazine/2025/05/21/how-wheaties-became-breakfast-champions ; https://en.wikipedia.org/wiki/Boxtop
+- Confianza: **media** (descripción general sólida; sin volúmenes).
 
-| # | Hecho | Etiqueta | Fuente | Confianza |
-|---|---|---|---|---|
-| 23 | Roberto, Baik, Harris, Brownell (2010, Pediatrics 126(1):88-93): 40 niños de 4-6 años probaron alimentos idénticos con y sin personaje de dibujos; entre 72,5 y 87,5 % eligieron el envase con personaje (galletas, gominolas, zanahorias). No es un estudio de regalos, sino de personajes, pero es el estudio base de la lógica de «ganchos». | HECHO (estudio) | https://pubmed.ncbi.nlm.nih.gov/20566614/ | Alta |
-| 24 | INTA Chile (Sonia Olivares, 2011): entre 40 % y 55 % de los niños dicen elegir alimentos que ofrecen premios o regalos cuando compran con su propio dinero (citado en una columna de CIPER, 2012). Es autodeclarado y viene de una columna, no del estudio original. | TESTIMONIO / dato de encuesta | https://www.ciperchile.cl/?p=39272 | Media-baja |
-| 25 | Cifra de ventas de cereal: afirmación de que las matrículas en miniatura de General Mills aumentaron un 50 % las ventas de Wheaties en EE. UU. viene de UN artículo de prensa de consumo, sin fecha ni verificación. Una promoción de Quaker habría costado solo 11.000 dólares con agotamiento de existencias: ídem. Tratar ambas como anécdota. | LEYENDA / anécdota | búsqueda sobre premios (no pude abrir la fuente original) | Baja |
-| 26 | Un estudio canadiense (337 niños de 6-12 años en campamentos de Ontario) halló que ofrecer el juguete solo con comidas saludables multiplicó por unas 3,2 la probabilidad de elegir la opción sana (OR=3,19). Es de comida rápida, no de cereal. | HECHO (estudio) | resultado de búsqueda; abrir el original (PMC) antes de citar | Media |
-| 27 | Chex Quest (1997): videojuego gratis en cajas de Chex; versión original pensada para unos 5,7 millones de cajas; The Takeout dice «más de 5 millones» copias; presupuesto de desarrollo de unos 500.000 dólares y AOL pagó parte de los CD a cambio de incluir su software. Nada que vender: cero aumento de precio de la caja, valor de mercado de 30-35 dólares. Primer videojuego usado de promoción, según The Takeout. | HECHO | https://en.wikipedia.org/wiki/Chex_Quest ; https://thetakeout.com/cereal-box-prizes-history-general-mills-post-kellogg-1848133426 | Media |
-| 28 | Transición digital: 2005 Reese's Puffs con tono de móvil; 2006 Lucky Charms con descarga de iTunes; 2013 Cracker Jack empieza a usar códigos para app; 2016 Cracker Jack elimina el premio físico y lo cambia por una pegatina con la app Blippar (cuatro temáticas); 2021 General Mills usa códigos QR y figuritas de Halloween (Count Chocula, Boo Berry, Franken Berry). | HECHO | https://thetakeout.com/cereal-box-prizes-history-general-mills-post-kellogg-1848133426 ; https://www.wgbh.org/news/2016-04-29/cracker-jacks-prize-in-the-box-will-now-be-digitized | Media-alta |
+### H4. Kellogg's Pep: botones de Superman (1943-1947)
+- [HECHO] Kellogg's metió un botón (pin) en cada caja de Pep. Desde 1943 con insignias militares; en 1945 con personajes de tiras cómicas. Cinco series de 18 botones: 90 en total, pero Superman aparece en las cinco, de ahí **86 únicos**. Pep patrocinaba la serie radiofónica «The Adventures of Superman» (Mutual), con episodio de octubre de 1945 que lo cita como patrocinador.
+- Contradicción de fechas: 1945-1946 (casa de subastas Hakes) frente a 1945-1947 (Button Museum, fansite).
+- Colección: sets completos en subasta entre unos 486 y 951 dólares (precio de venta, no mide ventas).
+- Fuentes: https://en.wikipedia.org/wiki/Pep_(cereal) ; https://hakes.com/Auction/ItemDetail/297834/KELLOGGS-PEP-CEREAL-1945-1946-HIGH-GRADE-SET-OF-86-COMIC-STRIP-CHARACTERS-BUTTONS ; https://radiogoldin.library.umkc.edu/ProgramMoreinfo/57717
+- Confianza: **media-alta** en hecho; efecto en ventas: **sin dato**.
 
-## 4. Regulación y salud pública (separada de dinero y marketing)
+### H5. Tecnología de fabricación: el plástico abarata el premio
+- [HECHO] El moldeo por inyección de tornillo (James Watson Hendry, 1946) y luego el moldeo asistido por gas (años 70) redujeron tiempo, coste y peso. Wikipedia no da cifras.
+- Wikipedia afirma que se han distribuido «decenas de miles de millones» de premios; es cifra sin fuente primaria. Confianza **baja**.
+- Fuente: https://en.wikipedia.org/wiki/Cereal_box_prize
 
-### Estados Unidos
+### H6. Chex 1956 «sin premios en la caja» (dato curioso, sin contrastar)
+- Una reseña de historia de premios dice que en 1956 Chex declaró brevemente que dejaba de poner premios y de dirigirse a niños. Fuente única de divulgación, **no verificada**. Buen gancho si se confirma con archivo. https://www.gasolinealleyantiques.com/premiums.htm (confianza **baja**).
 
-| # | Hecho | Etiqueta | Fuente | Confianza |
-|---|---|---|---|---|
-| 29 | Ley de Alimentos, Medicamentos y Cosméticos de 1938: un objeto no nutritivo incrustado en un dulce se considera adulteración. De ahí que el Kinder Sorpresa sea ilegal en EE. UU.; Kinder Joy (dos mitades) sí se vende. En 2011 la aduana decomisó 60.000 huevos. El riesgo de asfixia es el motivo oficial; una versión dice que Mars hizo lobby (disputada). Otra cifra («unos 10 niños muertos») no tiene fuente primaria. NO es lo mismo que cereal: el premio de cereal va fuera de la bolsa, suelto en la caja. | HECHO / HIPÓTESIS (lobby) | https://www.pastemagazine.com/food/kinder-eggs/tidings-of-kinder-joy ; https://www.tastingtable.com/1879782/are-kinder-surprise-eggs-still-banned-us | Media |
-| 30 | Santa Clara (condado, California, abril-junio 2010): votación 3-2 que restringe regalos en comidas infantiles que superen 485 calorías, 600 mg de sodio, 35 % de calorías de grasa o 10 % de azúcar añadido; solo zonas no incorporadas; multa de 250 a 1.000 dólares según la fuente. Fue la primera ordenanza de este tipo. La redacción no incluía la palabra «gratis», lo que, según los autores del estudio de San Francisco, importa. | HECHO | https://marketplace.org/2010/04/28/county-bans-happy-meal-toys ; https://pmc.ncbi.nlm.nih.gov/articles/PMC4110247/ | Alta |
-| 31 | San Francisco: ordenanza 290-10 adoptada el 23 de noviembre de 2010, vigente el 1 de diciembre de 2011. Umbrales: 600 calorías por comida, 640 mg sodio y fruta y verdura mínimas. Respuesta: las cadenas cobraron 10 centavos por el juguete (en McDonald's, a beneficio de una Casa Ronald McDonald) y el 88 % de quienes compraron comida infantil compró el juguete. Ninguna comida infantil cumplió los criterios. Calorías de la comida infantil bajaron de 555 a 515 (mediana), pero al menos un cambio no parece causado por la ley. Conocimiento de la ordenanza: 45,2 % a 17,7 %. | HECHO | https://pmc.ncbi.nlm.nih.gov/articles/PMC4110247/ ; https://www.csmonitor.com (vía búsqueda) | Alta |
-| 32 | Pista del encargo corregida: en EE. UU. NO hay una prohibición federal de juguetes en cereal; las restricciones por asfixia vienen de normas de piezas pequeñas (no verifiqué la norma CPSC de 1979 en esta ronda) y las ordenanzas locales atacan comidas de restaurante, no cajas de cereal. | VACÍO / corrección | — | Baja |
+---
 
-### Hispanoamérica (énfasis)
+## 2. El silbato de Cap'n Crunch (hecho verificado con matices)
 
-| # | Hecho | Etiqueta | Fuente | Confianza |
-|---|---|---|---|---|
-| 33 | Chile, Ley 20.606 (publicada el 6 de julio de 2012; el etiquetado y las restricciones comenzaron el 27 de junio de 2016 tras un plazo). El artículo 6 prohíbe ofrecer o entregar gratuitamente a menores de 14 años los alimentos con exceso de nutrientes y su publicidad dirigida a ellos; y venderlos con «ganchos no relacionados con la promoción del producto» (regalos, concursos, juegos u otro elemento de atracción infantil). No se pueden vender dentro de colegios. Correcto: la pista «2016» aplica a la entrada en vigor, no a la aprobación. | HECHO | https://extranet.who.int/ncdccs/Data/CHL_B15_LEY-20606_06-JUL-2012.pdf ; https://www.bcn.cl/leychile/navegar?i=1041570 (no pude abrir el texto); https://iura.cl/20606/6 | Media-alta |
-| 34 | Chile 2012: grupos de padres y académicos pidieron aplicar la ley a la Cajita Feliz («Chao Cajita Feliz»); el ministro Jaime Mañalich dijo que la ley no regiría hasta un año después. Resultado final del caso no verificado. | HECHO | https://www.theclinic.cl/2012/07/25/academicos-de-la-u-de-chile-se-lanzan-contra-la-cajita-feliz/ ; https://www.ciperchile.cl/?p=39272 | Media |
-| 35 | Umbrales de «alto en» en la primera fase (2016) para sólidos: 350 kcal, 22,5 g de azúcares, 6 g de grasas saturadas, 800 mg de sodio por 100 g. Un resultado de búsqueda dio 275 kcal / 400 mg / 10 g / 4 g «desde 2016»: eso corresponde a una fase posterior más estricta. No usar el segundo juego como cifra de 2016. | CONTRADICCIÓN | https://www.foodnavigator.com/Article/2019/12/09/Chile-s-food-regulations-are-reducing-unhealthy-child-marketing-tactics/ | Media |
-| 36 | Efecto medido en Chile: estudio de Mediano, Taillie y otros (IJERPH, diciembre 2019, DOI 10.3390/ijerph16224501): 168 cereales fotografiados antes de 2016 y 153 después. Entre los cereales «altos en», las estrategias dirigidas a niños bajaron de 43 % a 15 %; entre los cereales SIN sello subieron de 8 % a 30 %. No separa regalos. Los autores no saben si fue cambio de marketing o reformulación. El dato «Tony el Tigre desapareció» viene de la misma cobertura. | HECHO | https://www.foodnavigator.com/Article/2019/12/09/Chile-s-food-regulations-are-reducing-unhealthy-child-marketing-tactics/ | Alta (resumen de prensa; leer el artículo original) |
-| 37 | Argentina, Ley 27.642 de Promoción de la Alimentación Saludable: sancionada el 26 de octubre de 2021, publicada en el Boletín Oficial el 12 de noviembre de 2021. Art. 9: los productos con al menos un sello no pueden llevar en el envase personajes infantiles, dibujos, celebridades, deportistas, mascotas «ni regalos, premios, accesorios, adhesivos, descargas digitales o concursos» ligados a la compra. Art. 10: prohíbe publicidad dirigida a niños, niñas y adolescentes; art. 12 colegios. Plazos: 180 días (hasta 12 meses para mipymes). Corrección de la pista: «aprobó en 2021» es correcto (sancionada/publicada 2021). Decreto reglamentario: la fuente indica 151/2022 (no se verificó si hay otro posterior). La ANMAT actuó contra PepsiCo (disposición 3127/2023, caso citado). | HECHO | https://www.argentina.gob.ar/normativa/nacional/ley-27642-356607/texto ; https://boletin.anmat.gob.ar/abril_2023/Dispo_3127-23.pdf | Alta |
-| 38 | México, NOM-051 modificada: publicada en el Diario Oficial el 27 de marzo de 2020, vigente desde el 1 de octubre de 2020. El art. 4.1.5 prohíbe personajes infantiles, animaciones, dibujos, celebridades, deportistas, mascotas y elementos interactivos en productos con sellos o leyenda de edulcorantes cuando se dirigen a niños. El retiro de personajes de empaques: abril de 2021. Primeras multas desde noviembre de 2020 según El Universal. Los textos que revisé NO mencionan regalos ni juguetes. | HECHO / VACÍO | https://www.ey.com/es_mx/technical/tax/boletines-fiscales/modificacion-a-la-norma-oficial-mexicana-nom-051-scfi-ssa1-2010 ; https://www.eluniversal.com.mx/cartera/tigre-tono-melvin-y-el-osito-bimbo-ya-tienen-fecha-de-despedida-de-los-empaques/ | Media (regalos: sin verificar) |
-| 39 | México: Oaxaca fue el primer estado en prohibir la venta de comida chatarra y bebidas azucaradas a menores (congreso, agosto de 2020, 31 votos; multas de 10 a 100 UMA y clausura). AMLO prefería orientación a prohibición. Es otra capa regulatoria hispana, no de regalos. | HECHO | https://politica.expansion.mx/estados/2020/08/05/el-congreso-de-oaxaca-prohibe-la-venta-de-comida-chatarra-a-menores | Media |
-| 40 | Mexico y los personajes: un cereal sin sellos puede usar personajes; Expansión (2024) cuenta que Nestlé y Kellogg's reformularon para recuperar a Tigre Toño. Es el eje «regulación vs. dinero vs. marketing»: la ley empuja a reformular (dinero) para poder usar mascota (marketing). | HECHO | https://expansion.mx/empresas/2024/10/28/cereales-muestran-personajes-animados-ley | Media |
+### H7. Lo que se confirma
+- [HECHO] Cap'n Crunch lo lanzó Quaker Oats en 1963. El sabor original lo creó la flavorista Pamela Low (Arthur D. Little); el mascota, Allan Burns; voz: Daws Butler; comerciales: Jay Ward Productions. https://en.wikipedia.org/wiki/Cap%27n_Crunch
+- [HECHO] Una versión de la caja traía un silbato («bo'sun whistle», pito de contramaestre) de plástico que, con un agujero tapado, emite un tono de 2600 Hz, la frecuencia que la red de AT&T usaba para señalar una línea troncal libre.
+- [HECHO] El artículo «Secrets of the Little Blue Box», de Ron Rosenbaum, apareció en Esquire en octubre de 1971 (algunas fuentes dan «27 de octubre»; no resuelto). Wozniak lo leyó y contactó a Draper; Jobs asistió al encuentro. Wozniak y Jobs fabricaron y vendieron «blue boxes».
+- Fuentes: https://en.wikipedia.org/wiki/John_Draper ; https://www.atlasobscura.com/articles/capn-crunch-whistle (no pude abrirlo, la búsqueda lo resume) ; https://niemanstoryboard.org/?p=1471
+- Confianza: **alta** en tono y en artículo; **media** en fechas del silbato.
 
-## 5. Por qué se dejó o se transformó (separando causas)
+### H8. Quién descubrió qué (contradice el mito de «Draper lo descubrió»)
+- [HECHO, según Phil Lapsley, «Exploding the Phone»] Sid Bernay, phreaker de Los Ángeles, descubrió que tapando un agujero del silbato salía un tono limpio de 2600 Hz, «varios años antes» y sin año concreto. Draper lo aprendió de Denny Teresi.
+- [HECHO] Joe Engressia («Joybubbles»), ciego con oído absoluto, silbaba el tono de 2600 Hz a mano desde finales de los años 50 (Wikipedia: «mid-to-late 1950s»). El silbato no fue la única fuente del tono.
+- [TESTIMONIO] Engressia recuerda que a finales del verano de 1970 Draper dijo: «Creo que voy a llamarme Captain Crunch». Engressia: «Le quedaba bien de alguna manera» (cita citada por Lapsley a través de jericho.blog).
+- Fuentes: https://jericho.blog/2015/04/28/john-thomas-draper-setting-the-record-straight/ ; https://en.wikipedia.org/wiki/John_Draper
+- Confianza: **media-alta** (Lapsley es libro serio; yo lo cito de segunda mano, hay que ir al libro para citar páginas).
 
-- REGULACIÓN (documentada): leyes de etiquetado y marketing infantil en Chile (2012/2016), México (2020) y Argentina (2021); ordenanzas locales de EE. UU. (2010-11); prohibición estadounidense de objetos incrustados en comida (1938). Esto no explica por sí solo la caída de premios en cajas de cereal en EE. UU., donde no hay una ley federal específica en lo que encontré.
-- DINERO (documentado en parte): plástico barato desde 1946 y años 70 (abarató); fin del premio por correo con el UPC; el premio costaba céntimos (Cracker Jack ~1/3 de céntimo en 1977). Hipótesis no probada: la presión de costes y de logística (seguridad, alérgenos, pruebas FDA/seguridad) pudo hacer menos rentable el premio físico. Sin cifras.
-- MARKETING (documentado en parte): el premio pasó a códigos, QR, descargas y colecciones en caja (2005-2021). Cracker Jack 2013-2016. Chex Quest como caso de premio «de alto valor percibido, bajo coste».
-- HIPÓTESIS de coleccionistas: Gutterman (The Takeout) sugiere que la seguridad por asfixia explica la caída de premios en caja; el autor lo presenta como teoría, no hecho. También la hipótesis de higiene tras la pandemia.
-- Importante: «desapareció casi por completo» es en parte cierto solo en ciertos mercados (Hispanoamérica regulada) y para ciertos productos. Sigue habiendo premios, ahora digitales o en cereales sin sello.
+### H9. Contradicción de fechas del silbato en cajas
+- 1963 (Wikipedia: Draper), 1966 (Veterans Breakfast Club; «Quaker empezó a ponerlo en 1966»), «finales de los años 60» (Mental Floss vía jericho.blog). **No hay documento de Quaker** en lo que he encontrado. Decir «entre 1963 y mediados de los 60, según la fuente».
+- Fuentes: https://veteransbreakfastclub.org/bosuns-pipe/ ; https://jericho.blog/2015/04/28/john-thomas-draper-setting-the-record-straight/
+- Confianza: **baja** en el año exacto.
 
-## 6. Contradicciones a resolver antes del guion
+### H10. La carrera legal de Draper (por si se cuenta el personaje)
+- [HECHO según Wikipedia] Mayo de 1972: arrestado por el FBI por fraude telefónico (no contest, libertad condicional de 5 años, multa de 1.000 dólares). 1975: cuatro meses en Lompoc. 1978: culpable por posesión de un aparato de robo de telecomunicaciones. En 2018 publicó la memoria «Beyond the Little Blue Box».
+- [TESTIMONIO] Draper sostiene que fue «incriminado» en el caso de 1972 (Lapsley).
+- Fuente: https://en.wikipedia.org/wiki/John_Draper (confianza **media**: Wikipedia, sin contraste primario).
 
-1. Año del silbato: 1963 (Wikipedia Draper) frente a mediados/finales de los 60 (otras). 1963 es el año del cereal.
-2. Quién descubrió el uso del silbato: Draper (leyenda) frente a Sid Bernay (Lapsley) frente a Denny Teresi (quien se lo contó a Draper según Wikipedia).
-3. Frecuencia: «2600 exacto» frente a «alrededor de 2600»; Engressia en 2637 Hz según Wikipedia.
-4. Anillo atómico: 1,3 millones frente a 1,6 millones.
-5. Funny Jungleland: 1909 o 1910.
-6. Cracker Jack total de premios: 17, 18 o 23 mil millones.
-7. Chile: umbrales de 2016 (350 kcal, etc.) frente a 275 kcal; usar los de 350 para 2016.
-8. México: la pista dice «prohibió personajes y regalos»; lo verificado son personajes y elementos interactivos; regalos no confirmado. Argentina sí nombra regalos explícitamente.
-9. Chile: la ley se aprobó en 2012; lo que entró en 2016 es la aplicación. La pista «aprobó en 2016» es inexacta.
+### H11. Lo que NO se puede decir
+- **No** hay documento que muestre que Quaker diseñó el silbato para engañar al teléfono (era un premio náutico). Es obvio, pero conviene decirlo.
+- **No** hay datos de cuánto costaba el silbato ni de cuántos se repartieron. Si alguien dice «millones», es [LEYENDA] hasta tener fuente.
+- Sobre la frase «sin el silbato no existiría Apple» (Jobs dijo que no habría Apple sin el blue-boxing: «I don't think there would ever have been an Apple Computer had there not been blue-boxing», citado por veteransbreakfastclub.org): es testimonio y exageración posterior, no hecho causal. Confianza **baja** como causalidad.
+
+---
+
+## 3. Dinero: cuánto costaba y qué efecto tenía
+
+### H12. Cifras oficiales de EE. UU. (FTC, informe 2008, datos de 2006)
+- [HECHO, vía resumen secundario del informe FTC] Categoría de cereales: 237 millones de dólares de gasto total en marketing, de ellos 229 millones dirigidos a niños. Los «premios y artículos de especialidad» (premiums) sumaron 67 millones, un 4% del gasto en marketing infantil, **sin** contar los juguetes de restaurantes de comida rápida (estimados en 360 millones; con ellos la categoría sería 427 millones).
+- Advertencia: la cifra de 67 millones es de las 44 empresas que respondieron y de todas las categorías, **no solo cereales**. No he conseguido el desglose cereal-premios (el PDF devolvió 403). 
+- Fuentes: https://www.ftc.gov/news-events/news/press-releases/2008/07/ftc-report-sheds-new-light-food-marketing-children-adolescents ; https://www.ftc.gov/sites/default/files/documents/reports/marketing-food-children-and-adolescents-review-industry-expenditures-activities-and-self-regulation/p064504foodmktingreport.pdf (por verificar en el original)
+- Confianza: **media** (cifras vía buscador resumiendo; verificar en PDF).
+
+### H13. FTC 2012: lo que cayó fue el juguete de restaurante
+- [HECHO] El gasto en marketing alimentario juvenil bajó de unos 2.100 millones (2006) a unos 1.790 millones de dólares (2009); ajustado por inflación, -19,5%. De la caída de 304 millones, 117,8 millones (38,7%) fueron menos «premiums» (juguetes de menús infantiles). Tiene un efecto contrario: el nuevo medio digital subió un 50%.
+- Los cereales comercializados a niños mejoraron algo (menos azúcar, más integral) pero seguían siendo los menos nutritivos.
+- Fuentes: https://www.rwjf.org/en/library/research/2013/08/food-marketing-expenditures-aimed-at-youth.html ; https://www.ftc.gov/news-events/news/press-releases/2012/12/ftc-releases-follow-study-detailing-promotional-activities-expenditures-nutritional-profiles-food
+- Confianza: **alta** en las cifras principales (dos fuentes coinciden).
+
+### H14. El mejor dato de «efecto en ventas»: Chex Quest (1996-1997)
+- [HECHO, dato de la promoción, no auditado] Agencia WatersMolitor para Ralston/General Mills; desarrollo de Digital Café con presupuesto de unos 500.000 dólares y motor de Doom. Plan inicial: 5,7 millones de cajas (Rice, Wheat y Corn Chex); al menos 5 millones de copias. Valor de venta normal 30-35 dólares, gratis sin subir el precio de la caja. **America Online fabricó los CD** a cambio de incluir su software y «50 horas gratis»: el coste lo repartió un tercero.
+- Resultado publicado: volumen de Chex sobre la base +295% y cuota de volumen +48% interanual; Golden EFFIE (1996) y Golden Reggie (1998). La promoción duró unas seis semanas. Se relanzó en 2019.
+- Fuentes: https://en.wikipedia.org/wiki/Chex_Quest ; https://www.mediapost.com/publications/article/351601/chex-quest-video-game-reborn-was-cereal-box-g.html
+- Confianza: **media** (cifras de premios de marketing, no estudio independiente). **Contradicción:** MediaPost habla de 30 millones de CD; Wikipedia, 5-5,7 millones. Más probable la cifra menor; la de 30 millones, **baja**.
+- Idea clave: el premio digital es **más barato por unidad que un juguete y lo paga un socio** (AOL).
+
+### H15. El recall de 1988: el riesgo hecho dinero
+- [HECHO] El 28 de diciembre de 1988 Kellogg's retiró voluntariamente, con la CPSC, dos premios: la «Cool Flute» (en Corn Pops) y los «Binoculars» (en Fruity Marshmallow Krispies, Cocoa Krispies, Rice Krispies y Pop-Tarts familiares de 12). Unos 30 millones de unidades distribuidas desde la primavera de 1988; no cumplían la regulación de piezas pequeñas (riesgo para menores de 3 años). Un incidente de asfixia sin lesión grave (flauta); ninguno con los binoculares. Remedio: tirarlos o enviarlos a Battle Creek para reembolso.
+- Fuente primaria: https://www.cpsc.gov/Recalls/1988/kellogg-company-voluntarily-recalls-two-toy-premiums
+- Confianza: **alta**. 
+- Es [HIPÓTESIS] (no probada) que este tipo de recalls enfriara el modelo: varias divulgaciones lo dicen, pero sin evidencia de la empresa.
+
+### H16. Por qué desaparecieron: lo que sí y lo que no se sabe
+- [TESTIMONIO] Kellogg's le dijo a Food52 que la decisión la tomó marketing «a partir de investigación en profundidad» (no pude abrir la página; resumen del buscador). Confianza **baja-media**.
+- Causas citadas en divulgación: riesgo de asfixia (el coleccionista David Gutterman en The Takeout lo da como teoría), costes de empaquetado y cadena de suministro, cajas más pequeñas, normativa y sustitución por cupones, sorteos y códigos online. Ninguna está medida.
+- **Separación pedida (regulación / dinero / marketing):**
+  - Regulación: piezas pequeñas (EE. UU. 1994 Child Safety Protection Act), reglas de etiquetado en el mundo hispano (ver sección 4).
+  - Dinero: el premio es un coste unitario fijo; el digital se amortiza, y a veces lo paga un socio (Chex Quest/AOL, tie-ins de películas).
+  - Marketing: del premio en caja al **licenciamiento** (películas, series) y al código online.
+- Fuentes: https://thetakeout.com/cereal-box-prizes-history-general-mills-post-kellogg-1848133426 ; https://www.yahoo.com/lifestyle/articles/why-never-prizes-cereal-boxes-202000245.html (baja)
+
+### H17. Los premios vuelven: Kellogg's «Toys Back in the Box» (abril de 2026)
+- [HECHO] Nota de prensa del 23 de abril de 2026: cajas de edición especial desde el 26 de abril, con motivo de «Toy Story 5» (estreno 19 de junio de 2026). Kellogg's la presenta como la primera vez en «más de una década» que pone juguetes jugables en la caja. Laura Newman (VP marketing): «Bringing toys back inside the box reintroduces that sense of discovery».
+- Los medios (Fast Company, Live5) citan marcas Frosted Flakes, Froot Loops, Apple Jacks y Corn Pops y cucharas/ tarjetas; el comunicado no precisa qué cereales llevan qué juguete. Detalle de «cucharas» solo en nombres de archivo del comunicado: **no confirmado**.
+- Fuentes: https://newsroom.wkkellogg.com/2026-04-23-Kelloggs-Brings-Back-Toys-in-the-Box-to-Celebrate-Disney-and-Pixars-Toy-Story-5 ; https://www.live5news.com/2026/04/24/kelloggs-bringing-back-cereal-box-toys-first-time-over-decade-toy-story-5/ ; https://www.fastcompany.com/91532272/kelloggs-just-dropped-something-inside-cereal-boxes-you-havent-seen-in-years
+- Confianza: **alta** en la existencia (comunicado oficial), **media** en detalles de producto.
+- Gancho de cierre: el premio no murió, se volvió promoción puntual atada a una película.
+
+### H18. Otras formas «transformadas» (digital y coleccionismo)
+- [HECHO] Reese's Puffs: ringtone gratis (2005). Lucky Charms: descarga de iTunes (2006). Códigos QR para juegos online. En 2021 General Mills sacó figuras de Count Chocula, Boo Berry y Franken Berry (The Takeout).
+- Julio de 2026: General Mills lanza ediciones limitadas de los «monsters cereals» con marionetas de The Jim Henson Company, 55º aniversario; una caja de peluche de Count Chocula solo en Walmart.com desde el 1 de octubre por 7,76 dólares (comunicado de General Mills, vía buscador; verificar en la fuente). https://privacy.generalmills.com/es/news/press-releases/monsters-cereals-celebrate-55-years-of-halloween-memories
+- Cracker Jack 2016: del premio al código en app (ver H2).
+- Confianza: **media**.
+
+---
+
+## 4. Regulación en el mundo hispano (texto legal primario donde fue posible)
+
+### H19. Chile: Ley 20.606, artículo 8 (la prohibición del gancho está en la ley, no en 2016)
+- [HECHO, texto de la ley] Promulgada el 6 de junio de 2012, publicada el 6 de julio de 2012 («Ley del Super 8»). Artículo 8: la promoción de alimentos «altos en» no puede hacerse con «ganchos comerciales no relacionados con la promoción propia del producto» dirigida a menores de 14 años; «en ningún caso se podrán utilizar ganchos comerciales tales como juguetes, accesorios, adhesivos, incentivos u otros similares». El artículo 6 ya prohibía vender alimentos destinados a menores con ganchos como «regalos, concursos, juegos u otro elemento de atracción infantil».
+- [HECHO] El reglamento (Decreto 13 de 2015) y las normas entraron plenamente en vigor el **27 de junio de 2016** (esa es la fecha que corrige la pista de «2016»).
+- Fuente primaria: texto de la ley obtenido de https://extranet.who.int/ncdccs/Data/CHL_B15_LEY-20606_06-JUL-2012.pdf (copia de la Biblioteca del Congreso Nacional de Chile). Texto vivo: https://www.bcn.cl/leychile/navegar?i=1041570 (no cargó en la herramienta).
+- Confianza: **alta**.
+
+### H20. Chile: el caso Kinder Sorpresa y la Cajita Feliz (junio de 2016)
+- [HECHO] El Subsecretario de Salud Pública, Jaime Burrows, dijo (24 de junio de 2016) que Kinder Sorpresa «ya no puede venderse»: es «alto en» nutriente y trae un juguete. Ferrero, que se reunió con él, leía la ley distinta del reglamento y alegaba un compromiso del exministro Mañalich; Burrows dijo que su equipo no conocía tal compromiso.
+- [TESTIMONIO] Ferrero: el juguete es «parte esencial e integral» del producto, la sorpresa «es la esencia misma del huevo» y no un gancho; se reservó acudir a tribunales nacionales e internacionales.
+- Cajita Feliz: reformulada sin juguete en Chile (noticiero Caracol; fuente secundaria).
+- Datos de salud citados por el Ministerio en 2016: uno de cada tres niños menores de 6 años con sobrepeso.
+- Fuentes: https://www.cooperativa.cl/noticias/site/artic/20160624/pags-amp/20160624203152.html ; https://infonegocios.info/default/ferrero-recibe-con-consternacion-la-prohibicion-de-kinder-sorpresa-en-chile-del-chiste-al-hecho ; https://www.just-food.com/news/ferrero-faces-kinder-surprise-ban-in-chile/ ; https://www.noticiascaracol.com/mundo/chile-le-dice-adios-al-kinder-sorpresa-y-a-la-cajita-feliz
+- Confianza: **alta** (varias fuentes de 2016). **Falta:** desenlace judicial y estado actual. No lo busqué a fondo.
+- **Contradicción pequeña:** just-food dice que la prohibición empezaba el 26 de junio; Cooperativa, el lunes 27 de junio de 2016. La fecha legal es el 27.
+- Nota para el guion: el cereal de caja **no** aparece en estas notas; el caso mediático fue el chocolate y la hamburguesa. Para cereales hay que mostrar el efecto indirecto (reformulación y personajes).
+
+### H21. Chile: lo que mide la evaluación
+- [HECHO, resumen de Wikipedia de estudios] Lancet Planetary Health: calorías compradas -3,5%, azúcares -10,2%, grasa saturada -3,9%; British Food Journal: sin correlación en la primera etapa con obesidad. Un artículo de El Mostrador del 17 de junio de 2026 (diez años de la ley) cita que la ley contribuyó a bajar trayectorias de peso infantil y que hubo reformulación; sin cifras.
+- Este conjunto **no aísla el efecto de los juguetes**: mide la ley completa (sellos, publicidad, escuelas).
+- Fuentes: https://en.wikipedia.org/wiki/Food_labelling_and_advertising_law_(Chile) ; https://www.elmostrador.cl/agenda-pais/vida-en-linea/2026/06/17/a-diez-anos-de-la-ley-de-etiquetado-y-publicidad-de-alimentos-una-leccion-sobre-entornos-saludables/
+- Confianza: **media** (secundarias; conviene abrir los artículos originales de Lancet).
+
+### H22. México: NOM-051 (DOF 27 de marzo de 2020): la pista está mal en lo de «regalos»
+- [HECHO, texto oficial del DOF] El numeral 4.1.5 dice que los productos con uno o más sellos o con la leyenda de edulcorantes no deben «incluir en la etiqueta personajes infantiles, animaciones, dibujos animados, celebridades, deportistas o mascotas, elementos interactivos, tales como juegos visual-espaciales o descargas digitales» dirigidos a niños, ni «hacer referencia en la etiqueta a elementos ajenos al mismo con las mismas finalidades».
+- **El texto NO contiene las palabras «regalos» ni «juguetes»** (las busqué en el PDF completo). La mención a «regalos, ofertas, juguetes» en la prensa viene de una opinión de la Cofece citada por El Informador.
+- **Fecha de entrada en vigor del 4.1.5: 1 de abril de 2021** (transitorio CUARTO), no 2020. El resto de la norma arrancó el 1 de octubre de 2020 (fase 1), con fases hasta 2025.
+- Fuente primaria: https://dof.gob.mx/2020/SEECO/NOM_051.pdf
+- Confianza: **alta**.
+
+### H23. México: el efecto en cereales (personajes y reformulación)
+- [HECHO] Kellogg's anunció (videollamada en Twitter el 4 de mayo de 2021) que Tigre Toño, Melvin y Sam «seguirán viviendo» en Instagram; Profeco pidió a los usuarios denunciar. (Excélsior, 13 de mayo de 2021).
+- [HECHO] Reformulación para recuperar personajes: Choco Krispis Krunchers 263 kcal/100 g frente a 383 kcal; Zucaritas Krunchers 272 kcal frente a 385; azúcares añadidos de Choco Krispis de 30 g a 3,5 g (Expansión 2024; Xataka). Los abogados lo llaman «forma ingeniosa de aludir al personaje» (Rodrigo Escartín).
+- [HECHO] 14 de enero de 2022: Cofepris y Profeco inmovilizaron 380.149 piezas de Kellogg's por incumplir la NOM-051 (imágenes animadas, omisión de sellos): 9.082 en 75 puntos de venta y 371.067 en el centro de distribución de El Marqués, Querétaro. Los reportes dicen Corn Flakes, Rice Krispies, Special K; no vi Zucaritas.
+- [TESTIMONIO] César Enríquez Morán (Asociación Americana de Marketing) estimó que quitar personajes podría costar hasta un 30% en ventas y precio; **no dio estudio** (El Informador, 1 de abril de 2020). Confianza **baja**.
+- Un estudio de la Universidad de la República (Uruguay), dirigido por Gastón Ares, encontró que casi 6 de cada 10 niños ven un producto más divertido si lleva personaje (citado por El Informador; no verificado en el original).
+- Fuentes: https://www.excelsior.com.mx/nacional/kelloggs-creatividad-por-encima-de-la-ley/1448658 ; https://expansion.mx/empresas/2024/10/28/cereales-muestran-personajes-animados-ley ; https://www.xataka.com.mx/medicina-y-salud/regresan-mascotas-cereales-a-mexico-adios-a-sellos-hola-a-nuevas-formulas ; https://zetatijuana.com/2022/01/cofepris-y-profeco-inmovilizan-mas-de-380-mil-cajas-de-cereales-kelloggs/ ; https://www.informador.mx/economia/Adios-a-personajes-promocionales-podria-costar-30-en-ventas-y-precio-al-consumidor--20200401-0010.html
+- Confianza: **alta** (hechos), **baja** (el 30%).
+- Pendiente: un juez federal declaró inconstitucional el 4.1.5 en dos casos (columna de El Financiero, 2022); no verifiqué el desenlace.
+
+### H24. Argentina: Ley 27.642 (26 de octubre de 2021, publicada el 12 de noviembre)
+- [HECHO, texto del Boletín Oficial] Artículo 9: los alimentos con sello de advertencia no pueden incluir en el envase personajes infantiles, animaciones, dibujos, celebridades, deportistas o mascotas, elementos interactivos, «la entrega o promesa de entrega de **obsequios, premios, regalos, accesorios, adhesivos**, juegos visual-espaciales, **descargas digitales**» ni participación en concursos o juegos. Artículo 10: lo mismo para publicidad y promoción; se prohíbe toda publicidad dirigida especialmente a niños de productos con sello.
+- Conclusión: **Argentina es el texto más explícito del mundo hispano sobre regalos**; más que México. Reglamentación: Decreto 151/2022 y Disposición ANMAT 2673/2022 (según Río Negro y Córdoba; no abrí los originales).
+- Fuente primaria: https://www.boletinoficial.gob.ar/pdf/aviso/primera/252728/20211112
+- Confianza: **alta**.
+
+### H25. Otros países de la región (menos verificado)
+- Perú: Ley 30021 (octógonos); en 2020 la comisión de Indecopi (Resolución 0072-2020-CEB) declaró ilegales algunos requisitos del reglamento y el manual de advertencias; la OPS lo criticó. No verifiqué si hay norma de juguetes. Confianza **media**. https://lpderecho.pe/organizacion-panamericana-salud-sobre-octogonos-declarar-barrera-burocratica-ilegal-marcaria-retroceso-avances-dados-alimentacion-saludable
+- Brasil: la Resolución 163 del CONANDA (13 de marzo de 2014) considera abusiva la publicidad dirigida a niños con personajes, muñecos y «promociones que distribuyen premios o juguetes coleccionables». Su fuerza jurídica es discutida (algunas fuentes dicen que opera vía el Código de Defensa del Consumidor; otras, que no tiene fuerza de ley). Confianza **media**. https://www.legisweb.com.br/legislacao/?id=268725 (resultado de búsqueda; no abrí el texto)
+
+### H26. EE. UU.: juguetes y alimentos (asfixia y Santa Clara)
+- [HECHO] La FDA trata los objetos no nutritivos embebidos en confitería como adulteración (sección 402(d)(1) de la FDCA; Import Alert 34-02), por riesgo de asfixia: esa es la razón por la que el Kinder Sorpresa no se vende en EE. UU. Kinder Joy llegó en 2018 con alimento y juguete en compartimentos separados. Que los premios de cereal se permitan por ir «separados» es una explicación plausible, **no un fallo de la FDA**.
+- [HECHO] La Ley de Protección de la Seguridad Infantil se promulgó el 16 de junio de 1994; la CPSC clasifica como sustancia peligrosa un juguete para menores de 3 con piezas pequeñas (16 CFR 1501). No encontré el origen de 1979 que sugería mi memoria; **no lo afirmo**.
+- [HECHO] Condado de Santa Clara (California): ordenanza aprobada en abril de 2010 (3 votos contra 2; supervisor Ken Yeager) que prohíbe regalar juguetes con comidas que superen 485 calorías, 600 mg de sodio, 35% de calorías de grasa o 10% de azúcar añadido; solo en zonas no incorporadas; multa de 1.000 dólares; en vigor hacia el 9 de agosto de 2010 (las fuentes discrepan en el día del voto: 26, 27 o 28 de abril). San Francisco aprobó otra parecida; McDonald's respondió cobrando 10 centavos por el juguete.
+- Estudio de Stanford/UAMS en American Journal of Preventive Medicine: tras la norma, los restaurantes redujeron el marketing de juguetes y promovieron más lo saludable, pero ninguno añadió opciones más sanas, y solo el 4% de los menús infantiles cumplía las guías antes y después.
+- **Aclaración:** esta ordenanza regula **restaurantes de comida rápida**, no cereales.
+- Fuentes: https://www.accessdata.fda.gov/cms_ia/importalert_107.html ; https://www.govinfo.gov/content/pkg/FR-1995-02-27/html/95-4484.htm ; https://marketplace.org/2010/04/28/county-bans-happy-meal-toys ; https://stanforddaily.com/2012/01/01/study-finds-minimal-effects-for-fast-food-toy-ban/ ; https://www.foodsafetynews.com/2011/12/easy-legal-fix-to-san-francisco-happy-meal-law/
+- Confianza: **alta** (FDA, CPSC, Santa Clara), **media** (fecha exacta, estudio vía prensa).
+
+### H27. Autorregulación en EE. UU.
+- [HECHO] En julio de 2007 las empresas anunciaron compromisos de la CFBAI (Kellogg's y General Mills, entre ellas) de dirigir al menos la mitad de su publicidad infantil a productos más saludables o mensajes de estilo de vida sano; en vigor el 1 de enero de 2009. Evaluación del Rudd Center: los anuncios de empresas CFBAI vistos por niños en TV infantil bajaron más o menos a la mitad entre 2007 y 2016; otro estudio de la Universidad de Arizona vio el porcentaje de anuncios poco saludables casi igual (79,4% a 80,5% entre 2007 y 2013).
+- Fuentes: https://uconnruddcenter.media.uconn.edu/wp-content/uploads/sites/2909/2020/09/FACTS-2017_Conclusions.pdf ; https://link.springer.com/article/10.1057/jphp.2009.50
+- Confianza: **media-alta**.
+
+### H28. Evidencia científica sobre juguete y elección infantil (no sobre cereal)
+- Reimann y Lane (PLOS ONE, 2017): un juguete con la comida pequeña, no con la grande, predice que los niños elijan la pequeña. Dixon et al. (Appetite, 2017): experimento con 904 niños de 5 a 9 años con juguetes de películas y menús rápidos. Estudio de campamento en Canadá con 337 niños: más elección saludable cuando el juguete solo acompañaba menús que cumplían criterios.
+- **Nota importante:** son estudios de menús de restaurante. Para cereal de caja no encontré un estudio equivalente publicado que cuantifique el efecto de la sorpresa. No extrapolar sin decirlo.
+- Fuente: https://pmc.ncbi.nlm.nih.gov/articles/PMC6973938 ; https://cancervic.org.au/research/behavioural/major-topics-projects/obesity/effects-of-food-marketing-with-movie-character-toys.html
+- Confianza: **media**.
+
+---
+
+## 5. Contradicciones y puntos abiertos
+
+| Tema | Versión A | Versión B | Cuál parece más sólida |
+|---|---|---|---|
+| Año del primer premio Kellogg's | 1909 | 1910 / libro patentado 1907 | 1909 con catálogos de biblioteca; indicar «hacia 1909» |
+| Año del silbato en la caja | 1963 (Wikipedia) | 1966 / «finales de los 60» | Sin documento de Quaker. Decir «a mediados de los 60 según las fuentes» |
+| Quién descubrió el tono en el silbato | Draper (mito popular) | Sid Bernay (Lapsley) | Lapsley, pero citado de segunda mano |
+| Fecha Esquire | Octubre de 1971 | «27 de octubre de 1971» | Octubre de 1971 |
+| Prizes de Cracker Jack | 17.000 millones | 23.000 millones | Ninguna sólida; dar «miles de millones» |
+| Copias de Chex Quest | 5-5,7 millones | 30 millones (MediaPost) | La menor |
+| Pep botones | 1945-46 | 1945-47 | Sin resolver |
+| Vigencia México 4.1.5 | 2020 (muchos medios) | 1 de abril de 2021 (DOF) | DOF, primaria |
+| Chile «2016» | Aprobada en 2016 (pista) | Ley de 2012; vigor pleno 27 de junio de 2016 | Texto oficial |
+| Entrada en vigor Kinder en Chile | 26 de junio | 27 de junio | 27 (según Cooperativa y reglamento) |
+
+**Lo que habría que conseguir antes de grabar (no hallado):**
+1. El PDF de la FTC 2008 con el desglose de cereales y premios (403 al descargarlo).
+2. Algún dato de coste por premio (años 60-90) o de ventas atribuidas a un premio distinto de Chex Quest.
+3. Libro de Lapsley (páginas exactas) y el texto original del artículo de Esquire.
+4. El estado actual del caso Ferrero en Chile y el desenlace de los amparos contra la NOM-051.
+5. Historia hispana concreta de regalos en cajas (Kellogg's México, Nestlé, Argentina): mi búsqueda no encontró fuentes; la regulación sí. Hay que ir a hemerotecas o foros de coleccionistas.
+
+---
+
+## 6. Pistas corregidas (resumen)
+
+1. «Cracker Jack ya regalaba premios en 1912»: **cierto** (19 de febrero de 1912, premio en cada caja). Pero no es cereal.
+2. Silbato y Esquire 1971: **cierto en lo básico**; matices: no lo descubrió Draper primero (Bernay), año de la caja incierto, tono 2600 Hz confirmado.
+3. Chile 2016: **ley de 2012, vigencia 27 de junio de 2016**; el artículo que prohíbe juguetes es el 8.
+4. México 2020: **publicada el 27 de marzo de 2020; el 4.1.5 vigente desde el 1 de abril de 2021**; el texto habla de personajes y elementos interactivos, **no de regalos**.
+5. Argentina 2021: **cierto** (26 de octubre; publicada el 12 de noviembre) y con prohibición **explícita** de regalos y premios.
+6. EE. UU.: asfixia **cierto**; Santa Clara 2010 **cierto**, pero para comidas rápidas, no cereal.
+7. Kellogg's, General Mills, Post, Quaker «usaron premios masivamente»: cierto en general; **cifras de volumen concretas: casi no hay** (solo recall de 30 millones de 1988 y Chex Quest).
+8. «No desaparecieron del todo»: **cierto** (Cracker Jack 2016 digital; Chex Quest 1997; Kellogg's Toy Story 5, abril de 2026).
+
+---
 
 ## 7. Ideas de gancho
 
-- «Un silbato que costaba céntimos casi tumba el sistema telefónico de Estados Unidos... y la empresa ni habla de ello.»
-- «Cada caja de Cracker Jack regalaba un premio que costaba una fracción de céntimo. Hoy el premio es una pegatina con un código QR.»
-- «En Chile, un tigre de dibujos desapareció de una caja de cereal por ley. En México volvió, porque la empresa reformuló la receta.» (Verificar el caso mexicano con Expansión antes.)
-- «Un anillo de la bomba atómica se vendió por 15 centavos y una tapa de cereal: más de un millón de niños lo pidió en 1947.»
-- «Chex regaló un videojuego en 1997 por el precio de una caja de cereal, financiado en parte por AOL.»
-- «Cuando San Francisco prohibió el juguete gratis, las cadenas hicieron una cosa sencilla: cobraron 10 centavos, y el 88 % lo compró.» (Gran ejemplo de cómo una ley se esquiva sin cambiar la comida.)
+1. **«El silbato que no era un silbato»:** un premio náutico de plástico que sin querer hablaba el mismo idioma que la red telefónica de EE. UU. El giro: no lo descubrió el hombre que se llevó el nombre.
+2. **«Lo único con cifra»:** de los miles de millones de premios repartidos, el dato de ventas más sólido lo tiene un videojuego regalado en 1997 (+295%), pagado en buena parte por AOL.
+3. **«30 millones de juguetes retirados»:** diciembre de 1988, una flauta y unos binoculares en cajas de Corn Pops y Rice Krispies que fallaban la prueba de piezas pequeñas.
+4. **«La ley que se aplicó a un huevo»:** Chile, junio de 2016, Ferrero dice que la sorpresa es la esencia del producto; el Subsecretario responde que no puede haber «alto en» con juguete.
+5. **«El tigre que se mudó a Instagram»:** México, 1 de abril de 2021, Kellogg's anuncia que Tigre Toño, Melvin y Sam seguirán «viviendo» en redes; luego 380.149 piezas inmovilizadas.
+6. **«Lo que sí prohíbe Argentina»:** el artículo 9 lista obsequios, premios, regalos, accesorios, adhesivos y descargas digitales: casi un catálogo de lo que fue la caja.
+7. **«Vuelven los juguetes, pero con permiso de Disney»:** abril de 2026, Kellogg's «Toys Back in the Box» con Toy Story 5, primera vez en más de una década.
+8. **«¿Por qué sorprende que desaparezca el premio?»** Porque quien lo pagaba era el marketing, no el niño: en los 30 el niño aportaba tapas y 10 centavos; en los 90 el premio era un CD.
 
-## 8. Mitos y leyendas
+## 8. Mitos y errores frecuentes
 
-- MITO: «Draper descubrió el silbato de Cap'n Crunch.» Matiz: Lapsley atribuye el hallazgo a otros anteriores.
-- MITO: «El silbato salió en 1963.» Es el año del cereal.
-- MITO probable: «Los premios desaparecieron por una ley mundial.» No: no hay una ley así; es mezcla de regulación local, coste, seguridad y digitalización.
-- MITO: «Los regalos subieron las ventas un 50 %.» Una sola anécdota de prensa.
-- LEYENDA: «Kinder Sorpresa prohibido por lobby de Mars.» Hipótesis disputada.
-- MITO: «La ley mexicana prohíbe los regalos en cereales.» No verificado: el texto de la NOM habla de personajes y elementos interactivos.
+- **«Draper descubrió el silbato»**: falso o al menos discutible; Bernay y Engressia son anteriores.
+- **«Quaker diseñó el silbato para hackear teléfonos»** o que lo «sabía»: [LEYENDA], sin evidencia.
+- **«Sin ese silbato no hay Apple»**: exageración; Jobs habló del blue-boxing, no del silbato como causa.
+- **«Chile prohibió los regalos en 2016»**: la ley es de 2012; 2016 es la entrada en vigor del reglamento.
+- **«México prohibió los regalos en los cereales»**: el texto de la NOM no lo dice; prohíbe personajes y elementos interactivos en productos con sellos (desde el 1 de abril de 2021).
+- **«Las ventas se disparaban con cada premio»**: no hay estudio publicado general; la única cifra citada es de Chex Quest y es de la promoción.
+- **«Los premios desaparecieron por un solo motivo (asfixia)»**: no hay un único motivo documentado; Kellogg's dijo a Food52 que fue decisión de marketing (resumen secundario).
+- **«Santa Clara prohibió los juguetes en los cereales»**: regula menús de restaurantes.
+- **«Los regalos dejaron de existir»**: siguen en formas de promoción, colección, digital o película.
 
-## 9. Pendientes si se quiere reforzar
+## 9. Material de color (para locución)
 
-- Texto literal del art. 6 de la Ley 20.606 (BCN no cargó) y desenlace del caso Cajita Feliz.
-- Texto del DOF de la NOM-051 (27-03-2020) para confirmar si menciona regalos.
-- Cifras de coste por caja y ventas: archivos de Advertising Age, Hagley, libro de Scott Bruce, informes anuales de Kellogg's/General Mills.
-- Norma CPSC de piezas pequeñas (1979) y su aplicación a premios de cereal.
-- Lapsley, Exploding the Phone (capítulos del silbato) y el texto de Rosenbaum en Esquire.
-- Ley española y código PAOS (no buscado) para ampliar el mundo hispano.
+- Kellogg's puso en 1943 una avioneta de modelo en Pep Whole Wheat Flakes (The Takeout) y premios de «cohetes» o de «anillo atómico» de Kix en los 40.
+- En 1997, para que Chex Quest no pareciera violento, rediseñaron las armas («zorchers») para que no parecieran armas y cambiaron el color de los enemigos de amarillo a verde por la paleta de Doom.
+- Para pensar en el hispano: el tigre Toño fue elegido por el público en 1952 para Zucaritas (Forbes México) y Kellogg's abrió su primera planta en México el 16 de agosto de 1951 (El Universal). Útil como contexto de marca, no de premios.
