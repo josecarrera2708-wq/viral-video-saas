@@ -68,3 +68,13 @@
 - **Audio APROBADO**: `video/dawson-01/audio-mezcla.mp3` (46:38, -14.3 LUFS, pico -1.7). Plan: `mezcla-plan.json` con musica_lufs -20, duck_ratio 2.5, bucles sin huecos y nivelado dynaudnorm (`herramientas/mezcla_v2.py`). Variables de entorno HASTA y STEMS para pruebas rápidas.
 - Prompts de vídeo con los lugares reales (Valemount, Yellowhead, Canoe Mountain): `video/dawson-01/prompts-video-prueba.md`. El usuario los prueba en Muse (el primer clip salió con ciudad y semáforos: corregido en v2).
 - Siguiente: montaje completo (decidir la fuente de las imágenes antes de gastar).
+
+## Estado al 10-oct-2026 (antes de compactar)
+- **Vídeo 1 (Andrew Dawson):** guion, voz y mezcla de audio aprobados. Planes en `video/dawson-01/plan-audio.md` y `plan-escenas.md` (194 escenas: 27 Muse, 133 imágenes, 34 gráficos). El usuario dice que ya tiene el vídeo listo. **Muse le bloquea en España**: los vídeos siguientes se hacen con imágenes mías, sin Muse (≈7–10 $ por vídeo con 120–150 imágenes en calidad media; avisar antes de gastar).
+- **Vídeos 2, 3 y 4 elegidos** de `investigacion/huecos/HUECOS.md`: 2 = Phineas Gage (`gage`), 3 = regalos de las cajas de cereales (`cereales`), 4 = faro y foto de La Jument (`jument`).
+- **Workflow en marcha** (lanzado el 10-oct, el usuario durmiendo): Task ID `w7opgj10t`, run `wf_8ccdfc16-39f`. Script: `/root/.claude/projects/-home-user-viral-video-saas/4fc25ed8-7367-56d4-8e53-4682774195e3/workflows/scripts/guiones-3-historias-wf_8ccdfc16-39f.js`. Reanudar: `Workflow({scriptPath: <esa ruta>, resumeFromRunId: "wf_8ccdfc16-39f"})`.
+  - Fases: oficio (web) → 4 investigadores + dossier por historia → 3 arquitectos + juez → escritura por actos → revisión (hechos, retención, oralidad, relleno, ética; 2 rondas) → final + commit.
+  - Salida: `guiones/<slug>-guion-NN.md`, `-fuentes-NN.md`, `-pronuncia-NN.json` (NN = 02, 03, 04) y el material de trabajo en `guiones/trabajo/<slug>/`. El último agente hace commit y push.
+- **Estructura fija de los guiones nuevos:** 1 = gancho de la historia (sin revelar la respuesta); 2 = INTRO DEL CANAL con suscripción y «ponte cómodo y disfruta esta nueva historia»; luego la historia; última = cierre (gancho final + el cierre fijo del vídeo 1). Duración según material real, entre 25 y 60 min; nunca estirar.
+- **Al terminar el workflow:** leer el resultado, comprobar los archivos, informar al usuario de duración, calidad y advertencias (los pendientes), y enviarle los guiones. No tocar el guion del vídeo 1 sin que lo pida (aún no lleva la intro del canal nueva).
+- Siguientes pasos: voz de los guiones 2–4 (Alejandro, sonic-3.5, `herramientas/gen_voz.py`, con `pronuncia.json` fusionado), mezcla, plan de escenas e imágenes, miniaturas.
