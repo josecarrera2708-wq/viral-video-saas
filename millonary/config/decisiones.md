@@ -1,0 +1,102 @@
+# Millonary · Decisiones de diseño (2026-09-29)
+
+Las decisiones marcadas **[YO]** las tomo yo con lo recopilado (el dueño me delegó esa autoridad);
+las marcadas **[TÚ]** son del dueño.
+
+| # | Decisión | Valor | Razón |
+|---|---|---|---|
+| 1 | Nombre / marca | **Millonary** | [TÚ] |
+| 2 | Activo | Solo BTC | [TÚ] |
+| 3 | Capital admitido | **100 a 10.000 USDT** | [TÚ] |
+| 4 | Apalancamiento máximo | **5×** (tope duro) | [TÚ]. Objetivo efectivo ≤ 3×; 5× solo si la estrategia lo justifica en backtest |
+| 5 | Stop-loss | **Según análisis**, nunca fijo: por estructura y/o ATR, lo elige el minero y lo valida el embudo | [TÚ]/[YO] |
+| 6 | Instrumento | **Perpetuo USDT-M** (largos y cortos, funding modelado) | [YO]: es la serie sin huecos con funding; permite ir corto |
+| 7 | Marcos temporales | Minar en **1h y 4h**; 1d como filtro de régimen | [YO]: Conesa muestra 1h; 15m se deja para refinar entradas más tarde |
+| 8 | Serie de validación principal | Perpetuo desde 2020-01 (≈6,7 años, 0 huecos) | [YO] |
+| 9 | Riesgo por operación | 0,5 % del capital (tramo alto); 1 % (tramo bajo) | [YO], ver nota de capital pequeño |
+| 10 | Pérdida diaria máxima | 3 % → pausa hasta el día siguiente | [YO] |
+| 11 | Drawdown desde máximos | 10 % → tamaño a la mitad; 15 % → parada total y revisión | [YO] |
+| 12 | Criterios de aceptación | Los de la sección 6 de la ruta de trabajo | [YO] |
+| 13 | Los agentes de IA no pueden saltarse la capa de riesgo | Regla fija | [YO] |
+
+## Tramos de capital (importante)
+Con BTC ≈ 83.500 USDT, el lote mínimo de 0,001 BTC vale ≈ 83,5 USDT de nocional. Consecuencias:
+
+| Capital | Qué implica |
+|---|---|
+| **100–300 USDT** | No se puede dimensionar por riesgo con precisión: con un stop del 2 % el lote mínimo ya arriesga ≈ 1,7 USDT (≈ 1,7 % de 100). Regla: **se omite la operación si el riesgo del lote mínimo supera el 2 % del capital**. Funciona como "modo mínimo", con muchas menos operaciones posibles y más peso de las comisiones. |
+| **300–1.000 USDT** | Dimensionado casi correcto. Riesgo objetivo 1 %. |
+| **1.000–10.000 USDT** | Dimensionado normal. Riesgo objetivo 0,5 %. |
+
+**Recomendación sincera:** empezar el paper trading con 1.000 USDT de referencia, y para dinero real
+no bajar de ~300 USDT. Con 100 USDT las comisiones y el lote mínimo desvirtúan las estadísticas del
+backtest.
+
+## Nota sobre el apalancamiento 5×
+A 5× una caída adversa de ~20 % liquida la posición (menos margen de mantenimiento). Como BTC hizo
+velas de 1h de −18 % (mar-2020, oct-2025), el motor **modela la liquidación** y un stop siempre debe
+estar mucho más cerca que ese nivel. El apalancamiento es un tope, no un objetivo.
+
+## 2026-09-29 · Construcción tras la fase de evidencia (el dueño dio el «adelante»)
+- Incubadora de traders (15 setups del estilo Conesa) con prerregistro previo, atribución α/β/tendencia, Holm/BH, DSR, PBO y examen sellado: **0/15 certificadas**. El reparto de capital simulado queda 100 % en el núcleo v1 (resultado válido).
+- Meta-etiquetado logístico con examen sellado: 0 ganan. No se retoca el umbral (sería una prueba nueva).
+- Mesa de opciones (Deribit público) añadida como departamento informativo; sin operar opciones ni activar protección de cola.
+- Chat de agentes determinista (`src/desk/chat.py`): mensajes derivados de los informes reales; `ask` responde con cifras del informe, sin LLM ni decisiones.
+- Bienestar de Conesa = cosmético (según su propia UI: «el ánimo no cambia ninguna operación»); aquí equivale a la salud de Infraestructura. No se construye.
+- Pendiente: noticias en vivo (sin fuente fiable/gratuita), multi-activo (fuera de alcance: solo BTC), Hyperliquid/arbitraje real (requiere dos plataformas).
+
+## 2026-09-29 · Panel, informe semanal y ciclo de mejora continua
+- Ciclo de mejora prerregistrado (`config/mejoras_prerregistrada.md`): las estrategias solo «se perfeccionan» pasando etapas (construcción → validación → sombra hacia delante → adopción con ≥ 90 días, ΔSharpe ≥ +0,3, caída ≤ 1,2×, p < 0,10 con Holm). Nada toca capital sin aprobación del dueño.
+- Hallazgo: «tamaño por volatilidad» mejora casi todos los traders (caída del examen 46-58 % → 17-32 %), coherente con el diseño del núcleo; «solo largos» mejora mucho pero se explica por la deriva alcista 2020-25 (los cortos no aportaron). Ambos siguen en sombra hasta tener datos hacia delante.
+- La rutina diaria genera `paper_state/panel.html` (pestañas Sala/Ranking/Equipos/Informe) y `paper_state/semanal/` (informe .md, operaciones .csv, diario .xlsx) y actualiza `reports/mejoras_registro.json`; ninguno de esos pasos puede detener la actualización de la cuenta.
+
+## 2026-09-29 · Mesa intradía (petición del dueño: 1-2 operaciones/día)
+- El núcleo v1 y su prueba NO se tocan (cambiarlos invalidaría la evidencia). La mesa intradía es un sistema aparte: 14 traders de 1 h con stop, TP y tiempo, con contabilidad propia.
+- Histórico (examen sellado, una sola ejecución): 0/14 certificadas; expectativa negativa en los 14. Causa estructural: el coste de ida y vuelta (≈12 pb) equivale a ≈0,2 R con stops de 1-2 ATR de 1 h. Con 1-2 operaciones al día el edge bruto tendría que superar ese coste.
+- Aun así los 14 operan en papel hacia delante con datos de Deribit (único proveedor accesible), actualización horaria, para medir en semanas lo que el núcleo tardaría años en mostrar.
+- Skills instalados: ninguno de trading; el catálogo de la organización solo tiene plugins de contabilidad. Referencias comunitarias de GitHub (solo Markdown) usadas como lista de comprobaciones: prueba de truncamiento, estrés de costes ×1,5/2/3, remuestreo Monte Carlo, control de deriva. No se instala código de terceros.
+
+## 2026-10-02 · Mesa de 15 min en paralelo + aprendices
+Petición del dueño: acelerar con velas de 15 min sin tocar la mesa de 1 h, añadir acción de precio (techos/suelos, ineficiencias, patrones de velas) y fórmulas cuantitativas, y que los agentes aprendan sin esperar 90 días.
+Decisión: sistema aparte (`src/desk15`, `paper_state/mesa15`), 13 traders prerregistrados, y aprendices A (individual) y C (colectivo) que vetan contextos donde la evidencia ya cerrada es peor que la media del trader; se evalúan contra su base. Nada toca dinero real.
+Honestidad: el histórico dio 0/13 certificadas y R media ≈ −0,3 por operación (costes); el aprendizaje reduce pérdidas pero no crea ventaja.
+
+## 2026-10-02 · Mesa de 1 h con los 13 traders (petición del dueño) y prueba de stops
+Se añade `paper_state/mesa1h` (papel, inicio 2026-10-02 00:00 UTC, rutina horaria). Stops más anchos: solo informe, sin cambios en mesas en marcha.
+
+## 2026-10-02 · Revisión completa + mesa de fondos (petición del dueño)
+- Fallos corregidos: (1) el funding sintético del mes en curso nunca se sustituía por el real (causa de G1 en NO desde el día 1; libro funding_ledger con corrección automática); (2) la réplica de G1 recibía solo 2 días de funding (habría fallado con el paso de las semanas); (3) la mesa intradía no paginaba Deribit (límite 744 tasas / 5.000 velas: desde ~30-oct habría reescrito en silencio el funding de operaciones cerradas).
+- Mesa de fondos en papel desde 2026-10-03 (10 estrategias, rutina horaria, pestaña «Fondos»). La única certificada es el carry de funding (neutral al precio, no correlacionado con el núcleo): es la candidata natural para complementar el núcleo, pero NO se activa con dinero: requiere ≥ 90 días en papel, revisar el riesgo de contraparte y aprobación EXPRESA del dueño.
+
+## 2026-10-02 · Carry de funding en papel junto al núcleo (petición del dueño)
+- Subcuenta propia de 1.000 USDT con la regla F06 (prerregistro `config/carry_papel_prerregistrado.md`); la cuenta oficial del núcleo no se toca. El panel muestra la cartera principal (2 × 1.000 USDT) en la pestaña «Núcleo + carry».
+- Funding provisional: en lugar del 0,01 % fijo, fórmula de Binance sobre el índice de prima de 1 min (error medio 1,2e-6 en jul-sep 2026). Sin esto el carry decidiría con un funding inventado y siempre positivo. Afecta solo a lo provisional (núcleo, mesa de fondos y carry); todo se corrige a la tasa real al publicarse el mes.
+- Aviso de costes: entrar y salir cuesta ≈ 0,29 % del nocional; con el funding actual (~4 % anual) se tarda ~4 semanas en recuperarlo.
+
+## 2026-10-03 · Fase 1: gestor de cartera (petición del dueño: «que gane por todos lados»)
+- Se prerregistraron y evaluaron 4 formas de repartir el capital (paridad de riesgo, HRP, control de caída). Aprobada K4 (HRP + control de caída): muy estable pero ~+6,7 %/año. Pasa a papel; nada cambia en las cuentas existentes.
+- Conclusión honesta: optimizar por riesgo NO sube la rentabilidad; la sube solo añadir fuentes de retorno nuevas y no correlacionadas (Fase 2: basis trimestral, prima de volatilidad, órdenes maker). Toda estrategia nueva con parámetros ajustados pasa además por PBO ≤ 0,5 y CPCV (≥ 75 % de caminos con Sharpe > 0).
+
+## 2026-10-03 · Fase 2, lote 1 (basis trimestral y prima de volatilidad)
+- 0/4 certificadas con las reglas del proyecto; tres (B01, B02, V01) se quedan a una puerta (Deflated Sharpe) y aportan diversificación real. Van a SOMBRA en papel: si en ≥ 90 días se comportan como en el histórico, se propondrá una prueba nueva de cartera que las incluya. Nada cambia en las cuentas existentes.
+- Datos congelados en `paper_state/hist/` (contado 4 h y 1 h, funding, trimestrales vencidos, DVOL) para que las rutinas funcionen en una máquina nueva sin data/raw.
+
+## 2026-10-03 · Fase 2, lote 2 (órdenes maker)
+- Entrar con orden límite reduce la pérdida (≈ +0,04 R por operación) pero no vuelve rentable ninguna de las 40 traders de corto plazo. Se anota como mejora de ejecución para cuando exista una señal con ventaja; no cambia nada en papel.
+- Se detiene la búsqueda de señales de corto plazo: cada prueba nueva sube la vara (Deflated Sharpe con n = 309) para TODAS, incluidas las primas que ya casi certifican. Prioridad: acumular días de papel del núcleo, el carry, K4 y la sombra B01/B02/V01.
+
+## 2026-10-03 · Acumulación de BTC (decisión del dueño: «el mayor porcentaje de BTC posible»)
+- Medido en BTC, ninguna estrategia del proyecto suma BTC frente a mantenerlo: núcleo y carry salen a USDT y pierden BTC en los años alcistas (lo ganan en los bajistas). Lo que más BTC reúne es el 100 % en BTC.
+- Se aplica en papel A1 (100 % BTC, compra única al cierre del 2026-10-03, nunca se vende) y se sigue A2 (50 % BTC / 25 % núcleo / 25 % carry) en sombra para comparar. Nada cambia en las cuentas existentes. Sin dinero real.
+
+## 2026-10-05 · Una sola mesa de trading (decisión del dueño: «no quiero muchas mesas; eliminar las que no rinden»)
+- **Se detienen** la mesa intradía (I01-I14), la de 15 min y la de 1 h. En papel sumaban −6,6 R, −30,5 R y −15,3 R. Sus archivos quedan congelados como registro y salen de la rutina y del panel.
+- **La mesa nueva (X) no llega a arrancar.** X07 (CTA 4 h) y X08 (MAX 20 días) pasan a la mesa de patrones; el resto perdía en el examen.
+- **La mesa de patrones pasa a ser la «mesa de trading», la única activa**, desde el 2026-10-06 00:00 UTC. Composición:
+  - De la v4: Y01, Y02, Y04 y Y07.
+  - De la mesa nueva: X07 y X08.
+  - De la v5 (patrón + tendencia superior): Z01 y Z02.
+  - Todos ganaron fuera de muestra en el examen.
+  - Fuera Y03, Y05 y Y06, que perdieron en el examen.
+- Revisión a los 90 días: el que no rinda, fuera.
+- El modelo fondo de inversión no se toca: núcleo, carry, fondos, K4, primas y acumulación.

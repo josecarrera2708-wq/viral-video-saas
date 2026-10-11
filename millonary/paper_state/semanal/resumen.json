@@ -1,0 +1,251 @@
+{
+ "generado": "2026-10-11 04:18:23.580833+00:00",
+ "tiene_datos": true,
+ "equity_inicial": 999.59048574632,
+ "equity_actual": 984.1010267234344,
+ "retorno_total": -0.015495804775813582,
+ "retorno_semana": -0.023641378617633046,
+ "caida_max": 0.03947605203802207,
+ "caida_actual": 0.034837179124210915,
+ "dias": 10,
+ "velas": 62,
+ "exposicion_actual": 0.2517378737270863,
+ "velas_semana": 35,
+ "ordenes_total": 4,
+ "ordenes_semana": 3,
+ "comisiones_total": 0.6205926338,
+ "comisiones_semana": 0.32806574012,
+ "posiciones": {
+  "cerradas": 0,
+  "ganan": 0,
+  "pierden": 0,
+  "abiertas": 1
+ },
+ "lotes": {
+  "cerrados": 0,
+  "ganan": 0,
+  "pierden": 0,
+  "abiertos": 2
+ },
+ "puertas": {
+  "G1_replica": true,
+  "G2_integridad": true,
+  "G3_envolvente": true,
+  "G4_no_anomalo": true,
+  "G5_registro_cuadra": true
+ },
+ "posterior_sharpe": {
+  "dias": 11,
+  "sharpe_observado": -3.5187721302916484,
+  "error_estandar": 15.446890561320082,
+  "posterior_media": 0.39589840206218796,
+  "posterior_sd": 0.49973826803385435,
+  "prob_sharpe_mayor_0": 0.7858813173889656,
+  "ic90": [
+   -0.42617104885350243,
+   1.2179678529778784
+  ],
+  "prior": {
+   "media": 0.4,
+   "sd": 0.5
+  }
+ },
+ "estado_comite": "AVISO",
+ "decision": "Mantener el objetivo del n\u00facleo: 0.38\u00d7 de exposici\u00f3n.",
+ "incubadora": {
+  "certificadas": [],
+  "forward": {
+   "S01 Parabolic SAR + EMA200": {
+    "retorno": -0.055933527578663655,
+    "caida_max": 0.06450512282574605,
+    "ops": 5,
+    "dias": 11,
+    "sharpe": -16.25893627154939,
+    "posicion_actual": 1.0
+   },
+   "S02 Ichimoku": {
+    "retorno": -0.014111223949835328,
+    "caida_max": 0.04792737850644191,
+    "ops": 3,
+    "dias": 11,
+    "sharpe": -3.010412212517539,
+    "posicion_actual": -1.0
+   },
+   "S03 Bollinger + RSI (reversi\u00f3n)": {
+    "retorno": 0.03074363393482571,
+    "caida_max": 0.025601434163612047,
+    "ops": 2,
+    "dias": 11,
+    "sharpe": 4.953362339748169,
+    "posicion_actual": 1.0
+   },
+   "S04 Keltner ruptura": {
+    "retorno": -0.040935241878974904,
+    "caida_max": 0.04809548795047969,
+    "ops": 3,
+    "dias": 11,
+    "sharpe": -7.138471252338212,
+    "posicion_actual": -1.0
+   },
+   "S05 RSI(2) retroceso (largo)": {
+    "retorno": -0.02181633521027726,
+    "caida_max": 0.03768262617940443,
+    "ops": 1,
+    "dias": 11,
+    "sharpe": -5.464156619515538,
+    "posicion_actual": 0.0
+   },
+   "S06 Cruce SMA 7-25": {
+    "retorno": 0.012706737091291664,
+    "caida_max": 0.027573041067091464,
+    "ops": 3,
+    "dias": 11,
+    "sharpe": 2.183788367764555,
+    "posicion_actual": -1.0
+   },
+   "S07 SMA 7-25 + filtro 200 (largo)": {
+    "retorno": 0.0007896043088966298,
+    "caida_max": 0.028253739938344347,
+    "ops": 1,
+    "dias": 11,
+    "sharpe": 0.2251517559894329,
+    "posicion_actual": 0.0
+   },
+   "S08 Canal 20 por tercios": {
+    "retorno": -0.028577535636180262,
+    "caida_max": 0.043968534368210466,
+    "ops": 9,
+    "dias": 11,
+    "sharpe": -4.601283393613085,
+    "posicion_actual": 0.0
+   },
+   "S09 Donchian 20/10": {
+    "retorno": -0.03770563290850304,
+    "caida_max": 0.057341114654743675,
+    "ops": 3,
+    "dias": 11,
+    "sharpe": -4.267600760326958,
+    "posicion_actual": -1.0
+   },
+   "S10 MACD + EMA200": {
+    "retorno": -0.007200591349226015,
+    "caida_max": 0.03797186285349852,
+    "ops": 4,
+    "dias": 11,
+    "sharpe": -1.4570621008123732,
+    "posicion_actual": 1.0
+   },
+   "S11 Supertrend 10/3": {
+    "retorno": -0.02457224348621423,
+    "caida_max": 0.04447571020367225,
+    "ops": 3,
+    "dias": 11,
+    "sharpe": -3.250997968322616,
+    "posicion_actual": -1.0
+   },
+   "S12 Expansi\u00f3n de volatilidad": {
+    "retorno": -0.03910591441965128,
+    "caida_max": 0.048983194737682534,
+    "ops": 5,
+    "dias": 11,
+    "sharpe": -12.85118271162761,
+    "posicion_actual": -1.0
+   },
+   "S13 Retroceso a EMA20": {
+    "retorno": -0.006682808725984146,
+    "caida_max": 0.02817103894115458,
+    "ops": 2,
+    "dias": 11,
+    "sharpe": -1.1415602932162299,
+    "posicion_actual": 0.0
+   },
+   "S14 Momentum 90 d": {
+    "retorno": -0.013257017795405335,
+    "caida_max": 0.06348138346903642,
+    "ops": 1,
+    "dias": 11,
+    "sharpe": -1.564867524079307,
+    "posicion_actual": 1.0
+   },
+   "S15 RSI14 + EMA200": {
+    "retorno": -0.027848657849687264,
+    "caida_max": 0.054779227707723366,
+    "ops": 2,
+    "dias": 11,
+    "sharpe": -4.89008477566683,
+    "posicion_actual": -1.0
+   }
+  }
+ },
+ "mejoras": {
+  "n_pruebas": 75,
+  "etapas": {
+   "descartada (E1/E2)": 54,
+   "E3 sombra": 21
+  },
+  "adoptables": [],
+  "top_forward": [
+   [
+    "S03 Bollinger + RSI (reversi\u00f3n)|O2 solo largos",
+    {
+     "dias": 11,
+     "delta_sharpe": 3.5537876160147945,
+     "caida_base": 0.02314550224080769,
+     "caida_var": 0.0,
+     "ret_base": 0.030743633934825265,
+     "ret_var": 0.01875983693281369,
+     "p_boot": null
+    }
+   ],
+   [
+    "S15 RSI14 + EMA200|O2 solo largos",
+    {
+     "dias": 11,
+     "delta_sharpe": 3.4493534318148225,
+     "caida_base": 0.047669256869431686,
+     "caida_var": 0.02817103894115469,
+     "ret_base": -0.027848657849687153,
+     "ret_var": -0.007944628850053204,
+     "p_boot": null
+    }
+   ],
+   [
+    "S10 MACD + EMA200|O2 solo largos",
+    {
+     "dias": 11,
+     "delta_sharpe": 2.3043402855521937,
+     "caida_base": 0.026585235063741997,
+     "caida_var": 0.01619791405258164,
+     "ret_base": -0.007200591349225793,
+     "ret_var": 0.0033935834350666827,
+     "p_boot": null
+    }
+   ],
+   [
+    "S09 Donchian 20/10|O2 solo largos",
+    {
+     "dias": 11,
+     "delta_sharpe": 0.33110166095724747,
+     "caida_base": 0.04810848142726609,
+     "caida_var": 0.02817103894115469,
+     "ret_base": -0.03770563290850304,
+     "ret_var": -0.024359862351042594,
+     "p_boot": null
+    }
+   ],
+   [
+    "S08 Canal 20 por tercios|O3 tama\u00f1o por volatilidad",
+    {
+     "dias": 11,
+     "delta_sharpe": 0.21231659685166981,
+     "caida_base": 0.04008285523508037,
+     "caida_var": 0.029523867371169077,
+     "ret_base": -0.02857753563618093,
+     "ret_var": -0.0204505814774959,
+     "p_boot": null
+    }
+   ]
+  ],
+  "ultima_actualizacion": "2026-10-11 04:18:23.580833+00:00"
+ }
+}

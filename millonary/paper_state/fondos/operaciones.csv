@@ -1,0 +1,10 @@
+estrategia,entrada,salida,lado,px_entrada,px_salida,unidades,ret_pct,pnl_usdt,R,motivo
+F05 Ruptura de volatilidad (L. Williams),2026-10-09,2026-10-09,LARGO,83334.918651,82619.02289000001,1,-0.009705717335313481,-9.705717335313482,,cierre del día
+F07 Volatilidad gestionada (Moreira-Muir),2026-10-09,2026-10-09,REAJUSTE,81754.45,81754.45,0,,,,tope 2×: exposición +2.04× → +2.00×
+F07 Volatilidad gestionada (Moreira-Muir),2026-10-08,2026-10-08,REAJUSTE,83321.81,83321.81,0,,,,tope 2×: exposición +2.03× → +2.00×
+F05 Ruptura de volatilidad (L. Williams),2026-10-04,2026-10-04,LARGO,85061.383875,86512.694,1,0.01590687829703774,15.906878297037741,,cierre del día
+F09 NR7 (Crabel),2026-10-04,2026-10-04,LARGO,85054.637526,86512.694,1,0.009701817151631431,9.701817151631431,1.9403634303262862,cierre del día
+F03 Momentum 12 m (AQR/MOP),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → -0.62×
+F04 Media 200 d (Tudor Jones),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → +1.00×
+F06 Carry de funding (cash-and-carry),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,entra en carry: exposición +0.00× → +1.00×
+F07 Volatilidad gestionada (Moreira-Muir),2026-10-03,2026-10-03,REAJUSTE,84518.01,84518.01,0,,,,señal / reajuste: exposición +0.00× → +2.00×

@@ -1,0 +1,1234 @@
+{
+ "datos": [
+  "2017-08-18",
+  "2026-10-01"
+ ],
+ "n_pruebas_previas": 251,
+ "n_nuevas": 10,
+ "referencias": {
+  "nucleo_v1": {
+   "sharpe": 1.0399903363215133,
+   "caida_max": 0.2460211233174221
+  },
+  "comprar_y_mantener": {
+   "sharpe": 0.8130365661912498,
+   "caida_max": 0.7662925431645936
+  }
+ },
+ "estrategias": {
+  "F01 Tortugas S1 (Dennis, 20/10)": {
+   "sharpe": 0.4157860674549884,
+   "sharpe_costes_x2": 0.34374112076406277,
+   "por_periodo": {
+    "A 2018-09→2019-12": 0.6653331463080523,
+    "B 2020-01→2023-12": 0.5053793157024685,
+    "C 2024-01→hoy": 0.07663523174976329
+   },
+   "cagr": 0.045542047077580694,
+   "vol_anual": 0.12609822462445103,
+   "caida_max": 0.1658331323110347,
+   "ops": 126,
+   "p": 0.12657574289773166,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": -0.02739114487295989,
+    "t_alpha": -0.7599129039447928,
+    "p_alpha_1s": 0.776316314322254,
+    "beta_btc": 0.03891753839500037,
+    "beta_tend": 0.10976096478141843,
+    "r2": 0.3248811228993641
+   },
+   "corr_nucleo": 0.5900317892515902,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.8329202341445362,
+   "kelly_completo": 3.297318964587275,
+   "exposicion_media": 0.11943175309003452,
+   "operaciones": [
+    {
+     "entrada": "2026-01-02 00:00:00+00:00",
+     "salida": "2026-01-20 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 90652.67691,
+     "px_salida": 90110.41431200001,
+     "unidades": 4,
+     "ret": -0.010386499265093708,
+     "R": -2.0772998530187414,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-01-21 00:00:00+00:00",
+     "salida": "2026-01-29 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 87532.919914,
+     "px_salida": 89317.86,
+     "unidades": 4,
+     "ret": -0.014636893897198933,
+     "R": -2.9273787794397865,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-01-30 00:00:00+00:00",
+     "salida": "2026-03-02 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 83366.653334,
+     "px_salida": 70002.827766,
+     "unidades": 4,
+     "ret": 0.04250641539761275,
+     "R": 8.50128307952255,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-03-27 00:00:00+00:00",
+     "salida": "2026-04-06 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 65605.36630200001,
+     "px_salida": 69323.862,
+     "unidades": 1,
+     "ret": -0.0031782874437126284,
+     "R": -0.6356574887425256,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-04-08 00:00:00+00:00",
+     "salida": "2026-05-15 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 72775.5522,
+     "px_salida": 78738.89907,
+     "unidades": 4,
+     "ret": 0.014688524917222414,
+     "R": 2.937704983444483,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-06-02 00:00:00+00:00",
+     "salida": "2026-06-14 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 70451.9068,
+     "px_salida": 64777.272864,
+     "unidades": 4,
+     "ret": 0.020478815174308614,
+     "R": 4.095763034861722,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-06-24 00:00:00+00:00",
+     "salida": "2026-07-03 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 59119.08381800001,
+     "px_salida": 62366.285574082365,
+     "unidades": 2,
+     "ret": -0.008796842484857159,
+     "R": -1.7593684969714316,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-07-14 00:00:00+00:00",
+     "salida": "2026-07-28 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 64712.939999999995,
+     "px_salida": 63087.380000000005,
+     "unidades": 3,
+     "ret": -0.0102963606106719,
+     "R": -2.05927212213438,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-08-19 00:00:00+00:00",
+     "salida": "2026-08-19 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 65487.554892,
+     "px_salida": 64712.474916,
+     "unidades": 4,
+     "ret": -0.01377977964490308,
+     "R": -2.755955928980616,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-08-20 00:00:00+00:00",
+     "salida": "2026-08-20 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 70014.0,
+     "px_salida": 69246.24454105501,
+     "unidades": 4,
+     "ret": -0.01289229911681834,
+     "R": -2.5784598233636675,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-08-21 00:00:00+00:00",
+     "salida": "2026-09-11 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 73414.68,
+     "px_salida": 76248.7472,
+     "unidades": 4,
+     "ret": 0.006232518051585353,
+     "R": 1.2465036103170704,
+     "motivo": "canal 10 d"
+    },
+    {
+     "entrada": "2026-09-21 00:00:00+00:00",
+     "salida": "2026-09-21 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 82316.45999999999,
+     "px_salida": 81161.774398,
+     "unidades": 4,
+     "ret": -0.013289353072896675,
+     "R": -2.657870614579335,
+     "motivo": "stop 2N"
+    }
+   ],
+   "p_holm": 0.6328787144886583,
+   "dsr": 0.04480582726159579,
+   "dsr_transversal": 8.517281075473754e-66,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": true,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F02 Tortugas S2 (Dennis, 55/20)": {
+   "sharpe": 0.17503416875035874,
+   "sharpe_costes_x2": 0.09884707069468045,
+   "por_periodo": {
+    "A 2018-09→2019-12": -0.2083160700268727,
+    "B 2020-01→2023-12": 0.4258394184018185,
+    "C 2024-01→hoy": -0.08395094645322196
+   },
+   "cagr": 0.015468676988556584,
+   "vol_anual": 0.16753340658295615,
+   "caida_max": 0.31984062692421855,
+   "ops": 99,
+   "p": 0.3081614812938669,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": -0.10454553541416081,
+    "t_alpha": -2.369651458549047,
+    "p_alpha_1s": 0.9910655671960291,
+    "beta_btc": 0.0927911780403034,
+    "beta_tend": 0.15897533151309434,
+    "r2": 0.46026817508693163
+   },
+   "corr_nucleo": 0.5251793482633982,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.5016829332147448,
+   "kelly_completo": 1.044771740277892,
+   "exposicion_media": 0.1309866519553337,
+   "operaciones": [
+    {
+     "entrada": "2025-10-05 00:00:00+00:00",
+     "salida": "2025-10-07 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 124498.8948,
+     "px_salida": 120621.72471653715,
+     "unidades": 2,
+     "ret": -0.009098517123884807,
+     "R": -1.8197034247769615,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2025-10-10 00:00:00+00:00",
+     "salida": "2025-10-10 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 107233.549,
+     "px_salida": 121686.742482,
+     "unidades": 4,
+     "ret": -0.058914123590881294,
+     "R": -11.78282471817626,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2025-11-04 00:00:00+00:00",
+     "salida": "2025-11-11 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 101979.6,
+     "px_salida": 107406.03528357712,
+     "unidades": 2,
+     "ret": -0.008754258266847259,
+     "R": -1.7508516533694516,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2025-11-13 00:00:00+00:00",
+     "salida": "2025-12-09 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 98924.571128,
+     "px_salida": 94168.83,
+     "unidades": 4,
+     "ret": 0.004986972964081599,
+     "R": 0.9973945928163199,
+     "motivo": "canal 20 d"
+    },
+    {
+     "entrada": "2026-01-13 00:00:00+00:00",
+     "salida": "2026-01-19 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 94808.037816,
+     "px_salida": 92299.84414085255,
+     "unidades": 3,
+     "ret": -0.011707713255593699,
+     "R": -2.34154265111874,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-01-29 00:00:00+00:00",
+     "salida": "2026-03-04 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 84433.119998,
+     "px_salida": 70997.1966,
+     "unidades": 4,
+     "ret": 0.04636075652738187,
+     "R": 9.272151305476374,
+     "motivo": "canal 20 d"
+    },
+    {
+     "entrada": "2026-04-14 00:00:00+00:00",
+     "salida": "2026-05-22 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 76015.2,
+     "px_salida": 76035.7898,
+     "unidades": 4,
+     "ret": -0.007710488458899336,
+     "R": -1.5420976917798672,
+     "motivo": "canal 20 d"
+    },
+    {
+     "entrada": "2026-06-02 00:00:00+00:00",
+     "salida": "2026-07-14 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 70451.9068,
+     "px_salida": 64712.939999999995,
+     "unidades": 4,
+     "ret": 0.022006570918940354,
+     "R": 4.401314183788071,
+     "motivo": "canal 20 d"
+    },
+    {
+     "entrada": "2026-08-19 00:00:00+00:00",
+     "salida": "2026-08-19 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 66969.54122999999,
+     "px_salida": 64712.474916,
+     "unidades": 4,
+     "ret": -0.024601254159863035,
+     "R": -4.920250831972607,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-08-20 00:00:00+00:00",
+     "salida": "2026-08-20 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 70014.0,
+     "px_salida": 69246.24454105501,
+     "unidades": 4,
+     "ret": -0.012892299116818377,
+     "R": -2.5784598233636755,
+     "motivo": "stop 2N"
+    },
+    {
+     "entrada": "2026-08-21 00:00:00+00:00",
+     "salida": "2026-09-15 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 73414.68,
+     "px_salida": 76031.37068400001,
+     "unidades": 4,
+     "ret": 0.004694313532843413,
+     "R": 0.9388627065686826,
+     "motivo": "canal 20 d"
+    },
+    {
+     "entrada": "2026-09-21 00:00:00+00:00",
+     "salida": "2026-09-21 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 82316.45999999999,
+     "px_salida": 81161.774398,
+     "unidades": 4,
+     "ret": -0.013289353072896451,
+     "R": -2.65787061457929,
+     "motivo": "stop 2N"
+    }
+   ],
+   "p_holm": 0.6747943339140152,
+   "dsr": 0.009097737212959445,
+   "dsr_transversal": 3.0876994976300323e-69,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": false,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F03 Momentum 12 m (AQR/MOP)": {
+   "sharpe": 0.37224569316924394,
+   "sharpe_costes_x2": 0.36785247291248707,
+   "por_periodo": {
+    "A 2018-09→2019-12": -0.8724966692359408,
+    "B 2020-01→2023-12": 0.6986537808362833,
+    "C 2024-01→hoy": 0.5550494568493082
+   },
+   "cagr": 0.0657086195305181,
+   "vol_anual": 0.2682370079255581,
+   "caida_max": 0.5292535602922908,
+   "ops": 98,
+   "p": 0.14739473568759687,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": 0.0006063974043422288,
+    "t_alpha": 0.007011290410508703,
+    "p_alpha_1s": 0.49720315976980345,
+    "beta_btc": 0.14787592375967912,
+    "beta_tend": 0.04570841662030406,
+    "r2": 0.126830938832169
+   },
+   "corr_nucleo": 0.3242057182582719,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.8113480660605746,
+   "kelly_completo": 1.387749200037866,
+   "exposicion_media": 0.4620959445848315,
+   "operaciones": [],
+   "p_holm": 0.6328787144886583,
+   "dsr": 0.03746128620496605,
+   "dsr_transversal": 9.195998713693934e-64,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": false,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F04 Media 200 d (Tudor Jones)": {
+   "sharpe": 0.7185020146093065,
+   "sharpe_costes_x2": 0.7063688778283831,
+   "por_periodo": {
+    "A 2018-09→2019-12": 0.8597881150691069,
+    "B 2020-01→2023-12": 0.7207139224815489,
+    "C 2024-01→hoy": 0.6405700664286805
+   },
+   "cagr": 0.2440654674825049,
+   "vol_anual": 0.435866416717266,
+   "caida_max": 0.6777675881259744,
+   "ops": 65,
+   "p": 0.02253490426197302,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": -0.12575687766652038,
+    "t_alpha": -1.5126740745996554,
+    "p_alpha_1s": 0.9347652074560394,
+    "beta_btc": 0.499189323518868,
+    "beta_tend": 0.3433984877893448,
+    "r2": 0.7370355319547155
+   },
+   "corr_nucleo": 0.7829717746475834,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.9829169496025585,
+   "kelly_completo": 1.6484454572589338,
+   "exposicion_media": 0.5516423975618016,
+   "operaciones": [],
+   "p_holm": 0.18027923409578417,
+   "dsr": 0.2087892446001247,
+   "dsr_transversal": 6.470567451129484e-58,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": true,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F05 Ruptura de volatilidad (L. Williams)": {
+   "sharpe": 0.6853851949620745,
+   "sharpe_costes_x2": 0.07015486497228272,
+   "por_periodo": {
+    "A 2018-09→2019-12": 1.4653858642943913,
+    "B 2020-01→2023-12": 0.5934682731517976,
+    "C 2024-01→hoy": 0.354209819992392
+   },
+   "cagr": 0.18809923996726563,
+   "vol_anual": 0.330127385376717,
+   "caida_max": 0.625000818371773,
+   "ops": 1172,
+   "p": 0.019253788769338698,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": 0.05883916780127711,
+    "t_alpha": 0.6497833161009949,
+    "p_alpha_1s": 0.2579413947041782,
+    "beta_btc": 0.2978473983643269,
+    "beta_tend": 0.03297603529033436,
+    "r2": 0.313479503570526
+   },
+   "corr_nucleo": 0.5035955962171045,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.9840696339558662,
+   "kelly_completo": 2.076123415753478,
+   "exposicion_media": 0.0,
+   "operaciones": [
+    {
+     "entrada": "2026-09-06 00:00:00+00:00",
+     "salida": "2026-09-06 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 80226.79215,
+     "px_salida": 80325.76163400001,
+     "unidades": 1,
+     "ret": 0.0001539220433422311,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-09 00:00:00+00:00",
+     "salida": "2026-09-09 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 79404.17265900002,
+     "px_salida": 78290.76871399999,
+     "unidades": 1,
+     "ret": -0.015189495136521217,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-11 00:00:00+00:00",
+     "salida": "2026-09-11 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 77634.44878499999,
+     "px_salida": 77210.25486,
+     "unidades": 1,
+     "ret": -0.006619830350375007,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-14 00:00:00+00:00",
+     "salida": "2026-09-14 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 77332.47340199999,
+     "px_salida": 78173.57215800001,
+     "unidades": 1,
+     "ret": 0.0097129493263905,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-17 00:00:00+00:00",
+     "salida": "2026-09-17 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 76969.360794,
+     "px_salida": 76401.726598,
+     "unidades": 1,
+     "ret": -0.008567267509842783,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-18 00:00:00+00:00",
+     "salida": "2026-09-18 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 77022.14634899999,
+     "px_salida": 80867.693226,
+     "unidades": 1,
+     "ret": 0.048687859977346364,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-21 00:00:00+00:00",
+     "salida": "2026-09-21 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 81880.027731,
+     "px_salida": 86602.676,
+     "unidades": 1,
+     "ret": 0.05641522015520199,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-23 00:00:00+00:00",
+     "salida": "2026-09-23 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 87027.77207400001,
+     "px_salida": 84380.72048,
+     "unidades": 1,
+     "ret": -0.031424236975765026,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-27 00:00:00+00:00",
+     "salida": "2026-09-27 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 84787.85418,
+     "px_salida": 84455.1056,
+     "unidades": 1,
+     "ret": -0.00496821808580531,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-28 00:00:00+00:00",
+     "salida": "2026-09-28 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 85002.522105,
+     "px_salida": 83483.309998,
+     "unidades": 1,
+     "ret": -0.01894355472683968,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-30 00:00:00+00:00",
+     "salida": "2026-09-30 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 84574.59653699999,
+     "px_salida": 83606.87528000001,
+     "unidades": 1,
+     "ret": -0.01260080010871254,
+     "R": NaN,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-10-01 00:00:00+00:00",
+     "salida": "2026-10-01 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 84987.50410199999,
+     "px_salida": 84863.07399,
+     "unidades": 1,
+     "ret": -0.0027635401511181693,
+     "R": NaN,
+     "motivo": "cierre del día"
+    }
+   ],
+   "p_holm": 0.17328409892404828,
+   "dsr": 0.17929125602353108,
+   "dsr_transversal": 3.3738098793627803e-60,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": true,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F06 Carry de funding (cash-and-carry)": {
+   "sharpe": 7.029738314535747,
+   "sharpe_costes_x2": 4.640873278511602,
+   "por_periodo": {
+    "A 2018-09→2019-12": null,
+    "B 2020-01→2023-12": 7.531046869962511,
+    "C 2024-01→hoy": 7.44122136336762
+   },
+   "cagr": 0.10933059504594622,
+   "vol_anual": 0.014777309662857854,
+   "caida_max": 0.027049538063311784,
+   "ops": 98,
+   "p": 0.0,
+   "alfa": {
+    "n": 2466,
+    "alpha_anual": 0.10374730695924236,
+    "t_alpha": 10.11967600480611,
+    "p_alpha_1s": 0.0,
+    "beta_btc": -0.0014041465251395217,
+    "beta_tend": 0.0021363795863312694,
+    "r2": 0.010981744657644343
+   },
+   "corr_nucleo": -0.0220839991920631,
+   "sharpe_nucleo_mismo_periodo": 1.032165319350502,
+   "sharpe_mezcla_50_50_riesgo": 4.595702880115535,
+   "kelly_completo": 475.7116467691476,
+   "exposicion_media": 0.0,
+   "operaciones": [
+    {
+     "entrada": "2023-08-26 00:00:00+00:00",
+     "salida": "2023-09-19 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 26060.01,
+     "px_salida": 27210.26,
+     "unidades": 1,
+     "ret": -0.0007659804974823325,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2023-09-23 00:00:00+00:00",
+     "salida": "2023-10-19 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 26580.14,
+     "px_salida": 28713.71,
+     "unidades": 1,
+     "ret": -0.0007305467370620766,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2023-10-22 00:00:00+00:00",
+     "salida": "2024-08-15 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 29909.8,
+     "px_salida": 57541.06,
+     "unidades": 1,
+     "ret": 0.12600333417801468,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2024-08-28 00:00:00+00:00",
+     "salida": "2024-09-09 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 59415.0,
+     "px_salida": 57042.0,
+     "unidades": 1,
+     "ret": -0.0017917507044098446,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2024-09-18 00:00:00+00:00",
+     "salida": "2025-04-27 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 60313.99,
+     "px_salida": 93749.3,
+     "unidades": 1,
+     "ret": 0.050042915546587574,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2025-05-09 00:00:00+00:00",
+     "salida": "2025-10-16 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 103261.6,
+     "px_salida": 108194.28,
+     "unidades": 1,
+     "ret": 0.027291439724544286,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2025-10-24 00:00:00+00:00",
+     "salida": "2026-02-06 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 110078.18,
+     "px_salida": 70580.26,
+     "unidades": 1,
+     "ret": 0.010630235098522789,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2026-02-18 00:00:00+00:00",
+     "salida": "2026-02-28 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 67503.52,
+     "px_salida": 66973.26,
+     "unidades": 1,
+     "ret": -0.0016280439652079925,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2026-03-05 00:00:00+00:00",
+     "salida": "2026-03-08 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 72666.77,
+     "px_salida": 65971.2,
+     "unidades": 1,
+     "ret": -0.0016822870900753406,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2026-03-26 00:00:00+00:00",
+     "salida": "2026-03-27 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 71336.53,
+     "px_salida": 66407.28,
+     "unidades": 1,
+     "ret": -0.0018820396502736703,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2026-04-05 00:00:00+00:00",
+     "salida": "2026-04-12 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 67300.42,
+     "px_salida": 70740.98,
+     "unidades": 1,
+     "ret": -0.0018725505420590371,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    },
+    {
+     "entrada": "2026-05-13 00:00:00+00:00",
+     "salida": "2026-06-16 00:00:00+00:00",
+     "lado": "CARRY",
+     "px_entrada": 80504.47,
+     "px_salida": 65675.01,
+     "unidades": 1,
+     "ret": 0.0006182231456310916,
+     "R": NaN,
+     "motivo": "funding medio 7 d ≤ 0"
+    }
+   ],
+   "p_holm": 0.0,
+   "dsr": 1.0,
+   "dsr_transversal": 0.8967419114101484,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": true,
+    "C2 Sharpe>0 en cada periodo": true,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": true,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": true,
+   "aporta_al_nucleo": true
+  },
+  "F07 Volatilidad gestionada (Moreira-Muir)": {
+   "sharpe": 0.5151958959110413,
+   "sharpe_costes_x2": 0.5106820416971539,
+   "por_periodo": {
+    "A 2018-09→2019-12": 0.1486668400668461,
+    "B 2020-01→2023-12": 0.5744595477683613,
+    "C 2024-01→hoy": 0.6265747602173112
+   },
+   "cagr": -0.0295237240360815,
+   "vol_anual": 0.9820616800857774,
+   "caida_max": 0.9474076737127763,
+   "ops": 314,
+   "p": 0.06509724696842267,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": -0.21085522418777478,
+    "t_alpha": -2.078631996192782,
+    "p_alpha_1s": 0.981131289494561,
+    "beta_btc": 1.5146516291079617,
+    "beta_tend": -0.07726639278807962,
+    "r2": 0.9062639596994557
+   },
+   "corr_nucleo": 0.7085991061692815,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.8202459916571643,
+   "kelly_completo": 0.5246064543176575,
+   "exposicion_media": 1.6000281699158767,
+   "operaciones": [],
+   "p_holm": 0.39058348181053604,
+   "dsr": 0.0859129579688594,
+   "dsr_transversal": 6.186813835025478e-60,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": true,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F08 Turtle Soup +1 (Raschke)": {
+   "sharpe": -1.3154643207192596,
+   "sharpe_costes_x2": -1.4499779686523806,
+   "por_periodo": {
+    "A 2018-09→2019-12": -1.292011777613525,
+    "B 2020-01→2023-12": -1.953619495866441,
+    "C 2024-01→hoy": -0.7034559288395793
+   },
+   "cagr": -0.019492261625476015,
+   "vol_anual": 0.014879635786667556,
+   "caida_max": 0.1637001809120121,
+   "ops": 61,
+   "p": 0.9998665539065844,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": -0.01957383055602717,
+    "t_alpha": -3.7368588691621465,
+    "p_alpha_1s": 0.9999050669475464,
+    "beta_btc": -0.00025966916444594506,
+    "beta_tend": 0.00023725303796379269,
+    "r2": 0.00021159500015244248
+   },
+   "corr_nucleo": -0.031050113418844453,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.2665039060755738,
+   "kelly_completo": -88.40702417581629,
+   "exposicion_media": 0.002553444203986313,
+   "operaciones": [
+    {
+     "entrada": "2025-07-10 00:00:00+00:00",
+     "salida": "2025-07-10 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 110507.07416399999,
+     "px_salida": 112033.39217699578,
+     "unidades": 1,
+     "ret": -0.005003169517092354,
+     "R": -1.0006339034184708,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2025-08-30 00:00:00+00:00",
+     "salida": "2025-08-30 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 108688.393332,
+     "px_salida": 107431.662979278,
+     "unidades": 1,
+     "ret": -0.004996890347015909,
+     "R": -0.9993780694031819,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2025-09-26 00:00:00+00:00",
+     "salida": "2025-09-26 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 109998.9954,
+     "px_salida": 108598.9227196302,
+     "unidades": 1,
+     "ret": -0.004996857252196058,
+     "R": -0.9993714504392117,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2025-11-05 00:00:00+00:00",
+     "salida": "2025-11-07 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 103548.935646,
+     "px_salida": 103318.412184,
+     "unidades": 1,
+     "ret": -0.0003812315904037833,
+     "R": -0.07624631808075666,
+     "motivo": "tiempo (3 d)"
+    },
+    {
+     "entrada": "2026-01-14 00:00:00+00:00",
+     "salida": "2026-01-14 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 94770.122184,
+     "px_salida": 96523.9504299,
+     "unidades": 1,
+     "ret": -0.005003249166706883,
+     "R": -1.0006498333413767,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-01-26 00:00:00+00:00",
+     "salida": "2026-01-28 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 87280.982706,
+     "px_salida": 89282.130002,
+     "unidades": 1,
+     "ret": 0.007138543679603363,
+     "R": 1.4277087359206726,
+     "motivo": "tiempo (3 d)"
+    },
+    {
+     "entrada": "2026-03-05 00:00:00+00:00",
+     "salida": "2026-03-07 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 70968.8034,
+     "px_salida": 67276.362582,
+     "unidades": 1,
+     "ret": 0.005710874379001068,
+     "R": 1.1421748758002135,
+     "motivo": "tiempo (3 d)"
+    },
+    {
+     "entrada": "2026-03-17 00:00:00+00:00",
+     "salida": "2026-03-17 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 74035.19,
+     "px_salida": 74931.5542221816,
+     "unidades": 1,
+     "ret": -0.005003126472444514,
+     "R": -1.000625294488903,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-04-18 00:00:00+00:00",
+     "salida": "2026-04-20 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 76022.7924,
+     "px_salida": 75856.138194,
+     "unidades": 1,
+     "ret": 0.00011981782018282596,
+     "R": 0.02396356403656519,
+     "motivo": "tiempo (3 d)"
+    },
+    {
+     "entrada": "2026-05-23 00:00:00+00:00",
+     "salida": "2026-05-23 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 76066.2102,
+     "px_salida": 75336.5737531836,
+     "unidades": 1,
+     "ret": -0.004996962877802293,
+     "R": -0.9993925755604587,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-07-15 00:00:00+00:00",
+     "salida": "2026-07-15 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 64687.060000000005,
+     "px_salida": 65119.531302,
+     "unidades": 1,
+     "ret": -0.005002862637057655,
+     "R": -1.000572527411531,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-09-16 00:00:00+00:00",
+     "salida": "2026-09-18 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 76061.789316,
+     "px_salida": 80867.693226,
+     "unidades": 1,
+     "ret": 0.019702022462657346,
+     "R": 3.940404492531469,
+     "motivo": "tiempo (3 d)"
+    }
+   ],
+   "p_holm": 0.9998665539065844,
+   "dsr": 2.7011969459167002e-09,
+   "dsr_transversal": 1.1021292044713644e-82,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": false,
+    "C3 Sharpe>0 con costes ×2": false,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F09 NR7 (Crabel)": {
+   "sharpe": 0.5923936017828879,
+   "sharpe_costes_x2": 0.08503138990735679,
+   "por_periodo": {
+    "A 2018-09→2019-12": 1.3573174907974015,
+    "B 2020-01→2023-12": 0.37089022305856567,
+    "C 2024-01→hoy": 0.5007570649048967
+   },
+   "cagr": 0.023593815281587105,
+   "vol_anual": 0.0407566011911045,
+   "caida_max": 0.06829799705949613,
+   "ops": 419,
+   "p": 0.04495854826964607,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": 0.024211992167092848,
+    "t_alpha": 1.6780970212895872,
+    "p_alpha_1s": 0.046717041160739936,
+    "beta_btc": 0.004514576755014097,
+    "beta_tend": -0.00424233509660152,
+    "r2": 0.008748835713967451
+   },
+   "corr_nucleo": 0.044102360473991485,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.9153598052249032,
+   "kelly_completo": 14.534911755894484,
+   "exposicion_media": 0.0,
+   "operaciones": [
+    {
+     "entrada": "2026-07-13 00:00:00+00:00",
+     "salida": "2026-07-13 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 63628.101834,
+     "px_salida": 64302.968022,
+     "unidades": 1,
+     "ret": -0.005003078107987274,
+     "R": -1.0006156215974547,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-07-20 00:00:00+00:00",
+     "salida": "2026-07-20 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 64980.24345,
+     "px_salida": 64267.144,
+     "unidades": 1,
+     "ret": -0.00499690951098762,
+     "R": -0.999381902197524,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-07-26 00:00:00+00:00",
+     "salida": "2026-07-26 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 64488.175056,
+     "px_salida": 65386.910002,
+     "unidades": 1,
+     "ret": 0.005440596382169493,
+     "R": 1.0881192764338985,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-08-02 00:00:00+00:00",
+     "salida": "2026-08-02 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 63162.63,
+     "px_salida": 63557.286,
+     "unidades": 1,
+     "ret": 0.0016314686218743394,
+     "R": 0.32629372437486787,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-08-07 00:00:00+00:00",
+     "salida": "2026-08-07 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 64159.1656,
+     "px_salida": 65011.9998,
+     "unidades": 1,
+     "ret": -0.0050031574876466985,
+     "R": -1.0006314975293398,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-08-09 00:00:00+00:00",
+     "salida": "2026-08-09 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 64771.233162000004,
+     "px_salida": 65205.578508,
+     "unidades": 1,
+     "ret": -0.005002864312768961,
+     "R": -1.0005728625537922,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-08-16 00:00:00+00:00",
+     "salida": "2026-08-16 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 63200.617596000004,
+     "px_salida": 62907.416000000005,
+     "unidades": 1,
+     "ret": -0.004997369016764184,
+     "R": -0.9994738033528368,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-08-27 00:00:00+00:00",
+     "salida": "2026-08-27 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 79267.45032,
+     "px_salida": 80233.530084,
+     "unidades": 1,
+     "ret": 0.002508551517323221,
+     "R": 0.5017103034646442,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-08-30 00:00:00+00:00",
+     "salida": "2026-08-30 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 78345.666,
+     "px_salida": 77366.893526,
+     "unidades": 1,
+     "ret": -0.0049968634670601135,
+     "R": -0.9993726934120226,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-09-06 00:00:00+00:00",
+     "salida": "2026-09-06 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 80216.04,
+     "px_salida": 79426.1116,
+     "unidades": 1,
+     "ret": -0.004996951991313045,
+     "R": -0.9993903982626089,
+     "motivo": "stop (mismo día)"
+    },
+    {
+     "entrada": "2026-09-13 00:00:00+00:00",
+     "salida": "2026-09-13 00:00:00+00:00",
+     "lado": "CORTO",
+     "px_entrada": 77044.33805,
+     "px_salida": 76857.37840199999,
+     "unidades": 1,
+     "ret": 0.0011250058248419186,
+     "R": 0.22500116496838374,
+     "motivo": "cierre del día"
+    },
+    {
+     "entrada": "2026-09-27 00:00:00+00:00",
+     "salida": "2026-09-27 00:00:00+00:00",
+     "lado": "LARGO",
+     "px_entrada": 84490.474716,
+     "px_salida": 84455.1056,
+     "unidades": 1,
+     "ret": -0.0007786940423302237,
+     "R": -0.1557388084660447,
+     "motivo": "cierre del día"
+    }
+   ],
+   "p_holm": 0.3147098378875225,
+   "dsr": 0.10105692301805691,
+   "dsr_transversal": 2.2306351213818417e-71,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": true,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  },
+  "F10 Cartera multiestrategia (paridad de riesgo)": {
+   "sharpe": 0.23954674537102563,
+   "sharpe_costes_x2": 0.18441622528407642,
+   "por_periodo": {
+    "A 2018-09→2019-12": -0.6146858953560721,
+    "B 2020-01→2023-12": 0.5824867226471226,
+    "C 2024-01→hoy": 2.022753894571716
+   },
+   "cagr": 0.026498674146604673,
+   "vol_anual": 0.18497652828258374,
+   "caida_max": 0.46962867536476716,
+   "ops": 101,
+   "p": 0.22493144463800507,
+   "alfa": {
+    "n": 2953,
+    "alpha_anual": -0.01613615559704114,
+    "t_alpha": -0.30965558412815597,
+    "p_alpha_1s": 0.6215776235281173,
+    "beta_btc": 0.14777035284071013,
+    "beta_tend": -0.024800910296108977,
+    "r2": 0.24912472205381198
+   },
+   "corr_nucleo": 0.24328099839097816,
+   "sharpe_nucleo_mismo_periodo": 1.0399903363215133,
+   "sharpe_mezcla_50_50_riesgo": 0.6615914297948777,
+   "kelly_completo": 1.2950115757663936,
+   "exposicion_media": 0.12606527546995044,
+   "operaciones": [],
+   "p_holm": 0.6747943339140152,
+   "dsr": 0.01930067933140927,
+   "dsr_transversal": 2.0286728074668677e-61,
+   "puertas": {
+    "C1 Sharpe>0 y p Holm<0,10": false,
+    "C2 Sharpe>0 en cada periodo": false,
+    "C3 Sharpe>0 con costes ×2": true,
+    "C4 DSR≥0,80": false,
+    "C5 ≥30 operaciones": true
+   },
+   "certificada": false,
+   "aporta_al_nucleo": false
+  }
+ },
+ "certificadas": [
+  "F06 Carry de funding (cash-and-carry)"
+ ],
+ "aportan_al_nucleo": [
+  "F06 Carry de funding (cash-and-carry)"
+ ]
+}

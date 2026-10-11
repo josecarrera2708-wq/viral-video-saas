@@ -1,0 +1,2813 @@
+{
+ "creado": "2026-09-29 18:13:03.484806+00:00",
+ "n_pruebas": 70,
+ "en_sombra": [
+  "I02 Ruptura Donchian 24 h|M5 dejar correr",
+  "I07 Ruptura tras squeeze|M5 dejar correr",
+  "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M2 stops \u00d72",
+  "I10 R\u00e1faga de momentum|M2 stops \u00d72",
+  "I10 R\u00e1faga de momentum|M4 stop m\u00ednimo 0,8 %"
+ ],
+ "candidatas": {
+  "I01 Rango asi\u00e1tico \u2192 Londres/NY|M1 a favor de la tendencia": {
+   "trader": "I01 Rango asi\u00e1tico \u2192 Londres/NY",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 1068,
+     "por_dia": 0.731006160164271,
+     "R_media": -0.04383091111680279,
+     "retorno": -0.2274332425054657
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.07663381397734043,
+     "retorno": -0.11974619127415509
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 602,
+     "por_dia": 0.41204654346338127,
+     "R_media": 0.005977990391022528,
+     "retorno": -0.005823938822974162,
+     "caida_max": 0.15852492992112255,
+     "acierto": 0.4368770764119601,
+     "p_1s": 0.44537332215088565
+    },
+    "validacion": {
+     "n": 244,
+     "por_dia": 0.4460694698354662,
+     "R_media": 0.003208136036914898,
+     "retorno": 0.0001320126430071067,
+     "caida_max": 0.06981889955110543,
+     "acierto": 0.42213114754098363,
+     "p_1s": 0.48102321001965886
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I01 Rango asi\u00e1tico \u2192 Londres/NY|M2 stops \u00d72": {
+   "trader": "I01 Rango asi\u00e1tico \u2192 Londres/NY",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 1068,
+     "por_dia": 0.731006160164271,
+     "R_media": -0.04383091111680279,
+     "retorno": -0.2274332425054657
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.07663381397734043,
+     "retorno": -0.11974619127415509
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1060,
+     "por_dia": 0.7255304585900069,
+     "R_media": -0.03249924550866789,
+     "retorno": -0.23156124071010586,
+     "caida_max": 0.2912214229243374,
+     "acierto": 0.42452830188679247,
+     "p_1s": 0.9444860412277688
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.020532539135228293,
+     "retorno": -0.019204999319516247,
+     "caida_max": 0.06375627548955143,
+     "acierto": 0.4408352668213457,
+     "p_1s": 0.7407388772600819
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I01 Rango asi\u00e1tico \u2192 Londres/NY|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I01 Rango asi\u00e1tico \u2192 Londres/NY",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 1068,
+     "por_dia": 0.731006160164271,
+     "R_media": -0.04383091111680279,
+     "retorno": -0.2274332425054657
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.07663381397734043,
+     "retorno": -0.11974619127415509
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1068,
+     "por_dia": 0.731006160164271,
+     "R_media": -0.04383091111680279,
+     "retorno": -0.2274332425054657,
+     "caida_max": 0.3130775859059465,
+     "acierto": 0.40823970037453183,
+     "p_1s": 0.9157694903710341
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.07663381397734043,
+     "retorno": -0.11974619127415509,
+     "caida_max": 0.17153820737766712,
+     "acierto": 0.3990719257540603,
+     "p_1s": 0.934825718891304
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I01 Rango asi\u00e1tico \u2192 Londres/NY|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I01 Rango asi\u00e1tico \u2192 Londres/NY",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 1068,
+     "por_dia": 0.731006160164271,
+     "R_media": -0.04383091111680279,
+     "retorno": -0.2274332425054657
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.07663381397734043,
+     "retorno": -0.11974619127415509
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 964,
+     "por_dia": 0.6598220396988365,
+     "R_media": -0.032396403203950555,
+     "retorno": -0.17023785809959502,
+     "caida_max": 0.27873351203746843,
+     "acierto": 0.42012448132780084,
+     "p_1s": 0.8417210734489899
+    },
+    "validacion": {
+     "n": 390,
+     "por_dia": 0.7129798903107861,
+     "R_media": -0.0749323606925148,
+     "retorno": -0.1056010467248305,
+     "caida_max": 0.16070837391422366,
+     "acierto": 0.4,
+     "p_1s": 0.9235363184633515
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I01 Rango asi\u00e1tico \u2192 Londres/NY|M5 dejar correr": {
+   "trader": "I01 Rango asi\u00e1tico \u2192 Londres/NY",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 1068,
+     "por_dia": 0.731006160164271,
+     "R_media": -0.04383091111680279,
+     "retorno": -0.2274332425054657
+    },
+    "validacion": {
+     "n": 431,
+     "por_dia": 0.7879341864716636,
+     "R_media": -0.07663381397734043,
+     "retorno": -0.11974619127415509
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 871,
+     "por_dia": 0.5961670088980151,
+     "R_media": -0.06368130508681931,
+     "retorno": -0.2346647039248978,
+     "caida_max": 0.33213115510752667,
+     "acierto": 0.37657864523536166,
+     "p_1s": 0.9251912739350509
+    },
+    "validacion": {
+     "n": 360,
+     "por_dia": 0.6581352833638026,
+     "R_media": -0.10351997766989338,
+     "retorno": -0.14766817953477462,
+     "caida_max": 0.16645438915508692,
+     "acierto": 0.36666666666666664,
+     "p_1s": 0.9342353217155402
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I02 Ruptura Donchian 24 h|M1 a favor de la tendencia": {
+   "trader": "I02 Ruptura Donchian 24 h",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 1246,
+     "por_dia": 0.8528405201916496,
+     "R_media": -0.07045483738911495,
+     "retorno": -0.3697743636515767
+    },
+    "validacion": {
+     "n": 504,
+     "por_dia": 0.9213893967093236,
+     "R_media": -0.02385923866956799,
+     "retorno": -0.07470280810168162
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 800,
+     "por_dia": 0.5475701574264202,
+     "R_media": -0.044865996653068015,
+     "retorno": -0.19636346467735222,
+     "caida_max": 0.2608186110091696,
+     "acierto": 0.38625,
+     "p_1s": 0.8426353881338995
+    },
+    "validacion": {
+     "n": 329,
+     "por_dia": 0.6014625228519196,
+     "R_media": 0.0329669202652483,
+     "retorno": 0.03128662955915118,
+     "caida_max": 0.07039764784611124,
+     "acierto": 0.42857142857142855,
+     "p_1s": 0.3213436981285176
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I02 Ruptura Donchian 24 h|M2 stops \u00d72": {
+   "trader": "I02 Ruptura Donchian 24 h",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 1246,
+     "por_dia": 0.8528405201916496,
+     "R_media": -0.07045483738911495,
+     "retorno": -0.3697743636515767
+    },
+    "validacion": {
+     "n": 504,
+     "por_dia": 0.9213893967093236,
+     "R_media": -0.02385923866956799,
+     "retorno": -0.07470280810168162
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 989,
+     "por_dia": 0.676933607118412,
+     "R_media": -0.013049793894689838,
+     "retorno": -0.12049727812163336,
+     "caida_max": 0.2236160887530223,
+     "acierto": 0.42669362992922144,
+     "p_1s": 0.6778358915144128
+    },
+    "validacion": {
+     "n": 397,
+     "por_dia": 0.7257769652650823,
+     "R_media": -0.008154306216746043,
+     "retorno": -0.07971982089924201,
+     "caida_max": 0.14458806678120883,
+     "acierto": 0.4256926952141058,
+     "p_1s": 0.5709735137076626
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I02 Ruptura Donchian 24 h|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I02 Ruptura Donchian 24 h",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 1246,
+     "por_dia": 0.8528405201916496,
+     "R_media": -0.07045483738911495,
+     "retorno": -0.3697743636515767
+    },
+    "validacion": {
+     "n": 504,
+     "por_dia": 0.9213893967093236,
+     "R_media": -0.02385923866956799,
+     "retorno": -0.07470280810168162
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 881,
+     "por_dia": 0.6030116358658453,
+     "R_media": -0.07357494899879442,
+     "retorno": -0.2772237617423734,
+     "caida_max": 0.3530811160594307,
+     "acierto": 0.3779795686719637,
+     "p_1s": 0.9605824839026696
+    },
+    "validacion": {
+     "n": 378,
+     "por_dia": 0.6910420475319927,
+     "R_media": -0.025645895470632642,
+     "retorno": -0.0426107286285885,
+     "caida_max": 0.12106297693685664,
+     "acierto": 0.40476190476190477,
+     "p_1s": 0.6530663504695162
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I02 Ruptura Donchian 24 h|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I02 Ruptura Donchian 24 h",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 1246,
+     "por_dia": 0.8528405201916496,
+     "R_media": -0.07045483738911495,
+     "retorno": -0.3697743636515767
+    },
+    "validacion": {
+     "n": 504,
+     "por_dia": 0.9213893967093236,
+     "R_media": -0.02385923866956799,
+     "retorno": -0.07470280810168162
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1167,
+     "por_dia": 0.7987679671457906,
+     "R_media": -0.04861810923760953,
+     "retorno": -0.282335760358265,
+     "caida_max": 0.3584505026086724,
+     "acierto": 0.3838903170522708,
+     "p_1s": 0.9081730831456366
+    },
+    "validacion": {
+     "n": 470,
+     "por_dia": 0.8592321755027422,
+     "R_media": -0.02799700835856471,
+     "retorno": -0.07006056594133536,
+     "caida_max": 0.14876583291861067,
+     "acierto": 0.39787234042553193,
+     "p_1s": 0.685229322963228
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I02 Ruptura Donchian 24 h|M5 dejar correr": {
+   "trader": "I02 Ruptura Donchian 24 h",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 1246,
+     "por_dia": 0.8528405201916496,
+     "R_media": -0.07045483738911495,
+     "retorno": -0.3697743636515767
+    },
+    "validacion": {
+     "n": 504,
+     "por_dia": 0.9213893967093236,
+     "R_media": -0.02385923866956799,
+     "retorno": -0.07470280810168162
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 979,
+     "por_dia": 0.6700889801505818,
+     "R_media": -0.017193348363948716,
+     "retorno": -0.15410201992598493,
+     "caida_max": 0.291646423234327,
+     "acierto": 0.32073544433094997,
+     "p_1s": 0.6311550003477188
+    },
+    "validacion": {
+     "n": 393,
+     "por_dia": 0.7184643510054844,
+     "R_media": 0.05620205444858756,
+     "retorno": 0.0929986507863203,
+     "caida_max": 0.09549267116048743,
+     "acierto": 0.3384223918575064,
+     "p_1s": 0.2526784705021031
+    }
+   },
+   "etapa": "E3 sombra",
+   "p_holm_validacion": 1.0
+  },
+  "I03 Bollinger + RSI (reversi\u00f3n)|M1 a favor de la tendencia": {
+   "trader": "I03 Bollinger + RSI (reversi\u00f3n)",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 922,
+     "por_dia": 0.6310746064339493,
+     "R_media": -0.18433179053122623,
+     "retorno": -0.5261994769538875
+    },
+    "validacion": {
+     "n": 344,
+     "por_dia": 0.6288848263254113,
+     "R_media": -0.19216161070437185,
+     "retorno": -0.21547534307417515
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 239,
+     "por_dia": 0.16358658453114305,
+     "R_media": -0.15208342324824894,
+     "retorno": -0.14531976025153048,
+     "caida_max": 0.17396106485833196,
+     "acierto": 0.47280334728033474,
+     "p_1s": 0.9968852692726284
+    },
+    "validacion": {
+     "n": 91,
+     "por_dia": 0.1663619744058501,
+     "R_media": -0.1792016480535941,
+     "retorno": -0.06550961062415606,
+     "caida_max": 0.0806971563656188,
+     "acierto": 0.4725274725274725,
+     "p_1s": 0.9732613232954768
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I03 Bollinger + RSI (reversi\u00f3n)|M2 stops \u00d72": {
+   "trader": "I03 Bollinger + RSI (reversi\u00f3n)",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 922,
+     "por_dia": 0.6310746064339493,
+     "R_media": -0.18433179053122623,
+     "retorno": -0.5261994769538875
+    },
+    "validacion": {
+     "n": 344,
+     "por_dia": 0.6288848263254113,
+     "R_media": -0.19216161070437185,
+     "retorno": -0.21547534307417515
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 739,
+     "por_dia": 0.5058179329226558,
+     "R_media": -0.11316605581200952,
+     "retorno": -0.3526959036399354,
+     "caida_max": 0.36164919732713163,
+     "acierto": 0.46414073071718537,
+     "p_1s": 0.9999997262922529
+    },
+    "validacion": {
+     "n": 279,
+     "por_dia": 0.5100548446069469,
+     "R_media": -0.11895330664813683,
+     "retorno": -0.11054786736037536,
+     "caida_max": 0.11619088808200007,
+     "acierto": 0.4444444444444444,
+     "p_1s": 0.9989602805934514
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I03 Bollinger + RSI (reversi\u00f3n)|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I03 Bollinger + RSI (reversi\u00f3n)",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 922,
+     "por_dia": 0.6310746064339493,
+     "R_media": -0.18433179053122623,
+     "retorno": -0.5261994769538875
+    },
+    "validacion": {
+     "n": 344,
+     "por_dia": 0.6288848263254113,
+     "R_media": -0.19216161070437185,
+     "retorno": -0.21547534307417515
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 612,
+     "por_dia": 0.4188911704312115,
+     "R_media": -0.1934490900882097,
+     "retorno": -0.3887280528953405,
+     "caida_max": 0.3990806839300348,
+     "acierto": 0.44607843137254904,
+     "p_1s": 0.9999999714755894
+    },
+    "validacion": {
+     "n": 229,
+     "por_dia": 0.4186471663619744,
+     "R_media": -0.19006860250166513,
+     "retorno": -0.15286468844540435,
+     "caida_max": 0.16357434422887873,
+     "acierto": 0.462882096069869,
+     "p_1s": 0.9993003853704989
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I03 Bollinger + RSI (reversi\u00f3n)|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I03 Bollinger + RSI (reversi\u00f3n)",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 922,
+     "por_dia": 0.6310746064339493,
+     "R_media": -0.18433179053122623,
+     "retorno": -0.5261994769538875
+    },
+    "validacion": {
+     "n": 344,
+     "por_dia": 0.6288848263254113,
+     "R_media": -0.19216161070437185,
+     "retorno": -0.21547534307417515
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 883,
+     "por_dia": 0.6043805612594113,
+     "R_media": -0.17836365365795426,
+     "retorno": -0.5007646623659312,
+     "caida_max": 0.5046133264173271,
+     "acierto": 0.45186862967157415,
+     "p_1s": 0.9999999994062131
+    },
+    "validacion": {
+     "n": 334,
+     "por_dia": 0.6106032906764168,
+     "R_media": -0.17448998017695477,
+     "retorno": -0.19309954764685855,
+     "caida_max": 0.21800510471922374,
+     "acierto": 0.45209580838323354,
+     "p_1s": 0.9998508425536214
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I03 Bollinger + RSI (reversi\u00f3n)|M5 dejar correr": {
+   "trader": "I03 Bollinger + RSI (reversi\u00f3n)",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 922,
+     "por_dia": 0.6310746064339493,
+     "R_media": -0.18433179053122623,
+     "retorno": -0.5261994769538875
+    },
+    "validacion": {
+     "n": 344,
+     "por_dia": 0.6288848263254113,
+     "R_media": -0.19216161070437185,
+     "retorno": -0.21547534307417515
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 896,
+     "por_dia": 0.6132785763175906,
+     "R_media": -0.18899084568867455,
+     "retorno": -0.5339424869700753,
+     "caida_max": 0.5456152840340698,
+     "acierto": 0.38504464285714285,
+     "p_1s": 0.9999998191972299
+    },
+    "validacion": {
+     "n": 341,
+     "por_dia": 0.623400365630713,
+     "R_media": -0.18588658615920353,
+     "retorno": -0.20128315861649915,
+     "caida_max": 0.22775770503323445,
+     "acierto": 0.3812316715542522,
+     "p_1s": 0.9987063766272611
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I04 Reversi\u00f3n a VWAP diaria|M1 a favor de la tendencia": {
+   "trader": "I04 Reversi\u00f3n a VWAP diaria",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 1774,
+     "por_dia": 1.214236824093087,
+     "R_media": -0.1582637854979201,
+     "retorno": -0.731784026625188
+    },
+    "validacion": {
+     "n": 673,
+     "por_dia": 1.230347349177331,
+     "R_media": -0.1689191844077734,
+     "retorno": -0.36238413853065776
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 645,
+     "por_dia": 0.4414784394250513,
+     "R_media": -0.11561697852284131,
+     "retorno": -0.2637731172089737,
+     "caida_max": 0.28425893331468177,
+     "acierto": 0.5007751937984496,
+     "p_1s": 0.9997266457939147
+    },
+    "validacion": {
+     "n": 229,
+     "por_dia": 0.4186471663619744,
+     "R_media": -0.17909436867960615,
+     "retorno": -0.15212061579288239,
+     "caida_max": 0.16625729227323793,
+     "acierto": 0.4672489082969432,
+     "p_1s": 0.998910796652761
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I04 Reversi\u00f3n a VWAP diaria|M2 stops \u00d72": {
+   "trader": "I04 Reversi\u00f3n a VWAP diaria",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 1774,
+     "por_dia": 1.214236824093087,
+     "R_media": -0.1582637854979201,
+     "retorno": -0.731784026625188
+    },
+    "validacion": {
+     "n": 673,
+     "por_dia": 1.230347349177331,
+     "R_media": -0.1689191844077734,
+     "retorno": -0.36238413853065776
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1358,
+     "por_dia": 0.9295003422313484,
+     "R_media": -0.07842136887172965,
+     "retorno": -0.4310600891525592,
+     "caida_max": 0.4343490105709852,
+     "acierto": 0.4896907216494845,
+     "p_1s": 0.9999995957063261
+    },
+    "validacion": {
+     "n": 513,
+     "por_dia": 0.9378427787934186,
+     "R_media": -0.08061059147736194,
+     "retorno": -0.13292488877280828,
+     "caida_max": 0.15275565554860204,
+     "acierto": 0.4873294346978557,
+     "p_1s": 0.9975925941685697
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I04 Reversi\u00f3n a VWAP diaria|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I04 Reversi\u00f3n a VWAP diaria",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 1774,
+     "por_dia": 1.214236824093087,
+     "R_media": -0.1582637854979201,
+     "retorno": -0.731784026625188
+    },
+    "validacion": {
+     "n": 673,
+     "por_dia": 1.230347349177331,
+     "R_media": -0.1689191844077734,
+     "retorno": -0.36238413853065776
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1261,
+     "por_dia": 0.8631074606433949,
+     "R_media": -0.1789422058129113,
+     "retorno": -0.6401248318919684,
+     "caida_max": 0.6438086702431696,
+     "acierto": 0.4591593973037272,
+     "p_1s": 0.9999999999996878
+    },
+    "validacion": {
+     "n": 497,
+     "por_dia": 0.9085923217550275,
+     "R_media": -0.18536854964102992,
+     "retorno": -0.30109688994231176,
+     "caida_max": 0.30777362842765477,
+     "acierto": 0.45271629778672035,
+     "p_1s": 0.9999978469843799
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I04 Reversi\u00f3n a VWAP diaria|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I04 Reversi\u00f3n a VWAP diaria",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 1774,
+     "por_dia": 1.214236824093087,
+     "R_media": -0.1582637854979201,
+     "retorno": -0.731784026625188
+    },
+    "validacion": {
+     "n": 673,
+     "por_dia": 1.230347349177331,
+     "R_media": -0.1689191844077734,
+     "retorno": -0.36238413853065776
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1626,
+     "por_dia": 1.1129363449691991,
+     "R_media": -0.15043729379150222,
+     "retorno": -0.6860524922740252,
+     "caida_max": 0.6913943325455733,
+     "acierto": 0.46740467404674046,
+     "p_1s": 0.9999999999992654
+    },
+    "validacion": {
+     "n": 613,
+     "por_dia": 1.1206581352833638,
+     "R_media": -0.15133504965385897,
+     "retorno": -0.3139827143790812,
+     "caida_max": 0.323129512383034,
+     "acierto": 0.46166394779771613,
+     "p_1s": 0.9999910377016632
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I04 Reversi\u00f3n a VWAP diaria|M5 dejar correr": {
+   "trader": "I04 Reversi\u00f3n a VWAP diaria",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 1774,
+     "por_dia": 1.214236824093087,
+     "R_media": -0.1582637854979201,
+     "retorno": -0.731784026625188
+    },
+    "validacion": {
+     "n": 673,
+     "por_dia": 1.230347349177331,
+     "R_media": -0.1689191844077734,
+     "retorno": -0.36238413853065776
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1654,
+     "por_dia": 1.1321013004791238,
+     "R_media": -0.16974468952564198,
+     "retorno": -0.7591429319860632,
+     "caida_max": 0.762493600958632,
+     "acierto": 0.39600967351874244,
+     "p_1s": 0.999999999817244
+    },
+    "validacion": {
+     "n": 639,
+     "por_dia": 1.1681901279707496,
+     "R_media": -0.15576106324732786,
+     "retorno": -0.30924039058340214,
+     "caida_max": 0.3190517503271736,
+     "acierto": 0.40219092331768386,
+     "p_1s": 0.9997663836608939
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I05 Cruce EMA 9/21 + EMA200|M1 a favor de la tendencia": {
+   "trader": "I05 Cruce EMA 9/21 + EMA200",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 726,
+     "por_dia": 0.49691991786447637,
+     "R_media": -0.04803663776954341,
+     "retorno": -0.14703252139913703
+    },
+    "validacion": {
+     "n": 259,
+     "por_dia": 0.473491773308958,
+     "R_media": 0.019193995279695196,
+     "retorno": 0.02804060593341684
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.035725763715236586,
+     "retorno": -0.08771018688758836,
+     "caida_max": 0.21350736716233298,
+     "acierto": 0.3670886075949367,
+     "p_1s": 0.7220980133833583
+    },
+    "validacion": {
+     "n": 213,
+     "por_dia": 0.38939670932358317,
+     "R_media": 0.029038594066412335,
+     "retorno": 0.027306711012247797,
+     "caida_max": 0.05373962071082983,
+     "acierto": 0.39906103286384975,
+     "p_1s": 0.3819407254261826
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I05 Cruce EMA 9/21 + EMA200|M2 stops \u00d72": {
+   "trader": "I05 Cruce EMA 9/21 + EMA200",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 726,
+     "por_dia": 0.49691991786447637,
+     "R_media": -0.04803663776954341,
+     "retorno": -0.14703252139913703
+    },
+    "validacion": {
+     "n": 259,
+     "por_dia": 0.473491773308958,
+     "R_media": 0.019193995279695196,
+     "retorno": 0.02804060593341684
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 554,
+     "por_dia": 0.379192334017796,
+     "R_media": -0.05205365169548698,
+     "retorno": -0.10833763413599118,
+     "caida_max": 0.17845730755582934,
+     "acierto": 0.3971119133574007,
+     "p_1s": 0.863867190879233
+    },
+    "validacion": {
+     "n": 214,
+     "por_dia": 0.3912248628884826,
+     "R_media": -0.07542519194652604,
+     "retorno": -0.06603176710794123,
+     "caida_max": 0.090927080781537,
+     "acierto": 0.411214953271028,
+     "p_1s": 0.8377001059032188
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I05 Cruce EMA 9/21 + EMA200|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I05 Cruce EMA 9/21 + EMA200",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 726,
+     "por_dia": 0.49691991786447637,
+     "R_media": -0.04803663776954341,
+     "retorno": -0.14703252139913703
+    },
+    "validacion": {
+     "n": 259,
+     "por_dia": 0.473491773308958,
+     "R_media": 0.019193995279695196,
+     "retorno": 0.02804060593341684
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 478,
+     "por_dia": 0.3271731690622861,
+     "R_media": -0.07022864874050996,
+     "retorno": -0.13793578309960053,
+     "caida_max": 0.18355658913630513,
+     "acierto": 0.3514644351464435,
+     "p_1s": 0.8604964226293477
+    },
+    "validacion": {
+     "n": 192,
+     "por_dia": 0.3510054844606947,
+     "R_media": -0.035144707746947855,
+     "retorno": -0.02572190096364646,
+     "caida_max": 0.0863268007993554,
+     "acierto": 0.3854166666666667,
+     "p_1s": 0.6359131880887241
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I05 Cruce EMA 9/21 + EMA200|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I05 Cruce EMA 9/21 + EMA200",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 726,
+     "por_dia": 0.49691991786447637,
+     "R_media": -0.04803663776954341,
+     "retorno": -0.14703252139913703
+    },
+    "validacion": {
+     "n": 259,
+     "por_dia": 0.473491773308958,
+     "R_media": 0.019193995279695196,
+     "retorno": 0.02804060593341684
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 545,
+     "por_dia": 0.3730321697467488,
+     "R_media": -0.04507997752463847,
+     "retorno": -0.11119253234959081,
+     "caida_max": 0.26830437258612383,
+     "acierto": 0.3522935779816514,
+     "p_1s": 0.774224941132127
+    },
+    "validacion": {
+     "n": 188,
+     "por_dia": 0.3436928702010969,
+     "R_media": 0.04857525104365993,
+     "retorno": 0.04136783906454977,
+     "caida_max": 0.06584099179533065,
+     "acierto": 0.40425531914893614,
+     "p_1s": 0.31514631458679543
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I05 Cruce EMA 9/21 + EMA200|M5 dejar correr": {
+   "trader": "I05 Cruce EMA 9/21 + EMA200",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 726,
+     "por_dia": 0.49691991786447637,
+     "R_media": -0.04803663776954341,
+     "retorno": -0.14703252139913703
+    },
+    "validacion": {
+     "n": 259,
+     "por_dia": 0.473491773308958,
+     "R_media": 0.019193995279695196,
+     "retorno": 0.02804060593341684
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 671,
+     "por_dia": 0.45927446954141,
+     "R_media": -0.015192739189588435,
+     "retorno": -0.06481163621289576,
+     "caida_max": 0.24706767618981496,
+     "acierto": 0.28614008941877794,
+     "p_1s": 0.5874764533146619
+    },
+    "validacion": {
+     "n": 227,
+     "por_dia": 0.4149908592321755,
+     "R_media": 0.14852585912782387,
+     "retorno": 0.14645367294903355,
+     "caida_max": 0.05506886756534679,
+     "acierto": 0.3303964757709251,
+     "p_1s": 0.11240049459041679
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I06 RSI(2) retroceso|M1 a favor de la tendencia": {
+   "trader": "I06 RSI(2) retroceso",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 1354,
+     "por_dia": 0.9267624914442163,
+     "R_media": -0.07439579573274352,
+     "retorno": -0.3468053721188694
+    },
+    "validacion": {
+     "n": 493,
+     "por_dia": 0.9012797074954296,
+     "R_media": -0.1052347284930078,
+     "retorno": -0.20642974816992454
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1064,
+     "por_dia": 0.7282683093771389,
+     "R_media": -0.052333559066252935,
+     "retorno": -0.20919729534016995,
+     "caida_max": 0.23341513505028144,
+     "acierto": 0.49906015037593987,
+     "p_1s": 0.9803502058853164
+    },
+    "validacion": {
+     "n": 401,
+     "por_dia": 0.7330895795246801,
+     "R_media": -0.10504529207817012,
+     "retorno": -0.1659541238870731,
+     "caida_max": 0.18308043428626264,
+     "acierto": 0.4613466334164589,
+     "p_1s": 0.9939111618178215
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I06 RSI(2) retroceso|M2 stops \u00d72": {
+   "trader": "I06 RSI(2) retroceso",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 1354,
+     "por_dia": 0.9267624914442163,
+     "R_media": -0.07439579573274352,
+     "retorno": -0.3468053721188694
+    },
+    "validacion": {
+     "n": 493,
+     "por_dia": 0.9012797074954296,
+     "R_media": -0.1052347284930078,
+     "retorno": -0.20642974816992454
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1156,
+     "por_dia": 0.7912388774811773,
+     "R_media": -0.0401383004621275,
+     "retorno": -0.18916265077576722,
+     "caida_max": 0.20706945525707254,
+     "acierto": 0.4801038062283737,
+     "p_1s": 0.992555810030444
+    },
+    "validacion": {
+     "n": 428,
+     "por_dia": 0.7824497257769653,
+     "R_media": -0.035275156086424515,
+     "retorno": -0.08276958511745558,
+     "caida_max": 0.09779857002827808,
+     "acierto": 0.4766355140186916,
+     "p_1s": 0.9010272231999401
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I06 RSI(2) retroceso|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I06 RSI(2) retroceso",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 1354,
+     "por_dia": 0.9267624914442163,
+     "R_media": -0.07439579573274352,
+     "retorno": -0.3468053721188694
+    },
+    "validacion": {
+     "n": 493,
+     "por_dia": 0.9012797074954296,
+     "R_media": -0.1052347284930078,
+     "retorno": -0.20642974816992454
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 942,
+     "por_dia": 0.6447638603696099,
+     "R_media": -0.09836363686150496,
+     "retorno": -0.33254421267890155,
+     "caida_max": 0.3454865096464712,
+     "acierto": 0.47558386411889597,
+     "p_1s": 0.9997847275594997
+    },
+    "validacion": {
+     "n": 342,
+     "por_dia": 0.6252285191956124,
+     "R_media": -0.1125499131015604,
+     "retorno": -0.16814221192531464,
+     "caida_max": 0.18484955216586774,
+     "acierto": 0.4619883040935672,
+     "p_1s": 0.9913720591346462
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I06 RSI(2) retroceso|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I06 RSI(2) retroceso",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 1354,
+     "por_dia": 0.9267624914442163,
+     "R_media": -0.07439579573274352,
+     "retorno": -0.3468053721188694
+    },
+    "validacion": {
+     "n": 493,
+     "por_dia": 0.9012797074954296,
+     "R_media": -0.1052347284930078,
+     "retorno": -0.20642974816992454
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1237,
+     "por_dia": 0.8466803559206023,
+     "R_media": -0.062101469081405666,
+     "retorno": -0.2882536827791593,
+     "caida_max": 0.3098162768894155,
+     "acierto": 0.49232012934519,
+     "p_1s": 0.9959272739533364
+    },
+    "validacion": {
+     "n": 453,
+     "por_dia": 0.8281535648994516,
+     "R_media": -0.0934596820391109,
+     "retorno": -0.1733107638421415,
+     "caida_max": 0.19061056331805004,
+     "acierto": 0.47019867549668876,
+     "p_1s": 0.991937406997815
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I06 RSI(2) retroceso|M5 dejar correr": {
+   "trader": "I06 RSI(2) retroceso",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 1354,
+     "por_dia": 0.9267624914442163,
+     "R_media": -0.07439579573274352,
+     "retorno": -0.3468053721188694
+    },
+    "validacion": {
+     "n": 493,
+     "por_dia": 0.9012797074954296,
+     "R_media": -0.1052347284930078,
+     "retorno": -0.20642974816992454
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1136,
+     "por_dia": 0.7775496235455168,
+     "R_media": -0.06240360889719496,
+     "retorno": -0.2717688377404518,
+     "caida_max": 0.2882115354269993,
+     "acierto": 0.4357394366197183,
+     "p_1s": 0.9727930194583834
+    },
+    "validacion": {
+     "n": 417,
+     "por_dia": 0.7623400365630713,
+     "R_media": -0.1023086907184103,
+     "retorno": -0.1811071678161993,
+     "caida_max": 0.20030409467232102,
+     "acierto": 0.42206235011990406,
+     "p_1s": 0.973434448549315
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I07 Ruptura tras squeeze|M1 a favor de la tendencia": {
+   "trader": "I07 Ruptura tras squeeze",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 503,
+     "por_dia": 0.34428473648186175,
+     "R_media": -0.1314476435227339,
+     "retorno": -0.25103898085617393
+    },
+    "validacion": {
+     "n": 149,
+     "por_dia": 0.27239488117001825,
+     "R_media": 0.0033742286898379003,
+     "retorno": 0.001533385396280007
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 312,
+     "por_dia": 0.2135523613963039,
+     "R_media": -0.11140599973088122,
+     "retorno": -0.1385596878627089,
+     "caida_max": 0.19512173224710072,
+     "acierto": 0.358974358974359,
+     "p_1s": 0.9251912757632449
+    },
+    "validacion": {
+     "n": 90,
+     "por_dia": 0.16453382084095064,
+     "R_media": -0.004074931825529385,
+     "retorno": 0.0019599284915152726,
+     "caida_max": 0.03860685699976474,
+     "acierto": 0.4222222222222222,
+     "p_1s": 0.5111359803719623
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I07 Ruptura tras squeeze|M2 stops \u00d72": {
+   "trader": "I07 Ruptura tras squeeze",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 503,
+     "por_dia": 0.34428473648186175,
+     "R_media": -0.1314476435227339,
+     "retorno": -0.25103898085617393
+    },
+    "validacion": {
+     "n": 149,
+     "por_dia": 0.27239488117001825,
+     "R_media": 0.0033742286898379003,
+     "retorno": 0.001533385396280007
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 472,
+     "por_dia": 0.32306639288158795,
+     "R_media": -0.0556507080486547,
+     "retorno": -0.11131390368997507,
+     "caida_max": 0.19483681519222795,
+     "acierto": 0.3813559322033898,
+     "p_1s": 0.8649568646973126
+    },
+    "validacion": {
+     "n": 139,
+     "por_dia": 0.25411334552102377,
+     "R_media": -0.01565105804879347,
+     "retorno": -0.005047443088043613,
+     "caida_max": 0.06814036103101262,
+     "acierto": 0.41007194244604317,
+     "p_1s": 0.5670827810318848
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I07 Ruptura tras squeeze|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I07 Ruptura tras squeeze",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 503,
+     "por_dia": 0.34428473648186175,
+     "R_media": -0.1314476435227339,
+     "retorno": -0.25103898085617393
+    },
+    "validacion": {
+     "n": 149,
+     "por_dia": 0.27239488117001825,
+     "R_media": 0.0033742286898379003,
+     "retorno": 0.001533385396280007
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 339,
+     "por_dia": 0.23203285420944558,
+     "R_media": -0.12623964072265648,
+     "retorno": -0.166214209592644,
+     "caida_max": 0.19467595832977458,
+     "acierto": 0.35103244837758113,
+     "p_1s": 0.9564629180242984
+    },
+    "validacion": {
+     "n": 110,
+     "por_dia": 0.20109689213893966,
+     "R_media": 0.08296729239515745,
+     "retorno": 0.03268171228171446,
+     "caida_max": 0.07124560818894443,
+     "acierto": 0.43636363636363634,
+     "p_1s": 0.26901853120811103
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I07 Ruptura tras squeeze|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I07 Ruptura tras squeeze",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 503,
+     "por_dia": 0.34428473648186175,
+     "R_media": -0.1314476435227339,
+     "retorno": -0.25103898085617393
+    },
+    "validacion": {
+     "n": 149,
+     "por_dia": 0.27239488117001825,
+     "R_media": 0.0033742286898379003,
+     "retorno": 0.001533385396280007
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 400,
+     "por_dia": 0.2737850787132101,
+     "R_media": -0.08015410268324402,
+     "retorno": -0.13840452063111164,
+     "caida_max": 0.19365607286893094,
+     "acierto": 0.36,
+     "p_1s": 0.8815924252293844
+    },
+    "validacion": {
+     "n": 106,
+     "por_dia": 0.19378427787934185,
+     "R_media": 0.0020187002108189704,
+     "retorno": -0.0026603120122595802,
+     "caida_max": 0.09341890905550887,
+     "acierto": 0.41509433962264153,
+     "p_1s": 0.4938972113049107
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I07 Ruptura tras squeeze|M5 dejar correr": {
+   "trader": "I07 Ruptura tras squeeze",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 503,
+     "por_dia": 0.34428473648186175,
+     "R_media": -0.1314476435227339,
+     "retorno": -0.25103898085617393
+    },
+    "validacion": {
+     "n": 149,
+     "por_dia": 0.27239488117001825,
+     "R_media": 0.0033742286898379003,
+     "retorno": 0.001533385396280007
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 476,
+     "por_dia": 0.3258042436687201,
+     "R_media": -0.08135660172777395,
+     "retorno": -0.15667790092743927,
+     "caida_max": 0.2576280581565409,
+     "acierto": 0.27310924369747897,
+     "p_1s": 0.8498819253300518
+    },
+    "validacion": {
+     "n": 141,
+     "por_dia": 0.2577696526508227,
+     "R_media": 0.057911408254010865,
+     "retorno": 0.035713465555189394,
+     "caida_max": 0.08394179345245711,
+     "acierto": 0.3191489361702128,
+     "p_1s": 0.35009601823345426
+    }
+   },
+   "etapa": "E3 sombra",
+   "p_holm_validacion": 1.0
+  },
+  "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M1 a favor de la tendencia": {
+   "trader": "I08 Ruptura del m\u00e1x./m\u00edn. de ayer",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 907,
+     "por_dia": 0.6208076659822039,
+     "R_media": -0.10798524923327223,
+     "retorno": -0.3534773510551603
+    },
+    "validacion": {
+     "n": 346,
+     "por_dia": 0.6325411334552102,
+     "R_media": 8.433656665896145e-05,
+     "retorno": 0.005927419204967421
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 565,
+     "por_dia": 0.3867214236824093,
+     "R_media": -0.060149973082316434,
+     "retorno": -0.14444617883629318,
+     "caida_max": 0.2211308290885461,
+     "acierto": 0.3504424778761062,
+     "p_1s": 0.8470173076490672
+    },
+    "validacion": {
+     "n": 220,
+     "por_dia": 0.40219378427787933,
+     "R_media": 0.06159463428610928,
+     "retorno": 0.06231591228346112,
+     "caida_max": 0.08053417731967183,
+     "acierto": 0.41363636363636364,
+     "p_1s": 0.26104334700201637
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M2 stops \u00d72": {
+   "trader": "I08 Ruptura del m\u00e1x./m\u00edn. de ayer",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 907,
+     "por_dia": 0.6208076659822039,
+     "R_media": -0.10798524923327223,
+     "retorno": -0.3534773510551603
+    },
+    "validacion": {
+     "n": 346,
+     "por_dia": 0.6325411334552102,
+     "R_media": 8.433656665896145e-05,
+     "retorno": 0.005927419204967421
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 826,
+     "por_dia": 0.5653661875427789,
+     "R_media": -0.056989175923235505,
+     "retorno": -0.24307837170664304,
+     "caida_max": 0.3113837148941404,
+     "acierto": 0.38498789346246975,
+     "p_1s": 0.936271733718231
+    },
+    "validacion": {
+     "n": 310,
+     "por_dia": 0.56672760511883,
+     "R_media": 0.04773453036189902,
+     "retorno": 0.022428621342300392,
+     "caida_max": 0.06450590812796542,
+     "acierto": 0.44193548387096776,
+     "p_1s": 0.22959281418993205
+    }
+   },
+   "etapa": "E3 sombra",
+   "p_holm_validacion": 1.0
+  },
+  "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I08 Ruptura del m\u00e1x./m\u00edn. de ayer",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 907,
+     "por_dia": 0.6208076659822039,
+     "R_media": -0.10798524923327223,
+     "retorno": -0.3534773510551603
+    },
+    "validacion": {
+     "n": 346,
+     "por_dia": 0.6325411334552102,
+     "R_media": 8.433656665896145e-05,
+     "retorno": 0.005927419204967421
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 472,
+     "por_dia": 0.32306639288158795,
+     "R_media": -0.09229598921072224,
+     "retorno": -0.17466115342812305,
+     "caida_max": 0.26281718432470647,
+     "acierto": 0.3495762711864407,
+     "p_1s": 0.9280264480744953
+    },
+    "validacion": {
+     "n": 201,
+     "por_dia": 0.36745886654478976,
+     "R_media": -0.040472377533558604,
+     "retorno": -0.036923583075039845,
+     "caida_max": 0.1046430383306508,
+     "acierto": 0.38308457711442784,
+     "p_1s": 0.6594723766780433
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I08 Ruptura del m\u00e1x./m\u00edn. de ayer",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 907,
+     "por_dia": 0.6208076659822039,
+     "R_media": -0.10798524923327223,
+     "retorno": -0.3534773510551603
+    },
+    "validacion": {
+     "n": 346,
+     "por_dia": 0.6325411334552102,
+     "R_media": 8.433656665896145e-05,
+     "retorno": 0.005927419204967421
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 763,
+     "por_dia": 0.5222450376454483,
+     "R_media": -0.0806054114560831,
+     "retorno": -0.2607957003767667,
+     "caida_max": 0.30786939628022125,
+     "acierto": 0.34338138925294887,
+     "p_1s": 0.9495647140564363
+    },
+    "validacion": {
+     "n": 262,
+     "por_dia": 0.4789762340036563,
+     "R_media": -0.05285495769855432,
+     "retorno": -0.05447349689092762,
+     "caida_max": 0.13212950480503993,
+     "acierto": 0.366412213740458,
+     "p_1s": 0.7332814818589712
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I08 Ruptura del m\u00e1x./m\u00edn. de ayer|M5 dejar correr": {
+   "trader": "I08 Ruptura del m\u00e1x./m\u00edn. de ayer",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 907,
+     "por_dia": 0.6208076659822039,
+     "R_media": -0.10798524923327223,
+     "retorno": -0.3534773510551603
+    },
+    "validacion": {
+     "n": 346,
+     "por_dia": 0.6325411334552102,
+     "R_media": 8.433656665896145e-05,
+     "retorno": 0.005927419204967421
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 829,
+     "por_dia": 0.567419575633128,
+     "R_media": -0.07263261437160827,
+     "retorno": -0.26564082499403163,
+     "caida_max": 0.3664256878584973,
+     "acierto": 0.2750301568154403,
+     "p_1s": 0.8876022279116129
+    },
+    "validacion": {
+     "n": 322,
+     "por_dia": 0.5886654478976234,
+     "R_media": 0.08505772968703085,
+     "retorno": 0.10911423698557865,
+     "caida_max": 0.08604255020425566,
+     "acierto": 0.3198757763975155,
+     "p_1s": 0.1993379282004868
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I09 Supertrend 10/3|M1 a favor de la tendencia": {
+   "trader": "I09 Supertrend 10/3",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 577,
+     "por_dia": 0.3949349760438056,
+     "R_media": -0.0024959852814625118,
+     "retorno": -0.029735491932414093
+    },
+    "validacion": {
+     "n": 240,
+     "por_dia": 0.43875685557586835,
+     "R_media": 0.10084283329085819,
+     "retorno": 0.0807946766924863
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 328,
+     "por_dia": 0.2245037645448323,
+     "R_media": 0.023688796894004938,
+     "retorno": 0.03775667100672364,
+     "caida_max": 0.13764854360713807,
+     "acierto": 0.32926829268292684,
+     "p_1s": 0.4026792944055777
+    },
+    "validacion": {
+     "n": 146,
+     "por_dia": 0.26691042047531993,
+     "R_media": 0.10074600030777206,
+     "retorno": 0.0625154111209838,
+     "caida_max": 0.0782966526990706,
+     "acierto": 0.3493150684931507,
+     "p_1s": 0.25858539332132147
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I09 Supertrend 10/3|M2 stops \u00d72": {
+   "trader": "I09 Supertrend 10/3",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 577,
+     "por_dia": 0.3949349760438056,
+     "R_media": -0.0024959852814625118,
+     "retorno": -0.029735491932414093
+    },
+    "validacion": {
+     "n": 240,
+     "por_dia": 0.43875685557586835,
+     "R_media": 0.10084283329085819,
+     "retorno": 0.0807946766924863
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 452,
+     "por_dia": 0.30937713894592744,
+     "R_media": -0.006322016957499807,
+     "retorno": -0.08324607178517462,
+     "caida_max": 0.14270410748554985,
+     "acierto": 0.38716814159292035,
+     "p_1s": 0.5594856685319387
+    },
+    "validacion": {
+     "n": 187,
+     "por_dia": 0.34186471663619744,
+     "R_media": 0.02902209334106774,
+     "retorno": -0.006709560418627913,
+     "caida_max": 0.047107849445310546,
+     "acierto": 0.3850267379679144,
+     "p_1s": 0.3388558714055231
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I09 Supertrend 10/3|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I09 Supertrend 10/3",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 577,
+     "por_dia": 0.3949349760438056,
+     "R_media": -0.0024959852814625118,
+     "retorno": -0.029735491932414093
+    },
+    "validacion": {
+     "n": 240,
+     "por_dia": 0.43875685557586835,
+     "R_media": 0.10084283329085819,
+     "retorno": 0.0807946766924863
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 409,
+     "por_dia": 0.2799452429842574,
+     "R_media": 0.03464767443400029,
+     "retorno": 0.06223977888688603,
+     "caida_max": 0.13134685360450393,
+     "acierto": 0.3374083129584352,
+     "p_1s": 0.3450325853412477
+    },
+    "validacion": {
+     "n": 184,
+     "por_dia": 0.33638025594149906,
+     "R_media": 0.034935868482586056,
+     "retorno": 0.01621361622819628,
+     "caida_max": 0.07236844663794795,
+     "acierto": 0.34782608695652173,
+     "p_1s": 0.3933274942109768
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I09 Supertrend 10/3|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I09 Supertrend 10/3",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 577,
+     "por_dia": 0.3949349760438056,
+     "R_media": -0.0024959852814625118,
+     "retorno": -0.029735491932414093
+    },
+    "validacion": {
+     "n": 240,
+     "por_dia": 0.43875685557586835,
+     "R_media": 0.10084283329085819,
+     "retorno": 0.0807946766924863
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 549,
+     "por_dia": 0.3757700205338809,
+     "R_media": 0.026931831693551733,
+     "retorno": 0.04277717510695789,
+     "caida_max": 0.14387066648683655,
+     "acierto": 0.331511839708561,
+     "p_1s": 0.3533901100610667
+    },
+    "validacion": {
+     "n": 234,
+     "por_dia": 0.42778793418647165,
+     "R_media": 0.10015984029725067,
+     "retorno": 0.07157530286925051,
+     "caida_max": 0.08482588915553357,
+     "acierto": 0.3547008547008547,
+     "p_1s": 0.19705557757833359
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I09 Supertrend 10/3|M5 dejar correr": {
+   "trader": "I09 Supertrend 10/3",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 577,
+     "por_dia": 0.3949349760438056,
+     "R_media": -0.0024959852814625118,
+     "retorno": -0.029735491932414093
+    },
+    "validacion": {
+     "n": 240,
+     "por_dia": 0.43875685557586835,
+     "R_media": 0.10084283329085819,
+     "retorno": 0.0807946766924863
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 486,
+     "por_dia": 0.3326488706365503,
+     "R_media": 0.02010298704229258,
+     "retorno": -0.01059459120912698,
+     "caida_max": 0.1869873186059866,
+     "acierto": 0.29835390946502055,
+     "p_1s": 0.4116608631147993
+    },
+    "validacion": {
+     "n": 201,
+     "por_dia": 0.36745886654478976,
+     "R_media": -0.019804956560117385,
+     "retorno": -0.03146011926749803,
+     "caida_max": 0.1041893953481372,
+     "acierto": 0.30845771144278605,
+     "p_1s": 0.5610455072553043
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I10 R\u00e1faga de momentum|M1 a favor de la tendencia": {
+   "trader": "I10 R\u00e1faga de momentum",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 905,
+     "por_dia": 0.6194387405886379,
+     "R_media": -0.10570770976508588,
+     "retorno": -0.3092108892395614
+    },
+    "validacion": {
+     "n": 385,
+     "por_dia": 0.7038391224862889,
+     "R_media": -0.04965115771202828,
+     "retorno": -0.06674706858087354
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 551,
+     "por_dia": 0.37713894592744696,
+     "R_media": -0.07708052085059248,
+     "retorno": -0.15256592697601,
+     "caida_max": 0.19531724885356982,
+     "acierto": 0.4301270417422868,
+     "p_1s": 0.9347334268061043
+    },
+    "validacion": {
+     "n": 246,
+     "por_dia": 0.44972577696526506,
+     "R_media": -0.07891575938902777,
+     "retorno": -0.07092768253588788,
+     "caida_max": 0.12082288605049862,
+     "acierto": 0.43089430894308944,
+     "p_1s": 0.844434989206878
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I10 R\u00e1faga de momentum|M2 stops \u00d72": {
+   "trader": "I10 R\u00e1faga de momentum",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 905,
+     "por_dia": 0.6194387405886379,
+     "R_media": -0.10570770976508588,
+     "retorno": -0.3092108892395614
+    },
+    "validacion": {
+     "n": 385,
+     "por_dia": 0.7038391224862889,
+     "R_media": -0.04965115771202828,
+     "retorno": -0.06674706858087354
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 873,
+     "por_dia": 0.5975359342915811,
+     "R_media": -0.01633743037384451,
+     "retorno": -0.05517550434395757,
+     "caida_max": 0.14067724612341026,
+     "acierto": 0.42955326460481097,
+     "p_1s": 0.7091926370378849
+    },
+    "validacion": {
+     "n": 358,
+     "por_dia": 0.6544789762340036,
+     "R_media": 0.021193556881030327,
+     "retorno": 0.032325410801035126,
+     "caida_max": 0.05914762894444048,
+     "acierto": 0.4776536312849162,
+     "p_1s": 0.32968346957740646
+    }
+   },
+   "etapa": "E3 sombra",
+   "p_holm_validacion": 1.0
+  },
+  "I10 R\u00e1faga de momentum|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I10 R\u00e1faga de momentum",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 905,
+     "por_dia": 0.6194387405886379,
+     "R_media": -0.10570770976508588,
+     "retorno": -0.3092108892395614
+    },
+    "validacion": {
+     "n": 385,
+     "por_dia": 0.7038391224862889,
+     "R_media": -0.04965115771202828,
+     "retorno": -0.06674706858087354
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 632,
+     "por_dia": 0.432580424366872,
+     "R_media": -0.07048475246168831,
+     "retorno": -0.15864315840687038,
+     "caida_max": 0.20683185952988548,
+     "acierto": 0.4319620253164557,
+     "p_1s": 0.9288708074741978
+    },
+    "validacion": {
+     "n": 278,
+     "por_dia": 0.5082266910420475,
+     "R_media": -0.0438685658757201,
+     "retorno": -0.04160361353052644,
+     "caida_max": 0.12331790573354429,
+     "acierto": 0.44964028776978415,
+     "p_1s": 0.7254848499679356
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I10 R\u00e1faga de momentum|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I10 R\u00e1faga de momentum",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 905,
+     "por_dia": 0.6194387405886379,
+     "R_media": -0.10570770976508588,
+     "retorno": -0.3092108892395614
+    },
+    "validacion": {
+     "n": 385,
+     "por_dia": 0.7038391224862889,
+     "R_media": -0.04965115771202828,
+     "retorno": -0.06674706858087354
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 491,
+     "por_dia": 0.33607118412046544,
+     "R_media": 0.004776199530383879,
+     "retorno": 0.0007500928170744992,
+     "caida_max": 0.161332558031534,
+     "acierto": 0.4480651731160896,
+     "p_1s": 0.4635204601452866
+    },
+    "validacion": {
+     "n": 150,
+     "por_dia": 0.2742230347349177,
+     "R_media": 0.08887405602459215,
+     "retorno": 0.06277500535866531,
+     "caida_max": 0.04466432404377674,
+     "acierto": 0.5,
+     "p_1s": 0.17895200689948743
+    }
+   },
+   "etapa": "E3 sombra",
+   "p_holm_validacion": 1.0
+  },
+  "I10 R\u00e1faga de momentum|M5 dejar correr": {
+   "trader": "I10 R\u00e1faga de momentum",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 905,
+     "por_dia": 0.6194387405886379,
+     "R_media": -0.10570770976508588,
+     "retorno": -0.3092108892395614
+    },
+    "validacion": {
+     "n": 385,
+     "por_dia": 0.7038391224862889,
+     "R_media": -0.04965115771202828,
+     "retorno": -0.06674706858087354
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 894,
+     "por_dia": 0.6119096509240246,
+     "R_media": -0.057839269062003366,
+     "retorno": -0.1791963605400605,
+     "caida_max": 0.32507449813818445,
+     "acierto": 0.36017897091722595,
+     "p_1s": 0.8777365798380248
+    },
+    "validacion": {
+     "n": 378,
+     "por_dia": 0.6910420475319927,
+     "R_media": 0.036674490692307646,
+     "retorno": 0.06185395122605719,
+     "caida_max": 0.14307776009687245,
+     "acierto": 0.3968253968253968,
+     "p_1s": 0.3199035235207448
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I11 Ruptura fallida|M1 a favor de la tendencia": {
+   "trader": "I11 Ruptura fallida",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 2154,
+     "por_dia": 1.4743326488706365,
+     "R_media": -0.2291794341923553,
+     "retorno": -0.9590515760026561
+    },
+    "validacion": {
+     "n": 940,
+     "por_dia": 1.7184643510054844,
+     "R_media": -0.14944065554108704,
+     "retorno": -0.43175819343948474
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 951,
+     "por_dia": 0.6509240246406571,
+     "R_media": -0.19438648102635636,
+     "retorno": -0.546153614309461,
+     "caida_max": 0.5510627854563057,
+     "acierto": 0.4037854889589905,
+     "p_1s": 0.9999999742459156
+    },
+    "validacion": {
+     "n": 377,
+     "por_dia": 0.6892138939670932,
+     "R_media": -0.16923972810237184,
+     "retorno": -0.22128197722625564,
+     "caida_max": 0.2248735241025065,
+     "acierto": 0.4244031830238727,
+     "p_1s": 0.9978365022681054
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I11 Ruptura fallida|M2 stops \u00d72": {
+   "trader": "I11 Ruptura fallida",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 2154,
+     "por_dia": 1.4743326488706365,
+     "R_media": -0.2291794341923553,
+     "retorno": -0.9590515760026561
+    },
+    "validacion": {
+     "n": 940,
+     "por_dia": 1.7184643510054844,
+     "R_media": -0.14944065554108704,
+     "retorno": -0.43175819343948474
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1655,
+     "por_dia": 1.1327857631759068,
+     "R_media": -0.10379684676693494,
+     "retorno": -0.5988663068697766,
+     "caida_max": 0.605344957137455,
+     "acierto": 0.4471299093655589,
+     "p_1s": 0.9999997392271822
+    },
+    "validacion": {
+     "n": 673,
+     "por_dia": 1.230347349177331,
+     "R_media": -0.09687990190359005,
+     "retorno": -0.2279399335342669,
+     "caida_max": 0.2376733853528431,
+     "acierto": 0.45170876671619614,
+     "p_1s": 0.9974825854494799
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I11 Ruptura fallida|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I11 Ruptura fallida",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 2154,
+     "por_dia": 1.4743326488706365,
+     "R_media": -0.2291794341923553,
+     "retorno": -0.9590515760026561
+    },
+    "validacion": {
+     "n": 940,
+     "por_dia": 1.7184643510054844,
+     "R_media": -0.14944065554108704,
+     "retorno": -0.43175819343948474
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1569,
+     "por_dia": 1.0739219712525667,
+     "R_media": -0.24871210214647826,
+     "retorno": -0.8502082253424317,
+     "caida_max": 0.8513341966557514,
+     "acierto": 0.3702995538559592,
+     "p_1s": 1.0
+    },
+    "validacion": {
+     "n": 657,
+     "por_dia": 1.2010968921389398,
+     "R_media": -0.1292481374562412,
+     "retorno": -0.28410280018766787,
+     "caida_max": 0.31227665575839625,
+     "acierto": 0.4337899543378995,
+     "p_1s": 0.9974853399775071
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I11 Ruptura fallida|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I11 Ruptura fallida",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 2154,
+     "por_dia": 1.4743326488706365,
+     "R_media": -0.2291794341923553,
+     "retorno": -0.9590515760026561
+    },
+    "validacion": {
+     "n": 940,
+     "por_dia": 1.7184643510054844,
+     "R_media": -0.14944065554108704,
+     "retorno": -0.43175819343948474
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1615,
+     "por_dia": 1.105407255304586,
+     "R_media": -0.16382048113210226,
+     "retorno": -0.7308346382853131,
+     "caida_max": 0.742045418110751,
+     "acierto": 0.39876160990712073,
+     "p_1s": 0.999999999726067
+    },
+    "validacion": {
+     "n": 498,
+     "por_dia": 0.9104204753199269,
+     "R_media": -0.05918287426142541,
+     "retorno": -0.12511828809553416,
+     "caida_max": 0.18124116827088232,
+     "acierto": 0.4538152610441767,
+     "p_1s": 0.8876171911871341
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I11 Ruptura fallida|M5 dejar correr": {
+   "trader": "I11 Ruptura fallida",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 2154,
+     "por_dia": 1.4743326488706365,
+     "R_media": -0.2291794341923553,
+     "retorno": -0.9590515760026561
+    },
+    "validacion": {
+     "n": 940,
+     "por_dia": 1.7184643510054844,
+     "R_media": -0.14944065554108704,
+     "retorno": -0.43175819343948474
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 2066,
+     "por_dia": 1.4140999315537304,
+     "R_media": -0.1735868044352492,
+     "retorno": -0.803446091474352,
+     "caida_max": 0.8125760865181837,
+     "acierto": 0.3383349467570184,
+     "p_1s": 0.9999999937217002
+    },
+    "validacion": {
+     "n": 847,
+     "por_dia": 1.5484460694698354,
+     "R_media": -0.18457402260436448,
+     "retorno": -0.4556808090248733,
+     "caida_max": 0.4637494278123384,
+     "acierto": 0.3270365997638725,
+     "p_1s": 0.9999084006323465
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I12 Ichimoku 1 h|M1 a favor de la tendencia": {
+   "trader": "I12 Ichimoku 1 h",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 622,
+     "por_dia": 0.42573579739904177,
+     "R_media": -0.039162524877468685,
+     "retorno": -0.10024521451856983
+    },
+    "validacion": {
+     "n": 236,
+     "por_dia": 0.43144424131627057,
+     "R_media": 0.0434348328249983,
+     "retorno": 0.0394107827966379
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 409,
+     "por_dia": 0.2799452429842574,
+     "R_media": 0.0015069835211432047,
+     "retorno": -0.00534522850121022,
+     "caida_max": 0.12722784567553402,
+     "acierto": 0.3765281173594132,
+     "p_1s": 0.4912168315296599
+    },
+    "validacion": {
+     "n": 162,
+     "por_dia": 0.2961608775137112,
+     "R_media": 0.039874196880931155,
+     "retorno": 0.026234252873050368,
+     "caida_max": 0.05102474527180412,
+     "acierto": 0.4012345679012346,
+     "p_1s": 0.353451710866026
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I12 Ichimoku 1 h|M2 stops \u00d72": {
+   "trader": "I12 Ichimoku 1 h",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 622,
+     "por_dia": 0.42573579739904177,
+     "R_media": -0.039162524877468685,
+     "retorno": -0.10024521451856983
+    },
+    "validacion": {
+     "n": 236,
+     "por_dia": 0.43144424131627057,
+     "R_media": 0.0434348328249983,
+     "retorno": 0.0394107827966379
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 495,
+     "por_dia": 0.33880903490759756,
+     "R_media": -0.0293030509718282,
+     "retorno": -0.10172334873793287,
+     "caida_max": 0.21082753087088524,
+     "acierto": 0.4,
+     "p_1s": 0.7384194216556188
+    },
+    "validacion": {
+     "n": 192,
+     "por_dia": 0.3510054844606947,
+     "R_media": 0.036960773169725736,
+     "retorno": -0.010190981407027122,
+     "caida_max": 0.06020670793415561,
+     "acierto": 0.40625,
+     "p_1s": 0.322558341684384
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I12 Ichimoku 1 h|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I12 Ichimoku 1 h",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 622,
+     "por_dia": 0.42573579739904177,
+     "R_media": -0.039162524877468685,
+     "retorno": -0.10024521451856983
+    },
+    "validacion": {
+     "n": 236,
+     "por_dia": 0.43144424131627057,
+     "R_media": 0.0434348328249983,
+     "retorno": 0.0394107827966379
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 371,
+     "por_dia": 0.2539356605065024,
+     "R_media": -0.02078081690804448,
+     "retorno": -0.030155267692943744,
+     "caida_max": 0.1396543248302229,
+     "acierto": 0.3719676549865229,
+     "p_1s": 0.6147049393914791
+    },
+    "validacion": {
+     "n": 133,
+     "por_dia": 0.24314442413162707,
+     "R_media": 0.1355559297764682,
+     "retorno": 0.07857785200187606,
+     "caida_max": 0.05057659248670576,
+     "acierto": 0.42857142857142855,
+     "p_1s": 0.13511539672114092
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I12 Ichimoku 1 h|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I12 Ichimoku 1 h",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 622,
+     "por_dia": 0.42573579739904177,
+     "R_media": -0.039162524877468685,
+     "retorno": -0.10024521451856983
+    },
+    "validacion": {
+     "n": 236,
+     "por_dia": 0.43144424131627057,
+     "R_media": 0.0434348328249983,
+     "retorno": 0.0394107827966379
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 551,
+     "por_dia": 0.37713894592744696,
+     "R_media": -0.05211011561213911,
+     "retorno": -0.12013567945666548,
+     "caida_max": 0.23112803156663697,
+     "acierto": 0.36116152450090744,
+     "p_1s": 0.8199977048492633
+    },
+    "validacion": {
+     "n": 217,
+     "por_dia": 0.396709323583181,
+     "R_media": 0.038201184595856474,
+     "retorno": 0.03350589259849057,
+     "caida_max": 0.07378747591606716,
+     "acierto": 0.4009216589861751,
+     "p_1s": 0.3386795540344494
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I12 Ichimoku 1 h|M5 dejar correr": {
+   "trader": "I12 Ichimoku 1 h",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 622,
+     "por_dia": 0.42573579739904177,
+     "R_media": -0.039162524877468685,
+     "retorno": -0.10024521451856983
+    },
+    "validacion": {
+     "n": 236,
+     "por_dia": 0.43144424131627057,
+     "R_media": 0.0434348328249983,
+     "retorno": 0.0394107827966379
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 542,
+     "por_dia": 0.37097878165639975,
+     "R_media": -0.09535197298650584,
+     "retorno": -0.20878798234202212,
+     "caida_max": 0.2792864894351066,
+     "acierto": 0.2656826568265683,
+     "p_1s": 0.9135089965607949
+    },
+    "validacion": {
+     "n": 203,
+     "por_dia": 0.3711151736745887,
+     "R_media": 0.17108881459615274,
+     "retorno": 0.15188285377817579,
+     "caida_max": 0.0642086081890022,
+     "acierto": 0.3399014778325123,
+     "p_1s": 0.08876822573269205
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I13 Parabolic SAR + EMA200|M1 a favor de la tendencia": {
+   "trader": "I13 Parabolic SAR + EMA200",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 1271,
+     "por_dia": 0.8699520876112252,
+     "R_media": -0.07018779575128678,
+     "retorno": -0.35360804282022074
+    },
+    "validacion": {
+     "n": 502,
+     "por_dia": 0.9177330895795247,
+     "R_media": 0.01737737234894234,
+     "retorno": 0.03831972168272468
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1002,
+     "por_dia": 0.6858316221765913,
+     "R_media": -0.042684127297921606,
+     "retorno": -0.18630126189873697,
+     "caida_max": 0.2918997056979088,
+     "acierto": 0.3223552894211577,
+     "p_1s": 0.8196995438993414
+    },
+    "validacion": {
+     "n": 412,
+     "por_dia": 0.753199268738574,
+     "R_media": 0.006689953143255178,
+     "retorno": 0.01599991478744367,
+     "caida_max": 0.14185692826179264,
+     "acierto": 0.33737864077669905,
+     "p_1s": 0.4640903779999219
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I13 Parabolic SAR + EMA200|M2 stops \u00d72": {
+   "trader": "I13 Parabolic SAR + EMA200",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 1271,
+     "por_dia": 0.8699520876112252,
+     "R_media": -0.07018779575128678,
+     "retorno": -0.35360804282022074
+    },
+    "validacion": {
+     "n": 502,
+     "por_dia": 0.9177330895795247,
+     "R_media": 0.01737737234894234,
+     "retorno": 0.03831972168272468
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1201,
+     "por_dia": 0.8220396988364134,
+     "R_media": -0.026737524227341516,
+     "retorno": -0.19841169485648935,
+     "caida_max": 0.251639162914405,
+     "acierto": 0.3305578684429642,
+     "p_1s": 0.8916507626811918
+    },
+    "validacion": {
+     "n": 483,
+     "por_dia": 0.8829981718464351,
+     "R_media": 0.0005349616450043278,
+     "retorno": -0.02486120286523341,
+     "caida_max": 0.0864722994468623,
+     "acierto": 0.36438923395445133,
+     "p_1s": 0.4940963545691258
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I13 Parabolic SAR + EMA200|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I13 Parabolic SAR + EMA200",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 1271,
+     "por_dia": 0.8699520876112252,
+     "R_media": -0.07018779575128678,
+     "retorno": -0.35360804282022074
+    },
+    "validacion": {
+     "n": 502,
+     "por_dia": 0.9177330895795247,
+     "R_media": 0.01737737234894234,
+     "retorno": 0.03831972168272468
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 818,
+     "por_dia": 0.5598904859685148,
+     "R_media": -0.02771872234078649,
+     "retorno": -0.12907823669491703,
+     "caida_max": 0.2143488909456437,
+     "acierto": 0.33374083129584353,
+     "p_1s": 0.7077196135799124
+    },
+    "validacion": {
+     "n": 358,
+     "por_dia": 0.6544789762340036,
+     "R_media": -0.006320312489392457,
+     "retorno": -0.008840038043954168,
+     "caida_max": 0.1415321385055307,
+     "acierto": 0.3435754189944134,
+     "p_1s": 0.531308062897735
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I13 Parabolic SAR + EMA200|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I13 Parabolic SAR + EMA200",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 1271,
+     "por_dia": 0.8699520876112252,
+     "R_media": -0.07018779575128678,
+     "retorno": -0.35360804282022074
+    },
+    "validacion": {
+     "n": 502,
+     "por_dia": 0.9177330895795247,
+     "R_media": 0.01737737234894234,
+     "retorno": 0.03831972168272468
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1153,
+     "por_dia": 0.7891854893908282,
+     "R_media": -0.06254695080969826,
+     "retorno": -0.3102639939258288,
+     "caida_max": 0.3602358945062524,
+     "acierto": 0.3165654813529922,
+     "p_1s": 0.9361895720819782
+    },
+    "validacion": {
+     "n": 457,
+     "por_dia": 0.8354661791590493,
+     "R_media": 0.01883916777613698,
+     "retorno": 0.03342885151016528,
+     "caida_max": 0.13696551630996157,
+     "acierto": 0.3544857768052516,
+     "p_1s": 0.39083622684279495
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I13 Parabolic SAR + EMA200|M5 dejar correr": {
+   "trader": "I13 Parabolic SAR + EMA200",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 1271,
+     "por_dia": 0.8699520876112252,
+     "R_media": -0.07018779575128678,
+     "retorno": -0.35360804282022074
+    },
+    "validacion": {
+     "n": 502,
+     "por_dia": 0.9177330895795247,
+     "R_media": 0.01737737234894234,
+     "retorno": 0.03831972168272468
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 1271,
+     "por_dia": 0.8699520876112252,
+     "R_media": -0.06618254794447109,
+     "retorno": -0.3412947649118647,
+     "caida_max": 0.3890184624276489,
+     "acierto": 0.3147128245476003,
+     "p_1s": 0.949420574984556
+    },
+    "validacion": {
+     "n": 502,
+     "por_dia": 0.9177330895795247,
+     "R_media": 0.017052564033577952,
+     "retorno": 0.03798819723317193,
+     "caida_max": 0.11853989298518819,
+     "acierto": 0.350597609561753,
+     "p_1s": 0.3974595125620035
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I14 Apertura de Nueva York|M1 a favor de la tendencia": {
+   "trader": "I14 Apertura de Nueva York",
+   "operador": "M1 a favor de la tendencia",
+   "base": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.12292211315334067,
+     "retorno": -0.25527954060812974
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.17802915755398074,
+     "retorno": -0.17074590098149023
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 287,
+     "por_dia": 0.19644079397672826,
+     "R_media": -0.13088886358129556,
+     "retorno": -0.14596250686865342,
+     "caida_max": 0.17192617906462515,
+     "acierto": 0.40418118466898956,
+     "p_1s": 0.9871814777630703
+    },
+    "validacion": {
+     "n": 148,
+     "por_dia": 0.27056672760511885,
+     "R_media": -0.04294040139826965,
+     "retorno": -0.02810686408908869,
+     "caida_max": 0.08279970879602083,
+     "acierto": 0.43243243243243246,
+     "p_1s": 0.6840698777938654
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I14 Apertura de Nueva York|M2 stops \u00d72": {
+   "trader": "I14 Apertura de Nueva York",
+   "operador": "M2 stops \u00d72",
+   "base": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.12292211315334067,
+     "retorno": -0.25527954060812974
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.17802915755398074,
+     "retorno": -0.17074590098149023
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.06065252006582545,
+     "retorno": -0.16584809936263334,
+     "caida_max": 0.20012457729612498,
+     "acierto": 0.40687160940325495,
+     "p_1s": 0.9850637006868525
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.0893208775622797,
+     "retorno": -0.09263298354616378,
+     "caida_max": 0.12716514576268445,
+     "acierto": 0.41637010676156583,
+     "p_1s": 0.9772682965184675
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I14 Apertura de Nueva York|M3 sesi\u00f3n 07-21 UTC": {
+   "trader": "I14 Apertura de Nueva York",
+   "operador": "M3 sesi\u00f3n 07-21 UTC",
+   "base": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.12292211315334067,
+     "retorno": -0.25527954060812974
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.17802915755398074,
+     "retorno": -0.17074590098149023
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.12292211315334067,
+     "retorno": -0.25527954060812974,
+     "caida_max": 0.280072318811451,
+     "acierto": 0.4050632911392405,
+     "p_1s": 0.998340440908822
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.17802915755398074,
+     "retorno": -0.17074590098149023,
+     "caida_max": 0.20103970113020908,
+     "acierto": 0.3807829181494662,
+     "p_1s": 0.9969521482674987
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I14 Apertura de Nueva York|M4 stop m\u00ednimo 0,8 %": {
+   "trader": "I14 Apertura de Nueva York",
+   "operador": "M4 stop m\u00ednimo 0,8 %",
+   "base": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.12292211315334067,
+     "retorno": -0.25527954060812974
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.17802915755398074,
+     "retorno": -0.17074590098149023
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 453,
+     "por_dia": 0.31006160164271046,
+     "R_media": -0.14461432803085664,
+     "retorno": -0.25184220909405486,
+     "caida_max": 0.28324966993694534,
+     "acierto": 0.39514348785871967,
+     "p_1s": 0.9993930241547823
+    },
+    "validacion": {
+     "n": 212,
+     "por_dia": 0.3875685557586837,
+     "R_media": -0.15289592324863546,
+     "retorno": -0.12068911240111913,
+     "caida_max": 0.14682571761067986,
+     "acierto": 0.3867924528301887,
+     "p_1s": 0.9781106598925038
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  },
+  "I14 Apertura de Nueva York|M5 dejar correr": {
+   "trader": "I14 Apertura de Nueva York",
+   "operador": "M5 dejar correr",
+   "base": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.12292211315334067,
+     "retorno": -0.25527954060812974
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.17802915755398074,
+     "retorno": -0.17074590098149023
+    }
+   },
+   "variante": {
+    "construccion": {
+     "n": 553,
+     "por_dia": 0.378507871321013,
+     "R_media": -0.05769994249242427,
+     "retorno": -0.13489712087096484,
+     "caida_max": 0.23800191065943177,
+     "acierto": 0.38155515370705245,
+     "p_1s": 0.8540145557654837
+    },
+    "validacion": {
+     "n": 281,
+     "por_dia": 0.5137111517367459,
+     "R_media": -0.11862186462348896,
+     "retorno": -0.120610365110694,
+     "caida_max": 0.16789331923256579,
+     "acierto": 0.3594306049822064,
+     "p_1s": 0.9286428306282372
+    }
+   },
+   "etapa": "descartada (E1/E2)",
+   "p_holm_validacion": 1.0
+  }
+ }
+}

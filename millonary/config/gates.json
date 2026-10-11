@@ -1,0 +1,10 @@
+{
+  "nota": "Umbrales fijados ANTES de ver resultados. No se modifican tras ver el embudo.",
+  "validation": {"min_trades_1h": 25, "min_trades_4h": 15, "min_sharpe": 1.0, "max_dd": 0.20, "min_pf": 1.15},
+  "blocks": {"min_profitable_share": 0.6, "max_top_share": 0.5},
+  "mc": {"sims": 5000, "max_dd95": 0.30},
+  "sens": {"min_pos_share": 0.7, "min_median_ratio": 0.5},
+  "random": {"sims": 300},
+  "dsr": {"min": 0.95},
+  "pbo": {"max": 0.30}
+}

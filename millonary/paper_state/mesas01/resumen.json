@@ -1,0 +1,14 @@
+{
+ "generado": "2026-10-11 04:12:54.577549+00:00",
+ "trader": "S01 ORB 60 min Nueva York + promediar una vez",
+ "inicio": "2026-10-08 00:00:00+00:00",
+ "datos_hasta": "2026-10-10 00:00:00+00:00",
+ "cerradas": 0,
+ "pendientes": 0,
+ "acierto": 0.0,
+ "R_total": 0.0,
+ "retorno": 0.0,
+ "protecciones_activadas": 0,
+ "fuente": "Binance Vision, velas de 5 min del perpetuo (≤1 día de retraso)",
+ "nota": "Papel. 1.000 USDT. Sin dinero real."
+}
