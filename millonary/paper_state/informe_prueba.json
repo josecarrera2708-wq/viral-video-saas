@@ -1,9 +1,9 @@
 {
- "dias": 9,
- "velas": 56,
- "retorno": -0.018472104549355328,
+ "dias": 10,
+ "velas": 62,
+ "retorno": -0.01589897327656542,
  "caida_max": 0.03947605203802218,
- "exposicion_media": 0.5762371282578549,
+ "exposicion_media": 0.5448502658998645,
  "ordenes": 4,
  "cono_30d": {
   "horizonte_usado_dias": 7,
@@ -31,38 +31,38 @@
    "n": 0
   },
   "lotes_abiertos": 2,
-  "pnl_no_realizado": -18.47210454935515
+  "pnl_no_realizado": -15.898973276565277
  },
  "cuadre": {
   "ok": true,
-  "diferencia": -1.7053025658242404e-13
+  "diferencia": -1.936228954946273e-13
  },
  "replica_decisiones": {
-  "equity_trader": 982.9330471581573,
-  "equity_simulador": 982.933568383399,
-  "diferencia_rel": -5.302751462377131e-07,
-  "ordenes_trader": 4,
-  "ordenes_simulador": 4
+  "equity_trader": 985.9630084504438,
+  "equity_simulador": 985.9629313200729,
+  "diferencia_rel": 7.822846925797933e-08,
+  "ordenes_trader": 5,
+  "ordenes_simulador": 5
  },
  "replica_estado": {
-  "equity_replay": 981.5278954506447,
-  "equity_cuenta": 981.5278954506447,
+  "equity_replay": 984.1010267234345,
+  "equity_cuenta": 984.1010267234345,
   "diferencia_rel": 0.0,
   "ordenes_replay": 4,
   "ordenes_cuenta": 4,
-  "velas_replay": 56,
-  "velas_cuenta": 56
+  "velas_replay": 62,
+  "velas_cuenta": 62
  },
  "posterior_sharpe": {
-  "dias": 10,
-  "sharpe_observado": -4.355659519318118,
-  "error_estandar": 19.56360906709532,
-  "posterior_media": 0.396895660400446,
-  "posterior_sd": 0.4998367815044741,
-  "prob_sharpe_mayor_0": 0.7864169918071333,
+  "dias": 11,
+  "sharpe_observado": -3.5187721302916484,
+  "error_estandar": 15.446890561320082,
+  "posterior_media": 0.39589840206218796,
+  "posterior_sd": 0.49973826803385435,
+  "prob_sharpe_mayor_0": 0.7858813173889656,
   "ic90": [
-   -0.4253358451744139,
-   1.2191271659753058
+   -0.42617104885350243,
+   1.2179678529778784
   ],
   "prior": {
    "media": 0.4,
